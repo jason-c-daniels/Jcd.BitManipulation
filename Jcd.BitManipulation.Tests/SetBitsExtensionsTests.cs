@@ -15,6 +15,7 @@ namespace Jcd.BitManipulation.Tests
             value.SetBits((byte)offset,(byte)size);
             Assert.Equal((sbyte)expected, value);
         }
+        
         [Theory]
         [InlineData(0x00,0,2,0x03)]
         [InlineData(0x00,6,2,0b11000000)]

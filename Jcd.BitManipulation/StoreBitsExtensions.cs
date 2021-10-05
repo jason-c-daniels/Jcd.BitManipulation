@@ -63,11 +63,7 @@ namespace Jcd.BitManipulation
         /// <param name="offset">The bit location to store the value.</param>
         /// <param name="size">The bit size of the value.</param>
         public static void StoreBits(this ref ushort self, ushort value, byte offset, byte size)
-        {
-            var mask = (ushort)BitMask.CreateRange(offset, size);
-            self &= (ushort)~mask; //clear the bits
-            self |= (ushort)((value << offset) & mask);
-        }
+            => self.StoreBits(value, offset, BitMask.CreateRange(offset, size));
 
         /// <summary>
         /// Stores a value at the specified bit location within the variable.
@@ -77,11 +73,7 @@ namespace Jcd.BitManipulation
         /// <param name="offset">The bit location to store the value.</param>
         /// <param name="size">The bit size of the value.</param>
         public static void StoreBits(this ref uint self, uint value, byte offset, byte size)
-        {
-            var mask = BitMask.CreateRange(offset, size);
-            self &= ~((uint)mask); //clear the bits
-            self |= ((value << offset) & mask);
-        }
+            => self.StoreBits(value, offset, BitMask.CreateRange(offset, size));
 
         /// <summary>
         /// Stores a value at the specified bit location within the variable.

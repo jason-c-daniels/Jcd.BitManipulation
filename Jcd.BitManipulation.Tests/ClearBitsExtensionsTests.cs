@@ -209,6 +209,140 @@ namespace Jcd.BitManipulation.Tests
         #endregion
         
         #region BitMask tests
+
+        [Theory]
+        [InlineData(0b11111111,0b0000110,0b11111001)]
+        [InlineData(0b10111111,0b0000100,0b10111011)]
+        public void ClearBits_For_SByte_When_Given_A_Mask_Directly_Clears_Only_The_Specified_Bits(
+            uint initialValue, uint maskValue, uint expected)
+        {
+            // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
+            var value = (sbyte)initialValue;
+            var mask = new BitMask((sbyte)maskValue);
+            value.ClearBits(mask);
+            Assert.Equal((sbyte)expected,value);
+        }
+            
+        [Theory]
+        [InlineData(0b11111111,0b0000110,0b11111001)]
+        [InlineData(0b10111111,0b0000100,0b10111011)]
+        public void ClearBits_For_Byte_When_Given_A_Mask_Directly_Clears_Only_The_Specified_Bits(
+            uint initialValue, uint maskValue, uint expected)
+        {
+            // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
+            var value = (byte)initialValue;
+            var mask = new BitMask((byte)maskValue);
+            value.ClearBits(mask);
+            Assert.Equal((byte)expected,value);
+        }
+        
+        [Theory]
+        [InlineData(0b11111111,0b0000110,0b11111001)]
+        [InlineData(0b10111111,0b0000100,0b10111011)]
+        [InlineData(0b1111111111111111, 0b0100000000000110, 0b1011111111111001)]
+        [InlineData(0b1111111110111111, 0b0100000000000100, 0b1011111110111011)]
+        public void ClearBits_For_Int16_When_Given_A_Mask_Directly_Clears_Only_The_Specified_Bits(
+            uint initialValue, uint maskValue, uint expected)
+        {
+            // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
+            var value = (short)initialValue;
+            var mask = new BitMask((short)maskValue);
+            value.ClearBits(mask);
+            Assert.Equal((short)expected,value);
+        }
+            
+        [Theory]
+        [InlineData(0b11111111,0b0000110,0b11111001)]
+        [InlineData(0b10111111,0b0000100,0b10111011)]
+        [InlineData(0b1111111111111111, 0b0100000000000110, 0b1011111111111001)]
+        [InlineData(0b1111111110111111, 0b0100000000000100, 0b1011111110111011)]
+        public void ClearBits_For_UInt16_When_Given_A_Mask_Directly_Clears_Only_The_Specified_Bits(
+            uint initialValue, uint maskValue, uint expected)
+        {
+            // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
+            var value = (ushort)initialValue;
+            var mask = new BitMask((ushort)maskValue);
+            value.ClearBits(mask);
+            Assert.Equal((ushort)expected,value);
+        }
+        
+        [Theory]
+        [InlineData(0b11111111,0b0000110,0b11111001)]
+        [InlineData(0b10111111,0b0000100,0b10111011)]
+        [InlineData(0b1111111111111111, 0b0100000000000110, 0b1011111111111001)]
+        [InlineData(0b1111111110111111, 0b0100000000000100, 0b1011111110111011)]
+        [InlineData(0b11111111111111111111111111111111, 
+                    0b00100001000000000100000000000110, 
+                    0b11011110111111111011111111111001)]
+        public void ClearBits_For_Int32_When_Given_A_Mask_Directly_Clears_Only_The_Specified_Bits(
+            uint initialValue, uint maskValue, uint expected)
+        {
+            // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
+            var value = (int)initialValue;
+            var mask = new BitMask((int)maskValue);
+            value.ClearBits(mask);
+            Assert.Equal((int)expected,value);
+        }
+            
+        [Theory]
+        [InlineData(0b11111111,0b0000110,0b11111001)]
+        [InlineData(0b10111111,0b0000100,0b10111011)]
+        [InlineData(0b1111111111111111, 0b0100000000000110, 0b1011111111111001)]
+        [InlineData(0b1111111110111111, 0b0100000000000100, 0b1011111110111011)]
+        [InlineData(0b11111111111111111111111111111111, 
+                    0b00100001000000000100000000000110, 
+                    0b11011110111111111011111111111001)]
+        public void ClearBits_For_UInt32_When_Given_A_Mask_Directly_Clears_Only_The_Specified_Bits(
+            uint initialValue, uint maskValue, uint expected)
+        {
+            // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
+            var value = initialValue;
+            var mask = new BitMask(maskValue);
+            value.ClearBits(mask);
+            Assert.Equal(expected,value);
+        }
+
+        [Theory]
+        [InlineData(0b11111111,0b0000110,0b11111001)]
+        [InlineData(0b10111111,0b0000100,0b10111011)]
+        [InlineData(0b1111111111111111, 0b0100000000000110, 0b1011111111111001)]
+        [InlineData(0b1111111110111111, 0b0100000000000100, 0b1011111110111011)]
+        [InlineData(0b11111111111111111111111111111111, 
+                    0b00100001000000000100000000000110, 
+                    0b11011110111111111011111111111001)]
+        [InlineData(0b1111111111111111111111111111111111111111111111111111111111111111, 
+                    0b0000010000000000000000000000000000100001000000000100000000000110, 
+                    0b1111101111111111111111111111111111011110111111111011111111111001)]
+        public void ClearBits_For_Int64_When_Given_A_Mask_Directly_Clears_Only_The_Specified_Bits(
+            ulong initialValue, ulong maskValue, ulong expected)
+        {
+            // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
+            var value = (long)initialValue;
+            var mask = new BitMask((long)maskValue);
+            value.ClearBits(mask);
+            Assert.Equal((long)expected,value);
+        }
+            
+        [Theory]
+        [InlineData(0b11111111,0b0000110,0b11111001)]
+        [InlineData(0b10111111,0b0000100,0b10111011)]
+        [InlineData(0b1111111111111111, 0b0100000000000110, 0b1011111111111001)]
+        [InlineData(0b1111111110111111, 0b0100000000000100, 0b1011111110111011)]
+        [InlineData(0b11111111111111111111111111111111, 
+                    0b00100001000000000100000000000110, 
+                    0b11011110111111111011111111111001)]
+        [InlineData(0b1111111111111111111111111111111111111111111111111111111111111111, 
+                    0b0000010000000000000000000000000000100001000000000100000000000110, 
+                    0b1111101111111111111111111111111111011110111111111011111111111001)]
+        public void ClearBits_For_UInt64_When_Given_A_Mask_Directly_Clears_Only_The_Specified_Bits(
+            ulong initialValue, ulong maskValue, ulong expected)
+        {
+            // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
+            var value = initialValue;
+            var mask = new BitMask(maskValue);
+            value.ClearBits(mask);
+            Assert.Equal(expected,value);
+        }
         
         #endregion
     }

@@ -221,7 +221,7 @@ namespace Jcd.BitManipulation
         /// <param name="offset">the offset to read</param>
         /// <returns>the bit (a bool) at the specified offset </returns>
         public static bool ReadBit(this long self, byte offset)
-            => (self & BitMask.CreateRange(offset, 1)) > 0;
+            => (((ulong)self) & BitMask.CreateRange(offset, 1)) > 0;
         
         /// <summary>
         /// Read a single bit from the specified offset.

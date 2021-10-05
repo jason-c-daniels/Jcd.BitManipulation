@@ -1,3 +1,4 @@
+using System;
 using Xunit;
 
 namespace Jcd.BitManipulation.Tests
@@ -235,7 +236,6 @@ namespace Jcd.BitManipulation.Tests
             Assert.Equal(expected,bits.ReadBit((byte)offset));
         }
         #endregion
-            
         
     }
 }

@@ -212,7 +212,7 @@ namespace Jcd.BitManipulation
         /// <param name="offset">the offset to read</param>
         /// <returns>the bit (a bool) at the specified offset </returns>
         public static bool ReadBit(this ulong self, byte offset)
-            => (self & BitMask.CreateRange(offset, 1)) > 0;
+            => self.ReadBits(offset,(byte)1) > 0;
 
         /// <summary>
         /// Read a single bit from the specified offset.
@@ -221,7 +221,7 @@ namespace Jcd.BitManipulation
         /// <param name="offset">the offset to read</param>
         /// <returns>the bit (a bool) at the specified offset </returns>
         public static bool ReadBit(this long self, byte offset)
-            => (((ulong)self) & BitMask.CreateRange(offset, 1)) > 0;
+            => self.ReadBits(offset,(byte)1) > 0;
         
         /// <summary>
         /// Read a single bit from the specified offset.
@@ -230,7 +230,7 @@ namespace Jcd.BitManipulation
         /// <param name="offset">the offset to read</param>
         /// <returns>the bit (a bool) at the specified offset </returns>
         public static bool ReadBit(this uint self, byte offset)
-            => (self & BitMask.CreateRange(offset, 1)) > 0;
+            => self.ReadBits(offset,(byte)1) > 0;
         
         /// <summary>
         /// Read a single bit from the specified offset.
@@ -239,7 +239,7 @@ namespace Jcd.BitManipulation
         /// <param name="offset">the offset to read</param>
         /// <returns>the bit (a bool) at the specified offset </returns>
         public static bool ReadBit(this int self, byte offset)
-            => (self & BitMask.CreateRange(offset, 1)) > 0;
+            => self.ReadBits(offset,(byte)1) > 0;
         
         /// <summary>
         /// Read a single bit from the specified offset.
@@ -248,7 +248,7 @@ namespace Jcd.BitManipulation
         /// <param name="offset">the offset to read</param>
         /// <returns>the bit (a bool) at the specified offset </returns>
         public static bool ReadBit(this ushort self, byte offset)
-            => (self & BitMask.CreateRange(offset, 1)) > 0;
+            => self.ReadBits(offset,(byte)1) > 0;
 
         /// <summary>
         /// Read a single bit from the specified offset.
@@ -257,7 +257,7 @@ namespace Jcd.BitManipulation
         /// <param name="offset">the offset to read</param>
         /// <returns>the bit (a bool) at the specified offset </returns>
         public static bool ReadBit(this short self, byte offset)
-            => (self & BitMask.CreateRange(offset, 1)) > 0;
+            => self.ReadBits(offset,(byte)1) > 0;
         
         /// <summary>
         /// Read a single bit from the specified offset.
@@ -266,7 +266,7 @@ namespace Jcd.BitManipulation
         /// <param name="offset">the offset to read</param>
         /// <returns>the bit (a bool) at the specified offset </returns>
         public static bool ReadBit(this byte self, byte offset)
-            => (self & BitMask.CreateRange(offset, 1)) > 0;
+            => self.ReadBits(offset,(byte)1) > 0;
 
         /// <summary>
         /// Read a single bit from the specified offset.
@@ -275,7 +275,7 @@ namespace Jcd.BitManipulation
         /// <param name="offset">the offset to read</param>
         /// <returns>the bit (a bool) at the specified offset </returns>
         public static bool ReadBit(this sbyte self, byte offset)
-            => (self & BitMask.CreateRange(offset, 1)) > 0;
+            => self.ReadBits(offset,(byte)1) > 0;
         
         #endregion
         

@@ -1,5 +1,3 @@
-using System;
-
 namespace Jcd.BitManipulation
 {
     public static class StoreBitsExtensions

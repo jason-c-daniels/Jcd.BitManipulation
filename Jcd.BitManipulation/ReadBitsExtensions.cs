@@ -113,7 +113,7 @@ namespace Jcd.BitManipulation
         /// <returns>The right shifted value extracted from the value</returns>
         public static long ReadBits(this long self, byte offset, BitMask mask)
         {
-            return ((self & mask) >> offset);
+            return (long)(((ulong)self & mask) >> offset);
         }
         
         
@@ -142,7 +142,7 @@ namespace Jcd.BitManipulation
         /// <returns>The right shifted value extracted from the value</returns>
         public static int ReadBits(this int self, byte offset, BitMask mask)
         {
-            return ((self & mask) >> offset);
+            return (int)(((uint)self & mask) >> offset); // coerce to unsigned first to prevent issues with sign bit.
         }
 
         /// <summary>
@@ -170,7 +170,7 @@ namespace Jcd.BitManipulation
         /// <returns>The right shifted value extracted from the value</returns>
         public static short ReadBits(this short self, byte offset, BitMask mask)
         {
-            return (short)((self & mask) >> offset);
+            return (short)(((ushort)self & mask) >> offset);
         }
  
         /// <summary>
@@ -198,34 +198,82 @@ namespace Jcd.BitManipulation
         /// <returns>The right shifted value extracted from the value</returns>
         public static sbyte ReadBits(this sbyte self, byte offset, BitMask mask)
         {
-            return (sbyte)((self & mask) >> offset);
+            return (sbyte)(((byte)self & mask) >> offset);
         }
         
         #endregion
 
         #region single bit operations
 
+        /// <summary>
+        /// Read a single bit from the specified offset.
+        /// </summary>
+        /// <param name="self">the bits to read from</param>
+        /// <param name="offset">the offset to read</param>
+        /// <returns>the bit (a bool) at the specified offset </returns>
         public static bool ReadBit(this ulong self, byte offset)
             => (self & BitMask.CreateRange(offset, 1)) > 0;
 
+        /// <summary>
+        /// Read a single bit from the specified offset.
+        /// </summary>
+        /// <param name="self">the bits to read from</param>
+        /// <param name="offset">the offset to read</param>
+        /// <returns>the bit (a bool) at the specified offset </returns>
         public static bool ReadBit(this long self, byte offset)
             => (self & BitMask.CreateRange(offset, 1)) > 0;
         
+        /// <summary>
+        /// Read a single bit from the specified offset.
+        /// </summary>
+        /// <param name="self">the bits to read from</param>
+        /// <param name="offset">the offset to read</param>
+        /// <returns>the bit (a bool) at the specified offset </returns>
         public static bool ReadBit(this uint self, byte offset)
             => (self & BitMask.CreateRange(offset, 1)) > 0;
         
+        /// <summary>
+        /// Read a single bit from the specified offset.
+        /// </summary>
+        /// <param name="self">the bits to read from</param>
+        /// <param name="offset">the offset to read</param>
+        /// <returns>the bit (a bool) at the specified offset </returns>
         public static bool ReadBit(this int self, byte offset)
             => (self & BitMask.CreateRange(offset, 1)) > 0;
         
+        /// <summary>
+        /// Read a single bit from the specified offset.
+        /// </summary>
+        /// <param name="self">the bits to read from</param>
+        /// <param name="offset">the offset to read</param>
+        /// <returns>the bit (a bool) at the specified offset </returns>
         public static bool ReadBit(this ushort self, byte offset)
             => (self & BitMask.CreateRange(offset, 1)) > 0;
 
+        /// <summary>
+        /// Read a single bit from the specified offset.
+        /// </summary>
+        /// <param name="self">the bits to read from</param>
+        /// <param name="offset">the offset to read</param>
+        /// <returns>the bit (a bool) at the specified offset </returns>
         public static bool ReadBit(this short self, byte offset)
             => (self & BitMask.CreateRange(offset, 1)) > 0;
         
+        /// <summary>
+        /// Read a single bit from the specified offset.
+        /// </summary>
+        /// <param name="self">the bits to read from</param>
+        /// <param name="offset">the offset to read</param>
+        /// <returns>the bit (a bool) at the specified offset </returns>
         public static bool ReadBit(this byte self, byte offset)
             => (self & BitMask.CreateRange(offset, 1)) > 0;
 
+        /// <summary>
+        /// Read a single bit from the specified offset.
+        /// </summary>
+        /// <param name="self">the bits to read from</param>
+        /// <param name="offset">the offset to read</param>
+        /// <returns>the bit (a bool) at the specified offset </returns>
         public static bool ReadBit(this sbyte self, byte offset)
             => (self & BitMask.CreateRange(offset, 1)) > 0;
         

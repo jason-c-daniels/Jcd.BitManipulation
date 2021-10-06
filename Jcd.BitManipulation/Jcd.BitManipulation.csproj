@@ -10,7 +10,10 @@
         <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
         <RepositoryUrl>https://github.com/jason-c-daniels/Jcd.BitManipulation</RepositoryUrl>
         <RepositoryType>github</RepositoryType>
-        <PackageTags>bti manipulation</PackageTags>
+        <PackageTags>bit manipulation</PackageTags>
+        <AssemblyVersion>1.0.1</AssemblyVersion>
+        <FileVersion>1.0.1</FileVersion>
+        <PackageVersion>1.0.1</PackageVersion>
     </PropertyGroup>
 
 </Project>

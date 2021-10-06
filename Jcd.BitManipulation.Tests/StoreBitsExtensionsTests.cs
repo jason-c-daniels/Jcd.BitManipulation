@@ -1,3 +1,4 @@
+using System.Collections.Specialized;
 using Xunit;
 
 namespace Jcd.BitManipulation.Tests
@@ -122,7 +123,7 @@ namespace Jcd.BitManipulation.Tests
             destination.StoreBits(value,offset,size);
             Assert.Equal(expected, destination);
         }
-        
+
         #endregion
         
         #region single bit operation tests

@@ -1,0 +1,17 @@
+using System.Text;
+
+namespace Jcd.BitManipulation
+{
+    public interface IBitIndexer
+    {
+        int Length { get; }
+        bool this[int index] { get; set; }
+
+        /// <summary>
+        /// Format as a bit representation
+        /// </summary>
+        /// <returns>the bits of the mask formatted as 0b0101...1111</returns>
+        string ToString();
+    }
+
+}

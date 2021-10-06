@@ -5,33 +5,78 @@ using System.Text;
 
 namespace Jcd.BitManipulation
 {
-    public struct BitIndexerSByte : IEnumerable<bool>, IBitIndexer
+    /// <summary>
+    /// Provides enumeration and indexed access to the bits on a stored sbyte. 
+    /// </summary>
+    public struct BitIndexerSByte : IBitIndexer
     {
+        
+        /// <summary>
+        /// The number of bits this type will index
+        /// </summary>
         public const int BitSize = 8;
 
         private sbyte bits;
+
+        /// <summary>
+        /// The backing store
+        /// </summary>
         public sbyte Bits { get => bits; set => bits = value; }
 
+        /// <summary>
+        /// The length of enumerated bits
+        /// </summary>
         public int Length => BitSize;
 
+        /// <summary>
+        /// Gets or sets individual bits within the backing store. 
+        /// </summary>
+        /// <param name="index">the offset of the bit to access.</param>
         public bool this[int index]
         {
             get => bits.ReadBit(index);
             set => bits.StoreBit(index, value);
         }
         
+        /// <summary>
+        /// Automatically Convert from an sbyte to a BitIndexerSByte
+        /// </summary>
+        /// <param name="bits">the initial value for the indexer's backing store</param>
+        /// <returns>A new BitIndexerSByte</returns>
         public static implicit operator BitIndexerSByte(sbyte bits) => new BitIndexerSByte { Bits = bits };
+
+        /// <summary>
+        /// Automatically convert from a BitIndexerSByte to an sbyte
+        /// </summary>
+        /// <param name="indexer">the indexer to convert from</param>
+        /// <returns>the sbyte</returns>
         public static implicit operator sbyte(BitIndexerSByte indexer) => indexer.bits;
+
+        /// <summary>
+        /// Get an enumerator to enumerate the bits with.
+        /// </summary>
+        /// <returns>The enumerator</returns>
         public IEnumerator<bool> GetEnumerator()
         {
             for (var index=0;index<BitSize;index++)
                 yield return bits.ReadBit(index);
         }
 
+        /// <summary>
+        /// Get an enumerator to enumerate the bits with.
+        /// </summary>
+        /// <returns>The enumerator</returns>
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
         }
+
+        /// <summary>
+        /// Get a subset of bits given a starting offset and length.
+        /// </summary>
+        /// <param name="start">The starting bit offset</param>
+        /// <param name="length">The number of bits to extract</param>
+        /// <returns>an array of bools for the subset of bits</returns>
         public bool[] Slice(int start, int length)
         {
             var slice = new bool[length];
@@ -58,6 +103,5 @@ namespace Jcd.BitManipulation
             return sb.ToString();
 
         }
-        
     }
 }

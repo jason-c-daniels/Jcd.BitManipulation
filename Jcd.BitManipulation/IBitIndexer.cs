@@ -1,8 +1,9 @@
+using System.Collections.Generic;
 using System.Text;
 
 namespace Jcd.BitManipulation
 {
-    public interface IBitIndexer
+    public interface IBitIndexer : IEnumerable<bool>
     {
         int Length { get; }
         bool this[int index] { get; set; }

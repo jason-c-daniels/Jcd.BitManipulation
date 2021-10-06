@@ -200,5 +200,82 @@ namespace Jcd.BitManipulation
             self |= (sbyte)((value << offset) & (sbyte)mask.Bits);
         }
         #endregion
+        
+        #region single bit operations
+
+        /// <summary>
+        /// Store a single bit from the specified offset.
+        /// </summary>
+        /// <param name="self">the bits to read from</param>
+        /// <param name="offset">the offset to read</param>
+        /// <param name="bit">The bit value to set</param>
+        /// <returns>the bit (a bool) at the specified offset </returns>
+        public static void StoreBit(this ref ulong self, byte offset,bool bit)
+            => self.StoreBits((ulong)(bit?1:0),offset,(byte)1);
+
+        /// <summary>
+        /// Store a single bit from the specified offset.
+        /// </summary>
+        /// <param name="self">the bits to read from</param>
+        /// <param name="offset">the offset to read</param>
+        /// <returns>the bit (a bool) at the specified offset </returns>
+        public static void StoreBit(this ref long self, byte offset, bool bit)
+            => self.StoreBits((long)(bit?1:0),offset,(byte)1);
+        
+        /// <summary>
+        /// Store a single bit from the specified offset.
+        /// </summary>
+        /// <param name="self">the bits to read from</param>
+        /// <param name="offset">the offset to read</param>
+        /// <returns>the bit (a bool) at the specified offset </returns>
+        public static void StoreBit(this ref uint self, byte offset, bool bit)
+            => self.StoreBits((uint)(bit?1:0),offset,(byte)1);
+        
+        /// <summary>
+        /// Store a single bit from the specified offset.
+        /// </summary>
+        /// <param name="self">the bits to read from</param>
+        /// <param name="offset">the offset to read</param>
+        /// <returns>the bit (a bool) at the specified offset </returns>
+        public static void StoreBit(this ref int self, byte offset, bool bit)
+            => self.StoreBits((int)(bit?1:0),offset,(byte)1);
+        
+        /// <summary>
+        /// Store a single bit from the specified offset.
+        /// </summary>
+        /// <param name="self">the bits to read from</param>
+        /// <param name="offset">the offset to read</param>
+        /// <returns>the bit (a bool) at the specified offset </returns>
+        public static void StoreBit(this ref ushort self, byte offset, bool bit)
+            => self.StoreBits((ushort)(bit?1:0),offset,(byte)1);
+
+        /// <summary>
+        /// Store a single bit from the specified offset.
+        /// </summary>
+        /// <param name="self">the bits to read from</param>
+        /// <param name="offset">the offset to read</param>
+        /// <returns>the bit (a bool) at the specified offset </returns>
+        public static void StoreBit(this ref short self, byte offset, bool bit)
+            => self.StoreBits((short)(bit?1:0),offset,(byte)1);
+        
+        /// <summary>
+        /// Store a single bit from the specified offset.
+        /// </summary>
+        /// <param name="self">the bits to read from</param>
+        /// <param name="offset">the offset to read</param>
+        /// <returns>the bit (a bool) at the specified offset </returns>
+        public static void StoreBit(this ref byte self, byte offset, bool bit)
+            => self.StoreBits((byte)(bit?1:0),offset,(byte)1);
+
+        /// <summary>
+        /// Store a single bit from the specified offset.
+        /// </summary>
+        /// <param name="self">the bits to read from</param>
+        /// <param name="offset">the offset to read</param>
+        /// <returns>the bit (a bool) at the specified offset </returns>
+        public static void StoreBit(this ref sbyte self, byte offset, bool bit)
+            => self.StoreBits((sbyte)(bit?1:0),offset,(byte)1);
+        
+        #endregion        
     }
 }

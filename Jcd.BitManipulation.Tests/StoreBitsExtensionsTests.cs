@@ -125,6 +125,137 @@ namespace Jcd.BitManipulation.Tests
         
         #endregion
         
+        #region single bit operation tests
+
+        [Theory]
+        [InlineData(0x00,0,true,0x01)]
+        [InlineData(0x00,7,true,0x80)]
+        [InlineData(0xFF,0,false,0xFE)]
+        [InlineData(0xFF,7,false,0x7F)]
+        public void StoreBit_For_SByte_Sets_The_Specified_Bit_To_The_Target_Value
+            (uint destination, int offset, bool bit, uint expected)
+        {
+            var value = (sbyte)destination;
+            value.StoreBit((byte)offset,bit);
+            Assert.Equal((sbyte)expected,value);
+        }
+        
+        [Theory]
+        [InlineData(0x00,0,true,0x01)]
+        [InlineData(0x00,7,true,0x80)]
+        [InlineData(0xFF,0,false,0xFE)]
+        [InlineData(0xFF,7,false,0x7F)]
+        public void StoreBit_For_Byte_Sets_The_Specified_Bit_To_The_Target_Value
+            (uint destination, int offset, bool bit, uint expected)
+        {
+            var value = (byte)destination;
+            value.StoreBit((byte)offset,bit);
+            Assert.Equal((byte)expected,value);
+        }
+
+        [Theory]
+        [InlineData(0x00,0,true,0x01)]
+        [InlineData(0x00,7,true,0x80)]
+        [InlineData(0xFF,0,false,0xFE)]
+        [InlineData(0xFF,7,false,0x7F)]
+        [InlineData(0x0000,15,true, 0x8000)]
+        [InlineData(0xFFFF,15,false,0x7FFF)]
+        public void StoreBit_For_Int16_Sets_The_Specified_Bit_To_The_Target_Value
+            (uint destination, int offset, bool bit, uint expected)
+        {
+            var value = (short)destination;
+            value.StoreBit((byte)offset,bit);
+            Assert.Equal((short)expected,value);
+        }
+        
+        [Theory]
+        [InlineData(0x00,0,true,0x01)]
+        [InlineData(0x00,7,true,0x80)]
+        [InlineData(0xFF,0,false,0xFE)]
+        [InlineData(0xFF,7,false,0x7F)]
+        [InlineData(0x0000,15,true, 0x8000)]
+        [InlineData(0xFFFF,15,false,0x7FFF)]
+        public void StoreBit_For_UInt16_Sets_The_Specified_Bit_To_The_Target_Value
+            (uint destination, int offset, bool bit, uint expected)
+        {
+            var value = (ushort)destination;
+            value.StoreBit((byte)offset,bit);
+            Assert.Equal((ushort)expected,value);
+        }
+
+        [Theory]
+        [InlineData(0x00,0,true,0x01)]
+        [InlineData(0x00,7,true,0x80)]
+        [InlineData(0xFF,0,false,0xFE)]
+        [InlineData(0xFF,7,false,0x7F)]
+        [InlineData(0x0000,15,true, 0x8000)]
+        [InlineData(0xFFFF,15,false,0x7FFF)]
+        [InlineData(0x00000000,31,true, 0x80000000)]
+        [InlineData(0xFFFFFFFF,31,false,0x7FFFFFFF)]
+        public void StoreBit_For_Int32_Sets_The_Specified_Bit_To_The_Target_Value
+            (uint destination, int offset, bool bit, uint expected)
+        {
+            var value = (int)destination;
+            value.StoreBit((byte)offset,bit);
+            Assert.Equal((int)expected,value);
+        }
+        
+        [Theory]
+        [InlineData(0x00,0,true,0x01)]
+        [InlineData(0x00,7,true,0x80)]
+        [InlineData(0xFF,0,false,0xFE)]
+        [InlineData(0xFF,7,false,0x7F)]
+        [InlineData(0x0000,15,true, 0x8000)]
+        [InlineData(0xFFFF,15,false,0x7FFF)]
+        [InlineData(0x00000000,31,true, 0x80000000)]
+        [InlineData(0xFFFFFFFF,31,false,0x7FFFFFFF)]
+        public void StoreBit_For_UInt32_Sets_The_Specified_Bit_To_The_Target_Value
+            (uint value, int offset, bool bit, uint expected)
+        {
+            value.StoreBit((byte)offset,bit);
+            Assert.Equal(expected,value);
+        }
+
+        
+
+        [Theory]
+        [InlineData(0x00,0,true,0x01)]
+        [InlineData(0x00,7,true,0x80)]
+        [InlineData(0xFF,0,false,0xFE)]
+        [InlineData(0xFF,7,false,0x7F)]
+        [InlineData(0x0000,15,true, 0x8000)]
+        [InlineData(0xFFFF,15,false,0x7FFF)]
+        [InlineData(0x00000000,31,true, 0x80000000)]
+        [InlineData(0xFFFFFFFF,31,false,0x7FFFFFFF)]
+        [InlineData(0x0000000000000000,63,true, 0x8000000000000000)]
+        [InlineData(0xFFFFFFFFFFFFFFFF,63,false,0x7FFFFFFFFFFFFFFF)]
+        public void StoreBit_For_Int64_Sets_The_Specified_Bit_To_The_Target_Value
+            (ulong destination, int offset, bool bit, ulong expected)
+        {
+            var value = (long)destination;
+            value.StoreBit((byte)offset,bit);
+            Assert.Equal((long)expected,value);
+        }
+        
+        [Theory]
+        [InlineData(0x00,0,true,0x01)]
+        [InlineData(0x00,7,true,0x80)]
+        [InlineData(0xFF,0,false,0xFE)]
+        [InlineData(0xFF,7,false,0x7F)]
+        [InlineData(0x0000,15,true, 0x8000)]
+        [InlineData(0xFFFF,15,false,0x7FFF)]
+        [InlineData(0x00000000,31,true, 0x80000000)]
+        [InlineData(0xFFFFFFFF,31,false,0x7FFFFFFF)]
+        [InlineData(0x0000000000000000,63,true, 0x8000000000000000)]
+        [InlineData(0xFFFFFFFFFFFFFFFF,63,false,0x7FFFFFFFFFFFFFFF)]
+        public void StoreBit_For_UInt64_Sets_The_Specified_Bit_To_The_Target_Value
+            (ulong value, int offset, bool bit, ulong expected)
+        {
+            value.StoreBit((byte)offset,bit);
+            Assert.Equal(expected,value);
+        }
+        #endregion
+        
         // TODO: Add tests for direct calls to BitMask overloads.
         
     }

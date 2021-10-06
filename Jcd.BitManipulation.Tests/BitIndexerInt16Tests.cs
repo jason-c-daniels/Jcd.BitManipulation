@@ -59,9 +59,9 @@ namespace Jcd.BitManipulation.Tests
             for (int i = 0; i < indexer.Length; i++)
             {
                 mask.SetBit(i);
-                var bit = (value & mask) > 0;
+                var bit = (value & mask) != 0;
                 Assert.Equal(bit,indexer[i]);
-                mask.ClearBit(i);                
+                mask.ClearBit(i);
             }
         }
         

@@ -14,6 +14,8 @@
         <AssemblyVersion>1.0.2</AssemblyVersion>
         <FileVersion>1.0.2</FileVersion>
         <PackageVersion>1.0.2</PackageVersion>
+        <Authors>Jason C Daniels</Authors>
+        <Company>Jason C Daniels (A Human, not a company nor a potato)</Company>
     </PropertyGroup>
 
 </Project>

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Jcd.BitManipulation
@@ -34,7 +35,7 @@ namespace Jcd.BitManipulation
         public bool[] Slice(int start, int length)
         {
             var slice = new bool[length];
-            for (int i = 0; i < start+length; i++)
+            for (int i = 0; i < length; i++)
             {
                 slice[i] = this[i+start];
             }
@@ -50,7 +51,7 @@ namespace Jcd.BitManipulation
         {
             var sb = new StringBuilder();
             sb.Append("0b");
-            foreach (var value in this)
+            foreach (var value in this.Reverse())
             {
                 sb.Append(value ? '1':'0');
             }

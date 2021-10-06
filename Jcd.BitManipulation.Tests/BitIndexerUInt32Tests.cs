@@ -105,9 +105,9 @@ namespace Jcd.BitManipulation.Tests
         }
 
         [Theory]
-        [InlineData(0b0000000000000000,"0b0000000000000000")]
-        [InlineData(0b0000000000011100,"0b0000000000011100")]
-        [InlineData(0b1110000000000000,"0b1110000000000000")]
+        [InlineData(0b00000000000000000000000000000000,"0b00000000000000000000000000000000")]
+        [InlineData(0b00100000000111000000000000000000,"0b00100000000111000000000000000000")]
+        [InlineData(0b00000000000000001110000000000000,"0b00000000000000001110000000000000")]
         public void ToString_Formats_As_Binary_Int_Representation(uint data, string expected)
         {
             var indexer = new BitIndexerUInt32() { Bits = (uint)data };

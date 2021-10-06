@@ -13,7 +13,7 @@ namespace Jcd.BitManipulation
         /// <param name="offset">the lowest bit to start turning on</param>
         /// <param name="size">the number of bits to set to 1</param>
         /// <returns>the shifted mask</returns>
-        public static BitMask CreateRange(byte offset=0, byte size=64) =>
+        public static BitMask CreateRange(int offset=0, int size=64) =>
             size == 64  ?
                   new BitMask(ulong.MaxValue << offset)
                 : new BitMask(((((ulong)1 << size) - 1) << offset));
@@ -23,7 +23,7 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="offset">the lowest bit to start turning on</param>
         /// <returns>the shifted mask</returns>
-        public static BitMask CreateSingleBit(byte offset) => new BitMask((ulong) 1 << offset);
+        public static BitMask CreateSingleBit(int offset) => new BitMask((ulong) 1 << offset);
         #endregion
 
         #region constructors

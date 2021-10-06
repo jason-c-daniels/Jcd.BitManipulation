@@ -9,7 +9,7 @@ namespace Jcd.BitManipulation
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The bit location to begin clearing bits.</param>
         /// <param name="size">The number of bits to clear on.</param>
-        public static void ClearBits(this ref sbyte self, byte offset=0, byte size=8)
+        public static void ClearBits(this ref sbyte self, int offset=0, int size=8)
             => self.ClearBits(BitMask.CreateRange(offset, size));
 
         /// <summary>
@@ -18,7 +18,7 @@ namespace Jcd.BitManipulation
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The bit location to begin clearing bits.</param>
         /// <param name="size">The number of bits to clear on.</param>
-        public static void ClearBits(this ref short self, byte offset=0, byte size=16)
+        public static void ClearBits(this ref short self, int offset=0, int size=16)
             => self.ClearBits(BitMask.CreateRange(offset, size));
         
         /// <summary>
@@ -27,7 +27,7 @@ namespace Jcd.BitManipulation
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The bit location to begin clearing bits.</param>
         /// <param name="size">The number of bits to clear on.</param>
-        public static void ClearBits(this ref int self, byte offset=0, byte size=32)
+        public static void ClearBits(this ref int self, int offset=0, int size=32)
             => self.ClearBits(BitMask.CreateRange(offset, size));
         
         /// <summary>
@@ -36,7 +36,7 @@ namespace Jcd.BitManipulation
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The bit location to begin clearing bits.</param>
         /// <param name="size">The number of bits to clear on.</param>
-        public static void ClearBits(this ref long self, byte offset=0, byte size=64)
+        public static void ClearBits(this ref long self, int offset=0, int size=64)
             => self.ClearBits(BitMask.CreateRange(offset, size));
         
         /// <summary>
@@ -45,7 +45,7 @@ namespace Jcd.BitManipulation
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The bit location to begin clearing bits.</param>
         /// <param name="size">The number of bits to clear on.</param>
-        public static void ClearBits(this ref byte self, byte offset=0, byte size=8)
+        public static void ClearBits(this ref byte self, int offset=0, int size=8)
             => self.ClearBits(BitMask.CreateRange(offset, size));
         
         /// <summary>
@@ -54,7 +54,7 @@ namespace Jcd.BitManipulation
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The bit location to begin clearing bits.</param>
         /// <param name="size">The number of bits to clear on.</param>
-        public static void ClearBits(this ref ushort self, byte offset=0, byte size=16)
+        public static void ClearBits(this ref ushort self, int offset=0, int size=16)
             => self.ClearBits(BitMask.CreateRange(offset, size));
         
         /// <summary>
@@ -63,7 +63,7 @@ namespace Jcd.BitManipulation
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The bit location to begin clearing bits.</param>
         /// <param name="size">The number of bits to clear on.</param>
-        public static void ClearBits(this ref uint self, byte offset=0, byte size=32)
+        public static void ClearBits(this ref uint self, int offset=0, int size=32)
             => self.ClearBits(BitMask.CreateRange(offset, size));
         
         /// <summary>
@@ -72,7 +72,7 @@ namespace Jcd.BitManipulation
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The bit location to begin clearing bits.</param>
         /// <param name="size">The number of bits to clear on.</param>
-        public static void ClearBits(this ref ulong self, byte offset=0, byte size=64)
+        public static void ClearBits(this ref ulong self, int offset=0, int size=64)
             => self.ClearBits(BitMask.CreateRange(offset, size));
         
         #endregion
@@ -83,7 +83,7 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The bit to clear.</param>
-        public static void ClearBit(this ref sbyte self, byte offset)
+        public static void ClearBit(this ref sbyte self, int offset)
             => self.ClearBits(BitMask.CreateSingleBit(offset));
         
         /// <summary>
@@ -91,7 +91,7 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The bit to clear.</param>
-        public static void ClearBit(this ref short self, byte offset)
+        public static void ClearBit(this ref short self, int offset)
             => self.ClearBits(BitMask.CreateSingleBit(offset));
         
         /// <summary>
@@ -99,7 +99,7 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The bit to clear.</param>
-        public static void ClearBit(this ref int self, byte offset)
+        public static void ClearBit(this ref int self, int offset)
             => self.ClearBits(BitMask.CreateSingleBit(offset));
 
         /// <summary>
@@ -107,7 +107,7 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The bit to clear.</param>
-        public static void ClearBit(this ref long self, byte offset)
+        public static void ClearBit(this ref long self, int offset)
             => self.ClearBits(BitMask.CreateSingleBit(offset));
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The bit to clear.</param>
-        public static void ClearBit(this ref byte self, byte offset)
+        public static void ClearBit(this ref byte self, int offset)
             => self.ClearBits(BitMask.CreateSingleBit(offset));
 
         /// <summary>
@@ -123,7 +123,7 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The bit to clear.</param>
-        public static void ClearBit(this ref ushort self, byte offset)
+        public static void ClearBit(this ref ushort self, int offset)
             => self.ClearBits(BitMask.CreateSingleBit(offset));
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The bit to clear.</param>
-        public static void ClearBit(this ref uint self, byte offset)
+        public static void ClearBit(this ref uint self, int offset)
             => self.ClearBits(BitMask.CreateSingleBit(offset));
 
         /// <summary>
@@ -139,7 +139,7 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The bit to clear.</param>
-        public static void ClearBit(this ref ulong self, byte offset)
+        public static void ClearBit(this ref ulong self, int offset)
             => self.ClearBits(BitMask.CreateSingleBit(offset));
                 
         #endregion

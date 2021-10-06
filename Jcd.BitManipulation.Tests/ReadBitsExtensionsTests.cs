@@ -16,7 +16,7 @@ namespace Jcd.BitManipulation.Tests
         public void ReadBits_On_SByte_Reads_The_Correct_Bits(uint initial, int offset,int size, uint expected)
         {
             var bits=(sbyte)initial; // coerce to proper type
-            var value=bits.ReadBits((byte)offset,(byte)size);
+            var value=bits.ReadBits(offset,size);
             Assert.Equal((sbyte)expected, value);
         }
 
@@ -29,7 +29,7 @@ namespace Jcd.BitManipulation.Tests
         public void ReadBits_On_Byte_Reads_The_Correct_Bits(uint initial, int offset,int size, uint expected)
         {
             var bits=(byte)initial; // coerce to proper type
-            var value=bits.ReadBits((byte)offset,(byte)size);
+            var value=bits.ReadBits(offset,size);
             Assert.Equal((byte)expected, value);
         }
         
@@ -45,7 +45,7 @@ namespace Jcd.BitManipulation.Tests
         public void ReadBits_On_Int16_Reads_The_Correct_Bits(uint initial, int offset,int size, uint expected)
         {
             var bits=(short)initial; // coerce to proper type
-            var value=bits.ReadBits((byte)offset,(byte)size);
+            var value=bits.ReadBits(offset,size);
             Assert.Equal((short)expected, value);
         }
 
@@ -60,7 +60,7 @@ namespace Jcd.BitManipulation.Tests
         public void ReadBits_On_UInt16_Reads_The_Correct_Bits(uint initial, int offset,int size, uint expected)
         {
             var bits=(ushort)initial; // coerce to proper type
-            var value=bits.ReadBits((byte)offset,(byte)size);
+            var value=bits.ReadBits(offset,size);
             Assert.Equal((ushort)expected, value);
         }
 
@@ -77,7 +77,7 @@ namespace Jcd.BitManipulation.Tests
         public void ReadBits_On_Int32_Reads_The_Correct_Bits(uint initial, int offset,int size, uint expected)
         {
             var bits=(int)initial; // coerce to proper type
-            var value=bits.ReadBits((byte)offset,(byte)size);
+            var value=bits.ReadBits(offset,size);
             Assert.Equal((int)expected, value);
         }
 
@@ -94,7 +94,7 @@ namespace Jcd.BitManipulation.Tests
         public void ReadBits_On_UInt32_Reads_The_Correct_Bits(uint initial, int offset,int size, uint expected)
         {
             var bits=initial; // coerce to proper type
-            var value=bits.ReadBits((byte)offset,(byte)size);
+            var value=bits.ReadBits(offset,size);
             Assert.Equal(expected, value);
         }
         
@@ -114,7 +114,7 @@ namespace Jcd.BitManipulation.Tests
         public void ReadBits_On_Int64_Reads_The_Correct_Bits(ulong initial, int offset,int size, ulong expected)
         {
             var bits=(long)initial; // coerce to proper type
-            var value=bits.ReadBits((byte)offset,(byte)size);
+            var value=bits.ReadBits(offset,size);
             Assert.Equal((long)expected, value);
         }
 
@@ -133,7 +133,7 @@ namespace Jcd.BitManipulation.Tests
         public void ReadBits_On_UInt64_Reads_The_Correct_Bits(ulong initial, int offset,int size, ulong expected)
         {
             var bits=initial; // coerce to proper type
-            var value=bits.ReadBits((byte)offset,(byte)size);
+            var value=bits.ReadBits(offset,size);
             Assert.Equal(expected, value);
         }
         #endregion

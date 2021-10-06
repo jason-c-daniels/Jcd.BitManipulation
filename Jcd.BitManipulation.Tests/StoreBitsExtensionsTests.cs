@@ -14,7 +14,7 @@ namespace Jcd.BitManipulation.Tests
         {
             var destination=(sbyte)initial; // coerce to proper type
             var value = (sbyte)val;
-            destination.StoreBits(value,(byte)offset,(byte)size);
+            destination.StoreBits(value,offset,size);
             Assert.Equal((sbyte)expected, destination);
         }
         
@@ -27,7 +27,7 @@ namespace Jcd.BitManipulation.Tests
         {
             var destination=(byte)initial; // coerce to proper type
             var value = (byte)val;
-            destination.StoreBits(value,(byte)offset,(byte)size);
+            destination.StoreBits(value,offset,size);
             Assert.Equal((byte)expected, destination);
         }
        
@@ -43,7 +43,7 @@ namespace Jcd.BitManipulation.Tests
         {
             var destination=(short)initial; // coerce to proper type
             var value = (short)val;
-            destination.StoreBits(value,(byte)offset,(byte)size);
+            destination.StoreBits(value,offset,size);
             Assert.Equal((short)expected, destination);
         }
         
@@ -58,7 +58,7 @@ namespace Jcd.BitManipulation.Tests
         {
             var destination=(ushort)initial; // coerce to proper type
             var value = (ushort)val;
-            destination.StoreBits(value,(byte)offset,(byte)size);
+            destination.StoreBits(value,offset,size);
             Assert.Equal((ushort)expected, destination);
         }
         
@@ -73,7 +73,7 @@ namespace Jcd.BitManipulation.Tests
         {
             var destination=(int)initial; // coerce to proper type
             var value = (int)val;
-            destination.StoreBits(value,(byte)offset,(byte)size);
+            destination.StoreBits(value,offset,size);
             Assert.Equal((int)expected, destination);
         }
         
@@ -88,7 +88,7 @@ namespace Jcd.BitManipulation.Tests
         {
             var destination=initial; // coerce to proper type
             var value = val;
-            destination.StoreBits( value,(byte)offset,(byte)size);
+            destination.StoreBits( value,offset,size);
             Assert.Equal(expected, destination);
         }
         
@@ -104,7 +104,7 @@ namespace Jcd.BitManipulation.Tests
         {
             var destination=(long)initial; // coerce to proper type
             var value = (long)val;
-            destination.StoreBits(value,(byte)offset,(byte)size);
+            destination.StoreBits(value,offset,size);
             Assert.Equal((long)expected, destination);
         }
         
@@ -119,7 +119,7 @@ namespace Jcd.BitManipulation.Tests
         {
             var destination=initial; // copy for debugging reasons.
             var value = val;
-            destination.StoreBits(value,(byte)offset,(byte)size);
+            destination.StoreBits(value,offset,size);
             Assert.Equal(expected, destination);
         }
         

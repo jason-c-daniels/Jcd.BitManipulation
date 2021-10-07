@@ -2,7 +2,7 @@ using Xunit;
 
 namespace Jcd.BitManipulation.Tests
 {
-    public class BoolArrayExtensionsTests
+    public class BooleanArrayExtensionsTests
     {
         [Theory]
         [InlineData(0xFF)]
@@ -11,7 +11,7 @@ namespace Jcd.BitManipulation.Tests
         public void Byte_Round_Trip_Remains_Unaltered(uint data)
         {
             var expected = (byte)data;
-            var actual = expected.ToBoolArray().ToByte();
+            var actual = expected.ToBooleanArray().ToByte();
             Assert.Equal(expected,actual);
         }
         
@@ -22,7 +22,7 @@ namespace Jcd.BitManipulation.Tests
         public void SByte_Round_Trip_Remains_Unaltered(uint data)
         {
             var expected = (sbyte)data;
-            var actual = expected.ToBoolArray().ToSByte();
+            var actual = expected.ToBooleanArray().ToSByte();
             Assert.Equal(expected,actual);
         }
         
@@ -34,7 +34,7 @@ namespace Jcd.BitManipulation.Tests
         public void UInt16_Round_Trip_Remains_Unaltered(uint data)
         {
             var expected = (ushort)data;
-            var actual = expected.ToBoolArray().ToUInt16();
+            var actual = expected.ToBooleanArray().ToUInt16();
             Assert.Equal(expected,actual);
         }
         
@@ -45,7 +45,7 @@ namespace Jcd.BitManipulation.Tests
         public void Int16_Round_Trip_Remains_Unaltered(uint data)
         {
             var expected = (short)data;
-            var actual = expected.ToBoolArray().ToInt16();
+            var actual = expected.ToBooleanArray().ToInt16();
             Assert.Equal(expected,actual);
         }
         
@@ -55,7 +55,7 @@ namespace Jcd.BitManipulation.Tests
         [InlineData(0x71EEAACC)]
         public void UInt32_Round_Trip_Remains_Unaltered(uint expected)
         {
-            var actual = expected.ToBoolArray().ToUInt32();
+            var actual = expected.ToBooleanArray().ToUInt32();
             Assert.Equal(expected,actual);
         }
         
@@ -66,7 +66,7 @@ namespace Jcd.BitManipulation.Tests
         public void Int32_Round_Trip_Remains_Unaltered(uint data)
         {
             var expected = (int)data;
-            var actual = expected.ToBoolArray().ToInt32();
+            var actual = expected.ToBooleanArray().ToInt32();
             Assert.Equal(expected,actual);
         }
         
@@ -76,7 +76,7 @@ namespace Jcd.BitManipulation.Tests
         [InlineData(0x71EEAACC11223344)]
         public void UInt64_Round_Trip_Remains_Unaltered(ulong expected)
         {
-            var actual = expected.ToBoolArray().ToUInt64();
+            var actual = expected.ToBooleanArray().ToUInt64();
             Assert.Equal(expected,actual);
         }
         
@@ -87,7 +87,7 @@ namespace Jcd.BitManipulation.Tests
         public void Int64_Round_Trip_Remains_Unaltered(ulong data)
         {
             var expected = (long)data;
-            var actual = expected.ToBoolArray().ToInt64();
+            var actual = expected.ToBooleanArray().ToInt64();
             Assert.Equal(expected,actual);
         }
         

@@ -4,7 +4,7 @@
         <TargetFramework>netstandard2.1</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Title>Jcd.BitManipulation</Title>
-        <Description>A set of extensions methods and a helper class to make bit manipulations a slight bit easier.</Description>
+        <Description>A set of extensions methods and some helper classes to make bit manipulation slighty easier.</Description>
         <Copyright>2021</Copyright>
         <PackageProjectUrl>https://github.com/jason-c-daniels/Jcd.BitManipulation</PackageProjectUrl>
         <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
@@ -16,6 +16,7 @@
         <PackageVersion>1.0.2</PackageVersion>
         <Authors>Jason C Daniels</Authors>
         <Company>Jason C Daniels (A Human, not a company nor a potato)</Company>
+        <PackageIconUrl>https://s.gravatar.com/avatar/c7e8df18f543ea857ac93660a190df98?s=320</PackageIconUrl>
     </PropertyGroup>
 
 </Project>

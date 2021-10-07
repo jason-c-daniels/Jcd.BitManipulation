@@ -11,9 +11,9 @@
         <RepositoryUrl>https://github.com/jason-c-daniels/Jcd.BitManipulation</RepositoryUrl>
         <RepositoryType>github</RepositoryType>
         <PackageTags>bit manipulation</PackageTags>
-        <AssemblyVersion>1.0.2</AssemblyVersion>
-        <FileVersion>1.0.2</FileVersion>
-        <PackageVersion>1.0.2</PackageVersion>
+        <AssemblyVersion>1.0.3</AssemblyVersion>
+        <FileVersion>1.0.3</FileVersion>
+        <PackageVersion>1.0.3</PackageVersion>
         <Authors>Jason C Daniels</Authors>
         <Company>Jason C Daniels (A Human, not a company nor a potato)</Company>
         <PackageIconUrl>https://s.gravatar.com/avatar/c7e8df18f543ea857ac93660a190df98?s=320</PackageIconUrl>

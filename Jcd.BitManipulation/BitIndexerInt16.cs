@@ -89,7 +89,7 @@ namespace Jcd.BitManipulation
         /// <summary>
         /// Format as a bit representation
         /// </summary>
-        /// <returns>the bits of the mask formatted as 0b0101...1111</returns>
+        /// <returns>the bits of the value formatted as 0b0101...1111</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();

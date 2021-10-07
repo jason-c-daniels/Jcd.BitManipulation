@@ -5,14 +5,29 @@ namespace Jcd.BitManipulation
 {
     public interface IBitIndexer : IEnumerable<bool>
     {
+        /// <summary>
+        /// The number of addressable bits
+        /// </summary>
         int Length { get; }
+        
+        /// <summary>
+        /// gets or sets a bit
+        /// </summary>
+        /// <param name="index">the offset of the bit to get or set.</param>
         bool this[int index] { get; set; }
+        
+        /// <summary>
+        /// Gets a slice of bits from the backing store
+        /// </summary>
+        /// <param name="start">starting offset of the bits to retrieve</param>
+        /// <param name="length">the number of bits to get</param>
+        /// <returns>Array of bits extracted</returns>
         bool[] Slice(int start, int length);
+        
         /// <summary>
         /// Format as a bit representation
         /// </summary>
-        /// <returns>the bits of the mask formatted as 0b0101...1111</returns>
+        /// <returns>the bits of the value formatted as 0b0101...1111</returns>
         string ToString();
     }
-    
 }

@@ -71,7 +71,7 @@ namespace Jcd.BitManipulation
         }
 
         /// <summary>
-        /// Get a subset of bits given a starting offset and length.
+        /// Gets a subset of bits given a starting offset and length.
         /// </summary>
         /// <param name="start">The starting bit offset</param>
         /// <param name="length">The number of bits to extract</param>
@@ -90,7 +90,7 @@ namespace Jcd.BitManipulation
         /// <summary>
         /// Format as a bit representation
         /// </summary>
-        /// <returns>the bits of the mask formatted as 0b0101...1111</returns>
+        /// <returns>the bits of the value formatted as 0b0101...1111</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();

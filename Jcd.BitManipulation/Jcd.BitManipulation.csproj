@@ -1,7 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.1</TargetFramework>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Title>Jcd.BitManipulation</Title>
         <Description>A set of extensions methods and some helper classes to make bit manipulation slighty easier.</Description>
@@ -17,6 +16,7 @@
         <Authors>Jason C Daniels</Authors>
         <Company>Jason C Daniels (A Human, not a company nor a potato)</Company>
         <PackageIconUrl>https://s.gravatar.com/avatar/c7e8df18f543ea857ac93660a190df98?s=320</PackageIconUrl>
+        <TargetFrameworks>netstandard1.0;netstandard1.1;netstandard1.2;netstandard1.3;netstandard1.4;netstandard1.5;netstandard1.6;netstandard1.7;netstandard2.0;netstandard2.1</TargetFrameworks>
     </PropertyGroup>
 
 </Project>

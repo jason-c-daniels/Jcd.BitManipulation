@@ -70,6 +70,11 @@
             </summary>
             <returns>the bits of the value formatted as 0b0101...1111</returns>
         </member>
+        <member name="T:Jcd.BitManipulation.BitIndexerExtensions">
+            <summary>
+            Some helper methods for converting to and from a BitIndexer.
+            </summary>
+        </member>
         <member name="M:Jcd.BitManipulation.BitIndexerExtensions.ToBitIndexer(System.Byte)">
             <summary>
             Returns a BitIndexer for a byte
@@ -642,6 +647,16 @@
             </summary>
             <returns>the bits of the value formatted as 0b0101...1111</returns>
         </member>
+        <member name="T:Jcd.BitManipulation.BitMask">
+            <summary>
+            An abstraction and factory methods to aid in bit manipulation.
+            </summary>
+        </member>
+        <member name="F:Jcd.BitManipulation.BitMask.Bits">
+            <summary>
+            The backing store for the actual bits of the bitmask.
+            </summary>
+        </member>
         <member name="M:Jcd.BitManipulation.BitMask.CreateRange(System.Int32,System.Int32)">
             <summary>
             Create a 64 bit, bitmask of a specified bit size and bit location within the number.  
@@ -664,6 +679,48 @@
             <param name="mask">The BitMask to copy</param>
         </member>
         <member name="M:Jcd.BitManipulation.BitMask.#ctor(System.UInt64)">
+            <summary>
+            Create a bitmask  
+            </summary>
+            <param name="bits">The BitMask to use</param>
+        </member>
+        <member name="M:Jcd.BitManipulation.BitMask.#ctor(System.Int64)">
+            <summary>
+            Create a bitmask  
+            </summary>
+            <param name="bits">The BitMask to use</param>
+        </member>
+        <member name="M:Jcd.BitManipulation.BitMask.#ctor(System.UInt32)">
+            <summary>
+            Create a bitmask  
+            </summary>
+            <param name="bits">The BitMask to use</param>
+        </member>
+        <member name="M:Jcd.BitManipulation.BitMask.#ctor(System.Int32)">
+            <summary>
+            Create a bitmask  
+            </summary>
+            <param name="bits">The BitMask to use</param>
+        </member>
+        <member name="M:Jcd.BitManipulation.BitMask.#ctor(System.UInt16)">
+            <summary>
+            Create a bitmask  
+            </summary>
+            <param name="bits">The BitMask to use</param>
+        </member>
+        <member name="M:Jcd.BitManipulation.BitMask.#ctor(System.Int16)">
+            <summary>
+            Create a bitmask  
+            </summary>
+            <param name="bits">The BitMask to use</param>
+        </member>
+        <member name="M:Jcd.BitManipulation.BitMask.#ctor(System.Byte)">
+            <summary>
+            Create a bitmask  
+            </summary>
+            <param name="bits">The BitMask to use</param>
+        </member>
+        <member name="M:Jcd.BitManipulation.BitMask.#ctor(System.SByte)">
             <summary>
             Create a bitmask  
             </summary>
@@ -904,6 +961,11 @@
             <param name="bits">the array of bools to convert, LSB at index 0</param>
             <returns>The converted long</returns>
         </member>
+        <member name="T:Jcd.BitManipulation.ClearBitsExtensions">
+            <summary>
+            Extension methods to aid in clearing bits in various integer data types.
+            </summary>
+        </member>
         <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.SByte@,System.Int32,System.Int32)">
             <summary>
             Sets all specified bits to "off" in a variable. 
@@ -1080,6 +1142,11 @@
             <param name="self">The value to be modified.</param>
             <param name="mask">bits to clear.</param>
         </member>
+        <member name="T:Jcd.BitManipulation.IBitIndexer">
+            <summary>
+            The basic interface for indexing bits within an integer data type.
+            </summary>
+        </member>
         <member name="P:Jcd.BitManipulation.IBitIndexer.Length">
             <summary>
             The number of addressable bits
@@ -1104,6 +1171,11 @@
             Format as a bit representation
             </summary>
             <returns>the bits of the value formatted as 0b0101...1111</returns>
+        </member>
+        <member name="T:Jcd.BitManipulation.ReadBitsExtensions">
+            <summary>
+            Extension methods that enable reading one or more bits from a specified offset in an integer data type. 
+            </summary>
         </member>
         <member name="M:Jcd.BitManipulation.ReadBitsExtensions.ReadBits(System.SByte,System.Int32,System.Int32)">
             <summary>
@@ -1329,6 +1401,11 @@
             <param name="offset">the offset to read</param>
             <returns>the bit (a bool) at the specified offset </returns>
         </member>
+        <member name="T:Jcd.BitManipulation.SetBitsExtensions">
+            <summary>
+            Extension methods that aid in turning bits on in an integer data type.
+            </summary>
+        </member>
         <member name="M:Jcd.BitManipulation.SetBitsExtensions.SetBits(System.SByte@,System.Int32,System.Int32)">
             <summary>
             Sets all specified bits to "on" in a variable 
@@ -1504,6 +1581,11 @@
             </summary>
             <param name="self">The value to be modified.</param>
             <param name="mask">bits to set.</param>
+        </member>
+        <member name="T:Jcd.BitManipulation.StoreBitsExtensions">
+            <summary>
+            Extension methods that aid in storing values into bit offsets within an integer data type.
+            </summary>
         </member>
         <member name="M:Jcd.BitManipulation.StoreBitsExtensions.StoreBits(System.SByte@,System.SByte,System.Int32,System.Int32)">
             <summary>
@@ -1851,56 +1933,56 @@
         </member>
         <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.SByte@,Jcd.BitManipulation.BitMask)">
             <summary>
-            Sets all from a provided mask to "off" in a variable. 
+            Toggle all the bits in a variable according to the provided mask 
             </summary>
             <param name="self">The value to be modified.</param>
             <param name="mask">bits to set.</param>
         </member>
         <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.Int16@,Jcd.BitManipulation.BitMask)">
             <summary>
-            Sets all from a provided mask to "off" in a variable. 
+            Toggle all the bits in a variable according to the provided mask 
             </summary>
             <param name="self">The value to be modified.</param>
             <param name="mask">bits to set.</param>
         </member>
         <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.Int32@,Jcd.BitManipulation.BitMask)">
             <summary>
-            Sets all from a provided mask to "off" in a variable. 
+            Toggle all the bits in a variable according to the provided mask 
             </summary>
             <param name="self">The value to be modified.</param>
             <param name="mask">bits to set.</param>
         </member>
         <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.Int64@,Jcd.BitManipulation.BitMask)">
             <summary>
-            Sets all from a provided mask to "off" in a variable. 
+            Toggle all the bits in a variable according to the provided mask 
             </summary>
             <param name="self">The value to be modified.</param>
             <param name="mask">bits to set.</param>
         </member>
         <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.Byte@,Jcd.BitManipulation.BitMask)">
             <summary>
-            Sets all from a provided mask to "off" in a variable. 
+            Toggle all the bits in a variable according to the provided mask 
             </summary>
             <param name="self">The value to be modified.</param>
             <param name="mask">bits to set.</param>
         </member>
         <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.UInt16@,Jcd.BitManipulation.BitMask)">
             <summary>
-            Sets all from a provided mask to "off" in a variable. 
+            Toggle all the bits in a variable according to the provided mask 
             </summary>
             <param name="self">The value to be modified.</param>
             <param name="mask">bits to set.</param>
         </member>
         <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.UInt32@,Jcd.BitManipulation.BitMask)">
             <summary>
-            Sets all from a provided mask to "off" in a variable. 
+            Toggle all the bits in a variable according to the provided mask 
             </summary>
             <param name="self">The value to be modified.</param>
             <param name="mask">bits to set.</param>
         </member>
         <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.UInt64@,Jcd.BitManipulation.BitMask)">
             <summary>
-            Sets all from a provided mask to "off" in a variable. 
+            Toggle all the bits in a variable according to the provided mask 
             </summary>
             <param name="self">The value to be modified.</param>
             <param name="mask">bits to set.</param>

@@ -1,5 +1,8 @@
 namespace Jcd.BitManipulation
 {
+    /// <summary>
+    /// Extension methods to aid in clearing bits in various integer data types.
+    /// </summary>
     public static class ClearBitsExtensions
     {
         #region Range of bits operations

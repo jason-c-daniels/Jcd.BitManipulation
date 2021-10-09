@@ -1,5 +1,6 @@
 ### [Jcd.BitManipulation](Jcd_BitManipulation.md 'Jcd.BitManipulation')
 ## BitIndexerExtensions Class
+Some helper methods for converting to and from a BitIndexer.  
 ```csharp
 public static class BitIndexerExtensions
 ```

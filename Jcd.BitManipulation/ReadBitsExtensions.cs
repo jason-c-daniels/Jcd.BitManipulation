@@ -1,5 +1,8 @@
 namespace Jcd.BitManipulation
 {
+    /// <summary>
+    /// Extension methods that enable reading one or more bits from a specified offset in an integer data type. 
+    /// </summary>
     public static class ReadBitsExtensions
     {
         #region operations on ranges of bits.

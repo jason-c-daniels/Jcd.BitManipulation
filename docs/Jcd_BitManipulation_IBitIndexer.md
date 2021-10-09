@@ -1,5 +1,6 @@
 ### [Jcd.BitManipulation](Jcd_BitManipulation.md 'Jcd.BitManipulation')
 ## IBitIndexer Interface
+The basic interface for indexing bits within an integer data type.  
 ```csharp
 public interface IBitIndexer :
 System.Collections.Generic.IEnumerable<bool>,

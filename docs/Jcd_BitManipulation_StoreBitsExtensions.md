@@ -1,5 +1,6 @@
 ### [Jcd.BitManipulation](Jcd_BitManipulation.md 'Jcd.BitManipulation')
 ## StoreBitsExtensions Class
+Extension methods that aid in storing values into bit offsets within an integer data type.  
 ```csharp
 public static class StoreBitsExtensions
 ```

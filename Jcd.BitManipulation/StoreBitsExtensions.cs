@@ -1,5 +1,8 @@
 namespace Jcd.BitManipulation
 {
+    /// <summary>
+    /// Extension methods that aid in storing values into bit offsets within an integer data type.
+    /// </summary>
     public static class StoreBitsExtensions
     {
         #region operations on ranges of bits.

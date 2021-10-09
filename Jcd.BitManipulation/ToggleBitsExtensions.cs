@@ -154,7 +154,7 @@ namespace Jcd.BitManipulation
         
         #region BitMask operations
         /// <summary>
-        /// Sets all from a provided mask to "off" in a variable. 
+        /// Toggle all the bits in a variable according to the provided mask 
         /// </summary>
         /// <param name="self">The value to be modified.</param>
         /// <param name="mask">bits to set.</param>
@@ -162,7 +162,7 @@ namespace Jcd.BitManipulation
             => self ^= (sbyte)mask.Bits;
         
         /// <summary>
-        /// Sets all from a provided mask to "off" in a variable. 
+        /// Toggle all the bits in a variable according to the provided mask 
         /// </summary>
         /// <param name="self">The value to be modified.</param>
         /// <param name="mask">bits to set.</param>
@@ -170,7 +170,7 @@ namespace Jcd.BitManipulation
             => self ^= (short)mask.Bits;
         
         /// <summary>
-        /// Sets all from a provided mask to "off" in a variable. 
+        /// Toggle all the bits in a variable according to the provided mask 
         /// </summary>
         /// <param name="self">The value to be modified.</param>
         /// <param name="mask">bits to set.</param>
@@ -178,7 +178,7 @@ namespace Jcd.BitManipulation
             => self ^= (int)mask.Bits;
 
         /// <summary>
-        /// Sets all from a provided mask to "off" in a variable. 
+        /// Toggle all the bits in a variable according to the provided mask 
         /// </summary>
         /// <param name="self">The value to be modified.</param>
         /// <param name="mask">bits to set.</param>
@@ -186,7 +186,7 @@ namespace Jcd.BitManipulation
             => self ^= (long)mask.Bits;
 
         /// <summary>
-        /// Sets all from a provided mask to "off" in a variable. 
+        /// Toggle all the bits in a variable according to the provided mask 
         /// </summary>
         /// <param name="self">The value to be modified.</param>
         /// <param name="mask">bits to set.</param>
@@ -194,7 +194,7 @@ namespace Jcd.BitManipulation
             => self ^= (byte)mask.Bits;
 
         /// <summary>
-        /// Sets all from a provided mask to "off" in a variable. 
+        /// Toggle all the bits in a variable according to the provided mask 
         /// </summary>
         /// <param name="self">The value to be modified.</param>
         /// <param name="mask">bits to set.</param>
@@ -202,7 +202,7 @@ namespace Jcd.BitManipulation
             => self ^= (ushort)mask.Bits;
 
         /// <summary>
-        /// Sets all from a provided mask to "off" in a variable. 
+        /// Toggle all the bits in a variable according to the provided mask 
         /// </summary>
         /// <param name="self">The value to be modified.</param>
         /// <param name="mask">bits to set.</param>
@@ -210,7 +210,7 @@ namespace Jcd.BitManipulation
             => self ^= (uint)mask.Bits;
 
         /// <summary>
-        /// Sets all from a provided mask to "off" in a variable. 
+        /// Toggle all the bits in a variable according to the provided mask 
         /// </summary>
         /// <param name="self">The value to be modified.</param>
         /// <param name="mask">bits to set.</param>

@@ -3,6 +3,9 @@ using System.Text;
 
 namespace Jcd.BitManipulation
 {
+    /// <summary>
+    /// The basic interface for indexing bits within an integer data type.
+    /// </summary>
     public interface IBitIndexer : IEnumerable<bool>
     {
         /// <summary>

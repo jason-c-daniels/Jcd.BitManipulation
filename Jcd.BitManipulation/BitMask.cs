@@ -2,8 +2,14 @@ using System.Text;
 
 namespace Jcd.BitManipulation
 {
+    /// <summary>
+    /// An abstraction and factory methods to aid in bit manipulation.
+    /// </summary>
     public struct BitMask
     {
+        /// <summary>
+        /// The backing store for the actual bits of the bitmask.
+        /// </summary>
         public ulong Bits;
 
         #region Helpers
@@ -39,18 +45,46 @@ namespace Jcd.BitManipulation
         /// <param name="bits">The BitMask to use</param>
         public BitMask(ulong bits) { this.Bits = bits; }
 
+        /// <summary>
+        /// Create a bitmask  
+        /// </summary>
+        /// <param name="bits">The BitMask to use</param>
         public BitMask(long bits) : this((ulong)bits) { }
 
+        /// <summary>
+        /// Create a bitmask  
+        /// </summary>
+        /// <param name="bits">The BitMask to use</param>
         public BitMask(uint bits)  : this((ulong)bits) { }
         
+        /// <summary>
+        /// Create a bitmask  
+        /// </summary>
+        /// <param name="bits">The BitMask to use</param>
         public BitMask(int bits)  : this((uint)bits) { }
 
+        /// <summary>
+        /// Create a bitmask  
+        /// </summary>
+        /// <param name="bits">The BitMask to use</param>
         public BitMask(ushort bits)  : this((ulong)bits) { }
         
+        /// <summary>
+        /// Create a bitmask  
+        /// </summary>
+        /// <param name="bits">The BitMask to use</param>
         public BitMask(short bits)  : this((ushort)bits) { }
         
+        /// <summary>
+        /// Create a bitmask  
+        /// </summary>
+        /// <param name="bits">The BitMask to use</param>
         public BitMask(byte bits)  : this((ulong)bits) { }
         
+        /// <summary>
+        /// Create a bitmask  
+        /// </summary>
+        /// <param name="bits">The BitMask to use</param>
         public BitMask(sbyte bits)  : this((byte)bits) { }
         #endregion
 

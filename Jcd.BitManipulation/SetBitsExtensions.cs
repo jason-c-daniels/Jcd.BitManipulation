@@ -1,5 +1,8 @@
 namespace Jcd.BitManipulation
 {
+    /// <summary>
+    /// Extension methods that aid in turning bits on in an integer data type.
+    /// </summary>
     public static class SetBitsExtensions
     {
         #region Range of bits operations

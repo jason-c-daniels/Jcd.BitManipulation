@@ -1,13 +1,25 @@
 ### [Jcd.BitManipulation](Jcd_BitManipulation.md 'Jcd.BitManipulation')
 ## BitMask Struct
+An abstraction and factory methods to aid in bit manipulation.  
 ```csharp
 public struct BitMask
 ```
 
 | Constructors | |
 | :--- | :--- |
+| [BitMask(byte)](Jcd_BitManipulation_BitMask_BitMask(byte).md 'Jcd.BitManipulation.BitMask.BitMask(byte)') | Create a bitmask  <br/> |
+| [BitMask(int)](Jcd_BitManipulation_BitMask_BitMask(int).md 'Jcd.BitManipulation.BitMask.BitMask(int)') | Create a bitmask  <br/> |
 | [BitMask(BitMask)](Jcd_BitManipulation_BitMask_BitMask(Jcd_BitManipulation_BitMask).md 'Jcd.BitManipulation.BitMask.BitMask(Jcd.BitManipulation.BitMask)') | Copy constructor  <br/> |
+| [BitMask(long)](Jcd_BitManipulation_BitMask_BitMask(long).md 'Jcd.BitManipulation.BitMask.BitMask(long)') | Create a bitmask  <br/> |
+| [BitMask(sbyte)](Jcd_BitManipulation_BitMask_BitMask(sbyte).md 'Jcd.BitManipulation.BitMask.BitMask(sbyte)') | Create a bitmask  <br/> |
+| [BitMask(short)](Jcd_BitManipulation_BitMask_BitMask(short).md 'Jcd.BitManipulation.BitMask.BitMask(short)') | Create a bitmask  <br/> |
+| [BitMask(uint)](Jcd_BitManipulation_BitMask_BitMask(uint).md 'Jcd.BitManipulation.BitMask.BitMask(uint)') | Create a bitmask  <br/> |
 | [BitMask(ulong)](Jcd_BitManipulation_BitMask_BitMask(ulong).md 'Jcd.BitManipulation.BitMask.BitMask(ulong)') | Create a bitmask  <br/> |
+| [BitMask(ushort)](Jcd_BitManipulation_BitMask_BitMask(ushort).md 'Jcd.BitManipulation.BitMask.BitMask(ushort)') | Create a bitmask  <br/> |
+
+| Fields | |
+| :--- | :--- |
+| [Bits](Jcd_BitManipulation_BitMask_Bits.md 'Jcd.BitManipulation.BitMask.Bits') | The backing store for the actual bits of the bitmask.<br/> |
 
 | Methods | |
 | :--- | :--- |

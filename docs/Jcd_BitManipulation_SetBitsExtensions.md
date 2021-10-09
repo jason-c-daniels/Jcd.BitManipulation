@@ -1,5 +1,6 @@
 ### [Jcd.BitManipulation](Jcd_BitManipulation.md 'Jcd.BitManipulation')
 ## SetBitsExtensions Class
+Extension methods that aid in turning bits on in an integer data type.  
 ```csharp
 public static class SetBitsExtensions
 ```

@@ -2,6 +2,9 @@ using System.Linq;
 
 namespace Jcd.BitManipulation
 {
+    /// <summary>
+    /// Some helper methods for converting to and from a BitIndexer.
+    /// </summary>
     public static class BitIndexerExtensions
     {
         /// <summary>

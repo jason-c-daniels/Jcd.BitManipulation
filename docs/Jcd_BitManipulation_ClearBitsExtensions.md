@@ -1,5 +1,6 @@
 ### [Jcd.BitManipulation](Jcd_BitManipulation.md 'Jcd.BitManipulation')
 ## ClearBitsExtensions Class
+Extension methods to aid in clearing bits in various integer data types.  
 ```csharp
 public static class ClearBitsExtensions
 ```

@@ -1,5 +1,6 @@
 ### [Jcd.BitManipulation](Jcd_BitManipulation.md 'Jcd.BitManipulation')
 ## ReadBitsExtensions Class
+Extension methods that enable reading one or more bits from a specified offset in an integer data type.   
 ```csharp
 public static class ReadBitsExtensions
 ```

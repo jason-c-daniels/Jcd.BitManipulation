@@ -10,7 +10,7 @@ namespace Jcd.BitManipulation
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The offset of the bits to toggle.</param>
         /// <param name="size">The number of bits to toggle.</param>
-        public static void ToggleBits(this ref sbyte self, byte offset=0, byte size=8)
+        public static void ToggleBits(this ref sbyte self, int offset=0, int size=8)
             => self.ToggleBits(BitMask.CreateRange(offset, size));
         
         /// <summary>
@@ -20,7 +20,7 @@ namespace Jcd.BitManipulation
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The offset of the bits to toggle.</param>
         /// <param name="size">The number of bits to toggle.</param>
-        public static void ToggleBits(this ref short self, byte offset=0, byte size=16)
+        public static void ToggleBits(this ref short self, int offset=0, int size=16)
             => self.ToggleBits(BitMask.CreateRange(offset, size));
         
         /// <summary>
@@ -30,7 +30,7 @@ namespace Jcd.BitManipulation
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The offset of the bits to toggle.</param>
         /// <param name="size">The number of bits to toggle.</param>
-        public static void ToggleBits(this ref int self, byte offset=0, byte size=32)
+        public static void ToggleBits(this ref int self, int offset=0, int size=32)
             => self.ToggleBits(BitMask.CreateRange(offset, size));
 
         /// <summary>
@@ -40,7 +40,7 @@ namespace Jcd.BitManipulation
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The offset of the bits to toggle.</param>
         /// <param name="size">The number of bits to toggle.</param>
-        public static void ToggleBits(this ref long self, byte offset=0, byte size=64)
+        public static void ToggleBits(this ref long self, int offset=0, int size=64)
             => self.ToggleBits(BitMask.CreateRange(offset, size));
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace Jcd.BitManipulation
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The offset of the bits to toggle.</param>
         /// <param name="size">The number of bits to toggle.</param>
-        public static void ToggleBits(this ref byte self, byte offset=0, byte size=8)
+        public static void ToggleBits(this ref byte self, int offset=0, int size=8)
             => self.ToggleBits(BitMask.CreateRange(offset, size));
 
         /// <summary>
@@ -60,7 +60,7 @@ namespace Jcd.BitManipulation
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The offset of the bits to toggle.</param>
         /// <param name="size">The number of bits to toggle.</param>
-        public static void ToggleBits(this ref ushort self, byte offset=0, byte size=16)
+        public static void ToggleBits(this ref ushort self, int offset=0, int size=16)
             => self.ToggleBits(BitMask.CreateRange(offset, size));
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace Jcd.BitManipulation
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The offset of the bits to toggle.</param>
         /// <param name="size">The number of bits to toggle.</param>
-        public static void ToggleBits(this ref uint self, byte offset=0, byte size=32)
+        public static void ToggleBits(this ref uint self, int offset=0, int size=32)
             => self.ToggleBits(BitMask.CreateRange(offset, size));
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace Jcd.BitManipulation
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The offset of the bits to toggle.</param>
         /// <param name="size">The number of bits to toggle.</param>
-        public static void ToggleBits(this ref ulong self, byte offset=0, byte size=64)
+        public static void ToggleBits(this ref ulong self, int offset=0, int size=64)
             => self.ToggleBits(BitMask.CreateRange(offset, size));
         #endregion
         
@@ -91,7 +91,7 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The bit location to toggle.</param>
-        public static void ToggleBit(this ref sbyte self, byte offset)
+        public static void ToggleBit(this ref sbyte self, int offset)
             => self.ToggleBits(BitMask.CreateSingleBit(offset));
         
         /// <summary>
@@ -99,7 +99,7 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The bit location to toggle.</param>
-        public static void ToggleBit(this ref short self, byte offset)
+        public static void ToggleBit(this ref short self, int offset)
             => self.ToggleBits(BitMask.CreateSingleBit(offset));
         
         /// <summary>
@@ -107,7 +107,7 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The bit location to toggle.</param>
-        public static void ToggleBit(this ref int self, byte offset)
+        public static void ToggleBit(this ref int self, int offset)
             => self.ToggleBits(BitMask.CreateSingleBit(offset));
 
         /// <summary>
@@ -115,7 +115,7 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The bit location to toggle.</param>
-        public static void ToggleBit(this ref long self, byte offset)
+        public static void ToggleBit(this ref long self, int offset)
             => self.ToggleBits(BitMask.CreateSingleBit(offset));
 
         /// <summary>
@@ -123,7 +123,7 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The bit location to toggle.</param>
-        public static void ToggleBit(this ref byte self, byte offset)
+        public static void ToggleBit(this ref byte self, int offset)
             => self.ToggleBits(BitMask.CreateSingleBit(offset));
 
         /// <summary>
@@ -131,7 +131,7 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The bit location to toggle.</param>
-        public static void ToggleBit(this ref ushort self, byte offset)
+        public static void ToggleBit(this ref ushort self, int offset)
             => self.ToggleBits(BitMask.CreateSingleBit(offset));
 
         /// <summary>
@@ -139,7 +139,7 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The bit location to toggle.</param>
-        public static void ToggleBit(this ref uint self, byte offset)
+        public static void ToggleBit(this ref uint self, int offset)
             => self.ToggleBits(BitMask.CreateSingleBit(offset));
 
         /// <summary>
@@ -147,7 +147,7 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="self">The value to be modified.</param>
         /// <param name="offset">The bit location to toggle.</param>
-        public static void ToggleBit(this ref ulong self, byte offset)
+        public static void ToggleBit(this ref ulong self, int offset)
             => self.ToggleBits(BitMask.CreateSingleBit(offset));
         
         #endregion

@@ -1803,7 +1803,7 @@
             <param name="offset">the offset to read</param>
             <param name="bit">The bit value to set</param>
         </member>
-        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.SByte@,System.Byte,System.Byte)">
+        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.SByte@,System.Int32,System.Int32)">
             <summary>
             Toggles bits in a variable, given a bit position and size.
             The default values result in toggling all bits. 
@@ -1812,7 +1812,7 @@
             <param name="offset">The offset of the bits to toggle.</param>
             <param name="size">The number of bits to toggle.</param>
         </member>
-        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.Int16@,System.Byte,System.Byte)">
+        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.Int16@,System.Int32,System.Int32)">
             <summary>
             Toggles bits in a variable, given a bit position and size. 
             The default values result in toggling all bits. 
@@ -1821,7 +1821,7 @@
             <param name="offset">The offset of the bits to toggle.</param>
             <param name="size">The number of bits to toggle.</param>
         </member>
-        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.Int32@,System.Byte,System.Byte)">
+        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.Int32@,System.Int32,System.Int32)">
             <summary>
             Toggles bits in a variable, given a bit position and size. 
             The default values result in toggling all bits. 
@@ -1830,7 +1830,7 @@
             <param name="offset">The offset of the bits to toggle.</param>
             <param name="size">The number of bits to toggle.</param>
         </member>
-        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.Int64@,System.Byte,System.Byte)">
+        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.Int64@,System.Int32,System.Int32)">
             <summary>
             Toggles bits in a variable, given a bit position and size. 
             The default values result in toggling all bits. 
@@ -1839,7 +1839,7 @@
             <param name="offset">The offset of the bits to toggle.</param>
             <param name="size">The number of bits to toggle.</param>
         </member>
-        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.Byte@,System.Byte,System.Byte)">
+        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.Byte@,System.Int32,System.Int32)">
             <summary>
             Toggles bits in a variable, given a bit position and size. 
             The default values result in toggling all bits. 
@@ -1848,7 +1848,7 @@
             <param name="offset">The offset of the bits to toggle.</param>
             <param name="size">The number of bits to toggle.</param>
         </member>
-        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.UInt16@,System.Byte,System.Byte)">
+        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.UInt16@,System.Int32,System.Int32)">
             <summary>
             Toggles bits in a variable, given a bit position and size. 
             The default values result in toggling all bits. 
@@ -1857,7 +1857,7 @@
             <param name="offset">The offset of the bits to toggle.</param>
             <param name="size">The number of bits to toggle.</param>
         </member>
-        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.UInt32@,System.Byte,System.Byte)">
+        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.UInt32@,System.Int32,System.Int32)">
             <summary>
             Toggles bits in a variable, given a bit position and size. 
             The default values result in toggling all bits. 
@@ -1866,7 +1866,7 @@
             <param name="offset">The offset of the bits to toggle.</param>
             <param name="size">The number of bits to toggle.</param>
         </member>
-        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.UInt64@,System.Byte,System.Byte)">
+        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.UInt64@,System.Int32,System.Int32)">
             <summary>
             Toggles bits in a variable, given a bit position and size. 
             The default values result in toggling all bits. 
@@ -1875,56 +1875,56 @@
             <param name="offset">The offset of the bits to toggle.</param>
             <param name="size">The number of bits to toggle.</param>
         </member>
-        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBit(System.SByte@,System.Byte)">
+        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBit(System.SByte@,System.Int32)">
             <summary>
             Toggles a bit, given a bit position.
             </summary>
             <param name="self">The value to be modified.</param>
             <param name="offset">The bit location to toggle.</param>
         </member>
-        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBit(System.Int16@,System.Byte)">
+        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBit(System.Int16@,System.Int32)">
             <summary>
             Toggles a bit, given a bit position.
             </summary>
             <param name="self">The value to be modified.</param>
             <param name="offset">The bit location to toggle.</param>
         </member>
-        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBit(System.Int32@,System.Byte)">
+        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBit(System.Int32@,System.Int32)">
             <summary>
             Toggles a bit, given a bit position.
             </summary>
             <param name="self">The value to be modified.</param>
             <param name="offset">The bit location to toggle.</param>
         </member>
-        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBit(System.Int64@,System.Byte)">
+        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBit(System.Int64@,System.Int32)">
             <summary>
             Toggles a bit, given a bit position.
             </summary>
             <param name="self">The value to be modified.</param>
             <param name="offset">The bit location to toggle.</param>
         </member>
-        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBit(System.Byte@,System.Byte)">
+        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBit(System.Byte@,System.Int32)">
             <summary>
             Toggles a bit, given a bit position.
             </summary>
             <param name="self">The value to be modified.</param>
             <param name="offset">The bit location to toggle.</param>
         </member>
-        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBit(System.UInt16@,System.Byte)">
+        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBit(System.UInt16@,System.Int32)">
             <summary>
             Toggles a bit, given a bit position.
             </summary>
             <param name="self">The value to be modified.</param>
             <param name="offset">The bit location to toggle.</param>
         </member>
-        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBit(System.UInt32@,System.Byte)">
+        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBit(System.UInt32@,System.Int32)">
             <summary>
             Toggles a bit, given a bit position.
             </summary>
             <param name="self">The value to be modified.</param>
             <param name="offset">The bit location to toggle.</param>
         </member>
-        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBit(System.UInt64@,System.Byte)">
+        <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBit(System.UInt64@,System.Int32)">
             <summary>
             Toggles a bit, given a bit position.
             </summary>

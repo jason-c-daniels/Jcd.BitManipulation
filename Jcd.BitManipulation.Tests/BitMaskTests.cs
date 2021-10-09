@@ -37,9 +37,9 @@ namespace Jcd.BitManipulation.Tests
         [InlineData(0,63, 0x7FFFFFFFFFFFFFFF)] // high bit is clear
         [InlineData(63,1, 0x8000000000000000)] // high bit is set
         [InlineData(1,63, 0xFFFFFFFFFFFFFFFE)] // low bit is clear
-        [InlineData(8,8,  0x000000000000FF00)] // byte offset 1, all bits are set
+        [InlineData(8,8,  0x000000000000FF00)] // int offset 1, all bits are set
         [InlineData(4,3,  0x0000000000000070)] // lower 3 bits of upper nybble of first byte are set
-        public void CreateRange_Creates_Correct_BitMask(byte offset, byte size, ulong expected)
+        public void CreateRange_Creates_Correct_BitMask(int offset, int size, ulong expected)
         {
             var mask = BitMask.CreateRange(offset, size);
             Assert.Equal(expected, mask.Bits);
@@ -55,7 +55,7 @@ namespace Jcd.BitManipulation.Tests
         [InlineData(11)] 
         [InlineData(13)] 
         [InlineData(63)] 
-        public void CreateSingleBit_Creates_Correct_BitMask(byte offset)
+        public void CreateSingleBit_Creates_Correct_BitMask(int offset)
         {
             var mask = BitMask.CreateSingleBit(offset);
             Assert.Equal( (ulong)1 << offset, mask.Bits);

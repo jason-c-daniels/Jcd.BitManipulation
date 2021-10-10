@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using System.Text;
+// ReSharper disable UnusedMemberInSuper.Global
 
 namespace Jcd.BitManipulation
 {

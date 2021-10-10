@@ -1,3 +1,4 @@
+// ReSharper disable MemberCanBePrivate.Global
 namespace Jcd.BitManipulation
 {
     /// <summary>
@@ -101,7 +102,7 @@ namespace Jcd.BitManipulation
         public static void StoreBits(this ref ulong self, ulong value, int offset, BitMask mask)
         {
             self.ClearBits(mask);
-            self |= ((value << offset) & mask);
+            self |= (value << offset) & mask;
         }
 
         /// <summary>
@@ -115,7 +116,7 @@ namespace Jcd.BitManipulation
         public static void StoreBits(this ref long self, long value, int offset, BitMask mask)
         {
             self.ClearBits(mask);
-            self |= ((value << offset) & (long)mask.Bits);
+            self |= (value << offset) & (long)mask.Bits;
         }
         
         /// <summary>
@@ -129,7 +130,7 @@ namespace Jcd.BitManipulation
         public static void StoreBits(this ref uint self, uint value, int offset, BitMask mask)
         {
             self.ClearBits(mask);
-            self |= ((value << offset) & (uint)mask.Bits);
+            self |= (value << offset) & (uint)mask.Bits;
         }
 
         /// <summary>
@@ -143,7 +144,7 @@ namespace Jcd.BitManipulation
         public static void StoreBits(this ref int self, int value, int offset, BitMask mask)
         {
             self.ClearBits(mask);
-            self |= ((value << offset) & (int)mask.Bits);
+            self |= (value << offset) & (int)mask.Bits;
         }
 
         /// <summary>
@@ -240,7 +241,7 @@ namespace Jcd.BitManipulation
         /// <param name="offset">the offset to read</param>
         /// <param name="bit">The bit value to set</param>
         public static void StoreBit(this ref int self, int offset, bool bit)
-            => self.StoreBits((bit?1:0),offset,1);
+            => self.StoreBits(bit?1:0,offset,1);
         
         /// <summary>
         /// Store a single bit from the specified offset.

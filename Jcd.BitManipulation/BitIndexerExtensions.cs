@@ -118,6 +118,7 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="indexer">the indexer to convert</param>
         /// <returns>the converted value</returns>
+        // ReSharper disable once UnusedMember.Global
         public static long ToInt64(this IBitIndexer indexer)
             => indexer.ToArray().ToInt64();
 
@@ -126,6 +127,7 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="indexer">the indexer to convert</param>
         /// <returns>the converted value</returns>
+        // ReSharper disable once UnusedMember.Global
         public static ulong ToUInt64(this IBitIndexer indexer)
             => indexer.ToArray().ToUInt64();
         

@@ -1,4 +1,4 @@
-using System;
+// ReSharper disable ReplaceSliceWithRangeIndexer
 
 namespace Jcd.BitManipulation
 {
@@ -99,9 +99,9 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="bits">the array of bools to convert, LSB at index 0</param>
         /// <returns>The converted ushort</returns>
-        public static UInt16 ToUInt16(this bool[] bits)
+        public static ushort ToUInt16(this bool[] bits)
         {
-            UInt16 result = 0;
+            ushort result = 0;
             for (var i = 0; i < bits.Length && i < 16;i++)
             {
                 result.StoreBit(i,bits[i]);
@@ -114,9 +114,9 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="bits">the array of bools to convert, LSB at index 0</param>
         /// <returns>The converted short</returns>
-        public static Int16 ToInt16(this bool[] bits)
+        public static short ToInt16(this bool[] bits)
         {
-            Int16 result = 0;
+            short result = 0;
             for (var i = 0; i < bits.Length && i < 16;i++)
             {
                 result.StoreBit(i,bits[i]);
@@ -129,9 +129,9 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="bits">the array of bools to convert, LSB at index 0</param>
         /// <returns>The converted uint</returns>
-        public static UInt32 ToUInt32(this bool[] bits)
+        public static uint ToUInt32(this bool[] bits)
         {
-            UInt32 result = 0;
+            uint result = 0;
             for (var i = 0; i < bits.Length && i < 32; i++)
             {
                 result.StoreBit(i, bits[i]);
@@ -145,9 +145,9 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="bits">the array of bools to convert, LSB at index 0</param>
         /// <returns>The converted int</returns>
-        public static Int32 ToInt32(this bool[] bits)
+        public static int ToInt32(this bool[] bits)
         {
-            Int32 result = 0;
+            var result = 0;
             for (var i = 0; i < bits.Length && i < 32; i++)
             {
                 result.StoreBit(i, bits[i]);
@@ -161,9 +161,9 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="bits">the array of bools to convert, LSB at index 0</param>
         /// <returns>The converted ulong</returns>
-        public static UInt64 ToUInt64(this bool[] bits)
+        public static ulong ToUInt64(this bool[] bits)
         {
-            UInt64 result = 0;
+            ulong result = 0;
             for (var i = 0; i < bits.Length && i < 64;i++)
             {
                 result.StoreBit(i,bits[i]);
@@ -176,9 +176,9 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="bits">the array of bools to convert, LSB at index 0</param>
         /// <returns>The converted long</returns>
-        public static Int64 ToInt64(this bool[] bits)
+        public static long ToInt64(this bool[] bits)
         {
-            Int64 result = 0;
+            long result = 0;
             for (var i = 0; i < bits.Length && i < 64;i++)
             {
                 result.StoreBit(i,bits[i]);

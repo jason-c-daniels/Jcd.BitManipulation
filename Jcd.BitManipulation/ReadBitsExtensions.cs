@@ -1,3 +1,4 @@
+// ReSharper disable MemberCanBePrivate.Global
 namespace Jcd.BitManipulation
 {
     /// <summary>
@@ -102,7 +103,7 @@ namespace Jcd.BitManipulation
         /// <returns>The right shifted value extracted from the value</returns>
         public static ulong ReadBits(this ulong self, int offset, BitMask mask)
         {
-            return ((self & mask) >> offset);
+            return (self & mask) >> offset;
         }
 
         /// <summary>
@@ -131,7 +132,7 @@ namespace Jcd.BitManipulation
         /// <returns>The right shifted value extracted from the value</returns>
         public static uint ReadBits(this uint self, int offset, BitMask mask)
         {
-            return ((self & mask) >> offset);
+            return (self & mask) >> offset;
         }
 
         /// <summary>

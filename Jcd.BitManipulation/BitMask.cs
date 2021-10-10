@@ -10,6 +10,7 @@ namespace Jcd.BitManipulation
         /// <summary>
         /// The backing store for the actual bits of the bitmask.
         /// </summary>
+        // ReSharper disable once FieldCanBeMadeReadOnly.Global
         public ulong Bits;
 
         #region Helpers
@@ -22,7 +23,7 @@ namespace Jcd.BitManipulation
         public static BitMask CreateRange(int offset=0, int size=64) =>
             size == 64  ?
                   new BitMask(ulong.MaxValue << offset)
-                : new BitMask(((((ulong)1 << size) - 1) << offset));
+                : new BitMask((((ulong)1 << size) - 1) << offset);
 
         /// <summary>
         /// Create a 64 bit, single bit bitmask, given bit position.
@@ -43,7 +44,7 @@ namespace Jcd.BitManipulation
         /// Create a bitmask  
         /// </summary>
         /// <param name="bits">The BitMask to use</param>
-        public BitMask(ulong bits) { this.Bits = bits; }
+        public BitMask(ulong bits) { Bits = bits; }
 
         /// <summary>
         /// Create a bitmask  
@@ -94,11 +95,11 @@ namespace Jcd.BitManipulation
         /// <returns>the bits of the mask formatted as 0b0101...1111</returns>
         public override string ToString()
         {
-            const ulong highBit = ((ulong)1) << 63;
+            const ulong highBit = (ulong)1 << 63;
             var sb = new StringBuilder();
             var tmp = Bits;
             sb.Append("0b");
-            for (int i = 0; i < 64; i++)
+            for (var i = 0; i < 64; i++)
             {
                 sb.Append((tmp & highBit) > 0 ? '1' : '0');
                 tmp <<= 1;

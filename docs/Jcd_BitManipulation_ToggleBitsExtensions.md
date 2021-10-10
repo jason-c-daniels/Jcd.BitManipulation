@@ -1,5 +1,6 @@
 ### [Jcd.BitManipulation](Jcd_BitManipulation.md 'Jcd.BitManipulation')
 ## ToggleBitsExtensions Class
+Extension methods to aid in toggling bits.   
 ```csharp
 public static class ToggleBitsExtensions
 ```

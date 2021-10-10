@@ -1803,6 +1803,11 @@
             <param name="offset">the offset to read</param>
             <param name="bit">The bit value to set</param>
         </member>
+        <member name="T:Jcd.BitManipulation.ToggleBitsExtensions">
+            <summary>
+            Extension methods to aid in toggling bits. 
+            </summary>
+        </member>
         <member name="M:Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(System.SByte@,System.Int32,System.Int32)">
             <summary>
             Toggles bits in a variable, given a bit position and size.

@@ -16,12 +16,12 @@ namespace Jcd.BitManipulation
         /// </summary>
         public const int BitSize = 8;
 
-        private sbyte bits;
+        private sbyte _bits;
 
         /// <summary>
         /// The backing store
         /// </summary>
-        public sbyte Bits { get => bits; set => bits = value; }
+        public sbyte Bits { get => _bits; set => _bits = value; }
 
         /// <summary>
         /// The length of enumerated bits
@@ -34,8 +34,8 @@ namespace Jcd.BitManipulation
         /// <param name="index">the offset of the bit to access.</param>
         public bool this[int index]
         {
-            get => bits.ReadBit(index);
-            set => bits.StoreBit(index, value);
+            get => _bits.ReadBit(index);
+            set => _bits.StoreBit(index, value);
         }
         
         /// <summary>
@@ -50,7 +50,7 @@ namespace Jcd.BitManipulation
         /// </summary>
         /// <param name="indexer">the indexer to convert from</param>
         /// <returns>the sbyte</returns>
-        public static implicit operator sbyte(BitIndexerSByte indexer) => indexer.bits;
+        public static implicit operator sbyte(BitIndexerSByte indexer) => indexer._bits;
 
         /// <summary>
         /// Get an enumerator to enumerate the bits with.
@@ -59,7 +59,7 @@ namespace Jcd.BitManipulation
         public IEnumerator<bool> GetEnumerator()
         {
             for (var index=0;index<BitSize;index++)
-                yield return bits.ReadBit(index);
+                yield return _bits.ReadBit(index);
         }
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace Jcd.BitManipulation
         public bool[] Slice(int start, int length)
         {
             var slice = new bool[length];
-            for (int i = 0; i < length; i++)
+            for (var i = 0; i < length; i++)
             {
                 slice[i] = this[i+start];
             }

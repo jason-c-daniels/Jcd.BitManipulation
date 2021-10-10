@@ -1,5 +1,8 @@
 namespace Jcd.BitManipulation
 {
+    /// <summary>
+    /// Extension methods to aid in toggling bits. 
+    /// </summary>
     public static class ToggleBitsExtensions
     {
         #region Range of bits operations

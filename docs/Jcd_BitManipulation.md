@@ -8,7 +8,7 @@
 | [ReadBitsExtensions](Jcd_BitManipulation_ReadBitsExtensions.md 'Jcd.BitManipulation.ReadBitsExtensions') | Extension methods that enable reading one or more bits from a specified offset in an integer data type. <br/> |
 | [SetBitsExtensions](Jcd_BitManipulation_SetBitsExtensions.md 'Jcd.BitManipulation.SetBitsExtensions') | Extension methods that aid in turning bits on in an integer data type.<br/> |
 | [StoreBitsExtensions](Jcd_BitManipulation_StoreBitsExtensions.md 'Jcd.BitManipulation.StoreBitsExtensions') | Extension methods that aid in storing values into bit offsets within an integer data type.<br/> |
-| [ToggleBitsExtensions](Jcd_BitManipulation_ToggleBitsExtensions.md 'Jcd.BitManipulation.ToggleBitsExtensions') |  |
+| [ToggleBitsExtensions](Jcd_BitManipulation_ToggleBitsExtensions.md 'Jcd.BitManipulation.ToggleBitsExtensions') | Extension methods to aid in toggling bits. <br/> |
 
 | Structs | |
 | :--- | :--- |

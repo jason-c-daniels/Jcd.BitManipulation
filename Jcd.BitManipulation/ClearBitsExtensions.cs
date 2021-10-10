@@ -179,7 +179,7 @@ namespace Jcd.BitManipulation
         /// <param name="self">The value to be modified.</param>
         /// <param name="mask">bits to clear.</param>
         public static void ClearBits(this ref long self, BitMask mask)
-            => self &= (long)(~mask.Bits);
+            => self &= (long)~mask.Bits;
 
         /// <summary>
         /// Sets all bits from a provided mask to "off" in a variable. 

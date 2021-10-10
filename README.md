@@ -6,4 +6,4 @@ A .Net Standard 2.1 library adding syntactic sugar to your bit manipulation expe
 [![MyGet](https://img.shields.io/myget/jason-c-daniels/v/Jcd.BitManipulation)](https://www.myget.org/feed/jason-c-daniels/package/nuget/Jcd.BitManipulation)
 
 
-[API Documentation](https://github.com/jason-c-daniels/Jcd.BitManipulation/blob/main/docs/Jcd_BitManipulation.md)
+[![API Docs](https://img.shields.io/badge/Read-The%20API%20Documentation-blue?style=for-the-badge)](https://github.com/jason-c-daniels/Jcd.BitManipulation/blob/main/docs/Jcd_BitManipulation.md)

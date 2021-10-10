@@ -1,4 +1,3 @@
-using System.Collections.Specialized;
 using Xunit;
 
 namespace Jcd.BitManipulation.Tests
@@ -87,9 +86,8 @@ namespace Jcd.BitManipulation.Tests
         [InlineData(0xF000,0x03,0,8,0xF003)]
         public void StoreBits_On_UInt32_Stores_The_Correct_Bits(uint initial, uint val, int offset,int size, uint expected)
         {
-            var destination=initial; // coerce to proper type
-            var value = val;
-            destination.StoreBits( value,offset,size);
+            var destination=initial; 
+            destination.StoreBits( val,offset,size);
             Assert.Equal(expected, destination);
         }
         
@@ -119,8 +117,7 @@ namespace Jcd.BitManipulation.Tests
         public void StoreBits_On_UInt64_Stores_The_Correct_Bits(ulong initial, ulong val, int offset,int size, ulong expected)
         {
             var destination=initial; // copy for debugging reasons.
-            var value = val;
-            destination.StoreBits(value,offset,size);
+            destination.StoreBits(val,offset,size);
             Assert.Equal(expected, destination);
         }
 

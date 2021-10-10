@@ -25,10 +25,8 @@ namespace Jcd.BitManipulation.Tests
         [InlineData(0b00011000)]
         public void Implicit_Operator_To_BitIndexerUInt32_From_UInt32_Sets_All_Bits_Correctly(uint data)
         {
-            // HACK: Type binder for xUnit hates bytes as params. Coerce the value here.
-            var bits = (uint)data;
-            BitIndexerUInt32 indexer = bits;
-            Assert.Equal(bits,indexer.Bits);
+            BitIndexerUInt32 indexer = data;
+            Assert.Equal(data,indexer.Bits);
         }
 
         [Theory]
@@ -39,7 +37,7 @@ namespace Jcd.BitManipulation.Tests
         public void Implicit_Operator_From_BitIndexerUInt32_To_UInt32_Sets_All_Bits_Correctly(uint data)
         {
             // HACK: Type binder for xUnit hates bytes as params. Coerce the value here.
-            var indexer = new BitIndexerUInt32{ Bits= (uint)data };
+            var indexer = new BitIndexerUInt32{ Bits= data };
             uint bits = indexer;
             
             Assert.Equal(indexer.Bits,bits);
@@ -53,13 +51,12 @@ namespace Jcd.BitManipulation.Tests
         [InlineData(0b0100000101000001)]
         public void Indexer_Returns_Correct_Bit_Value(uint data)
         {
-            var value = (uint)data;
-            BitIndexerUInt32 indexer = value;
+            BitIndexerUInt32 indexer = data;
             uint mask = 0;
-            for (int i = 0; i < indexer.Length; i++)
+            for (var i = 0; i < indexer.Length; i++)
             {
                 mask.SetBit(i);
-                var bit = (value & mask) != 0;
+                var bit = (data & mask) != 0;
                 Assert.Equal(bit,indexer[i]);
                 mask.ClearBit(i);
             }
@@ -86,7 +83,7 @@ namespace Jcd.BitManipulation.Tests
         [Fact]
         public void Enumerator_Enumerates_Correct_Number_Of_Bits()
         {
-            var indexer = new BitIndexerUInt32() { Bits = 0x7e };
+            var indexer = new BitIndexerUInt32 { Bits = 0x7e };
             Assert.Equal(BitIndexerUInt32.BitSize,indexer.ToArray().Length);
         }
         
@@ -95,7 +92,7 @@ namespace Jcd.BitManipulation.Tests
         [InlineData(0b11101100000000)]
         public void Enumerator_Enumerates_Bits_In_Correct_Order_LSB_to_MSB(int data)
         {
-            var indexer = new BitIndexerUInt32() { Bits = (uint)data };
+            var indexer = new BitIndexerUInt32 { Bits = (uint)data };
             var bitValues = indexer.ToArray();
 
             for (var i = 0; i < indexer.Length; i++)
@@ -110,7 +107,7 @@ namespace Jcd.BitManipulation.Tests
         [InlineData(0b00000000000000001110000000000000,"0b00000000000000001110000000000000")]
         public void ToString_Formats_As_Binary_Int_Representation(uint data, string expected)
         {
-            var indexer = new BitIndexerUInt32() { Bits = (uint)data };
+            var indexer = new BitIndexerUInt32 { Bits = data };
             Assert.Equal(expected,indexer.ToString());
         }
 
@@ -120,7 +117,7 @@ namespace Jcd.BitManipulation.Tests
         [InlineData(0b00011100,0,8)]
         public void Slice_Returns_Correct_Subset_Of_Bools(uint data, int start, int end)
         {
-            var indexer = new BitIndexerUInt32() { Bits = (uint)data };
+            var indexer = new BitIndexerUInt32 { Bits = data };
             var bits = indexer.ToArray();
             var expected = bits[start..end];
             var actual = indexer[start..end];
@@ -131,7 +128,7 @@ namespace Jcd.BitManipulation.Tests
         public void IEnumerable_GetEnumerator_Enumerates_The_Correct_Number_Of_Items()
         {
             var itemCount = 0;
-            var enumerable = (IEnumerable)new BitIndexerUInt32() { Bits = 0x7FFF };
+            var enumerable = (IEnumerable)new BitIndexerUInt32 { Bits = 0x7FFF };
             foreach (var item in enumerable)
             {
                 Assert.IsType<bool>(item);

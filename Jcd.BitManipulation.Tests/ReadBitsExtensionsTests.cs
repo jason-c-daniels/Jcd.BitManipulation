@@ -1,4 +1,3 @@
-using System;
 using Xunit;
 
 namespace Jcd.BitManipulation.Tests
@@ -93,8 +92,7 @@ namespace Jcd.BitManipulation.Tests
         [InlineData(0xF000000F,30,2,0x03)]
         public void ReadBits_On_UInt32_Reads_The_Correct_Bits(uint initial, int offset,int size, uint expected)
         {
-            var bits=initial; // coerce to proper type
-            var value=bits.ReadBits(offset,size);
+            var value=initial.ReadBits(offset,size);
             Assert.Equal(expected, value);
         }
         
@@ -132,8 +130,7 @@ namespace Jcd.BitManipulation.Tests
         [InlineData(0xF00000000000000F,62,2,0x03)]
         public void ReadBits_On_UInt64_Reads_The_Correct_Bits(ulong initial, int offset,int size, ulong expected)
         {
-            var bits=initial; // coerce to proper type
-            var value=bits.ReadBits(offset,size);
+            var value=initial.ReadBits(offset,size);
             Assert.Equal(expected, value);
         }
         #endregion

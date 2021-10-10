@@ -1,4 +1,3 @@
-using System;
 using Xunit;
 
 namespace Jcd.BitManipulation.Tests
@@ -183,7 +182,7 @@ namespace Jcd.BitManipulation.Tests
         {
             var mask=new BitMask(bits);
 			uint newBits=mask;
-            Assert.Equal((uint)bits,newBits);
+            Assert.Equal(bits,newBits);
         }
 
         [Theory]
@@ -194,7 +193,7 @@ namespace Jcd.BitManipulation.Tests
         {
             var mask=new BitMask(bits);
 			int newBits=mask;
-            Assert.Equal((int)bits,newBits);
+            Assert.Equal(bits,newBits);
         }
 
         [Theory]
@@ -204,7 +203,7 @@ namespace Jcd.BitManipulation.Tests
         {
             var mask=new BitMask(bits);
 			ushort newBits=mask;
-            Assert.Equal((ushort)bits,newBits);
+            Assert.Equal(bits,newBits);
         }
 
         [Theory]
@@ -214,7 +213,7 @@ namespace Jcd.BitManipulation.Tests
         {
             var mask=new BitMask(bits);
 			short newBits=mask;
-            Assert.Equal((short)bits,newBits);
+            Assert.Equal(bits,newBits);
         }
         
         [Theory]
@@ -224,7 +223,7 @@ namespace Jcd.BitManipulation.Tests
         {
             var mask=new BitMask(bits);
 			byte newBits=mask;
-            Assert.Equal((byte)bits,newBits);
+            Assert.Equal(bits,newBits);
         }
 
         [Theory]
@@ -232,10 +231,9 @@ namespace Jcd.BitManipulation.Tests
         [InlineData(sbyte.MaxValue)] 
         public void Implicit_Conversion_To_SByte_CopiesBitsCorrectly(sbyte bits)
         {
-            var bitString = Convert.ToString((byte)bits, 2).PadLeft(8, '0');
             var mask=new BitMask((ulong)(byte)bits);
 			sbyte newBits=mask;
-            Assert.Equal((sbyte)bits,newBits);
+            Assert.Equal(bits,newBits);
         }
         
         #endregion

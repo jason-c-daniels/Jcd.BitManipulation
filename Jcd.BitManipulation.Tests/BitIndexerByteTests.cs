@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
@@ -58,7 +56,7 @@ namespace Jcd.BitManipulation.Tests
             var value = (byte)data;
             BitIndexerByte indexer = value;
             byte mask = 0;
-            for (int i = 0; i < indexer.Length; i++)
+            for (var i = 0; i < indexer.Length; i++)
             {
                 mask.SetBit(i);
                 var bit = (value & mask) > 0;
@@ -87,7 +85,7 @@ namespace Jcd.BitManipulation.Tests
         [Fact]
         public void Enumerator_Enumerates_Correct_Number_Of_Bits()
         {
-            var indexer = new BitIndexerByte() { Bits = 0xFe };
+            var indexer = new BitIndexerByte { Bits = 0xFe };
             Assert.Equal(BitIndexerByte.BitSize,indexer.ToArray().Length);
         }
         
@@ -96,7 +94,7 @@ namespace Jcd.BitManipulation.Tests
         [InlineData(0b111011)]
         public void Enumerator_Enumerates_Bits_In_Correct_Order_LSB_to_MSB(int data)
         {
-            var indexer = new BitIndexerByte() { Bits = (byte)data };
+            var indexer = new BitIndexerByte { Bits = (byte)data };
             var bitValues = indexer.ToArray();
 
             for (var i = 0; i < indexer.Length; i++)
@@ -111,7 +109,7 @@ namespace Jcd.BitManipulation.Tests
         [InlineData(0b11100000,"0b11100000")]
         public void ToString_Formats_As_Binary_Int_Representation(uint data, string expected)
         {
-            var indexer = new BitIndexerByte() { Bits = (byte)data };
+            var indexer = new BitIndexerByte { Bits = (byte)data };
             Assert.Equal(expected,indexer.ToString());
         }
 
@@ -121,7 +119,7 @@ namespace Jcd.BitManipulation.Tests
         [InlineData(0b00011100,0,8)]
         public void Slice_Returns_Correct_Subset_Of_Bools(uint data, int start, int end)
         {
-            var indexer = new BitIndexerByte() { Bits = (byte)data };
+            var indexer = new BitIndexerByte { Bits = (byte)data };
             var bits = indexer.ToArray();
             var expected = bits[start..end];
             var actual = indexer[start..end];
@@ -132,7 +130,7 @@ namespace Jcd.BitManipulation.Tests
         public void IEnumerable_GetEnumerator_Enumerates_The_Correct_Number_Of_Items()
         {
             var itemCount = 0;
-            var enumerable = (IEnumerable)new BitIndexerByte() { Bits = 0xFF };
+            var enumerable = (IEnumerable)new BitIndexerByte { Bits = 0xFF };
             foreach (var item in enumerable)
             {
                 Assert.IsType<bool>(item);

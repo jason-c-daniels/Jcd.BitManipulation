@@ -7,28 +7,28 @@ namespace Jcd.BitManipulation.Tests
         [Fact]
         public void ToBitIndexer_From_Byte_Returns_BitIndexerByte()
         {
-            byte value = 0;
+            const byte value = 0;
             Assert.IsType<BitIndexerByte>(value.ToBitIndexer());
         }
         
         [Fact]
         public void ToBitIndexer_From_SByte_Returns_BitIndexerSByte()
         {
-            sbyte value = 0;
+            const sbyte value = 0;
             Assert.IsType<BitIndexerSByte>(value.ToBitIndexer());
         }
         
         [Fact]
         public void ToBitIndexer_From_Int16_Returns_BitIndexerInt16()
         {
-            short value = 0;
+            const short value = 0;
             Assert.IsType<BitIndexerInt16>(value.ToBitIndexer());
         }
         
         [Fact]
         public void ToBitIndexer_From_UInt16_Returns_BitIndexerUInt16()
         {
-            ushort value = 0;
+            const ushort value = 0;
             Assert.IsType<BitIndexerUInt16>(value.ToBitIndexer());
         }
         
@@ -36,28 +36,28 @@ namespace Jcd.BitManipulation.Tests
         [Fact]
         public void ToBitIndexer_From_Int32_Returns_BitIndexerInt32()
         {
-            int value = 0;
+            const int value = 0;
             Assert.IsType<BitIndexerInt32>(value.ToBitIndexer());
         }
         
         [Fact]
         public void ToBitIndexer_From_UInt32_Returns_BitIndexerUInt32()
         {
-            uint value = 0;
+            const uint value = 0;
             Assert.IsType<BitIndexerUInt32>(value.ToBitIndexer());
         }
         
         [Fact]
         public void ToBitIndexer_From_Int64_Returns_BitIndexerInt64()
         {
-            long value = 0;
+            const long value = 0;
             Assert.IsType<BitIndexerInt64>(value.ToBitIndexer());
         }
         
         [Fact]
         public void ToBitIndexer_From_UInt64_Returns_BitIndexerUInt64()
         {
-            ulong value = 0;
+            const ulong value = 0;
             Assert.IsType<BitIndexerUInt64>(value.ToBitIndexer());
         }
 

@@ -103,7 +103,6 @@ namespace Jcd.BitManipulation.Tests
             Assert.Equal(expected, value);
         }
         
-        
         #endregion
         
         #region single bit tests

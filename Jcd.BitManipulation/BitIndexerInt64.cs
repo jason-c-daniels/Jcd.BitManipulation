@@ -100,8 +100,8 @@ namespace Jcd.BitManipulation
             {
                 sb.Append(value ? '1':'0');
             }
-            return sb.ToString();
 
+            return sb.ToString();
         }
     }
 }

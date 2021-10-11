@@ -10,7 +10,6 @@ namespace Jcd.BitManipulation
     /// </summary>
     public struct BitIndexerSByte : IBitIndexer
     {
-        
         /// <summary>
         /// The number of bits this type will index
         /// </summary>
@@ -58,7 +57,7 @@ namespace Jcd.BitManipulation
         /// <returns>The enumerator</returns>
         public IEnumerator<bool> GetEnumerator()
         {
-            for (var index=0;index<BitSize;index++)
+            for (var index=0; index<BitSize; index++)
                 yield return _bits.ReadBit(index);
         }
 
@@ -100,8 +99,8 @@ namespace Jcd.BitManipulation
             {
                 sb.Append(value ? '1':'0');
             }
+            
             return sb.ToString();
-
         }
     }
 }

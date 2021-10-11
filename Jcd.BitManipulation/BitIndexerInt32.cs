@@ -73,7 +73,6 @@ namespace Jcd.BitManipulation
             return GetEnumerator();
         }
 
-
         /// <summary>
         /// Get a subset of bits given a starting offset and length.
         /// </summary>
@@ -105,6 +104,5 @@ namespace Jcd.BitManipulation
             }
             return sb.ToString();
         }
-
     }
 }

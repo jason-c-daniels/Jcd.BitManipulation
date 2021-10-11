@@ -41,7 +41,6 @@ namespace Jcd.BitManipulation.Tests
             long bits = indexer;
             
             Assert.Equal(indexer.Bits,bits);
-            
         }
 
         [Theory]
@@ -78,7 +77,6 @@ namespace Jcd.BitManipulation.Tests
             indexer[index] = false;
             Assert.False(indexer[index]);
         }
-
 
         [Fact]
         public void Enumerator_Enumerates_Correct_Number_Of_Bits()

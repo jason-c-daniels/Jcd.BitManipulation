@@ -118,7 +118,6 @@ namespace Jcd.BitManipulation.Tests
             value.ClearBit((byte)bitToClear);
             Assert.Equal((sbyte)expected,value);
         }
-        
 
         [Theory]
         [InlineData(0xFF,0,0xFE)]
@@ -130,7 +129,6 @@ namespace Jcd.BitManipulation.Tests
             value.ClearBit((byte)bitToClear);
             Assert.Equal((byte)expected,value);
         }
-        
 
         [Theory]
         [InlineData(0xFFFF,0,0xFFFE)]
@@ -142,7 +140,6 @@ namespace Jcd.BitManipulation.Tests
             value.ClearBit((byte)bitToClear);
             Assert.Equal((short)expected,value);
         }
-        
 
         [Theory]
         [InlineData(0xFFFF,0,0xFFFE)]
@@ -155,7 +152,6 @@ namespace Jcd.BitManipulation.Tests
             Assert.Equal((ushort)expected,value);
         }
         
-        
         [Theory]
         [InlineData(0xFFFFFFFF,0,0xFFFFFFFE)]
         [InlineData(0xFFFFFFFF,4,0xFFFFFFEF)]
@@ -167,7 +163,6 @@ namespace Jcd.BitManipulation.Tests
             value.ClearBit((byte)bitToClear);
             Assert.Equal((int)expected,value);
         }
-        
 
         [Theory]
         [InlineData(0xFFFFFFFF,0,0xFFFFFFFE)]
@@ -193,7 +188,6 @@ namespace Jcd.BitManipulation.Tests
             value.ClearBit((byte)bitToClear);
             Assert.Equal((long)expected,value);
         }
-        
 
         [Theory]
         [InlineData(0xFFFFFFFFFFFFFFFF,0,0xFFFFFFFFFFFFFFFE)]

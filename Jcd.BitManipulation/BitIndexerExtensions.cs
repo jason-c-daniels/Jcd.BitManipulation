@@ -130,6 +130,5 @@ namespace Jcd.BitManipulation
         // ReSharper disable once UnusedMember.Global
         public static ulong ToUInt64(this IBitIndexer indexer)
             => indexer.ToArray().ToUInt64();
-        
     }
 }

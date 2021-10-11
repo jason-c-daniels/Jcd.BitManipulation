@@ -120,7 +120,6 @@ namespace Jcd.BitManipulation
             return (long)(((ulong)self & mask) >> offset);
         }
         
-        
         /// <summary>
         /// Extract a subset of bits specified by a bitmask and right align the bits by the offset. 
         /// </summary>
@@ -282,6 +281,5 @@ namespace Jcd.BitManipulation
             => self.ReadBits(offset,1) > 0;
         
         #endregion
-        
     }
 }

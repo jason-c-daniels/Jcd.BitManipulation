@@ -26,7 +26,6 @@ namespace Jcd.BitManipulation.Tests
             Assert.Equal(expected,actual);
         }
         
-        
         [Theory]
         [InlineData(0xFFFF)]
         [InlineData(0xF3FF)]
@@ -90,6 +89,5 @@ namespace Jcd.BitManipulation.Tests
             var actual = expected.ToBooleanArray().ToInt64();
             Assert.Equal(expected,actual);
         }
-        
     }
 }

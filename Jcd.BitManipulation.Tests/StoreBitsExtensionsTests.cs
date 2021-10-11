@@ -30,7 +30,6 @@ namespace Jcd.BitManipulation.Tests
             destination.StoreBits(value,offset,size);
             Assert.Equal((byte)expected, destination);
         }
-       
         
         [Theory]
         [InlineData(0x00,0xFF,0,2,0x03)]
@@ -90,7 +89,6 @@ namespace Jcd.BitManipulation.Tests
             destination.StoreBits( val,offset,size);
             Assert.Equal(expected, destination);
         }
-        
         
         [Theory]
         [InlineData(0x00,0xFF,0,2,0x03)]
@@ -214,8 +212,6 @@ namespace Jcd.BitManipulation.Tests
             Assert.Equal(expected,value);
         }
 
-        
-
         [Theory]
         [InlineData(0x00,0,true,0x01)]
         [InlineData(0x00,7,true,0x80)]
@@ -255,6 +251,5 @@ namespace Jcd.BitManipulation.Tests
         #endregion
         
         // TODO: Add tests for direct calls to BitMask overloads.
-        
     }
 }

@@ -56,7 +56,7 @@ namespace Jcd.BitManipulation
         /// <returns>The enumerator</returns>
         public IEnumerator<bool> GetEnumerator()
         {
-            for (var index=0;index < BitSize;index++)
+            for (var index=0; index < BitSize; index++)
                 yield return _bits.ReadBit(index);
         }
 

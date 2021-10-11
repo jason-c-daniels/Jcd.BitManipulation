@@ -32,7 +32,6 @@ namespace Jcd.BitManipulation.Tests
             Assert.IsType<BitIndexerUInt16>(value.ToBitIndexer());
         }
         
-        
         [Fact]
         public void ToBitIndexer_From_Int32_Returns_BitIndexerInt32()
         {
@@ -88,7 +87,6 @@ namespace Jcd.BitManipulation.Tests
             var indexer = new BitIndexerUInt64 { Bits = 0xDEADBEEF0D06F00D };
             Assert.Equal((ushort)0xF00D,indexer.ToUInt16());
         }
-        
         
         [Fact]
         public void ToInt32_Truncates_Extra_Bits()

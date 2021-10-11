@@ -31,7 +31,6 @@ namespace Jcd.BitManipulation.Tests
             var value=bits.ReadBits(offset,size);
             Assert.Equal((byte)expected, value);
         }
-        
 
         [Theory]
         [InlineData(0xFF,0,2,0x03)]
@@ -95,7 +94,6 @@ namespace Jcd.BitManipulation.Tests
             var value=initial.ReadBits(offset,size);
             Assert.Equal(expected, value);
         }
-        
         
         [Theory]
         [InlineData(0xFF,0,2,0x03)]
@@ -232,7 +230,7 @@ namespace Jcd.BitManipulation.Tests
         {
             Assert.Equal(expected,bits.ReadBit((byte)offset));
         }
-        #endregion
         
+        #endregion
     }
 }

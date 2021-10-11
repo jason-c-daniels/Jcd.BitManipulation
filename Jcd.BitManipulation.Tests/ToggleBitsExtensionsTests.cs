@@ -103,7 +103,6 @@ namespace Jcd.BitManipulation.Tests
             Assert.Equal(expected, value);
         }
         
-        
         #endregion
         
         #region single bit tests
@@ -118,7 +117,6 @@ namespace Jcd.BitManipulation.Tests
             value.ToggleBit((byte)bitToToggle);
             Assert.Equal((sbyte)expected,value);
         }
-        
 
         [Theory]
         [InlineData(0xFF,0,0xFE)]
@@ -131,7 +129,6 @@ namespace Jcd.BitManipulation.Tests
             Assert.Equal((byte)expected,value);
         }
         
-
         [Theory]
         [InlineData(0xFFFF,0,0xFFFE)]
         [InlineData(0xFFFF,4,0xFFEF)]
@@ -142,7 +139,6 @@ namespace Jcd.BitManipulation.Tests
             value.ToggleBit((byte)bitToToggle);
             Assert.Equal((short)expected,value);
         }
-        
 
         [Theory]
         [InlineData(0xFFFF,0,0xFFFE)]
@@ -155,7 +151,6 @@ namespace Jcd.BitManipulation.Tests
             Assert.Equal((ushort)expected,value);
         }
         
-        
         [Theory]
         [InlineData(0xFFFFFFFF,0,0xFFFFFFFE)]
         [InlineData(0xFFFFFFFF,4,0xFFFFFFEF)]
@@ -167,7 +162,6 @@ namespace Jcd.BitManipulation.Tests
             value.ToggleBit((byte)bitToToggle);
             Assert.Equal((int)expected,value);
         }
-        
 
         [Theory]
         [InlineData(0xFFFFFFFF,0,0xFFFFFFFE)]
@@ -194,7 +188,6 @@ namespace Jcd.BitManipulation.Tests
             Assert.Equal((long)expected,value);
         }
         
-
         [Theory]
         [InlineData(0xFFFFFFFFFFFFFFFF,0,0xFFFFFFFFFFFFFFFE)]
         [InlineData(0xFFFFFFFFFFFFFFFF,4,0xFFFFFFFFFFFFFFEF)]

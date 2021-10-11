@@ -71,7 +71,7 @@ namespace Jcd.BitManipulation
         public static byte ToByte(this bool[] bits)
         {
             byte result = 0;
-            for (var i = 0; i < bits.Length && i < 8;i++)
+            for (var i = 0; i < bits.Length && i < 8; i++)
             {
                 result.StoreBit(i,bits[i]);
             }
@@ -102,7 +102,7 @@ namespace Jcd.BitManipulation
         public static ushort ToUInt16(this bool[] bits)
         {
             ushort result = 0;
-            for (var i = 0; i < bits.Length && i < 16;i++)
+            for (var i = 0; i < bits.Length && i < 16; i++)
             {
                 result.StoreBit(i,bits[i]);
             }
@@ -117,7 +117,7 @@ namespace Jcd.BitManipulation
         public static short ToInt16(this bool[] bits)
         {
             short result = 0;
-            for (var i = 0; i < bits.Length && i < 16;i++)
+            for (var i = 0; i < bits.Length && i < 16; i++)
             {
                 result.StoreBit(i,bits[i]);
             }
@@ -164,7 +164,7 @@ namespace Jcd.BitManipulation
         public static ulong ToUInt64(this bool[] bits)
         {
             ulong result = 0;
-            for (var i = 0; i < bits.Length && i < 64;i++)
+            for (var i = 0; i < bits.Length && i < 64; i++)
             {
                 result.StoreBit(i,bits[i]);
             }
@@ -179,7 +179,7 @@ namespace Jcd.BitManipulation
         public static long ToInt64(this bool[] bits)
         {
             long result = 0;
-            for (var i = 0; i < bits.Length && i < 64;i++)
+            for (var i = 0; i < bits.Length && i < 64; i++)
             {
                 result.StoreBit(i,bits[i]);
             }

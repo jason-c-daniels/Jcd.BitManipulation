@@ -115,7 +115,6 @@ namespace Jcd.BitManipulation.Tests
             Assert.Equal(expected, value);
         }
         
-        
         #endregion
         
         #region single bit tests
@@ -130,7 +129,6 @@ namespace Jcd.BitManipulation.Tests
             value.SetBit((byte)bitToSet);
             Assert.Equal((sbyte)expected,value);
         }
-        
 
         [Theory]
         [InlineData(0x00,3,0x08)]
@@ -142,7 +140,6 @@ namespace Jcd.BitManipulation.Tests
             value.SetBit((byte)bitToSet);
             Assert.Equal((byte)expected,value);
         }
-        
 
         [Theory]
         [InlineData(0x00,3,0x08)]
@@ -157,7 +154,6 @@ namespace Jcd.BitManipulation.Tests
             value.SetBit((byte)bitToSet);
             Assert.Equal((short)expected,value);
         }
-        
 
         [Theory]
         [InlineData(0x00,3,0x08)]
@@ -172,7 +168,6 @@ namespace Jcd.BitManipulation.Tests
             value.SetBit((byte)bitToSet);
             Assert.Equal((ushort)expected,value);
         }
-        
         
         [Theory]
         [InlineData(0x00,3,0x08)]
@@ -189,7 +184,6 @@ namespace Jcd.BitManipulation.Tests
             value.SetBit((byte)bitToSet);
             Assert.Equal((int)expected,value);
         }
-        
 
         [Theory]
         [InlineData(0x00,3,0x08)]

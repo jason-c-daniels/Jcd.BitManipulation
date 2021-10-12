@@ -1,10 +1,9 @@
-﻿using System;
-
+﻿// ReSharper disable RedundantArgumentDefaultValue
 namespace Jcd.BitManipulation.Examples
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
             ushort data=0b0000000000000000;
             // turn on all the bits

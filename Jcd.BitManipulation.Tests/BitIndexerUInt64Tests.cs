@@ -134,6 +134,5 @@ namespace Jcd.BitManipulation.Tests
             }
             Assert.Equal(BitIndexerUInt64.BitSize,itemCount);
         }
-        
     }
 }

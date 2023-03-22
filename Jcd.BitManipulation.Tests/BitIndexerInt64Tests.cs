@@ -40,7 +40,7 @@ namespace Jcd.BitManipulation.Tests
             var indexer = new BitIndexerInt64{ Bits= data };
             long bits = indexer;
             
-            Assert.Equal(indexer.Bits,bits);
+            Assert.Equal(indexer.ToInt64(),bits);
         }
 
         [Theory]

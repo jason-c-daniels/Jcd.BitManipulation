@@ -1,0 +1,18 @@
+### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+
+## BitMask.implicit operator ushort(BitMask) Operator
+
+Automatically convert to ushort from a BitMask
+
+```csharp
+public static ushort implicit operator ushort(Jcd.BitManipulation.BitMask mask);
+```
+#### Parameters
+
+<a name='Jcd.BitManipulation.BitMask.op_Implicitushort(Jcd.BitManipulation.BitMask).mask'></a>
+
+`mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+
+#### Returns
+[System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')  
+the lowest 16 bits of the mask as a ushort

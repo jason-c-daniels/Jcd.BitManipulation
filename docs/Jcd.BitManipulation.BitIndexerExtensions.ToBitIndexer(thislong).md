@@ -7,6 +7,7 @@ Returns a BitIndexer for a long
 ```csharp
 public static Jcd.BitManipulation.BitIndexerInt64 ToBitIndexer(this long data);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexerExtensions.ToBitIndexer(thislong).data'></a>
@@ -16,5 +17,6 @@ public static Jcd.BitManipulation.BitIndexerInt64 ToBitIndexer(this long data);
 the data to convert
 
 #### Returns
+
 [BitIndexerInt64](Jcd.BitManipulation.BitIndexerInt64.md 'Jcd.BitManipulation.BitIndexerInt64')  
 A BitIndexerInt64 with a copy of the original data

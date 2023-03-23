@@ -1,218 +1,291 @@
-namespace Jcd.BitManipulation
+namespace Jcd.BitManipulation;
+
+/// <summary>
+/// Extension methods to aid in clearing bits in various integer data types.
+/// </summary>
+public static class ClearBitsExtensions
 {
+    #region Range of bits operations
+
     /// <summary>
-    /// Extension methods to aid in clearing bits in various integer data types.
+    /// Sets all specified bits to "off" and returns the modified value.
     /// </summary>
-    public static class ClearBitsExtensions
+    /// <param name="value">The value to be modified.</param>
+    /// <param name="offset">The offset of where to begin clearing bits.</param>
+    /// <param name="size">The number of bits to clear.</param>
+    /// <returns>The modified value.</returns>
+    public static sbyte ClearBits(this sbyte value, int offset = 0, int size = 8)
     {
-        #region Range of bits operations
-        /// <summary>
-        /// Sets all specified bits to "off" in a variable. 
-        /// </summary>
-        /// <param name="self">The value to be modified.</param>
-        /// <param name="offset">The bit location to begin clearing bits.</param>
-        /// <param name="size">The number of bits to clear on.</param>
-        public static void ClearBits(this ref sbyte self, int offset=0, int size=8)
-            => self.ClearBits(BitMask.CreateRange(offset, size));
-
-        /// <summary>
-        /// Sets all specified bits to "off" in a variable. 
-        /// </summary>
-        /// <param name="self">The value to be modified.</param>
-        /// <param name="offset">The bit location to begin clearing bits.</param>
-        /// <param name="size">The number of bits to clear on.</param>
-        public static void ClearBits(this ref short self, int offset=0, int size=16)
-            => self.ClearBits(BitMask.CreateRange(offset, size));
-        
-        /// <summary>
-        /// Sets all specified bits to "off" in a variable. 
-        /// </summary>
-        /// <param name="self">The value to be modified.</param>
-        /// <param name="offset">The bit location to begin clearing bits.</param>
-        /// <param name="size">The number of bits to clear on.</param>
-        public static void ClearBits(this ref int self, int offset=0, int size=32)
-            => self.ClearBits(BitMask.CreateRange(offset, size));
-        
-        /// <summary>
-        /// Sets all specified bits to "off" in a variable. 
-        /// </summary>
-        /// <param name="self">The value to be modified.</param>
-        /// <param name="offset">The bit location to begin clearing bits.</param>
-        /// <param name="size">The number of bits to clear on.</param>
-        public static void ClearBits(this ref long self, int offset=0, int size=64)
-            => self.ClearBits(BitMask.CreateRange(offset, size));
-        
-        /// <summary>
-        /// Sets all specified bits to "off" in a variable. 
-        /// </summary>
-        /// <param name="self">The value to be modified.</param>
-        /// <param name="offset">The bit location to begin clearing bits.</param>
-        /// <param name="size">The number of bits to clear on.</param>
-        public static void ClearBits(this ref byte self, int offset=0, int size=8)
-            => self.ClearBits(BitMask.CreateRange(offset, size));
-        
-        /// <summary>
-        /// Sets all specified bits to "off" in a variable. 
-        /// </summary>
-        /// <param name="self">The value to be modified.</param>
-        /// <param name="offset">The bit location to begin clearing bits.</param>
-        /// <param name="size">The number of bits to clear on.</param>
-        public static void ClearBits(this ref ushort self, int offset=0, int size=16)
-            => self.ClearBits(BitMask.CreateRange(offset, size));
-        
-        /// <summary>
-        /// Sets all specified bits to "off" in a variable. 
-        /// </summary>
-        /// <param name="self">The value to be modified.</param>
-        /// <param name="offset">The bit location to begin clearing bits.</param>
-        /// <param name="size">The number of bits to clear on.</param>
-        public static void ClearBits(this ref uint self, int offset=0, int size=32)
-            => self.ClearBits(BitMask.CreateRange(offset, size));
-        
-        /// <summary>
-        /// Sets all specified bits to "off" in a variable. 
-        /// </summary>
-        /// <param name="self">The value to be modified.</param>
-        /// <param name="offset">The bit location to begin clearing bits.</param>
-        /// <param name="size">The number of bits to clear on.</param>
-        public static void ClearBits(this ref ulong self, int offset=0, int size=64)
-            => self.ClearBits(BitMask.CreateRange(offset, size));
-        
-        #endregion
-     
-        #region Single bit operations
-        /// <summary>
-        /// Sets bit to "off" in a variable, given a bit position.
-        /// </summary>
-        /// <param name="self">The value to be modified.</param>
-        /// <param name="offset">The bit to clear.</param>
-        public static void ClearBit(this ref sbyte self, int offset)
-            => self.ClearBits(BitMask.CreateSingleBit(offset));
-        
-        /// <summary>
-        /// Sets bit to "off" in a variable, given a bit position.
-        /// </summary>
-        /// <param name="self">The value to be modified.</param>
-        /// <param name="offset">The bit to clear.</param>
-        public static void ClearBit(this ref short self, int offset)
-            => self.ClearBits(BitMask.CreateSingleBit(offset));
-        
-        /// <summary>
-        /// Sets bit to "off" in a variable, given a bit position.
-        /// </summary>
-        /// <param name="self">The value to be modified.</param>
-        /// <param name="offset">The bit to clear.</param>
-        public static void ClearBit(this ref int self, int offset)
-            => self.ClearBits(BitMask.CreateSingleBit(offset));
-
-        /// <summary>
-        /// Sets bit to "off" in a variable, given a bit position.
-        /// </summary>
-        /// <param name="self">The value to be modified.</param>
-        /// <param name="offset">The bit to clear.</param>
-        public static void ClearBit(this ref long self, int offset)
-            => self.ClearBits(BitMask.CreateSingleBit(offset));
-
-        /// <summary>
-        /// Sets bit to "off" in a variable, given a bit position.
-        /// </summary>
-        /// <param name="self">The value to be modified.</param>
-        /// <param name="offset">The bit to clear.</param>
-        public static void ClearBit(this ref byte self, int offset)
-            => self.ClearBits(BitMask.CreateSingleBit(offset));
-
-        /// <summary>
-        /// Sets bit to "off" in a variable, given a bit position.
-        /// </summary>
-        /// <param name="self">The value to be modified.</param>
-        /// <param name="offset">The bit to clear.</param>
-        public static void ClearBit(this ref ushort self, int offset)
-            => self.ClearBits(BitMask.CreateSingleBit(offset));
-
-        /// <summary>
-        /// Sets bit to "off" in a variable, given a bit position.
-        /// </summary>
-        /// <param name="self">The value to be modified.</param>
-        /// <param name="offset">The bit to clear.</param>
-        public static void ClearBit(this ref uint self, int offset)
-            => self.ClearBits(BitMask.CreateSingleBit(offset));
-
-        /// <summary>
-        /// Sets bit to "off" in a variable, given a bit position.
-        /// </summary>
-        /// <param name="self">The value to be modified.</param>
-        /// <param name="offset">The bit to clear.</param>
-        public static void ClearBit(this ref ulong self, int offset)
-            => self.ClearBits(BitMask.CreateSingleBit(offset));
-                
-        #endregion
-
-        #region BitMask operations
-        
-        /// <summary>
-        /// Sets all bits from a provided mask to "off" in a variable. 
-        /// </summary>
-        /// <param name="self">The value to be modified.</param>
-        /// <param name="mask">bits to clear.</param>
-        public static void ClearBits(this ref sbyte self, BitMask mask)
-            => self &= (sbyte)~mask.Bits;
-
-        /// <summary>
-        /// Sets all bits from a provided mask to "off" in a variable. 
-        /// </summary>
-        /// <param name="self">The value to be modified.</param>
-        /// <param name="mask">bits to clear.</param>
-        public static void ClearBits(this ref short self, BitMask mask)
-            => self &= (short)~mask.Bits;
-
-        /// <summary>
-        /// Sets all bits from a provided mask to "off" in a variable. 
-        /// </summary>
-        /// <param name="self">The value to be modified.</param>
-        /// <param name="mask">bits to clear.</param>
-        public static void ClearBits(this ref int self, BitMask mask)
-            => self &= (int)~mask.Bits;
-
-        /// <summary>
-        /// Sets all bits from a provided mask to "off" in a variable. 
-        /// </summary>
-        /// <param name="self">The value to be modified.</param>
-        /// <param name="mask">bits to clear.</param>
-        public static void ClearBits(this ref long self, BitMask mask)
-            => self &= (long)~mask.Bits;
-
-        /// <summary>
-        /// Sets all bits from a provided mask to "off" in a variable. 
-        /// </summary>
-        /// <param name="self">The value to be modified.</param>
-        /// <param name="mask">bits to clear.</param>
-        public static void ClearBits(this ref byte self, BitMask mask)
-            => self &= (byte)~mask.Bits;
-
-        /// <summary>
-        /// Sets all bits from a provided mask to "off" in a variable. 
-        /// </summary>
-        /// <param name="self">The value to be modified.</param>
-        /// <param name="mask">bits to clear.</param>
-        public static void ClearBits(this ref ushort self, BitMask mask)
-            => self &= (ushort)~mask.Bits;
-
-        /// <summary>
-        /// Sets all bits from a provided mask to "off" in a variable. 
-        /// </summary>
-        /// <param name="self">The value to be modified.</param>
-        /// <param name="mask">bits to clear.</param>
-        public static void ClearBits(this ref uint self, BitMask mask)
-            => self &= (uint)~mask.Bits;
-
-        /// <summary>
-        /// Sets all bits from a provided mask to "off" in a variable. 
-        /// </summary>
-        /// <param name="self">The value to be modified.</param>
-        /// <param name="mask">bits to clear.</param>
-        public static void ClearBits(this ref ulong self, BitMask mask)
-            => self &= ~mask.Bits;
-        
-        #endregion
+        return value.ClearBits(BitMask.FromRange(offset, size));
     }
+
+    /// <summary>
+    /// Sets all specified bits to "off" and returns the modified value. 
+    /// </summary>
+    /// <param name="value">The value to be modified.</param>
+    /// <param name="offset">The offset of where to begin clearing bits.</param>
+    /// <param name="size">The number of bits to clear.</param>
+    /// <returns>The modified value.</returns>
+    public static short ClearBits(this short value, int offset = 0, int size = 16)
+    {
+        return value.ClearBits(BitMask.FromRange(offset, size));
+    }
+
+    /// <summary>
+    /// Sets all specified bits to "off" and returns the modified value.
+    /// </summary>
+    /// <param name="value">The value to be modified.</param>
+    /// <param name="offset">The offset of where to begin clearing bits.</param>
+    /// <param name="size">The number of bits to clear.</param>
+    /// <returns>The modified value.</returns>
+    public static int ClearBits(this int value, int offset = 0, int size = 32)
+    {
+        return value.ClearBits(BitMask.FromRange(offset, size));
+    }
+
+    /// <summary>
+    /// Sets all specified bits to "off" and returns the modified value.
+    /// </summary>
+    /// <param name="value">The value to be modified.</param>
+    /// <param name="offset">The offset of where to begin clearing bits.</param>
+    /// <param name="size">The number of bits to clear.</param>
+    /// <returns>The modified value.</returns>
+    public static long ClearBits(this long value, int offset = 0, int size = 64)
+    {
+        return value.ClearBits(BitMask.FromRange(offset, size));
+    }
+
+    /// <summary>
+    /// Sets all specified bits to "off" and returns the modified value.
+    /// </summary>
+    /// <param name="value">The value to be modified.</param>
+    /// <param name="offset">The offset of where to begin clearing bits.</param>
+    /// <param name="size">The number of bits to clear.</param>
+    /// <returns>The modified value.</returns>
+    public static byte ClearBits(this byte value, int offset = 0, int size = 8)
+    {
+        return value.ClearBits(BitMask.FromRange(offset, size));
+    }
+
+    /// <summary>
+    /// Sets all specified bits to "off" and returns the modified value.
+    /// </summary>
+    /// <param name="value">The value to be modified.</param>
+    /// <param name="offset">The offset of where to begin clearing bits.</param>
+    /// <param name="size">The number of bits to clear.</param>
+    /// <returns>The modified value.</returns>
+    public static ushort ClearBits(this ushort value, int offset = 0, int size = 16)
+    {
+        return value.ClearBits(BitMask.FromRange(offset, size));
+    }
+
+    /// <summary>
+    /// Sets all specified bits to "off" and returns the modified value.
+    /// </summary>
+    /// <param name="value">The value to be modified.</param>
+    /// <param name="offset">The offset of where to begin clearing bits.</param>
+    /// <param name="size">The number of bits to clear.</param>
+    /// <returns>The modified value.</returns>
+    public static uint ClearBits(this uint value, int offset = 0, int size = 32)
+    {
+        return value.ClearBits(BitMask.FromRange(offset, size));
+    }
+
+    /// <summary>
+    /// Sets all specified bits to "off" and returns the modified value. 
+    /// </summary>
+    /// <param name="value">The value to be modified.</param>
+    /// <param name="offset">The offset of where to begin clearing bits.</param>
+    /// <param name="size">The number of bits to clear.</param>
+    /// <returns>The modified value.</returns>
+    public static ulong ClearBits(this ulong value, int offset = 0, int size = 64)
+    {
+        return value.ClearBits(BitMask.FromRange(offset, size));
+    }
+
+    #endregion
+
+    #region Single bit operations
+
+    /// <summary>
+    /// Sets bit to "off" and returns the modified value.
+    /// </summary>
+    /// <param name="value">The value to be modified.</param>
+    /// <param name="offset">The offset of the bit to clear.</param>
+    /// <returns>The modified value.</returns>
+    public static sbyte ClearBit(this sbyte value, int offset)
+    {
+        return value.ClearBits(BitMask.FromSingleBit(offset));
+    }
+
+    /// <summary>
+    /// Sets bit to "off" and returns the modified value.
+    /// </summary>
+    /// <param name="value">The value to be modified.</param>
+    /// <param name="offset">The offset of the bit to clear.</param>
+    /// <returns>The modified value.</returns>
+    public static short ClearBit(this short value, int offset)
+    {
+        return value.ClearBits(BitMask.FromSingleBit(offset));
+    }
+
+    /// <summary>
+    /// Sets bit to "off" and returns the modified value.
+    /// </summary>
+    /// <param name="value">The value to be modified.</param>
+    /// <param name="offset">The offset of the bit to clear.</param>
+    /// <returns>The modified value.</returns>
+    public static int ClearBit(this int value, int offset)
+    {
+        return value.ClearBits(BitMask.FromSingleBit(offset));
+    }
+
+    /// <summary>
+    /// Sets bit to "off" and returns the modified value.
+    /// </summary>
+    /// <param name="value">The value to be modified.</param>
+    /// <param name="offset">The offset of the bit to clear.</param>
+    /// <returns>The modified value.</returns>
+    public static long ClearBit(this long value, int offset)
+    {
+        return value.ClearBits(BitMask.FromSingleBit(offset));
+    }
+
+    /// <summary>
+    /// Sets bit to "off" and returns the modified value.
+    /// </summary>
+    /// <param name="value">The value to be modified.</param>
+    /// <param name="offset">The offset of the bit to clear.</param>
+    /// <returns>The modified value.</returns>
+    public static byte ClearBit(this byte value, int offset)
+    {
+        return value.ClearBits(BitMask.FromSingleBit(offset));
+    }
+
+    /// <summary>
+    /// Sets bit to "off" and returns the modified value.
+    /// </summary>
+    /// <param name="value">The value to be modified.</param>
+    /// <param name="offset">The offset of the bit to clear.</param>
+    /// <returns>The modified value.</returns>
+    public static ushort ClearBit(this ushort value, int offset)
+    {
+        return value.ClearBits(BitMask.FromSingleBit(offset));
+    }
+
+    /// <summary>
+    /// Sets bit to "off" and returns the modified value.
+    /// </summary>
+    /// <param name="value">The value to be modified.</param>
+    /// <param name="offset">The offset of the bit to clear.</param>
+    /// <returns>The modified value.</returns>
+    public static uint ClearBit(this uint value, int offset)
+    {
+        return value.ClearBits(BitMask.FromSingleBit(offset));
+    }
+
+    /// <summary>
+    /// Sets bit to "off" and returns the modified value.
+    /// </summary>
+    /// <param name="value">The value to be modified.</param>
+    /// <param name="offset">The offset of the bit to clear.</param>
+    /// <returns>The modified value.</returns>
+    public static ulong ClearBit(this ulong value, int offset)
+    {
+        return value.ClearBits(BitMask.FromSingleBit(offset));
+    }
+
+    #endregion
+
+    #region BitMask operations on ref variables
+
+    /// <summary>
+    /// Sets all bits from a provided mask to "off" and returns the modified value.
+    /// </summary>
+    /// <param name="value">The value to be modified.</param>
+    /// <param name="mask">the bit mask of the bits to clear.</param>
+    /// <returns>The modified value.</returns>
+    public static sbyte ClearBits(this sbyte value, BitMask mask)
+    {
+        return (sbyte)(value & (sbyte)~mask.Bits);
+    }
+
+    /// <summary>
+    /// Sets all bits from a provided mask to "off" and returns the modified value.
+    /// </summary>
+    /// <param name="value">The value to be modified.</param>
+    /// <param name="mask">the bit mask of the bits to clear.</param>
+    /// <returns>The modified value.</returns>
+    public static short ClearBits(this short value, BitMask mask)
+    {
+        return (short)(value & (short)~mask.Bits);
+    }
+
+    /// <summary>
+    /// Sets all bits from a provided mask to "off" and returns the modified value.
+    /// </summary>
+    /// <param name="value">The value to be modified.</param>
+    /// <param name="mask">the bit mask of the bits to clear.</param>
+    /// <returns>The modified value.</returns>
+    public static int ClearBits(this int value, BitMask mask)
+    {
+        return value & (int)~mask.Bits;
+    }
+
+    /// <summary>
+    /// Sets all bits from a provided mask to "off" and returns the modified value.
+    /// </summary>
+    /// <param name="value">The value to be modified.</param>
+    /// <param name="mask">the bit mask of the bits to clear.</param>
+    /// <returns>The modified value.</returns>
+    public static long ClearBits(this long value, BitMask mask)
+    {
+        return value & (long)~mask.Bits;
+    }
+
+    /// <summary>
+    /// Sets all bits from a provided mask to "off" and returns the modified value.
+    /// </summary>
+    /// <param name="value">The value to be modified.</param>
+    /// <param name="mask">the bit mask of the bits to clear.</param>
+    /// <returns>The modified value.</returns>
+    public static byte ClearBits(this byte value, BitMask mask)
+    {
+        return (byte)(value & (byte)~mask.Bits);
+    }
+
+    /// <summary>
+    /// Sets all bits from a provided mask to "off" and returns the modified value.
+    /// </summary>
+    /// <param name="value">The value to be modified.</param>
+    /// <param name="mask">the bit mask of the bits to clear.</param>
+    /// <returns>The modified value.</returns>
+    public static ushort ClearBits(this ushort value, BitMask mask)
+    {
+        return (ushort)(value & (ushort)~mask.Bits);
+    }
+
+    /// <summary>
+    /// Sets all bits from a provided mask to "off" and returns the modified value.
+    /// </summary>
+    /// <param name="value">The value to be modified.</param>
+    /// <param name="mask">the bit mask of the bits to clear.</param>
+    /// <returns>The modified value.</returns>
+    public static uint ClearBits(this uint value, BitMask mask)
+    {
+        return value & (uint)~mask.Bits;
+    }
+
+    /// <summary>
+    /// Sets all bits from a provided mask to "off" and returns the modified value.
+    /// </summary>
+    /// <param name="value">The value to be modified.</param>
+    /// <param name="mask">the bit mask of the bits to clear.</param>
+    /// <returns>The modified value.</returns>
+    public static ulong ClearBits(this ulong value, BitMask mask)
+    {
+        return value & ~mask.Bits;
+    }
+
+    #endregion
 }

@@ -2,16 +2,17 @@
 
 ## ClearBitsExtensions.ClearBit(this long, int) Method
 
-Sets bit to "off" in a variable, given a bit position.
+Sets bit to "off" and returns the modified value.
 
 ```csharp
-public static void ClearBit(this ref long self, int offset);
+public static long ClearBit(this long value, int offset);
 ```
+
 #### Parameters
 
-<a name='Jcd.BitManipulation.ClearBitsExtensions.ClearBit(thislong,int).self'></a>
+<a name='Jcd.BitManipulation.ClearBitsExtensions.ClearBit(thislong,int).value'></a>
 
-`self` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
+`value` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 
 The value to be modified.
 
@@ -19,4 +20,9 @@ The value to be modified.
 
 `offset` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The bit to clear.
+The offset of the bit to clear.
+
+#### Returns
+
+[System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')  
+The modified value.

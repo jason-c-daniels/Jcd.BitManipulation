@@ -7,6 +7,7 @@ Returns a BitIndexer for a ushort
 ```csharp
 public static Jcd.BitManipulation.BitIndexerUInt16 ToBitIndexer(this ushort data);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexerExtensions.ToBitIndexer(thisushort).data'></a>
@@ -16,5 +17,6 @@ public static Jcd.BitManipulation.BitIndexerUInt16 ToBitIndexer(this ushort data
 the data to convert
 
 #### Returns
+
 [BitIndexerUInt16](Jcd.BitManipulation.BitIndexerUInt16.md 'Jcd.BitManipulation.BitIndexerUInt16')  
 A BitIndexerUInt16 with a copy of the original data

@@ -2,16 +2,17 @@
 
 ## ToggleBitsExtensions.ToggleBits(this long, BitMask) Method
 
-Toggle all the bits in a variable according to the provided mask
+Toggle all the bits according to the provided mask
 
 ```csharp
-public static void ToggleBits(this ref long self, Jcd.BitManipulation.BitMask mask);
+public static long ToggleBits(this long value, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
-<a name='Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(thislong,Jcd.BitManipulation.BitMask).self'></a>
+<a name='Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(thislong,Jcd.BitManipulation.BitMask).value'></a>
 
-`self` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
+`value` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 
 The value to be modified.
 
@@ -20,3 +21,7 @@ The value to be modified.
 `mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
 bits to set.
+
+#### Returns
+
+[System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')

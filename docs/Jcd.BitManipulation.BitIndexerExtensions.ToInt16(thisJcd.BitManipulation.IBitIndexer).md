@@ -7,6 +7,7 @@ Convert an IBitIndexer into a short
 ```csharp
 public static short ToInt16(this Jcd.BitManipulation.IBitIndexer indexer);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexerExtensions.ToInt16(thisJcd.BitManipulation.IBitIndexer).indexer'></a>
@@ -16,5 +17,6 @@ public static short ToInt16(this Jcd.BitManipulation.IBitIndexer indexer);
 the indexer to convert
 
 #### Returns
+
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')  
 the converted value

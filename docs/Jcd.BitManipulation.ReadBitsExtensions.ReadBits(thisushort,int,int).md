@@ -5,13 +5,14 @@
 For a given value return the specified bits from within it, right shifted pos bits.
 
 ```csharp
-public static ushort ReadBits(this ushort self, int offset, int size);
+public static ushort ReadBits(this ushort value, int offset, int size);
 ```
+
 #### Parameters
 
-<a name='Jcd.BitManipulation.ReadBitsExtensions.ReadBits(thisushort,int,int).self'></a>
+<a name='Jcd.BitManipulation.ReadBitsExtensions.ReadBits(thisushort,int,int).value'></a>
 
-`self` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
+`value` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 
 the source of bits to read
 
@@ -28,5 +29,6 @@ the bit offset to read from
 The total number of bits to extract
 
 #### Returns
+
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')  
 The numeric value stored at that bit location

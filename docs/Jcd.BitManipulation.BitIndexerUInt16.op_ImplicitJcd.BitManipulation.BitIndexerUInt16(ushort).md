@@ -7,6 +7,7 @@ Automatically Convert from a ushort to a BitIndexerUInt16
 ```csharp
 public static Jcd.BitManipulation.BitIndexerUInt16 implicit operator BitIndexerUInt16(ushort bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexerUInt16.op_ImplicitJcd.BitManipulation.BitIndexerUInt16(ushort).bits'></a>
@@ -16,5 +17,6 @@ public static Jcd.BitManipulation.BitIndexerUInt16 implicit operator BitIndexerU
 the initial value for the indexer's backing store
 
 #### Returns
+
 [BitIndexerUInt16](Jcd.BitManipulation.BitIndexerUInt16.md 'Jcd.BitManipulation.BitIndexerUInt16')  
 A new BitIndexerUInt16

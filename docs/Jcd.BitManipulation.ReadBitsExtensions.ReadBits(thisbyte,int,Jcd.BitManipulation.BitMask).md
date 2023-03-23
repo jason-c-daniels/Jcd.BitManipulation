@@ -5,13 +5,14 @@
 Extract a subset of bits specified by a bitmask and right align the bits by the offset.
 
 ```csharp
-public static byte ReadBits(this byte self, int offset, Jcd.BitManipulation.BitMask mask);
+public static byte ReadBits(this byte value, int offset, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
-<a name='Jcd.BitManipulation.ReadBitsExtensions.ReadBits(thisbyte,int,Jcd.BitManipulation.BitMask).self'></a>
+<a name='Jcd.BitManipulation.ReadBitsExtensions.ReadBits(thisbyte,int,Jcd.BitManipulation.BitMask).value'></a>
 
-`self` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
+`value` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
 the source of bits to read
 
@@ -26,8 +27,9 @@ the bit offset to read from
 `mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
 the bitmask of which bits to read.  
-            Zeroed bits in the mask will always extract 0 from the source.
+Zeroed bits in the mask will always extract 0 from the source.
 
 #### Returns
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')  
 The right shifted value extracted from the value

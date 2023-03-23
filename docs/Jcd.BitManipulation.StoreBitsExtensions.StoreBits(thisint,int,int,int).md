@@ -5,19 +5,20 @@
 Stores a value at the specified bit location within the variable.
 
 ```csharp
-public static void StoreBits(this ref int self, int value, int offset, int size);
+public static int StoreBits(this int value, int source, int offset, int size);
 ```
+
 #### Parameters
-
-<a name='Jcd.BitManipulation.StoreBitsExtensions.StoreBits(thisint,int,int,int).self'></a>
-
-`self` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
-
-The value to be modified.
 
 <a name='Jcd.BitManipulation.StoreBitsExtensions.StoreBits(thisint,int,int,int).value'></a>
 
 `value` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+
+The value to be modified.
+
+<a name='Jcd.BitManipulation.StoreBitsExtensions.StoreBits(thisint,int,int,int).source'></a>
+
+`source` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
 The value to be stored at the bit location.
 
@@ -32,3 +33,7 @@ The bit location to store the value.
 `size` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
 The bit size of the value.
+
+#### Returns
+
+[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')

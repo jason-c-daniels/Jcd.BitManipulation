@@ -2,15 +2,17 @@
 
 ## BitMask(sbyte) Constructor
 
-Create a bitmask
+Constructs a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') from
+an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 
 ```csharp
 public BitMask(sbyte bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.BitMask(sbyte).bits'></a>
 
 `bits` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 
-The BitMask to use
+The [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') to use

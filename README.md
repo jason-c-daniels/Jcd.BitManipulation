@@ -7,11 +7,12 @@ A .Net Standard 2.0 library adding syntactic sugar to your bit manipulation expe
 ### Breaking Changes from v1.x
 
 1. Renamed `BitMask.CreateRange` to `BitMask.FromRange`.
-2. Renamed `BitMask.CreateSingleBit` to `FromSingleBit`.
+2. Renamed `BitMask.CreateSingleBit` to `BitMask.FromSingleBit`.
 3. All `StoreBit` overloads had bit and offset parameters swapped for semantic parity with `StoreBits`
-4. `ClearBits`, `SetBits`, `StoreBits`, `ToggleBits`, `ClearBit`, `SetBit`, `StoreBit`, and `ToggleBit` no longer take `ref` parameters.
-   They return the modified result instead of modifying the original variable.
-   This gives a net benefit of being able to use fluent syntax to chain bit manipulation operations.
+4. Extension methods: `ClearBits`, `SetBits`, `StoreBits`, `ToggleBits`, `ClearBit`, `SetBit`, `StoreBit`,
+   and `ToggleBit` no longer take `ref` parameters. Now they return the modified result instead of modifying 
+   the original variable. This gives a net benefit of being able to use fluent syntax to chain together 
+   bit manipulation operations.
 
 ### Performance Notes
 

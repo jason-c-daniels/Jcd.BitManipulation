@@ -5,13 +5,14 @@
 Extract a subset of bits specified by a bitmask and right align the bits by the offset.
 
 ```csharp
-public static ulong ReadBits(this ulong self, int offset, Jcd.BitManipulation.BitMask mask);
+public static ulong ReadBits(this ulong value, int offset, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
-<a name='Jcd.BitManipulation.ReadBitsExtensions.ReadBits(thisulong,int,Jcd.BitManipulation.BitMask).self'></a>
+<a name='Jcd.BitManipulation.ReadBitsExtensions.ReadBits(thisulong,int,Jcd.BitManipulation.BitMask).value'></a>
 
-`self` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
+`value` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
 the source of bits to read
 
@@ -26,8 +27,9 @@ the bit offset to read from
 `mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
 the bitmask of which bits to read.  
-            Zeroed bits in the mask will always extract 0 from the source.
+Zeroed bits in the mask will always extract 0 from the source.
 
 #### Returns
+
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')  
 The right shifted value extracted from the value

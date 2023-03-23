@@ -2,16 +2,17 @@
 
 ## SetBitsExtensions.SetBit(this long, int) Method
 
-Sets specified bit to "on" in a variable
+Sets specified bit to "on"
 
 ```csharp
-public static void SetBit(this ref long self, int offset);
+public static long SetBit(this long value, int offset);
 ```
+
 #### Parameters
 
-<a name='Jcd.BitManipulation.SetBitsExtensions.SetBit(thislong,int).self'></a>
+<a name='Jcd.BitManipulation.SetBitsExtensions.SetBit(thislong,int).value'></a>
 
-`self` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
+`value` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 
 The value to be modified.
 
@@ -19,4 +20,8 @@ The value to be modified.
 
 `offset` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The bit location to set to on.
+The offset of the bit to set.
+
+#### Returns
+
+[System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')

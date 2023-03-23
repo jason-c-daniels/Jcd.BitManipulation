@@ -2,19 +2,22 @@
 
 ## BitMask.implicit operator BitMask(ushort) Operator
 
-Automatically convert to BitMask from a ushort
+Automatically convert to [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') from
+a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 
 ```csharp
 public static Jcd.BitManipulation.BitMask implicit operator BitMask(ushort bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.op_ImplicitJcd.BitManipulation.BitMask(ushort).bits'></a>
 
 `bits` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 
-the value to convert to a BitMask
+the value to convert to a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
 #### Returns
+
 [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')  
-the BitMask object constructed from the bits
+the [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') object constructed from the bits

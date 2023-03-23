@@ -9,4 +9,5 @@ public byte Bits { get; set; }
 ```
 
 #### Property Value
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')

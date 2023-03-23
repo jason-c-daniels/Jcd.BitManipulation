@@ -7,6 +7,7 @@ Convert an int into an array of bools
 ```csharp
 public static bool[] ToBooleanArray(this int bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BooleanArrayExtensions.ToBooleanArray(thisint).bits'></a>
@@ -16,5 +17,6 @@ public static bool[] ToBooleanArray(this int bits);
 the int to convert
 
 #### Returns
+
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')  
 the array. LSB at index 0

@@ -2,16 +2,17 @@
 
 ## ClearBitsExtensions.ClearBits(this byte, BitMask) Method
 
-Sets all bits from a provided mask to "off" in a variable.
+Sets all bits from a provided mask to "off" and returns the modified value.
 
 ```csharp
-public static void ClearBits(this ref byte self, Jcd.BitManipulation.BitMask mask);
+public static byte ClearBits(this byte value, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
-<a name='Jcd.BitManipulation.ClearBitsExtensions.ClearBits(thisbyte,Jcd.BitManipulation.BitMask).self'></a>
+<a name='Jcd.BitManipulation.ClearBitsExtensions.ClearBits(thisbyte,Jcd.BitManipulation.BitMask).value'></a>
 
-`self` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
+`value` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
 The value to be modified.
 
@@ -19,4 +20,9 @@ The value to be modified.
 
 `mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
-bits to clear.
+the bit mask of the bits to clear.
+
+#### Returns
+
+[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')  
+The modified value.

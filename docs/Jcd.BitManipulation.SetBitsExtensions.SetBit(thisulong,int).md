@@ -2,16 +2,17 @@
 
 ## SetBitsExtensions.SetBit(this ulong, int) Method
 
-Sets specified bit to "on" in a variable
+Sets specified bit to "on"
 
 ```csharp
-public static void SetBit(this ref ulong self, int offset);
+public static ulong SetBit(this ulong value, int offset);
 ```
+
 #### Parameters
 
-<a name='Jcd.BitManipulation.SetBitsExtensions.SetBit(thisulong,int).self'></a>
+<a name='Jcd.BitManipulation.SetBitsExtensions.SetBit(thisulong,int).value'></a>
 
-`self` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
+`value` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
 The value to be modified.
 
@@ -19,4 +20,8 @@ The value to be modified.
 
 `offset` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The bit location to set to on.
+The offset of the bit to set.
+
+#### Returns
+
+[System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')

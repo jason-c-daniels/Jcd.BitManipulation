@@ -5,13 +5,14 @@
 For a given value return the specified bits from within it, right shifted pos bits.
 
 ```csharp
-public static byte ReadBits(this byte self, int offset, int size);
+public static byte ReadBits(this byte value, int offset, int size);
 ```
+
 #### Parameters
 
-<a name='Jcd.BitManipulation.ReadBitsExtensions.ReadBits(thisbyte,int,int).self'></a>
+<a name='Jcd.BitManipulation.ReadBitsExtensions.ReadBits(thisbyte,int,int).value'></a>
 
-`self` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
+`value` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
 the source of bits to read
 
@@ -28,5 +29,6 @@ the bit offset to read from
 The total number of bits to extract
 
 #### Returns
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')  
 The numeric value stored at that bit location

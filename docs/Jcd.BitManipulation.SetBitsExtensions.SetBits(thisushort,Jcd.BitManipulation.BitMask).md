@@ -2,16 +2,17 @@
 
 ## SetBitsExtensions.SetBits(this ushort, BitMask) Method
 
-Sets all specified bits to "on" in a variable
+Sets all specified bits to "on"
 
 ```csharp
-public static void SetBits(this ref ushort self, Jcd.BitManipulation.BitMask mask);
+public static ushort SetBits(this ushort value, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
-<a name='Jcd.BitManipulation.SetBitsExtensions.SetBits(thisushort,Jcd.BitManipulation.BitMask).self'></a>
+<a name='Jcd.BitManipulation.SetBitsExtensions.SetBits(thisushort,Jcd.BitManipulation.BitMask).value'></a>
 
-`self` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
+`value` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 
 The value to be modified.
 
@@ -20,3 +21,7 @@ The value to be modified.
 `mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
 bits to set.
+
+#### Returns
+
+[System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')

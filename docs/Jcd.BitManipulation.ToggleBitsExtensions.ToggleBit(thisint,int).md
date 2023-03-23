@@ -2,16 +2,17 @@
 
 ## ToggleBitsExtensions.ToggleBit(this int, int) Method
 
-Toggles a bit, given a bit position.
+Toggles a bit.
 
 ```csharp
-public static void ToggleBit(this ref int self, int offset);
+public static int ToggleBit(this int value, int offset);
 ```
+
 #### Parameters
 
-<a name='Jcd.BitManipulation.ToggleBitsExtensions.ToggleBit(thisint,int).self'></a>
+<a name='Jcd.BitManipulation.ToggleBitsExtensions.ToggleBit(thisint,int).value'></a>
 
-`self` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+`value` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
 The value to be modified.
 
@@ -20,3 +21,7 @@ The value to be modified.
 `offset` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
 The bit location to toggle.
+
+#### Returns
+
+[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')

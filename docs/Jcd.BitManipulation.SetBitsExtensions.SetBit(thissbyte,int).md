@@ -2,16 +2,17 @@
 
 ## SetBitsExtensions.SetBit(this sbyte, int) Method
 
-Sets specified bit to "on" in a variable
+Sets specified bit to "on"
 
 ```csharp
-public static void SetBit(this ref sbyte self, int offset);
+public static sbyte SetBit(this sbyte value, int offset);
 ```
+
 #### Parameters
 
-<a name='Jcd.BitManipulation.SetBitsExtensions.SetBit(thissbyte,int).self'></a>
+<a name='Jcd.BitManipulation.SetBitsExtensions.SetBit(thissbyte,int).value'></a>
 
-`self` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
+`value` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 
 The value to be modified.
 
@@ -19,4 +20,8 @@ The value to be modified.
 
 `offset` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The bit location to set to on.
+The offset of the bit to set.
+
+#### Returns
+
+[System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')

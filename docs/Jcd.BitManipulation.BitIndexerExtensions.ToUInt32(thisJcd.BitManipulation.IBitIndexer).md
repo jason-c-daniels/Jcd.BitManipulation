@@ -7,6 +7,7 @@ Convert an IBitIndexer into a uint
 ```csharp
 public static uint ToUInt32(this Jcd.BitManipulation.IBitIndexer indexer);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexerExtensions.ToUInt32(thisJcd.BitManipulation.IBitIndexer).indexer'></a>
@@ -16,5 +17,6 @@ public static uint ToUInt32(this Jcd.BitManipulation.IBitIndexer indexer);
 the indexer to convert
 
 #### Returns
+
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')  
 the converted value

@@ -6,7 +6,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Jcd.BitManipulation\Jcd.BitManipulation.csproj" />
+        <ProjectReference Include="..\Jcd.BitManipulation\Jcd.BitManipulation.csproj"/>
     </ItemGroup>
 
 </Project>

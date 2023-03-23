@@ -7,6 +7,7 @@ Convert an IBitIndexer into an sbyte
 ```csharp
 public static sbyte ToSByte(this Jcd.BitManipulation.IBitIndexer indexer);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexerExtensions.ToSByte(thisJcd.BitManipulation.IBitIndexer).indexer'></a>
@@ -16,5 +17,6 @@ public static sbyte ToSByte(this Jcd.BitManipulation.IBitIndexer indexer);
 the indexer to convert
 
 #### Returns
+
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')  
 the converted value

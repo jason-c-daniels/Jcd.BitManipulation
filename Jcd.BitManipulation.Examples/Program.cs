@@ -37,9 +37,9 @@ internal static class Program
 
         sw.Stop();
         var elapsed = sw.Elapsed.TotalMilliseconds;
-        var elapsedPer = elapsed / (iterations * opsPerIteration);
+        var elapsedPerInNs = elapsed / (iterations * opsPerIteration) * 1_000_000d;
         Console.WriteLine(
-            $"{iterations:n0} iterations with {opsPerIteration} operations per iteration took {elapsed:n2} ms for an average of {elapsedPer:e2} ms per operation.");
+            $"{iterations:n0} iterations with {opsPerIteration} operations per iteration took {elapsed:n2} ms for an average of {elapsedPerInNs:e2} ns per operation.");
         Console.WriteLine($"{upperByte} {data}");
     }
 

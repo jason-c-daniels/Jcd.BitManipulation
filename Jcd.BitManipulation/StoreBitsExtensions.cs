@@ -199,7 +199,6 @@ public static class StoreBitsExtensions
         return value;
     }
 
-
     /// <summary>
     /// Store a masked set of bits from a value to an offset in the destination
     /// The mask must apply to the destination bits.

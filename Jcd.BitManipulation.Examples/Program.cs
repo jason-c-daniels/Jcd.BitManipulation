@@ -28,8 +28,11 @@ internal static class Program
 
         var ul = 0xFFFEFDFEFCFBFAF9;
         var ba = ul.ToByteArray();
+        var baBigE = ul.ToByteArray(Endian.Big);
         var ul1 = ba.ToUInt64();
         var ul2 = ba.ToUInt64(Endian.Big);
+        var ul3 = baBigE.ToUInt64(Endian.Big);
+        var ul4 = baBigE.ToUInt64();
         var ba1 = ul1.ToByteArray();
         var ba2 = ul2.ToByteArray();
 

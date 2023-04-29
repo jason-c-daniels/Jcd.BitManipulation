@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BooleanArrayExtensions](Jcd.BitManipulation.BooleanArrayExtensions.md 'Jcd.BitManipulation.BooleanArrayExtensions')
 
 ## BooleanArrayExtensions.ToInt64(this bool[]) Method
@@ -7,7 +8,6 @@ Converts an array of bools into a long, discarding any excess bits.
 ```csharp
 public static long ToInt64(this bool[] bits);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BooleanArrayExtensions.ToInt64(thisbool[]).bits'></a>
@@ -17,6 +17,5 @@ public static long ToInt64(this bool[] bits);
 the array of bools to convert, LSB at index 0
 
 #### Returns
-
 [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')  
 The converted long

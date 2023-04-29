@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ToggleBitsExtensions](Jcd.BitManipulation.ToggleBitsExtensions.md 'Jcd.BitManipulation.ToggleBitsExtensions')
 
 ## ToggleBitsExtensions.ToggleBits(this short, int, int) Method
@@ -8,7 +9,6 @@ The default values result in toggling all bits.
 ```csharp
 public static short ToggleBits(this short value, int offset=0, int size=16);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(thisshort,int,int).value'></a>
@@ -30,5 +30,4 @@ The offset of the bits to toggle.
 The number of bits to toggle.
 
 #### Returns
-
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')

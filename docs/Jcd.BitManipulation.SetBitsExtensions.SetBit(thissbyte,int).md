@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[SetBitsExtensions](Jcd.BitManipulation.SetBitsExtensions.md 'Jcd.BitManipulation.SetBitsExtensions')
 
 ## SetBitsExtensions.SetBit(this sbyte, int) Method
@@ -7,7 +8,6 @@ Sets specified bit to "on"
 ```csharp
 public static sbyte SetBit(this sbyte value, int offset);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.SetBitsExtensions.SetBit(thissbyte,int).value'></a>
@@ -23,5 +23,4 @@ The value to be modified.
 The offset of the bit to set.
 
 #### Returns
-
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')

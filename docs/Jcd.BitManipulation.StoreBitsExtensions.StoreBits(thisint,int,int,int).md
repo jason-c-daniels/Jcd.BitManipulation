@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[StoreBitsExtensions](Jcd.BitManipulation.StoreBitsExtensions.md 'Jcd.BitManipulation.StoreBitsExtensions')
 
 ## StoreBitsExtensions.StoreBits(this int, int, int, int) Method
@@ -7,7 +8,6 @@ Stores a value at the specified bit location within the variable.
 ```csharp
 public static int StoreBits(this int value, int source, int offset, int size);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.StoreBitsExtensions.StoreBits(thisint,int,int,int).value'></a>
@@ -35,5 +35,4 @@ The bit location to store the value.
 The bit size of the value.
 
 #### Returns
-
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')

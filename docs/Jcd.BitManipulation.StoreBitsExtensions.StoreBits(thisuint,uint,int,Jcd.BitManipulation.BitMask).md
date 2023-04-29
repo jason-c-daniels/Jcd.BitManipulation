@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[StoreBitsExtensions](Jcd.BitManipulation.StoreBitsExtensions.md 'Jcd.BitManipulation.StoreBitsExtensions')
 
 ## StoreBitsExtensions.StoreBits(this uint, uint, int, BitMask) Method
@@ -8,7 +9,6 @@ The mask must apply to the destination bits.
 ```csharp
 public static uint StoreBits(this uint value, uint source, int offset, Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.StoreBitsExtensions.StoreBits(thisuint,uint,int,Jcd.BitManipulation.BitMask).value'></a>
@@ -36,5 +36,4 @@ the destination offset of where to store the bits
 the mask of which bits to store
 
 #### Returns
-
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')

@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[StoreBitsExtensions](Jcd.BitManipulation.StoreBitsExtensions.md 'Jcd.BitManipulation.StoreBitsExtensions')
 
 ## StoreBitsExtensions.StoreBits(this ulong, ulong, int, BitMask) Method
@@ -8,7 +9,6 @@ The mask must apply to the destination bits.
 ```csharp
 public static ulong StoreBits(this ulong value, ulong source, int offset, Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.StoreBitsExtensions.StoreBits(thisulong,ulong,int,Jcd.BitManipulation.BitMask).value'></a>
@@ -36,5 +36,4 @@ the destination offset of where to store the bits
 the mask of which bits to store
 
 #### Returns
-
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')

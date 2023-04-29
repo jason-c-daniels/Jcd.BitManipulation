@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BitIndexerUInt32](Jcd.BitManipulation.BitIndexerUInt32.md 'Jcd.BitManipulation.BitIndexerUInt32')
 
 ## BitIndexerUInt32.Slice(int, int) Method
@@ -7,7 +8,6 @@ Get a subset of bits given a starting offset and length.
 ```csharp
 public bool[] Slice(int start, int length);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexerUInt32.Slice(int,int).start'></a>
@@ -25,6 +25,5 @@ The number of bits to extract
 Implements [Slice(int, int)](Jcd.BitManipulation.IBitIndexer.Slice(int,int).md 'Jcd.BitManipulation.IBitIndexer.Slice(int, int)')
 
 #### Returns
-
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')  
 an array of bools for the subset of bits

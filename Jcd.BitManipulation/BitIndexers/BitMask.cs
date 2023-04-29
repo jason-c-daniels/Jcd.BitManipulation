@@ -4,7 +4,7 @@ using System.Text;
 
 #endregion
 
-namespace Jcd.BitManipulation;
+namespace Jcd.BitManipulation.BitIndexers;
 
 /// <summary>
 /// An conceptual abstraction for a bit mask.

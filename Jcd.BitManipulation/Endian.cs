@@ -1,4 +1,4 @@
-namespace Jcd.BitManipulation.ByteIndexers;
+namespace Jcd.BitManipulation;
 
 /// <summary>
 /// A type indicating which endian is in use. 

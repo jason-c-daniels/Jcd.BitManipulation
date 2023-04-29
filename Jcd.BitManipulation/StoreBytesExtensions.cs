@@ -1,6 +1,7 @@
 #region
 
 using System;
+using Jcd.BitManipulation.ByteIndexers;
 
 // ReSharper disable UnusedMethodReturnValue.Global
 // ReSharper disable UnusedMemberInSuper.Global
@@ -8,7 +9,7 @@ using System;
 
 #endregion
 
-namespace Jcd.BitManipulation.ByteIndexers;
+namespace Jcd.BitManipulation;
 
 /// <summary>
 /// Extension methods that aid in storing values into byte offsets within another integer data type.

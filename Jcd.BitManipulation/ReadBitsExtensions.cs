@@ -1,5 +1,7 @@
 // ReSharper disable MemberCanBePrivate.Global
 
+using Jcd.BitManipulation.BitIndexers;
+
 namespace Jcd.BitManipulation;
 
 /// <summary>

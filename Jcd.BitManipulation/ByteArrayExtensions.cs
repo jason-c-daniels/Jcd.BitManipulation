@@ -4,8 +4,9 @@
 // ReSharper disable MemberCanBePrivate.Global
 
 using System;
+using Jcd.BitManipulation.ByteIndexers;
 
-namespace Jcd.BitManipulation.ByteIndexers;
+namespace Jcd.BitManipulation;
 
 #endregion
 

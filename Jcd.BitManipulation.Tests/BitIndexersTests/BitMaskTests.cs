@@ -1,10 +1,11 @@
 #region
 
+using Jcd.BitManipulation.BitIndexers;
 using Xunit;
 
 #endregion
 
-namespace Jcd.BitManipulation.Tests;
+namespace Jcd.BitManipulation.Tests.BitIndexersTests;
 
 public class BitMaskTests
 {

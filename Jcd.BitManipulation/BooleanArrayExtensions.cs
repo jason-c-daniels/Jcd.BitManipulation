@@ -1,5 +1,7 @@
 // ReSharper disable ReplaceSliceWithRangeIndexer
 
+using Jcd.BitManipulation.BitIndexers;
+
 namespace Jcd.BitManipulation;
 
 /// <summary>

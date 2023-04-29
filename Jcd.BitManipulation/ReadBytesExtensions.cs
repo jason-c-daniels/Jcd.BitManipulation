@@ -5,7 +5,9 @@
 
 #endregion
 
-namespace Jcd.BitManipulation.ByteIndexers;
+using Jcd.BitManipulation.ByteIndexers;
+
+namespace Jcd.BitManipulation;
 
 /// <summary>
 /// Extension methods that aid in storing values into byte offsets within another integer data type.

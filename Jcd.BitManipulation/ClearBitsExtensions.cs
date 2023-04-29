@@ -1,3 +1,5 @@
+using Jcd.BitManipulation.BitIndexers;
+
 namespace Jcd.BitManipulation;
 
 /// <summary>

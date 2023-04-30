@@ -4,10 +4,7 @@
 
 | Classes | |
 | :--- | :--- |
-| [ByteArrayExtensions](Jcd.BitManipulation.ByteIndexers.ByteArrayExtensions.md 'Jcd.BitManipulation.ByteIndexers.ByteArrayExtensions') | A bunch of extension methods to help with converting numbers to and from arrays of bools |
 | [ByteIndexerExtensions](Jcd.BitManipulation.ByteIndexers.ByteIndexerExtensions.md 'Jcd.BitManipulation.ByteIndexers.ByteIndexerExtensions') | Some helper methods for converting to and from a ByteIndexer. |
-| [ReadBytesExtensions](Jcd.BitManipulation.ByteIndexers.ReadBytesExtensions.md 'Jcd.BitManipulation.ByteIndexers.ReadBytesExtensions') | Extension methods that aid in storing values into byte offsets within another integer data type. |
-| [StoreBytesExtensions](Jcd.BitManipulation.ByteIndexers.StoreBytesExtensions.md 'Jcd.BitManipulation.ByteIndexers.StoreBytesExtensions') | Extension methods that aid in storing values into byte offsets within another integer data type. |
 
 | Structs | |
 | :--- | :--- |
@@ -23,7 +20,3 @@
 | Interfaces | |
 | :--- | :--- |
 | [IByteIndexer](Jcd.BitManipulation.ByteIndexers.IByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.IByteIndexer') | The basic interface for indexing bits within an integer data type. |
-
-| Enums | |
-| :--- | :--- |
-| [Endian](Jcd.BitManipulation.ByteIndexers.Endian.md 'Jcd.BitManipulation.ByteIndexers.Endian') | A type indicating which endian is in use. |

@@ -1,0 +1,40 @@
+#### [Jcd.BitManipulation](index.md 'index')
+### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation')
+
+## ReadBytesExtensions Class
+
+Extension methods that aid in storing values into byte offsets within another integer data type.  
+The offsets are Least Significant Byte. Index 0 is the 8 least significant bits....etc.
+
+```csharp
+public static class ReadBytesExtensions
+```
+
+Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; ReadBytesExtensions
+
+| Methods | |
+| :--- | :--- |
+| [ReadByte(this byte, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadByte(thisbyte,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadByte(this byte, int)') | Read a single byte from the value at the specified byte offset. |
+| [ReadByte(this int, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadByte(thisint,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadByte(this int, int)') | Read a single byte from the value at the specified byte offset. |
+| [ReadByte(this long, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadByte(thislong,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadByte(this long, int)') | Read a single byte from the value at the specified byte offset. |
+| [ReadByte(this sbyte, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadByte(thissbyte,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadByte(this sbyte, int)') | Read a single byte from the value at the specified byte offset. |
+| [ReadByte(this short, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadByte(thisshort,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadByte(this short, int)') | Read a single byte from the value at the specified byte offset. |
+| [ReadByte(this uint, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadByte(thisuint,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadByte(this uint, int)') | Read a single byte from the value at the specified byte offset. |
+| [ReadByte(this ulong, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadByte(thisulong,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadByte(this ulong, int)') | Read a single byte from the value at the specified byte offset. |
+| [ReadByte(this ushort, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadByte(thisushort,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadByte(this ushort, int)') | Read a single byte from the value at the specified byte offset. |
+| [ReadBytes(this byte, int, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(thisbyte,int,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(this byte, int, int)') | Reads a set of bytes starting at the specified byte location within the value.<br/>The offsets are in LSB, this means the array will be little endian. |
+| [ReadBytes(this int, int, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(thisint,int,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(this int, int, int)') | Reads a set of bytes starting at the specified byte location within the value.<br/>The offsets are in LSB, this means the array will be little endian. |
+| [ReadBytes(this ByteIndexerByte, int, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(thisJcd.BitManipulation.ByteIndexers.ByteIndexerByte,int,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(this Jcd.BitManipulation.ByteIndexers.ByteIndexerByte, int, int)') | Reads a set of bytes starting at the specified byte location within the indexer. |
+| [ReadBytes(this ByteIndexerInt16, int, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(thisJcd.BitManipulation.ByteIndexers.ByteIndexerInt16,int,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(this Jcd.BitManipulation.ByteIndexers.ByteIndexerInt16, int, int)') | Reads a set of bytes starting at the specified byte location within the indexer. |
+| [ReadBytes(this ByteIndexerInt32, int, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(thisJcd.BitManipulation.ByteIndexers.ByteIndexerInt32,int,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(this Jcd.BitManipulation.ByteIndexers.ByteIndexerInt32, int, int)') | Reads a set of bytes starting at the specified byte location within the indexer. |
+| [ReadBytes(this ByteIndexerInt64, int, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(thisJcd.BitManipulation.ByteIndexers.ByteIndexerInt64,int,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(this Jcd.BitManipulation.ByteIndexers.ByteIndexerInt64, int, int)') | Reads a set of bytes starting at the specified byte location within the indexer. |
+| [ReadBytes(this ByteIndexerSByte, int, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(thisJcd.BitManipulation.ByteIndexers.ByteIndexerSByte,int,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(this Jcd.BitManipulation.ByteIndexers.ByteIndexerSByte, int, int)') | Reads a set of bytes starting at the specified byte location within the indexer. |
+| [ReadBytes(this ByteIndexerUInt16, int, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(thisJcd.BitManipulation.ByteIndexers.ByteIndexerUInt16,int,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(this Jcd.BitManipulation.ByteIndexers.ByteIndexerUInt16, int, int)') | Reads a set of bytes starting at the specified byte location within the indexer. |
+| [ReadBytes(this ByteIndexerUInt32, int, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(thisJcd.BitManipulation.ByteIndexers.ByteIndexerUInt32,int,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(this Jcd.BitManipulation.ByteIndexers.ByteIndexerUInt32, int, int)') | Reads a set of bytes starting at the specified byte location within the indexer. |
+| [ReadBytes(this ByteIndexerUInt64, int, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(thisJcd.BitManipulation.ByteIndexers.ByteIndexerUInt64,int,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(this Jcd.BitManipulation.ByteIndexers.ByteIndexerUInt64, int, int)') | Reads a set of bytes starting at the specified byte location within the indexer. |
+| [ReadBytes(this long, int, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(thislong,int,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(this long, int, int)') | Reads a set of bytes starting at the specified byte location within the value.<br/>The offsets are in LSB, this means the array will be little endian. |
+| [ReadBytes(this sbyte, int, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(thissbyte,int,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(this sbyte, int, int)') | Reads a set of bytes starting at the specified byte location within the value.<br/>The offsets are in LSB, this means the array will be little endian. |
+| [ReadBytes(this short, int, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(thisshort,int,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(this short, int, int)') | Reads a set of bytes starting at the specified byte location within the value.<br/>The offsets are in LSB, this means the array will be little endian. |
+| [ReadBytes(this uint, int, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(thisuint,int,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(this uint, int, int)') | Reads a set of bytes starting at the specified byte location within the value.<br/>The offsets are in LSB, this means the array will be little endian. |
+| [ReadBytes(this ulong, int, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(thisulong,int,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(this ulong, int, int)') | Reads a set of bytes starting at the specified byte location within the value.<br/>The offsets are in LSB, this means the array will be little endian. |
+| [ReadBytes(this ushort, int, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(thisushort,int,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(this ushort, int, int)') | Reads a set of bytes starting at the specified byte location within the value.<br/>The offsets are in LSB, this means the array will be little endian. |

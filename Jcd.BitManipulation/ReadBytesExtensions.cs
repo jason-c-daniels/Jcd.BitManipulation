@@ -11,6 +11,7 @@ namespace Jcd.BitManipulation;
 
 /// <summary>
 /// Extension methods that aid in storing values into byte offsets within another integer data type.
+/// The offsets are Least Significant Byte. Index 0 is the 8 least significant bits....etc.
 /// </summary>
 public static class ReadBytesExtensions
 {
@@ -18,6 +19,7 @@ public static class ReadBytesExtensions
 
     /// <summary>
     /// Reads a set of bytes starting at the specified byte location within the value.
+    /// The offsets are in LSB, this means the array will be little endian.
     /// </summary>
     /// <param name="value">The value to be read.</param>
     /// <param name="offset">The byte location to store the value.</param>
@@ -29,6 +31,7 @@ public static class ReadBytesExtensions
 
     /// <summary>
     /// Reads a set of bytes starting at the specified byte location within the value.
+    /// The offsets are in LSB, this means the array will be little endian.
     /// </summary>
     /// <param name="value">The value to be read.</param>
     /// <param name="offset">The byte location to store the value.</param>
@@ -40,6 +43,7 @@ public static class ReadBytesExtensions
 
     /// <summary>
     /// Reads a set of bytes starting at the specified byte location within the value.
+    /// The offsets are in LSB, this means the array will be little endian.
     /// </summary>
     /// <param name="value">The value to be read.</param>
     /// <param name="offset">The byte location to store the value.</param>
@@ -51,6 +55,7 @@ public static class ReadBytesExtensions
 
     /// <summary>
     /// Reads a set of bytes starting at the specified byte location within the value.
+    /// The offsets are in LSB, this means the array will be little endian.
     /// </summary>
     /// <param name="value">The value to be read.</param>
     /// <param name="offset">The byte location to store the value.</param>
@@ -62,6 +67,7 @@ public static class ReadBytesExtensions
 
     /// <summary>
     /// Reads a set of bytes starting at the specified byte location within the value.
+    /// The offsets are in LSB, this means the array will be little endian.
     /// </summary>
     /// <param name="value">The value to be read.</param>
     /// <param name="offset">The byte location to store the value.</param>
@@ -73,6 +79,7 @@ public static class ReadBytesExtensions
 
     /// <summary>
     /// Reads a set of bytes starting at the specified byte location within the value.
+    /// The offsets are in LSB, this means the array will be little endian.
     /// </summary>
     /// <param name="value">The value to be read.</param>
     /// <param name="offset">The byte location to store the value.</param>
@@ -84,6 +91,7 @@ public static class ReadBytesExtensions
 
     /// <summary>
     /// Reads a set of bytes starting at the specified byte location within the value.
+    /// The offsets are in LSB, this means the array will be little endian.
     /// </summary>
     /// <param name="value">The value to be read.</param>
     /// <param name="offset">The byte location to store the value.</param>
@@ -95,6 +103,7 @@ public static class ReadBytesExtensions
 
     /// <summary>
     /// Reads a set of bytes starting at the specified byte location within the value.
+    /// The offsets are in LSB, this means the array will be little endian.
     /// </summary>
     /// <param name="value">The value to be read.</param>
     /// <param name="offset">The byte location to store the value.</param>
@@ -106,7 +115,7 @@ public static class ReadBytesExtensions
 
     #endregion
 
-    #region operations on ranges of bytes.
+    #region operations on ByteIndexers
 
     /// <summary>
     /// Reads a set of bytes starting at the specified byte location within the indexer.
@@ -201,7 +210,7 @@ public static class ReadBytesExtensions
     #region single byte operations
 
     /// <summary>
-    /// Read a single byte to the value at the specified byte offset.
+    /// Read a single byte from the value at the specified byte offset.
     /// </summary>
     /// <param name="value">The value to be read.</param>
     /// <param name="offset">the offset of the byte to write</param>
@@ -211,7 +220,7 @@ public static class ReadBytesExtensions
     }
 
     /// <summary>
-    /// Read a single byte to the value at the specified byte offset.
+    /// Read a single byte from the value at the specified byte offset.
     /// </summary>
     /// <param name="value">The value to be read.</param>
     /// <param name="offset">the offset of the byte to write</param>
@@ -221,7 +230,7 @@ public static class ReadBytesExtensions
     }
 
     /// <summary>
-    /// Read a single byte to the value at the specified byte offset.
+    /// Read a single byte from the value at the specified byte offset.
     /// </summary>
     /// <param name="value">The value to be read.</param>
     /// <param name="offset">the offset of the byte to write</param>
@@ -231,7 +240,7 @@ public static class ReadBytesExtensions
     }
 
     /// <summary>
-    /// Read a single byte to the value at the specified byte offset.
+    /// Read a single byte from the value at the specified byte offset.
     /// </summary>
     /// <param name="value">The value to be read.</param>
     /// <param name="offset">the offset of the byte to write</param>
@@ -241,7 +250,7 @@ public static class ReadBytesExtensions
     }
 
     /// <summary>
-    /// Read a single byte to the value at the specified byte offset.
+    /// Read a single byte from the value at the specified byte offset.
     /// </summary>
     /// <param name="value">The value to be read.</param>
     /// <param name="offset">the offset of the byte to write</param>
@@ -251,7 +260,7 @@ public static class ReadBytesExtensions
     }
 
     /// <summary>
-    /// Read a single byte to the value at the specified byte offset.
+    /// Read a single byte from the value at the specified byte offset.
     /// </summary>
     /// <param name="value">The value to be read.</param>
     /// <param name="offset">the offset of the byte to write</param>
@@ -261,23 +270,23 @@ public static class ReadBytesExtensions
     }
 
     /// <summary>
-    /// Read a single byte to the value at the specified byte offset.
+    /// Read a single byte from the value at the specified byte offset.
     /// </summary>
     /// <param name="value">The value to be read.</param>
     /// <param name="offset">the offset of the byte to write</param>
     public static byte ReadByte(this byte value, int offset)
     {
-        return value.ReadBits(offset * 8, 8);
+        return value;
     }
 
     /// <summary>
-    /// Read a single byte to the value at the specified byte offset.
+    /// Read a single byte from the value at the specified byte offset.
     /// </summary>
     /// <param name="value">The value to be read.</param>
     /// <param name="offset">the offset of the byte to write</param>
     public static byte ReadByte(this sbyte value, int offset)
     {
-        return (byte)value.ReadBits(offset * 8, 8);
+        return (byte)value;
     }
 
     #endregion

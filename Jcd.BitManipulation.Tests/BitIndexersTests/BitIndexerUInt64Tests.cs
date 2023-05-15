@@ -49,7 +49,7 @@ public class BitIndexerUInt64Tests
         var indexer = new BitIndexerUInt64 { Bits = data };
         ulong bits = indexer;
 
-        Assert.Equal(indexer.ToUInt64(), bits);
+        Assert.Equal((ulong)indexer, bits);
     }
 
     [Theory]

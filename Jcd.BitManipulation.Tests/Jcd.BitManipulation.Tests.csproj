@@ -23,8 +23,4 @@
         <ProjectReference Include="..\Jcd.BitManipulation\Jcd.BitManipulation.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="ByteIndexerTests\" />
-    </ItemGroup>
-
 </Project>

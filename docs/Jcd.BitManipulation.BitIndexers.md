@@ -2,10 +2,6 @@
 
 ## Jcd.BitManipulation.BitIndexers Namespace
 
-| Classes | |
-| :--- | :--- |
-| [BitIndexerExtensions](Jcd.BitManipulation.BitIndexers.BitIndexerExtensions.md 'Jcd.BitManipulation.BitIndexers.BitIndexerExtensions') | Some helper methods for converting to and from a BitIndexer. |
-
 | Structs | |
 | :--- | :--- |
 | [BitIndexerByte](Jcd.BitManipulation.BitIndexers.BitIndexerByte.md 'Jcd.BitManipulation.BitIndexers.BitIndexerByte') | Provides enumeration and indexed access to the bits on a stored byte. |

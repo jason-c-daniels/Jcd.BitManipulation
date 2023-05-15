@@ -2,10 +2,6 @@
 
 ## Jcd.BitManipulation.ByteIndexers Namespace
 
-| Classes | |
-| :--- | :--- |
-| [ByteIndexerExtensions](Jcd.BitManipulation.ByteIndexers.ByteIndexerExtensions.md 'Jcd.BitManipulation.ByteIndexers.ByteIndexerExtensions') | Some helper methods for converting to and from a ByteIndexer. |
-
 | Structs | |
 | :--- | :--- |
 | [ByteIndexerByte](Jcd.BitManipulation.ByteIndexers.ByteIndexerByte.md 'Jcd.BitManipulation.ByteIndexers.ByteIndexerByte') | Provides byte level indexing operations (set, get) on a Byte. Zero is the least significant byte.<br/>This type was provided for completeness sake. It's really not that useful. |

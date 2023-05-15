@@ -160,7 +160,7 @@ internal static class Program
         byte upperByte = 0;
         var fourBytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B };
         var sw = Stopwatch.StartNew();
-        var indexer = 0ul.ToByteIndexer();
+        ByteIndexerUInt64 indexer = 0ul;
         for (long i = 0; i < iterations; i++)
         {
             indexer[1] = 0xFF;

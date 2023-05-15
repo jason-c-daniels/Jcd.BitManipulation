@@ -49,7 +49,7 @@ public class BitIndexerInt64Tests
         var indexer = new BitIndexerInt64 { Bits = data };
         long bits = indexer;
 
-        Assert.Equal(indexer.ToInt64(), bits);
+        Assert.Equal((long)indexer, bits);
     }
 
     [Theory]

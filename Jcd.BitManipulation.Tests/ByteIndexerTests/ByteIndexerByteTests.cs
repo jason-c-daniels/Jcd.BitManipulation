@@ -9,7 +9,7 @@ public class ByteIndexerByteTests
     [Fact]
     public void Constant_ByteSize_Is_One()
     {
-        Assert.Equal(1,ByteIndexerByte.ByteSize);
+        Assert.Equal(sizeof(byte),ByteIndexerByte.ByteSize);
     }
 
     [Fact]
@@ -59,7 +59,7 @@ public class ByteIndexerByteTests
 
     [Theory]
     [InlineData(-1)]
-    [InlineData(1)]
+    [InlineData(ByteIndexerByte.ByteSize)]
     public void Indexer_Get_Throws_Exception_When_Index_Is_Out_Of_Range(int index)
     {
         ByteIndexerByte sut = 0xFF;
@@ -68,7 +68,8 @@ public class ByteIndexerByteTests
     
     [Theory]
     [InlineData(-1)]
-    [InlineData(1)]
+    [InlineData(ByteIndexerByte.ByteSize)]
+
     public void Indexer_Set_Throws_Exception_When_Index_Is_Out_Of_Range(int index)
     {
         ByteIndexerByte sut = 0xFF;
@@ -80,9 +81,9 @@ public class ByteIndexerByteTests
     [InlineData(0xFE,0,0xFE)]
     [InlineData(0x7F,0,0x7F)]
     [InlineData(0b00011000,0,0b00011000)]
-    public void Slice_Returns_Expected_Subset(uint data,int index,uint extractedData)
+    public void Slice_Returns_Expected_Subset(uint data,int index,byte extractedData)
     {
-        var expected = new[]{(byte)extractedData};
+        var expected = new[]{extractedData};
         ByteIndexerByte sut = (byte)data;
         Assert.Equal(expected,sut.Slice(index,1));
     }

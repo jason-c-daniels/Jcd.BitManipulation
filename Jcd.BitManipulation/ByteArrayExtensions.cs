@@ -325,7 +325,6 @@ public static class ByteArrayExtensions
         if (endian == Endian.Little)
         {
             var i = 0;
-            if (i >= len) return result;
             result = result.StoreBits(data[i], i << 3, 8);
             i++;
             if (i >= len) return result;
@@ -334,13 +333,11 @@ public static class ByteArrayExtensions
         else
         {
             var i = 0;
-            var dest = endIndex;
-            if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result = result.StoreBits(data[i], 0, 8);
             i++;
-            dest--;
             if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result = (ushort)(result << 8);
+            result = result.StoreBits(data[i], 0, 8);
         }
         
         return result;    }
@@ -363,7 +360,6 @@ public static class ByteArrayExtensions
         if (endian == Endian.Little)
         {
             var i = 0;
-            if (i >= len) return result;
             result = result.StoreBits(data[i], i << 3, 8);
             i++;
             if (i >= len) return result;
@@ -372,13 +368,11 @@ public static class ByteArrayExtensions
         else
         {
             var i = 0;
-            var dest = endIndex;
-            if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result = result.StoreBits(data[i], 0, 8);
             i++;
-            dest--;
             if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result = (short)(result << 8);
+            result = result.StoreBits(data[i], 0, 8);
         }
         
         return result;
@@ -402,7 +396,6 @@ public static class ByteArrayExtensions
         if (endian == Endian.Little)
         {
             var i = 0;
-            if (i >= len) return result;
             result = result.StoreBits(data[i], i << 3, 8);
             i++;
             if (i >= len) return result;
@@ -417,21 +410,19 @@ public static class ByteArrayExtensions
         else
         {
             var i = 0;
-            var dest = endIndex;
-            if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result = result.StoreBits(data[i], 0, 8);
             i++;
-            dest--;
             if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result = (result << 8);
+            result = result.StoreBits(data[i], 0, 8);
             i++;
-            dest--;
             if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result = (result << 8);
+            result = result.StoreBits(data[i], 0, 8);
             i++;
-            dest--;
             if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result = (result << 8);
+            result = result.StoreBits(data[i], 0, 8);
         }
         
         return result;
@@ -455,7 +446,6 @@ public static class ByteArrayExtensions
         if (endian == Endian.Little)
         {
             var i = 0;
-            if (i >= len) return result;
             result = result.StoreBits(data[i], i << 3, 8);
             i++;
             if (i >= len) return result;
@@ -470,21 +460,19 @@ public static class ByteArrayExtensions
         else
         {
             var i = 0;
-            var dest = endIndex;
-            if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result = result.StoreBits(data[i], 0, 8);
             i++;
-            dest--;
             if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result = (result << 8);
+            result = result.StoreBits(data[i], 0, 8);
             i++;
-            dest--;
             if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result = (result << 8);
+            result = result.StoreBits(data[i], 0, 8);
             i++;
-            dest--;
             if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result = (result << 8);
+            result = result.StoreBits(data[i], 0, 8);
         }
         
         return result;

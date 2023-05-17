@@ -22,7 +22,7 @@ public static class ByteArrayExtensions
     /// <returns>an array containing the byte.</returns>
     public static byte[] ToByteArray(this byte data)
     {
-        return new[] {data};
+        return new[] { data };
     }
 
     /// <summary>
@@ -32,7 +32,7 @@ public static class ByteArrayExtensions
     /// <returns>an array containing the byte.</returns>
     public static byte[] ToByteArray(this sbyte data)
     {
-        return new[] {(byte)data};
+        return new[] { (byte)data };
     }
 
     /// <summary>
@@ -156,7 +156,10 @@ public static class ByteArrayExtensions
         for (var i = 0; i < data.Length && i < result.Length; i++)
         {
             if (endian == Endian.Big)
-                result[result.Length - i - 1] = data[i];
+            {
+                result <<= 8;
+                result[0] = data[i];
+            }
             else
                 result[i] = data[i];
         }
@@ -179,7 +182,10 @@ public static class ByteArrayExtensions
         for (var i = 0; i < data.Length && i < result.Length; i++)
         {
             if (endian == Endian.Big)
-                result[result.Length - i - 1] = data[i];
+            {
+                result <<= 8;
+                result[0] = data[i];
+            }
             else
                 result[i] = data[i];
         }
@@ -202,7 +208,10 @@ public static class ByteArrayExtensions
         for (var i = 0; i < data.Length && i < result.Length; i++)
         {
             if (endian == Endian.Big)
-                result[result.Length - i - 1] = data[i];
+            {
+                result <<= 8;
+                result[0] = data[i];
+            }
             else
                 result[i] = data[i];
         }
@@ -225,7 +234,10 @@ public static class ByteArrayExtensions
         for (var i = 0; i < data.Length && i < result.Length; i++)
         {
             if (endian == Endian.Big)
-                result[result.Length - i - 1] = data[i];
+            {
+                result <<= 8;
+                result[0] = data[i];
+            }
             else
                 result[i] = data[i];
         }
@@ -248,7 +260,10 @@ public static class ByteArrayExtensions
         for (var i = 0; i < data.Length && i < result.Length; i++)
         {
             if (endian == Endian.Big)
-                result[result.Length - i - 1] = data[i];
+            {
+                result <<= 8;
+                result[0] = data[i];
+            }
             else
                 result[i] = data[i];
         }
@@ -271,7 +286,10 @@ public static class ByteArrayExtensions
         for (var i = 0; i < data.Length && i < result.Length; i++)
         {
             if (endian == Endian.Big)
-                result[result.Length - i - 1] = data[i];
+            {
+                result <<= 8;
+                result[0] = data[i];
+            }
             else
                 result[i] = data[i];
         }
@@ -290,7 +308,7 @@ public static class ByteArrayExtensions
     public static byte ToByte(this byte[] data, Endian endian = Endian.Little)
     {
         if (data == null || data.Length == 0) return 0;
-        return endian == Endian.Little ? data[0] : data[data.Length-1];
+        return endian == Endian.Little ? data[0] : data[data.Length - 1];
     }
 
     /// <summary>
@@ -304,7 +322,7 @@ public static class ByteArrayExtensions
     public static sbyte ToSByte(this byte[] data, Endian endian = Endian.Little)
     {
         if (data == null || data.Length == 0) return 0;
-        return endian == Endian.Little ? (sbyte)data[0] : (sbyte)data[data.Length-1];
+        return endian == Endian.Little ? (sbyte)data[0] : (sbyte)data[data.Length - 1];
     }
 
     /// <summary>
@@ -319,8 +337,6 @@ public static class ByteArrayExtensions
     {
         if (data == null || data.Length == 0) return 0;
         ushort result = 0;
-        const int resultLength = sizeof(ushort);
-        const int endIndex = resultLength - 1;
         var len = data.Length;
         if (endian == Endian.Little)
         {
@@ -339,8 +355,9 @@ public static class ByteArrayExtensions
             result = (ushort)(result << 8);
             result = result.StoreBits(data[i], 0, 8);
         }
-        
-        return result;    }
+
+        return result;
+    }
 
     /// <summary>
     /// Converts bytes into a short, discarding any excess data.
@@ -354,8 +371,6 @@ public static class ByteArrayExtensions
     {
         if (data == null || data.Length == 0) return 0;
         short result = 0;
-        const int resultLength = sizeof(short);
-        const int endIndex = resultLength - 1;
         var len = data.Length;
         if (endian == Endian.Little)
         {
@@ -374,7 +389,7 @@ public static class ByteArrayExtensions
             result = (short)(result << 8);
             result = result.StoreBits(data[i], 0, 8);
         }
-        
+
         return result;
     }
 
@@ -390,8 +405,6 @@ public static class ByteArrayExtensions
     {
         if (data == null || data.Length == 0) return 0;
         uint result = 0;
-        const int resultLength = sizeof(uint);
-        const int endIndex = resultLength - 1;
         var len = data.Length;
         if (endian == Endian.Little)
         {
@@ -413,18 +426,18 @@ public static class ByteArrayExtensions
             result = result.StoreBits(data[i], 0, 8);
             i++;
             if (i >= len) return result;
-            result = (result << 8);
+            result <<= 8;
             result = result.StoreBits(data[i], 0, 8);
             i++;
             if (i >= len) return result;
-            result = (result << 8);
+            result <<= 8;
             result = result.StoreBits(data[i], 0, 8);
             i++;
             if (i >= len) return result;
-            result = (result << 8);
+            result <<= 8;
             result = result.StoreBits(data[i], 0, 8);
         }
-        
+
         return result;
     }
 
@@ -440,8 +453,6 @@ public static class ByteArrayExtensions
     {
         if (data == null || data.Length == 0) return 0;
         var result = 0;
-        const int resultLength = sizeof(int);
-        const int endIndex = resultLength - 1;
         var len = data.Length;
         if (endian == Endian.Little)
         {
@@ -463,18 +474,18 @@ public static class ByteArrayExtensions
             result = result.StoreBits(data[i], 0, 8);
             i++;
             if (i >= len) return result;
-            result = (result << 8);
+            result <<= 8;
             result = result.StoreBits(data[i], 0, 8);
             i++;
             if (i >= len) return result;
-            result = (result << 8);
+            result <<= 8;
             result = result.StoreBits(data[i], 0, 8);
             i++;
             if (i >= len) return result;
-            result = (result << 8);
+            result <<= 8;
             result = result.StoreBits(data[i], 0, 8);
         }
-        
+
         return result;
     }
 
@@ -490,13 +501,10 @@ public static class ByteArrayExtensions
     {
         if (data == null || data.Length == 0) return 0;
         ulong result = 0;
-        const int resultLength = sizeof(ulong);
-        const int endIndex = resultLength - 1;
         var len = data.Length;
         if (endian == Endian.Little)
         {
             var i = 0;
-            if (i >= len) return result;
             result = result.StoreBits(data[i], i << 3, 8);
             i++;
             if (i >= len) return result;
@@ -523,39 +531,37 @@ public static class ByteArrayExtensions
         else
         {
             var i = 0;
-            var dest = endIndex;
-            if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result = result.StoreBits(data[i], 0, 8);
             i++;
-            dest--;
             if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result <<= 8;
+            result = result.StoreBits(data[i], 0, 8);
             i++;
-            dest--;
             if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result <<= 8;
+            result = result.StoreBits(data[i], 0, 8);
             i++;
-            dest--;
             if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result <<= 8;
+            result = result.StoreBits(data[i], 0, 8);
             i++;
-            dest--;
             if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result <<= 8;
+            result = result.StoreBits(data[i], 0, 8);
             i++;
-            dest--;
             if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result <<= 8;
+            result = result.StoreBits(data[i], 0, 8);
             i++;
-            dest--;
             if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result <<= 8;
+            result = result.StoreBits(data[i], 0, 8);
             i++;
-            dest--;
             if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result <<= 8;
+            result = result.StoreBits(data[i], 0, 8);
         }
-        
+
         return result;
     }
 
@@ -571,13 +577,10 @@ public static class ByteArrayExtensions
     {
         if (data == null || data.Length == 0) return 0;
         long result = 0;
-        const int resultLength = sizeof(long);
-        const int endIndex = resultLength - 1;
         var len = data.Length;
         if (endian == Endian.Little)
         {
             var i = 0;
-            if (i >= len) return result;
             result = result.StoreBits(data[i], i << 3, 8);
             i++;
             if (i >= len) return result;
@@ -604,39 +607,37 @@ public static class ByteArrayExtensions
         else
         {
             var i = 0;
-            var dest = endIndex;
-            if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result = result.StoreBits(data[i], 0, 8);
             i++;
-            dest--;
             if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result <<= 8;
+            result = result.StoreBits(data[i], 0, 8);
             i++;
-            dest--;
             if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result <<= 8;
+            result = result.StoreBits(data[i], 0, 8);
             i++;
-            dest--;
             if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result <<= 8;
+            result = result.StoreBits(data[i], 0, 8);
             i++;
-            dest--;
             if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result <<= 8;
+            result = result.StoreBits(data[i], 0, 8);
             i++;
-            dest--;
             if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result <<= 8;
+            result = result.StoreBits(data[i], 0, 8);
             i++;
-            dest--;
             if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result <<= 8;
+            result = result.StoreBits(data[i], 0, 8);
             i++;
-            dest--;
             if (i >= len) return result;
-            result = result.StoreBits(data[i], dest << 3, 8);
+            result <<= 8;
+            result = result.StoreBits(data[i], 0, 8);
         }
-        
+
         return result;
     }
 }

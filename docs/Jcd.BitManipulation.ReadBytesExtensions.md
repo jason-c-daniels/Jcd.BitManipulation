@@ -14,10 +14,10 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 
 | Methods | |
 | :--- | :--- |
-| [ReadByte(this byte, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadByte(thisbyte,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadByte(this byte, int)') | Read a single byte from the value at the specified byte offset. |
+| [ReadByte(this byte)](Jcd.BitManipulation.ReadBytesExtensions.ReadByte(thisbyte).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadByte(this byte)') | Read a single byte from the value at the specified byte offset. |
 | [ReadByte(this int, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadByte(thisint,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadByte(this int, int)') | Read a single byte from the value at the specified byte offset. |
 | [ReadByte(this long, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadByte(thislong,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadByte(this long, int)') | Read a single byte from the value at the specified byte offset. |
-| [ReadByte(this sbyte, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadByte(thissbyte,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadByte(this sbyte, int)') | Read a single byte from the value at the specified byte offset. |
+| [ReadByte(this sbyte)](Jcd.BitManipulation.ReadBytesExtensions.ReadByte(thissbyte).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadByte(this sbyte)') | Read a single byte from the value at the specified byte offset. |
 | [ReadByte(this short, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadByte(thisshort,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadByte(this short, int)') | Read a single byte from the value at the specified byte offset. |
 | [ReadByte(this uint, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadByte(thisuint,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadByte(this uint, int)') | Read a single byte from the value at the specified byte offset. |
 | [ReadByte(this ulong, int)](Jcd.BitManipulation.ReadBytesExtensions.ReadByte(thisulong,int).md 'Jcd.BitManipulation.ReadBytesExtensions.ReadByte(this ulong, int)') | Read a single byte from the value at the specified byte offset. |

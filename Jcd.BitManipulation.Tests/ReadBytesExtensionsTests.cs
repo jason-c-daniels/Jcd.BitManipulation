@@ -76,20 +76,20 @@ public class ReadBytesExtensionsTests
     }
  
     [Theory]
-    [InlineData(0xF8,0,0xF8)]
-    [InlineData(0xF9,0,0xF9)]
-    public void ReadByte_On_Byte_Returns_Expected_Value(byte data, int offset, byte expected)
+    [InlineData(0xF8,0xF8)]
+    [InlineData(0xF9,0xF9)]
+    public void ReadByte_On_Byte_Returns_Expected_Value(byte data, byte expected)
     {
-        Assert.Equal(expected,data.ReadByte(offset));
+        Assert.Equal(expected,data.ReadByte());
     }
     
     [Theory]
-    [InlineData(0xF8,0,0xF8)]
-    [InlineData(0xF9,0,0xF9)]
-    public void ReadByte_On_SByte_Returns_Expected_Value(byte data, int offset, byte expected)
+    [InlineData(0xF8,0xF8)]
+    [InlineData(0xF9,0xF9)]
+    public void ReadByte_On_SByte_Returns_Expected_Value(byte data, byte expected)
     {
         var ldata = (sbyte)data;
-        Assert.Equal(expected,ldata.ReadByte(offset));
+        Assert.Equal(expected,ldata.ReadByte());
     }
 
     #endregion
@@ -199,7 +199,7 @@ public class ReadBytesExtensionsTests
         var expected = new List<byte>();
         for (var i = 0; i < size; i++)
         {
-            expected.Add(data.ReadByte(i+offset));
+            expected.Add(data.ReadByte());
         }
         Assert.Equal(expected.ToArray(),data.ReadBytes(offset,size));
     }

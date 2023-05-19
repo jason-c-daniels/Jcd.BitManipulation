@@ -388,7 +388,7 @@ public class StoreBytesExtensionsTests
         for (var i = 0; i < size && i + offset < sizeof(sbyte); i++)
             rawExpected = rawExpected.StoreByte(bytes[i], offset + i);
         ByteIndexerSByte expected = rawExpected;
-        var actual = data.StoreBytes(bytes, offset, size);
+        var actual = data.StoreBytes(bytes, offset);
         Assert.Equal(expected, actual);
     }
 

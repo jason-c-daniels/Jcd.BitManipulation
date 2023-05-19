@@ -75,6 +75,7 @@ internal static class Program
         var sysInfo = SystemInfo.Instance;
 
         var cpu = sysInfo.CPU;
+        Console.WriteLine($"Run Date and Time: {DateTime.Now:yyyy'-'MM'-'dd'T'HH':'mm':'ss}");
         Console.WriteLine("CPU Info:");
         Console.WriteLine($"  Name: {cpu.Name}");
         Console.WriteLine($"  Maximum CPU Frequency: {sysInfo.MaximumCPUFrequency:n2}");
@@ -477,7 +478,7 @@ internal static class Program
         return new RunStats(duration, durationPer, totalCpuCycles, cpuCyclesPer, freq, operationCount / iterations);
     }
 
-    private static void ReadMeExample()
+    private static void ReadMe_BitManipulation_Example()
     {
         ushort data = 0b0000000000000000;
         // turn on all the bits

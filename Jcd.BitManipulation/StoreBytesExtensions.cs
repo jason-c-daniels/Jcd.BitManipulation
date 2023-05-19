@@ -13,7 +13,7 @@ namespace Jcd.BitManipulation;
 
 /// <summary>
 /// Extension methods that aid in storing values into byte offsets within another integer data type.
-/// Byte indexing is LSB, least significant byte at index/offset zero.
+/// Byte indexing is LSB, least significant byte, at index/offset zero.
 /// </summary>
 public static class StoreBytesExtensions
 {
@@ -21,7 +21,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Stores a set of bytes starting at the specified byte location within the value.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="value">The value to be modified.</param>
     /// <param name="bytes">The value to be stored at the byte location.</param>
@@ -29,12 +29,12 @@ public static class StoreBytesExtensions
     /// <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
     public static sbyte StoreBytes(this sbyte value, ReadOnlySpan<byte> bytes, int offset, int size = -1)
     {
-        return ((ByteIndexerSByte)value).StoreBytes(bytes, offset, size);
+        return ((ByteIndexerSByte)value).StoreBytes(bytes, offset);
     }
 
     /// <summary>
     /// Stores a set of bytes starting at the specified byte location within the value.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="value">The value to be modified.</param>
     /// <param name="bytes">The value to be stored at the byte location.</param>
@@ -47,7 +47,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Stores a set of bytes starting at the specified byte location within the value.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="value">The value to be modified.</param>
     /// <param name="bytes">The value to be stored at the byte location.</param>
@@ -60,7 +60,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Stores a set of bytes starting at the specified byte location within the value.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="value">The value to be modified.</param>
     /// <param name="bytes">The value to be stored at the byte location.</param>
@@ -73,7 +73,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Stores a set of bytes starting at the specified byte location within the value.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="value">The value to be modified.</param>
     /// <param name="bytes">The value to be stored at the byte location.</param>
@@ -86,7 +86,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Stores a set of bytes starting at the specified byte location within the value.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="value">The value to be modified.</param>
     /// <param name="bytes">The value to be stored at the byte location.</param>
@@ -99,7 +99,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Stores a set of bytes starting at the specified byte location within the value.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="value">The value to be modified.</param>
     /// <param name="bytes">The value to be stored at the byte location.</param>
@@ -112,7 +112,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Stores a set of bytes starting at the specified byte location within the value.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="value">The value to be modified.</param>
     /// <param name="bytes">The value to be stored at the byte location.</param>
@@ -129,14 +129,12 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Stores a set of bytes starting at the specified byte location within the indexer.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="indexer">The indexer whose value is to be modified.</param>
     /// <param name="bytes">The value to be stored at the byte location.</param>
     /// <param name="offset">The byte location to store the value.</param>
-    /// <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
-    public static ByteIndexerSByte StoreBytes(this ByteIndexerSByte indexer, ReadOnlySpan<byte> bytes, int offset,
-                                              int size)
+    public static ByteIndexerSByte StoreBytes(this ByteIndexerSByte indexer, ReadOnlySpan<byte> bytes, int offset)
     {
         if (offset > 0) return indexer;
         indexer[offset]=bytes[0];
@@ -146,7 +144,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Stores a set of bytes starting at the specified byte location within the indexer.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="indexer">The indexer whose value is to be modified.</param>
     /// <param name="bytes">The value to be stored at the byte location.</param>
@@ -163,7 +161,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Stores a set of bytes starting at the specified byte location within the indexer.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="indexer">The indexer whose value is to be modified.</param>
     /// <param name="bytes">The value to be stored at the byte location.</param>
@@ -187,7 +185,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Stores a set of bytes starting at the specified byte location within the indexer.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="indexer">The indexer whose value is to be modified.</param>
     /// <param name="bytes">The value to be stored at the byte location.</param>
@@ -212,7 +210,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Stores a set of bytes starting at the specified byte location within the indexer.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="indexer">The indexer whose value is to be modified.</param>
     /// <param name="bytes">The value to be stored at the byte location.</param>
@@ -237,7 +235,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Stores a set of bytes starting at the specified byte location within the indexer.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="indexer">The indexer whose value is to be modified.</param>
     /// <param name="bytes">The value to be stored at the byte location.</param>
@@ -262,7 +260,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Stores a set of bytes starting at the specified byte location within the indexer.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="indexer">The indexer whose value is to be modified.</param>
     /// <param name="bytes">The value to be stored at the byte location.</param>
@@ -287,7 +285,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Stores a set of bytes starting at the specified byte location within the indexer.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="indexer">The indexer whose value is to be modified.</param>
     /// <param name="bytes">The value to be stored at the byte location.</param>
@@ -316,7 +314,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Store a single byte to the value at the specified byte offset.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="value">The value to be modified.</param>
     /// <param name="byte">The byte value to set</param>
@@ -328,7 +326,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Store a single byte to the value at the specified byte offset.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="value">The value to be modified.</param>
     /// <param name="byte">The byte value to set</param>
@@ -340,7 +338,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Store a single byte to the value at the specified byte offset.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="value">The value to be modified.</param>
     /// <param name="byte">The byte value to set</param>
@@ -352,7 +350,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Store a single byte to the value at the specified byte offset.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="value">The value to be modified.</param>
     /// <param name="byte">The byte value to set</param>
@@ -364,7 +362,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Store a single byte to the value at the specified byte offset.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="value">The value to be modified.</param>
     /// <param name="byte">The byte value to set</param>
@@ -376,7 +374,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Store a single byte to the value at the specified byte offset.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="value">The value to be modified.</param>
     /// <param name="byte">The byte value to set</param>
@@ -388,7 +386,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Store a single byte to the value at the specified byte offset.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="value">The value to be modified.</param>
     /// <param name="byte">The byte value to set</param>
@@ -400,7 +398,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Store a single byte to the value at the specified byte offset.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="value">The value to be modified.</param>
     /// <param name="byte">The byte value to set</param>
@@ -412,7 +410,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Store a single byte to the value at the specified byte offset.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="value">The value to be modified.</param>
     /// <param name="byte">The byte value to set</param>
@@ -425,7 +423,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Store a single byte to the value at the specified byte offset.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="value">The value to be modified.</param>
     /// <param name="byte">The byte value to set</param>
@@ -438,7 +436,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Store a single byte to the value at the specified byte offset.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="value">The value to be modified.</param>
     /// <param name="byte">The byte value to set</param>
@@ -452,7 +450,7 @@ public static class StoreBytesExtensions
     /// <summary>
     /// Store a single byte to the value at the specified byte offset.
     /// </summary>
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// <param name="value">The value to be modified.</param>
     /// <param name="byte">The byte value to set</param>
     /// <param name="offset">the offset of the byte to write</param>
@@ -464,7 +462,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Store a single byte to the value at the specified byte offset.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="value">The value to be modified.</param>
     /// <param name="byte">The byte value to set</param>
@@ -477,7 +475,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Store a single byte to the value at the specified byte offset.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="value">The value to be modified.</param>
     /// <param name="byte">The byte value to set</param>
@@ -490,7 +488,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Store a single byte to the value at the specified byte offset.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="value">The value to be modified.</param>
     /// <param name="byte">The byte value to set</param>
@@ -503,7 +501,7 @@ public static class StoreBytesExtensions
 
     /// <summary>
     /// Store a single byte to the value at the specified byte offset.
-    /// Byte indexing is LSB, least significant byte at index/offset zero.
+    /// Byte indexing is LSB, least significant byte, at index/offset zero.
     /// </summary>
     /// <param name="value">The value to be modified.</param>
     /// <param name="byte">The byte value to set</param>

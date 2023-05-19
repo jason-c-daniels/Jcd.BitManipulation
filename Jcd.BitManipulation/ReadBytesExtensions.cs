@@ -273,8 +273,7 @@ public static class ReadBytesExtensions
     /// Read a single byte from the value at the specified byte offset.
     /// </summary>
     /// <param name="value">The value to be read.</param>
-    /// <param name="offset">the offset of the byte to write</param>
-    public static byte ReadByte(this byte value, int offset)
+    public static byte ReadByte(this byte value)
     {
         return value;
     }
@@ -283,8 +282,7 @@ public static class ReadBytesExtensions
     /// Read a single byte from the value at the specified byte offset.
     /// </summary>
     /// <param name="value">The value to be read.</param>
-    /// <param name="offset">the offset of the byte to write</param>
-    public static byte ReadByte(this sbyte value, int offset)
+    public static byte ReadByte(this sbyte value)
     {
         return (byte)value;
     }

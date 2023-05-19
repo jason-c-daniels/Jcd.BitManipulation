@@ -2287,19 +2287,17 @@
             <param name="value">The value to be read.</param>
             <param name="offset">the offset of the byte to write</param>
         </member>
-        <member name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadByte(System.Byte,System.Int32)">
+        <member name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadByte(System.Byte)">
             <summary>
             Read a single byte from the value at the specified byte offset.
             </summary>
             <param name="value">The value to be read.</param>
-            <param name="offset">the offset of the byte to write</param>
         </member>
-        <member name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadByte(System.SByte,System.Int32)">
+        <member name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadByte(System.SByte)">
             <summary>
             Read a single byte from the value at the specified byte offset.
             </summary>
             <param name="value">The value to be read.</param>
-            <param name="offset">the offset of the byte to write</param>
         </member>
         <member name="T:Jcd.BitManipulation.SetBitsExtensions">
             <summary>
@@ -2789,7 +2787,7 @@
             <param name="offset">The byte location to store the value.</param>
             <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
         </member>
-        <member name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.ByteIndexers.ByteIndexerSByte,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
+        <member name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.ByteIndexers.ByteIndexerSByte,System.ReadOnlySpan{System.Byte},System.Int32)">
             <summary>
             Stores a set of bytes starting at the specified byte location within the indexer.
             Byte indexing is LSB, least significant byte at index/offset zero.
@@ -2797,7 +2795,6 @@
             <param name="indexer">The indexer whose value is to be modified.</param>
             <param name="bytes">The value to be stored at the byte location.</param>
             <param name="offset">The byte location to store the value.</param>
-            <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
         </member>
         <member name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.ByteIndexers.ByteIndexerByte,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
             <summary>

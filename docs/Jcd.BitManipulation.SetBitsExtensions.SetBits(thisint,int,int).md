@@ -29,4 +29,5 @@ The bit location to store the value.
 The number of bits to set on.
 
 #### Returns
-[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')  
+The modified value.

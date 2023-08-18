@@ -4,7 +4,7 @@
 ## StoreBytesExtensions.StoreByte(this ByteIndexerSByte, byte, int) Method
 
 Store a single byte to the value at the specified byte offset.  
-Byte indexing is LSB, least significant byte at index/offset zero.
+Byte indexing is LSB, least significant byte, at index/offset zero.
 
 ```csharp
 public static Jcd.BitManipulation.ByteIndexers.ByteIndexerSByte StoreByte(this Jcd.BitManipulation.ByteIndexers.ByteIndexerSByte value, byte @byte, int offset);
@@ -30,4 +30,5 @@ The byte value to set
 the offset of the byte to write
 
 #### Returns
-[ByteIndexerSByte](Jcd.BitManipulation.ByteIndexers.ByteIndexerSByte.md 'Jcd.BitManipulation.ByteIndexers.ByteIndexerSByte')
+[ByteIndexerSByte](Jcd.BitManipulation.ByteIndexers.ByteIndexerSByte.md 'Jcd.BitManipulation.ByteIndexers.ByteIndexerSByte')  
+The modified value.

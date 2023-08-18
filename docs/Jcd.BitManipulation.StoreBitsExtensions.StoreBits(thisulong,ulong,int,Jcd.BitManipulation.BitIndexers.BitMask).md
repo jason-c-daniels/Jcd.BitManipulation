@@ -36,4 +36,5 @@ the destination offset of where to store the bits
 the mask of which bits to store
 
 #### Returns
-[System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
+[System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')  
+The modified value.

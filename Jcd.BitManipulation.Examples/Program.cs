@@ -75,7 +75,7 @@ internal static class Program
         var sysInfo = SystemInfo.Instance;
 
         var cpu = sysInfo.CPU;
-        Console.WriteLine($"Run Date and Time: {DateTime.Now:yyyy'-'MM'-'dd'T'HH':'mm':'ss}");
+        Console.WriteLine($"Run Date and Time: {DateTime.UtcNow:yyyy'-'MM'-'dd' 'HH':'mm':'ss} UTC");
         Console.WriteLine("CPU Info:");
         Console.WriteLine($"  Name: {cpu.Name}");
         Console.WriteLine($"  Maximum CPU Frequency: {sysInfo.MaximumCPUFrequency:n2}");
@@ -87,11 +87,11 @@ internal static class Program
         Console.WriteLine($"  Number of Logical Processors : {cpu.NumberOfLogicalProcessors}");
 
         Console.WriteLine(
-            $"  L2 Cache Size: {cpu.L2CacheSize.As(StorageUnits.Kilobyte).To(StorageUnits.Mebibyte):n2}"
+            $"  L2 Cache Size: {cpu.L2CacheSize.As(StorageUnits.Byte).To(StorageUnits.Mebibyte):n2}"
         );
 
         Console.WriteLine(
-            $"  L3 Cache Size: {cpu.L3CacheSize.As(StorageUnits.Kilobyte).To(StorageUnits.Mebibyte):n2}"
+            $"  L3 Cache Size: {cpu.L3CacheSize.As(StorageUnits.Byte).To(StorageUnits.Mebibyte):n2}"
         );
 
         Console.WriteLine($"  Virtualization Firmware Enabled: {cpu.VirtualizationFirmwareEnabled}");

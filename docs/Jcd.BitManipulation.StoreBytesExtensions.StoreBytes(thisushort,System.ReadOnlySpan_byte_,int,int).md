@@ -4,7 +4,7 @@
 ## StoreBytesExtensions.StoreBytes(this ushort, ReadOnlySpan<byte>, int, int) Method
 
 Stores a set of bytes starting at the specified byte location within the value.  
-Byte indexing is LSB, least significant byte at index/offset zero.
+Byte indexing is LSB, least significant byte, at index/offset zero.
 
 ```csharp
 public static ushort StoreBytes(this ushort value, System.ReadOnlySpan<byte> bytes, int offset, int size=-1);
@@ -36,4 +36,5 @@ The byte location to store the value.
 The number of bytes from the source, to store. -1 means all bytes.
 
 #### Returns
-[System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
+[System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')  
+The modified value.

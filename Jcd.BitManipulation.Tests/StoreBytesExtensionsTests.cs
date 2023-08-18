@@ -267,7 +267,7 @@ public class StoreBytesExtensionsTests
         var expected = data;
         for (var i = 0; i < size && i + offset < sizeof(byte); i++)
             expected = expected.StoreByte(bytes[i], offset + i);
-        var actual = data.StoreBytes(bytes, offset, size);
+        var actual = data.StoreBytes(bytes, offset);
         Assert.Equal(expected, actual);
     }
 
@@ -278,7 +278,7 @@ public class StoreBytesExtensionsTests
         var expected = data;
         for (var i = 0; i < size && i + offset < sizeof(sbyte); i++)
             expected = expected.StoreByte(bytes[i], offset + i);
-        var actual = data.StoreBytes(bytes, offset, size);
+        var actual = data.StoreBytes(bytes, offset);
         Assert.Equal(expected, actual);
     }
 
@@ -375,7 +375,7 @@ public class StoreBytesExtensionsTests
         for (var i = 0; i < size && i + offset < sizeof(byte); i++)
             rawExpected = rawExpected.StoreByte(bytes[i], offset + i);
         ByteIndexerByte expected = rawExpected;
-        var actual = data.StoreBytes(bytes, offset, size);
+        var actual = data.StoreBytes(bytes, offset);
         Assert.Equal(expected, actual);
     }
 

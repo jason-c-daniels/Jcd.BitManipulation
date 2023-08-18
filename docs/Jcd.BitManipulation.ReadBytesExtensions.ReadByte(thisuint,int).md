@@ -23,4 +23,5 @@ The value to be read.
 the offset of the byte to write
 
 #### Returns
-[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
+[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')  
+The specified byte.

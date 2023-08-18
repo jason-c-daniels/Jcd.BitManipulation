@@ -4,7 +4,7 @@
 ## StoreBytesExtensions.StoreBytes(this ByteIndexerSByte, ReadOnlySpan<byte>, int) Method
 
 Stores a set of bytes starting at the specified byte location within the indexer.  
-Byte indexing is LSB, least significant byte at index/offset zero.
+Byte indexing is LSB, least significant byte, at index/offset zero.
 
 ```csharp
 public static Jcd.BitManipulation.ByteIndexers.ByteIndexerSByte StoreBytes(this Jcd.BitManipulation.ByteIndexers.ByteIndexerSByte indexer, System.ReadOnlySpan<byte> bytes, int offset);
@@ -30,4 +30,5 @@ The value to be stored at the byte location.
 The byte location to store the value.
 
 #### Returns
-[ByteIndexerSByte](Jcd.BitManipulation.ByteIndexers.ByteIndexerSByte.md 'Jcd.BitManipulation.ByteIndexers.ByteIndexerSByte')
+[ByteIndexerSByte](Jcd.BitManipulation.ByteIndexers.ByteIndexerSByte.md 'Jcd.BitManipulation.ByteIndexers.ByteIndexerSByte')  
+The modified value.

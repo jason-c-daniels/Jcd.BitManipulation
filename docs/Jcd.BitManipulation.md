@@ -47,7 +47,7 @@ upperByte = ((byte)data.ReadBits(8, 8)) // extract the upper byte (0b00001111)
 | [ReadBytesExtensions](Jcd.BitManipulation.ReadBytesExtensions.md 'Jcd.BitManipulation.ReadBytesExtensions') | Extension methods that aid in storing values into byte offsets within another integer data type.<br/>The offsets are Least Significant Byte. Index 0 is the 8 least significant bits....etc. |
 | [SetBitsExtensions](Jcd.BitManipulation.SetBitsExtensions.md 'Jcd.BitManipulation.SetBitsExtensions') | Extension methods that aid in turning bits on in an integer data type. |
 | [StoreBitsExtensions](Jcd.BitManipulation.StoreBitsExtensions.md 'Jcd.BitManipulation.StoreBitsExtensions') | Extension methods that aid in storing values into bit offsets within an integer data type. |
-| [StoreBytesExtensions](Jcd.BitManipulation.StoreBytesExtensions.md 'Jcd.BitManipulation.StoreBytesExtensions') | Extension methods that aid in storing values into byte offsets within another integer data type.<br/>Byte indexing is LSB, least significant byte at index/offset zero. |
+| [StoreBytesExtensions](Jcd.BitManipulation.StoreBytesExtensions.md 'Jcd.BitManipulation.StoreBytesExtensions') | Extension methods that aid in storing values into byte offsets within another integer data type.<br/>Byte indexing is LSB, least significant byte, at index/offset zero. |
 | [ToggleBitsExtensions](Jcd.BitManipulation.ToggleBitsExtensions.md 'Jcd.BitManipulation.ToggleBitsExtensions') | Extension methods to aid in toggling bits. |
 
 | Enums | |

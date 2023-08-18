@@ -29,4 +29,5 @@ The byte value to set
 the offset of the byte to write
 
 #### Returns
-[ByteIndexerInt32](Jcd.BitManipulation.ByteIndexers.ByteIndexerInt32.md 'Jcd.BitManipulation.ByteIndexers.ByteIndexerInt32')
+[ByteIndexerInt32](Jcd.BitManipulation.ByteIndexers.ByteIndexerInt32.md 'Jcd.BitManipulation.ByteIndexers.ByteIndexerInt32')  
+The modified value.

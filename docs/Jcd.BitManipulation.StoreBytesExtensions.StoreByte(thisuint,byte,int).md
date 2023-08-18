@@ -4,7 +4,7 @@
 ## StoreBytesExtensions.StoreByte(this uint, byte, int) Method
 
 Store a single byte to the value at the specified byte offset.  
-Byte indexing is LSB, least significant byte at index/offset zero.
+Byte indexing is LSB, least significant byte, at index/offset zero.
 
 ```csharp
 public static uint StoreByte(this uint value, byte @byte, int offset);
@@ -30,4 +30,5 @@ The byte value to set
 the offset of the byte to write
 
 #### Returns
-[System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
+[System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')  
+The modified value.

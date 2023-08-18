@@ -62,7 +62,7 @@ public class ByteIndexerSByteTests
     [InlineData(ByteIndexerSByte.ByteSize)]
     public void Indexer_Get_Throws_Exception_When_Index_Is_Out_Of_Range(int index)
     {
-        ByteIndexerSByte sut = (sbyte)0x7F;
+        ByteIndexerSByte sut = 0x7F;
         Assert.Throws<ArgumentOutOfRangeException>(()=>sut[index]);
     }
     

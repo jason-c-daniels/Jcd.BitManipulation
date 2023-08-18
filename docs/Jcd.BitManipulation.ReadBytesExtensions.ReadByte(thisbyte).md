@@ -17,4 +17,5 @@ public static byte ReadByte(this byte value);
 The value to be read.
 
 #### Returns
-[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
+[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')  
+The specified byte.

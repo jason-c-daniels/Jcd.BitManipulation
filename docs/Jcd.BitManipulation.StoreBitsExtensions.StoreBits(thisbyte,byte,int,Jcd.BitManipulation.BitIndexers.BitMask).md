@@ -36,4 +36,5 @@ the destination offset of where to store the bits
 the mask of which bits to store
 
 #### Returns
-[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
+[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')  
+The modified value.

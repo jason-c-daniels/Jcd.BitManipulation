@@ -186,10 +186,7 @@ internal static class Program
         byte upperByte = 0;
         var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
         var sw = Stopwatch.StartNew();
-        for (long i = 0; i < iterations; i++)
-        {
-            data = i.StoreBytes(bytes, 0);
-        }
+        for (long i = 0; i < iterations; i++) data = i.StoreBytes(bytes, 0);
 
         sw.Stop();
 
@@ -209,10 +206,7 @@ internal static class Program
         byte upperByte = 0;
         var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
         var sw = Stopwatch.StartNew();
-        for (long i = 0; i < iterations; i++)
-        {
-            data = i.StoreBytes(bytes, 0, 4);
-        }
+        for (long i = 0; i < iterations; i++) data = i.StoreBytes(bytes, 0, 4);
 
         sw.Stop();
 
@@ -232,10 +226,7 @@ internal static class Program
         byte upperByte = 0;
         var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
         var sw = Stopwatch.StartNew();
-        for (long i = 0; i < iterations; i++)
-        {
-            data = i.StoreBytes(bytes, 0, 2);
-        }
+        for (long i = 0; i < iterations; i++) data = i.StoreBytes(bytes, 0, 2);
 
         sw.Stop();
 
@@ -255,10 +246,7 @@ internal static class Program
         var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
         ByteIndexerInt64 data = 0;
         var sw = Stopwatch.StartNew();
-        for (long i = 0; i < iterations; i++)
-        {
-            data.StoreBytes(bytes, 0);
-        }
+        for (long i = 0; i < iterations; i++) data.StoreBytes(bytes, 0);
 
         sw.Stop();
 
@@ -278,10 +266,7 @@ internal static class Program
         byte upperByte = 0;
         var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
         var sw = Stopwatch.StartNew();
-        for (long i = 0; i < iterations; i++)
-        {
-            data.StoreBytes(bytes, 0, 4);
-        }
+        for (long i = 0; i < iterations; i++) data.StoreBytes(bytes, 0, 4);
 
         sw.Stop();
 
@@ -301,10 +286,7 @@ internal static class Program
         byte upperByte = 0;
         var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
         var sw = Stopwatch.StartNew();
-        for (long i = 0; i < iterations; i++)
-        {
-            data.StoreBytes(bytes, 0, 2);
-        }
+        for (long i = 0; i < iterations; i++) data.StoreBytes(bytes, 0, 2);
 
         sw.Stop();
 
@@ -435,7 +417,7 @@ internal static class Program
         ReportStats(stats, operationCount, iterations);
         if ("super happy fun time" == data.ToString()) Console.WriteLine($"{upperByte} {data}");
     }
-    
+
     private static void ReportStats(RunStats stats, int operationCount, int iterations)
     {
         Console.WriteLine($"    Average CPU Frequency: {stats.AverageCpuFrequency:n3}");

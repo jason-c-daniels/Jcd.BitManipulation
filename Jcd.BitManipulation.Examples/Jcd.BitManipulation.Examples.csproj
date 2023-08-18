@@ -6,12 +6,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Jcd.BitManipulation\Jcd.BitManipulation.csproj" />
+        <ProjectReference Include="..\Jcd.BitManipulation\Jcd.BitManipulation.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Hardware.Info" Version="11.0.1" />
-      <PackageReference Include="Jcd.Units" Version="0.0.6" />
+        <PackageReference Include="Hardware.Info" Version="11.0.1"/>
+        <PackageReference Include="Jcd.Units" Version="0.0.6"/>
     </ItemGroup>
 
 </Project>

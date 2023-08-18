@@ -1,7 +1,11 @@
+#region
+
 using System;
 using System.Collections.Generic;
 using Jcd.BitManipulation.ByteIndexers;
 using Xunit;
+
+#endregion
 
 namespace Jcd.BitManipulation.Tests.ByteIndexerTests;
 
@@ -80,10 +84,10 @@ public class ByteIndexerInt32Tests
 
     [Theory]
     [InlineData(0x010101FF, 0, 1, 1, 0xFF)]
-    [InlineData(0x010202FE, 0, 2, 2, 0xFE,0x02)]
-    [InlineData(0x0102037F, 0, 3, 3, 0x7F,0x03, 0x02)]
-    [InlineData(0x030201FF, 0, 4, 4, 0xFF,0x01, 0x02, 0x03)]
-    [InlineData(0x040302FE, 1, 3, 3, 0x02,0x03, 0x04)]
+    [InlineData(0x010202FE, 0, 2, 2, 0xFE, 0x02)]
+    [InlineData(0x0102037F, 0, 3, 3, 0x7F, 0x03, 0x02)]
+    [InlineData(0x030201FF, 0, 4, 4, 0xFF, 0x01, 0x02, 0x03)]
+    [InlineData(0x040302FE, 1, 3, 3, 0x02, 0x03, 0x04)]
     [InlineData(0x05060708, 2, 2, 2, 0x06, 0x05)]
     [InlineData(0x0F060708, 3, 1, 1, 0x0F)]
     public void Slice_Returns_Expected_Subset(int data, int index, int size, int expectedSize, byte e0, byte e1 = 0,

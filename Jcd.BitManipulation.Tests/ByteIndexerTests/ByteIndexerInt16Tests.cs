@@ -1,7 +1,11 @@
+#region
+
 using System;
 using System.Collections.Generic;
 using Jcd.BitManipulation.ByteIndexers;
 using Xunit;
+
+#endregion
 
 namespace Jcd.BitManipulation.Tests.ByteIndexerTests;
 

@@ -1,7 +1,11 @@
+#region
+
 using System;
 using System.Collections.Generic;
 using Jcd.BitManipulation.ByteIndexers;
 using Xunit;
+
+#endregion
 
 namespace Jcd.BitManipulation.Tests.ByteIndexerTests;
 
@@ -84,10 +88,10 @@ public class ByteIndexerUInt64Tests
     [InlineData(0x00000000010202FE, 0, 2, 2, 0xFE, 0x02)]
     [InlineData(0x000000000102037F, 0, 3, 3, 0x7F, 0x03, 0x02)]
     [InlineData(0x00000000030201FF, 0, 4, 4, 0xFF, 0x01, 0x02, 0x03)]
-    [InlineData(0x07060504030201FF, 0, 5, 5, 0xFF, 0x01, 0x02, 0x03,0x04)]
-    [InlineData(0x07060504030201FF, 0, 6, 6, 0xFF, 0x01, 0x02, 0x03,0x04,0x05)]
-    [InlineData(0x07060504030201FF, 0, 7, 7, 0xFF, 0x01, 0x02, 0x03,0x04,0x05,0x06)]
-    [InlineData(0x07060504030201FF, 0, 8, 8, 0xFF, 0x01, 0x02, 0x03,0x04,0x05,0x06, 0x07)]
+    [InlineData(0x07060504030201FF, 0, 5, 5, 0xFF, 0x01, 0x02, 0x03, 0x04)]
+    [InlineData(0x07060504030201FF, 0, 6, 6, 0xFF, 0x01, 0x02, 0x03, 0x04, 0x05)]
+    [InlineData(0x07060504030201FF, 0, 7, 7, 0xFF, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06)]
+    [InlineData(0x07060504030201FF, 0, 8, 8, 0xFF, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07)]
     [InlineData(0x00000000040302FE, 1, 3, 3, 0x02, 0x03, 0x04)]
     [InlineData(0x0000000005060708, 2, 2, 2, 0x06, 0x05)]
     [InlineData(0x000000000F060708, 3, 1, 1, 0x0F)]
@@ -103,7 +107,7 @@ public class ByteIndexerUInt64Tests
         if (expectedSize >= 6) expected.Add(e5);
         if (expectedSize >= 7) expected.Add(e6);
         if (expectedSize == 8) expected.Add(e7);
-        
+
         ByteIndexerUInt64 sut = data;
         Assert.Equal(expected.ToArray(), sut.Slice(index, size));
     }

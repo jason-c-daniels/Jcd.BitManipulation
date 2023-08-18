@@ -1,7 +1,11 @@
+#region
+
 using Jcd.Units;
 using Jcd.Units.UnitsOfMeasure;
 using Jcd.Units.UnitsOfMeasure.SI;
 using Jcd.Units.UnitTypes;
+
+#endregion
 
 namespace Jcd.BitManipulation.Examples;
 
@@ -15,7 +19,7 @@ internal record RunStats
     , int OperationsPerIteration
 )
 {
-    public static readonly RunStats Empty = new (
+    public static readonly RunStats Empty = new(
         0.As(Durations.Second)
         , 0.As(Durations.Second)
         , 0d

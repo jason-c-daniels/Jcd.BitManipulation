@@ -1,11 +1,43 @@
+#region
+
 using System;
 using System.Linq;
 using Xunit;
+
+#endregion
 
 namespace Jcd.BitManipulation.Tests;
 
 public class ByteArrayExtensionTests
 {
+    [Fact]
+    public void ToAnyInt_On_Empty_Array_Returns_Zero()
+    {
+        var empty = Array.Empty<byte>();
+        Assert.Equal(0, empty.ToByte());
+        Assert.Equal(0, empty.ToSByte());
+        Assert.Equal(0, empty.ToInt16());
+        Assert.Equal(0, empty.ToUInt16());
+        Assert.Equal(0, empty.ToInt32());
+        Assert.Equal((uint)0, empty.ToUInt32());
+        Assert.Equal(0, empty.ToInt64());
+        Assert.Equal((ulong)0, empty.ToUInt64());
+    }
+
+    [Fact]
+    public void ToAnyInt_On_Empty_ReadOnlySpan_Returns_Zero()
+    {
+        var empty = new ReadOnlySpan<byte>(Array.Empty<byte>());
+        Assert.Equal(0, empty.ToByte());
+        Assert.Equal(0, empty.ToSByte());
+        Assert.Equal(0, empty.ToInt16());
+        Assert.Equal(0, empty.ToUInt16());
+        Assert.Equal(0, empty.ToInt32());
+        Assert.Equal((uint)0, empty.ToUInt32());
+        Assert.Equal(0, empty.ToInt64());
+        Assert.Equal((ulong)0, empty.ToUInt64());
+    }
+
     #region ToByteArray Tests
 
     [Theory]
@@ -288,10 +320,12 @@ public class ByteArrayExtensionTests
     [InlineData(0x08, 0x07, 0x06, 0x05, 0x04, 0x03, 0x02, 0x01, 2, Endian.Big, 0x0807)]
     [InlineData(0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 1, Endian.Little, 0x01)]
     [InlineData(0x08, 0x07, 0x06, 0x05, 0x04, 0x03, 0x02, 0x01, 1, Endian.Big, 0x08)]
-    public void ToUInt64_On_ReadOnlySpan(byte d0, byte d1, byte d2, byte d3, byte d4, byte d5, byte d6, byte d7, int size,
-                                  Endian endian, ulong expected)
+    public void ToUInt64_On_ReadOnlySpan(byte d0, byte d1, byte d2, byte d3, byte d4, byte d5, byte d6, byte d7,
+                                         int size,
+                                         Endian endian, ulong expected)
     {
-        Assert.Equal(expected, new ReadOnlySpan<byte>(new[] { d0, d1, d2, d3, d4, d5, d6, d7 }.Take(size).ToArray()).ToUInt64(endian));
+        Assert.Equal(expected,
+            new ReadOnlySpan<byte>(new[] { d0, d1, d2, d3, d4, d5, d6, d7 }.Take(size).ToArray()).ToUInt64(endian));
     }
 
     [Theory]
@@ -311,39 +345,13 @@ public class ByteArrayExtensionTests
     [InlineData(0x08, 0x07, 0x06, 0x05, 0x04, 0x03, 0x02, 0x01, 2, Endian.Big, 0x0807)]
     [InlineData(0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 1, Endian.Little, 0x01)]
     [InlineData(0x08, 0x07, 0x06, 0x05, 0x04, 0x03, 0x02, 0x01, 1, Endian.Big, 0x08)]
-    public void ToInt64_On_ReadOnlySpan(byte d0, byte d1, byte d2, byte d3, byte d4, byte d5, byte d6, byte d7, int size,
-                                 Endian endian, long expected)
+    public void ToInt64_On_ReadOnlySpan(byte d0, byte d1, byte d2, byte d3, byte d4, byte d5, byte d6, byte d7,
+                                        int size,
+                                        Endian endian, long expected)
     {
-        Assert.Equal(expected, new ReadOnlySpan<byte>(new[] { d0, d1, d2, d3, d4, d5, d6, d7 }.Take(size).ToArray()).ToInt64(endian));
+        Assert.Equal(expected,
+            new ReadOnlySpan<byte>(new[] { d0, d1, d2, d3, d4, d5, d6, d7 }.Take(size).ToArray()).ToInt64(endian));
     }
 
     #endregion
-    
-    [Fact]
-    public void ToAnyInt_On_Empty_Array_Returns_Zero()
-    {
-        var empty = Array.Empty<byte>();
-        Assert.Equal(0, empty.ToByte());
-        Assert.Equal(0, empty.ToSByte());
-        Assert.Equal(0, empty.ToInt16());
-        Assert.Equal(0, empty.ToUInt16());
-        Assert.Equal(0, empty.ToInt32());
-        Assert.Equal((uint)0, empty.ToUInt32());
-        Assert.Equal(0, empty.ToInt64());
-        Assert.Equal((ulong)0, empty.ToUInt64());
-    }
-
-    [Fact]
-    public void ToAnyInt_On_Empty_ReadOnlySpan_Returns_Zero()
-    {
-        var empty = new ReadOnlySpan<byte>(Array.Empty<byte>());
-        Assert.Equal(0, empty.ToByte());
-        Assert.Equal(0, empty.ToSByte());
-        Assert.Equal(0, empty.ToInt16());
-        Assert.Equal(0, empty.ToUInt16());
-        Assert.Equal(0, empty.ToInt32());
-        Assert.Equal((uint)0, empty.ToUInt32());
-        Assert.Equal(0, empty.ToInt64());
-        Assert.Equal((ulong)0, empty.ToUInt64());
-    }
 }

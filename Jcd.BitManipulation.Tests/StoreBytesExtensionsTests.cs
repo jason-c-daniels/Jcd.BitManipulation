@@ -1,6 +1,11 @@
+#region
+
 using System.Collections.Generic;
 using Jcd.BitManipulation.ByteIndexers;
 using Xunit;
+
+#endregion
+
 // ReSharper disable HeapView.BoxingAllocation
 // ReSharper disable ArrangeTrailingCommaInMultilineLists
 
@@ -405,7 +410,7 @@ public class StoreBytesExtensionsTests
             new object[] { 0xFE_00_00_00_00_00_00_01, 4, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D } },
             new object[] { 0xFE_00_00_00_00_00_00_01, 5, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D } },
             new object[] { 0xFE_00_00_00_00_00_00_01, 8, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D } },
-            new object[] { 0xFE_00_00_00_00_00_00_01, 8, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D } },
+            new object[] { 0xFE_00_00_00_00_00_00_01, 8, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D } }
         };
 
     public static IEnumerable<object[]> Int64StoreBytes =>
@@ -417,7 +422,7 @@ public class StoreBytesExtensionsTests
             new object[] { 0x0E_00_00_00_00_00_00_01, 4, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D } },
             new object[] { 0x0E_00_00_00_00_00_00_01, 5, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D } },
             new object[] { 0x0E_00_00_00_00_00_00_01, 8, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D } },
-            new object[] { 0x0E_00_00_00_00_00_00_01, 8, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D } },
+            new object[] { 0x0E_00_00_00_00_00_00_01, 8, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D } }
         };
 
     public static IEnumerable<object[]> UInt32StoreBytes =>
@@ -428,7 +433,7 @@ public class StoreBytesExtensionsTests
             new object[] { 0xFE_00_00_00, 2, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB } },
             new object[] { 0xFE_00_00_00, 3, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D } },
             new object[] { 0xFE_00_00_00, 4, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D } },
-            new object[] { 0xFE_00_00_00, 4, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D } },
+            new object[] { 0xFE_00_00_00, 4, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D } }
         };
 
     public static IEnumerable<object[]> Int32StoreBytes =>
@@ -439,7 +444,7 @@ public class StoreBytesExtensionsTests
             new object[] { 0x0E_00_00_00, 2, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB } },
             new object[] { 0x0E_00_00_00, 3, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D } },
             new object[] { 0x0E_00_00_00, 4, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D } },
-            new object[] { 0x0E_00_00_00, 4, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D } },
+            new object[] { 0x0E_00_00_00, 4, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D } }
         };
 
     public static IEnumerable<object[]> UInt16StoreBytes =>
@@ -448,7 +453,7 @@ public class StoreBytesExtensionsTests
             new object[] { (ushort)0xFF_00, 0, 2, new byte[] { 0xFF, 0xFE } },
             new object[] { (ushort)0xFE_00, 1, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB } },
             new object[] { (ushort)0xFE_00, 2, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB } },
-            new object[] { (ushort)0xFE_00, 2, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB } },
+            new object[] { (ushort)0xFE_00, 2, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB } }
         };
 
     public static IEnumerable<object[]> Int16StoreBytes =>
@@ -457,7 +462,7 @@ public class StoreBytesExtensionsTests
             new object[] { (short)0x0F_00, 0, 2, new byte[] { 0xFF, 0xFE } },
             new object[] { (short)0x0E_00, 1, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB } },
             new object[] { (short)0x0E_00, 2, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB } },
-            new object[] { (short)0x0E_00, 2, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB } },
+            new object[] { (short)0x0E_00, 2, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB } }
         };
 
     public static IEnumerable<object[]> ByteStoreBytes =>
@@ -465,7 +470,7 @@ public class StoreBytesExtensionsTests
         {
             new object[] { (byte)0x0F, 0, 2, new byte[] { 0xFF, 0xFE } },
             new object[] { (byte)0x0E, 1, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB } },
-            new object[] { (byte)0x0E, 1, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB } },
+            new object[] { (byte)0x0E, 1, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB } }
         };
 
     public static IEnumerable<object[]> SByteStoreBytes =>
@@ -473,7 +478,7 @@ public class StoreBytesExtensionsTests
         {
             new object[] { (sbyte)0x0F, 0, 2, new byte[] { 0xFF, 0xFE } },
             new object[] { (sbyte)0x0E, 1, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB } },
-            new object[] { (sbyte)0x0E, 1, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB } },
+            new object[] { (sbyte)0x0E, 1, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB } }
         };
 
     #endregion

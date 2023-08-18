@@ -154,7 +154,7 @@ public static class StoreBytesExtensions
     public static ByteIndexerSByte StoreBytes(this ByteIndexerSByte indexer, ReadOnlySpan<byte> bytes, int offset)
     {
         if (offset > 0) return indexer;
-        indexer[offset]=bytes[0];
+        indexer[offset] = bytes[0];
 
         return indexer;
     }
@@ -171,7 +171,7 @@ public static class StoreBytesExtensions
     public static ByteIndexerByte StoreBytes(this ByteIndexerByte indexer, ReadOnlySpan<byte> bytes, int offset)
     {
         if (offset > 0) return indexer;
-        indexer[offset]=bytes[0];
+        indexer[offset] = bytes[0];
 
         return indexer;
     }
@@ -195,7 +195,7 @@ public static class StoreBytesExtensions
         {
             if (idx >= size) return indexer;
             if (offset + idx >= ByteIndexerInt16.ByteSize) return indexer;
-            indexer[idx+offset] = @byte;
+            indexer[idx + offset] = @byte;
             idx++;
         }
 
@@ -222,7 +222,7 @@ public static class StoreBytesExtensions
             if (idx >= size) return indexer;
             if (offset + idx >= ByteIndexerUInt16.ByteSize) return indexer;
 
-            indexer[idx+offset] = @byte;
+            indexer[idx + offset] = @byte;
             idx++;
         }
 
@@ -249,7 +249,7 @@ public static class StoreBytesExtensions
             if (idx >= size) return indexer;
             if (offset + idx >= ByteIndexerInt32.ByteSize) return indexer;
 
-            indexer[idx+offset] = @byte;
+            indexer[idx + offset] = @byte;
             idx++;
         }
 
@@ -276,7 +276,7 @@ public static class StoreBytesExtensions
             if (idx >= size) return indexer;
             if (offset + idx >= ByteIndexerUInt32.ByteSize) return indexer;
 
-            indexer[idx+offset] = @byte;
+            indexer[idx + offset] = @byte;
             idx++;
         }
 
@@ -303,7 +303,7 @@ public static class StoreBytesExtensions
             if (idx >= size) return indexer;
             if (offset + idx >= ByteIndexerInt64.ByteSize) return indexer;
 
-            indexer[idx+offset] = @byte;
+            indexer[idx + offset] = @byte;
             idx++;
         }
 
@@ -330,7 +330,7 @@ public static class StoreBytesExtensions
             if (idx >= size) return indexer;
             if (offset + idx >= ByteIndexerUInt64.ByteSize) return indexer;
 
-            indexer[idx+offset] = @byte;
+            indexer[idx + offset] = @byte;
             idx++;
         }
 

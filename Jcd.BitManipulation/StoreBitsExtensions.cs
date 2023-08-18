@@ -1,7 +1,11 @@
 // ReSharper disable MemberCanBePrivate.Global
 
+#region
+
 using System.Runtime.CompilerServices;
 using Jcd.BitManipulation.BitIndexers;
+
+#endregion
 
 namespace Jcd.BitManipulation;
 
@@ -246,7 +250,7 @@ public static class StoreBitsExtensions
         value |= (byte)((source << offset) & (byte)mask.Bits);
         return value;
     }
-    
+
     /// <summary>
     /// Store a masked set of bits from a value to an offset in the destination
     /// The mask must apply to the destination bits.

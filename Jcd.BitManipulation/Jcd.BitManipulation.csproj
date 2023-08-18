@@ -11,7 +11,7 @@
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
-        <PackageReference Include="System.Memory" Version="4.5.5" />
+        <PackageReference Include="System.Memory" Version="4.5.5"/>
     </ItemGroup>
 
 
@@ -38,8 +38,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include="..\README.md" Pack="true" PackagePath="\" />
-        <None Include="..\LICENSE" Pack="false" PackagePath="\" />
+        <None Include="..\README.md" Pack="true" PackagePath="\"/>
+        <None Include="..\LICENSE" Pack="false" PackagePath="\"/>
     </ItemGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -49,7 +49,7 @@
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
         <DocumentationFile>..\docs\Jcd.BitManipulation.xml</DocumentationFile>
     </PropertyGroup>
-    
+
     <ItemGroup>
         <None Remove="icon\Jason.C.Daniels.jpg"/>
         <Content Include="icon\Jason.C.Daniels.jpg" Pack="true" PackagePath="\">

@@ -1,15 +1,16 @@
-#region
-
 // ReSharper disable ReplaceSliceWithRangeIndexer
 // ReSharper disable MemberCanBePrivate.Global
+
+#region
 
 using System;
 using System.Runtime.CompilerServices;
 using Jcd.BitManipulation.ByteIndexers;
 
+#endregion
+
 namespace Jcd.BitManipulation;
 
-#endregion
 
 /// <summary>
 /// A bunch of extension methods to help with converting numbers to and from arrays of bools
@@ -166,15 +167,15 @@ public static class ByteArrayExtensions
         if (data == null || data.Length == 0) return 0;
         ByteIndexerUInt16 result = 0;
         for (var i = 0; i < data.Length && i < result.Length; i++)
-        {
             if (endian == Endian.Big)
             {
                 result <<= 8;
                 result[0] = data[i];
             }
             else
+            {
                 result[i] = data[i];
-        }
+            }
 
         return result;
     }
@@ -193,15 +194,15 @@ public static class ByteArrayExtensions
         if (data == null || data.Length == 0) return 0;
         ByteIndexerInt16 result = 0;
         for (var i = 0; i < data.Length && i < result.Length; i++)
-        {
             if (endian == Endian.Big)
             {
                 result <<= 8;
                 result[0] = data[i];
             }
             else
+            {
                 result[i] = data[i];
-        }
+            }
 
         return result;
     }
@@ -220,15 +221,15 @@ public static class ByteArrayExtensions
         if (data == null || data.Length == 0) return 0;
         ByteIndexerUInt32 result = 0;
         for (var i = 0; i < data.Length && i < result.Length; i++)
-        {
             if (endian == Endian.Big)
             {
                 result <<= 8;
                 result[0] = data[i];
             }
             else
+            {
                 result[i] = data[i];
-        }
+            }
 
         return result;
     }
@@ -247,15 +248,15 @@ public static class ByteArrayExtensions
         if (data == null || data.Length == 0) return 0;
         ByteIndexerInt32 result = 0;
         for (var i = 0; i < data.Length && i < result.Length; i++)
-        {
             if (endian == Endian.Big)
             {
                 result <<= 8;
                 result[0] = data[i];
             }
             else
+            {
                 result[i] = data[i];
-        }
+            }
 
         return result;
     }
@@ -274,15 +275,15 @@ public static class ByteArrayExtensions
         if (data == null || data.Length == 0) return 0;
         ByteIndexerUInt64 result = 0;
         for (var i = 0; i < data.Length && i < result.Length; i++)
-        {
             if (endian == Endian.Big)
             {
                 result <<= 8;
                 result[0] = data[i];
             }
             else
+            {
                 result[i] = data[i];
-        }
+            }
 
         return result;
     }
@@ -301,15 +302,15 @@ public static class ByteArrayExtensions
         if (data == null || data.Length == 0) return 0;
         ByteIndexerInt64 result = 0;
         for (var i = 0; i < data.Length && i < result.Length; i++)
-        {
             if (endian == Endian.Big)
             {
                 result <<= 8;
                 result[0] = data[i];
             }
             else
+            {
                 result[i] = data[i];
-        }
+            }
 
         return result;
     }

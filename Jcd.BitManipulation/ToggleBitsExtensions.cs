@@ -1,5 +1,9 @@
+#region
+
 using System.Runtime.CompilerServices;
 using Jcd.BitManipulation.BitIndexers;
+
+#endregion
 
 namespace Jcd.BitManipulation;
 

@@ -1,12 +1,9 @@
 #region
 
-// ReSharper disable UnusedMemberInSuper.Global
-// ReSharper disable MemberCanBePrivate.Global
-
-#endregion
-
 using System.Runtime.CompilerServices;
 using Jcd.BitManipulation.ByteIndexers;
+
+#endregion
 
 namespace Jcd.BitManipulation;
 

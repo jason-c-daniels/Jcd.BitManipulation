@@ -28,12 +28,12 @@ namespace Jcd.BitManipulation;
 /// // chaining operations, the same steps and end results
 /// data = 0;
 /// data = data.SetBits(0, 16) // value is now 0b1111111111111111
-/// .SetBits() // this is the equivalent as above
-/// .ClearBits(4, 8) // value is now 0b1111000000001111
-/// .ToggleBits(); // value is now 0b0000111111110000
+///     .SetBits() // this is the equivalent as above
+///     .ClearBits(4, 8) // value is now 0b1111000000001111
+///     .ToggleBits(); // value is now 0b0000111111110000
 /// 
 /// upperByte = ((byte)data.ReadBits(8, 8)) // extract the upper byte (0b00001111)
-/// .StoreBits(0b1011, 4, 4);// store the value in the upper 4 bits, now upperByte is now 0b10111111
+///     .StoreBits(0b1011, 4, 4);// store the value in the upper 4 bits, now upperByte is now 0b10111111
 /// 
 /// </code>
 /// </example>

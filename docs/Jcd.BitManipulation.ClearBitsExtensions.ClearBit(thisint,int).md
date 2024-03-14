@@ -7,7 +7,6 @@ Sets bit to "off" and returns the modified value.
 ```csharp
 public static int ClearBit(this int value, int offset);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ClearBitsExtensions.ClearBit(thisint,int).value'></a>
@@ -24,5 +23,5 @@ The offset of the bit to clear.
 
 #### Returns
 
-[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')  
+[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 The modified value.

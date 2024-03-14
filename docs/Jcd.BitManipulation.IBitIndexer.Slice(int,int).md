@@ -7,7 +7,6 @@ Gets a slice of bits from the backing store
 ```csharp
 bool[] Slice(int start, int length);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.IBitIndexer.Slice(int,int).start'></a>
@@ -24,5 +23,5 @@ the number of bits to get
 
 #### Returns
 
-[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')  
+[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 Array of bits extracted

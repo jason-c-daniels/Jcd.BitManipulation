@@ -9,5 +9,4 @@ public ushort Bits { get; set; }
 ```
 
 #### Property Value
-
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')

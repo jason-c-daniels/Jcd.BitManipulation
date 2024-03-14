@@ -7,7 +7,6 @@ Create a bitmask
 ```csharp
 public BitMask(ushort bits);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.BitMask(ushort).bits'></a>

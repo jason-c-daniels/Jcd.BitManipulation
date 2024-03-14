@@ -7,7 +7,6 @@ Toggles a bit.
 ```csharp
 public static ushort ToggleBit(this ushort value, int offset);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ToggleBitsExtensions.ToggleBit(thisushort,int).value'></a>
@@ -25,3 +24,4 @@ The bit location to toggle.
 #### Returns
 
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
+The modified value.

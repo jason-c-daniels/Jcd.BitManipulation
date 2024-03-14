@@ -7,7 +7,6 @@ Sets specified bit to "on"
 ```csharp
 public static sbyte SetBit(this sbyte value, int offset);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.SetBitsExtensions.SetBit(thissbyte,int).value'></a>
@@ -25,3 +24,4 @@ The offset of the bit to set.
 #### Returns
 
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
+The modified value.

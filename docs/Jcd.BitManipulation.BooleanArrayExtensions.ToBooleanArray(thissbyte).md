@@ -7,7 +7,6 @@ Convert an sbyte into an array of bools
 ```csharp
 public static bool[] ToBooleanArray(this sbyte bits);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BooleanArrayExtensions.ToBooleanArray(thissbyte).bits'></a>
@@ -18,5 +17,5 @@ the sbyte to convert
 
 #### Returns
 
-[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')  
+[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 the array. LSB at index 0

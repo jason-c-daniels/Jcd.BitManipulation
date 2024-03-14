@@ -8,8 +8,7 @@ Extension methods that enable reading one or more bits from a specified offset i
 public static class ReadBitsExtensions
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106;
-ReadBitsExtensions
+Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; ReadBitsExtensions
 
 | Methods                                                                                                                                                                                                                                |                                                                                         |
 |:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------|

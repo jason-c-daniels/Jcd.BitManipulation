@@ -2,13 +2,12 @@
 
 ## ToggleBitsExtensions.ToggleBits(this ulong, int, int) Method
 
-Toggles bits and size.   
+Toggles bits and size.
 The default values result in toggling all bits.
 
 ```csharp
 public static ulong ToggleBits(this ulong value, int offset=0, int size=64);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(thisulong,int,int).value'></a>
@@ -32,3 +31,4 @@ The number of bits to toggle.
 #### Returns
 
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
+The modified value.

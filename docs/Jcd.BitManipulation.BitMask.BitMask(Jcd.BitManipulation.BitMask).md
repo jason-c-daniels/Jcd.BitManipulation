@@ -7,7 +7,6 @@ Copies an existing [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation
 ```csharp
 public BitMask(Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.BitMask(Jcd.BitManipulation.BitMask).mask'></a>

@@ -7,7 +7,6 @@ Create a 64 bit [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.Bi
 ```csharp
 public static Jcd.BitManipulation.BitMask FromRange(int offset=0, int size=64);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.FromRange(int,int).offset'></a>
@@ -24,5 +23,5 @@ the number of bits to set to 1
 
 #### Returns
 
-[BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')  
+[BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 the shifted mask

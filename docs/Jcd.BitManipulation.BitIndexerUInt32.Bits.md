@@ -9,5 +9,4 @@ public uint Bits { get; set; }
 ```
 
 #### Property Value
-
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')

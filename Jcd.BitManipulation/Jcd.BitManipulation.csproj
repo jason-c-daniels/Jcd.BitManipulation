@@ -1,60 +1,60 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <TargetFramework>netstandard2.0</TargetFramework>
-        <LangVersion>latest</LangVersion>
-        <Nullable>disable</Nullable>
-    </PropertyGroup>
+   <PropertyGroup>
+      <TargetFramework>netstandard2.0</TargetFramework>
+      <LangVersion>latest</LangVersion>
+      <Nullable>disable</Nullable>
+   </PropertyGroup>
 
-    <ItemGroup>
-        <PackageReference Include="DefaultDocumentation" Version="0.8.2">
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-            <PrivateAssets>all</PrivateAssets>
-        </PackageReference>
-    </ItemGroup>
+   <ItemGroup>
+      <PackageReference Include="DefaultDocumentation" Version="0.8.2">
+         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+         <PrivateAssets>all</PrivateAssets>
+      </PackageReference>
+      <PackageReference Include="System.Memory" Version="4.5.5"/>
+   </ItemGroup>
 
+   <PropertyGroup>
+      <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+      <Title>Jcd.BitManipulation</Title>
+      <Authors>Jason C. Daniels</Authors>
+      <Description>A .Net Standard 2.0 library adding syntactic sugar to your bit and byte manipulation experience.</Description>
+      <Copyright>2023</Copyright>
+      <PackageProjectUrl>https://github.com/jason-c-daniels/Jcd.BitManipulation</PackageProjectUrl>
+      <PackageLicenseUrl>https://github.com/jason-c-daniels/Jcd.BitManipulation/blob/main/LICENSE</PackageLicenseUrl>
+      <RepositoryUrl>https://github.com/jason-c-daniels/Jcd.BitManipulation</RepositoryUrl>
+      <RepositoryType>GitHub</RepositoryType>
+      <PackageVersion>0.0.1</PackageVersion>
+      <AssemblyVersion>0.0.1</AssemblyVersion>
+      <FileVersion>0.0.1</FileVersion>
+      <TargetFramework>netstandard2.0</TargetFramework>
+      <PackageIcon>Jason.C.Daniels.jpg</PackageIcon>
+      <PackageReleaseNotes>Added byte manipulation extensions.</PackageReleaseNotes>
+   </PropertyGroup>
 
-    <PropertyGroup>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Title>Jcd.BitManipulation</Title>
-        <Authors>Jason C. Daniels</Authors>
-        <Description>A .Net Standard 2.0 library adding syntactic sugar to your bit manipulation experience.</Description>
-        <Copyright>2023</Copyright>
-        <PackageProjectUrl>https://github.com/jason-c-daniels/Jcd.BitManipulation</PackageProjectUrl>
-        <PackageLicenseUrl>https://github.com/jason-c-daniels/Jcd.BitManipulation/blob/main/LICENSE</PackageLicenseUrl>
-        <RepositoryUrl>https://github.com/jason-c-daniels/Jcd.BitManipulation</RepositoryUrl>
-        <RepositoryType>GitHub</RepositoryType>
-        <PackageVersion>0.0.1</PackageVersion>
-        <AssemblyVersion>0.0.1</AssemblyVersion>
-        <FileVersion>0.0.1</FileVersion>
-        <TargetFramework>netstandard2.0</TargetFramework>
-        <PackageIcon>Jason.C.Daniels.jpg</PackageIcon>
-        <PackageReleaseNotes></PackageReleaseNotes>
-    </PropertyGroup>
+   <PropertyGroup>
+      <PackageReadmeFile>README.md</PackageReadmeFile>
+   </PropertyGroup>
 
-    <PropertyGroup>
-        <PackageReadmeFile>README.md</PackageReadmeFile>
-    </PropertyGroup>
+   <ItemGroup>
+      <None Include="..\README.md" Pack="true" PackagePath="\"/>
+      <None Include="..\LICENSE" Pack="false" PackagePath="\"/>
+   </ItemGroup>
 
-    <ItemGroup>
-        <None Include="..\README.md" Pack="true" PackagePath="\"/>
-        <None Include="..\LICENSE" Pack="false" PackagePath="\"/>
-    </ItemGroup>
+   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DocumentationFile>..\docs\Jcd.BitManipulation.xml</DocumentationFile>
+   </PropertyGroup>
 
-    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-        <DocumentationFile>..\docs\Jcd.BitManipulation.xml</DocumentationFile>
-    </PropertyGroup>
+   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DocumentationFile>..\docs\Jcd.BitManipulation.xml</DocumentationFile>
+   </PropertyGroup>
 
-    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-        <DocumentationFile>..\docs\Jcd.BitManipulation.xml</DocumentationFile>
-    </PropertyGroup>
-    
-    <ItemGroup>
-        <None Remove="icon\Jason.C.Daniels.jpg"/>
-        <Content Include="icon\Jason.C.Daniels.jpg" Pack="true" PackagePath="\">
-            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-        </Content>
-    </ItemGroup>
+   <ItemGroup>
+      <None Remove="icon\Jason.C.Daniels.jpg"/>
+      <Content Include="icon\Jason.C.Daniels.jpg" Pack="true" PackagePath="\">
+         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+   </ItemGroup>
 
 </Project>
   

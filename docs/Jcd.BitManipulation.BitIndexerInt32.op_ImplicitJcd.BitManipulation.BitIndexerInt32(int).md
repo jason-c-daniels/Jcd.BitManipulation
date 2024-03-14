@@ -7,7 +7,6 @@ Automatically Convert from an int to a BitIndexerInt32
 ```csharp
 public static Jcd.BitManipulation.BitIndexerInt32 implicit operator BitIndexerInt32(int bits);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexerInt32.op_ImplicitJcd.BitManipulation.BitIndexerInt32(int).bits'></a>
@@ -18,5 +17,5 @@ the initial value for the indexer's backing store
 
 #### Returns
 
-[BitIndexerInt32](Jcd.BitManipulation.BitIndexerInt32.md 'Jcd.BitManipulation.BitIndexerInt32')  
+[BitIndexerInt32](Jcd.BitManipulation.BitIndexerInt32.md 'Jcd.BitManipulation.BitIndexerInt32')
 A new BitIndexerInt32

@@ -2,13 +2,12 @@
 
 ## ToggleBitsExtensions.ToggleBits(this ushort, int, int) Method
 
-Toggles bits and size.   
+Toggles bits and size.
 The default values result in toggling all bits.
 
 ```csharp
 public static ushort ToggleBits(this ushort value, int offset=0, int size=16);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(thisushort,int,int).value'></a>
@@ -32,3 +31,4 @@ The number of bits to toggle.
 #### Returns
 
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
+The modified value.

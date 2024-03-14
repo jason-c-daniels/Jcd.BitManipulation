@@ -7,7 +7,6 @@ Sets specified bit to "on"
 ```csharp
 public static ulong SetBit(this ulong value, int offset);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.SetBitsExtensions.SetBit(thisulong,int).value'></a>
@@ -25,3 +24,4 @@ The offset of the bit to set.
 #### Returns
 
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
+The modified value.

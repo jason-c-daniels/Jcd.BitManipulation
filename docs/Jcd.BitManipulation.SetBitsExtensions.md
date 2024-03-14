@@ -8,8 +8,7 @@ Extension methods that aid in turning bits on in an integer data type.
 public static class SetBitsExtensions
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106;
-SetBitsExtensions
+Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; SetBitsExtensions
 
 | Methods                                                                                                                                                                                                             |                                 |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------|

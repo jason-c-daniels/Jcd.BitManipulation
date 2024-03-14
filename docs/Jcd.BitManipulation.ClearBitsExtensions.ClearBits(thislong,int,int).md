@@ -7,7 +7,6 @@ Sets all specified bits to "off" and returns the modified value.
 ```csharp
 public static long ClearBits(this long value, int offset=0, int size=64);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ClearBitsExtensions.ClearBits(thislong,int,int).value'></a>
@@ -30,5 +29,5 @@ The number of bits to clear.
 
 #### Returns
 
-[System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')  
+[System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 The modified value.

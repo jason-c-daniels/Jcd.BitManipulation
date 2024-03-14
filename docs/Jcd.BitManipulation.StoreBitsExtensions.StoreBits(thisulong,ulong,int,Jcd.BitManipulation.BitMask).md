@@ -2,13 +2,12 @@
 
 ## StoreBitsExtensions.StoreBits(this ulong, ulong, int, BitMask) Method
 
-Store a masked set of bits from a value to an offset in the destination  
+Store a masked set of bits from a value to an offset in the destination
 The mask must apply to the destination bits.
 
 ```csharp
 public static ulong StoreBits(this ulong value, ulong source, int offset, Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.StoreBitsExtensions.StoreBits(thisulong,ulong,int,Jcd.BitManipulation.BitMask).value'></a>
@@ -38,3 +37,4 @@ the mask of which bits to store
 #### Returns
 
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
+The modified value.

@@ -7,7 +7,6 @@ Toggle all the bits according to the provided mask
 ```csharp
 public static byte ToggleBits(this byte value, Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(thisbyte,Jcd.BitManipulation.BitMask).value'></a>
@@ -25,3 +24,4 @@ bits to set.
 #### Returns
 
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
+The modified value.

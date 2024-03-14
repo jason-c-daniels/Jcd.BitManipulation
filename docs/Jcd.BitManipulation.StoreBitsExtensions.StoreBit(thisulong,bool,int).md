@@ -7,7 +7,6 @@ Store a single bit from the specified offset.
 ```csharp
 public static ulong StoreBit(this ulong value, bool bit, int offset);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.StoreBitsExtensions.StoreBit(thisulong,bool,int).value'></a>
@@ -31,3 +30,4 @@ the offset of the bit to write
 #### Returns
 
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
+The modified value.

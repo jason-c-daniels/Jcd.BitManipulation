@@ -1,0 +1,12 @@
+#!/bin/bash
+pushd "$(git rev-parse --show-toplevel)" || exit
+
+echo finding hooks
+find .hooks/ -type f
+echo ""
+
+echo installing hooks
+cp -r .hooks/* .git/hooks/
+chmod u+x .git/hooks/*
+
+popd || exit

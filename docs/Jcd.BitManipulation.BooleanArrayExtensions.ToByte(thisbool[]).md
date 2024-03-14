@@ -7,7 +7,6 @@ Converts an array of bools into a byte, discarding any excess bits.
 ```csharp
 public static byte ToByte(this bool[] bits);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BooleanArrayExtensions.ToByte(thisbool[]).bits'></a>
@@ -18,5 +17,5 @@ the array of bools to convert, LSB at index 0
 
 #### Returns
 
-[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')  
+[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 The converted byte

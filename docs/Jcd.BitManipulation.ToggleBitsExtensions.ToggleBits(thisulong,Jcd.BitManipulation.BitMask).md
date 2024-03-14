@@ -7,7 +7,6 @@ Toggle all the bits according to the provided mask
 ```csharp
 public static ulong ToggleBits(this ulong value, Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ToggleBitsExtensions.ToggleBits(thisulong,Jcd.BitManipulation.BitMask).value'></a>
@@ -25,3 +24,4 @@ bits to set.
 #### Returns
 
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
+The modified value.

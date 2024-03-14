@@ -7,7 +7,6 @@ Read a single bit from the specified offset.
 ```csharp
 public static bool ReadBit(this ushort value, int offset);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ReadBitsExtensions.ReadBit(thisushort,int).value'></a>
@@ -24,5 +23,5 @@ the offset of the bit to read
 
 #### Returns
 
-[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')  
+[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 the bit (a bool) at the specified offset

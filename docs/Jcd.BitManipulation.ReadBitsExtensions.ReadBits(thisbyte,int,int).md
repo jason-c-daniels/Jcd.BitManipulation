@@ -7,7 +7,6 @@ For a given value return the specified bits from within it, right shifted pos bi
 ```csharp
 public static byte ReadBits(this byte value, int offset, int size);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ReadBitsExtensions.ReadBits(thisbyte,int,int).value'></a>
@@ -30,5 +29,5 @@ The total number of bits to extract
 
 #### Returns
 
-[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')  
+[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 The numeric value stored at that bit location

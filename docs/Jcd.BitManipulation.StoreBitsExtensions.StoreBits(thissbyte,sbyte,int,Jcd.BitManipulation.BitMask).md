@@ -2,13 +2,12 @@
 
 ## StoreBitsExtensions.StoreBits(this sbyte, sbyte, int, BitMask) Method
 
-Store a masked set of bits from a value to an offset in the destination  
+Store a masked set of bits from a value to an offset in the destination
 The mask must apply to the destination bits.
 
 ```csharp
 public static sbyte StoreBits(this sbyte value, sbyte source, int offset, Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.StoreBitsExtensions.StoreBits(thissbyte,sbyte,int,Jcd.BitManipulation.BitMask).value'></a>
@@ -38,3 +37,4 @@ the mask of which bits to store
 #### Returns
 
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
+The modified value.

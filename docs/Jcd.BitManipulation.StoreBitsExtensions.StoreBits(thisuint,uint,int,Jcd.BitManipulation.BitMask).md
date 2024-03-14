@@ -2,13 +2,12 @@
 
 ## StoreBitsExtensions.StoreBits(this uint, uint, int, BitMask) Method
 
-Store a masked set of bits from a value to an offset in the destination  
+Store a masked set of bits from a value to an offset in the destination
 The mask must apply to the destination bits.
 
 ```csharp
 public static uint StoreBits(this uint value, uint source, int offset, Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.StoreBitsExtensions.StoreBits(thisuint,uint,int,Jcd.BitManipulation.BitMask).value'></a>
@@ -38,3 +37,4 @@ the mask of which bits to store
 #### Returns
 
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
+The modified value.

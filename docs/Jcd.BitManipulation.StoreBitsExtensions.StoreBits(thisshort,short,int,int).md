@@ -7,7 +7,6 @@ Stores a value at the specified bit location within the variable.
 ```csharp
 public static short StoreBits(this short value, short source, int offset, int size);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.StoreBitsExtensions.StoreBits(thisshort,short,int,int).value'></a>
@@ -37,3 +36,4 @@ The bit size of the value.
 #### Returns
 
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
+The modified value.

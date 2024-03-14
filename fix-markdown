@@ -1,0 +1,9 @@
+#!/bin/sh
+returnd="$(pwd)"
+cd "$(git rev-parse --show-toplevel)" || exit
+echo finding files
+find . -type f -name '*.md'
+echo editing files
+find . -type f -name '*.md' -exec sed -i -Ee 's/[ ]+$//g' {} \;
+find . -type f -name '*.md' -exec sed -i -Ee 's:[\<]br[/][\>]: :g' {} \;
+cd "$returnd" || exit

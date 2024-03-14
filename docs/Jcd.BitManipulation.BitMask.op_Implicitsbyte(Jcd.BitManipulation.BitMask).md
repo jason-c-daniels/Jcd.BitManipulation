@@ -8,7 +8,6 @@ a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 ```csharp
 public static sbyte implicit operator sbyte(Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.op_Implicitsbyte(Jcd.BitManipulation.BitMask).mask'></a>
@@ -19,5 +18,5 @@ the [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') to c
 
 #### Returns
 
-[System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')  
+[System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 the lowest 8 bits of the mask as a signed byte

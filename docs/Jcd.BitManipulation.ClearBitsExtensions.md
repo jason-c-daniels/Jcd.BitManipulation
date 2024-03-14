@@ -8,8 +8,7 @@ Extension methods to aid in clearing bits in various integer data types.
 public static class ClearBitsExtensions
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106;
-ClearBitsExtensions
+Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; ClearBitsExtensions
 
 | Methods                                                                                                                                                                                                                       |                                                                             |
 |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------|

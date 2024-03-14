@@ -1,3 +1,5 @@
+// ReSharper disable UnusedType.Global
+
 namespace Jcd.BitManipulation;
 
 /// <summary>
@@ -37,6 +39,4 @@ namespace Jcd.BitManipulation;
 /// 
 /// </code>
 /// </example>
-internal class NamespaceDoc
-{
-}
+internal class NamespaceDoc;

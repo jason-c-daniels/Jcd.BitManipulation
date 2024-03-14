@@ -1,0 +1,27 @@
+### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ByteArrayExtensions](Jcd.BitManipulation.ByteArrayExtensions.md 'Jcd.BitManipulation.ByteArrayExtensions')
+
+## ByteArrayExtensions.ToUInt32(this ReadOnlySpan<byte>, Endian) Method
+
+Converts bytes into a uint, discarding any excess data.
+
+```csharp
+public static uint ToUInt32(this System.ReadOnlySpan<byte> data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
+```
+#### Parameters
+
+<a name='Jcd.BitManipulation.ByteArrayExtensions.ToUInt32(thisSystem.ReadOnlySpan_byte_,Jcd.BitManipulation.Endian).data'></a>
+
+`data` [System.ReadOnlySpan&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.ReadOnlySpan-1 'System.ReadOnlySpan`1')[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.ReadOnlySpan-1 'System.ReadOnlySpan`1')
+
+the bytes to convert
+
+<a name='Jcd.BitManipulation.ByteArrayExtensions.ToUInt32(thisSystem.ReadOnlySpan_byte_,Jcd.BitManipulation.Endian).endian'></a>
+
+`endian` [Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian')
+
+A setting indicating the endianness of the source data. The default is Endian.Little.
+
+#### Returns
+
+[System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
+The converted uint

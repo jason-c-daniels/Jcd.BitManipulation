@@ -7,7 +7,6 @@ Constructs a byte indexer from the underlying data type.
 ```csharp
 public LittleEndianByteIndexerInt32(int data=0);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexerInt32.LittleEndianByteIndexerInt32(int).data'></a>

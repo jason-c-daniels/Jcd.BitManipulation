@@ -7,7 +7,6 @@ Gets or sets a bit
 ```csharp
 byte this[int index] { get; set; }
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.IByteIndexer.this[int].index'></a>
@@ -17,5 +16,4 @@ byte this[int index] { get; set; }
 the offset of the bit to get or set.
 
 #### Property Value
-
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')

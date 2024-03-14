@@ -8,7 +8,6 @@ The mask must apply to the destination bits.
 ```csharp
 public static long StoreBits(this long value, long source, int offset, Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.StoreBitsExtensions.StoreBits(thislong,long,int,Jcd.BitManipulation.BitMask).value'></a>

@@ -8,7 +8,6 @@ Byte indexing is LSB, least significant byte, at index/offset zero.
 ```csharp
 public static Jcd.BitManipulation.LittleEndianByteIndexerUInt32 StoreBytes(this Jcd.BitManipulation.LittleEndianByteIndexerUInt32 indexer, System.ReadOnlySpan<byte> bytes, int offset, int size=-1);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(thisJcd.BitManipulation.LittleEndianByteIndexerUInt32,System.ReadOnlySpan_byte_,int,int).indexer'></a>

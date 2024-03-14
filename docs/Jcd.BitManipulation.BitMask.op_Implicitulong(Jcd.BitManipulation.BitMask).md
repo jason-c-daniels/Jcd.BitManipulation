@@ -8,7 +8,6 @@ a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 ```csharp
 public static ulong implicit operator ulong(Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.op_Implicitulong(Jcd.BitManipulation.BitMask).mask'></a>

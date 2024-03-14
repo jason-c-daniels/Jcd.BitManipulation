@@ -7,7 +7,6 @@ Get a subset of bytes given a starting offset and length.
 ```csharp
 public byte[] Slice(int start, int length);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexerUInt16.Slice(int,int).start'></a>

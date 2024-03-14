@@ -7,7 +7,6 @@ Extract a subset of bits specified by a bitmask and right align the bits by the 
 ```csharp
 public static uint ReadBits(this uint value, int offset, Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ReadBitsExtensions.ReadBits(thisuint,int,Jcd.BitManipulation.BitMask).value'></a>

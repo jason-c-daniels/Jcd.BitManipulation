@@ -9,5 +9,4 @@ public sbyte Bits { get; set; }
 ```
 
 #### Property Value
-
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')

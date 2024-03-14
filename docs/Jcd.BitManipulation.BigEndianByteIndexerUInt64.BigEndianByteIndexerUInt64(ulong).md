@@ -7,7 +7,6 @@ Constructs a byte indexer from the underlying data type.
 ```csharp
 public BigEndianByteIndexerUInt64(ulong data=0uL);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BigEndianByteIndexerUInt64.BigEndianByteIndexerUInt64(ulong).data'></a>

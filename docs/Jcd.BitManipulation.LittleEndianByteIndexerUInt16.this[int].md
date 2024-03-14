@@ -7,7 +7,6 @@ Access bytes from the underlying data.
 ```csharp
 public byte this[int index] { get; set; }
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexerUInt16.this[int].index'></a>
@@ -19,7 +18,6 @@ The index of the byte to get or set. 0 is the least significant byte from the un
 Implements [this[int]](Jcd.BitManipulation.IByteIndexer.this[int].md 'Jcd.BitManipulation.IByteIndexer.this[int]')
 
 #### Property Value
-
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
 #### Exceptions

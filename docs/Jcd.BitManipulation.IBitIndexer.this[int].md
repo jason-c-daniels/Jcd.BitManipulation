@@ -7,7 +7,6 @@ Gets or sets a bit
 ```csharp
 bool this[int index] { get; set; }
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.IBitIndexer.this[int].index'></a>
@@ -17,5 +16,4 @@ bool this[int index] { get; set; }
 the offset of the bit to get or set.
 
 #### Property Value
-
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')

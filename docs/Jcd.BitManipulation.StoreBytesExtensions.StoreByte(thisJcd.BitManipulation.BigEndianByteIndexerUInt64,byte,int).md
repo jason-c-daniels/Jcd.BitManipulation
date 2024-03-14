@@ -8,7 +8,6 @@ Byte indexing is MSB, most significant byte, at index/offset zero.
 ```csharp
 public static Jcd.BitManipulation.BigEndianByteIndexerUInt64 StoreByte(this Jcd.BitManipulation.BigEndianByteIndexerUInt64 value, byte @byte, int offset);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.StoreBytesExtensions.StoreByte(thisJcd.BitManipulation.BigEndianByteIndexerUInt64,byte,int).value'></a>

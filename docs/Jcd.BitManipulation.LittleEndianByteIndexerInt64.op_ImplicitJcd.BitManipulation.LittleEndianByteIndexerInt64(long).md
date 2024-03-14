@@ -7,7 +7,6 @@ Converts the underlying data type to the buffer type.
 ```csharp
 public static Jcd.BitManipulation.LittleEndianByteIndexerInt64 implicit operator LittleEndianByteIndexerInt64(long data);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexerInt64.op_ImplicitJcd.BitManipulation.LittleEndianByteIndexerInt64(long).data'></a>

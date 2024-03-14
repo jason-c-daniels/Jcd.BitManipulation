@@ -8,7 +8,6 @@ a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 ```csharp
 public static short implicit operator short(Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.op_Implicitshort(Jcd.BitManipulation.BitMask).mask'></a>

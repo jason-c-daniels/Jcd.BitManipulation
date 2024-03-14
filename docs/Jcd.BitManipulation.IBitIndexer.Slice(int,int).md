@@ -7,7 +7,6 @@ Gets a slice of bits from the backing store
 ```csharp
 bool[] Slice(int start, int length);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.IBitIndexer.Slice(int,int).start'></a>

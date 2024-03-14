@@ -7,7 +7,6 @@ Converts the byte indexer to its underlying data type.
 ```csharp
 public static ulong implicit operator ulong(Jcd.BitManipulation.LittleEndianByteIndexerUInt64 indexer);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexerUInt64.op_Implicitulong(Jcd.BitManipulation.LittleEndianByteIndexerUInt64).indexer'></a>

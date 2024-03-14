@@ -7,7 +7,6 @@ Get an enumerator to enumerate the bits with.
 ```csharp
 public bool[] Slice(int start, int length);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexerInt64.Slice(int,int).start'></a>

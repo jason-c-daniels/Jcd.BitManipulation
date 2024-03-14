@@ -7,7 +7,6 @@ Create a 64 bit bit [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulatio
 ```csharp
 public static Jcd.BitManipulation.BitMask FromSingleBit(int offset);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.FromSingleBit(int).offset'></a>

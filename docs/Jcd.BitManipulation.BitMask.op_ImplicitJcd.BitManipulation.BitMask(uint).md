@@ -8,7 +8,6 @@ a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'Sys
 ```csharp
 public static Jcd.BitManipulation.BitMask implicit operator BitMask(uint bits);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.op_ImplicitJcd.BitManipulation.BitMask(uint).bits'></a>

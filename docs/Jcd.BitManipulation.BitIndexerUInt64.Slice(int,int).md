@@ -7,7 +7,6 @@ Get a subset of bits given a starting offset and length.
 ```csharp
 public bool[] Slice(int start, int length);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexerUInt64.Slice(int,int).start'></a>

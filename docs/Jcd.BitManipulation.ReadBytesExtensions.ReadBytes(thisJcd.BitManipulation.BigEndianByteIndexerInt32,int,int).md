@@ -7,7 +7,6 @@ Reads a set of bytes starting at the specified byte location within the indexer.
 ```csharp
 public static byte[] ReadBytes(this Jcd.BitManipulation.BigEndianByteIndexerInt32 indexer, int offset, int size);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(thisJcd.BitManipulation.BigEndianByteIndexerInt32,int,int).indexer'></a>

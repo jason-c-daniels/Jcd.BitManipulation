@@ -9,5 +9,4 @@ public long Data { get; set; }
 ```
 
 #### Property Value
-
 [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')

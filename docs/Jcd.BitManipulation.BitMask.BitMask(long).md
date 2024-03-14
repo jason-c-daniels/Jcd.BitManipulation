@@ -8,7 +8,6 @@ a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'Syste
 ```csharp
 public BitMask(long bits);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.BitMask(long).bits'></a>

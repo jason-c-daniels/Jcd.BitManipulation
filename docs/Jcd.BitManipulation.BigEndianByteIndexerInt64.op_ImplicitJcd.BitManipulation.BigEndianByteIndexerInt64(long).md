@@ -7,7 +7,6 @@ Converts the underlying data type to the indexer type.
 ```csharp
 public static Jcd.BitManipulation.BigEndianByteIndexerInt64 implicit operator BigEndianByteIndexerInt64(long data);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BigEndianByteIndexerInt64.op_ImplicitJcd.BitManipulation.BigEndianByteIndexerInt64(long).data'></a>

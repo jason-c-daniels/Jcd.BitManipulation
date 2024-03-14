@@ -7,7 +7,6 @@ Automatically Convert from an sbyte to a BitIndexerSByte
 ```csharp
 public static Jcd.BitManipulation.BitIndexerSByte implicit operator BitIndexerSByte(sbyte bits);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexerSByte.op_ImplicitJcd.BitManipulation.BitIndexerSByte(sbyte).bits'></a>

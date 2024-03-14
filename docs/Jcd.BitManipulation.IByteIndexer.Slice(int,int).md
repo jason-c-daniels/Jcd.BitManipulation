@@ -7,7 +7,6 @@ Gets a slice of bytes from the backing store
 ```csharp
 byte[] Slice(int start, int length);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.IByteIndexer.Slice(int,int).start'></a>

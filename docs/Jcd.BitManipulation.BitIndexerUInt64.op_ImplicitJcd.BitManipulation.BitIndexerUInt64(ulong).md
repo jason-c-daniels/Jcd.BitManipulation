@@ -7,7 +7,6 @@ Automatically Convert from a ulong to a BitIndexerUInt64
 ```csharp
 public static Jcd.BitManipulation.BitIndexerUInt64 implicit operator BitIndexerUInt64(ulong bits);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexerUInt64.op_ImplicitJcd.BitManipulation.BitIndexerUInt64(ulong).bits'></a>

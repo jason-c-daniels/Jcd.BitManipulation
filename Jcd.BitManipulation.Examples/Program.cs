@@ -132,7 +132,7 @@ internal static class Program
       var operationCount = iterations * opsPerIteration;
       var stats          = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if ("super happy fun time" == data.ToString()) Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void TimeStoreByteAndReadByteCalls(int iterations, bool report = true)
@@ -158,7 +158,7 @@ internal static class Program
       var operationCount = iterations * opsPerIteration;
       var stats          = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if ("super happy fun time" == data.ToString()) Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void TimeStoreByteAndReadByteFromIndexerCalls(int iterations, bool report = true)
@@ -184,7 +184,7 @@ internal static class Program
       var operationCount = iterations * opsPerIteration;
       var stats          = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if ("super happy fun time" == data.ToString()) Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void TimeStore8BytesToLongCalls(int iterations, bool report = true)
@@ -214,7 +214,7 @@ internal static class Program
       var operationCount = iterations * opsPerIteration;
       var stats          = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if ("super happy fun time" == data.ToString()) Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void TimeStore4BytesToLongCalls(int iterations, bool report = true)
@@ -244,7 +244,7 @@ internal static class Program
       var operationCount = iterations * opsPerIteration;
       var stats          = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if ("super happy fun time" == data.ToString()) Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void TimeStore2BytesToLongCalls(int iterations, bool report = true)
@@ -274,7 +274,7 @@ internal static class Program
       var operationCount = iterations * opsPerIteration;
       var stats          = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if ("super happy fun time" == data.ToString()) Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void TimeStore8BytesToIndexerCalls(int iterations, bool report = true)
@@ -304,7 +304,7 @@ internal static class Program
       var operationCount = iterations * opsPerIteration;
       var stats          = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if ("super happy fun time" == data.ToString()) Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void TimeStore4BytesToIndexerCalls(int iterations, bool report = true)
@@ -334,7 +334,7 @@ internal static class Program
       var operationCount = iterations * opsPerIteration;
       var stats          = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if ("super happy fun time" == data.ToString()) Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void TimeStore2BytesToIndexerCalls(int iterations, bool report = true)
@@ -364,7 +364,7 @@ internal static class Program
       var operationCount = iterations * opsPerIteration;
       var stats          = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if ("super happy fun time" == data.ToString()) Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void TimeByteArrayToUInt64(int iterations, bool report = true)
@@ -399,7 +399,7 @@ internal static class Program
       var operationCount = iterations * opsPerIteration;
       var stats          = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if ("super happy fun time" == data.ToString()) Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void TimeByteArrayToUInt64BigEndian(int iterations, bool report = true)
@@ -434,7 +434,7 @@ internal static class Program
       var operationCount = iterations * opsPerIteration;
       var stats          = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if ("super happy fun time" == data.ToString()) Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void TimeCastOperations(int iterations, bool report = true)
@@ -458,7 +458,7 @@ internal static class Program
       var operationCount = iterations * opsPerIteration;
       var stats          = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if ("super happy fun time" == ((long) idx).ToString()) Console.WriteLine($"{convertedBack}");
+      if (((long) idx).ToString() == "super happy fun time") Console.WriteLine($"{convertedBack}");
    }
 
    private static void TimeReadOnlySpanOfByteToUInt64(int iterations, bool report = true)
@@ -494,7 +494,7 @@ internal static class Program
       var operationCount = iterations * opsPerIteration;
       var stats          = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if ("super happy fun time" == data.ToString()) Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void TimeReadOnlySpanOfByteToUInt64BigEndian(int iterations, bool report = true)
@@ -530,7 +530,7 @@ internal static class Program
       var operationCount = iterations * opsPerIteration;
       var stats          = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if ("super happy fun time" == data.ToString()) Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void ReportStats(RunStats stats, int operationCount, int iterations)

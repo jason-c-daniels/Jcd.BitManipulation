@@ -7,7 +7,6 @@ Automatically Convert from a short to a BitIndexerInt16
 ```csharp
 public static Jcd.BitManipulation.BitIndexerInt16 implicit operator BitIndexerInt16(short bits);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexerInt16.op_ImplicitJcd.BitManipulation.BitIndexerInt16(short).bits'></a>

@@ -8,7 +8,6 @@ an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'Syst
 ```csharp
 public static Jcd.BitManipulation.BitMask implicit operator BitMask(sbyte bits);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.op_ImplicitJcd.BitManipulation.BitMask(sbyte).bits'></a>

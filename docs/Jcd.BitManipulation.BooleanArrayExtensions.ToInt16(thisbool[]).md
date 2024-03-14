@@ -17,5 +17,5 @@ public static short ToInt16(this bool[] bits);
 the array of bools to convert, LSB at index 0
 
 #### Returns
-[System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')  
+[System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 The converted short

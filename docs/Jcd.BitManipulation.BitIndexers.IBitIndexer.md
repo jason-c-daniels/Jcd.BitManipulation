@@ -11,14 +11,14 @@ System.Collections.Generic.IEnumerable<bool>,
 System.Collections.IEnumerable
 ```
 
-Derived  
-&#8627; [BitIndexerByte](Jcd.BitManipulation.BitIndexers.BitIndexerByte.md 'Jcd.BitManipulation.BitIndexers.BitIndexerByte')  
-&#8627; [BitIndexerInt16](Jcd.BitManipulation.BitIndexers.BitIndexerInt16.md 'Jcd.BitManipulation.BitIndexers.BitIndexerInt16')  
-&#8627; [BitIndexerInt32](Jcd.BitManipulation.BitIndexers.BitIndexerInt32.md 'Jcd.BitManipulation.BitIndexers.BitIndexerInt32')  
-&#8627; [BitIndexerInt64](Jcd.BitManipulation.BitIndexers.BitIndexerInt64.md 'Jcd.BitManipulation.BitIndexers.BitIndexerInt64')  
-&#8627; [BitIndexerSByte](Jcd.BitManipulation.BitIndexers.BitIndexerSByte.md 'Jcd.BitManipulation.BitIndexers.BitIndexerSByte')  
-&#8627; [BitIndexerUInt16](Jcd.BitManipulation.BitIndexers.BitIndexerUInt16.md 'Jcd.BitManipulation.BitIndexers.BitIndexerUInt16')  
-&#8627; [BitIndexerUInt32](Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.md 'Jcd.BitManipulation.BitIndexers.BitIndexerUInt32')  
+Derived
+&#8627; [BitIndexerByte](Jcd.BitManipulation.BitIndexers.BitIndexerByte.md 'Jcd.BitManipulation.BitIndexers.BitIndexerByte')
+&#8627; [BitIndexerInt16](Jcd.BitManipulation.BitIndexers.BitIndexerInt16.md 'Jcd.BitManipulation.BitIndexers.BitIndexerInt16')
+&#8627; [BitIndexerInt32](Jcd.BitManipulation.BitIndexers.BitIndexerInt32.md 'Jcd.BitManipulation.BitIndexers.BitIndexerInt32')
+&#8627; [BitIndexerInt64](Jcd.BitManipulation.BitIndexers.BitIndexerInt64.md 'Jcd.BitManipulation.BitIndexers.BitIndexerInt64')
+&#8627; [BitIndexerSByte](Jcd.BitManipulation.BitIndexers.BitIndexerSByte.md 'Jcd.BitManipulation.BitIndexers.BitIndexerSByte')
+&#8627; [BitIndexerUInt16](Jcd.BitManipulation.BitIndexers.BitIndexerUInt16.md 'Jcd.BitManipulation.BitIndexers.BitIndexerUInt16')
+&#8627; [BitIndexerUInt32](Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.md 'Jcd.BitManipulation.BitIndexers.BitIndexerUInt32')
 &#8627; [BitIndexerUInt64](Jcd.BitManipulation.BitIndexers.BitIndexerUInt64.md 'Jcd.BitManipulation.BitIndexers.BitIndexerUInt64')
 
 Implements [System.Collections.Generic.IEnumerable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1'), [System.Collections.IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerable 'System.Collections.IEnumerable')

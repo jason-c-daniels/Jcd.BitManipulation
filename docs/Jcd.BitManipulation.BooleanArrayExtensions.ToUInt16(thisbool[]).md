@@ -17,5 +17,5 @@ public static ushort ToUInt16(this bool[] bits);
 the array of bools to convert, LSB at index 0
 
 #### Returns
-[System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')  
+[System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 The converted ushort

@@ -17,5 +17,6 @@ public static Jcd.BitManipulation.BitIndexers.BitMask FromSingleBit(int offset);
 the bit to set
 
 #### Returns
-[BitMask](Jcd.BitManipulation.BitIndexers.BitMask.md 'Jcd.BitManipulation.BitIndexers.BitMask')  
+
+[BitMask](Jcd.BitManipulation.BitIndexers.BitMask.md 'Jcd.BitManipulation.BitIndexers.BitMask')
 a [BitMask](Jcd.BitManipulation.BitIndexers.BitMask.md 'Jcd.BitManipulation.BitIndexers.BitMask') with the specified bit set.

@@ -23,5 +23,5 @@ the bytes to convert
 A setting indicating the endianness of the source data. The default is Endian.Little.
 
 #### Returns
-[System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')  
+[System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 The converted ushort

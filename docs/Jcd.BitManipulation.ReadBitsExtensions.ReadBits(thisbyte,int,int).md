@@ -29,5 +29,5 @@ the bit offset to read from
 The total number of bits to extract
 
 #### Returns
-[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')  
+[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 The numeric value stored at that bit location

@@ -23,5 +23,6 @@ the lowest bit to start turning on
 the number of bits to set to 1
 
 #### Returns
-[BitMask](Jcd.BitManipulation.BitIndexers.BitMask.md 'Jcd.BitManipulation.BitIndexers.BitMask')  
+
+[BitMask](Jcd.BitManipulation.BitIndexers.BitMask.md 'Jcd.BitManipulation.BitIndexers.BitMask')
 the shifted mask

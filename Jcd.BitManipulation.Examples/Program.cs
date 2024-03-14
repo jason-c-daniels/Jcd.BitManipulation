@@ -25,16 +25,19 @@ internal static class Program
         #else
         const int iterations = 100_000_000;
         #endif
-
-        var ul = 0xFFFEFDFEFCFBFAF9;
-        var ba = ul.ToByteArray();
+        var ul     = 0xFFFEFDFEFCFBFAF9;
+        var ulbi   = (BigEndianByteIndexerUInt64) ul;
+        var b0     = ulbi[0];
+        var b1     = ulbi[1];
+        var b2     = ulbi[2];
+        var ba     = ul.ToByteArray();
         var baBigE = ul.ToByteArray(Endian.Big);
-        var ul1 = ba.ToUInt64();
-        var ul2 = ba.ToUInt64(Endian.Big);
-        var ul3 = baBigE.ToUInt64(Endian.Big);
-        var ul4 = baBigE.ToUInt64();
-        var ba1 = ul1.ToByteArray();
-        var ba2 = ul2.ToByteArray();
+        var ul1    = ba.ToUInt64();
+        var ul2    = ba.ToUInt64(Endian.Big);
+        var ul3    = baBigE.ToUInt64(Endian.Big);
+        var ul4    = baBigE.ToUInt64();
+        var ba1    = ul1.ToByteArray();
+        var ba2    = ul2.ToByteArray();
 
         // warm things up        
         TimeBitManipulations(iterations / 10, false);
@@ -156,12 +159,12 @@ internal static class Program
     {
         if (report) SystemInfo.Instance.RefreshInfo();
         if (report) Console.WriteLine($"  - Name: {nameof(TimeStoreByteAndReadByteFromIndexerCalls)}");
-        const int opsPerIteration = 2;
-        long data = 0;
-        byte upperByte = 0;
-        var fourBytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B };
-        var sw = Stopwatch.StartNew();
-        ByteIndexerUInt64 indexer = 0ul;
+        const int                     opsPerIteration = 2;
+        long                          data            = 0;
+        byte                          upperByte       = 0;
+        var                           fourBytes       = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B };
+        var                           sw              = Stopwatch.StartNew();
+        LittleEndianByteIndexerUInt64 indexer         = 0ul;
         for (long i = 0; i < iterations; i++)
         {
             indexer[1] = 0xFF;
@@ -241,11 +244,11 @@ internal static class Program
     {
         if (report) SystemInfo.Instance.RefreshInfo();
         if (report) Console.WriteLine($"  - Name: {nameof(TimeStore8BytesToIndexerCalls)}");
-        const int opsPerIteration = 1;
-        byte upperByte = 0;
-        var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
-        ByteIndexerInt64 data = 0;
-        var sw = Stopwatch.StartNew();
+        const int                    opsPerIteration = 1;
+        byte                         upperByte       = 0;
+        var                          bytes           = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+        LittleEndianByteIndexerInt64 data            = 0;
+        var                          sw              = Stopwatch.StartNew();
         for (long i = 0; i < iterations; i++) data.StoreBytes(bytes, 0);
 
         sw.Stop();
@@ -261,11 +264,11 @@ internal static class Program
     {
         if (report) SystemInfo.Instance.RefreshInfo();
         if (report) Console.WriteLine($"  - Name: {nameof(TimeStore4BytesToIndexerCalls)}");
-        const int opsPerIteration = 1;
-        ByteIndexerInt64 data = 0;
-        byte upperByte = 0;
-        var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
-        var sw = Stopwatch.StartNew();
+        const int                    opsPerIteration = 1;
+        LittleEndianByteIndexerInt64 data            = 0;
+        byte                         upperByte       = 0;
+        var                          bytes           = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+        var                          sw              = Stopwatch.StartNew();
         for (long i = 0; i < iterations; i++) data.StoreBytes(bytes, 0, 4);
 
         sw.Stop();
@@ -281,11 +284,11 @@ internal static class Program
     {
         if (report) SystemInfo.Instance.RefreshInfo();
         if (report) Console.WriteLine($"  - Name: {nameof(TimeStore2BytesToIndexerCalls)}");
-        const int opsPerIteration = 1;
-        ByteIndexerInt64 data = 0;
-        byte upperByte = 0;
-        var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
-        var sw = Stopwatch.StartNew();
+        const int                    opsPerIteration = 1;
+        LittleEndianByteIndexerInt64 data            = 0;
+        byte                         upperByte       = 0;
+        var                          bytes           = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+        var                          sw              = Stopwatch.StartNew();
         for (long i = 0; i < iterations; i++) data.StoreBytes(bytes, 0, 2);
 
         sw.Stop();
@@ -349,10 +352,10 @@ internal static class Program
     {
         if (report) SystemInfo.Instance.RefreshInfo();
         if (report) Console.WriteLine($"  - Name: {nameof(TimeCastOperations)}");
-        const int opsPerIteration = 2;
-        ByteIndexerInt64 idx = 0;
-        long convertedBack = 0;
-        var sw = Stopwatch.StartNew();
+        const int                    opsPerIteration = 2;
+        LittleEndianByteIndexerInt64 idx             = 0;
+        long                         convertedBack   = 0;
+        var                          sw              = Stopwatch.StartNew();
         for (var i = 0; i < iterations; i++)
         {
             idx = i;

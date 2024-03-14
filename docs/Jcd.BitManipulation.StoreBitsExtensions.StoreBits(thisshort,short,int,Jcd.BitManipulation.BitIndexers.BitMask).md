@@ -3,7 +3,7 @@
 
 ## StoreBitsExtensions.StoreBits(this short, short, int, BitMask) Method
 
-Store a masked set of bits from a value to an offset in the destination  
+Store a masked set of bits from a value to an offset in the destination
 The mask must apply to the destination bits.
 
 ```csharp
@@ -36,5 +36,5 @@ the destination offset of where to store the bits
 the mask of which bits to store
 
 #### Returns
-[System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')  
+[System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 The modified value.

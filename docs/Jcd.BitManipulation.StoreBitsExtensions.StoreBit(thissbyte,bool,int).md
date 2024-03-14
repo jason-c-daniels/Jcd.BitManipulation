@@ -29,5 +29,5 @@ The bit value to set
 the offset of the bit to write
 
 #### Returns
-[System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')  
+[System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 The modified value.

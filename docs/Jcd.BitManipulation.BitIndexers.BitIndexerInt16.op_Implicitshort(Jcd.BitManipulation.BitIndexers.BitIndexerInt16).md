@@ -17,5 +17,6 @@ public static short implicit operator short(Jcd.BitManipulation.BitIndexers.BitI
 the indexer to convert from
 
 #### Returns
-[System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')  
+
+[System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 the short

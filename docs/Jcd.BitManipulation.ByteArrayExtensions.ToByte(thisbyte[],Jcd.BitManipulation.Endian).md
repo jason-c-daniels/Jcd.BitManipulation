@@ -23,5 +23,5 @@ the bytes to convert
 A setting indicating the endianness of the source data. The default is Endian.Little.
 
 #### Returns
-[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')  
+[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 The converted byte

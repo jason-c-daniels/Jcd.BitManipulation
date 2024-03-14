@@ -13,17 +13,25 @@ public class ReadBytesExtensionsTests
     #region ReadByte Tests
 
     [Theory]
-    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 0, 0xF8)]
-    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 1, 0xF9)]
-    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 2, 0xFA)]
-    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 3, 0xFB)]
-    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 4, 0xFC)]
-    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 5, 0xFD)]
-    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 6, 0xFE)]
-    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 7, 0xFF)]
-    public void ReadByte_On_UInt64_Returns_Expected_Value(ulong data, int offset, byte expected)
+    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 0, 0xF8, Endian.Little)]
+    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 1, 0xF9, Endian.Little)]
+    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 2, 0xFA, Endian.Little)]
+    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 3, 0xFB, Endian.Little)]
+    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 4, 0xFC, Endian.Little)]
+    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 5, 0xFD, Endian.Little)]
+    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 6, 0xFE, Endian.Little)]
+    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 7, 0xFF, Endian.Little)]
+    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 7, 0xF8, Endian.Big)]
+    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 6, 0xF9, Endian.Big)]
+    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 5, 0xFA, Endian.Big)]
+    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 4, 0xFB, Endian.Big)]
+    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 3, 0xFC, Endian.Big)]
+    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 2, 0xFD, Endian.Big)]
+    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 1, 0xFE, Endian.Big)]
+    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 0, 0xFF, Endian.Big)]
+    public void ReadByte_On_UInt64_Returns_Expected_Value(ulong data, int offset, byte expected, Endian endian)
     {
-        Assert.Equal(expected, data.ReadByte(offset));
+       Assert.Equal(expected, data.ReadByte(offset, endian));
     }
 
     [Theory]
@@ -77,23 +85,6 @@ public class ReadBytesExtensionsTests
     {
         var ldata = (short)data;
         Assert.Equal(expected, ldata.ReadByte(offset));
-    }
-
-    [Theory]
-    [InlineData(0xF8, 0xF8)]
-    [InlineData(0xF9, 0xF9)]
-    public void ReadByte_On_Byte_Returns_Expected_Value(byte data, byte expected)
-    {
-        Assert.Equal(expected, data.ReadByte());
-    }
-
-    [Theory]
-    [InlineData(0xF8, 0xF8)]
-    [InlineData(0xF9, 0xF9)]
-    public void ReadByte_On_SByte_Returns_Expected_Value(byte data, byte expected)
-    {
-        var ldata = (sbyte)data;
-        Assert.Equal(expected, ldata.ReadByte());
     }
 
     #endregion
@@ -177,27 +168,6 @@ public class ReadBytesExtensionsTests
         Assert.Equal(expected.ToArray(), ldata.ReadBytes(offset, size));
     }
 
-    [Theory]
-    [InlineData(0xF8, 0, 1)]
-    [InlineData(0xFB, 0, 1)]
-    public void ReadBytes_On_Byte_Returns_Expected_Array(byte data, int offset, int size)
-    {
-        var expected = new List<byte>();
-        for (var i = 0; i < size; i++) expected.Add(data.ReadByte());
-        Assert.Equal(expected.ToArray(), data.ReadBytes(offset, size));
-    }
-
-    [Theory]
-    [InlineData(0xF8, 0, 1)]
-    [InlineData(0xFB, 0, 1)]
-    public void ReadBytes_On_SByte_Returns_Expected_Array(byte data, int offset, int size)
-    {
-        var ldata = (sbyte)data;
-        var expected = new List<byte>();
-        for (var i = 0; i < size; i++) expected.Add(data);
-        Assert.Equal(expected.ToArray(), ldata.ReadBytes(offset, size));
-    }
-
     #endregion
 
     #region ReadBytes - ByteIndexer Tests
@@ -212,8 +182,8 @@ public class ReadBytesExtensionsTests
     [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 6, 2)]
     public void ReadBytes_On_ByteIndexerUInt64_Returns_Expected_Array(ulong baseData, int offset, int size)
     {
-        ByteIndexerUInt64 data = baseData;
-        var expected = new List<byte>();
+       LittleEndianByteIndexerUInt64 data     = baseData;
+        var                          expected = new List<byte>();
         for (var i = 0; i < size; i++) expected.Add(data[i + offset]);
         Assert.Equal(expected.ToArray(), data.ReadBytes(offset, size));
     }
@@ -228,8 +198,8 @@ public class ReadBytesExtensionsTests
     [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 6, 2)]
     public void ReadBytes_On_ByteIndexerInt64_Returns_Expected_Array(ulong baseData, int offset, int size)
     {
-        ByteIndexerInt64 data = (long)baseData;
-        var expected = new List<byte>();
+       LittleEndianByteIndexerInt64 data     = (long) baseData;
+        var                         expected = new List<byte>();
         for (var i = 0; i < size; i++) expected.Add(data[i + offset]);
         Assert.Equal(expected.ToArray(), data.ReadBytes(offset, size));
     }
@@ -241,8 +211,8 @@ public class ReadBytesExtensionsTests
     [InlineData(0xFB_FA_F9_F8, 0, 3)]
     public void ReadBytes_On_ByteIndexerUInt32_Returns_Expected_Array(uint baseData, int offset, int size)
     {
-        ByteIndexerUInt32 data = baseData;
-        var expected = new List<byte>();
+       LittleEndianByteIndexerUInt32 data     = baseData;
+        var                          expected = new List<byte>();
         for (var i = 0; i < size; i++) expected.Add(data[i + offset]);
         Assert.Equal(expected.ToArray(), data.ReadBytes(offset, size));
     }
@@ -254,8 +224,8 @@ public class ReadBytesExtensionsTests
     [InlineData(0xFB_FA_F9_F8, 0, 3)]
     public void ReadBytes_On_ByteIndexerInt32_Returns_Expected_Array(uint baseData, int offset, int size)
     {
-        ByteIndexerInt32 data = (int)baseData;
-        var expected = new List<byte>();
+       LittleEndianByteIndexerInt32 data     = (int) baseData;
+        var                         expected = new List<byte>();
         for (var i = 0; i < size; i++) expected.Add(data[i + offset]);
         Assert.Equal(expected.ToArray(), data.ReadBytes(offset, size));
     }
@@ -265,8 +235,8 @@ public class ReadBytesExtensionsTests
     [InlineData(0xFB_FA, 1, 1)]
     public void ReadBytes_On_ByteIndexerUInt16_Returns_Expected_Array(ushort baseData, int offset, int size)
     {
-        ByteIndexerUInt16 data = baseData;
-        var expected = new List<byte>();
+       LittleEndianByteIndexerUInt16 data     = baseData;
+        var                          expected = new List<byte>();
         for (var i = 0; i < size; i++) expected.Add(data[i + offset]);
         Assert.Equal(expected.ToArray(), data.ReadBytes(offset, size));
     }
@@ -276,30 +246,8 @@ public class ReadBytesExtensionsTests
     [InlineData(0xFB_FA, 1, 1)]
     public void ReadBytes_On_ByteIndexerInt16_Returns_Expected_Array(ushort baseData, int offset, int size)
     {
-        ByteIndexerInt16 data = (short)baseData;
-        var expected = new List<byte>();
-        for (var i = 0; i < size; i++) expected.Add(data[i + offset]);
-        Assert.Equal(expected.ToArray(), data.ReadBytes(offset, size));
-    }
-
-    [Theory]
-    [InlineData(0xF8, 0, 1)]
-    [InlineData(0xFB, 0, 1)]
-    public void ReadBytes_On_ByteIndexerByte_Returns_Expected_Array(byte baseData, int offset, int size)
-    {
-        ByteIndexerByte data = baseData;
-        var expected = new List<byte>();
-        for (var i = 0; i < size; i++) expected.Add(data[i + offset]);
-        Assert.Equal(expected.ToArray(), data.ReadBytes(offset, size));
-    }
-
-    [Theory]
-    [InlineData(0xF8, 0, 1)]
-    [InlineData(0xFB, 0, 1)]
-    public void ReadBytes_On_ByteIndexerSByte_Returns_Expected_Array(byte baseData, int offset, int size)
-    {
-        ByteIndexerSByte data = (sbyte)baseData;
-        var expected = new List<byte>();
+       LittleEndianByteIndexerInt16 data     = (short) baseData;
+        var                         expected = new List<byte>();
         for (var i = 0; i < size; i++) expected.Add(data[i + offset]);
         Assert.Equal(expected.ToArray(), data.ReadBytes(offset, size));
     }

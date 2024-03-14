@@ -36,7 +36,7 @@ data=data.ClearBits(4, 8); // value is now 0b1111000000001111
 // Toggle all the bits.
 data=data.ToggleBits(); // value is now 0b0000111111110000
 
-// read the upper byte 
+// read the upper byte
 var upperByte = (byte)data.ReadBits(8, 8); // upperByte is now 0b00001111
 
 // write 0b1011 into the upper nybble
@@ -59,11 +59,11 @@ upperByte = ((byte)data.ReadBits(8, 8)) // extract the upper byte (0b00001111)
 
 #### Breaking Changes
 1. Moved BitIndexers to BitIndexers namespace.
-2. Removed .ToBitIndexerXXXX extension methods. These were redundant with implicit casts. 
+2. Removed .ToBitIndexerXXXX extension methods. These were redundant with implicit casts.
 
 #### New Features
 1. Added numerous byte-level extension methods (to and from an array or span of bytes.)
-2. Added various ByteIndexer classes to the ByteIndexers namespace. 
+2. Added various ByteIndexer classes to the ByteIndexers namespace.
 
 ### Version 2.0 Released
 
@@ -73,8 +73,8 @@ upperByte = ((byte)data.ReadBits(8, 8)) // extract the upper byte (0b00001111)
 2. Renamed `BitMask.CreateSingleBit` to `BitMask.FromSingleBit`.
 3. All `StoreBit` overloads had bit and offset parameters swapped for semantic parity with `StoreBits`
 4. Extension methods: `ClearBits`, `SetBits`, `StoreBits`, `ToggleBits`, `ClearBit`, `SetBit`, `StoreBit`,
-   and `ToggleBit` no longer take `ref` parameters. Now they return the modified result instead of modifying 
-   the original variable. This gives a net benefit of being able to use fluent syntax to chain together 
+   and `ToggleBit` no longer take `ref` parameters. Now they return the modified result instead of modifying
+   the original variable. This gives a net benefit of being able to use fluent syntax to chain together
    bit manipulation operations.
 
 ```

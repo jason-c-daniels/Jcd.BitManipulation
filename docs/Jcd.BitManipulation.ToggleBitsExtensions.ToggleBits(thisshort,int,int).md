@@ -3,7 +3,7 @@
 
 ## ToggleBitsExtensions.ToggleBits(this short, int, int) Method
 
-Toggles bits and size.   
+Toggles bits and size.
 The default values result in toggling all bits.
 
 ```csharp
@@ -30,5 +30,5 @@ The offset of the bits to toggle.
 The number of bits to toggle.
 
 #### Returns
-[System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')  
+[System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 The modified value.

@@ -23,5 +23,5 @@ the bytes to convert
 A setting indicating the endianness of the source data. The default is Endian.Little.
 
 #### Returns
-[System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')  
+[System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 The converted ulong

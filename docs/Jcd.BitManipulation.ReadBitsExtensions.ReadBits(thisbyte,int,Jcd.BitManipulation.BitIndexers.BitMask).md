@@ -26,9 +26,9 @@ the bit offset to read from
 
 `mask` [BitMask](Jcd.BitManipulation.BitIndexers.BitMask.md 'Jcd.BitManipulation.BitIndexers.BitMask')
 
-the bitmask of which bits to read.  
+the bitmask of which bits to read.
             Zeroed bits in the mask will always extract 0 from the source.
 
 #### Returns
-[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')  
+[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 The right shifted value extracted from the value

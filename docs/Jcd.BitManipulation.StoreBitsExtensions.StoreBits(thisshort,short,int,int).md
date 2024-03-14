@@ -35,5 +35,5 @@ The bit location to store the value.
 The bit size of the value.
 
 #### Returns
-[System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')  
+[System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 The modified value.

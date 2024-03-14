@@ -17,5 +17,5 @@ public static int ToInt32(this bool[] bits);
 the array of bools to convert, LSB at index 0
 
 #### Returns
-[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')  
+[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 The converted int

@@ -23,5 +23,5 @@ The value to be modified.
 The offset of the bit to set.
 
 #### Returns
-[System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')  
+[System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 The modified value.

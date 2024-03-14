@@ -3,7 +3,7 @@
 
 ## ToggleBitsExtensions.ToggleBits(this ulong, int, int) Method
 
-Toggles bits and size.   
+Toggles bits and size.
 The default values result in toggling all bits.
 
 ```csharp
@@ -30,5 +30,5 @@ The offset of the bits to toggle.
 The number of bits to toggle.
 
 #### Returns
-[System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')  
+[System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 The modified value.

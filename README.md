@@ -58,12 +58,21 @@ upperByte = ((byte)data.ReadBits(8, 8)) // extract the upper byte (0b00001111)
 ### Version 3.0 Released
 
 #### Breaking Changes
+
 1. Moved BitIndexers to BitIndexers namespace.
 2. Removed .ToBitIndexerXXXX extension methods. These were redundant with implicit casts.
 
 #### New Features
+
 1. Added numerous byte-level extension methods (to and from an array or span of bytes.)
 2. Added various ByteIndexer classes to the ByteIndexers namespace.
+
+### Version 2.1 Released
+
+1. Added `GetBytes` and `GetByte` extension methods for intrinsic data types.
+2. Added `StoreBytes` and `StoreByte` extension methods for intrinsic data types.
+3. Added `LittleEndianXXXByteIndexer` classes.
+4. Added `BigEndianXXXByteIndexer` classes.
 
 ### Version 2.0 Released
 

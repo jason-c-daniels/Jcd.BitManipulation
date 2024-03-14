@@ -2,7 +2,9 @@
 
 ## BigEndianByteIndexerInt16 Struct
 
-Provides byte level indexing operations (set, get) on a UInt64. Zero is the most significant byte.
+Provides byte level indexing operations (set, get) on
+an [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16'). Zero is the most significant
+byte.
 
 ```csharp
 public struct BigEndianByteIndexerInt16 :
@@ -13,9 +15,9 @@ System.Collections.IEnumerable
 
 Implements [IByteIndexer](Jcd.BitManipulation.IByteIndexer.md 'Jcd.BitManipulation.IByteIndexer'), [System.Collections.Generic.IEnumerable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1'), [System.Collections.IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerable 'System.Collections.IEnumerable')
 
-| Constructors                                                                                                                                                                                           |                                                          |
-|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------|
-| [BigEndianByteIndexerInt16(short)](Jcd.BitManipulation.BigEndianByteIndexerInt16.BigEndianByteIndexerInt16(short).md 'Jcd.BitManipulation.BigEndianByteIndexerInt16.BigEndianByteIndexerInt16(short)') | Constructs a byte indexer from the underlying data type. |
+| Constructors                                                                                                                                                                                           |                                                                                                                                                                                                                                             |
+|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [BigEndianByteIndexerInt16(short)](Jcd.BitManipulation.BigEndianByteIndexerInt16.BigEndianByteIndexerInt16(short).md 'Jcd.BitManipulation.BigEndianByteIndexerInt16.BigEndianByteIndexerInt16(short)') | Constructs a [BigEndianByteIndexerInt16](Jcd.BitManipulation.BigEndianByteIndexerInt16.md 'Jcd.BitManipulation.BigEndianByteIndexerInt16') from an [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16'). |
 
 | Fields                                                                                                                                     |                                          |
 |:-------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------|

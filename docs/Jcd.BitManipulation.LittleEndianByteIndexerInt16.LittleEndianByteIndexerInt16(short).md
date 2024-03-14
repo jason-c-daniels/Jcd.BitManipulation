@@ -2,7 +2,9 @@
 
 ## LittleEndianByteIndexerInt16(short) Constructor
 
-Constructs a byte indexer from the underlying data type.
+Constructs
+a [LittleEndianByteIndexerInt16](Jcd.BitManipulation.LittleEndianByteIndexerInt16.md 'Jcd.BitManipulation.LittleEndianByteIndexerInt16')
+from an [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16').
 
 ```csharp
 public LittleEndianByteIndexerInt16(short data=0);
@@ -13,4 +15,4 @@ public LittleEndianByteIndexerInt16(short data=0);
 
 `data` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 
-The initial value of the data.
+The initial value of the underlying data.

@@ -2,7 +2,9 @@
 
 ## BigEndianByteIndexerInt64(long) Constructor
 
-Constructs a byte indexer from the underlying data type.
+Constructs
+a [BigEndianByteIndexerInt64](Jcd.BitManipulation.BigEndianByteIndexerInt64.md 'Jcd.BitManipulation.BigEndianByteIndexerInt64')
+from an [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64').
 
 ```csharp
 public BigEndianByteIndexerInt64(long data=0L);
@@ -13,4 +15,4 @@ public BigEndianByteIndexerInt64(long data=0L);
 
 `data` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 
-The initial value of the data.
+The initial value of the underlying data.

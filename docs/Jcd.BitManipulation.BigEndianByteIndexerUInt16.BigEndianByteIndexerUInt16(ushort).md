@@ -2,7 +2,9 @@
 
 ## BigEndianByteIndexerUInt16(ushort) Constructor
 
-Constructs a byte indexer from the underlying data type.
+Constructs
+a [BigEndianByteIndexerUInt16](Jcd.BitManipulation.BigEndianByteIndexerUInt16.md 'Jcd.BitManipulation.BigEndianByteIndexerUInt16')
+from an [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16').
 
 ```csharp
 public BigEndianByteIndexerUInt16(ushort data=0);
@@ -13,4 +15,4 @@ public BigEndianByteIndexerUInt16(ushort data=0);
 
 `data` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 
-The initial value of the data.
+The initial value of the underlying data.

@@ -2,7 +2,7 @@
 
 ## StoreBitsExtensions.StoreBit(this int, bool, int) Method
 
-Store a single bit from the specified offset.
+Store a single bit at the specified offset.
 
 ```csharp
 public static int StoreBit(this int value, bool bit, int offset);

@@ -2,7 +2,9 @@
 
 ## LittleEndianByteIndexerUInt64(ulong) Constructor
 
-Constructs a byte indexer from the underlying data type.
+Constructs
+a [LittleEndianByteIndexerUInt64](Jcd.BitManipulation.LittleEndianByteIndexerUInt64.md 'Jcd.BitManipulation.LittleEndianByteIndexerUInt64')
+from an [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64').
 
 ```csharp
 public LittleEndianByteIndexerUInt64(ulong data=0uL);
@@ -13,4 +15,4 @@ public LittleEndianByteIndexerUInt64(ulong data=0uL);
 
 `data` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
-The initial value of the data.
+The initial value of the underlying data.

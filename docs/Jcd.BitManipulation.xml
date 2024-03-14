@@ -6,7 +6,8 @@
     <members>
        <member name="T:Jcd.BitManipulation.BigEndianByteIndexerInt16">
           <summary>
-             Provides byte level indexing operations (set, get) on a UInt64. Zero is the most significant byte.
+             Provides byte level indexing operations (set, get) on an<see cref="T:System.Int16"/>. Zero is the most
+             significant byte.
           </summary>
        </member>
        <member name="F:Jcd.BitManipulation.BigEndianByteIndexerInt16.ByteSize">
@@ -21,9 +22,11 @@
        </member>
        <member name="M:Jcd.BitManipulation.BigEndianByteIndexerInt16.#ctor(System.Int16)">
           <summary>
-             Constructs a byte indexer from the underlying data type.
+             Constructs a
+             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexerInt16"/>
+             from an<see cref="T:System.Int16"/>.
           </summary>
-          <param name="data">The initial value of the data.</param>
+          <param name="data">The initial value of the underlying data.</param>
        </member>
        <member name="P:Jcd.BitManipulation.BigEndianByteIndexerInt16.Length">
           <summary>
@@ -76,7 +79,8 @@
        </member>
        <member name="T:Jcd.BitManipulation.BigEndianByteIndexerInt32">
           <summary>
-             Provides byte level indexing operations (set, get) on a UInt64. Zero is the most significant byte.
+             Provides byte level indexing operations (set, get) on a<see cref="T:System.Int32"/>. Zero is the most
+             significant byte.
           </summary>
        </member>
        <member name="F:Jcd.BitManipulation.BigEndianByteIndexerInt32.ByteSize">
@@ -91,9 +95,11 @@
        </member>
        <member name="M:Jcd.BitManipulation.BigEndianByteIndexerInt32.#ctor(System.Int32)">
           <summary>
-             Constructs a byte indexer from the underlying data type.
+             Constructs a
+             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexerInt32"/>
+             from an<see cref="T:System.Int32"/>.
           </summary>
-          <param name="data">The initial value of the data.</param>
+          <param name="data">The initial value of the underlying data.</param>
        </member>
        <member name="P:Jcd.BitManipulation.BigEndianByteIndexerInt32.Length">
           <summary>
@@ -146,7 +152,8 @@
        </member>
        <member name="T:Jcd.BitManipulation.BigEndianByteIndexerInt64">
           <summary>
-             Provides byte level indexing operations (set, get) on an Int64. Zero is the most significant byte.
+             Provides byte level indexing operations (set, get) on an<see cref="T:System.Int64"/>. Zero is the most
+             significant byte.
           </summary>
        </member>
        <member name="F:Jcd.BitManipulation.BigEndianByteIndexerInt64.ByteSize">
@@ -161,9 +168,11 @@
        </member>
        <member name="M:Jcd.BitManipulation.BigEndianByteIndexerInt64.#ctor(System.Int64)">
           <summary>
-             Constructs a byte indexer from the underlying data type.
+             Constructs a
+             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexerInt64"/>
+             from an<see cref="T:System.Int64"/>.
           </summary>
-          <param name="data">The initial value of the data.</param>
+          <param name="data">The initial value of the underlying data.</param>
        </member>
        <member name="P:Jcd.BitManipulation.BigEndianByteIndexerInt64.Length">
           <summary>
@@ -216,7 +225,8 @@
        </member>
        <member name="T:Jcd.BitManipulation.BigEndianByteIndexerUInt16">
           <summary>
-             Provides byte level indexing operations (set, get) on a UInt64. Zero is the most significant byte.
+             Provides byte level indexing operations (set, get) on a<see cref="T:System.UInt16"/>. Zero is the most
+             significant byte.
           </summary>
        </member>
        <member name="F:Jcd.BitManipulation.BigEndianByteIndexerUInt16.ByteSize">
@@ -231,9 +241,11 @@
        </member>
        <member name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt16.#ctor(System.UInt16)">
           <summary>
-             Constructs a byte indexer from the underlying data type.
+             Constructs a
+             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexerUInt16"/>
+             from an<see cref="T:System.UInt16"/>.
           </summary>
-          <param name="data">The initial value of the data.</param>
+          <param name="data">The initial value of the underlying data.</param>
        </member>
        <member name="P:Jcd.BitManipulation.BigEndianByteIndexerUInt16.Length">
           <summary>
@@ -286,7 +298,8 @@
        </member>
        <member name="T:Jcd.BitManipulation.BigEndianByteIndexerUInt32">
           <summary>
-             Provides byte level indexing operations (set, get) on a UInt64. Zero is the most significant byte.
+             Provides byte level indexing operations (set, get) on a<see cref="T:System.UInt32"/>. Zero is the most
+             significant byte.
           </summary>
        </member>
        <member name="F:Jcd.BitManipulation.BigEndianByteIndexerUInt32.ByteSize">
@@ -301,9 +314,11 @@
        </member>
        <member name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt32.#ctor(System.UInt32)">
           <summary>
-             Constructs a byte indexer from the underlying data type.
+             Constructs a
+             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexerUInt32"/>
+             from an<see cref="T:System.UInt32"/>.
           </summary>
-          <param name="data">The initial value of the data.</param>
+          <param name="data">The initial value of the underlying data.</param>
        </member>
        <member name="P:Jcd.BitManipulation.BigEndianByteIndexerUInt32.Length">
           <summary>
@@ -356,7 +371,8 @@
        </member>
        <member name="T:Jcd.BitManipulation.BigEndianByteIndexerUInt64">
           <summary>
-             Provides byte level indexing operations (set, get) on a UInt64. Zero is the most significant byte.
+             Provides byte level indexing operations (set, get) on a<see cref="T:System.UInt64"/>. Zero is the most
+             significant byte.
           </summary>
        </member>
        <member name="F:Jcd.BitManipulation.BigEndianByteIndexerUInt64.ByteSize">
@@ -371,9 +387,11 @@
        </member>
        <member name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt64.#ctor(System.UInt64)">
           <summary>
-             Constructs a byte indexer from the underlying data type.
+             Constructs a
+             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexerUInt64"/>
+             from an<see cref="T:System.UInt64"/>.
           </summary>
-          <param name="data">The initial value of the data.</param>
+          <param name="data">The initial value of the underlying data.</param>
        </member>
        <member name="P:Jcd.BitManipulation.BigEndianByteIndexerUInt64.Length">
           <summary>
@@ -1946,7 +1964,8 @@
         </member>
        <member name="T:Jcd.BitManipulation.LittleEndianByteIndexerInt16">
             <summary>
-            Provides byte level indexing operations (set, get) on a Int16. Zero is the least significant byte.
+               Provides byte level indexing operations (set, get) on a<see cref="T:System.Int16"/>. Zero is the least
+               significant byte.
             </summary>
         </member>
        <member name="F:Jcd.BitManipulation.LittleEndianByteIndexerInt16.ByteSize">
@@ -1961,9 +1980,11 @@
         </member>
        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt16.#ctor(System.Int16)">
             <summary>
-            Constructs a byte indexer from the underlying data type.
+               Constructs a
+               <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexerInt16"/>
+               from an<see cref="T:System.Int16"/>.
             </summary>
-            <param name="data">The initial value of the data.</param>
+          <param name="data">The initial value of the underlying data.</param>
         </member>
        <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerInt16.Length">
             <summary>
@@ -2014,7 +2035,8 @@
         </member>
        <member name="T:Jcd.BitManipulation.LittleEndianByteIndexerInt32">
             <summary>
-            Provides byte level indexing operations (set, get) on a Int32. Zero is the least significant byte.
+               Provides byte level indexing operations (set, get) on a<see cref="T:System.Int32"/>. Zero is the least
+               significant byte.
             </summary>
         </member>
        <member name="F:Jcd.BitManipulation.LittleEndianByteIndexerInt32.ByteSize">
@@ -2029,9 +2051,11 @@
         </member>
        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt32.#ctor(System.Int32)">
             <summary>
-            Constructs a byte indexer from the underlying data type.
+               Constructs a
+               <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexerInt32"/>
+               from an<see cref="T:System.Int32"/>.
             </summary>
-            <param name="data">The initial value of the data.</param>
+          <param name="data">The initial value of the underlying data.</param>
         </member>
        <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerInt32.Length">
             <summary>
@@ -2082,7 +2106,8 @@
         </member>
        <member name="T:Jcd.BitManipulation.LittleEndianByteIndexerInt64">
             <summary>
-            Provides byte level indexing operations (set, get) on a Int64. Zero is the least significant byte.
+               Provides byte level indexing operations (set, get) on a<see cref="T:System.Int64"/>. Zero is the least
+               significant byte.
             </summary>
         </member>
        <member name="F:Jcd.BitManipulation.LittleEndianByteIndexerInt64.ByteSize">
@@ -2097,9 +2122,11 @@
         </member>
        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt64.#ctor(System.Int64)">
             <summary>
-            Constructs a byte indexer from the underlying data type.
+               Constructs a
+               <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexerInt64"/>
+               from an<see cref="T:System.Int64"/>.
             </summary>
-            <param name="data">The initial value of the data.</param>
+          <param name="data">The initial value of the underlying data.</param>
         </member>
        <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerInt64.Length">
             <summary>
@@ -2150,7 +2177,8 @@
         </member>
        <member name="T:Jcd.BitManipulation.LittleEndianByteIndexerUInt16">
             <summary>
-            Provides byte level indexing operations (set, get) on a UInt16. Zero is the least significant byte.
+               Provides byte level indexing operations (set, get) on a<see cref="T:System.UInt16"/>. Zero is the least
+               significant byte.
             </summary>
         </member>
        <member name="F:Jcd.BitManipulation.LittleEndianByteIndexerUInt16.ByteSize">
@@ -2165,9 +2193,11 @@
         </member>
        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt16.#ctor(System.UInt16)">
             <summary>
-            Constructs a byte indexer from the underlying data type.
+               Constructs a
+               <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexerUInt16"/>
+               from an<see cref="T:System.UInt16"/>.
             </summary>
-            <param name="data">The initial value of the data.</param>
+          <param name="data">The initial value of the underlying data.</param>
         </member>
        <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerUInt16.Length">
             <summary>
@@ -2218,7 +2248,8 @@
         </member>
        <member name="T:Jcd.BitManipulation.LittleEndianByteIndexerUInt32">
             <summary>
-            Provides byte level indexing operations (set, get) on a UInt32. Zero is the least significant byte.
+               Provides byte level indexing operations (set, get) on a<see cref="T:System.UInt32"/>. Zero is the least
+               significant byte.
             </summary>
         </member>
        <member name="F:Jcd.BitManipulation.LittleEndianByteIndexerUInt32.ByteSize">
@@ -2233,9 +2264,11 @@
         </member>
        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt32.#ctor(System.UInt32)">
             <summary>
-            Constructs a byte indexer from the underlying data type.
+               Constructs a
+               <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexerUInt32"/>
+               from an<see cref="T:System.UInt32"/>.
             </summary>
-            <param name="data">The initial value of the data.</param>
+          <param name="data">The initial value of the underlying data.</param>
         </member>
        <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerUInt32.Length">
             <summary>
@@ -2286,7 +2319,8 @@
         </member>
        <member name="T:Jcd.BitManipulation.LittleEndianByteIndexerUInt64">
             <summary>
-            Provides byte level indexing operations (set, get) on a UInt64. Zero is the least significant byte.
+               Provides byte level indexing operations (set, get) on a<see cref="T:System.UInt64"/>. Zero is the least
+               significant byte.
             </summary>
         </member>
        <member name="F:Jcd.BitManipulation.LittleEndianByteIndexerUInt64.ByteSize">
@@ -2301,9 +2335,11 @@
         </member>
        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt64.#ctor(System.UInt64)">
             <summary>
-            Constructs a byte indexer from the underlying data type.
+               Constructs a
+               <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexerUInt64"/>
+               from an<see cref="T:System.UInt64"/>.
             </summary>
-            <param name="data">The initial value of the data.</param>
+          <param name="data">The initial value of the underlying data.</param>
         </member>
        <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerUInt64.Length">
             <summary>
@@ -3262,7 +3298,7 @@
         </member>
         <member name="M:Jcd.BitManipulation.StoreBitsExtensions.StoreBit(System.UInt64,System.Boolean,System.Int32)">
             <summary>
-            Store a single bit from the specified offset.
+               Store a single bit at the specified offset.
             </summary>
             <param name="value">The value to be modified.</param>
             <param name="bit">The bit value to set</param>
@@ -3271,7 +3307,7 @@
         </member>
         <member name="M:Jcd.BitManipulation.StoreBitsExtensions.StoreBit(System.Int64,System.Boolean,System.Int32)">
             <summary>
-            Store a single bit from the specified offset.
+               Store a single bit at the specified offset.
             </summary>
             <param name="value">The value to be modified.</param>
             <param name="bit">The bit value to set</param>
@@ -3280,7 +3316,7 @@
         </member>
         <member name="M:Jcd.BitManipulation.StoreBitsExtensions.StoreBit(System.UInt32,System.Boolean,System.Int32)">
             <summary>
-            Store a single bit from the specified offset.
+               Store a single bit at the specified offset.
             </summary>
             <param name="value">The value to be modified.</param>
             <param name="bit">The bit value to set</param>
@@ -3289,7 +3325,7 @@
         </member>
         <member name="M:Jcd.BitManipulation.StoreBitsExtensions.StoreBit(System.Int32,System.Boolean,System.Int32)">
             <summary>
-            Store a single bit from the specified offset.
+               Store a single bit at the specified offset.
             </summary>
             <param name="value">The value to be modified.</param>
             <param name="bit">The bit value to set</param>
@@ -3298,7 +3334,7 @@
         </member>
         <member name="M:Jcd.BitManipulation.StoreBitsExtensions.StoreBit(System.UInt16,System.Boolean,System.Int32)">
             <summary>
-            Store a single bit from the specified offset.
+               Store a single bit at the specified offset.
             </summary>
             <param name="value">The value to be modified.</param>
             <param name="bit">The bit value to set</param>
@@ -3307,7 +3343,7 @@
         </member>
         <member name="M:Jcd.BitManipulation.StoreBitsExtensions.StoreBit(System.Int16,System.Boolean,System.Int32)">
             <summary>
-            Store a single bit from the specified offset.
+               Store a single bit at the specified offset.
             </summary>
             <param name="value">The value to be modified.</param>
             <param name="bit">The bit value to set</param>
@@ -3316,7 +3352,7 @@
         </member>
         <member name="M:Jcd.BitManipulation.StoreBitsExtensions.StoreBit(System.Byte,System.Boolean,System.Int32)">
             <summary>
-            Store a single bit from the specified offset.
+               Store a single bit at the specified offset.
             </summary>
             <param name="value">The value to be modified.</param>
             <param name="bit">The bit value to set</param>
@@ -3325,7 +3361,7 @@
         </member>
         <member name="M:Jcd.BitManipulation.StoreBitsExtensions.StoreBit(System.SByte,System.Boolean,System.Int32)">
             <summary>
-            Store a single bit from the specified offset.
+               Store a single bit at the specified offset.
             </summary>
             <param name="value">The value to be modified.</param>
             <param name="bit">The bit value to set</param>

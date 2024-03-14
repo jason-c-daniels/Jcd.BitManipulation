@@ -2,7 +2,9 @@
 
 ## BigEndianByteIndexerInt32(int) Constructor
 
-Constructs a byte indexer from the underlying data type.
+Constructs
+a [BigEndianByteIndexerInt32](Jcd.BitManipulation.BigEndianByteIndexerInt32.md 'Jcd.BitManipulation.BigEndianByteIndexerInt32')
+from an [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32').
 
 ```csharp
 public BigEndianByteIndexerInt32(int data=0);
@@ -13,4 +15,4 @@ public BigEndianByteIndexerInt32(int data=0);
 
 `data` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The initial value of the data.
+The initial value of the underlying data.

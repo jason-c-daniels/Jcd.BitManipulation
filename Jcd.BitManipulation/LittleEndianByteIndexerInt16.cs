@@ -3,6 +3,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 // ReSharper disable HeapView.ObjectAllocation.Evident
 // ReSharper disable HeapView.ObjectAllocation
@@ -14,7 +15,7 @@ using System.Collections.Generic;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// Provides byte level indexing operations (set, get) on a Int16. Zero is the least significant byte.
+/// Provides byte level indexing operations (set, get) on a <see cref="Int16"/>. Zero is the least significant byte.
 /// </summary>
 public struct LittleEndianByteIndexerInt16 : IByteIndexer
 {
@@ -29,9 +30,9 @@ public struct LittleEndianByteIndexerInt16 : IByteIndexer
    public const int MaxByteIndex = ByteSize - 1;
 
    /// <summary>
-   /// Constructs a byte indexer from the underlying data type.
+   /// Constructs a <see cref="LittleEndianByteIndexerInt16"/> from an <see cref="Int16"/>.
    /// </summary>
-   /// <param name="data">The initial value of the data.</param>
+   /// <param name="data"> The initial value of the underlying data.</param>
    public LittleEndianByteIndexerInt16(short data = 0) { Data = data; }
 
    /// <summary>
@@ -51,6 +52,7 @@ public struct LittleEndianByteIndexerInt16 : IByteIndexer
    /// <exception cref="ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
    public byte this[int index]
    {
+      [MethodImpl(MethodImplOptions.AggressiveInlining)]
       get
       {
          if (index is < 0 or >= ByteSize) throw new ArgumentOutOfRangeException(nameof(index));
@@ -58,6 +60,7 @@ public struct LittleEndianByteIndexerInt16 : IByteIndexer
          return (byte) Data.ReadBits(index << 3, 8);
       }
 
+      [MethodImpl(MethodImplOptions.AggressiveInlining)]
       set
       {
          if (index is < 0 or >= ByteSize) throw new ArgumentOutOfRangeException(nameof(index));
@@ -84,6 +87,7 @@ public struct LittleEndianByteIndexerInt16 : IByteIndexer
    /// </summary>
    /// <param name="buffer">The buffer to convert.</param>
    /// <returns>The raw data.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator short(LittleEndianByteIndexerInt16 buffer) { return buffer.Data; }
 
    /// <summary>
@@ -91,6 +95,7 @@ public struct LittleEndianByteIndexerInt16 : IByteIndexer
    /// </summary>
    /// <param name="data">The underlying data type.</param>
    /// <returns>A buffer type.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator LittleEndianByteIndexerInt16(short data)
    {
       return new LittleEndianByteIndexerInt16(data);

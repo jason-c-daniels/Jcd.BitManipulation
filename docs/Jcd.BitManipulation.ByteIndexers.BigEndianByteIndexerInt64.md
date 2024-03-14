@@ -14,26 +14,26 @@ System.Collections.IEnumerable
 
 Implements [IByteIndexer](Jcd.BitManipulation.ByteIndexers.IByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.IByteIndexer'), [System.Collections.Generic.IEnumerable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1'), [System.Collections.IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerable 'System.Collections.IEnumerable')
 
-| Constructors                                                                                                                                                                                                                  |                                                          |
-|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------|
+| Constructors | |
+| :--- | :--- |
 | [BigEndianByteIndexerInt64(long)](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.BigEndianByteIndexerInt64(long).md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.BigEndianByteIndexerInt64(long)') | Constructs a byte indexer from the underlying data type. |
 
-| Fields                                                                                                                                                               |                                          |
-|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------|
-| [ByteSize](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.ByteSize.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.ByteSize')             | The number of bytes this type will index |
-| [MaxByteIndex](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.MaxByteIndex.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.MaxByteIndex') | The largest byte index available.        |
+| Fields | |
+| :--- | :--- |
+| [ByteSize](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.ByteSize.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.ByteSize') | The number of bytes this type will index |
+| [MaxByteIndex](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.MaxByteIndex.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.MaxByteIndex') | The largest byte index available. |
 
-| Properties                                                                                                                                                  |                                        |
-|:------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------|
-| [Data](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.Data.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.Data')                | The backing store.                     |
-| [Length](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.Length.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.Length')          | The length of the indexer.             |
+| Properties | |
+| :--- | :--- |
+| [Data](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.Data.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.Data') | The backing store. |
+| [Length](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.Length.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.Length') | The length of the indexer. |
 | [this[int]](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.this[int].md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.this[int]') | Access bytes from the underlying data. |
 
-| Methods                                                                                                                                                                      |                                                           |
-|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------|
+| Methods | |
+| :--- | :--- |
 | [Slice(int, int)](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.Slice(int,int).md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.Slice(int, int)') | Get a subset of bytes given a starting offset and length. |
 
-| Operators                                                                                                                                                                                                                                                                                                                                |                                                        |
-|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------|
+| Operators | |
+| :--- | :--- |
 | [implicit operator BigEndianByteIndexerInt64(long)](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.op_ImplicitJcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64(long).md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.op_Implicit Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64(long)') | Converts the underlying data type to the indexer type. |
 | [implicit operator long(BigEndianByteIndexerInt64)](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.op_Implicitlong(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64).md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.op_Implicit long(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64)') | Converts the byte indexer to its underlying data type. |

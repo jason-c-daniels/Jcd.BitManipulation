@@ -297,6 +297,4 @@ public class StoreBitsExtensionsTests
    }
 
    #endregion
-
-   // TODO: Add tests for direct calls to BitMask overloads.
 }

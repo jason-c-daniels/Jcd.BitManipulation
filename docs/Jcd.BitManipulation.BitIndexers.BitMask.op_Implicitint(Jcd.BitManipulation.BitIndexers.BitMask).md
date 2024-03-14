@@ -17,6 +17,5 @@ public static int implicit operator int(Jcd.BitManipulation.BitIndexers.BitMask 
 the [BitMask](Jcd.BitManipulation.BitIndexers.BitMask.md 'Jcd.BitManipulation.BitIndexers.BitMask') to convert from.
 
 #### Returns
-
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 the lowest 32 bits of the mask as an int

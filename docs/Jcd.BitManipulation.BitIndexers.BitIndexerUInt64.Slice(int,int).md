@@ -25,6 +25,5 @@ The number of bits to extract
 Implements [Slice(int, int)](Jcd.BitManipulation.BitIndexers.IBitIndexer.Slice(int,int).md 'Jcd.BitManipulation.BitIndexers.IBitIndexer.Slice(int, int)')
 
 #### Returns
-
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 an array of bools for the subset of bits

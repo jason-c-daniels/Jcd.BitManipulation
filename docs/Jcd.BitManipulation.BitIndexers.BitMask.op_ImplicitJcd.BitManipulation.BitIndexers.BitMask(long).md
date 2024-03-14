@@ -17,6 +17,5 @@ public static Jcd.BitManipulation.BitIndexers.BitMask implicit operator BitMask(
 the value to convert to a [BitMask](Jcd.BitManipulation.BitIndexers.BitMask.md 'Jcd.BitManipulation.BitIndexers.BitMask')
 
 #### Returns
-
 [BitMask](Jcd.BitManipulation.BitIndexers.BitMask.md 'Jcd.BitManipulation.BitIndexers.BitMask')
 the [BitMask](Jcd.BitManipulation.BitIndexers.BitMask.md 'Jcd.BitManipulation.BitIndexers.BitMask') object constructed from the bits

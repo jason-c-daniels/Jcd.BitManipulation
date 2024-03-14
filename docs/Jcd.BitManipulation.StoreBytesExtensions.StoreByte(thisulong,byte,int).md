@@ -30,6 +30,5 @@ The byte value to set
 the offset of the byte to write
 
 #### Returns
-
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 The modified value.

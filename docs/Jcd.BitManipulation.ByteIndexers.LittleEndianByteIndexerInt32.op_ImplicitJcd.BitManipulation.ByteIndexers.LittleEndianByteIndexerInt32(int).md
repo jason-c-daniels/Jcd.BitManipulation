@@ -17,6 +17,5 @@ public static Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32 impl
 The underlying data type.
 
 #### Returns
-
 [LittleEndianByteIndexerInt32](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32')
 A buffer type.

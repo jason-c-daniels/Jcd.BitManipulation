@@ -17,6 +17,5 @@ public static sbyte ToSByte(this bool[] bits);
 the array of bools to convert, LSB at index 0
 
 #### Returns
-
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 The converted sbyte

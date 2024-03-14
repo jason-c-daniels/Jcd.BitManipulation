@@ -86,8 +86,6 @@ upperByte = ((byte)data.ReadBits(8, 8)) // extract the upper byte (0b00001111)
    the original variable. This gives a net benefit of being able to use fluent syntax to chain together
    bit manipulation operations.
 
-```
-
 ## Build, Code Stats and Nuget
 
 [![GitHub](https://img.shields.io/github/license/jason-c-daniels/Jcd.BitManipulation)](https://github.com/jason-c-daniels/Jcd.BitManipulation/blob/main/LICENSE)

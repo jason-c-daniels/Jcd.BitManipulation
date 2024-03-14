@@ -23,5 +23,6 @@ the bits to read from
 the offset of the bit to read
 
 #### Returns
+
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 the bit (a bool) at the specified offset

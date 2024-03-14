@@ -17,5 +17,6 @@ public static ulong implicit operator ulong(Jcd.BitManipulation.BitIndexers.BitM
 the [BitMask](Jcd.BitManipulation.BitIndexers.BitMask.md 'Jcd.BitManipulation.BitIndexers.BitMask') to convert from.
 
 #### Returns
+
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 the bits of the mask as a ulong

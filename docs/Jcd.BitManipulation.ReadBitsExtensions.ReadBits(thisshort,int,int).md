@@ -29,5 +29,6 @@ the bit offset to read from
 The total number of bits to extract
 
 #### Returns
+
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 The numeric value stored at that bit location

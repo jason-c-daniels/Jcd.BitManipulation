@@ -17,5 +17,6 @@ public static sbyte implicit operator sbyte(Jcd.BitManipulation.BitIndexers.BitM
 the [BitMask](Jcd.BitManipulation.BitIndexers.BitMask.md 'Jcd.BitManipulation.BitIndexers.BitMask') to convert from.
 
 #### Returns
+
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 the lowest 8 bits of the mask as a signed byte

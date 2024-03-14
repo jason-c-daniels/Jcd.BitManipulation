@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[StoreBytesExtensions](Jcd.BitManipulation.StoreBytesExtensions.md 'Jcd.BitManipulation.StoreBytesExtensions')
 
 ## StoreBytesExtensions.StoreBytes(this uint, ReadOnlySpan<byte>, int, int, Endian) Method
@@ -9,7 +8,6 @@ Stores a set of bytes starting at the specified byte location within the value.
 ```csharp
 public static uint StoreBytes(this uint value, System.ReadOnlySpan<byte> bytes, int offset, int size=-1, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(thisuint,System.ReadOnlySpan_byte_,int,int,Jcd.BitManipulation.Endian).value'></a>

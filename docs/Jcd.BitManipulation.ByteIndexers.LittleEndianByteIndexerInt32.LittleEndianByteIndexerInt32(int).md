@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation.ByteIndexers](Jcd.BitManipulation.ByteIndexers.md 'Jcd.BitManipulation.ByteIndexers').[LittleEndianByteIndexerInt32](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32')
 
 ## LittleEndianByteIndexerInt32(int) Constructor
@@ -9,7 +8,6 @@ Constructs a byte indexer from the underlying data type.
 ```csharp
 public LittleEndianByteIndexerInt32(int data=0);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32.LittleEndianByteIndexerInt32(int).data'></a>

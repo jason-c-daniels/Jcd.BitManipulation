@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation.ByteIndexers](Jcd.BitManipulation.ByteIndexers.md 'Jcd.BitManipulation.ByteIndexers').[BigEndianByteIndexerInt64](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64')
 
 ## BigEndianByteIndexerInt64.Slice(int, int) Method
@@ -9,7 +8,6 @@ Get a subset of bytes given a starting offset and length.
 ```csharp
 public byte[] Slice(int start, int length);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.Slice(int,int).start'></a>

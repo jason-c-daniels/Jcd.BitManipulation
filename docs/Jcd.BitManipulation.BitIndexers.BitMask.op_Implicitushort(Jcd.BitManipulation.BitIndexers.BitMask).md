@@ -17,5 +17,6 @@ public static ushort implicit operator ushort(Jcd.BitManipulation.BitIndexers.Bi
 the [BitMask](Jcd.BitManipulation.BitIndexers.BitMask.md 'Jcd.BitManipulation.BitIndexers.BitMask') to convert from.
 
 #### Returns
+
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 the lowest 16 bits of the mask as a ushort

@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[StoreBytesExtensions](Jcd.BitManipulation.StoreBytesExtensions.md 'Jcd.BitManipulation.StoreBytesExtensions')
 
 ## StoreBytesExtensions.StoreBytes(this BigEndianByteIndexerInt32, ReadOnlySpan<byte>, int, int) Method
@@ -10,7 +9,6 @@ Byte indexing is LSB, least significant byte, at index/offset zero.
 ```csharp
 public static Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt32 StoreBytes(this Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt32 indexer, System.ReadOnlySpan<byte> bytes, int offset, int size=-1);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(thisJcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt32,System.ReadOnlySpan_byte_,int,int).indexer'></a>

@@ -1,17 +1,17 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <OutputType>Exe</OutputType>
-        <TargetFramework>net6.0</TargetFramework>
-    </PropertyGroup>
+   <PropertyGroup>
+      <OutputType>Exe</OutputType>
+      <TargetFramework>net6.0</TargetFramework>
+   </PropertyGroup>
 
-    <ItemGroup>
-        <ProjectReference Include="..\Jcd.BitManipulation\Jcd.BitManipulation.csproj"/>
-    </ItemGroup>
+   <ItemGroup>
+      <ProjectReference Include="..\Jcd.BitManipulation\Jcd.BitManipulation.csproj"/>
+   </ItemGroup>
 
-    <ItemGroup>
-        <PackageReference Include="Hardware.Info" Version="11.0.1"/>
-        <PackageReference Include="Jcd.Units" Version="0.0.6"/>
-    </ItemGroup>
+   <ItemGroup>
+      <PackageReference Include="Hardware.Info" Version="11.0.1"/>
+      <PackageReference Include="Jcd.Units" Version="0.0.6"/>
+   </ItemGroup>
 
 </Project>

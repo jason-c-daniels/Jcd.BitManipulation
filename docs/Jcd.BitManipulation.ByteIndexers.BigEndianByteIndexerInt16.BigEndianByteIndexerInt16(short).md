@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation.ByteIndexers](Jcd.BitManipulation.ByteIndexers.md 'Jcd.BitManipulation.ByteIndexers').[BigEndianByteIndexerInt16](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16')
 
 ## BigEndianByteIndexerInt16(short) Constructor
@@ -9,7 +8,6 @@ Constructs a byte indexer from the underlying data type.
 ```csharp
 public BigEndianByteIndexerInt16(short data=0);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16.BigEndianByteIndexerInt16(short).data'></a>

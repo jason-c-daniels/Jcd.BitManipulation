@@ -4,6 +4,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
+// ReSharper disable HeapView.ObjectAllocation.Evident
+// ReSharper disable HeapView.ObjectAllocation
+// ReSharper disable UnusedMember.Global
 // ReSharper disable MemberCanBePrivate.Global
 
 #endregion

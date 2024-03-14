@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ReadBytesExtensions](Jcd.BitManipulation.ReadBytesExtensions.md 'Jcd.BitManipulation.ReadBytesExtensions')
 
 ## ReadBytesExtensions.ReadBytes(this short, int, int, Endian) Method
@@ -10,7 +9,6 @@ The offsets are in LSB, this means the array will be little endian.
 ```csharp
 public static byte[] ReadBytes(this short value, int offset, int size, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(thisshort,int,int,Jcd.BitManipulation.Endian).value'></a>

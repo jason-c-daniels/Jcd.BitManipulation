@@ -23,5 +23,6 @@ The value to be modified.
 The offset of the bit to clear.
 
 #### Returns
+
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 The modified value.

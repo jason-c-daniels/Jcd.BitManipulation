@@ -2,8 +2,6 @@
 
 using System.Runtime.CompilerServices;
 
-using Jcd.BitManipulation.ByteIndexers;
-
 #endregion
 
 namespace Jcd.BitManipulation;

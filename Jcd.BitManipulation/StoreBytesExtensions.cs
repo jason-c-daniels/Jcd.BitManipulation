@@ -3,8 +3,6 @@
 using System;
 using System.Runtime.CompilerServices;
 
-using Jcd.BitManipulation.ByteIndexers;
-
 // ReSharper disable UnusedMethodReturnValue.Global
 // ReSharper disable UnusedMemberInSuper.Global
 // ReSharper disable MemberCanBePrivate.Global

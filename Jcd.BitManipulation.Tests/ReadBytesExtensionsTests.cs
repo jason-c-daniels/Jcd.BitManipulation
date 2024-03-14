@@ -2,8 +2,6 @@
 
 using System.Collections.Generic;
 
-using Jcd.BitManipulation.ByteIndexers;
-
 using Xunit;
 
 // ReSharper disable HeapView.ObjectAllocation.Evident

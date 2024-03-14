@@ -18,7 +18,7 @@
       <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
       <Title>Jcd.BitManipulation</Title>
       <Authors>Jason C. Daniels</Authors>
-      <Description>A .Net Standard 2.0 library adding syntactic sugar to your bit manipulation experience.</Description>
+      <Description>A .Net Standard 2.0 library adding syntactic sugar to your bit and byte manipulation experience.</Description>
       <Copyright>2023</Copyright>
       <PackageProjectUrl>https://github.com/jason-c-daniels/Jcd.BitManipulation</PackageProjectUrl>
       <PackageLicenseUrl>https://github.com/jason-c-daniels/Jcd.BitManipulation/blob/main/LICENSE</PackageLicenseUrl>

@@ -51,7 +51,7 @@ data = data.SetBits(0, 16) // value is now 0b1111111111111111
 
 upperByte = ((byte)data.ReadBits(8, 8)) // extract the upper byte (0b00001111)
     .StoreBits(0b1011, 4, 4);// store the value in the upper 4 bits, now upperByte is now 0b10111111
-
+```
 
 ## Major Version Change Log
 

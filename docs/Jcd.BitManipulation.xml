@@ -243,7 +243,7 @@
           <summary>
              Constructs a
              <see cref="T:Jcd.BitManipulation.BigEndianByteIndexerUInt16"/>
-             from an<see cref="T:System.UInt16"/>.
+             from a<see cref="T:System.UInt16"/>.
           </summary>
           <param name="data">The initial value of the underlying data.</param>
        </member>
@@ -316,7 +316,7 @@
           <summary>
              Constructs a
              <see cref="T:Jcd.BitManipulation.BigEndianByteIndexerUInt32"/>
-             from an<see cref="T:System.UInt32"/>.
+             from a<see cref="T:System.UInt32"/>.
           </summary>
           <param name="data">The initial value of the underlying data.</param>
        </member>
@@ -389,7 +389,7 @@
           <summary>
              Constructs a
              <see cref="T:Jcd.BitManipulation.BigEndianByteIndexerUInt64"/>
-             from an<see cref="T:System.UInt64"/>.
+             from a<see cref="T:System.UInt64"/>.
           </summary>
           <param name="data">The initial value of the underlying data.</param>
        </member>
@@ -2195,7 +2195,7 @@
             <summary>
                Constructs a
                <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexerUInt16"/>
-               from an<see cref="T:System.UInt16"/>.
+               from a<see cref="T:System.UInt16"/>.
             </summary>
           <param name="data">The initial value of the underlying data.</param>
         </member>
@@ -2266,7 +2266,7 @@
             <summary>
                Constructs a
                <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexerUInt32"/>
-               from an<see cref="T:System.UInt32"/>.
+               from a<see cref="T:System.UInt32"/>.
             </summary>
           <param name="data">The initial value of the underlying data.</param>
         </member>
@@ -2337,7 +2337,7 @@
             <summary>
                Constructs a
                <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexerUInt64"/>
-               from an<see cref="T:System.UInt64"/>.
+               from a<see cref="T:System.UInt64"/>.
             </summary>
           <param name="data">The initial value of the underlying data.</param>
         </member>

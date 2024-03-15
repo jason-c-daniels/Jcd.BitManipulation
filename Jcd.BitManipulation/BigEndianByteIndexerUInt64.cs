@@ -29,7 +29,7 @@ public struct BigEndianByteIndexerUInt64 : IByteIndexer
    public const int MaxByteIndex = ByteSize - 1;
 
    /// <summary>
-   /// Constructs a <see cref="BigEndianByteIndexerUInt64"/> from an <see cref="UInt64"/>.
+   /// Constructs a <see cref="BigEndianByteIndexerUInt64"/> from a <see cref="UInt64"/>.
    /// </summary>
    /// <param name="data"> The initial value of the underlying data.</param>
    public BigEndianByteIndexerUInt64(ulong data = 0) { Data = data; }

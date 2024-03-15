@@ -30,7 +30,7 @@ public struct LittleEndianByteIndexerUInt64 : IByteIndexer
    public const int MaxByteIndex = ByteSize - 1;
 
    /// <summary>
-   /// Constructs a <see cref="LittleEndianByteIndexerUInt64"/> from an <see cref="UInt64"/>.
+   /// Constructs a <see cref="LittleEndianByteIndexerUInt64"/> from a <see cref="UInt64"/>.
    /// </summary>
    /// <param name="data"> The initial value of the underlying data.</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]

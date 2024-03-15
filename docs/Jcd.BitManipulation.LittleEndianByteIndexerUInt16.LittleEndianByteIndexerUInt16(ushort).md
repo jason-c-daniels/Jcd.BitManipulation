@@ -2,7 +2,9 @@
 
 ## LittleEndianByteIndexerUInt16(ushort) Constructor
 
-Constructs a byte indexer from the underlying data type.
+Constructs
+a [LittleEndianByteIndexerUInt16](Jcd.BitManipulation.LittleEndianByteIndexerUInt16.md 'Jcd.BitManipulation.LittleEndianByteIndexerUInt16')
+from a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16').
 
 ```csharp
 public LittleEndianByteIndexerUInt16(ushort data=0);
@@ -13,4 +15,4 @@ public LittleEndianByteIndexerUInt16(ushort data=0);
 
 `data` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 
-The initial value of the data.
+The initial value of the underlying data.

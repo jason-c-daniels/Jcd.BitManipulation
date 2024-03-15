@@ -48,20 +48,20 @@ internal static class Program
       var ba2    = ul2.ToByteArray();
 
       // warm things up        
-      TimeBitManipulations(iterations                     / 10, false);
-      TimeStoreByteAndReadByteCalls(iterations            / 10, false);
-      TimeStoreByteAndReadByteFromIndexerCalls(iterations / 10, false);
-      TimeCastOperations(iterations                       / 10, false);
-      TimeStore8BytesToLongCalls(iterations               / 10, false);
-      TimeStore4BytesToLongCalls(iterations               / 10, false);
-      TimeStore2BytesToLongCalls(iterations               / 10, false);
-      TimeStore8BytesToIndexerCalls(iterations            / 10, false);
-      TimeStore4BytesToIndexerCalls(iterations            / 10, false);
-      TimeStore2BytesToIndexerCalls(iterations            / 10, false);
-      TimeByteArrayToUInt64(iterations                    / 10, false);
-      TimeByteArrayToUInt64BigEndian(iterations           / 10, false);
-      TimeReadOnlySpanOfByteToUInt64(iterations           / 10, false);
-      TimeReadOnlySpanOfByteToUInt64BigEndian(iterations  / 10, false);
+      TimeBitManipulations(iterations                       / 10, false);
+      TimeStoreByteAndReadByteCalls(iterations              / 10, false);
+      TimeStoreByteAndReadByteFromIndexerCalls(iterations   / 10, false);
+      TimeCastOperations(iterations                         / 10, false);
+      TimeStore8BytesToLongCalls(iterations                 / 10, false);
+      TimeStore4BytesToLongCalls(iterations                 / 10, false);
+      TimeStore2BytesToLongCalls(iterations                 / 10, false);
+      TimeStore8BytesToIndexerCalls(iterations              / 10, false);
+      TimeStore4BytesToIndexerCalls(iterations              / 10, false);
+      TimeStore2BytesToIndexerCalls(iterations              / 10, false);
+      TimeByteArrayToUInt64LittleEndian(iterations          / 10, false);
+      TimeByteArrayToUInt64BigEndian(iterations             / 10, false);
+      TimeReadOnlySpanOfByteToUInt64LittleEndian(iterations / 10, false);
+      TimeReadOnlySpanOfByteToUInt64BigEndian(iterations    / 10, false);
 
       // now run and report.
       ReportSystemInfo();
@@ -75,9 +75,9 @@ internal static class Program
       TimeStore8BytesToIndexerCalls(iterations);
       TimeStore4BytesToIndexerCalls(iterations);
       TimeStore2BytesToIndexerCalls(iterations);
-      TimeByteArrayToUInt64(iterations);
+      TimeByteArrayToUInt64LittleEndian(iterations);
       TimeByteArrayToUInt64BigEndian(iterations);
-      TimeReadOnlySpanOfByteToUInt64(iterations);
+      TimeReadOnlySpanOfByteToUInt64LittleEndian(iterations);
       TimeReadOnlySpanOfByteToUInt64BigEndian(iterations);
    }
 
@@ -367,10 +367,10 @@ internal static class Program
       if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
    }
 
-   private static void TimeByteArrayToUInt64(int iterations, bool report = true)
+   private static void TimeByteArrayToUInt64LittleEndian(int iterations, bool report = true)
    {
       if (report) SystemInfo.Instance.RefreshInfo();
-      if (report) Console.WriteLine($"  - Name: {nameof(TimeByteArrayToUInt64)}");
+      if (report) Console.WriteLine($"  - Name: {nameof(TimeByteArrayToUInt64LittleEndian)}");
       const int opsPerIteration = 1;
       ulong     data            = 0;
       byte      upperByte       = 0;
@@ -461,10 +461,10 @@ internal static class Program
       if (((long) idx).ToString() == "super happy fun time") Console.WriteLine($"{convertedBack}");
    }
 
-   private static void TimeReadOnlySpanOfByteToUInt64(int iterations, bool report = true)
+   private static void TimeReadOnlySpanOfByteToUInt64LittleEndian(int iterations, bool report = true)
    {
       if (report) SystemInfo.Instance.RefreshInfo();
-      if (report) Console.WriteLine($"  - Name: {nameof(TimeReadOnlySpanOfByteToUInt64)}");
+      if (report) Console.WriteLine($"  - Name: {nameof(TimeReadOnlySpanOfByteToUInt64LittleEndian)}");
       const int opsPerIteration = 1;
       ulong     data            = 0;
       byte      upperByte       = 0;

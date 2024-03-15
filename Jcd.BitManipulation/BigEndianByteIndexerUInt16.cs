@@ -14,7 +14,7 @@ using System.Collections.Generic;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// Provides byte level indexing operations (set, get) on a UInt64. Zero is the most significant byte.
+/// Provides byte level indexing operations (set, get) on a <see cref="UInt16"/>. Zero is the most significant byte.
 /// </summary>
 public struct BigEndianByteIndexerUInt16 : IByteIndexer
 {
@@ -29,9 +29,9 @@ public struct BigEndianByteIndexerUInt16 : IByteIndexer
    public const int MaxByteIndex = ByteSize - 1;
 
    /// <summary>
-   /// Constructs a byte indexer from the underlying data type.
+   /// Constructs a <see cref="BigEndianByteIndexerUInt16"/> from a <see cref="UInt16"/>.
    /// </summary>
-   /// <param name="data">The initial value of the data.</param>
+   /// <param name="data"> The initial value of the underlying data.</param>
    public BigEndianByteIndexerUInt16(ushort data = 0) { Data = data; }
 
    /// <summary>

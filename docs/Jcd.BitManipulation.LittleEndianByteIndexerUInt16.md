@@ -2,7 +2,9 @@
 
 ## LittleEndianByteIndexerUInt16 Struct
 
-Provides byte level indexing operations (set, get) on a UInt16. Zero is the least significant byte.
+Provides byte level indexing operations (set, get) on
+a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16'). Zero is the least
+significant byte.
 
 ```csharp
 public struct LittleEndianByteIndexerUInt16 :
@@ -13,9 +15,9 @@ System.Collections.IEnumerable
 
 Implements [IByteIndexer](Jcd.BitManipulation.IByteIndexer.md 'Jcd.BitManipulation.IByteIndexer'), [System.Collections.Generic.IEnumerable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1'), [System.Collections.IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerable 'System.Collections.IEnumerable')
 
-| Constructors                                                                                                                                                                                                                  |                                                          |
-|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------|
-| [LittleEndianByteIndexerUInt16(ushort)](Jcd.BitManipulation.LittleEndianByteIndexerUInt16.LittleEndianByteIndexerUInt16(ushort).md 'Jcd.BitManipulation.LittleEndianByteIndexerUInt16.LittleEndianByteIndexerUInt16(ushort)') | Constructs a byte indexer from the underlying data type. |
+| Constructors                                                                                                                                                                                                                  |                                                                                                                                                                                                                                                           |
+|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [LittleEndianByteIndexerUInt16(ushort)](Jcd.BitManipulation.LittleEndianByteIndexerUInt16.LittleEndianByteIndexerUInt16(ushort).md 'Jcd.BitManipulation.LittleEndianByteIndexerUInt16.LittleEndianByteIndexerUInt16(ushort)') | Constructs a [LittleEndianByteIndexerUInt16](Jcd.BitManipulation.LittleEndianByteIndexerUInt16.md 'Jcd.BitManipulation.LittleEndianByteIndexerUInt16') from a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16'). |
 
 | Fields                                                                                                                                             |                                          |
 |:---------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------|

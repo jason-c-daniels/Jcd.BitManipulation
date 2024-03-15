@@ -2,7 +2,9 @@
 
 ## LittleEndianByteIndexerUInt32(uint) Constructor
 
-Constructs a byte indexer from the underlying data type.
+Constructs
+a [LittleEndianByteIndexerUInt32](Jcd.BitManipulation.LittleEndianByteIndexerUInt32.md 'Jcd.BitManipulation.LittleEndianByteIndexerUInt32')
+from a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32').
 
 ```csharp
 public LittleEndianByteIndexerUInt32(uint data=0u);
@@ -13,4 +15,4 @@ public LittleEndianByteIndexerUInt32(uint data=0u);
 
 `data` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
-The initial value of the data.
+The initial value of the underlying data.

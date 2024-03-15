@@ -2,7 +2,9 @@
 
 ## BigEndianByteIndexerInt64 Struct
 
-Provides byte level indexing operations (set, get) on an Int64. Zero is the most significant byte.
+Provides byte level indexing operations (set, get) on
+an [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64'). Zero is the most significant
+byte.
 
 ```csharp
 public struct BigEndianByteIndexerInt64 :
@@ -13,9 +15,9 @@ System.Collections.IEnumerable
 
 Implements [IByteIndexer](Jcd.BitManipulation.IByteIndexer.md 'Jcd.BitManipulation.IByteIndexer'), [System.Collections.Generic.IEnumerable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1'), [System.Collections.IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerable 'System.Collections.IEnumerable')
 
-| Constructors                                                                                                                                                                                        |                                                          |
-|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------|
-| [BigEndianByteIndexerInt64(long)](Jcd.BitManipulation.BigEndianByteIndexerInt64.BigEndianByteIndexerInt64(long).md 'Jcd.BitManipulation.BigEndianByteIndexerInt64.BigEndianByteIndexerInt64(long)') | Constructs a byte indexer from the underlying data type. |
+| Constructors                                                                                                                                                                                        |                                                                                                                                                                                                                                             |
+|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [BigEndianByteIndexerInt64(long)](Jcd.BitManipulation.BigEndianByteIndexerInt64.BigEndianByteIndexerInt64(long).md 'Jcd.BitManipulation.BigEndianByteIndexerInt64.BigEndianByteIndexerInt64(long)') | Constructs a [BigEndianByteIndexerInt64](Jcd.BitManipulation.BigEndianByteIndexerInt64.md 'Jcd.BitManipulation.BigEndianByteIndexerInt64') from an [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64'). |
 
 | Fields                                                                                                                                     |                                          |
 |:-------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------|

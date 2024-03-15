@@ -2,7 +2,9 @@
 
 ## BigEndianByteIndexerUInt32 Struct
 
-Provides byte level indexing operations (set, get) on a UInt64. Zero is the most significant byte.
+Provides byte level indexing operations (set, get) on
+a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32'). Zero is the most
+significant byte.
 
 ```csharp
 public struct BigEndianByteIndexerUInt32 :
@@ -13,9 +15,9 @@ System.Collections.IEnumerable
 
 Implements [IByteIndexer](Jcd.BitManipulation.IByteIndexer.md 'Jcd.BitManipulation.IByteIndexer'), [System.Collections.Generic.IEnumerable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1'), [System.Collections.IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerable 'System.Collections.IEnumerable')
 
-| Constructors                                                                                                                                                                                             |                                                          |
-|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------|
-| [BigEndianByteIndexerUInt32(uint)](Jcd.BitManipulation.BigEndianByteIndexerUInt32.BigEndianByteIndexerUInt32(uint).md 'Jcd.BitManipulation.BigEndianByteIndexerUInt32.BigEndianByteIndexerUInt32(uint)') | Constructs a byte indexer from the underlying data type. |
+| Constructors                                                                                                                                                                                             |                                                                                                                                                                                                                                                  |
+|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [BigEndianByteIndexerUInt32(uint)](Jcd.BitManipulation.BigEndianByteIndexerUInt32.BigEndianByteIndexerUInt32(uint).md 'Jcd.BitManipulation.BigEndianByteIndexerUInt32.BigEndianByteIndexerUInt32(uint)') | Constructs a [BigEndianByteIndexerUInt32](Jcd.BitManipulation.BigEndianByteIndexerUInt32.md 'Jcd.BitManipulation.BigEndianByteIndexerUInt32') from a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32'). |
 
 | Fields                                                                                                                                       |                                          |
 |:---------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------|

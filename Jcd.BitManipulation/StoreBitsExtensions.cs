@@ -280,7 +280,7 @@ public static class StoreBitsExtensions
    #region single bit operations
 
    /// <summary>
-   /// Store a single bit from the specified offset.
+   /// Store a single bit at the specified offset.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="bit">The bit value to set</param>
@@ -293,7 +293,7 @@ public static class StoreBitsExtensions
    }
 
    /// <summary>
-   /// Store a single bit from the specified offset.
+   /// Store a single bit at the specified offset.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="bit">The bit value to set</param>
@@ -306,7 +306,7 @@ public static class StoreBitsExtensions
    }
 
    /// <summary>
-   /// Store a single bit from the specified offset.
+   /// Store a single bit at the specified offset.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="bit">The bit value to set</param>
@@ -319,7 +319,7 @@ public static class StoreBitsExtensions
    }
 
    /// <summary>
-   /// Store a single bit from the specified offset.
+   /// Store a single bit at the specified offset.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="bit">The bit value to set</param>
@@ -329,7 +329,7 @@ public static class StoreBitsExtensions
    public static int StoreBit(this int value, bool bit, int offset) { return value.StoreBits(bit ? 1 : 0, offset, 1); }
 
    /// <summary>
-   /// Store a single bit from the specified offset.
+   /// Store a single bit at the specified offset.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="bit">The bit value to set</param>
@@ -342,7 +342,7 @@ public static class StoreBitsExtensions
    }
 
    /// <summary>
-   /// Store a single bit from the specified offset.
+   /// Store a single bit at the specified offset.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="bit">The bit value to set</param>
@@ -355,7 +355,7 @@ public static class StoreBitsExtensions
    }
 
    /// <summary>
-   /// Store a single bit from the specified offset.
+   /// Store a single bit at the specified offset.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="bit">The bit value to set</param>
@@ -368,7 +368,7 @@ public static class StoreBitsExtensions
    }
 
    /// <summary>
-   /// Store a single bit from the specified offset.
+   /// Store a single bit at the specified offset.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="bit">The bit value to set</param>

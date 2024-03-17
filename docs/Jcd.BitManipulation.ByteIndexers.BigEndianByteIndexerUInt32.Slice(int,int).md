@@ -1,4 +1,4 @@
-﻿#### [Jcd.BitManipulation](index.md 'index')
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation.ByteIndexers](Jcd.BitManipulation.ByteIndexers.md 'Jcd.BitManipulation.ByteIndexers').[BigEndianByteIndexerUInt32](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt32.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt32')
 
 ## BigEndianByteIndexerUInt32.Slice(int, int) Method

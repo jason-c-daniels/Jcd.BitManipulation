@@ -1,4 +1,4 @@
-﻿#### [Jcd.BitManipulation](index.md 'index')
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation.BitIndexers](Jcd.BitManipulation.BitIndexers.md 'Jcd.BitManipulation.BitIndexers').[BitIndexerUInt16](Jcd.BitManipulation.BitIndexers.BitIndexerUInt16.md 'Jcd.BitManipulation.BitIndexers.BitIndexerUInt16')
 
 ## BitIndexerUInt16.implicit operator BitIndexerUInt16(ushort) Operator

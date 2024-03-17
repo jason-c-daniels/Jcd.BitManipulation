@@ -1,4 +1,4 @@
-﻿#### [Jcd.BitManipulation](index.md 'index')
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[StoreBytesExtensions](Jcd.BitManipulation.StoreBytesExtensions.md 'Jcd.BitManipulation.StoreBytesExtensions')
 
 ## StoreBytesExtensions.StoreByte(this BigEndianByteIndexerInt32, byte, int) Method

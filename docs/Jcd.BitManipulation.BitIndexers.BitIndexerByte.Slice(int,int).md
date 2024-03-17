@@ -1,4 +1,4 @@
-﻿#### [Jcd.BitManipulation](index.md 'index')
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation.BitIndexers](Jcd.BitManipulation.BitIndexers.md 'Jcd.BitManipulation.BitIndexers').[BitIndexerByte](Jcd.BitManipulation.BitIndexers.BitIndexerByte.md 'Jcd.BitManipulation.BitIndexers.BitIndexerByte')
 
 ## BitIndexerByte.Slice(int, int) Method

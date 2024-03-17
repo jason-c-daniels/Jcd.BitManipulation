@@ -1,4 +1,4 @@
-﻿#### [Jcd.BitManipulation](index.md 'index')
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation.ByteIndexers](Jcd.BitManipulation.ByteIndexers.md 'Jcd.BitManipulation.ByteIndexers').[LittleEndianByteIndexerUInt16](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16')
 
 ## LittleEndianByteIndexerUInt16.implicit operator LittleEndianByteIndexerUInt16(ushort) Operator

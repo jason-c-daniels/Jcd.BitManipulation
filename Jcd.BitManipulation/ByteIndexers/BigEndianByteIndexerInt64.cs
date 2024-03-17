@@ -3,6 +3,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 // ReSharper disable HeapView.ObjectAllocation.Evident
 // ReSharper disable HeapView.ObjectAllocation
@@ -84,6 +85,7 @@ public struct BigEndianByteIndexerInt64 : IByteIndexer
    /// </summary>
    /// <param name="indexer">The indexer to convert.</param>
    /// <returns>The raw data.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator long(BigEndianByteIndexerInt64 indexer) { return indexer.Data; }
 
    /// <summary>
@@ -91,6 +93,7 @@ public struct BigEndianByteIndexerInt64 : IByteIndexer
    /// </summary>
    /// <param name="data">The underlying data type.</param>
    /// <returns>A indexer type.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BigEndianByteIndexerInt64(long data) { return new BigEndianByteIndexerInt64(data); }
 
    #region Implementation of IEnumerable

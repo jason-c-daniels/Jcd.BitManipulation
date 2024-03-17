@@ -129,6 +129,7 @@ public static class ReadBytesExtensions
    /// <param name="offset">The byte location to store the value.</param>
    /// <param name="size">The number of bytes from the source, to store.</param>
    /// <returns>A little endian byte array of the value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ReadBytes(this LittleEndianByteIndexerInt16 indexer, int offset, int size)
    {
       return indexer.Slice(offset, size);
@@ -141,6 +142,7 @@ public static class ReadBytesExtensions
    /// <param name="offset">The byte location to store the value.</param>
    /// <param name="size">The number of bytes from the source, to store.</param>
    /// <returns>A big endian byte array of the value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ReadBytes(this BigEndianByteIndexerInt16 indexer, int offset, int size)
    {
       return indexer.Slice(offset, size);
@@ -153,6 +155,7 @@ public static class ReadBytesExtensions
    /// <param name="offset">The byte location to store the value.</param>
    /// <param name="size">The number of bytes from the source, to store.</param>
    /// <returns>A little endian byte array of the value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ReadBytes(this LittleEndianByteIndexerUInt16 indexer, int offset, int size)
    {
       return indexer.Slice(offset, size);
@@ -165,6 +168,7 @@ public static class ReadBytesExtensions
    /// <param name="offset">The byte location to store the value.</param>
    /// <param name="size">The number of bytes from the source, to store.</param>
    /// <returns>A big endian byte array of the value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ReadBytes(this BigEndianByteIndexerUInt16 indexer, int offset, int size)
    {
       return indexer.Slice(offset, size);
@@ -177,6 +181,7 @@ public static class ReadBytesExtensions
    /// <param name="offset">The byte location to store the value.</param>
    /// <param name="size">The number of bytes from the source, to store.</param>
    /// <returns>A little endian byte array of the value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ReadBytes(this LittleEndianByteIndexerInt32 indexer, int offset, int size)
    {
       return indexer.Slice(offset, size);
@@ -189,6 +194,7 @@ public static class ReadBytesExtensions
    /// <param name="offset">The byte location to store the value.</param>
    /// <param name="size">The number of bytes from the source, to store.</param>
    /// <returns>A big endian byte array of the value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ReadBytes(this BigEndianByteIndexerInt32 indexer, int offset, int size)
    {
       return indexer.Slice(offset, size);
@@ -201,6 +207,7 @@ public static class ReadBytesExtensions
    /// <param name="offset">The byte location to store the value.</param>
    /// <param name="size">The number of bytes from the source, to store.</param>
    /// <returns>A little endian byte array of the value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ReadBytes(this LittleEndianByteIndexerUInt32 indexer, int offset, int size)
    {
       return indexer.Slice(offset, size);
@@ -213,6 +220,7 @@ public static class ReadBytesExtensions
    /// <param name="offset">The byte location to store the value.</param>
    /// <param name="size">The number of bytes from the source, to store.</param>
    /// <returns>A big endian byte array of the value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ReadBytes(this BigEndianByteIndexerUInt32 indexer, int offset, int size)
    {
       return indexer.Slice(offset, size);
@@ -225,6 +233,7 @@ public static class ReadBytesExtensions
    /// <param name="offset">The byte location to store the value.</param>
    /// <param name="size">The number of bytes from the source, to store.</param>
    /// <returns>A little endian byte array of the value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ReadBytes(this LittleEndianByteIndexerInt64 indexer, int offset, int size)
    {
       return indexer.Slice(offset, size);
@@ -237,6 +246,7 @@ public static class ReadBytesExtensions
    /// <param name="offset">The byte location to store the value.</param>
    /// <param name="size">The number of bytes from the source, to store.</param>
    /// <returns>A big endian byte array of the value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ReadBytes(this BigEndianByteIndexerInt64 indexer, int offset, int size)
    {
       return indexer.Slice(offset, size);
@@ -249,6 +259,7 @@ public static class ReadBytesExtensions
    /// <param name="offset">The byte location to store the value.</param>
    /// <param name="size">The number of bytes from the source, to store.</param>
    /// <returns>A little endian byte array of the value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ReadBytes(this LittleEndianByteIndexerUInt64 indexer, int offset, int size)
    {
       return indexer.Slice(offset, size);
@@ -261,6 +272,7 @@ public static class ReadBytesExtensions
    /// <param name="offset">The byte location to store the value.</param>
    /// <param name="size">The number of bytes from the source, to store.</param>
    /// <returns>A big endian byte array of the value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ReadBytes(this BigEndianByteIndexerUInt64 indexer, int offset, int size)
    {
       return indexer.Slice(offset, size);

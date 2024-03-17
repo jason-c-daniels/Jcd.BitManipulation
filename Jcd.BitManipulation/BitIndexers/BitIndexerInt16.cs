@@ -3,6 +3,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 // ReSharper disable HeapView.ObjectAllocation.Evident
@@ -49,6 +50,7 @@ public struct BitIndexerInt16 : IBitIndexer
    /// </summary>
    /// <param name="bits">the initial value for the indexer's backing store</param>
    /// <returns>A new BitIndexerInt16</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitIndexerInt16(short bits) { return new BitIndexerInt16 { Bits = bits }; }
 
    /// <summary>
@@ -56,6 +58,7 @@ public struct BitIndexerInt16 : IBitIndexer
    /// </summary>
    /// <param name="indexer">the indexer to convert from</param>
    /// <returns>the short</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator short(BitIndexerInt16 indexer) { return indexer.Bits; }
 
    /// <summary>

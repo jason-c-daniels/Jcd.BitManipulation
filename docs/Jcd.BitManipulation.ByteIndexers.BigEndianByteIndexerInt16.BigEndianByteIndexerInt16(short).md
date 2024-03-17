@@ -1,4 +1,4 @@
-﻿#### [Jcd.BitManipulation](index.md 'index')
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation.ByteIndexers](Jcd.BitManipulation.ByteIndexers.md 'Jcd.BitManipulation.ByteIndexers').[BigEndianByteIndexerInt16](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16')
 
 ## BigEndianByteIndexerInt16(short) Constructor

@@ -3,6 +3,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 // ReSharper disable HeapView.ObjectAllocation.Evident
 // ReSharper disable HeapView.ObjectAllocation
@@ -51,6 +52,7 @@ public struct BigEndianByteIndexerUInt64 : IByteIndexer
    /// <exception cref="ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
    public byte this[int index]
    {
+      [MethodImpl(MethodImplOptions.AggressiveInlining)]
       get
       {
          if (index is < 0 or >= ByteSize) throw new ArgumentOutOfRangeException(nameof(index));
@@ -58,6 +60,7 @@ public struct BigEndianByteIndexerUInt64 : IByteIndexer
          return (byte) Data.ReadBits((MaxByteIndex - index) << 3, 8);
       }
 
+      [MethodImpl(MethodImplOptions.AggressiveInlining)]
       set
       {
          if (index is < 0 or >= ByteSize) throw new ArgumentOutOfRangeException(nameof(index));
@@ -71,6 +74,7 @@ public struct BigEndianByteIndexerUInt64 : IByteIndexer
    /// <param name="start">The starting bit offset</param>
    /// <param name="length">The number of bits to extract</param>
    /// <returns>an array of bytes for the specified subset</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] Slice(int start, int length)
    {
       var slice                                 = new byte[length];
@@ -84,6 +88,7 @@ public struct BigEndianByteIndexerUInt64 : IByteIndexer
    /// </summary>
    /// <param name="indexer">The indexer to convert.</param>
    /// <returns>The raw data.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator ulong(BigEndianByteIndexerUInt64 indexer) { return indexer.Data; }
 
    /// <summary>
@@ -91,6 +96,7 @@ public struct BigEndianByteIndexerUInt64 : IByteIndexer
    /// </summary>
    /// <param name="data">The underlying data type.</param>
    /// <returns>A indexer type.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BigEndianByteIndexerUInt64(ulong data)
    {
       return new BigEndianByteIndexerUInt64(data);
@@ -99,12 +105,14 @@ public struct BigEndianByteIndexerUInt64 : IByteIndexer
    #region Implementation of IEnumerable
 
    /// <inheritdoc />
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public IEnumerator<byte> GetEnumerator()
    {
       for (var i = 0; i < ByteSize; i++) yield return this[i];
    }
 
    /// <inheritdoc />
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    IEnumerator IEnumerable.GetEnumerator() { return GetEnumerator(); }
 
    #endregion

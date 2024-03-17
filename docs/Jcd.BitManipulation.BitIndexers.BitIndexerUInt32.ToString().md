@@ -1,4 +1,4 @@
-﻿#### [Jcd.BitManipulation](index.md 'index')
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation.BitIndexers](Jcd.BitManipulation.BitIndexers.md 'Jcd.BitManipulation.BitIndexers').[BitIndexerUInt32](Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.md 'Jcd.BitManipulation.BitIndexers.BitIndexerUInt32')
 
 ## BitIndexerUInt32.ToString() Method

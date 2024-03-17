@@ -27,11 +27,11 @@ Derived
 
 Implements [System.Collections.Generic.IEnumerable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1'), [System.Collections.IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerable 'System.Collections.IEnumerable')
 
-| Properties                                                                                                                        |                                  |
-|:----------------------------------------------------------------------------------------------------------------------------------|:---------------------------------|
-| [Length](Jcd.BitManipulation.ByteIndexers.IByteIndexer.Length.md 'Jcd.BitManipulation.ByteIndexers.IByteIndexer.Length')          | The number of addressable bytes. |
-| [this[int]](Jcd.BitManipulation.ByteIndexers.IByteIndexer.this[int].md 'Jcd.BitManipulation.ByteIndexers.IByteIndexer.this[int]') | Gets or sets a bit               |
+| Properties | |
+| :--- | :--- |
+| [Length](Jcd.BitManipulation.ByteIndexers.IByteIndexer.Length.md 'Jcd.BitManipulation.ByteIndexers.IByteIndexer.Length') | The number of addressable bytes. |
+| [this[int]](Jcd.BitManipulation.ByteIndexers.IByteIndexer.this[int].md 'Jcd.BitManipulation.ByteIndexers.IByteIndexer.this[int]') | Gets or sets a bit |
 
-| Methods                                                                                                                                            |                                              |
-|:---------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------|
+| Methods | |
+| :--- | :--- |
 | [Slice(int, int)](Jcd.BitManipulation.ByteIndexers.IByteIndexer.Slice(int,int).md 'Jcd.BitManipulation.ByteIndexers.IByteIndexer.Slice(int, int)') | Gets a slice of bytes from the backing store |

@@ -3,9 +3,7 @@
 
 ## LittleEndianByteIndexerUInt16(ushort) Constructor
 
-Constructs
-a [LittleEndianByteIndexerUInt16](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16')
-from a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16').
+Constructs a [LittleEndianByteIndexerUInt16](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16') from a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16').
 
 ```csharp
 public LittleEndianByteIndexerUInt16(ushort data=0);

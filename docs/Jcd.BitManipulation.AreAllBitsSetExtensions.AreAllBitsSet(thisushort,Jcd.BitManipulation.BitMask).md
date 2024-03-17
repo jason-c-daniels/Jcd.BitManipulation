@@ -3,8 +3,7 @@
 
 ## AreAllBitsSetExtensions.AreAllBitsSet(this ushort, BitMask) Method
 
-Tests if all of the bits from the bitmask are set on
-a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16').
+Tests if all of the bits from the bitmask are set on a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16').
 
 ```csharp
 public static bool AreAllBitsSet(this ushort data, Jcd.BitManipulation.BitMask bitmask);
@@ -24,7 +23,6 @@ The data to inspect.
 the bits to test.
 
 #### Returns
-
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 True if all of the bits from the bitmask were set.
 

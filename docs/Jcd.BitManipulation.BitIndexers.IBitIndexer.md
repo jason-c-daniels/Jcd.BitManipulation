@@ -23,12 +23,12 @@ Derived
 
 Implements [System.Collections.Generic.IEnumerable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1'), [System.Collections.IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerable 'System.Collections.IEnumerable')
 
-| Properties                                                                                                                    |                                |
-|:------------------------------------------------------------------------------------------------------------------------------|:-------------------------------|
-| [Length](Jcd.BitManipulation.BitIndexers.IBitIndexer.Length.md 'Jcd.BitManipulation.BitIndexers.IBitIndexer.Length')          | The number of addressable bits |
-| [this[int]](Jcd.BitManipulation.BitIndexers.IBitIndexer.this[int].md 'Jcd.BitManipulation.BitIndexers.IBitIndexer.this[int]') | Gets or sets a bit             |
+| Properties | |
+| :--- | :--- |
+| [Length](Jcd.BitManipulation.BitIndexers.IBitIndexer.Length.md 'Jcd.BitManipulation.BitIndexers.IBitIndexer.Length') | The number of addressable bits |
+| [this[int]](Jcd.BitManipulation.BitIndexers.IBitIndexer.this[int].md 'Jcd.BitManipulation.BitIndexers.IBitIndexer.this[int]') | Gets or sets a bit |
 
-| Methods                                                                                                                                        |                                             |
-|:-----------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------|
+| Methods | |
+| :--- | :--- |
 | [Slice(int, int)](Jcd.BitManipulation.BitIndexers.IBitIndexer.Slice(int,int).md 'Jcd.BitManipulation.BitIndexers.IBitIndexer.Slice(int, int)') | Gets a slice of bits from the backing store |
-| [ToString()](Jcd.BitManipulation.BitIndexers.IBitIndexer.ToString().md 'Jcd.BitManipulation.BitIndexers.IBitIndexer.ToString()')               | Format as a bit representation              |
+| [ToString()](Jcd.BitManipulation.BitIndexers.IBitIndexer.ToString().md 'Jcd.BitManipulation.BitIndexers.IBitIndexer.ToString()') | Format as a bit representation |

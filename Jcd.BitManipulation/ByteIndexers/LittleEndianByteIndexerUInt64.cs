@@ -92,7 +92,7 @@ public struct LittleEndianByteIndexerUInt64 : IByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public unsafe byte[] Slice(int start, int length)
    {
-      var slice = new byte[Math.Min(length, ByteSize)];
+      var slice = new byte[length < ByteSize ? length : ByteSize];
 
       fixed (byte* ps = slice)
       fixed (ulong* pdata = &_data)
@@ -107,6 +107,7 @@ public struct LittleEndianByteIndexerUInt64 : IByteIndexer
       return slice;
    }
 
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private unsafe void CopyAll(byte* bytes, byte* pSlice)
    {
       if (IsSystemLittleEndian)
@@ -123,6 +124,7 @@ public struct LittleEndianByteIndexerUInt64 : IByteIndexer
       }
    }
 
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private unsafe void CopySubset(int start, int length, byte* bytes, byte* pSlice)
    {
       if (IsSystemLittleEndian)
@@ -138,8 +140,7 @@ public struct LittleEndianByteIndexerUInt64 : IByteIndexer
             pSlice[i] = *rpb;
       }
    }
-
-
+   
    /// <summary>
    /// Converts the byte indexer to its underlying data type.
    /// </summary>

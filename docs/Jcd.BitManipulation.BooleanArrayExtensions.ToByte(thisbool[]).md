@@ -17,6 +17,5 @@ public static byte ToByte(this bool[] bits);
 the array of bools to convert, LSB at index 0
 
 #### Returns
-
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 The converted byte

@@ -17,6 +17,5 @@ public static bool[] ToBooleanArray(this ushort bits);
 the bits of the ushort to convert
 
 #### Returns
-
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 the array. LSB at index 0

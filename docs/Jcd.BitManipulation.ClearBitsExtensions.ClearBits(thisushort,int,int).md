@@ -29,6 +29,5 @@ The offset of where to begin clearing bits.
 The number of bits to clear.
 
 #### Returns
-
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 The modified value.

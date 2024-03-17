@@ -33,6 +33,7 @@ public struct LittleEndianByteIndexerInt32 : IByteIndexer
    /// Constructs a <see cref="LittleEndianByteIndexerInt32"/> from an <see cref="Int32"/>.
    /// </summary>
    /// <param name="data"> The initial value of the underlying data.</param>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public LittleEndianByteIndexerInt32(int data = 0) { Data = data; }
 
    /// <summary>
@@ -77,8 +78,10 @@ public struct LittleEndianByteIndexerInt32 : IByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] Slice(int start, int length)
    {
-      var slice                                 = new byte[length];
-      for (var i = 0; i < length; i++) slice[i] = this[i + start];
+      var len   = length < ByteSize ? length : ByteSize;
+      var slice = new byte[len];
+      for (var i = 0; i < length; i++)
+         slice[i] = this[i + start];
 
       return slice;
    }

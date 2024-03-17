@@ -33,6 +33,7 @@ public struct BigEndianByteIndexerInt32 : IByteIndexer
    /// Constructs a <see cref="BigEndianByteIndexerInt32"/> from an <see cref="Int32"/>.
    /// </summary>
    /// <param name="data"> The initial value of the underlying data.</param>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public BigEndianByteIndexerInt32(int data = 0) { Data = data; }
 
    /// <summary>
@@ -52,6 +53,7 @@ public struct BigEndianByteIndexerInt32 : IByteIndexer
    /// <exception cref="ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
    public byte this[int index]
    {
+      [MethodImpl(MethodImplOptions.AggressiveInlining)]
       get
       {
          if (index is < 0 or >= ByteSize) throw new ArgumentOutOfRangeException(nameof(index));
@@ -59,6 +61,7 @@ public struct BigEndianByteIndexerInt32 : IByteIndexer
          return (byte) Data.ReadBits((MaxByteIndex - index) << 3, 8);
       }
 
+      [MethodImpl(MethodImplOptions.AggressiveInlining)]
       set
       {
          if (index is < 0 or >= ByteSize) throw new ArgumentOutOfRangeException(nameof(index));
@@ -72,10 +75,13 @@ public struct BigEndianByteIndexerInt32 : IByteIndexer
    /// <param name="start">The starting bit offset</param>
    /// <param name="length">The number of bits to extract</param>
    /// <returns>an array of bytes for the specified subset</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] Slice(int start, int length)
    {
-      var slice                                 = new byte[length];
-      for (var i = 0; i < length; i++) slice[i] = this[i + start];
+      var len   = length < ByteSize ? length : ByteSize;
+      var slice = new byte[len];
+      for (var i = 0; i < length; i++)
+         slice[i] = this[i + start];
 
       return slice;
    }
@@ -99,12 +105,14 @@ public struct BigEndianByteIndexerInt32 : IByteIndexer
    #region Implementation of IEnumerable
 
    /// <inheritdoc />
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public IEnumerator<byte> GetEnumerator()
    {
       for (var i = 0; i < ByteSize; i++) yield return this[i];
    }
 
    /// <inheritdoc />
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    IEnumerator IEnumerable.GetEnumerator() { return GetEnumerator(); }
 
    #endregion

@@ -78,8 +78,10 @@ public struct LittleEndianByteIndexerUInt32 : IByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] Slice(int start, int length)
    {
-      var slice                                 = new byte[length];
-      for (var i = 0; i < length; i++) slice[i] = this[i + start];
+      var len   = length < ByteSize ? length : ByteSize;
+      var slice = new byte[len];
+      for (var i = 0; i < length; i++)
+         slice[i] = this[i + start];
 
       return slice;
    }

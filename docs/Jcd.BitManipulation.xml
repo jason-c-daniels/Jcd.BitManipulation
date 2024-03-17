@@ -2147,9 +2147,6 @@
             <summary>
             The backing store.
             </summary>
-            <summary>
-            The backing store.
-            </summary>
         </member>
         <member name="P:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64.Item(System.Int32)">
             <summary>

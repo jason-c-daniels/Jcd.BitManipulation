@@ -35,11 +35,6 @@ public struct BigEndianByteIndexerUInt64 : IByteIndexer
    /// <param name="data"> The initial value of the underlying data.</param>
    public BigEndianByteIndexerUInt64(ulong data = 0) { Data = data; }
 
-   static BigEndianByteIndexerUInt64() { IsSystemBigEndian = !BitConverter.IsLittleEndian; }
-
-   public static bool IsSystemBigEndian { get; }
-
-   
    /// <summary>
    /// The length of the indexer.
    /// </summary>
@@ -48,13 +43,7 @@ public struct BigEndianByteIndexerUInt64 : IByteIndexer
    /// <summary>
    /// The backing store.
    /// </summary>
-   public ulong Data
-   {
-      get => _data;
-      set => _data = value;
-   }
-
-   private ulong _data;
+   public ulong Data { get; set; }
 
    /// <summary>
    /// Access bytes from the underlying data.
@@ -86,55 +75,12 @@ public struct BigEndianByteIndexerUInt64 : IByteIndexer
    /// <param name="length">The number of bits to extract</param>
    /// <returns>an array of bytes for the specified subset</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public unsafe byte[] Slice(int start, int length)
+   public byte[] Slice(int start, int length)
    {
-      var slice = new byte[length < ByteSize ? length : ByteSize];
-
-      fixed (byte* ps = slice)
-      fixed (ulong* pdata = &_data)
-      {
-         var bytes = (byte*) pdata;
-         if (start == 0 && length >= ByteSize)
-            CopyAll(bytes, ps);
-         else
-            CopySubset(start, length, bytes, ps);
-      }
+      var slice                                 = new byte[length];
+      for (var i = 0; i < length; i++) slice[i] = this[i + start];
 
       return slice;
-   }
-
-   [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   private unsafe void CopyAll(byte* bytes, byte* pslice)
-   {
-      if (IsSystemBigEndian)
-      {
-         var pb = bytes;
-         for (var i = 0; i < ByteSize; i++, pb++)
-            pslice[i] = *pb;
-      }
-      else
-      {
-         var rpb = bytes + MaxByteIndex;
-         for (var i = 0; i < ByteSize; i++, rpb--)
-            pslice[i] = *rpb;
-      }
-   }
-
-   [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   private unsafe void CopySubset(int start, int length, byte* bytes, byte* pslice)
-   {
-      if (IsSystemBigEndian)
-      {
-         var pb = bytes + start;
-         for (var i = 0; i < length && i + start < ByteSize; i++, pb++)
-            pslice[i] = *pb;
-      }
-      else
-      {
-         var rpb = bytes + (MaxByteIndex - start);
-         for (var i = 0; i < length && i + start < ByteSize; i++, rpb--)
-            pslice[i] = *rpb;
-      }
    }
 
    /// <summary>

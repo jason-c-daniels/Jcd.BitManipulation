@@ -36,6 +36,10 @@ public struct LittleEndianByteIndexerUInt64 : IByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public LittleEndianByteIndexerUInt64(ulong data = 0) { Data = data; }
 
+   static LittleEndianByteIndexerUInt64() { IsSystemLittleEndian = BitConverter.IsLittleEndian; }
+
+   public static bool IsSystemLittleEndian { get; }
+
    /// <summary>
    /// The length of the indexer.
    /// </summary>
@@ -44,7 +48,16 @@ public struct LittleEndianByteIndexerUInt64 : IByteIndexer
    /// <summary>
    /// The backing store.
    /// </summary>
-   public ulong Data { get; set; }
+   /// <summary>
+   /// The backing store.
+   /// </summary>
+   public ulong Data
+   {
+      get => _data;
+      set => _data = value;
+   }
+
+   private ulong _data;
 
    /// <summary>
    /// Access bytes from the underlying data.
@@ -69,6 +82,7 @@ public struct LittleEndianByteIndexerUInt64 : IByteIndexer
       }
    }
 
+  
    /// <summary>
    /// Get a subset of bytes given a starting offset and length.
    /// </summary>
@@ -76,13 +90,55 @@ public struct LittleEndianByteIndexerUInt64 : IByteIndexer
    /// <param name="length">The number of bits to extract</param>
    /// <returns>an array of bytes for the specified subset</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public byte[] Slice(int start, int length)
+   public unsafe byte[] Slice(int start, int length)
    {
-      var slice                                 = new byte[length];
-      for (var i = 0; i < length; i++) slice[i] = this[i + start];
+      var slice = new byte[Math.Min(length, ByteSize)];
+
+      fixed (byte* ps = slice)
+      fixed (ulong* pdata = &_data)
+      {
+         var bytes = (byte*) pdata;
+         if (start == 0 && length >= ByteSize)
+            CopyAll(bytes, ps);
+         else
+            CopySubset(start, length, bytes, ps);
+      }
 
       return slice;
    }
+
+   private unsafe void CopyAll(byte* bytes, byte* pSlice)
+   {
+      if (IsSystemLittleEndian)
+      {
+         var pb = bytes;
+         for (var i = 0; i < ByteSize; i++, pb++)
+            pSlice[i] = *pb;
+      }
+      else
+      {
+         var rpb = bytes + MaxByteIndex;
+         for (var i = 0; i < ByteSize; i++, rpb--)
+            pSlice[i] = *rpb;
+      }
+   }
+
+   private unsafe void CopySubset(int start, int length, byte* bytes, byte* pSlice)
+   {
+      if (IsSystemLittleEndian)
+      {
+         var pb = bytes + start;
+         for (var i = 0; i < length && i + start < ByteSize; i++, pb++)
+            pSlice[i] = *pb;
+      }
+      else
+      {
+         var rpb = bytes + (MaxByteIndex - start);
+         for (var i = 0; i < length && i + start < ByteSize; i++, rpb--)
+            pSlice[i] = *rpb;
+      }
+   }
+
 
    /// <summary>
    /// Converts the byte indexer to its underlying data type.

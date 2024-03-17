@@ -4,6 +4,7 @@
       <TargetFramework>netstandard2.0</TargetFramework>
       <LangVersion>latest</LangVersion>
       <Nullable>disable</Nullable>
+      <PackageTags>c# csharp bit manipulation</PackageTags>
    </PropertyGroup>
 
    <ItemGroup>

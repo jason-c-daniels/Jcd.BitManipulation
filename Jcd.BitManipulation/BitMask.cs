@@ -13,6 +13,8 @@ namespace Jcd.BitManipulation;
 /// </summary>
 public readonly struct BitMask
 {
+   public static readonly BitMask AllBits = ulong.MaxValue;
+   public static readonly BitMask NoBits  = 0;  
    /// <summary>
    /// The backing store for the actual bits of the <see cref="BitMask"/>.
    /// </summary>
@@ -120,7 +122,7 @@ public readonly struct BitMask
       return sb.ToString();
    }
 
-   #region implicit cast operations.
+   #region implicit conversion operators.
 
    /// <summary>
    /// Automatically convert to <see cref="sbyte"/> from a <see cref="BitMask"/>

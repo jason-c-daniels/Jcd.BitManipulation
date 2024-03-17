@@ -1,5 +1,4 @@
 ﻿#### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation.ByteIndexers](Jcd.BitManipulation.ByteIndexers.md 'Jcd.BitManipulation.ByteIndexers').[LittleEndianByteIndexerInt32](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32')
 
 ## LittleEndianByteIndexerInt32.implicit operator int(LittleEndianByteIndexerInt32) Operator
@@ -9,7 +8,6 @@ Converts the byte indexer to its underlying data type.
 ```csharp
 public static int implicit operator int(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32 buffer);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32.op_Implicitint(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32).buffer'></a>

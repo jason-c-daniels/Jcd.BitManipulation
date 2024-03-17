@@ -1,5 +1,4 @@
 ﻿#### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation.ByteIndexers](Jcd.BitManipulation.ByteIndexers.md 'Jcd.BitManipulation.ByteIndexers').[BigEndianByteIndexerUInt64](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt64.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt64')
 
 ## BigEndianByteIndexerUInt64(ulong) Constructor
@@ -11,7 +10,6 @@ from a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64
 ```csharp
 public BigEndianByteIndexerUInt64(ulong data=0uL);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt64.BigEndianByteIndexerUInt64(ulong).data'></a>

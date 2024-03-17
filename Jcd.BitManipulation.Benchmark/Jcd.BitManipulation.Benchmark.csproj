@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+   <PropertyGroup>
+      <OutputType>Exe</OutputType>
+      <TargetFrameworks>net8.0;net462;net481;net6.0</TargetFrameworks>
+      <ImplicitUsings>enable</ImplicitUsings>
+      <Nullable>enable</Nullable>
+      <LangVersion>latest</LangVersion>
+   </PropertyGroup>
+
+   <ItemGroup>
+      <PackageReference Include="BenchmarkDotNet" Version="0.13.12"/>
+   </ItemGroup>
+
+   <ItemGroup>
+      <ProjectReference Include="..\Jcd.BitManipulation\Jcd.BitManipulation.csproj"/>
+   </ItemGroup>
+
+</Project>

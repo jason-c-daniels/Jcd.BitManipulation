@@ -1,5 +1,4 @@
 ﻿#### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation.BitIndexers](Jcd.BitManipulation.BitIndexers.md 'Jcd.BitManipulation.BitIndexers').[BitIndexerByte](Jcd.BitManipulation.BitIndexers.BitIndexerByte.md 'Jcd.BitManipulation.BitIndexers.BitIndexerByte')
 
 ## BitIndexerByte.implicit operator BitIndexerByte(byte) Operator
@@ -9,7 +8,6 @@ Automatically Convert from a byte to a BitIndexerByte
 ```csharp
 public static Jcd.BitManipulation.BitIndexers.BitIndexerByte implicit operator BitIndexerByte(byte bits);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexers.BitIndexerByte.op_ImplicitJcd.BitManipulation.BitIndexers.BitIndexerByte(byte).bits'></a>

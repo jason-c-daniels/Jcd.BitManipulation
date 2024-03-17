@@ -1,5 +1,4 @@
-﻿#### [Jcd.BitManipulation](index.md 'index')
-
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation.BitIndexers](Jcd.BitManipulation.BitIndexers.md 'Jcd.BitManipulation.BitIndexers').[BitIndexerInt64](Jcd.BitManipulation.BitIndexers.BitIndexerInt64.md 'Jcd.BitManipulation.BitIndexers.BitIndexerInt64')
 
 ## BitIndexerInt64.System.Collections.IEnumerable.GetEnumerator() Method

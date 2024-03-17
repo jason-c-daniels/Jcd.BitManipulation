@@ -5,6 +5,7 @@
 using System;
 using System.Diagnostics;
 
+using Jcd.BitManipulation.ByteIndexers;
 using Jcd.Units;
 using Jcd.Units.UnitsOfMeasure;
 using Jcd.Units.UnitsOfMeasure.Data;

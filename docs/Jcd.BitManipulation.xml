@@ -295,497 +295,61 @@
              NB: Only the lowest 8 bits of the bitmask will be used.
           </remarks>
        </member>
-       <member name="T:Jcd.BitManipulation.BigEndianByteIndexerInt16">
-          <summary>
-             Provides byte level indexing operations (set, get) on an<see cref="T:System.Int16"/>. Zero is the most
-             significant byte.
-          </summary>
-       </member>
-       <member name="F:Jcd.BitManipulation.BigEndianByteIndexerInt16.ByteSize">
-          <summary>
-             The number of bytes this type will index
-          </summary>
-       </member>
-       <member name="F:Jcd.BitManipulation.BigEndianByteIndexerInt16.MaxByteIndex">
-          <summary>
-             The largest byte index available.
-          </summary>
-       </member>
-       <member name="M:Jcd.BitManipulation.BigEndianByteIndexerInt16.#ctor(System.Int16)">
-          <summary>
-             Constructs a
-             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexerInt16"/>
-             from an<see cref="T:System.Int16"/>.
-          </summary>
-          <param name="data">The initial value of the underlying data.</param>
-       </member>
-       <member name="P:Jcd.BitManipulation.BigEndianByteIndexerInt16.Length">
-          <summary>
-             The length of the indexer.
-          </summary>
-       </member>
-       <member name="P:Jcd.BitManipulation.BigEndianByteIndexerInt16.Data">
-          <summary>
-             The backing store.
-          </summary>
-       </member>
-       <member name="P:Jcd.BitManipulation.BigEndianByteIndexerInt16.Item(System.Int32)">
-          <summary>
-             Access bytes from the underlying data.
-          </summary>
-          <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying
-             storage.
-          </param>
-          <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
-       </member>
-       <member name="M:Jcd.BitManipulation.BigEndianByteIndexerInt16.Slice(System.Int32,System.Int32)">
-          <summary>
-             Get a subset of bytes given a starting offset and length.
-          </summary>
-          <param name="start">The starting bit offset</param>
-          <param name="length">The number of bits to extract</param>
-          <returns>an array of bytes for the specified subset</returns>
-       </member>
-       <member
-          name="M:Jcd.BitManipulation.BigEndianByteIndexerInt16.op_Implicit(Jcd.BitManipulation.BigEndianByteIndexerInt16)~System.Int16">
-          <summary>
-             Converts the byte indexer to its underlying data type.
-          </summary>
-          <param name="indexer">The indexer to convert.</param>
-          <returns>The raw data.</returns>
-       </member>
-       <member
-          name="M:Jcd.BitManipulation.BigEndianByteIndexerInt16.op_Implicit(System.Int16)~Jcd.BitManipulation.BigEndianByteIndexerInt16">
-          <summary>
-             Converts the underlying data type to the indexer type.
-          </summary>
-          <param name="data">The underlying data type.</param>
-          <returns>A indexer type.</returns>
-       </member>
-       <member name="M:Jcd.BitManipulation.BigEndianByteIndexerInt16.GetEnumerator">
-          <inheritdoc/>
-       </member>
-       <member name="M:Jcd.BitManipulation.BigEndianByteIndexerInt16.System#Collections#IEnumerable#GetEnumerator">
-          <inheritdoc/>
-       </member>
-       <member name="T:Jcd.BitManipulation.BigEndianByteIndexerInt32">
-          <summary>
-             Provides byte level indexing operations (set, get) on a<see cref="T:System.Int32"/>. Zero is the most
-             significant byte.
-          </summary>
-       </member>
-       <member name="F:Jcd.BitManipulation.BigEndianByteIndexerInt32.ByteSize">
-          <summary>
-             The number of bytes this type will index
-          </summary>
-       </member>
-       <member name="F:Jcd.BitManipulation.BigEndianByteIndexerInt32.MaxByteIndex">
-          <summary>
-             The largest byte index available.
-          </summary>
-       </member>
-       <member name="M:Jcd.BitManipulation.BigEndianByteIndexerInt32.#ctor(System.Int32)">
-          <summary>
-             Constructs a
-             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexerInt32"/>
-             from an<see cref="T:System.Int32"/>.
-          </summary>
-          <param name="data">The initial value of the underlying data.</param>
-       </member>
-       <member name="P:Jcd.BitManipulation.BigEndianByteIndexerInt32.Length">
-          <summary>
-             The length of the indexer.
-          </summary>
-       </member>
-       <member name="P:Jcd.BitManipulation.BigEndianByteIndexerInt32.Data">
-          <summary>
-             The backing store.
-          </summary>
-       </member>
-       <member name="P:Jcd.BitManipulation.BigEndianByteIndexerInt32.Item(System.Int32)">
-          <summary>
-             Access bytes from the underlying data.
-          </summary>
-          <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying
-             storage.
-          </param>
-          <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
-       </member>
-       <member name="M:Jcd.BitManipulation.BigEndianByteIndexerInt32.Slice(System.Int32,System.Int32)">
-          <summary>
-             Get a subset of bytes given a starting offset and length.
-          </summary>
-          <param name="start">The starting bit offset</param>
-          <param name="length">The number of bits to extract</param>
-          <returns>an array of bytes for the specified subset</returns>
-       </member>
-       <member
-          name="M:Jcd.BitManipulation.BigEndianByteIndexerInt32.op_Implicit(Jcd.BitManipulation.BigEndianByteIndexerInt32)~System.Int32">
-          <summary>
-             Converts the byte indexer to its underlying data type.
-          </summary>
-          <param name="indexer">The indexer to convert.</param>
-          <returns>The raw data.</returns>
-       </member>
-       <member
-          name="M:Jcd.BitManipulation.BigEndianByteIndexerInt32.op_Implicit(System.Int32)~Jcd.BitManipulation.BigEndianByteIndexerInt32">
-          <summary>
-             Converts the underlying data type to the indexer type.
-          </summary>
-          <param name="data">The underlying data type.</param>
-          <returns>A indexer type.</returns>
-       </member>
-       <member name="M:Jcd.BitManipulation.BigEndianByteIndexerInt32.GetEnumerator">
-          <inheritdoc/>
-       </member>
-       <member name="M:Jcd.BitManipulation.BigEndianByteIndexerInt32.System#Collections#IEnumerable#GetEnumerator">
-          <inheritdoc/>
-       </member>
-       <member name="T:Jcd.BitManipulation.BigEndianByteIndexerInt64">
-          <summary>
-             Provides byte level indexing operations (set, get) on an<see cref="T:System.Int64"/>. Zero is the most
-             significant byte.
-          </summary>
-       </member>
-       <member name="F:Jcd.BitManipulation.BigEndianByteIndexerInt64.ByteSize">
-          <summary>
-             The number of bytes this type will index
-          </summary>
-       </member>
-       <member name="F:Jcd.BitManipulation.BigEndianByteIndexerInt64.MaxByteIndex">
-          <summary>
-             The largest byte index available.
-          </summary>
-       </member>
-       <member name="M:Jcd.BitManipulation.BigEndianByteIndexerInt64.#ctor(System.Int64)">
-          <summary>
-             Constructs a
-             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexerInt64"/>
-             from an<see cref="T:System.Int64"/>.
-          </summary>
-          <param name="data">The initial value of the underlying data.</param>
-       </member>
-       <member name="P:Jcd.BitManipulation.BigEndianByteIndexerInt64.Length">
-          <summary>
-             The length of the indexer.
-          </summary>
-       </member>
-       <member name="P:Jcd.BitManipulation.BigEndianByteIndexerInt64.Data">
-          <summary>
-             The backing store.
-          </summary>
-       </member>
-       <member name="P:Jcd.BitManipulation.BigEndianByteIndexerInt64.Item(System.Int32)">
-          <summary>
-             Access bytes from the underlying data.
-          </summary>
-          <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying
-             storage.
-          </param>
-          <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
-       </member>
-       <member name="M:Jcd.BitManipulation.BigEndianByteIndexerInt64.Slice(System.Int32,System.Int32)">
-          <summary>
-             Get a subset of bytes given a starting offset and length.
-          </summary>
-          <param name="start">The starting bit offset</param>
-          <param name="length">The number of bits to extract</param>
-          <returns>an array of bytes for the specified subset</returns>
-       </member>
-       <member
-          name="M:Jcd.BitManipulation.BigEndianByteIndexerInt64.op_Implicit(Jcd.BitManipulation.BigEndianByteIndexerInt64)~System.Int64">
-          <summary>
-             Converts the byte indexer to its underlying data type.
-          </summary>
-          <param name="indexer">The indexer to convert.</param>
-          <returns>The raw data.</returns>
-       </member>
-       <member
-          name="M:Jcd.BitManipulation.BigEndianByteIndexerInt64.op_Implicit(System.Int64)~Jcd.BitManipulation.BigEndianByteIndexerInt64">
-          <summary>
-             Converts the underlying data type to the indexer type.
-          </summary>
-          <param name="data">The underlying data type.</param>
-          <returns>A indexer type.</returns>
-       </member>
-       <member name="M:Jcd.BitManipulation.BigEndianByteIndexerInt64.GetEnumerator">
-          <inheritdoc/>
-       </member>
-       <member name="M:Jcd.BitManipulation.BigEndianByteIndexerInt64.System#Collections#IEnumerable#GetEnumerator">
-          <inheritdoc/>
-       </member>
-       <member name="T:Jcd.BitManipulation.BigEndianByteIndexerUInt16">
-          <summary>
-             Provides byte level indexing operations (set, get) on a<see cref="T:System.UInt16"/>. Zero is the most
-             significant byte.
-          </summary>
-       </member>
-       <member name="F:Jcd.BitManipulation.BigEndianByteIndexerUInt16.ByteSize">
-          <summary>
-             The number of bytes this type will index
-          </summary>
-       </member>
-       <member name="F:Jcd.BitManipulation.BigEndianByteIndexerUInt16.MaxByteIndex">
-          <summary>
-             The largest byte index available.
-          </summary>
-       </member>
-       <member name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt16.#ctor(System.UInt16)">
-          <summary>
-             Constructs a
-             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexerUInt16"/>
-             from a<see cref="T:System.UInt16"/>.
-          </summary>
-          <param name="data">The initial value of the underlying data.</param>
-       </member>
-       <member name="P:Jcd.BitManipulation.BigEndianByteIndexerUInt16.Length">
-          <summary>
-             The length of the indexer.
-          </summary>
-       </member>
-       <member name="P:Jcd.BitManipulation.BigEndianByteIndexerUInt16.Data">
-          <summary>
-             The backing store.
-          </summary>
-       </member>
-       <member name="P:Jcd.BitManipulation.BigEndianByteIndexerUInt16.Item(System.Int32)">
-          <summary>
-             Access bytes from the underlying data.
-          </summary>
-          <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying
-             storage.
-          </param>
-          <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
-       </member>
-       <member name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt16.Slice(System.Int32,System.Int32)">
-          <summary>
-             Get a subset of bytes given a starting offset and length.
-          </summary>
-          <param name="start">The starting bit offset</param>
-          <param name="length">The number of bits to extract</param>
-          <returns>an array of bytes for the specified subset</returns>
-       </member>
-       <member
-          name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt16.op_Implicit(Jcd.BitManipulation.BigEndianByteIndexerUInt16)~System.UInt16">
-          <summary>
-             Converts the byte indexer to its underlying data type.
-          </summary>
-          <param name="indexer">The indexer to convert.</param>
-          <returns>The raw data.</returns>
-       </member>
-       <member
-          name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt16.op_Implicit(System.UInt16)~Jcd.BitManipulation.BigEndianByteIndexerUInt16">
-          <summary>
-             Converts the underlying data type to the indexer type.
-          </summary>
-          <param name="data">The underlying data type.</param>
-          <returns>A indexer type.</returns>
-       </member>
-       <member name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt16.GetEnumerator">
-          <inheritdoc/>
-       </member>
-       <member name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt16.System#Collections#IEnumerable#GetEnumerator">
-          <inheritdoc/>
-       </member>
-       <member name="T:Jcd.BitManipulation.BigEndianByteIndexerUInt32">
-          <summary>
-             Provides byte level indexing operations (set, get) on a<see cref="T:System.UInt32"/>. Zero is the most
-             significant byte.
-          </summary>
-       </member>
-       <member name="F:Jcd.BitManipulation.BigEndianByteIndexerUInt32.ByteSize">
-          <summary>
-             The number of bytes this type will index
-          </summary>
-       </member>
-       <member name="F:Jcd.BitManipulation.BigEndianByteIndexerUInt32.MaxByteIndex">
-          <summary>
-             The largest byte index available.
-          </summary>
-       </member>
-       <member name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt32.#ctor(System.UInt32)">
-          <summary>
-             Constructs a
-             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexerUInt32"/>
-             from a<see cref="T:System.UInt32"/>.
-          </summary>
-          <param name="data">The initial value of the underlying data.</param>
-       </member>
-       <member name="P:Jcd.BitManipulation.BigEndianByteIndexerUInt32.Length">
-          <summary>
-             The length of the indexer.
-          </summary>
-       </member>
-       <member name="P:Jcd.BitManipulation.BigEndianByteIndexerUInt32.Data">
-          <summary>
-             The backing store.
-          </summary>
-       </member>
-       <member name="P:Jcd.BitManipulation.BigEndianByteIndexerUInt32.Item(System.Int32)">
-          <summary>
-             Access bytes from the underlying data.
-          </summary>
-          <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying
-             storage.
-          </param>
-          <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
-       </member>
-       <member name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt32.Slice(System.Int32,System.Int32)">
-          <summary>
-             Get a subset of bytes given a starting offset and length.
-          </summary>
-          <param name="start">The starting bit offset</param>
-          <param name="length">The number of bits to extract</param>
-          <returns>an array of bytes for the specified subset</returns>
-       </member>
-       <member
-          name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt32.op_Implicit(Jcd.BitManipulation.BigEndianByteIndexerUInt32)~System.UInt32">
-          <summary>
-             Converts the byte indexer to its underlying data type.
-          </summary>
-          <param name="indexer">The indexer to convert.</param>
-          <returns>The raw data.</returns>
-       </member>
-       <member
-          name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt32.op_Implicit(System.UInt32)~Jcd.BitManipulation.BigEndianByteIndexerUInt32">
-          <summary>
-             Converts the underlying data type to the indexer type.
-          </summary>
-          <param name="data">The underlying data type.</param>
-          <returns>A indexer type.</returns>
-       </member>
-       <member name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt32.GetEnumerator">
-          <inheritdoc/>
-       </member>
-       <member name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt32.System#Collections#IEnumerable#GetEnumerator">
-          <inheritdoc/>
-       </member>
-       <member name="T:Jcd.BitManipulation.BigEndianByteIndexerUInt64">
-          <summary>
-             Provides byte level indexing operations (set, get) on a<see cref="T:System.UInt64"/>. Zero is the most
-             significant byte.
-          </summary>
-       </member>
-       <member name="F:Jcd.BitManipulation.BigEndianByteIndexerUInt64.ByteSize">
-          <summary>
-             The number of bytes this type will index
-          </summary>
-       </member>
-       <member name="F:Jcd.BitManipulation.BigEndianByteIndexerUInt64.MaxByteIndex">
-          <summary>
-             The largest byte index available.
-          </summary>
-       </member>
-       <member name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt64.#ctor(System.UInt64)">
-          <summary>
-             Constructs a
-             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexerUInt64"/>
-             from a<see cref="T:System.UInt64"/>.
-          </summary>
-          <param name="data">The initial value of the underlying data.</param>
-       </member>
-       <member name="P:Jcd.BitManipulation.BigEndianByteIndexerUInt64.Length">
-          <summary>
-             The length of the indexer.
-          </summary>
-       </member>
-       <member name="P:Jcd.BitManipulation.BigEndianByteIndexerUInt64.Data">
-          <summary>
-             The backing store.
-          </summary>
-       </member>
-       <member name="P:Jcd.BitManipulation.BigEndianByteIndexerUInt64.Item(System.Int32)">
-          <summary>
-             Access bytes from the underlying data.
-          </summary>
-          <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying
-             storage.
-          </param>
-          <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
-       </member>
-       <member name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt64.Slice(System.Int32,System.Int32)">
-          <summary>
-             Get a subset of bytes given a starting offset and length.
-          </summary>
-          <param name="start">The starting bit offset</param>
-          <param name="length">The number of bits to extract</param>
-          <returns>an array of bytes for the specified subset</returns>
-       </member>
-       <member
-          name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt64.op_Implicit(Jcd.BitManipulation.BigEndianByteIndexerUInt64)~System.UInt64">
-          <summary>
-             Converts the byte indexer to its underlying data type.
-          </summary>
-          <param name="indexer">The indexer to convert.</param>
-          <returns>The raw data.</returns>
-       </member>
-       <member
-          name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt64.op_Implicit(System.UInt64)~Jcd.BitManipulation.BigEndianByteIndexerUInt64">
-          <summary>
-             Converts the underlying data type to the indexer type.
-          </summary>
-          <param name="data">The underlying data type.</param>
-          <returns>A indexer type.</returns>
-       </member>
-       <member name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt64.GetEnumerator">
-          <inheritdoc/>
-       </member>
-       <member name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt64.System#Collections#IEnumerable#GetEnumerator">
-          <inheritdoc/>
-       </member>
-       <member name="T:Jcd.BitManipulation.BitIndexerByte">
+       <member name="T:Jcd.BitManipulation.BitIndexers.BitIndexerByte">
             <summary>
             Provides enumeration and indexed access to the bits on a stored byte. 
             </summary>
         </member>
-       <member name="F:Jcd.BitManipulation.BitIndexerByte.BitSize">
+       <member name="F:Jcd.BitManipulation.BitIndexers.BitIndexerByte.BitSize">
             <summary>
             The number of bits this type will index
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.BitIndexerByte.Bits">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerByte.Bits">
             <summary>
             The backing store
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.BitIndexerByte.Length">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerByte.Length">
             <summary>
             The length of enumerated bits
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.BitIndexerByte.Item(System.Int32)">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerByte.Item(System.Int32)">
             <summary>
             Gets or sets individual bits within the backing store. 
             </summary>
             <param name="index">the offset of the bit to access.</param>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerByte.op_Implicit(System.Byte)~Jcd.BitManipulation.BitIndexerByte">
+       <member
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexerByte.op_Implicit(System.Byte)~Jcd.BitManipulation.BitIndexers.BitIndexerByte">
             <summary>
             Automatically Convert from a byte to a BitIndexerByte
             </summary>
             <param name="bits">the initial value for the indexer's backing store</param>
             <returns>A new BitIndexerByte</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerByte.op_Implicit(Jcd.BitManipulation.BitIndexerByte)~System.Byte">
+       <member
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexerByte.op_Implicit(Jcd.BitManipulation.BitIndexers.BitIndexerByte)~System.Byte">
             <summary>
             Automatically convert from a BitIndexerByte to a byte
             </summary>
             <param name="indexer">the indexer to convert from</param>
             <returns>the byte</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerByte.GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerByte.GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerByte.System#Collections#IEnumerable#GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerByte.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerByte.Slice(System.Int32,System.Int32)">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerByte.Slice(System.Int32,System.Int32)">
             <summary>
             Gets a subset of bits given a starting offset and length.
             </summary>
@@ -793,40 +357,40 @@
             <param name="length">The number of bits to extract</param>
             <returns>an array of bools for the subset of bits</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerByte.ToString">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerByte.ToString">
             <summary>
             Format as a bit representation
             </summary>
             <returns>the bits of the value formatted as 0b0101...1111</returns>
         </member>
-       <member name="T:Jcd.BitManipulation.BitIndexerInt16">
+       <member name="T:Jcd.BitManipulation.BitIndexers.BitIndexerInt16">
             <summary>
             Provides enumeration and indexed access to the bits on a stored short. 
             </summary>
         </member>
-       <member name="F:Jcd.BitManipulation.BitIndexerInt16.BitSize">
+       <member name="F:Jcd.BitManipulation.BitIndexers.BitIndexerInt16.BitSize">
             <summary>
             The number of bits this type will index
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.BitIndexerInt16.Bits">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerInt16.Bits">
             <summary>
             The backing store
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.BitIndexerInt16.Length">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerInt16.Length">
             <summary>
             The length of enumerated bits
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.BitIndexerInt16.Item(System.Int32)">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerInt16.Item(System.Int32)">
             <summary>
             Gets or sets individual bits within the backing store. 
             </summary>
             <param name="index">the offset of the bit to access.</param>
         </member>
        <member
-          name="M:Jcd.BitManipulation.BitIndexerInt16.op_Implicit(System.Int16)~Jcd.BitManipulation.BitIndexerInt16">
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt16.op_Implicit(System.Int16)~Jcd.BitManipulation.BitIndexers.BitIndexerInt16">
             <summary>
             Automatically Convert from a short to a BitIndexerInt16
             </summary>
@@ -834,26 +398,26 @@
             <returns>A new BitIndexerInt16</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.BitIndexerInt16.op_Implicit(Jcd.BitManipulation.BitIndexerInt16)~System.Int16">
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt16.op_Implicit(Jcd.BitManipulation.BitIndexers.BitIndexerInt16)~System.Int16">
             <summary>
             Automatically convert from a BitIndexerInt16 to a short
             </summary>
             <param name="indexer">the indexer to convert from</param>
             <returns>the short</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerInt16.GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt16.GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerInt16.System#Collections#IEnumerable#GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt16.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerInt16.Slice(System.Int32,System.Int32)">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt16.Slice(System.Int32,System.Int32)">
             <summary>
             Get a subset of bits given a starting offset and length.
             </summary>
@@ -861,40 +425,40 @@
             <param name="length">The number of bits to extract</param>
             <returns>an array of bools for the subset of bits</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerInt16.ToString">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt16.ToString">
             <summary>
             Format as a bit representation
             </summary>
             <returns>the bits of the value formatted as 0b0101...1111</returns>
         </member>
-       <member name="T:Jcd.BitManipulation.BitIndexerInt32">
+       <member name="T:Jcd.BitManipulation.BitIndexers.BitIndexerInt32">
             <summary>
             Provides enumeration and indexed access to the bits on a stored int. 
             </summary>
         </member>
-       <member name="F:Jcd.BitManipulation.BitIndexerInt32.BitSize">
+       <member name="F:Jcd.BitManipulation.BitIndexers.BitIndexerInt32.BitSize">
             <summary>
             The number of bits this type will index
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.BitIndexerInt32.Bits">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerInt32.Bits">
             <summary>
             The backing store
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.BitIndexerInt32.Length">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerInt32.Length">
             <summary>
             The length of enumerated bits
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.BitIndexerInt32.Item(System.Int32)">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerInt32.Item(System.Int32)">
             <summary>
             Gets or sets individual bits within the backing store. 
             </summary>
             <param name="index">the offset of the bit to access.</param>
         </member>
        <member
-          name="M:Jcd.BitManipulation.BitIndexerInt32.op_Implicit(System.Int32)~Jcd.BitManipulation.BitIndexerInt32">
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt32.op_Implicit(System.Int32)~Jcd.BitManipulation.BitIndexers.BitIndexerInt32">
             <summary>
             Automatically Convert from an int to a BitIndexerInt32
             </summary>
@@ -902,26 +466,26 @@
             <returns>A new BitIndexerInt32</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.BitIndexerInt32.op_Implicit(Jcd.BitManipulation.BitIndexerInt32)~System.Int32">
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt32.op_Implicit(Jcd.BitManipulation.BitIndexers.BitIndexerInt32)~System.Int32">
             <summary>
             Automatically convert from a BitIndexerInt32 to an int
             </summary>
             <param name="indexer">the indexer to convert from</param>
             <returns>the int</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerInt32.GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt32.GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerInt32.System#Collections#IEnumerable#GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt32.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerInt32.Slice(System.Int32,System.Int32)">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt32.Slice(System.Int32,System.Int32)">
             <summary>
             Get a subset of bits given a starting offset and length.
             </summary>
@@ -929,40 +493,40 @@
             <param name="length">The number of bits to extract</param>
             <returns>an array of bools for the subset of bits</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerInt32.ToString">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt32.ToString">
             <summary>
             Format as a bit representation
             </summary>
             <returns>the bits of the value formatted as 0b0101...1111</returns>
         </member>
-       <member name="T:Jcd.BitManipulation.BitIndexerInt64">
+       <member name="T:Jcd.BitManipulation.BitIndexers.BitIndexerInt64">
             <summary>
             Provides enumeration and indexed access to the bits on a stored long. 
             </summary>
         </member>
-       <member name="F:Jcd.BitManipulation.BitIndexerInt64.BitSize">
+       <member name="F:Jcd.BitManipulation.BitIndexers.BitIndexerInt64.BitSize">
             <summary>
             The number of bits this type will index
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.BitIndexerInt64.Bits">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerInt64.Bits">
             <summary>
             The backing store
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.BitIndexerInt64.Length">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerInt64.Length">
             <summary>
             The length of enumerated bits
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.BitIndexerInt64.Item(System.Int32)">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerInt64.Item(System.Int32)">
             <summary>
             Gets or sets individual bits within the backing store. 
             </summary>
             <param name="index">the offset of the bit to access.</param>
         </member>
        <member
-          name="M:Jcd.BitManipulation.BitIndexerInt64.op_Implicit(System.Int64)~Jcd.BitManipulation.BitIndexerInt64">
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt64.op_Implicit(System.Int64)~Jcd.BitManipulation.BitIndexers.BitIndexerInt64">
             <summary>
             Automatically Convert from a long to a BitIndexerInt64
             </summary>
@@ -970,65 +534,65 @@
             <returns>A new BitIndexerInt64</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.BitIndexerInt64.op_Implicit(Jcd.BitManipulation.BitIndexerInt64)~System.Int64">
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt64.op_Implicit(Jcd.BitManipulation.BitIndexers.BitIndexerInt64)~System.Int64">
             <summary>
             Automatically convert from a BitIndexerInt64 to a long
             </summary>
             <param name="indexer">the indexer to convert from</param>
             <returns>the long</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerInt64.GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt64.GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerInt64.System#Collections#IEnumerable#GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt64.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerInt64.Slice(System.Int32,System.Int32)">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt64.Slice(System.Int32,System.Int32)">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerInt64.ToString">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt64.ToString">
             <summary>
             Format as a bit representation
             </summary>
             <returns>the bits of the value formatted as 0b0101...1111</returns>
         </member>
-       <member name="T:Jcd.BitManipulation.BitIndexerSByte">
+       <member name="T:Jcd.BitManipulation.BitIndexers.BitIndexerSByte">
             <summary>
             Provides enumeration and indexed access to the bits on a stored sbyte. 
             </summary>
         </member>
-       <member name="F:Jcd.BitManipulation.BitIndexerSByte.BitSize">
+       <member name="F:Jcd.BitManipulation.BitIndexers.BitIndexerSByte.BitSize">
             <summary>
             The number of bits this type will index
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.BitIndexerSByte.Bits">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerSByte.Bits">
             <summary>
             The backing store
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.BitIndexerSByte.Length">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerSByte.Length">
             <summary>
             The length of enumerated bits
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.BitIndexerSByte.Item(System.Int32)">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerSByte.Item(System.Int32)">
             <summary>
             Gets or sets individual bits within the backing store. 
             </summary>
             <param name="index">the offset of the bit to access.</param>
         </member>
        <member
-          name="M:Jcd.BitManipulation.BitIndexerSByte.op_Implicit(System.SByte)~Jcd.BitManipulation.BitIndexerSByte">
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexerSByte.op_Implicit(System.SByte)~Jcd.BitManipulation.BitIndexers.BitIndexerSByte">
             <summary>
             Automatically Convert from an sbyte to a BitIndexerSByte
             </summary>
@@ -1036,26 +600,26 @@
             <returns>A new BitIndexerSByte</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.BitIndexerSByte.op_Implicit(Jcd.BitManipulation.BitIndexerSByte)~System.SByte">
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexerSByte.op_Implicit(Jcd.BitManipulation.BitIndexers.BitIndexerSByte)~System.SByte">
             <summary>
             Automatically convert from a BitIndexerSByte to an sbyte
             </summary>
             <param name="indexer">the indexer to convert from</param>
             <returns>the sbyte</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerSByte.GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerSByte.GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerSByte.System#Collections#IEnumerable#GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerSByte.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerSByte.Slice(System.Int32,System.Int32)">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerSByte.Slice(System.Int32,System.Int32)">
             <summary>
             Get a subset of bits given a starting offset and length.
             </summary>
@@ -1063,40 +627,40 @@
             <param name="length">The number of bits to extract</param>
             <returns>an array of bools for the subset of bits</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerSByte.ToString">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerSByte.ToString">
             <summary>
             Format as a bit representation
             </summary>
             <returns>the bits of the value formatted as 0b0101...1111</returns>
         </member>
-       <member name="T:Jcd.BitManipulation.BitIndexerUInt16">
+       <member name="T:Jcd.BitManipulation.BitIndexers.BitIndexerUInt16">
             <summary>
             Provides enumeration and indexed access to the bits on a stored ushort. 
             </summary>
         </member>
-       <member name="F:Jcd.BitManipulation.BitIndexerUInt16.BitSize">
+       <member name="F:Jcd.BitManipulation.BitIndexers.BitIndexerUInt16.BitSize">
             <summary>
             The number of bits this type will index
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.BitIndexerUInt16.Bits">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerUInt16.Bits">
             <summary>
             The backing store
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.BitIndexerUInt16.Length">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerUInt16.Length">
             <summary>
             The length of enumerated bits
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.BitIndexerUInt16.Item(System.Int32)">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerUInt16.Item(System.Int32)">
             <summary>
             Gets or sets individual bits within the backing store. 
             </summary>
             <param name="index">the offset of the bit to access.</param>
         </member>
        <member
-          name="M:Jcd.BitManipulation.BitIndexerUInt16.op_Implicit(System.UInt16)~Jcd.BitManipulation.BitIndexerUInt16">
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt16.op_Implicit(System.UInt16)~Jcd.BitManipulation.BitIndexers.BitIndexerUInt16">
             <summary>
             Automatically Convert from a ushort to a BitIndexerUInt16
             </summary>
@@ -1104,26 +668,26 @@
             <returns>A new BitIndexerUInt16</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.BitIndexerUInt16.op_Implicit(Jcd.BitManipulation.BitIndexerUInt16)~System.UInt16">
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt16.op_Implicit(Jcd.BitManipulation.BitIndexers.BitIndexerUInt16)~System.UInt16">
             <summary>
             Automatically convert from a BitIndexerUInt16 to a ushort
             </summary>
             <param name="indexer">the indexer to convert from</param>
             <returns>the ushort</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerUInt16.GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt16.GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerUInt16.System#Collections#IEnumerable#GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt16.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerUInt16.Slice(System.Int32,System.Int32)">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt16.Slice(System.Int32,System.Int32)">
             <summary>
             Get a subset of bits given a starting offset and length.
             </summary>
@@ -1131,40 +695,40 @@
             <param name="length">The number of bits to extract</param>
             <returns>an array of bools for the subset of bits</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerUInt16.ToString">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt16.ToString">
             <summary>
             Format as a bit representation
             </summary>
             <returns>the bits of the value formatted as 0b0101...1111</returns>
         </member>
-       <member name="T:Jcd.BitManipulation.BitIndexerUInt32">
+       <member name="T:Jcd.BitManipulation.BitIndexers.BitIndexerUInt32">
             <summary>
             Provides enumeration and indexed access to the bits on a stored uint. 
             </summary>
         </member>
-       <member name="F:Jcd.BitManipulation.BitIndexerUInt32.BitSize">
+       <member name="F:Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.BitSize">
             <summary>
             The number of bits this type will index
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.BitIndexerUInt32.Bits">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.Bits">
             <summary>
             The backing store
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.BitIndexerUInt32.Length">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.Length">
             <summary>
             The length of enumerated bits
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.BitIndexerUInt32.Item(System.Int32)">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.Item(System.Int32)">
             <summary>
             Gets or sets individual bits within the backing store. 
             </summary>
             <param name="index">the offset of the bit to access.</param>
         </member>
        <member
-          name="M:Jcd.BitManipulation.BitIndexerUInt32.op_Implicit(System.UInt32)~Jcd.BitManipulation.BitIndexerUInt32">
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.op_Implicit(System.UInt32)~Jcd.BitManipulation.BitIndexers.BitIndexerUInt32">
             <summary>
             Automatically Convert from a uint to a BitIndexerUInt32
             </summary>
@@ -1172,26 +736,26 @@
             <returns>A new BitIndexerUInt32</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.BitIndexerUInt32.op_Implicit(Jcd.BitManipulation.BitIndexerUInt32)~System.UInt32">
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.op_Implicit(Jcd.BitManipulation.BitIndexers.BitIndexerUInt32)~System.UInt32">
             <summary>
             Automatically convert from a BitIndexerUInt32 to a uint
             </summary>
             <param name="indexer">the indexer to convert from</param>
             <returns>the uint</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerUInt32.GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerUInt32.System#Collections#IEnumerable#GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerUInt32.Slice(System.Int32,System.Int32)">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.Slice(System.Int32,System.Int32)">
             <summary>
             Get a subset of bits given a starting offset and length.
             </summary>
@@ -1199,40 +763,40 @@
             <param name="length">The number of bits to extract</param>
             <returns>an array of bools for the subset of bits</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerUInt32.ToString">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.ToString">
             <summary>
             Format as a bit representation
             </summary>
             <returns>the bits of the value formatted as 0b0101...1111</returns>
         </member>
-       <member name="T:Jcd.BitManipulation.BitIndexerUInt64">
+       <member name="T:Jcd.BitManipulation.BitIndexers.BitIndexerUInt64">
             <summary>
             Provides enumeration and indexed access to the bits on a stored ulong. 
             </summary>
         </member>
-       <member name="F:Jcd.BitManipulation.BitIndexerUInt64.BitSize">
+       <member name="F:Jcd.BitManipulation.BitIndexers.BitIndexerUInt64.BitSize">
             <summary>
             The number of bits this type will index
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.BitIndexerUInt64.Bits">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerUInt64.Bits">
             <summary>
             The backing store
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.BitIndexerUInt64.Length">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerUInt64.Length">
             <summary>
             The length of enumerated bits
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.BitIndexerUInt64.Item(System.Int32)">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerUInt64.Item(System.Int32)">
             <summary>
             Gets or sets individual bits within the backing store. 
             </summary>
             <param name="index">the offset of the bit to access.</param>
         </member>
        <member
-          name="M:Jcd.BitManipulation.BitIndexerUInt64.op_Implicit(System.UInt64)~Jcd.BitManipulation.BitIndexerUInt64">
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt64.op_Implicit(System.UInt64)~Jcd.BitManipulation.BitIndexers.BitIndexerUInt64">
             <summary>
             Automatically Convert from a ulong to a BitIndexerUInt64
             </summary>
@@ -1240,26 +804,26 @@
             <returns>A new BitIndexerUInt64</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.BitIndexerUInt64.op_Implicit(Jcd.BitManipulation.BitIndexerUInt64)~System.UInt64">
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt64.op_Implicit(Jcd.BitManipulation.BitIndexers.BitIndexerUInt64)~System.UInt64">
             <summary>
             Automatically convert from a BitIndexerUInt64 to a ulong
             </summary>
             <param name="indexer">the indexer to convert from</param>
             <returns>the ulong</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerUInt64.GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt64.GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerUInt64.System#Collections#IEnumerable#GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt64.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerUInt64.Slice(System.Int32,System.Int32)">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt64.Slice(System.Int32,System.Int32)">
             <summary>
             Get a subset of bits given a starting offset and length.
             </summary>
@@ -1267,7 +831,37 @@
             <param name="length">The number of bits to extract</param>
             <returns>an array of bools for the subset of bits</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.BitIndexerUInt64.ToString">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt64.ToString">
+          <summary>
+             Format as a bit representation
+          </summary>
+          <returns>the bits of the value formatted as 0b0101...1111</returns>
+       </member>
+       <member name="T:Jcd.BitManipulation.BitIndexers.IBitIndexer">
+          <summary>
+             The basic interface for indexing bits within an integer data type.
+          </summary>
+       </member>
+       <member name="P:Jcd.BitManipulation.BitIndexers.IBitIndexer.Length">
+          <summary>
+             The number of addressable bits
+          </summary>
+       </member>
+       <member name="P:Jcd.BitManipulation.BitIndexers.IBitIndexer.Item(System.Int32)">
+          <summary>
+             Gets or sets a bit
+          </summary>
+          <param name="index">the offset of the bit to get or set.</param>
+       </member>
+       <member name="M:Jcd.BitManipulation.BitIndexers.IBitIndexer.Slice(System.Int32,System.Int32)">
+          <summary>
+             Gets a slice of bits from the backing store
+          </summary>
+          <param name="start">starting offset of the bits to retrieve</param>
+          <param name="length">the number of bits to get</param>
+          <returns>Array of bits extracted</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.BitIndexers.IBitIndexer.ToString">
             <summary>
             Format as a bit representation
             </summary>
@@ -1984,273 +1578,467 @@
             </param>
             <returns>The converted long</returns>
         </member>
-       <member name="T:Jcd.BitManipulation.ClearBitsExtensions">
+       <member name="T:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16">
+          <summary>
+             Provides byte level indexing operations (set, get) on an<see cref="T:System.Int16"/>. Zero is the most
+             significant byte.
+          </summary>
+       </member>
+       <member name="F:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16.ByteSize">
+          <summary>
+             The number of bytes this type will index
+          </summary>
+       </member>
+       <member name="F:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16.MaxByteIndex">
+          <summary>
+             The largest byte index available.
+          </summary>
+       </member>
+       <member name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16.#ctor(System.Int16)">
+          <summary>
+             Constructs a
+             <see cref="T:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16"/>
+             from an<see cref="T:System.Int16"/>.
+          </summary>
+          <param name="data">The initial value of the underlying data.</param>
+       </member>
+       <member name="P:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16.Length">
+          <summary>
+             The length of the indexer.
+          </summary>
+       </member>
+       <member name="P:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16.Data">
+          <summary>
+             The backing store.
+          </summary>
+       </member>
+       <member name="P:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16.Item(System.Int32)">
+          <summary>
+             Access bytes from the underlying data.
+          </summary>
+          <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying
+             storage.
+          </param>
+          <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
+       </member>
+       <member name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16.Slice(System.Int32,System.Int32)">
+          <summary>
+             Get a subset of bytes given a starting offset and length.
+          </summary>
+          <param name="start">The starting bit offset</param>
+          <param name="length">The number of bits to extract</param>
+          <returns>an array of bytes for the specified subset</returns>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16.op_Implicit(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16)~System.Int16">
+          <summary>
+             Converts the byte indexer to its underlying data type.
+          </summary>
+          <param name="indexer">The indexer to convert.</param>
+          <returns>The raw data.</returns>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16.op_Implicit(System.Int16)~Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16">
+          <summary>
+             Converts the underlying data type to the indexer type.
+          </summary>
+          <param name="data">The underlying data type.</param>
+          <returns>A indexer type.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16.GetEnumerator">
+          <inheritdoc/>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16.System#Collections#IEnumerable#GetEnumerator">
+          <inheritdoc/>
+       </member>
+       <member name="T:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt32">
+          <summary>
+             Provides byte level indexing operations (set, get) on a<see cref="T:System.Int32"/>. Zero is the most
+             significant byte.
+          </summary>
+       </member>
+       <member name="F:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt32.ByteSize">
+          <summary>
+             The number of bytes this type will index
+          </summary>
+       </member>
+       <member name="F:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt32.MaxByteIndex">
+          <summary>
+             The largest byte index available.
+          </summary>
+       </member>
+       <member name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt32.#ctor(System.Int32)">
+          <summary>
+             Constructs a
+             <see cref="T:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt32"/>
+             from an<see cref="T:System.Int32"/>.
+          </summary>
+          <param name="data">The initial value of the underlying data.</param>
+       </member>
+       <member name="P:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt32.Length">
+          <summary>
+             The length of the indexer.
+          </summary>
+       </member>
+       <member name="P:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt32.Data">
+          <summary>
+             The backing store.
+          </summary>
+       </member>
+       <member name="P:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt32.Item(System.Int32)">
+          <summary>
+             Access bytes from the underlying data.
+          </summary>
+          <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying
+             storage.
+          </param>
+          <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
+       </member>
+       <member name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt32.Slice(System.Int32,System.Int32)">
+          <summary>
+             Get a subset of bytes given a starting offset and length.
+          </summary>
+          <param name="start">The starting bit offset</param>
+          <param name="length">The number of bits to extract</param>
+          <returns>an array of bytes for the specified subset</returns>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt32.op_Implicit(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt32)~System.Int32">
+          <summary>
+             Converts the byte indexer to its underlying data type.
+          </summary>
+          <param name="indexer">The indexer to convert.</param>
+          <returns>The raw data.</returns>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt32.op_Implicit(System.Int32)~Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt32">
+          <summary>
+             Converts the underlying data type to the indexer type.
+          </summary>
+          <param name="data">The underlying data type.</param>
+          <returns>A indexer type.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt32.GetEnumerator">
+          <inheritdoc/>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt32.System#Collections#IEnumerable#GetEnumerator">
+          <inheritdoc/>
+       </member>
+       <member name="T:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64">
+          <summary>
+             Provides byte level indexing operations (set, get) on an<see cref="T:System.Int64"/>. Zero is the most
+             significant byte.
+          </summary>
+       </member>
+       <member name="F:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.ByteSize">
+          <summary>
+             The number of bytes this type will index
+          </summary>
+       </member>
+       <member name="F:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.MaxByteIndex">
             <summary>
-               Extension methods to aid in clearing bits in various integer data types.
+               The largest byte index available.
             </summary>
         </member>
-       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.SByte,System.Int32,System.Int32)">
+       <member name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.#ctor(System.Int64)">
             <summary>
-               Sets all specified bits to "off" and returns the modified value.
+               Constructs a
+               <see cref="T:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64"/>
+               from an<see cref="T:System.Int64"/>.
             </summary>
-          <param name="value">The value to be modified.</param>
-          <param name="offset">The offset of where to begin clearing bits.</param>
-          <param name="size">The number of bits to clear.</param>
-          <returns>The modified value.</returns>
+          <param name="data">The initial value of the underlying data.</param>
         </member>
-       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.Int16,System.Int32,System.Int32)">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.Length">
             <summary>
-               Sets all specified bits to "off" and returns the modified value.
-            </summary>
-          <param name="value">The value to be modified.</param>
-          <param name="offset">The offset of where to begin clearing bits.</param>
-          <param name="size">The number of bits to clear.</param>
-          <returns>The modified value.</returns>
-        </member>
-       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.Int32,System.Int32,System.Int32)">
-            <summary>
-               Sets all specified bits to "off" and returns the modified value.
-            </summary>
-          <param name="value">The value to be modified.</param>
-          <param name="offset">The offset of where to begin clearing bits.</param>
-          <param name="size">The number of bits to clear.</param>
-          <returns>The modified value.</returns>
-        </member>
-       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.Int64,System.Int32,System.Int32)">
-            <summary>
-               Sets all specified bits to "off" and returns the modified value.
-            </summary>
-          <param name="value">The value to be modified.</param>
-          <param name="offset">The offset of where to begin clearing bits.</param>
-          <param name="size">The number of bits to clear.</param>
-          <returns>The modified value.</returns>
-        </member>
-       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.Byte,System.Int32,System.Int32)">
-            <summary>
-               Sets all specified bits to "off" and returns the modified value.
-            </summary>
-          <param name="value">The value to be modified.</param>
-          <param name="offset">The offset of where to begin clearing bits.</param>
-          <param name="size">The number of bits to clear.</param>
-          <returns>The modified value.</returns>
-        </member>
-       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.UInt16,System.Int32,System.Int32)">
-            <summary>
-               Sets all specified bits to "off" and returns the modified value.
-            </summary>
-          <param name="value">The value to be modified.</param>
-          <param name="offset">The offset of where to begin clearing bits.</param>
-          <param name="size">The number of bits to clear.</param>
-          <returns>The modified value.</returns>
-        </member>
-       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.UInt32,System.Int32,System.Int32)">
-            <summary>
-               Sets all specified bits to "off" and returns the modified value.
-            </summary>
-          <param name="value">The value to be modified.</param>
-          <param name="offset">The offset of where to begin clearing bits.</param>
-          <param name="size">The number of bits to clear.</param>
-          <returns>The modified value.</returns>
-        </member>
-       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.UInt64,System.Int32,System.Int32)">
-            <summary>
-               Sets all specified bits to "off" and returns the modified value.
-            </summary>
-          <param name="value">The value to be modified.</param>
-          <param name="offset">The offset of where to begin clearing bits.</param>
-          <param name="size">The number of bits to clear.</param>
-          <returns>The modified value.</returns>
-        </member>
-       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBit(System.SByte,System.Int32)">
-            <summary>
-               Sets bit to "off" and returns the modified value.
-            </summary>
-          <param name="value">The value to be modified.</param>
-          <param name="offset">The offset of the bit to clear.</param>
-          <returns>The modified value.</returns>
-        </member>
-       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBit(System.Int16,System.Int32)">
-            <summary>
-               Sets bit to "off" and returns the modified value.
-            </summary>
-          <param name="value">The value to be modified.</param>
-          <param name="offset">The offset of the bit to clear.</param>
-          <returns>The modified value.</returns>
-        </member>
-       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBit(System.Int32,System.Int32)">
-            <summary>
-               Sets bit to "off" and returns the modified value.
-            </summary>
-          <param name="value">The value to be modified.</param>
-          <param name="offset">The offset of the bit to clear.</param>
-          <returns>The modified value.</returns>
-        </member>
-       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBit(System.Int64,System.Int32)">
-            <summary>
-               Sets bit to "off" and returns the modified value.
-            </summary>
-          <param name="value">The value to be modified.</param>
-          <param name="offset">The offset of the bit to clear.</param>
-          <returns>The modified value.</returns>
-        </member>
-       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBit(System.Byte,System.Int32)">
-            <summary>
-               Sets bit to "off" and returns the modified value.
-            </summary>
-          <param name="value">The value to be modified.</param>
-          <param name="offset">The offset of the bit to clear.</param>
-          <returns>The modified value.</returns>
-        </member>
-       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBit(System.UInt16,System.Int32)">
-            <summary>
-               Sets bit to "off" and returns the modified value.
-            </summary>
-          <param name="value">The value to be modified.</param>
-          <param name="offset">The offset of the bit to clear.</param>
-          <returns>The modified value.</returns>
-        </member>
-       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBit(System.UInt32,System.Int32)">
-            <summary>
-               Sets bit to "off" and returns the modified value.
-            </summary>
-          <param name="value">The value to be modified.</param>
-          <param name="offset">The offset of the bit to clear.</param>
-          <returns>The modified value.</returns>
-        </member>
-       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBit(System.UInt64,System.Int32)">
-            <summary>
-               Sets bit to "off" and returns the modified value.
-            </summary>
-          <param name="value">The value to be modified.</param>
-          <param name="offset">The offset of the bit to clear.</param>
-          <returns>The modified value.</returns>
-        </member>
-       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.SByte,Jcd.BitManipulation.BitMask)">
-            <summary>
-               Sets all bits from a provided mask to "off" and returns the modified value.
-            </summary>
-          <param name="value">The value to be modified.</param>
-          <param name="mask">the bit mask of the bits to clear.</param>
-          <returns>The modified value.</returns>
-        </member>
-       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.Int16,Jcd.BitManipulation.BitMask)">
-            <summary>
-               Sets all bits from a provided mask to "off" and returns the modified value.
-            </summary>
-          <param name="value">The value to be modified.</param>
-          <param name="mask">the bit mask of the bits to clear.</param>
-          <returns>The modified value.</returns>
-        </member>
-       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.Int32,Jcd.BitManipulation.BitMask)">
-            <summary>
-               Sets all bits from a provided mask to "off" and returns the modified value.
-            </summary>
-          <param name="value">The value to be modified.</param>
-          <param name="mask">the bit mask of the bits to clear.</param>
-          <returns>The modified value.</returns>
-        </member>
-       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.Int64,Jcd.BitManipulation.BitMask)">
-            <summary>
-               Sets all bits from a provided mask to "off" and returns the modified value.
-            </summary>
-          <param name="value">The value to be modified.</param>
-          <param name="mask">the bit mask of the bits to clear.</param>
-          <returns>The modified value.</returns>
-        </member>
-       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.Byte,Jcd.BitManipulation.BitMask)">
-            <summary>
-               Sets all bits from a provided mask to "off" and returns the modified value.
-            </summary>
-          <param name="value">The value to be modified.</param>
-          <param name="mask">the bit mask of the bits to clear.</param>
-          <returns>The modified value.</returns>
-        </member>
-       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.UInt16,Jcd.BitManipulation.BitMask)">
-            <summary>
-               Sets all bits from a provided mask to "off" and returns the modified value.
-            </summary>
-          <param name="value">The value to be modified.</param>
-          <param name="mask">the bit mask of the bits to clear.</param>
-          <returns>The modified value.</returns>
-        </member>
-       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.UInt32,Jcd.BitManipulation.BitMask)">
-            <summary>
-               Sets all bits from a provided mask to "off" and returns the modified value.
-            </summary>
-          <param name="value">The value to be modified.</param>
-          <param name="mask">the bit mask of the bits to clear.</param>
-          <returns>The modified value.</returns>
-        </member>
-       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.UInt64,Jcd.BitManipulation.BitMask)">
-            <summary>
-               Sets all bits from a provided mask to "off" and returns the modified value.
-            </summary>
-          <param name="value">The value to be modified.</param>
-          <param name="mask">the bit mask of the bits to clear.</param>
-          <returns>The modified value.</returns>
-        </member>
-       <member name="T:Jcd.BitManipulation.Endian">
-            <summary>
-               A type indicating which endian is in use.
+               The length of the indexer.
             </summary>
         </member>
-       <member name="F:Jcd.BitManipulation.Endian.Little">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.Data">
             <summary>
-               Indicates that Little Endian is in use.
+               The backing store.
             </summary>
         </member>
-       <member name="F:Jcd.BitManipulation.Endian.Big">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.Item(System.Int32)">
             <summary>
-               Indicates that Big Endian is in use.
+               Access bytes from the underlying data.
+            </summary>
+          <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying
+             storage.
+          </param>
+          <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
+        </member>
+       <member name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.Slice(System.Int32,System.Int32)">
+            <summary>
+               Get a subset of bytes given a starting offset and length.
+            </summary>
+          <param name="start">The starting bit offset</param>
+          <param name="length">The number of bits to extract</param>
+          <returns>an array of bytes for the specified subset</returns>
+        </member>
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.op_Implicit(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64)~System.Int64">
+            <summary>
+               Converts the byte indexer to its underlying data type.
+            </summary>
+          <param name="indexer">The indexer to convert.</param>
+          <returns>The raw data.</returns>
+        </member>
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.op_Implicit(System.Int64)~Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64">
+            <summary>
+               Converts the underlying data type to the indexer type.
+            </summary>
+          <param name="data">The underlying data type.</param>
+          <returns>A indexer type.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.GetEnumerator">
+          <inheritdoc/>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.System#Collections#IEnumerable#GetEnumerator">
+          <inheritdoc/>
+       </member>
+       <member name="T:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt16">
+          <summary>
+             Provides byte level indexing operations (set, get) on a<see cref="T:System.UInt16"/>. Zero is the most
+             significant byte.
+          </summary>
+        </member>
+       <member name="F:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt16.ByteSize">
+            <summary>
+               The number of bytes this type will index
+            </summary>
+       </member>
+       <member name="F:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt16.MaxByteIndex">
+          <summary>
+             The largest byte index available.
+          </summary>
+       </member>
+       <member name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt16.#ctor(System.UInt16)">
+          <summary>
+             Constructs a
+             <see cref="T:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt16"/>
+             from a<see cref="T:System.UInt16"/>.
+          </summary>
+          <param name="data">The initial value of the underlying data.</param>
+       </member>
+       <member name="P:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt16.Length">
+          <summary>
+             The length of the indexer.
+          </summary>
+       </member>
+       <member name="P:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt16.Data">
+          <summary>
+             The backing store.
+          </summary>
+        </member>
+       <member name="P:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt16.Item(System.Int32)">
+            <summary>
+               Access bytes from the underlying data.
+            </summary>
+          <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying
+             storage.
+          </param>
+          <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
+        </member>
+       <member name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt16.Slice(System.Int32,System.Int32)">
+            <summary>
+               Get a subset of bytes given a starting offset and length.
+            </summary>
+          <param name="start">The starting bit offset</param>
+          <param name="length">The number of bits to extract</param>
+          <returns>an array of bytes for the specified subset</returns>
+        </member>
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt16.op_Implicit(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt16)~System.UInt16">
+            <summary>
+               Converts the byte indexer to its underlying data type.
+            </summary>
+          <param name="indexer">The indexer to convert.</param>
+          <returns>The raw data.</returns>
+        </member>
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt16.op_Implicit(System.UInt16)~Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt16">
+            <summary>
+               Converts the underlying data type to the indexer type.
+            </summary>
+          <param name="data">The underlying data type.</param>
+          <returns>A indexer type.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt16.GetEnumerator">
+          <inheritdoc/>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt16.System#Collections#IEnumerable#GetEnumerator">
+          <inheritdoc/>
+        </member>
+       <member name="T:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt32">
+            <summary>
+               Provides byte level indexing operations (set, get) on a<see cref="T:System.UInt32"/>. Zero is the most
+               significant byte.
             </summary>
         </member>
-       <member name="T:Jcd.BitManipulation.IBitIndexer">
+       <member name="F:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt32.ByteSize">
             <summary>
-               The basic interface for indexing bits within an integer data type.
+               The number of bytes this type will index
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.IBitIndexer.Length">
+       <member name="F:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt32.MaxByteIndex">
             <summary>
-               The number of addressable bits
+               The largest byte index available.
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.IBitIndexer.Item(System.Int32)">
+       <member name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt32.#ctor(System.UInt32)">
             <summary>
-               Gets or sets a bit
+               Constructs a
+               <see cref="T:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt32"/>
+               from a<see cref="T:System.UInt32"/>.
             </summary>
-          <param name="index">the offset of the bit to get or set.</param>
+          <param name="data">The initial value of the underlying data.</param>
         </member>
-       <member name="M:Jcd.BitManipulation.IBitIndexer.Slice(System.Int32,System.Int32)">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt32.Length">
             <summary>
-               Gets a slice of bits from the backing store
+               The length of the indexer.
             </summary>
-          <param name="start">starting offset of the bits to retrieve</param>
-          <param name="length">the number of bits to get</param>
-          <returns>Array of bits extracted</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.IBitIndexer.ToString">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt32.Data">
             <summary>
-               Format as a bit representation
+               The backing store.
             </summary>
-          <returns>the bits of the value formatted as 0b0101...1111</returns>
         </member>
-       <member name="T:Jcd.BitManipulation.IByteIndexer">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt32.Item(System.Int32)">
+            <summary>
+               Access bytes from the underlying data.
+            </summary>
+          <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying
+             storage.
+          </param>
+          <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
+        </member>
+       <member name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt32.Slice(System.Int32,System.Int32)">
+            <summary>
+               Get a subset of bytes given a starting offset and length.
+            </summary>
+          <param name="start">The starting bit offset</param>
+          <param name="length">The number of bits to extract</param>
+          <returns>an array of bytes for the specified subset</returns>
+        </member>
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt32.op_Implicit(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt32)~System.UInt32">
+            <summary>
+               Converts the byte indexer to its underlying data type.
+            </summary>
+          <param name="indexer">The indexer to convert.</param>
+          <returns>The raw data.</returns>
+        </member>
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt32.op_Implicit(System.UInt32)~Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt32">
+            <summary>
+               Converts the underlying data type to the indexer type.
+            </summary>
+          <param name="data">The underlying data type.</param>
+          <returns>A indexer type.</returns>
+        </member>
+       <member name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt32.GetEnumerator">
+          <inheritdoc/>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt32.System#Collections#IEnumerable#GetEnumerator">
+          <inheritdoc/>
+       </member>
+       <member name="T:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt64">
+            <summary>
+               Provides byte level indexing operations (set, get) on a<see cref="T:System.UInt64"/>. Zero is the most
+               significant byte.
+            </summary>
+        </member>
+       <member name="F:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt64.ByteSize">
+            <summary>
+               The number of bytes this type will index
+            </summary>
+        </member>
+       <member name="F:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt64.MaxByteIndex">
+            <summary>
+               The largest byte index available.
+            </summary>
+        </member>
+       <member name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt64.#ctor(System.UInt64)">
+            <summary>
+               Constructs a
+               <see cref="T:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt64"/>
+               from a<see cref="T:System.UInt64"/>.
+            </summary>
+          <param name="data">The initial value of the underlying data.</param>
+        </member>
+       <member name="P:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt64.Length">
+            <summary>
+               The length of the indexer.
+            </summary>
+        </member>
+       <member name="P:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt64.Data">
+            <summary>
+               The backing store.
+            </summary>
+        </member>
+       <member name="P:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt64.Item(System.Int32)">
+            <summary>
+               Access bytes from the underlying data.
+            </summary>
+          <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying
+             storage.
+          </param>
+          <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
+        </member>
+       <member name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt64.Slice(System.Int32,System.Int32)">
+            <summary>
+               Get a subset of bytes given a starting offset and length.
+            </summary>
+          <param name="start">The starting bit offset</param>
+          <param name="length">The number of bits to extract</param>
+          <returns>an array of bytes for the specified subset</returns>
+        </member>
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt64.op_Implicit(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt64)~System.UInt64">
+            <summary>
+               Converts the byte indexer to its underlying data type.
+            </summary>
+          <param name="indexer">The indexer to convert.</param>
+          <returns>The raw data.</returns>
+        </member>
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt64.op_Implicit(System.UInt64)~Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt64">
+            <summary>
+               Converts the underlying data type to the indexer type.
+            </summary>
+          <param name="data">The underlying data type.</param>
+          <returns>A indexer type.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt64.GetEnumerator">
+          <inheritdoc/>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt64.System#Collections#IEnumerable#GetEnumerator">
+          <inheritdoc/>
+        </member>
+       <member name="T:Jcd.BitManipulation.ByteIndexers.IByteIndexer">
             <summary>
             The basic interface for indexing bits within an integer data type.
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.IByteIndexer.Length">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.IByteIndexer.Length">
             <summary>
             The number of addressable bytes.
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.IByteIndexer.Item(System.Int32)">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.IByteIndexer.Item(System.Int32)">
             <summary>
             Gets or sets a bit
             </summary>
             <param name="index">the offset of the bit to get or set.</param>
         </member>
-       <member name="M:Jcd.BitManipulation.IByteIndexer.Slice(System.Int32,System.Int32)">
+       <member name="M:Jcd.BitManipulation.ByteIndexers.IByteIndexer.Slice(System.Int32,System.Int32)">
             <summary>
             Gets a slice of bytes from the backing store
             </summary>
@@ -2258,48 +2046,48 @@
             <param name="length">the number of bits to get</param>
             <returns>Array of bits extracted</returns>
         </member>
-       <member name="T:Jcd.BitManipulation.LittleEndianByteIndexerInt16">
+       <member name="T:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt16">
             <summary>
                Provides byte level indexing operations (set, get) on a<see cref="T:System.Int16"/>. Zero is the least
                significant byte.
             </summary>
         </member>
-       <member name="F:Jcd.BitManipulation.LittleEndianByteIndexerInt16.ByteSize">
+       <member name="F:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt16.ByteSize">
             <summary>
             The number of bytes this type will index
             </summary>
         </member>
-       <member name="F:Jcd.BitManipulation.LittleEndianByteIndexerInt16.MaxByteIndex">
+       <member name="F:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt16.MaxByteIndex">
             <summary>
             The largest byte index available.
             </summary>
         </member>
-       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt16.#ctor(System.Int16)">
+       <member name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt16.#ctor(System.Int16)">
             <summary>
                Constructs a
-               <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexerInt16"/>
+               <see cref="T:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt16"/>
                from an<see cref="T:System.Int16"/>.
             </summary>
           <param name="data">The initial value of the underlying data.</param>
         </member>
-       <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerInt16.Length">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt16.Length">
             <summary>
             The length of the buffer.
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerInt16.Data">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt16.Data">
             <summary>
             The backing store.
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerInt16.Item(System.Int32)">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt16.Item(System.Int32)">
             <summary>
             Access bytes from the underlying data.
             </summary>
             <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying storage.</param>
             <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
         </member>
-       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt16.Slice(System.Int32,System.Int32)">
+       <member name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt16.Slice(System.Int32,System.Int32)">
             <summary>
             Get a subset of bytes given a starting offset and length.
             </summary>
@@ -2308,7 +2096,7 @@
             <returns>an array of bytes for the specified subset</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt16.op_Implicit(Jcd.BitManipulation.LittleEndianByteIndexerInt16)~System.Int16">
+          name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt16.op_Implicit(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt16)~System.Int16">
             <summary>
             Converts the byte indexer to its underlying data type.
             </summary>
@@ -2316,61 +2104,62 @@
             <returns>The raw data.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt16.op_Implicit(System.Int16)~Jcd.BitManipulation.LittleEndianByteIndexerInt16">
+          name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt16.op_Implicit(System.Int16)~Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt16">
             <summary>
             Converts the underlying data type to the buffer type.
             </summary>
             <param name="data">The underlying data type.</param>
             <returns>A buffer type.</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt16.GetEnumerator">
+       <member name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt16.GetEnumerator">
             <inheritdoc />
         </member>
-       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt16.System#Collections#IEnumerable#GetEnumerator">
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt16.System#Collections#IEnumerable#GetEnumerator">
             <inheritdoc />
         </member>
-       <member name="T:Jcd.BitManipulation.LittleEndianByteIndexerInt32">
+       <member name="T:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32">
             <summary>
                Provides byte level indexing operations (set, get) on a<see cref="T:System.Int32"/>. Zero is the least
                significant byte.
             </summary>
         </member>
-       <member name="F:Jcd.BitManipulation.LittleEndianByteIndexerInt32.ByteSize">
+       <member name="F:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32.ByteSize">
             <summary>
             The number of bytes this type will index
             </summary>
         </member>
-       <member name="F:Jcd.BitManipulation.LittleEndianByteIndexerInt32.MaxByteIndex">
+       <member name="F:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32.MaxByteIndex">
             <summary>
             The largest byte index available.
             </summary>
         </member>
-       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt32.#ctor(System.Int32)">
+       <member name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32.#ctor(System.Int32)">
             <summary>
                Constructs a
-               <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexerInt32"/>
+               <see cref="T:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32"/>
                from an<see cref="T:System.Int32"/>.
             </summary>
           <param name="data">The initial value of the underlying data.</param>
         </member>
-       <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerInt32.Length">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32.Length">
             <summary>
             The length of the buffer.
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerInt32.Data">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32.Data">
             <summary>
             The backing store.
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerInt32.Item(System.Int32)">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32.Item(System.Int32)">
             <summary>
             Access bytes from the underlying data.
             </summary>
             <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying storage.</param>
             <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
         </member>
-       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt32.Slice(System.Int32,System.Int32)">
+       <member name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32.Slice(System.Int32,System.Int32)">
             <summary>
             Get a subset of bytes given a starting offset and length.
             </summary>
@@ -2379,7 +2168,7 @@
             <returns>an array of bytes for the specified subset</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt32.op_Implicit(Jcd.BitManipulation.LittleEndianByteIndexerInt32)~System.Int32">
+          name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32.op_Implicit(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32)~System.Int32">
             <summary>
             Converts the byte indexer to its underlying data type.
             </summary>
@@ -2387,61 +2176,62 @@
             <returns>The raw data.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt32.op_Implicit(System.Int32)~Jcd.BitManipulation.LittleEndianByteIndexerInt32">
+          name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32.op_Implicit(System.Int32)~Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32">
             <summary>
             Converts the underlying data type to the buffer type.
             </summary>
             <param name="data">The underlying data type.</param>
             <returns>A buffer type.</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt32.GetEnumerator">
+       <member name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32.GetEnumerator">
             <inheritdoc />
         </member>
-       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt32.System#Collections#IEnumerable#GetEnumerator">
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32.System#Collections#IEnumerable#GetEnumerator">
             <inheritdoc />
         </member>
-       <member name="T:Jcd.BitManipulation.LittleEndianByteIndexerInt64">
+       <member name="T:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt64">
             <summary>
                Provides byte level indexing operations (set, get) on a<see cref="T:System.Int64"/>. Zero is the least
                significant byte.
             </summary>
         </member>
-       <member name="F:Jcd.BitManipulation.LittleEndianByteIndexerInt64.ByteSize">
+       <member name="F:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt64.ByteSize">
             <summary>
             The number of bytes this type will index
             </summary>
         </member>
-       <member name="F:Jcd.BitManipulation.LittleEndianByteIndexerInt64.MaxByteIndex">
+       <member name="F:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt64.MaxByteIndex">
             <summary>
             The largest byte index available.
             </summary>
         </member>
-       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt64.#ctor(System.Int64)">
+       <member name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt64.#ctor(System.Int64)">
             <summary>
                Constructs a
-               <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexerInt64"/>
+               <see cref="T:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt64"/>
                from an<see cref="T:System.Int64"/>.
             </summary>
           <param name="data">The initial value of the underlying data.</param>
         </member>
-       <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerInt64.Length">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt64.Length">
             <summary>
             The length of the buffer.
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerInt64.Data">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt64.Data">
             <summary>
             The backing store.
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerInt64.Item(System.Int32)">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt64.Item(System.Int32)">
             <summary>
             Access bytes from the underlying data.
             </summary>
             <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying storage.</param>
             <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
         </member>
-       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt64.Slice(System.Int32,System.Int32)">
+       <member name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt64.Slice(System.Int32,System.Int32)">
             <summary>
             Get a subset of bytes given a starting offset and length.
             </summary>
@@ -2450,7 +2240,7 @@
             <returns>an array of bytes for the specified subset</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt64.op_Implicit(Jcd.BitManipulation.LittleEndianByteIndexerInt64)~System.Int64">
+          name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt64.op_Implicit(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt64)~System.Int64">
             <summary>
             Converts the byte indexer to its underlying data type.
             </summary>
@@ -2458,61 +2248,62 @@
             <returns>The raw data.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt64.op_Implicit(System.Int64)~Jcd.BitManipulation.LittleEndianByteIndexerInt64">
+          name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt64.op_Implicit(System.Int64)~Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt64">
             <summary>
             Converts the underlying data type to the buffer type.
             </summary>
             <param name="data">The underlying data type.</param>
             <returns>A buffer type.</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt64.GetEnumerator">
+       <member name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt64.GetEnumerator">
             <inheritdoc />
         </member>
-       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt64.System#Collections#IEnumerable#GetEnumerator">
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt64.System#Collections#IEnumerable#GetEnumerator">
             <inheritdoc />
         </member>
-       <member name="T:Jcd.BitManipulation.LittleEndianByteIndexerUInt16">
+       <member name="T:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16">
             <summary>
                Provides byte level indexing operations (set, get) on a<see cref="T:System.UInt16"/>. Zero is the least
                significant byte.
             </summary>
         </member>
-       <member name="F:Jcd.BitManipulation.LittleEndianByteIndexerUInt16.ByteSize">
+       <member name="F:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16.ByteSize">
             <summary>
             The number of bytes this type will index
             </summary>
         </member>
-       <member name="F:Jcd.BitManipulation.LittleEndianByteIndexerUInt16.MaxByteIndex">
+       <member name="F:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16.MaxByteIndex">
             <summary>
             The largest byte index available.
             </summary>
         </member>
-       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt16.#ctor(System.UInt16)">
+       <member name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16.#ctor(System.UInt16)">
             <summary>
                Constructs a
-               <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexerUInt16"/>
+               <see cref="T:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16"/>
                from a<see cref="T:System.UInt16"/>.
             </summary>
           <param name="data">The initial value of the underlying data.</param>
         </member>
-       <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerUInt16.Length">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16.Length">
             <summary>
             The length of the buffer.
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerUInt16.Data">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16.Data">
             <summary>
             The backing store.
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerUInt16.Item(System.Int32)">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16.Item(System.Int32)">
             <summary>
             Access bytes from the underlying data.
             </summary>
             <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying storage.</param>
             <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
         </member>
-       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt16.Slice(System.Int32,System.Int32)">
+       <member name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16.Slice(System.Int32,System.Int32)">
             <summary>
             Get a subset of bytes given a starting offset and length.
             </summary>
@@ -2521,7 +2312,7 @@
             <returns>an array of bytes for the specified subset</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt16.op_Implicit(Jcd.BitManipulation.LittleEndianByteIndexerUInt16)~System.UInt16">
+          name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16.op_Implicit(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16)~System.UInt16">
             <summary>
             Converts the byte indexer to its underlying data type.
             </summary>
@@ -2529,61 +2320,62 @@
             <returns>The raw data.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt16.op_Implicit(System.UInt16)~Jcd.BitManipulation.LittleEndianByteIndexerUInt16">
+          name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16.op_Implicit(System.UInt16)~Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16">
             <summary>
             Converts the underlying data type to the buffer type.
             </summary>
             <param name="data">The underlying data type.</param>
             <returns>A buffer type.</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt16.GetEnumerator">
+       <member name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16.GetEnumerator">
             <inheritdoc />
         </member>
-       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt16.System#Collections#IEnumerable#GetEnumerator">
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16.System#Collections#IEnumerable#GetEnumerator">
             <inheritdoc />
         </member>
-       <member name="T:Jcd.BitManipulation.LittleEndianByteIndexerUInt32">
+       <member name="T:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt32">
             <summary>
                Provides byte level indexing operations (set, get) on a<see cref="T:System.UInt32"/>. Zero is the least
                significant byte.
             </summary>
         </member>
-       <member name="F:Jcd.BitManipulation.LittleEndianByteIndexerUInt32.ByteSize">
+       <member name="F:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt32.ByteSize">
             <summary>
             The number of bytes this type will index
             </summary>
         </member>
-       <member name="F:Jcd.BitManipulation.LittleEndianByteIndexerUInt32.MaxByteIndex">
+       <member name="F:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt32.MaxByteIndex">
             <summary>
             The largest byte index available.
             </summary>
         </member>
-       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt32.#ctor(System.UInt32)">
+       <member name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt32.#ctor(System.UInt32)">
             <summary>
                Constructs a
-               <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexerUInt32"/>
+               <see cref="T:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt32"/>
                from a<see cref="T:System.UInt32"/>.
             </summary>
           <param name="data">The initial value of the underlying data.</param>
         </member>
-       <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerUInt32.Length">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt32.Length">
             <summary>
             The length of the buffer.
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerUInt32.Data">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt32.Data">
             <summary>
             The backing store.
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerUInt32.Item(System.Int32)">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt32.Item(System.Int32)">
             <summary>
             Access bytes from the underlying data.
             </summary>
             <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying storage.</param>
             <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
         </member>
-       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt32.Slice(System.Int32,System.Int32)">
+       <member name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt32.Slice(System.Int32,System.Int32)">
             <summary>
             Get a subset of bytes given a starting offset and length.
             </summary>
@@ -2592,7 +2384,7 @@
             <returns>an array of bytes for the specified subset</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt32.op_Implicit(Jcd.BitManipulation.LittleEndianByteIndexerUInt32)~System.UInt32">
+          name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt32.op_Implicit(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt32)~System.UInt32">
             <summary>
             Converts the byte indexer to its underlying data type.
             </summary>
@@ -2600,61 +2392,62 @@
             <returns>The raw data.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt32.op_Implicit(System.UInt32)~Jcd.BitManipulation.LittleEndianByteIndexerUInt32">
+          name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt32.op_Implicit(System.UInt32)~Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt32">
             <summary>
             Converts the underlying data type to the buffer type.
             </summary>
             <param name="data">The underlying data type.</param>
             <returns>A buffer type.</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt32.GetEnumerator">
+       <member name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt32.GetEnumerator">
             <inheritdoc />
         </member>
-       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt32.System#Collections#IEnumerable#GetEnumerator">
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt32.System#Collections#IEnumerable#GetEnumerator">
             <inheritdoc />
         </member>
-       <member name="T:Jcd.BitManipulation.LittleEndianByteIndexerUInt64">
+       <member name="T:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64">
             <summary>
                Provides byte level indexing operations (set, get) on a<see cref="T:System.UInt64"/>. Zero is the least
                significant byte.
             </summary>
         </member>
-       <member name="F:Jcd.BitManipulation.LittleEndianByteIndexerUInt64.ByteSize">
+       <member name="F:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64.ByteSize">
             <summary>
             The number of bytes this type will index
             </summary>
         </member>
-       <member name="F:Jcd.BitManipulation.LittleEndianByteIndexerUInt64.MaxByteIndex">
+       <member name="F:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64.MaxByteIndex">
             <summary>
             The largest byte index available.
             </summary>
         </member>
-       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt64.#ctor(System.UInt64)">
+       <member name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64.#ctor(System.UInt64)">
             <summary>
                Constructs a
-               <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexerUInt64"/>
+               <see cref="T:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64"/>
                from a<see cref="T:System.UInt64"/>.
             </summary>
           <param name="data">The initial value of the underlying data.</param>
         </member>
-       <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerUInt64.Length">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64.Length">
             <summary>
             The length of the indexer.
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerUInt64.Data">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64.Data">
             <summary>
             The backing store.
             </summary>
         </member>
-       <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerUInt64.Item(System.Int32)">
+       <member name="P:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64.Item(System.Int32)">
             <summary>
             Access bytes from the underlying data.
             </summary>
             <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying storage.</param>
             <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
         </member>
-       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt64.Slice(System.Int32,System.Int32)">
+       <member name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64.Slice(System.Int32,System.Int32)">
             <summary>
             Get a subset of bytes given a starting offset and length.
             </summary>
@@ -2663,7 +2456,7 @@
             <returns>an array of bytes for the specified subset</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt64.op_Implicit(Jcd.BitManipulation.LittleEndianByteIndexerUInt64)~System.UInt64">
+          name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64.op_Implicit(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64)~System.UInt64">
             <summary>
             Converts the byte indexer to its underlying data type.
             </summary>
@@ -2671,19 +2464,240 @@
             <returns>The raw data.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt64.op_Implicit(System.UInt64)~Jcd.BitManipulation.LittleEndianByteIndexerUInt64">
+          name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64.op_Implicit(System.UInt64)~Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64">
             <summary>
             Converts the underlying data type to the indexer type.
             </summary>
             <param name="data">The underlying data type.</param>
             <returns>A indexer type.</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt64.GetEnumerator">
+       <member name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64.GetEnumerator">
             <inheritdoc />
         </member>
-       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt64.System#Collections#IEnumerable#GetEnumerator">
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64.System#Collections#IEnumerable#GetEnumerator">
             <inheritdoc />
         </member>
+       <member name="T:Jcd.BitManipulation.ClearBitsExtensions">
+          <summary>
+             Extension methods to aid in clearing bits in various integer data types.
+          </summary>
+       </member>
+       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.SByte,System.Int32,System.Int32)">
+          <summary>
+             Sets all specified bits to "off" and returns the modified value.
+          </summary>
+          <param name="value">The value to be modified.</param>
+          <param name="offset">The offset of where to begin clearing bits.</param>
+          <param name="size">The number of bits to clear.</param>
+          <returns>The modified value.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.Int16,System.Int32,System.Int32)">
+          <summary>
+             Sets all specified bits to "off" and returns the modified value.
+          </summary>
+          <param name="value">The value to be modified.</param>
+          <param name="offset">The offset of where to begin clearing bits.</param>
+          <param name="size">The number of bits to clear.</param>
+          <returns>The modified value.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.Int32,System.Int32,System.Int32)">
+          <summary>
+             Sets all specified bits to "off" and returns the modified value.
+          </summary>
+          <param name="value">The value to be modified.</param>
+          <param name="offset">The offset of where to begin clearing bits.</param>
+          <param name="size">The number of bits to clear.</param>
+          <returns>The modified value.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.Int64,System.Int32,System.Int32)">
+          <summary>
+             Sets all specified bits to "off" and returns the modified value.
+          </summary>
+          <param name="value">The value to be modified.</param>
+          <param name="offset">The offset of where to begin clearing bits.</param>
+          <param name="size">The number of bits to clear.</param>
+          <returns>The modified value.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.Byte,System.Int32,System.Int32)">
+          <summary>
+             Sets all specified bits to "off" and returns the modified value.
+          </summary>
+          <param name="value">The value to be modified.</param>
+          <param name="offset">The offset of where to begin clearing bits.</param>
+          <param name="size">The number of bits to clear.</param>
+          <returns>The modified value.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.UInt16,System.Int32,System.Int32)">
+          <summary>
+             Sets all specified bits to "off" and returns the modified value.
+          </summary>
+          <param name="value">The value to be modified.</param>
+          <param name="offset">The offset of where to begin clearing bits.</param>
+          <param name="size">The number of bits to clear.</param>
+          <returns>The modified value.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.UInt32,System.Int32,System.Int32)">
+          <summary>
+             Sets all specified bits to "off" and returns the modified value.
+          </summary>
+          <param name="value">The value to be modified.</param>
+          <param name="offset">The offset of where to begin clearing bits.</param>
+          <param name="size">The number of bits to clear.</param>
+          <returns>The modified value.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.UInt64,System.Int32,System.Int32)">
+          <summary>
+             Sets all specified bits to "off" and returns the modified value.
+          </summary>
+          <param name="value">The value to be modified.</param>
+          <param name="offset">The offset of where to begin clearing bits.</param>
+          <param name="size">The number of bits to clear.</param>
+          <returns>The modified value.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBit(System.SByte,System.Int32)">
+          <summary>
+             Sets bit to "off" and returns the modified value.
+          </summary>
+          <param name="value">The value to be modified.</param>
+          <param name="offset">The offset of the bit to clear.</param>
+          <returns>The modified value.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBit(System.Int16,System.Int32)">
+          <summary>
+             Sets bit to "off" and returns the modified value.
+          </summary>
+          <param name="value">The value to be modified.</param>
+          <param name="offset">The offset of the bit to clear.</param>
+          <returns>The modified value.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBit(System.Int32,System.Int32)">
+          <summary>
+             Sets bit to "off" and returns the modified value.
+          </summary>
+          <param name="value">The value to be modified.</param>
+          <param name="offset">The offset of the bit to clear.</param>
+          <returns>The modified value.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBit(System.Int64,System.Int32)">
+          <summary>
+             Sets bit to "off" and returns the modified value.
+          </summary>
+          <param name="value">The value to be modified.</param>
+          <param name="offset">The offset of the bit to clear.</param>
+          <returns>The modified value.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBit(System.Byte,System.Int32)">
+          <summary>
+             Sets bit to "off" and returns the modified value.
+          </summary>
+          <param name="value">The value to be modified.</param>
+          <param name="offset">The offset of the bit to clear.</param>
+          <returns>The modified value.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBit(System.UInt16,System.Int32)">
+          <summary>
+             Sets bit to "off" and returns the modified value.
+          </summary>
+          <param name="value">The value to be modified.</param>
+          <param name="offset">The offset of the bit to clear.</param>
+          <returns>The modified value.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBit(System.UInt32,System.Int32)">
+          <summary>
+             Sets bit to "off" and returns the modified value.
+          </summary>
+          <param name="value">The value to be modified.</param>
+          <param name="offset">The offset of the bit to clear.</param>
+          <returns>The modified value.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBit(System.UInt64,System.Int32)">
+          <summary>
+             Sets bit to "off" and returns the modified value.
+          </summary>
+          <param name="value">The value to be modified.</param>
+          <param name="offset">The offset of the bit to clear.</param>
+          <returns>The modified value.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.SByte,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Sets all bits from a provided mask to "off" and returns the modified value.
+          </summary>
+          <param name="value">The value to be modified.</param>
+          <param name="mask">the bit mask of the bits to clear.</param>
+          <returns>The modified value.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.Int16,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Sets all bits from a provided mask to "off" and returns the modified value.
+          </summary>
+          <param name="value">The value to be modified.</param>
+          <param name="mask">the bit mask of the bits to clear.</param>
+          <returns>The modified value.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.Int32,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Sets all bits from a provided mask to "off" and returns the modified value.
+          </summary>
+          <param name="value">The value to be modified.</param>
+          <param name="mask">the bit mask of the bits to clear.</param>
+          <returns>The modified value.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.Int64,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Sets all bits from a provided mask to "off" and returns the modified value.
+          </summary>
+          <param name="value">The value to be modified.</param>
+          <param name="mask">the bit mask of the bits to clear.</param>
+          <returns>The modified value.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.Byte,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Sets all bits from a provided mask to "off" and returns the modified value.
+          </summary>
+          <param name="value">The value to be modified.</param>
+          <param name="mask">the bit mask of the bits to clear.</param>
+          <returns>The modified value.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.UInt16,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Sets all bits from a provided mask to "off" and returns the modified value.
+          </summary>
+          <param name="value">The value to be modified.</param>
+          <param name="mask">the bit mask of the bits to clear.</param>
+          <returns>The modified value.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.UInt32,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Sets all bits from a provided mask to "off" and returns the modified value.
+          </summary>
+          <param name="value">The value to be modified.</param>
+          <param name="mask">the bit mask of the bits to clear.</param>
+          <returns>The modified value.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ClearBitsExtensions.ClearBits(System.UInt64,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Sets all bits from a provided mask to "off" and returns the modified value.
+          </summary>
+          <param name="value">The value to be modified.</param>
+          <param name="mask">the bit mask of the bits to clear.</param>
+          <returns>The modified value.</returns>
+       </member>
+       <member name="T:Jcd.BitManipulation.Endian">
+          <summary>
+             A type indicating which endian is in use.
+          </summary>
+       </member>
+       <member name="F:Jcd.BitManipulation.Endian.Little">
+          <summary>
+             Indicates that Little Endian is in use.
+          </summary>
+       </member>
+       <member name="F:Jcd.BitManipulation.Endian.Big">
+          <summary>
+             Indicates that Big Endian is in use.
+          </summary>
+       </member>
         <member name="T:Jcd.BitManipulation.NamespaceDoc">
             <summary>
             Provides a set of extension methods and types to assist with
@@ -3033,7 +3047,7 @@
             <returns>A little endian byte array of the value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(Jcd.BitManipulation.LittleEndianByteIndexerInt16,System.Int32,System.Int32)">
+          name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt16,System.Int32,System.Int32)">
             <summary>
             Reads a set of bytes starting at the specified byte location within the indexer.
             </summary>
@@ -3043,7 +3057,7 @@
             <returns>A little endian byte array of the value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(Jcd.BitManipulation.BigEndianByteIndexerInt16,System.Int32,System.Int32)">
+          name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16,System.Int32,System.Int32)">
             <summary>
             Reads a set of bytes starting at the specified byte location within the indexer.
             </summary>
@@ -3053,7 +3067,7 @@
             <returns>A big endian byte array of the value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(Jcd.BitManipulation.LittleEndianByteIndexerUInt16,System.Int32,System.Int32)">
+          name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16,System.Int32,System.Int32)">
             <summary>
             Reads a set of bytes starting at the specified byte location within the indexer.
             </summary>
@@ -3063,7 +3077,7 @@
             <returns>A little endian byte array of the value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(Jcd.BitManipulation.BigEndianByteIndexerUInt16,System.Int32,System.Int32)">
+          name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt16,System.Int32,System.Int32)">
             <summary>
             Reads a set of bytes starting at the specified byte location within the indexer.
             </summary>
@@ -3073,7 +3087,7 @@
             <returns>A big endian byte array of the value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(Jcd.BitManipulation.LittleEndianByteIndexerInt32,System.Int32,System.Int32)">
+          name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32,System.Int32,System.Int32)">
             <summary>
             Reads a set of bytes starting at the specified byte location within the indexer.
             </summary>
@@ -3083,7 +3097,7 @@
             <returns>A little endian byte array of the value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(Jcd.BitManipulation.BigEndianByteIndexerInt32,System.Int32,System.Int32)">
+          name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt32,System.Int32,System.Int32)">
             <summary>
             Reads a set of bytes starting at the specified byte location within the indexer.
             </summary>
@@ -3093,7 +3107,7 @@
             <returns>A big endian byte array of the value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(Jcd.BitManipulation.LittleEndianByteIndexerUInt32,System.Int32,System.Int32)">
+          name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt32,System.Int32,System.Int32)">
             <summary>
             Reads a set of bytes starting at the specified byte location within the indexer.
             </summary>
@@ -3103,7 +3117,7 @@
             <returns>A little endian byte array of the value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(Jcd.BitManipulation.BigEndianByteIndexerUInt32,System.Int32,System.Int32)">
+          name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt32,System.Int32,System.Int32)">
             <summary>
             Reads a set of bytes starting at the specified byte location within the indexer.
             </summary>
@@ -3113,7 +3127,7 @@
             <returns>A big endian byte array of the value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(Jcd.BitManipulation.LittleEndianByteIndexerInt64,System.Int32,System.Int32)">
+          name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt64,System.Int32,System.Int32)">
             <summary>
             Reads a set of bytes starting at the specified byte location within the indexer.
             </summary>
@@ -3123,7 +3137,7 @@
             <returns>A little endian byte array of the value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(Jcd.BitManipulation.BigEndianByteIndexerInt64,System.Int32,System.Int32)">
+          name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64,System.Int32,System.Int32)">
             <summary>
             Reads a set of bytes starting at the specified byte location within the indexer.
             </summary>
@@ -3133,7 +3147,7 @@
             <returns>A big endian byte array of the value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(Jcd.BitManipulation.LittleEndianByteIndexerUInt64,System.Int32,System.Int32)">
+          name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64,System.Int32,System.Int32)">
             <summary>
             Reads a set of bytes starting at the specified byte location within the indexer.
             </summary>
@@ -3143,7 +3157,7 @@
             <returns>A little endian byte array of the value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(Jcd.BitManipulation.BigEndianByteIndexerUInt64,System.Int32,System.Int32)">
+          name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt64,System.Int32,System.Int32)">
             <summary>
             Reads a set of bytes starting at the specified byte location within the indexer.
             </summary>
@@ -3742,7 +3756,7 @@
             <returns>The modified value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.LittleEndianByteIndexerInt16,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt16,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
             <summary>
             Stores a set of bytes starting at the specified byte location within the indexer.
             Byte indexing is LSB, least significant byte, at index/offset zero.
@@ -3754,7 +3768,7 @@
             <returns>The modified value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.BigEndianByteIndexerInt16,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
             <summary>
             Stores a set of bytes starting at the specified byte location within the indexer.
             Byte indexing is MSB, most significant byte, at index/offset zero.
@@ -3766,7 +3780,7 @@
             <returns>The modified value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.LittleEndianByteIndexerUInt16,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
             <summary>
             Stores a set of bytes starting at the specified byte location within the indexer.
             Byte indexing is LSB, least significant byte, at index/offset zero.
@@ -3778,7 +3792,7 @@
             <returns>The modified value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.BigEndianByteIndexerUInt16,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt16,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
             <summary>
             Stores a set of bytes starting at the specified byte location within the indexer.
             Byte indexing is MSB, most significant byte, at index/offset zero.
@@ -3790,7 +3804,7 @@
             <returns>The modified value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.LittleEndianByteIndexerInt32,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
             <summary>
             Stores a set of bytes starting at the specified byte location within the indexer.
             Byte indexing is LSB, least significant byte, at index/offset zero.
@@ -3802,7 +3816,7 @@
             <returns>The modified value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.BigEndianByteIndexerInt32,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt32,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
             <summary>
             Stores a set of bytes starting at the specified byte location within the indexer.
             Byte indexing is LSB, least significant byte, at index/offset zero.
@@ -3814,7 +3828,7 @@
             <returns>The modified value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.LittleEndianByteIndexerUInt32,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt32,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
             <summary>
             Stores a set of bytes starting at the specified byte location within the indexer.
             Byte indexing is LSB, least significant byte, at index/offset zero.
@@ -3826,7 +3840,7 @@
             <returns>The modified value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.BigEndianByteIndexerUInt32,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt32,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
             <summary>
             Stores a set of bytes starting at the specified byte location within the indexer.
             Byte indexing is MSB, most significant byte, at index/offset zero.
@@ -3838,7 +3852,7 @@
             <returns>The modified value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.LittleEndianByteIndexerInt64,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt64,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
             <summary>
             Stores a set of bytes starting at the specified byte location within the indexer.
             Byte indexing is LSB, least significant byte, at index/offset zero.
@@ -3850,7 +3864,7 @@
             <returns>The modified value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.BigEndianByteIndexerInt64,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
             <summary>
             Stores a set of bytes starting at the specified byte location within the indexer.
             Byte indexing is LSB, least significant byte, at index/offset zero.
@@ -3862,7 +3876,7 @@
             <returns>The modified value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.LittleEndianByteIndexerUInt64,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
             <summary>
             Stores a set of bytes starting at the specified byte location within the indexer.
             Byte indexing is LSB, least significant byte, at index/offset zero.
@@ -3874,7 +3888,7 @@
             <returns>The modified value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.BigEndianByteIndexerUInt64,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt64,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
             <summary>
             Stores a set of bytes starting at the specified byte location within the indexer.
             Byte indexing is LSB, least significant byte, at index/offset zero.
@@ -3946,7 +3960,7 @@
             <returns>The modified value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.LittleEndianByteIndexerUInt64,System.Byte,System.Int32)">
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64,System.Byte,System.Int32)">
             <summary>
             Store a single byte to the value at the specified byte offset.
             Byte indexing is LSB, least significant byte, at index/offset zero.
@@ -3957,7 +3971,7 @@
             <returns>The modified value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.BigEndianByteIndexerUInt64,System.Byte,System.Int32)">
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt64,System.Byte,System.Int32)">
             <summary>
             Store a single byte to the value at the specified byte offset.
             Byte indexing is MSB, most significant byte, at index/offset zero.
@@ -3968,7 +3982,7 @@
             <returns>The modified value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.LittleEndianByteIndexerInt64,System.Byte,System.Int32)">
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt64,System.Byte,System.Int32)">
             <summary>
             Store a single byte to the value at the specified byte offset.
             Byte indexing is LSB, least significant byte, at index/offset zero.
@@ -3979,7 +3993,7 @@
             <returns>The modified value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.BigEndianByteIndexerInt64,System.Byte,System.Int32)">
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64,System.Byte,System.Int32)">
             <summary>
             Store a single byte to the value at the specified byte offset.
             Byte indexing is LSB, least significant byte, at index/offset zero.
@@ -3990,7 +4004,7 @@
             <returns>The modified value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.LittleEndianByteIndexerUInt32,System.Byte,System.Int32)">
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt32,System.Byte,System.Int32)">
             <summary>
             Store a single byte to the value at the specified byte offset.
             Byte indexing is LSB, least significant byte, at index/offset zero.
@@ -4001,7 +4015,7 @@
             <returns>The modified value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.BigEndianByteIndexerUInt32,System.Byte,System.Int32)">
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt32,System.Byte,System.Int32)">
             <summary>
             Store a single byte to the value at the specified byte offset.
             Byte indexing is LSB, least significant byte, at index/offset zero.
@@ -4012,7 +4026,7 @@
             <returns>The modified value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.LittleEndianByteIndexerInt32,System.Byte,System.Int32)">
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32,System.Byte,System.Int32)">
             <summary>
             Store a single byte to the value at the specified byte offset.
             </summary>
@@ -4023,7 +4037,7 @@
             <returns>The modified value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.BigEndianByteIndexerInt32,System.Byte,System.Int32)">
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt32,System.Byte,System.Int32)">
             <summary>
             Store a single byte to the value at the specified byte offset.
             </summary>
@@ -4034,7 +4048,7 @@
             <returns>The modified value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.LittleEndianByteIndexerUInt16,System.Byte,System.Int32)">
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16,System.Byte,System.Int32)">
             <summary>
             Store a single byte to the value at the specified byte offset.
             Byte indexing is LSB, least significant byte, at index/offset zero.
@@ -4045,7 +4059,7 @@
             <returns>The modified value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.BigEndianByteIndexerUInt16,System.Byte,System.Int32)">
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt16,System.Byte,System.Int32)">
             <summary>
             Store a single byte to the value at the specified byte offset.
             Byte indexing is LSB, least significant byte, at index/offset zero.
@@ -4056,7 +4070,7 @@
             <returns>The modified value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.LittleEndianByteIndexerInt16,System.Byte,System.Int32)">
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt16,System.Byte,System.Int32)">
             <summary>
             Store a single byte to the value at the specified byte offset.
             Byte indexing is LSB, least significant byte, at index/offset zero.
@@ -4067,7 +4081,7 @@
             <returns>The modified value.</returns>
         </member>
        <member
-          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.BigEndianByteIndexerInt16,System.Byte,System.Int32)">
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16,System.Byte,System.Int32)">
             <summary>
             Store a single byte to the value at the specified byte offset.
             Byte indexing is LSB, least significant byte, at index/offset zero.

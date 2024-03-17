@@ -26,9 +26,9 @@
       <PackageLicenseUrl>https://github.com/jason-c-daniels/Jcd.BitManipulation/blob/main/LICENSE</PackageLicenseUrl>
       <RepositoryUrl>https://github.com/jason-c-daniels/Jcd.BitManipulation</RepositoryUrl>
       <RepositoryType>GitHub</RepositoryType>
-      <PackageVersion>2.2.0</PackageVersion>
-      <AssemblyVersion>2.2.0</AssemblyVersion>
-      <FileVersion>2.2.0</FileVersion>
+      <AssemblyVersion>3.0.0</AssemblyVersion>
+      <PackageVersion>3.0.0</PackageVersion>
+      <FileVersion>3.0.0</FileVersion>
       <TargetFramework>netstandard2.0</TargetFramework>
       <PackageIcon>Jason.C.Daniels.jpg</PackageIcon>
       <PackageReleaseNotes>Added bit testing extensions.</PackageReleaseNotes>
@@ -56,6 +56,14 @@
       <Content Include="icon\Jason.C.Daniels.jpg" Pack="true" PackagePath="\">
          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
+   </ItemGroup>
+
+   <ItemGroup>
+      <Compile Remove="BitIndexerUInt32.cs"/>
+      <Compile Remove="IBitIndexer.cs"/>
+      <Compile Remove="BigEndianByteIndexerUInt64.cs"/>
+      <Compile Remove="LittleEndianByteIndexerInt32.cs"/>
+      <Compile Remove="LittleEndianByteIndexerUInt32.cs"/>
    </ItemGroup>
 
 </Project>

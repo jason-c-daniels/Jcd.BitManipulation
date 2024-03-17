@@ -3,6 +3,7 @@
 using System.Text;
 
 // ReSharper disable HeapView.ObjectAllocation.Evident
+// ReSharper disable UnusedMember.Global
 
 #endregion
 
@@ -13,6 +14,11 @@ namespace Jcd.BitManipulation;
 /// </summary>
 public readonly struct BitMask
 {
+   /// <summary>
+   /// A default bitmask signifying all bits have been set.
+   /// </summary>
+   public static readonly BitMask AllBits = ulong.MaxValue;
+
    /// <summary>
    /// The backing store for the actual bits of the <see cref="BitMask"/>.
    /// </summary>
@@ -120,7 +126,7 @@ public readonly struct BitMask
       return sb.ToString();
    }
 
-   #region implicit cast operations.
+   #region implicit conversion operators.
 
    /// <summary>
    /// Automatically convert to <see cref="sbyte"/> from a <see cref="BitMask"/>

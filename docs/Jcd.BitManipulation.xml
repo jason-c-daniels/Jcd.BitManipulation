@@ -4,6 +4,297 @@
         <name>Jcd.BitManipulation</name>
     </assembly>
     <members>
+       <member name="T:Jcd.BitManipulation.AreAllBitsSetExtensions">
+          <summary>
+             Provides the ability to check if all bits from a
+             <see cref="T:Jcd.BitManipulation.BitMask"/>
+             are set on integral integer types.
+          </summary>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.AreAllBitsSetExtensions.AreAllBitsSet(System.UInt64,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Tests if all of the bits from the bitmask are set on a<see cref="T:System.UInt64"/>.
+          </summary>
+          <param name="data">The data to inspect.</param>
+          <param name="bitmask">the bits to test.</param>
+          <returns>True if all of the bits from the bitmask were set.</returns>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.AreAllBitsSetExtensions.AreAllBitsSet(System.Int64,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Tests if all of the bits from the bitmask are set on a<see cref="T:System.Int64"/>.
+          </summary>
+          <param name="data">The data to inspect.</param>
+          <param name="bitmask">the bits to test.</param>
+          <returns>True if all of the bits from the bitmask were set.</returns>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.AreAllBitsSetExtensions.AreAllBitsSet(System.UInt32,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Tests if all of the bits from the bitmask are set on a<see cref="T:System.UInt32"/>.
+          </summary>
+          <param name="data">The data to inspect.</param>
+          <param name="bitmask">the bits to test.</param>
+          <returns>True if all of the bits from the bitmask were set.</returns>
+          <remarks>
+             NB: Only the lowest 32 bits of the bitmask will be used.
+          </remarks>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.AreAllBitsSetExtensions.AreAllBitsSet(System.Int32,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Tests if all of the bits from the bitmask are set on an<see cref="T:System.Int32"/>.
+          </summary>
+          <param name="data">The data to inspect.</param>
+          <param name="bitmask">the bits to test.</param>
+          <returns>True if all of the bits from the bitmask were set.</returns>
+          <remarks>
+             NB: Only the lowest 32 bits of the bitmask will be used.
+          </remarks>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.AreAllBitsSetExtensions.AreAllBitsSet(System.UInt16,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Tests if all of the bits from the bitmask are set on a<see cref="T:System.UInt16"/>.
+          </summary>
+          <param name="data">The data to inspect.</param>
+          <param name="bitmask">the bits to test.</param>
+          <returns>True if all of the bits from the bitmask were set.</returns>
+          <remarks>
+             NB: Only the lowest 16 bits of the bitmask will be used.
+          </remarks>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.AreAllBitsSetExtensions.AreAllBitsSet(System.Int16,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Tests if all of the bits from the bitmask are set on a<see cref="T:System.Int16"/>.
+          </summary>
+          <param name="data">The data to inspect.</param>
+          <param name="bitmask">the bits to test.</param>
+          <returns>True if all of the bits from the bitmask were set.</returns>
+          <remarks>
+             NB: Only the lowest 16 bits of the bitmask will be used.
+          </remarks>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.AreAllBitsSetExtensions.AreAllBitsSet(System.Byte,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Tests if all of the bits from the bitmask are set on a<see cref="T:System.Byte"/>.
+          </summary>
+          <param name="data">The data to inspect.</param>
+          <param name="bitmask">the bits to test.</param>
+          <returns>True if all of the bits from the bitmask were set.</returns>
+          <remarks>
+             NB: Only the lowest 8 bits of the bitmask will be used.
+          </remarks>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.AreAllBitsSetExtensions.AreAllBitsSet(System.SByte,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Tests if all of the bits from the bitmask are set on an<see cref="T:System.SByte"/>.
+          </summary>
+          <param name="data">The data to inspect.</param>
+          <param name="bitmask">the bits to test.</param>
+          <returns>True if all of the bits from the bitmask were set.</returns>
+          <remarks>
+             NB: Only the lowest 8 bits of the bitmask will be used.
+          </remarks>
+       </member>
+       <member name="T:Jcd.BitManipulation.AreAnyBitsSetExtensions">
+          <summary>
+             Provides the ability to check if any bits from a
+             <see cref="T:Jcd.BitManipulation.BitMask"/>
+             are set on integral integer types.
+          </summary>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.AreAnyBitsSetExtensions.AreAnyBitsSet(System.UInt64,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Tests if any bits from the bitmask are set on a<see cref="T:System.UInt64"/>.
+          </summary>
+          <param name="data">The data to inspect.</param>
+          <param name="bitmask">the bits to test.</param>
+          <returns>True if any of the bits from the bitmask were set.</returns>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.AreAnyBitsSetExtensions.AreAnyBitsSet(System.Int64,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Tests if any bits from the bitmask are set on a<see cref="T:System.Int64"/>.
+          </summary>
+          <param name="data">The data to inspect.</param>
+          <param name="bitmask">the bits to test.</param>
+          <returns>True if any of the bits from the bitmask were set.</returns>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.AreAnyBitsSetExtensions.AreAnyBitsSet(System.UInt32,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Tests if any bits from the bitmask are set on a<see cref="T:System.UInt32"/>.
+          </summary>
+          <param name="data">The data to inspect.</param>
+          <param name="bitmask">the bits to test.</param>
+          <returns>True if any of the bits from the bitmask were set.</returns>
+          <remarks>
+             NB: Only the lowest 32 bits of the bitmask will be used.
+          </remarks>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.AreAnyBitsSetExtensions.AreAnyBitsSet(System.Int32,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Tests if any bits from the bitmask are set on an<see cref="T:System.Int32"/>.
+          </summary>
+          <param name="data">The data to inspect.</param>
+          <param name="bitmask">the bits to test.</param>
+          <returns>True if any of the bits from the bitmask were set.</returns>
+          <remarks>
+             NB: Only the lowest 32 bits of the bitmask will be used.
+          </remarks>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.AreAnyBitsSetExtensions.AreAnyBitsSet(System.UInt16,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Tests if any bits from the bitmask are set on a<see cref="T:System.UInt16"/>.
+          </summary>
+          <param name="data">The data to inspect.</param>
+          <param name="bitmask">the bits to test.</param>
+          <returns>True if any of the bits from the bitmask were set.</returns>
+          <remarks>
+             NB: Only the lowest 16 bits of the bitmask will be used.
+          </remarks>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.AreAnyBitsSetExtensions.AreAnyBitsSet(System.Int16,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Tests if any bits from the bitmask are set on a<see cref="T:System.Int16"/>.
+          </summary>
+          <param name="data">The data to inspect.</param>
+          <param name="bitmask">the bits to test.</param>
+          <returns>True if any of the bits from the bitmask were set.</returns>
+          <remarks>
+             NB: Only the lowest 16 bits of the bitmask will be used.
+          </remarks>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.AreAnyBitsSetExtensions.AreAnyBitsSet(System.Byte,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Tests if any bits from the bitmask are set on a<see cref="T:System.Byte"/>.
+          </summary>
+          <param name="data">The data to inspect.</param>
+          <param name="bitmask">the bits to test.</param>
+          <returns>True if any of the bits from the bitmask were set.</returns>
+          <remarks>
+             NB: Only the lowest 8 bits of the bitmask will be used.
+          </remarks>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.AreAnyBitsSetExtensions.AreAnyBitsSet(System.SByte,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Tests if any bits from the bitmask are set on an<see cref="T:System.SByte"/>.
+          </summary>
+          <param name="data">The data to inspect.</param>
+          <param name="bitmask">the bits to test.</param>
+          <returns>True if any of the bits from the bitmask were set.</returns>
+          <remarks>
+             NB: Only the lowest 8 bits of the bitmask will be used.
+          </remarks>
+       </member>
+       <member name="T:Jcd.BitManipulation.AreNoBitsSetExtensions">
+          <summary>
+             Provides the ability to check if no bits from a
+             <see cref="T:Jcd.BitManipulation.BitMask"/>
+             are set on integral integer types.
+          </summary>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.AreNoBitsSetExtensions.AreNoBitsSet(System.UInt64,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Tests if none of the bits from the bitmask are set on a<see cref="T:System.UInt64"/>.
+          </summary>
+          <param name="data">The data to inspect.</param>
+          <param name="bitmask">the bits to test.</param>
+          <returns>True if all of the bits from the bitmask were set.</returns>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.AreNoBitsSetExtensions.AreNoBitsSet(System.Int64,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Tests if none of the bits from the bitmask are set on a<see cref="T:System.Int64"/>.
+          </summary>
+          <param name="data">The data to inspect.</param>
+          <param name="bitmask">the bits to test.</param>
+          <returns>True if all of the bits from the bitmask were set.</returns>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.AreNoBitsSetExtensions.AreNoBitsSet(System.UInt32,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Tests if none of the bits from the bitmask are set on a<see cref="T:System.UInt32"/>.
+          </summary>
+          <param name="data">The data to inspect.</param>
+          <param name="bitmask">the bits to test.</param>
+          <returns>True if all of the bits from the bitmask were set.</returns>
+          <remarks>
+             NB: Only the lowest 32 bits of the bitmask will be used.
+          </remarks>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.AreNoBitsSetExtensions.AreNoBitsSet(System.Int32,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Tests if none of the bits from the bitmask are set on an<see cref="T:System.Int32"/>.
+          </summary>
+          <param name="data">The data to inspect.</param>
+          <param name="bitmask">the bits to test.</param>
+          <returns>True if all of the bits from the bitmask were set.</returns>
+          <remarks>
+             NB: Only the lowest 32 bits of the bitmask will be used.
+          </remarks>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.AreNoBitsSetExtensions.AreNoBitsSet(System.UInt16,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Tests if none of the bits from the bitmask are set on a<see cref="T:System.UInt16"/>.
+          </summary>
+          <param name="data">The data to inspect.</param>
+          <param name="bitmask">the bits to test.</param>
+          <returns>True if all of the bits from the bitmask were set.</returns>
+          <remarks>
+             NB: Only the lowest 16 bits of the bitmask will be used.
+          </remarks>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.AreNoBitsSetExtensions.AreNoBitsSet(System.Int16,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Tests if none of the bits from the bitmask are set on a<see cref="T:System.Int16"/>.
+          </summary>
+          <param name="data">The data to inspect.</param>
+          <param name="bitmask">the bits to test.</param>
+          <returns>True if all of the bits from the bitmask were set.</returns>
+          <remarks>
+             NB: Only the lowest 16 bits of the bitmask will be used.
+          </remarks>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.AreNoBitsSetExtensions.AreNoBitsSet(System.Byte,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Tests if none of the bits from the bitmask are set on a<see cref="T:System.Byte"/>.
+          </summary>
+          <param name="data">The data to inspect.</param>
+          <param name="bitmask">the bits to test.</param>
+          <returns>True if all of the bits from the bitmask were set.</returns>
+          <remarks>
+             NB: Only the lowest 8 bits of the bitmask will be used.
+          </remarks>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.AreNoBitsSetExtensions.AreNoBitsSet(System.SByte,Jcd.BitManipulation.BitMask)">
+          <summary>
+             Tests if none of the bits from the bitmask are set on an<see cref="T:System.SByte"/>.
+          </summary>
+          <param name="data">The data to inspect.</param>
+          <param name="bitmask">the bits to test.</param>
+          <returns>True if all of the bits from the bitmask were set.</returns>
+          <remarks>
+             NB: Only the lowest 8 bits of the bitmask will be used.
+          </remarks>
+       </member>
        <member name="T:Jcd.BitManipulation.BigEndianByteIndexerInt16">
           <summary>
              Provides byte level indexing operations (set, get) on an<see cref="T:System.Int16"/>. Zero is the most
@@ -987,6 +1278,11 @@
             An conceptual abstraction for a bit mask.
             </summary>
         </member>
+       <member name="F:Jcd.BitManipulation.BitMask.AllBits">
+          <summary>
+             A default bitmask signifying all bits have been set.
+          </summary>
+       </member>
        <member name="F:Jcd.BitManipulation.BitMask.Bits">
             <summary>
                The backing store for the actual bits of the<see cref="T:Jcd.BitManipulation.BitMask"/>.

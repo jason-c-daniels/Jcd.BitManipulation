@@ -20,17 +20,17 @@
       <Title>Jcd.BitManipulation</Title>
       <Authors>Jason C. Daniels</Authors>
       <Description>A .Net Standard 2.0 library adding syntactic sugar to your bit and byte manipulation experience.</Description>
-      <Copyright>2023</Copyright>
+      <Copyright>2024</Copyright>
       <PackageProjectUrl>https://github.com/jason-c-daniels/Jcd.BitManipulation</PackageProjectUrl>
       <PackageLicenseUrl>https://github.com/jason-c-daniels/Jcd.BitManipulation/blob/main/LICENSE</PackageLicenseUrl>
       <RepositoryUrl>https://github.com/jason-c-daniels/Jcd.BitManipulation</RepositoryUrl>
       <RepositoryType>GitHub</RepositoryType>
-      <PackageVersion>0.0.1</PackageVersion>
-      <AssemblyVersion>0.0.1</AssemblyVersion>
-      <FileVersion>0.0.1</FileVersion>
+      <PackageVersion>2.2.0</PackageVersion>
+      <AssemblyVersion>2.2.0</AssemblyVersion>
+      <FileVersion>2.2.0</FileVersion>
       <TargetFramework>netstandard2.0</TargetFramework>
       <PackageIcon>Jason.C.Daniels.jpg</PackageIcon>
-      <PackageReleaseNotes>Added byte manipulation extensions.</PackageReleaseNotes>
+      <PackageReleaseNotes>Added bit testing extensions.</PackageReleaseNotes>
    </PropertyGroup>
 
    <PropertyGroup>

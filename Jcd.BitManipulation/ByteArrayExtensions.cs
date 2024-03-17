@@ -7,6 +7,7 @@ using System.Runtime.CompilerServices;
 // ReSharper disable CognitiveComplexity
 // ReSharper disable ReplaceSliceWithRangeIndexer
 // ReSharper disable MemberCanBePrivate.Global
+// ReSharper disable RedundantRangeBound
 
 #endregion
 
@@ -100,7 +101,7 @@ public static class ByteArrayExtensions
    {
       return endian == Endian.Big
                 ? new BigEndianByteIndexerUInt64 { Data    = data }[0..^0]
-                : new LittleEndianByteIndexerUInt64 { Data = data }[0..^0];   
+                : new LittleEndianByteIndexerUInt64 { Data = data }[0..^0];
    }
 
    /// <summary>
@@ -114,7 +115,7 @@ public static class ByteArrayExtensions
    {
       return endian == Endian.Big
                 ? new BigEndianByteIndexerInt64 { Data    = data }[0..^0]
-                : new LittleEndianByteIndexerInt64 { Data = data }[0..^0];   
+                : new LittleEndianByteIndexerInt64 { Data = data }[0..^0];
    }
 
    /// <summary>

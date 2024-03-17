@@ -20,9 +20,10 @@ public readonly struct BitMask
 | [BitMask(ulong)](Jcd.BitManipulation.BitMask.BitMask(ulong).md 'Jcd.BitManipulation.BitMask.BitMask(ulong)')                                               | Constructs a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') from a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') |
 | [BitMask(ushort)](Jcd.BitManipulation.BitMask.BitMask(ushort).md 'Jcd.BitManipulation.BitMask.BitMask(ushort)')                                            | Create a bitmask                                                                                                                                                                       |
 
-| Fields                                                                         |                                                                                                                       |
-|:-------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------|
-| [Bits](Jcd.BitManipulation.BitMask.Bits.md 'Jcd.BitManipulation.BitMask.Bits') | The backing store for the actual bits of the [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask'). |
+| Fields                                                                                  |                                                                                                                       |
+|:----------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------|
+| [AllBits](Jcd.BitManipulation.BitMask.AllBits.md 'Jcd.BitManipulation.BitMask.AllBits') | A default bitmask signifying all bits have been set.                                                                  |
+| [Bits](Jcd.BitManipulation.BitMask.Bits.md 'Jcd.BitManipulation.BitMask.Bits')          | The backing store for the actual bits of the [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask'). |
 
 | Methods                                                                                                                    |                                                                                                                                   |
 |:---------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------|

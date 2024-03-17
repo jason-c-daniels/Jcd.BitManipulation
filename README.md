@@ -55,6 +55,12 @@ upperByte = ((byte)data.ReadBits(8, 8)) // extract the upper byte (0b00001111)
 
 ## Change Log
 
+### Version 2.2 Released
+
+1. Added `AreAnyBitsSet` extensions methods for all intrinsic integer types.
+2. Added `AreAllBitsSet` extensions methods for all intrinsic integer types.
+3. Added `AreNoBitsSet` extensions methods for all intrinsic integer types.
+
 ### Version 2.1 Released
 
 1. Added `GetBytes` and `GetByte` extension methods for intrinsic data types.

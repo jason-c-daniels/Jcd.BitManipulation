@@ -8,7 +8,6 @@ a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'Syste
 ```csharp
 public static bool AreNoBitsSet(this long data, Jcd.BitManipulation.BitMask bitmask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.AreNoBitsSetExtensions.AreNoBitsSet(thislong,Jcd.BitManipulation.BitMask).data'></a>

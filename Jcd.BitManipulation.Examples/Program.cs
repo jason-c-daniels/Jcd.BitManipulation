@@ -31,7 +31,7 @@ internal static class Program
       #if DEBUG
       const int iterations = 1_000_000;
       #else
-        const int iterations = 100_000_000;
+      const int iterations = 100_000_000;
       #endif
       var ul     = 0xFFFEFDFEFCFBFAF9;
       var ulbi   = (BigEndianByteIndexerUInt64) ul;

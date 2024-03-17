@@ -1278,6 +1278,11 @@
             An conceptual abstraction for a bit mask.
             </summary>
         </member>
+       <member name="F:Jcd.BitManipulation.BitMask.AllBits">
+          <summary>
+             A default bitmask signifying all bits have been set.
+          </summary>
+       </member>
        <member name="F:Jcd.BitManipulation.BitMask.Bits">
             <summary>
                The backing store for the actual bits of the<see cref="T:Jcd.BitManipulation.BitMask"/>.

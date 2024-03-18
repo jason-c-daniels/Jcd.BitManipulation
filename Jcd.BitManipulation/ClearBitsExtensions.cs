@@ -138,7 +138,7 @@ public static class ClearBitsExtensions
    /// <param name="size">The number of bits to clear.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static float ClearBits(this double value, int offset = 0, int size = 64)
+   public static double ClearBits(this double value, int offset = 0, int size = 64)
    {
       return value.ClearBits(BitMask.FromRange(offset, size));
    }
@@ -335,7 +335,7 @@ public static class ClearBitsExtensions
    /// <param name="mask">the bit mask of the bits to clear.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static float ClearBits(this double value, BitMask mask) { return value.BitwiseToInt64().ClearBits(mask); }
+   public static double ClearBits(this double value, BitMask mask) { return value.BitwiseToInt64().ClearBits(mask); }
 
    #endregion
 }

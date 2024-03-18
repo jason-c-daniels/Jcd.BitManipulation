@@ -2,7 +2,7 @@
 
 ## BooleanArrayExtensions Class
 
-A bunch of extension methods to help with converting numbers to and from arrays of bools
+Extension methods to aid in converting numbers to and from arrays of bools
 
 ```csharp
 public static class BooleanArrayExtensions

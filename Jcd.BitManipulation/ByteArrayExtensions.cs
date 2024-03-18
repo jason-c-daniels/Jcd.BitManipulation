@@ -14,7 +14,7 @@ using System.Runtime.CompilerServices;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// A bunch of extension methods to help with converting numbers to and from arrays of bools
+/// Extension methods to aid in converting numbers to and from arrays of bools
 /// </summary>
 public static class ByteArrayExtensions
 {

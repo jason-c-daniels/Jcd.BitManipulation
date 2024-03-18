@@ -18,10 +18,10 @@ Implements [IBitIndexer](Jcd.BitManipulation.IBitIndexer.md 'Jcd.BitManipulation
 | :--- | :--- |
 | [BitSize](Jcd.BitManipulation.BitIndexerUInt32.BitSize.md 'Jcd.BitManipulation.BitIndexerUInt32.BitSize') | The number of bits this type will index |
 
-| Properties | |
-| :--- | :--- |
-| [Bits](Jcd.BitManipulation.BitIndexerUInt32.Bits.md 'Jcd.BitManipulation.BitIndexerUInt32.Bits') | The backing store |
-| [Length](Jcd.BitManipulation.BitIndexerUInt32.Length.md 'Jcd.BitManipulation.BitIndexerUInt32.Length') | The length of enumerated bits |
+| Properties                                                                                                      |                                                        |
+|:----------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------|
+| [Bits](Jcd.BitManipulation.BitIndexerUInt32.Bits.md 'Jcd.BitManipulation.BitIndexerUInt32.Bits')                | The backing store                                      |
+| [Length](Jcd.BitManipulation.BitIndexerUInt32.Length.md 'Jcd.BitManipulation.BitIndexerUInt32.Length')          | The number of bits indexable by this indexer.          |
 | [this[int]](Jcd.BitManipulation.BitIndexerUInt32.this[int].md 'Jcd.BitManipulation.BitIndexerUInt32.this[int]') | Gets or sets individual bits within the backing store. |
 
 | Methods | |

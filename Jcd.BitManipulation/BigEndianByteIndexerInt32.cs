@@ -35,7 +35,7 @@ public struct BigEndianByteIndexerInt32 : IByteIndexer
    public BigEndianByteIndexerInt32(int data = 0) { Data = data; }
 
    /// <summary>
-   /// The length of the indexer.
+   /// The number of bytes indexable by this indexer.
    /// </summary>
    public int Length => sizeof(int);
 

@@ -17,6 +17,5 @@ public static Jcd.BitManipulation.BitIndexerInt32 implicit operator BitIndexerIn
 the initial value for the indexer's backing store
 
 #### Returns
-
 [BitIndexerInt32](Jcd.BitManipulation.BitIndexerInt32.md 'Jcd.BitManipulation.BitIndexerInt32')
 A new BitIndexerInt32

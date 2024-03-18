@@ -41,8 +41,8 @@ upperByte = ((byte)data.ReadBits(8, 8)) // extract the upper byte (0b00001111)
 | [AreAllBitsSetExtensions](Jcd.BitManipulation.AreAllBitsSetExtensions.md 'Jcd.BitManipulation.AreAllBitsSetExtensions') | Provides the ability to check if all bits from a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') are set on integral integer types. |
 | [AreAnyBitsSetExtensions](Jcd.BitManipulation.AreAnyBitsSetExtensions.md 'Jcd.BitManipulation.AreAnyBitsSetExtensions') | Provides the ability to check if any bits from a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') are set on integral integer types. |
 | [AreNoBitsSetExtensions](Jcd.BitManipulation.AreNoBitsSetExtensions.md 'Jcd.BitManipulation.AreNoBitsSetExtensions')    | Provides the ability to check if no bits from a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') are set on integral integer types.  |
-| [BooleanArrayExtensions](Jcd.BitManipulation.BooleanArrayExtensions.md 'Jcd.BitManipulation.BooleanArrayExtensions')    | A bunch of extension methods to help with converting numbers to and from arrays of bools                                                                    |
-| [ByteArrayExtensions](Jcd.BitManipulation.ByteArrayExtensions.md 'Jcd.BitManipulation.ByteArrayExtensions')             | A bunch of extension methods to help with converting numbers to and from arrays of bools                                                                    |
+| [BooleanArrayExtensions](Jcd.BitManipulation.BooleanArrayExtensions.md 'Jcd.BitManipulation.BooleanArrayExtensions')    | Extension methods to aid in converting numbers to and from arrays of bools                                                                                  |
+| [ByteArrayExtensions](Jcd.BitManipulation.ByteArrayExtensions.md 'Jcd.BitManipulation.ByteArrayExtensions')             | Extension methods to aid in converting numbers to and from arrays of bools                                                                                  |
 | [ClearBitsExtensions](Jcd.BitManipulation.ClearBitsExtensions.md 'Jcd.BitManipulation.ClearBitsExtensions')             | Extension methods to aid in clearing bits in various integer data types.                                                                                    |
 | [ReadBitsExtensions](Jcd.BitManipulation.ReadBitsExtensions.md 'Jcd.BitManipulation.ReadBitsExtensions')                | Extension methods that enable reading one or more bits from a specified offset in an integer data type.                                                     |
 | [ReadBytesExtensions](Jcd.BitManipulation.ReadBytesExtensions.md 'Jcd.BitManipulation.ReadBytesExtensions')             | Extension methods that aid in reading bytes from integer data types.                                                                                        |
@@ -75,10 +75,10 @@ upperByte = ((byte)data.ReadBits(8, 8)) // extract the upper byte (0b00001111)
 | [LittleEndianByteIndexerUInt32](Jcd.BitManipulation.LittleEndianByteIndexerUInt32.md 'Jcd.BitManipulation.LittleEndianByteIndexerUInt32') | Provides byte level indexing operations (set, get) on a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32'). Zero is the least significant byte. |
 | [LittleEndianByteIndexerUInt64](Jcd.BitManipulation.LittleEndianByteIndexerUInt64.md 'Jcd.BitManipulation.LittleEndianByteIndexerUInt64') | Provides byte level indexing operations (set, get) on a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64'). Zero is the least significant byte. |
 
-| Interfaces | |
-| :--- | :--- |
-| [IBitIndexer](Jcd.BitManipulation.IBitIndexer.md 'Jcd.BitManipulation.IBitIndexer') | The basic interface for indexing bits within an integer data type. |
-| [IByteIndexer](Jcd.BitManipulation.IByteIndexer.md 'Jcd.BitManipulation.IByteIndexer') | The basic interface for indexing bits within an integer data type. |
+| Interfaces                                                                             |                                                                      |
+|:---------------------------------------------------------------------------------------|:---------------------------------------------------------------------|
+| [IBitIndexer](Jcd.BitManipulation.IBitIndexer.md 'Jcd.BitManipulation.IBitIndexer')    | The basic interface for indexing bits within an integer data type.   |
+| [IByteIndexer](Jcd.BitManipulation.IByteIndexer.md 'Jcd.BitManipulation.IByteIndexer') | The basic interface for indexing bytes within an integral data type. |
 
 | Enums | |
 | :--- | :--- |

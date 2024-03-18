@@ -294,7 +294,7 @@ public static class ReadBytesExtensions
 
       var beOffset = sizeof(long) - offset - 1;
 
-      return (byte) value.ReadBits(beOffset << 3, 8);           
+      return (byte) value.ReadBits(beOffset << 3, 8);
    }
 
    /// <summary>
@@ -312,7 +312,7 @@ public static class ReadBytesExtensions
 
       var beOffset = sizeof(uint) - offset - 1;
 
-      return (byte) value.ReadBits(beOffset << 3, 8);       
+      return (byte) value.ReadBits(beOffset << 3, 8);
    }
 
    /// <summary>
@@ -330,7 +330,7 @@ public static class ReadBytesExtensions
 
       var beOffset = sizeof(int) - offset - 1;
 
-      return (byte) value.ReadBits(beOffset << 3, 8); 
+      return (byte) value.ReadBits(beOffset << 3, 8);
    }
 
    /// <summary>
@@ -348,7 +348,7 @@ public static class ReadBytesExtensions
 
       var beOffset = sizeof(ushort) - offset - 1;
 
-      return (byte) value.ReadBits(beOffset << 3, 8); 
+      return (byte) value.ReadBits(beOffset << 3, 8);
    }
 
    /// <summary>
@@ -366,7 +366,7 @@ public static class ReadBytesExtensions
 
       var beOffset = sizeof(short) - offset - 1;
 
-      return (byte) value.ReadBits(beOffset << 3, 8);      
+      return (byte) value.ReadBits(beOffset << 3, 8);
    }
 
    #endregion

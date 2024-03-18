@@ -16,6 +16,5 @@ public static Jcd.BitManipulation.BigEndianByteIndexerUInt64 implicit operator B
 The underlying data type.
 
 #### Returns
-
 [BigEndianByteIndexerUInt64](Jcd.BitManipulation.BigEndianByteIndexerUInt64.md 'Jcd.BitManipulation.BigEndianByteIndexerUInt64')
 A indexer type.

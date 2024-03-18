@@ -81,7 +81,7 @@ public readonly struct BitMask
    public BitMask(int bits) : this((uint) bits) { }
 
    /// <summary>
-   /// Create a bitmask  
+   /// Constructs a <see cref="BitMask"/> from a <see cref="ushort"/> 
    /// </summary>
    /// <param name="bits">The <see cref="BitMask"/> to use</param>
    public BitMask(ushort bits) : this((ulong) bits) { }

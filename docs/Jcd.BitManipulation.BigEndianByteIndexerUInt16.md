@@ -22,11 +22,11 @@ Implements [IByteIndexer](Jcd.BitManipulation.IByteIndexer.md 'Jcd.BitManipulati
 | [ByteSize](Jcd.BitManipulation.BigEndianByteIndexerUInt16.ByteSize.md 'Jcd.BitManipulation.BigEndianByteIndexerUInt16.ByteSize')             | The number of bytes this type will index                                                                          |
 | [MaxByteIndex](Jcd.BitManipulation.BigEndianByteIndexerUInt16.MaxByteIndex.md 'Jcd.BitManipulation.BigEndianByteIndexerUInt16.MaxByteIndex') | The largest [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') index available. |
 
-| Properties | |
-| :--- | :--- |
-| [Data](Jcd.BitManipulation.BigEndianByteIndexerUInt16.Data.md 'Jcd.BitManipulation.BigEndianByteIndexerUInt16.Data') | The backing store. |
-| [Length](Jcd.BitManipulation.BigEndianByteIndexerUInt16.Length.md 'Jcd.BitManipulation.BigEndianByteIndexerUInt16.Length') | The length of the indexer. |
-| [this[int]](Jcd.BitManipulation.BigEndianByteIndexerUInt16.this[int].md 'Jcd.BitManipulation.BigEndianByteIndexerUInt16.this[int]') | Access bytes from the underlying data. |
+| Properties                                                                                                                          |                                                |
+|:------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------|
+| [Data](Jcd.BitManipulation.BigEndianByteIndexerUInt16.Data.md 'Jcd.BitManipulation.BigEndianByteIndexerUInt16.Data')                | The backing store.                             |
+| [Length](Jcd.BitManipulation.BigEndianByteIndexerUInt16.Length.md 'Jcd.BitManipulation.BigEndianByteIndexerUInt16.Length')          | The number of bytes indexable by this indexer. |
+| [this[int]](Jcd.BitManipulation.BigEndianByteIndexerUInt16.this[int].md 'Jcd.BitManipulation.BigEndianByteIndexerUInt16.this[int]') | Access bytes from the underlying data.         |
 
 | Methods | |
 | :--- | :--- |

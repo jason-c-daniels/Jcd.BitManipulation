@@ -16,6 +16,5 @@ public static byte implicit operator byte(Jcd.BitManipulation.BitMask mask);
 the [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') to convert from.
 
 #### Returns
-
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 the lowest 8 bits of the mask as a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')

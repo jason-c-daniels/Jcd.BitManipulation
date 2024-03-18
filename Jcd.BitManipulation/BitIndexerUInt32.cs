@@ -30,7 +30,7 @@ public struct BitIndexerUInt32 : IBitIndexer
    public uint Bits { get; set; }
 
    /// <summary>
-   /// The length of enumerated bits
+   /// The number of bits indexable by this indexer.
    /// </summary>
    public int Length => BitSize;
 

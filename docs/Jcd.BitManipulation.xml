@@ -290,7 +290,7 @@
         </member>
         <member name="P:Jcd.BitManipulation.BigEndianByteIndexerInt16.Length">
             <summary>
-            The length of the indexer.
+               The number of bytes indexable by this indexer.
             </summary>
         </member>
         <member name="P:Jcd.BitManipulation.BigEndianByteIndexerInt16.Data">
@@ -361,7 +361,7 @@
         </member>
         <member name="P:Jcd.BitManipulation.BigEndianByteIndexerInt32.Length">
             <summary>
-            The length of the indexer.
+               The number of bytes indexable by this indexer.
             </summary>
         </member>
         <member name="P:Jcd.BitManipulation.BigEndianByteIndexerInt32.Data">
@@ -432,7 +432,7 @@
         </member>
         <member name="P:Jcd.BitManipulation.BigEndianByteIndexerInt64.Length">
             <summary>
-            The length of the indexer.
+               The number of bytes indexable by this indexer.
             </summary>
         </member>
         <member name="P:Jcd.BitManipulation.BigEndianByteIndexerInt64.Data">
@@ -503,7 +503,7 @@
         </member>
         <member name="P:Jcd.BitManipulation.BigEndianByteIndexerUInt16.Length">
             <summary>
-            The length of the indexer.
+               The number of bytes indexable by this indexer.
             </summary>
         </member>
         <member name="P:Jcd.BitManipulation.BigEndianByteIndexerUInt16.Data">
@@ -571,7 +571,7 @@
         </member>
         <member name="P:Jcd.BitManipulation.BigEndianByteIndexerUInt32.Length">
             <summary>
-            The length of the indexer.
+               The number of bytes indexable by this indexer.
             </summary>
         </member>
         <member name="P:Jcd.BitManipulation.BigEndianByteIndexerUInt32.Data">
@@ -639,7 +639,7 @@
         </member>
         <member name="P:Jcd.BitManipulation.BigEndianByteIndexerUInt64.Length">
             <summary>
-            The length of the indexer.
+               The number of bytes indexable by this indexer.
             </summary>
         </member>
         <member name="P:Jcd.BitManipulation.BigEndianByteIndexerUInt64.Data">
@@ -699,7 +699,7 @@
         </member>
         <member name="P:Jcd.BitManipulation.BitIndexerByte.Length">
             <summary>
-            The length of enumerated bits
+               The number of bits indexable by this indexer.
             </summary>
         </member>
         <member name="P:Jcd.BitManipulation.BitIndexerByte.Item(System.Int32)">
@@ -770,7 +770,7 @@
         </member>
         <member name="P:Jcd.BitManipulation.BitIndexerInt16.Length">
             <summary>
-            The length of enumerated bits
+               The number of bits indexable by this indexer.
             </summary>
         </member>
         <member name="P:Jcd.BitManipulation.BitIndexerInt16.Item(System.Int32)">
@@ -841,7 +841,7 @@
         </member>
         <member name="P:Jcd.BitManipulation.BitIndexerInt32.Length">
             <summary>
-            The length of enumerated bits
+               The number of bits indexable by this indexer.
             </summary>
         </member>
         <member name="P:Jcd.BitManipulation.BitIndexerInt32.Item(System.Int32)">
@@ -912,7 +912,7 @@
         </member>
         <member name="P:Jcd.BitManipulation.BitIndexerInt64.Length">
             <summary>
-            The length of enumerated bits
+               The number of bits indexable by this indexer.
             </summary>
         </member>
         <member name="P:Jcd.BitManipulation.BitIndexerInt64.Item(System.Int32)">
@@ -979,7 +979,7 @@
         </member>
         <member name="P:Jcd.BitManipulation.BitIndexerSByte.Length">
             <summary>
-            The length of enumerated bits
+               The number of bits indexable by this indexer.
             </summary>
         </member>
         <member name="P:Jcd.BitManipulation.BitIndexerSByte.Item(System.Int32)">
@@ -1050,7 +1050,7 @@
         </member>
         <member name="P:Jcd.BitManipulation.BitIndexerUInt16.Length">
             <summary>
-            The length of enumerated bits
+               The number of bits indexable by this indexer.
             </summary>
         </member>
         <member name="P:Jcd.BitManipulation.BitIndexerUInt16.Item(System.Int32)">
@@ -1121,7 +1121,7 @@
         </member>
         <member name="P:Jcd.BitManipulation.BitIndexerUInt32.Length">
             <summary>
-            The length of enumerated bits
+               The number of bits indexable by this indexer.
             </summary>
         </member>
         <member name="P:Jcd.BitManipulation.BitIndexerUInt32.Item(System.Int32)">
@@ -1192,7 +1192,7 @@
         </member>
         <member name="P:Jcd.BitManipulation.BitIndexerUInt64.Length">
             <summary>
-            The length of enumerated bits
+               The number of bits indexable by this indexer.
             </summary>
         </member>
         <member name="P:Jcd.BitManipulation.BitIndexerUInt64.Item(System.Int32)">
@@ -1306,7 +1306,10 @@
         </member>
         <member name="M:Jcd.BitManipulation.BitMask.#ctor(System.UInt16)">
             <summary>
-            Create a bitmask  
+               Constructs a
+               <see cref="T:Jcd.BitManipulation.BitMask"/>
+               from a
+               <see cref="T:System.UInt16"/>
             </summary>
             <param name="bits">The <see cref="T:Jcd.BitManipulation.BitMask"/> to use</param>
         </member>
@@ -1460,7 +1463,7 @@
         </member>
         <member name="T:Jcd.BitManipulation.BooleanArrayExtensions">
             <summary>
-            A bunch of extension methods to help with converting numbers to and from arrays of bools
+               Extension methods to aid in converting numbers to and from arrays of bools
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.BooleanArrayExtensions.ToBooleanArray(System.Byte)">
@@ -1623,7 +1626,7 @@
         </member>
         <member name="T:Jcd.BitManipulation.ByteArrayExtensions">
             <summary>
-            A bunch of extension methods to help with converting numbers to and from arrays of bools
+               Extension methods to aid in converting numbers to and from arrays of bools
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.ByteArrayExtensions.ToByteArray(System.Byte)">
@@ -2136,7 +2139,7 @@
         </member>
         <member name="T:Jcd.BitManipulation.IByteIndexer">
             <summary>
-            The basic interface for indexing bits within an integer data type.
+               The basic interface for indexing bytes within an integral data type.
             </summary>
         </member>
         <member name="P:Jcd.BitManipulation.IByteIndexer.Length">
@@ -2537,7 +2540,7 @@
         </member>
         <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerUInt64.Length">
             <summary>
-            The length of the indexer.
+               The number of bytes indexable by this indexer.
             </summary>
         </member>
         <member name="P:Jcd.BitManipulation.LittleEndianByteIndexerUInt64.Data">

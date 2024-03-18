@@ -37,7 +37,7 @@ public struct LittleEndianByteIndexerUInt64 : IByteIndexer
    public LittleEndianByteIndexerUInt64(ulong data = 0) { Data = data; }
 
    /// <summary>
-   /// The length of the indexer.
+   /// The number of bytes indexable by this indexer.
    /// </summary>
    public int Length => sizeof(ulong);
 

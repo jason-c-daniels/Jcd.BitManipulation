@@ -3,7 +3,8 @@
 
 ## LittleEndianByteIndexerInt32.implicit operator int(LittleEndianByteIndexerInt32) Operator
 
-Converts the byte indexer to its underlying data type.
+Converts the [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') indexer to its
+underlying data type.
 
 ```csharp
 public static int implicit operator int(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32 buffer);

@@ -3,7 +3,7 @@
 
 ## BitIndexerInt64.Length Property
 
-The length of enumerated bits
+The number of bits indexable by this indexer.
 
 ```csharp
 public int Length { get; }

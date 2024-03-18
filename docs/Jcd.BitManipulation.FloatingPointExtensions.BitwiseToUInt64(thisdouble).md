@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[FloatingPointExtensions](Jcd.BitManipulation.FloatingPointExtensions.md 'Jcd.BitManipulation.FloatingPointExtensions')
 
 ## FloatingPointExtensions.BitwiseToUInt64(this double) Method
@@ -10,7 +9,6 @@ identical [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UIn
 ```csharp
 public static ulong BitwiseToUInt64(this double value);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.FloatingPointExtensions.BitwiseToUInt64(thisdouble).value'></a>

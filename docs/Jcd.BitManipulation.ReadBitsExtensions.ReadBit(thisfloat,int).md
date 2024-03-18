@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ReadBitsExtensions](Jcd.BitManipulation.ReadBitsExtensions.md 'Jcd.BitManipulation.ReadBitsExtensions')
 
 ## ReadBitsExtensions.ReadBit(this float, int) Method
@@ -9,7 +8,6 @@ Read a single bit from the specified offset.
 ```csharp
 public static bool ReadBit(this float value, int offset);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ReadBitsExtensions.ReadBit(thisfloat,int).value'></a>

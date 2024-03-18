@@ -1,6 +1,7 @@
 #region
 
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 // ReSharper disable UnusedMemberInSuper.Global
 
@@ -30,5 +31,6 @@ public interface IByteIndexer : IEnumerable<byte>
    /// <param name="start">starting offset of the bits to retrieve</param>
    /// <param name="length">the number of bits to get</param>
    /// <returns>Array of bits extracted</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    byte[] Slice(int start, int length);
 }

@@ -3,7 +3,7 @@
 
 ## BigEndianByteIndexerUInt64.Length Property
 
-The length of the indexer.
+The number of bytes indexable by this indexer.
 
 ```csharp
 public int Length { get; }

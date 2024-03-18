@@ -17,6 +17,6 @@
 | [LittleEndianByteIndexerUInt32](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt32.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt32') | Provides byte level indexing operations (set, get) on a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32'). Zero is the least significant byte. |
 | [LittleEndianByteIndexerUInt64](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64') | Provides byte level indexing operations (set, get) on a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64'). Zero is the least significant byte. |
 
-| Interfaces | |
-| :--- | :--- |
-| [IByteIndexer](Jcd.BitManipulation.ByteIndexers.IByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.IByteIndexer') | The basic interface for indexing bits within an integer data type. |
+| Interfaces                                                                                                       |                                                                      |
+|:-----------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------|
+| [IByteIndexer](Jcd.BitManipulation.ByteIndexers.IByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.IByteIndexer') | The basic interface for indexing bytes within an integral data type. |

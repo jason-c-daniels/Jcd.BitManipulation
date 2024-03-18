@@ -3,7 +3,7 @@
 
 ## IByteIndexer Interface
 
-The basic interface for indexing bits within an integer data type.
+The basic interface for indexing bytes within an integral data type.
 
 ```csharp
 public interface IByteIndexer :

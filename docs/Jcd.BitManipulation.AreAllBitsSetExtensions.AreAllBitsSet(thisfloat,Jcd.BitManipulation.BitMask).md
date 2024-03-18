@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[AreAllBitsSetExtensions](Jcd.BitManipulation.AreAllBitsSetExtensions.md 'Jcd.BitManipulation.AreAllBitsSetExtensions')
 
 ## AreAllBitsSetExtensions.AreAllBitsSet(this float, BitMask) Method
@@ -10,7 +9,6 @@ a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'Sys
 ```csharp
 public static bool AreAllBitsSet(this float data, Jcd.BitManipulation.BitMask bitmask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.AreAllBitsSetExtensions.AreAllBitsSet(thisfloat,Jcd.BitManipulation.BitMask).data'></a>
@@ -31,5 +29,4 @@ the bits to test.
 True if all of the bits from the bitmask were set.
 
 ### Remarks
-
 NB: Only the lowest 8 bits of the bitmask will be used.

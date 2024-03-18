@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ClearBitsExtensions](Jcd.BitManipulation.ClearBitsExtensions.md 'Jcd.BitManipulation.ClearBitsExtensions')
 
 ## ClearBitsExtensions.ClearBits(this double, int, int) Method
@@ -7,9 +6,8 @@
 Sets all specified bits to "off" and returns the modified value.
 
 ```csharp
-public static float ClearBits(this double value, int offset=0, int size=64);
+public static double ClearBits(this double value, int offset=0, int size=64);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ClearBitsExtensions.ClearBits(thisdouble,int,int).value'></a>
@@ -32,5 +30,5 @@ The number of bits to clear.
 
 #### Returns
 
-[System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
+[System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 The modified value.

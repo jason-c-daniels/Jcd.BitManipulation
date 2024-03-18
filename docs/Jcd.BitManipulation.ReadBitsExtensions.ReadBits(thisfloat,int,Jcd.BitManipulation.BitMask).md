@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ReadBitsExtensions](Jcd.BitManipulation.ReadBitsExtensions.md 'Jcd.BitManipulation.ReadBitsExtensions')
 
 ## ReadBitsExtensions.ReadBits(this float, int, BitMask) Method
@@ -9,7 +8,6 @@ Extract a subset of bits specified by a bitmask and right align the bits by the 
 ```csharp
 public static uint ReadBits(this float value, int offset, Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ReadBitsExtensions.ReadBits(thisfloat,int,Jcd.BitManipulation.BitMask).value'></a>

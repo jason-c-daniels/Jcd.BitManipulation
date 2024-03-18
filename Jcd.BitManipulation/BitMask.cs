@@ -57,54 +57,63 @@ public readonly struct BitMask
    /// Copies an existing <see cref="BitMask"/>
    /// </summary>
    /// <param name="mask">The <see cref="BitMask"/> to copy</param>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public BitMask(BitMask mask) { Bits = mask.Bits; }
 
    /// <summary>
    /// Constructs a <see cref="BitMask"/> from a <see cref="ulong"/>  
    /// </summary>
    /// <param name="bits">The <see cref="BitMask"/> to use</param>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public BitMask(ulong bits) { Bits = bits; }
 
    /// <summary>
    /// Constructs a <see cref="BitMask"/> from a <see cref="long"/>  
    /// </summary>
    /// <param name="bits">The <see cref="BitMask"/> to use</param>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public BitMask(long bits) : this((ulong) bits) { }
 
    /// <summary>
    /// Constructs a <see cref="BitMask"/> from a <see cref="uint"/>  
    /// </summary>
    /// <param name="bits">The <see cref="BitMask"/> to use</param>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public BitMask(uint bits) : this((ulong) bits) { }
 
    /// <summary>
    /// Constructs a <see cref="BitMask"/> from an <see cref="int"/>  
    /// </summary>
    /// <param name="bits">The <see cref="BitMask"/> to use</param>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public BitMask(int bits) : this((uint) bits) { }
 
    /// <summary>
    /// Constructs a <see cref="BitMask"/> from a <see cref="ushort"/> 
    /// </summary>
    /// <param name="bits">The <see cref="BitMask"/> to use</param>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public BitMask(ushort bits) : this((ulong) bits) { }
 
    /// <summary>
    /// Constructs a <see cref="BitMask"/> from a <see cref="short"/>  
    /// </summary>
    /// <param name="bits">The <see cref="BitMask"/> to use</param>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public BitMask(short bits) : this((ushort) bits) { }
 
    /// <summary>
    /// Constructs a <see cref="BitMask"/> from a <see cref="byte"/>  
    /// </summary>
    /// <param name="bits">The <see cref="BitMask"/> to use</param>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public BitMask(byte bits) : this((ulong) bits) { }
 
    /// <summary>
    /// Constructs a <see cref="BitMask"/> from an <see cref="sbyte"/>  
    /// </summary>
    /// <param name="bits">The <see cref="BitMask"/> to use</param>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public BitMask(sbyte bits) : this((byte) bits) { }
 
    #endregion
@@ -113,6 +122,7 @@ public readonly struct BitMask
    /// Formats the <see cref="BitMask"/> as a "0b" prefixed string of zeroes and ones.
    /// </summary>
    /// <returns>the bits of the mask formatted as 0b0101...1111</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public override string ToString()
    {
       const ulong highBit = (ulong) 1 << 63;

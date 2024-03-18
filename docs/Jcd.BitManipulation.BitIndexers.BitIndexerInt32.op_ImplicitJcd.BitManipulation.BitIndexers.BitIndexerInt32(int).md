@@ -3,7 +3,8 @@
 
 ## BitIndexerInt32.implicit operator BitIndexerInt32(int) Operator
 
-Automatically Convert from an int to a BitIndexerInt32
+Automatically Convert from an [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32') to
+a BitIndexerInt32
 
 ```csharp
 public static Jcd.BitManipulation.BitIndexers.BitIndexerInt32 implicit operator BitIndexerInt32(int bits);

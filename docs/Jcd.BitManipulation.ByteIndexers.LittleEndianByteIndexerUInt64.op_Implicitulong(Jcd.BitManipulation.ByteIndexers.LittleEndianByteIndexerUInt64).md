@@ -3,7 +3,8 @@
 
 ## LittleEndianByteIndexerUInt64.implicit operator ulong(LittleEndianByteIndexerUInt64) Operator
 
-Converts the byte indexer to its underlying data type.
+Converts the [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') indexer to its
+underlying data type.
 
 ```csharp
 public static ulong implicit operator ulong(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64 indexer);

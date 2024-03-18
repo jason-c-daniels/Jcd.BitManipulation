@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ReadBytesExtensions](Jcd.BitManipulation.ReadBytesExtensions.md 'Jcd.BitManipulation.ReadBytesExtensions')
 
 ## ReadBytesExtensions.ReadBytes(this float, int, int, Endian) Method
@@ -9,7 +8,6 @@ Reads a set of bytes starting at the specified byte location within the value.
 ```csharp
 public static byte[] ReadBytes(this float value, int offset, int size, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(thisfloat,int,int,Jcd.BitManipulation.Endian).value'></a>

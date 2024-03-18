@@ -118,6 +118,34 @@ public static class ReadBytesExtensions
                 : ((LittleEndianByteIndexerUInt64) value).ReadBytes(offset, size);
    }
 
+   /// <summary>
+   /// Reads a set of bytes starting at the specified byte location within the value.
+   /// </summary>
+   /// <param name="value">The value to be read.</param>
+   /// <param name="offset">The byte location to store the value.</param>
+   /// <param name="size">The byte size of the value.</param>
+   /// <param name="endian">The endianness of the byte indexing within the value.</param>
+   /// <returns>A little endian byte array of the value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static byte[] ReadBytes(this float value, int offset, int size, Endian endian = Endian.Little)
+   {
+      return value.BitwiseToUInt32().ReadBytes(offset, size, endian);
+   }
+
+   /// <summary>
+   /// Reads a set of bytes starting at the specified byte location within the value.
+   /// </summary>
+   /// <param name="value">The value to be read.</param>
+   /// <param name="offset">The byte location to store the value.</param>
+   /// <param name="size">The byte size of the value.</param>
+   /// <param name="endian">The endianness of the byte indexing within the value.</param>
+   /// <returns>A little endian byte array of the value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static byte[] ReadBytes(this double value, int offset, int size, Endian endian = Endian.Little)
+   {
+      return value.BitwiseToUInt64().ReadBytes(offset, size, endian);
+   }
+
    #endregion
 
    #region operations on ByteIndexers
@@ -370,6 +398,32 @@ public static class ReadBytesExtensions
       return endian == Endian.Big
                 ? ((BigEndianByteIndexerInt16) value)[offset]
                 : ((LittleEndianByteIndexerInt16) value)[offset];
+   }
+
+   /// <summary>
+   /// Read a single byte from the value at the specified byte offset.
+   /// </summary>
+   /// <param name="value">The value to be read.</param>
+   /// <param name="offset">the offset of the byte to write</param>
+   /// <param name="endian">The endianness of the byte indexing within the value.</param>
+   /// <returns>The specified byte.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static byte ReadByte(this float value, int offset, Endian endian = Endian.Little)
+   {
+      return value.BitwiseToUInt32().ReadByte(offset, endian);
+   }
+
+   /// <summary>
+   /// Read a single byte from the value at the specified byte offset.
+   /// </summary>
+   /// <param name="value">The value to be read.</param>
+   /// <param name="offset">the offset of the byte to write</param>
+   /// <param name="endian">The endianness of the byte indexing within the value.</param>
+   /// <returns>The specified byte.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static byte ReadByte(this double value, int offset, Endian endian = Endian.Little)
+   {
+      return value.BitwiseToUInt64().ReadByte(offset, endian);
    }
 
    #endregion

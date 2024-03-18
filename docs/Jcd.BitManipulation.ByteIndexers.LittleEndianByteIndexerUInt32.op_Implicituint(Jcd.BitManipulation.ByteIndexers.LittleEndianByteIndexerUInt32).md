@@ -17,5 +17,6 @@ public static uint implicit operator uint(Jcd.BitManipulation.ByteIndexers.Littl
 The buffer to convert.
 
 #### Returns
+
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 The raw data.

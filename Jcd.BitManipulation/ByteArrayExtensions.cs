@@ -121,6 +121,38 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
+   /// Convert a float into an array of bytes
+   /// </summary>
+   /// <param name="data">the long to convert</param>
+   /// <param name="endian">The order in which to store the bytes</param>
+   /// <returns>The value as an array in the requested byte order</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static byte[] ToByteArray(this float data, Endian endian = Endian.Little)
+   {
+      var bits = data.BitwiseToUInt32();
+
+      return endian == Endian.Big
+                ? new BigEndianByteIndexerUInt32 { Data    = bits }[0..^0]
+                : new LittleEndianByteIndexerUInt32 { Data = bits }[0..^0];
+   }
+
+   /// <summary>
+   /// Convert a double into an array of bytes
+   /// </summary>
+   /// <param name="data">the long to convert</param>
+   /// <param name="endian">The order in which to store the bytes</param>
+   /// <returns>The value as an array in the requested byte order</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static byte[] ToByteArray(this double data, Endian endian = Endian.Little)
+   {
+      var bits = data.BitwiseToUInt64();
+
+      return endian == Endian.Big
+                ? new BigEndianByteIndexerUInt64 { Data    = bits }[0..^0]
+                : new LittleEndianByteIndexerUInt64 { Data = bits }[0..^0];
+   }
+
+   /// <summary>
    /// Converts bytes into a byte, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
@@ -352,6 +384,34 @@ public static class ByteArrayExtensions
 
          return result;
       }
+   }
+
+   /// <summary>
+   /// Converts bytes into a double, discarding any excess data.
+   /// </summary>
+   /// <param name="data">the bytes to convert</param>
+   /// <param name="endian">
+   /// A setting indicating the endianness of the source data. The default is Endian.Little.
+   /// </param>
+   /// <returns>The converted ulong</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static double ToDouble(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
+   {
+      return data.ToUInt64(endian).BitwiseToDouble();
+   }
+
+   /// <summary>
+   /// Converts bytes into a double, discarding any excess data.
+   /// </summary>
+   /// <param name="data">the bytes to convert</param>
+   /// <param name="endian">
+   /// A setting indicating the endianness of the source data. The default is Endian.Little.
+   /// </param>
+   /// <returns>The converted ulong</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static float ToSingle(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
+   {
+      return data.ToUInt32(endian).BitwiseToSingle();
    }
 
    /// <summary>
@@ -756,5 +816,33 @@ public static class ByteArrayExtensions
       }
 
       return result;
+   }
+
+   /// <summary>
+   /// Converts bytes into a double, discarding any excess data.
+   /// </summary>
+   /// <param name="data">the bytes to convert</param>
+   /// <param name="endian">
+   /// A setting indicating the endianness of the source data. The default is Endian.Little.
+   /// </param>
+   /// <returns>The converted ulong</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static double ToDouble(this byte[] data, Endian endian = Endian.Little)
+   {
+      return data.ToUInt64(endian).BitwiseToDouble();
+   }
+
+   /// <summary>
+   /// Converts bytes into a double, discarding any excess data.
+   /// </summary>
+   /// <param name="data">the bytes to convert</param>
+   /// <param name="endian">
+   /// A setting indicating the endianness of the source data. The default is Endian.Little.
+   /// </param>
+   /// <returns>The converted ulong</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static float ToSingle(this byte[] data, Endian endian = Endian.Little)
+   {
+      return data.ToUInt32(endian).BitwiseToSingle();
    }
 }

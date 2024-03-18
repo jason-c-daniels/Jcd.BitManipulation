@@ -17,5 +17,6 @@ public static uint implicit operator uint(Jcd.BitManipulation.BitIndexers.BitInd
 the indexer to convert from
 
 #### Returns
+
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 the uint

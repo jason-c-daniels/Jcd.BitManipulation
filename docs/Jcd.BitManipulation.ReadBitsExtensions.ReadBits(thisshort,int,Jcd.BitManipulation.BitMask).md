@@ -30,5 +30,6 @@ the bitmask of which bits to read.
             Zeroed bits in the mask will always extract 0 from the source.
 
 #### Returns
+
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 The right shifted value extracted from the value

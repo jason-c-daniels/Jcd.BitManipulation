@@ -164,6 +164,56 @@ public static class StoreBytesExtensions
                 : ((LittleEndianByteIndexerUInt64) value).StoreBytes(bytes, offset, size);
    }
 
+   /// <summary>
+   /// Stores a set of bytes starting at the specified byte location within the value.
+   /// Byte indexing is LSB, least significant byte, at index/offset zero.
+   /// </summary>
+   /// <param name="value">The value to be modified.</param>
+   /// <param name="bytes">The value to be stored at the byte location.</param>
+   /// <param name="offset">The byte location to store the value.</param>
+   /// <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
+   /// <param name="endian">The endianness of the byte indexing within the value.</param>
+   /// <returns>The modified value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static float StoreBytes(
+      this float         value
+    , ReadOnlySpan<byte> bytes
+    , int                offset
+    , int                size   = -1
+    , Endian             endian = Endian.Little
+   )
+   {
+      return value
+            .BitwiseToUInt32()
+            .StoreBytes(bytes, offset, size, endian)
+            .BitwiseToSingle();
+   }
+
+   /// <summary>
+   /// Stores a set of bytes starting at the specified byte location within the value.
+   /// Byte indexing is LSB, least significant byte, at index/offset zero.
+   /// </summary>
+   /// <param name="value">The value to be modified.</param>
+   /// <param name="bytes">The value to be stored at the byte location.</param>
+   /// <param name="offset">The byte location to store the value.</param>
+   /// <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
+   /// <param name="endian">The endianness of the byte indexing within the value.</param>
+   /// <returns>The modified value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static double StoreBytes(
+      this double        value
+    , ReadOnlySpan<byte> bytes
+    , int                offset
+    , int                size   = -1
+    , Endian             endian = Endian.Little
+   )
+   {
+      return value
+            .BitwiseToUInt64()
+            .StoreBytes(bytes, offset, size, endian)
+            .BitwiseToDouble();
+   }
+
    #endregion
 
    #region StoreBytes to IByteIndexer types from ReadOnlySpan of byte
@@ -552,7 +602,7 @@ public static class StoreBytesExtensions
 
    #endregion
 
-   #region StoreByte to integral data type from ReadOnlySpan of byte
+   #region StoreByte to integral data type
 
    /// <summary>
    /// Store a single byte to the value at the specified byte offset.
@@ -635,9 +685,37 @@ public static class StoreBytesExtensions
       return value.StoreBits(@byte, offset * 8, 8);
    }
 
+   /// <summary>
+   /// Store a single byte to the value at the specified byte offset.
+   /// Byte indexing is LSB, least significant byte, at index/offset zero.
+   /// </summary>
+   /// <param name="value">The value to be modified.</param>
+   /// <param name="byte">The byte value to set</param>
+   /// <param name="offset">the offset of the byte to write</param>
+   /// <returns>The modified value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static float StoreByte(this float value, byte @byte, int offset)
+   {
+      return value.StoreBits(@byte, offset * 8, 8);
+   }
+
+   /// <summary>
+   /// Store a single byte to the value at the specified byte offset.
+   /// Byte indexing is LSB, least significant byte, at index/offset zero.
+   /// </summary>
+   /// <param name="value">The value to be modified.</param>
+   /// <param name="byte">The byte value to set</param>
+   /// <param name="offset">the offset of the byte to write</param>
+   /// <returns>The modified value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static double StoreByte(this double value, byte @byte, int offset)
+   {
+      return value.StoreBits(@byte, offset * 8, 8);
+   }
+
    #endregion
 
-   #region StoreByte to IByteIndexer types from ReadOnlySpan of byte
+   #region StoreByte to IByteIndexer
 
    /// <summary>
    /// Store a single byte to the value at the specified byte offset.

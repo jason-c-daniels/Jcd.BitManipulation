@@ -119,6 +119,32 @@ public static class ReadBitsExtensions
       return value.ReadBits(offset, BitMask.FromRange(offset, size));
    }
 
+   /// <summary>
+   /// For a given value return the specified bits from within it, right shifted pos bits.
+   /// </summary>
+   /// <param name="value">the source of bits to read</param>
+   /// <param name="offset">the bit offset to read from</param>
+   /// <param name="size">The total number of bits to extract</param>
+   /// <returns>The numeric value stored at that bit location</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static uint ReadBits(this float value, int offset, int size)
+   {
+      return value.ReadBits(offset, BitMask.FromRange(offset, size));
+   }
+
+   /// <summary>
+   /// For a given value return the specified bits from within it, right shifted pos bits.
+   /// </summary>
+   /// <param name="value">the source of bits to read</param>
+   /// <param name="offset">the bit offset to read from</param>
+   /// <param name="size">The total number of bits to extract</param>
+   /// <returns>The numeric value stored at that bit location</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static ulong ReadBits(this double value, int offset, int size)
+   {
+      return value.ReadBits(offset, BitMask.FromRange(offset, size));
+   }
+
    #endregion
 
    #region BitMask operations
@@ -234,6 +260,36 @@ public static class ReadBitsExtensions
       return (sbyte) (((byte) value & mask) >> offset);
    }
 
+   /// <summary>
+   /// Extract a subset of bits specified by a bitmask and right align the bits by the offset. 
+   /// </summary>
+   /// <param name="value">the source of bits to read</param>
+   /// <param name="offset">the bit offset to read from</param>
+   /// <param name="mask">the bitmask of which bits to read.
+   /// Zeroed bits in the mask will always extract 0 from the source.
+   /// </param>
+   /// <returns>The right shifted value extracted from the value</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static uint ReadBits(this float value, int offset, BitMask mask)
+   {
+      return value.BitwiseToUInt32().ReadBits(offset, mask);
+   }
+
+   /// <summary>
+   /// Extract a subset of bits specified by a bitmask and right align the bits by the offset. 
+   /// </summary>
+   /// <param name="value">the source of bits to read</param>
+   /// <param name="offset">the bit offset to read from</param>
+   /// <param name="mask">the bitmask of which bits to read.
+   /// Zeroed bits in the mask will always extract 0 from the source.
+   /// </param>
+   /// <returns>The right shifted value extracted from the value</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static ulong ReadBits(this double value, int offset, BitMask mask)
+   {
+      return value.BitwiseToUInt64().ReadBits(offset, mask);
+   }
+
    #endregion
 
    #region single bit operations
@@ -309,6 +365,24 @@ public static class ReadBitsExtensions
    /// <returns>the bit (a bool) at the specified offset </returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool ReadBit(this sbyte value, int offset) { return value.ReadBits(offset, 1) > 0; }
+
+   /// <summary>
+   /// Read a single bit from the specified offset.
+   /// </summary>
+   /// <param name="value">the bits to read from</param>
+   /// <param name="offset">the offset of the bit to read</param>
+   /// <returns>the bit (a bool) at the specified offset </returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static bool ReadBit(this float value, int offset) { return value.ReadBits(offset, 1) > 0; }
+
+   /// <summary>
+   /// Read a single bit from the specified offset.
+   /// </summary>
+   /// <param name="value">the bits to read from</param>
+   /// <param name="offset">the offset of the bit to read</param>
+   /// <returns>the bit (a bool) at the specified offset </returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static bool ReadBit(this double value, int offset) { return value.ReadBits(offset, 1) > 0; }
 
    #endregion
 }

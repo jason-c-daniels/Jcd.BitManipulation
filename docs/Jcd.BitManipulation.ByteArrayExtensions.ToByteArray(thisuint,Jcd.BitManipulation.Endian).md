@@ -13,7 +13,7 @@ public static byte[] ToByteArray(this uint data, Jcd.BitManipulation.Endian endi
 
 `data` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
-the uint to convert
+the [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32') to convert
 
 <a name='Jcd.BitManipulation.ByteArrayExtensions.ToByteArray(thisuint,Jcd.BitManipulation.Endian).endian'></a>
 

@@ -2,7 +2,8 @@
 
 ## BitIndexerUInt64.implicit operator ulong(BitIndexerUInt64) Operator
 
-Automatically convert from a BitIndexerUInt64 to a ulong
+Automatically convert from a BitIndexerUInt64 to
+a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
 ```csharp
 public static ulong implicit operator ulong(Jcd.BitManipulation.BitIndexerUInt64 indexer);
@@ -18,4 +19,4 @@ the indexer to convert from
 #### Returns
 
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
-the ulong
+the underlying value

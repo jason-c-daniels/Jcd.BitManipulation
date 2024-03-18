@@ -2,8 +2,7 @@
 
 ## AreAnyBitsSetExtensions.AreAnyBitsSet(this uint, BitMask) Method
 
-Tests if any bits from the bitmask are set on
-a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32').
+Tests if any bits from the bitmask are set on a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32').
 
 ```csharp
 public static bool AreAnyBitsSet(this uint data, Jcd.BitManipulation.BitMask bitmask);

@@ -24,7 +24,7 @@ public struct BigEndianByteIndexerUInt32 : IByteIndexer
    public const int ByteSize = sizeof(uint);
 
    /// <summary>
-   /// The largest byte index available.
+   /// The largest <see cref="byte"/> index available.
    /// </summary>
    public const int MaxByteIndex = ByteSize - 1;
 
@@ -35,7 +35,7 @@ public struct BigEndianByteIndexerUInt32 : IByteIndexer
    public BigEndianByteIndexerUInt32(uint data = 0) { Data = data; }
 
    /// <summary>
-   /// The length of the indexer.
+   /// The number of bytes indexable by this indexer.
    /// </summary>
    public int Length => sizeof(uint);
 
@@ -47,7 +47,7 @@ public struct BigEndianByteIndexerUInt32 : IByteIndexer
    /// <summary>
    /// Access bytes from the underlying data.
    /// </summary>
-   /// <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying storage.</param>
+   /// <param name="index">The index of the byte to get or set.</param>
    /// <exception cref="ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
    public byte this[int index]
    {

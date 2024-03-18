@@ -9,7 +9,7 @@ using System.Collections.Generic;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// The basic interface for indexing bits within an integer data type.
+/// The basic interface for indexing bytes within an integral data type.
 /// </summary>
 public interface IByteIndexer : IEnumerable<byte>
 {

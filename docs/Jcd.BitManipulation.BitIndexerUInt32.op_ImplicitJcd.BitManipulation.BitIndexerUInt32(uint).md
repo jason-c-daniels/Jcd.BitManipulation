@@ -2,7 +2,8 @@
 
 ## BitIndexerUInt32.implicit operator BitIndexerUInt32(uint) Operator
 
-Automatically Convert from a uint to a BitIndexerUInt32
+Automatically Convert from a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
+to a BitIndexerUInt32
 
 ```csharp
 public static Jcd.BitManipulation.BitIndexerUInt32 implicit operator BitIndexerUInt32(uint bits);

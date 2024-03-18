@@ -2,8 +2,7 @@
 
 ## BitMask.implicit operator byte(BitMask) Operator
 
-Automatically convert to [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') from
-a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+Automatically convert to [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') from a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
 ```csharp
 public static byte implicit operator byte(Jcd.BitManipulation.BitMask mask);
@@ -19,4 +18,4 @@ the [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') to c
 #### Returns
 
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
-the lowest 8 bits of the mask as a byte
+the lowest 8 bits of the mask as a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')

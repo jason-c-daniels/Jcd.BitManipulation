@@ -2,7 +2,8 @@
 
 ## BitIndexerUInt16.implicit operator BitIndexerUInt16(ushort) Operator
 
-Automatically Convert from a ushort to a BitIndexerUInt16
+Automatically Convert from a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
+to a BitIndexerUInt16
 
 ```csharp
 public static Jcd.BitManipulation.BitIndexerUInt16 implicit operator BitIndexerUInt16(ushort bits);

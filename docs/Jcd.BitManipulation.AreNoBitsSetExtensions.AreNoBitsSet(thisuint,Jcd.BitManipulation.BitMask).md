@@ -2,8 +2,7 @@
 
 ## AreNoBitsSetExtensions.AreNoBitsSet(this uint, BitMask) Method
 
-Tests if none of the bits from the bitmask are set on
-a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32').
+Tests if none of the bits from the bitmask are set on a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32').
 
 ```csharp
 public static bool AreNoBitsSet(this uint data, Jcd.BitManipulation.BitMask bitmask);

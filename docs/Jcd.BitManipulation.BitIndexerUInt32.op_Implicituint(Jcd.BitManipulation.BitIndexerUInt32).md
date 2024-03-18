@@ -2,7 +2,8 @@
 
 ## BitIndexerUInt32.implicit operator uint(BitIndexerUInt32) Operator
 
-Automatically convert from a BitIndexerUInt32 to a uint
+Automatically convert from a BitIndexerUInt32 to
+a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
 ```csharp
 public static uint implicit operator uint(Jcd.BitManipulation.BitIndexerUInt32 indexer);
@@ -18,4 +19,4 @@ the indexer to convert from
 #### Returns
 
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
-the uint
+the [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')

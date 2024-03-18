@@ -2,7 +2,7 @@
 
 ## LittleEndianByteIndexerInt32.MaxByteIndex Field
 
-The largest byte index available.
+The largest [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') index available.
 
 ```csharp
 public const int MaxByteIndex = 3;

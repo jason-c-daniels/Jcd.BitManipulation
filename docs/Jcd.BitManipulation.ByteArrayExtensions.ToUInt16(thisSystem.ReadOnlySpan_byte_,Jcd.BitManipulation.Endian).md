@@ -2,7 +2,8 @@
 
 ## ByteArrayExtensions.ToUInt16(this ReadOnlySpan<byte>, Endian) Method
 
-Converts bytes into a ushort, discarding any excess data.
+Converts bytes into a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16'),
+discarding any excess data.
 
 ```csharp
 public static ushort ToUInt16(this System.ReadOnlySpan<byte> data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
@@ -19,9 +20,9 @@ the bytes to convert
 
 `endian` [Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian')
 
-A setting indicating the endianness of the source data. The default is Endian.Little.
+The endian for the bytes.
 
 #### Returns
 
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
-The converted ushort
+The converted [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')

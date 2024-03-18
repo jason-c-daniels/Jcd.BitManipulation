@@ -2,7 +2,8 @@
 
 ## ByteArrayExtensions.ToUInt64(this ReadOnlySpan<byte>, Endian) Method
 
-Converts bytes into a ulong, discarding any excess data.
+Converts bytes into a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64'),
+discarding any excess data.
 
 ```csharp
 public static ulong ToUInt64(this System.ReadOnlySpan<byte> data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
@@ -19,9 +20,9 @@ the bytes to convert
 
 `endian` [Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian')
 
-A setting indicating the endianness of the source data. The default is Endian.Little.
+The endian for the bytes.
 
 #### Returns
 
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
-The converted ulong
+The converted [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')

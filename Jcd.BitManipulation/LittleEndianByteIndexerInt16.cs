@@ -25,7 +25,7 @@ public struct LittleEndianByteIndexerInt16 : IByteIndexer
    public const int ByteSize = sizeof(short);
 
    /// <summary>
-   /// The largest byte index available.
+   /// The largest <see cref="byte"/> index available.
    /// </summary>
    public const int MaxByteIndex = ByteSize - 1;
 
@@ -48,7 +48,7 @@ public struct LittleEndianByteIndexerInt16 : IByteIndexer
    /// <summary>
    /// Access bytes from the underlying data.
    /// </summary>
-   /// <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying storage.</param>
+   /// <param name="index">The index of the <see cref="byte"/> to get or set.</param>
    /// <exception cref="ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
    public byte this[int index]
    {
@@ -83,7 +83,7 @@ public struct LittleEndianByteIndexerInt16 : IByteIndexer
    }
 
    /// <summary>
-   /// Converts the byte indexer to its underlying data type.
+   /// Converts the <see cref="byte"/> indexer to its underlying data type.
    /// </summary>
    /// <param name="buffer">The buffer to convert.</param>
    /// <returns>The raw data.</returns>

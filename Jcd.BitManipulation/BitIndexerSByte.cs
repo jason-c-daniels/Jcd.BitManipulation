@@ -15,7 +15,7 @@ using System.Text;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// Provides enumeration and indexed access to the bits on a stored sbyte. 
+/// Provides enumeration and indexed access to the bits on a stored <see cref="sbyte"/>. 
 /// </summary>
 public struct BitIndexerSByte : IBitIndexer
 {
@@ -30,7 +30,7 @@ public struct BitIndexerSByte : IBitIndexer
    public sbyte Bits { get; set; }
 
    /// <summary>
-   /// The length of enumerated bits
+   /// The number of bits indexable by this indexer.
    /// </summary>
    public int Length => BitSize;
 
@@ -45,17 +45,17 @@ public struct BitIndexerSByte : IBitIndexer
    }
 
    /// <summary>
-   /// Automatically Convert from an sbyte to a BitIndexerSByte
+   /// Automatically Convert from an <see cref="sbyte"/> to a BitIndexerSByte
    /// </summary>
    /// <param name="bits">the initial value for the indexer's backing store</param>
    /// <returns>A new BitIndexerSByte</returns>
    public static implicit operator BitIndexerSByte(sbyte bits) { return new BitIndexerSByte { Bits = bits }; }
 
    /// <summary>
-   /// Automatically convert from a BitIndexerSByte to an sbyte
+   /// Automatically convert from a BitIndexerSByte to an <see cref="sbyte"/>
    /// </summary>
    /// <param name="indexer">the indexer to convert from</param>
-   /// <returns>the sbyte</returns>
+   /// <returns>the <see cref="sbyte"/></returns>
    public static implicit operator sbyte(BitIndexerSByte indexer) { return indexer.Bits; }
 
    /// <summary>

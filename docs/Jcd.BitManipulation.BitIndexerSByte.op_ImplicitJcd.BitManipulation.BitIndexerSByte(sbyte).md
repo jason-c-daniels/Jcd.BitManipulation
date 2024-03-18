@@ -2,7 +2,8 @@
 
 ## BitIndexerSByte.implicit operator BitIndexerSByte(sbyte) Operator
 
-Automatically Convert from an sbyte to a BitIndexerSByte
+Automatically Convert from an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte') to
+a BitIndexerSByte
 
 ```csharp
 public static Jcd.BitManipulation.BitIndexerSByte implicit operator BitIndexerSByte(sbyte bits);

@@ -619,8 +619,8 @@ internal static class Program
 
       var mutatedData = finalData
                        .StoreByte(0b10111111, 0, Endian.Big)
-                       .StoreByte(0b01010101, 0, Endian.Little); // lower byte is now 0b01010101
-      ;                                                          // mutatedData is now 0b1011111101010101
+                       .StoreByte(0b01010101, 0, Endian.Little) // lower byte is now 0b01010101
+         ;                                                      // mutatedData is now 0b1011111101010101
 
       var beBa = mutatedData.ToByteArray(Endian.Big); // beBa=[0b10111111, 0b01010101]
 

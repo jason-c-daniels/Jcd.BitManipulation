@@ -35,5 +35,6 @@ the destination offset of where to store the bits
 the mask of which bits to store
 
 #### Returns
+
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 The modified value.

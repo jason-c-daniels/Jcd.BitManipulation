@@ -2,7 +2,8 @@
 
 ## ByteArrayExtensions.ToByteArray(this ulong, Endian) Method
 
-Convert a ulong into an array of bytes
+Convert a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') into an array of
+bytes
 
 ```csharp
 public static byte[] ToByteArray(this ulong data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
@@ -13,7 +14,7 @@ public static byte[] ToByteArray(this ulong data, Jcd.BitManipulation.Endian end
 
 `data` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
-the ulong to convert
+the [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') to convert
 
 <a name='Jcd.BitManipulation.ByteArrayExtensions.ToByteArray(thisulong,Jcd.BitManipulation.Endian).endian'></a>
 
@@ -22,5 +23,6 @@ the ulong to convert
 The order in which to store the bytes
 
 #### Returns
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 The value as an array in the requested byte order

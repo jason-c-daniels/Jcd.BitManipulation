@@ -29,5 +29,6 @@ the bitmask of which bits to read.
             Zeroed bits in the mask will always extract 0 from the source.
 
 #### Returns
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 The right shifted value extracted from the value

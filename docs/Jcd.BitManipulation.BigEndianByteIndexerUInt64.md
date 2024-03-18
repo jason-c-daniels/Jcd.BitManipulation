@@ -17,10 +17,10 @@ Implements [IByteIndexer](Jcd.BitManipulation.IByteIndexer.md 'Jcd.BitManipulati
 | :--- | :--- |
 | [BigEndianByteIndexerUInt64(ulong)](Jcd.BitManipulation.BigEndianByteIndexerUInt64.BigEndianByteIndexerUInt64(ulong).md 'Jcd.BitManipulation.BigEndianByteIndexerUInt64.BigEndianByteIndexerUInt64(ulong)') | Constructs a [BigEndianByteIndexerUInt64](Jcd.BitManipulation.BigEndianByteIndexerUInt64.md 'Jcd.BitManipulation.BigEndianByteIndexerUInt64') from a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64'). |
 
-| Fields | |
-| :--- | :--- |
-| [ByteSize](Jcd.BitManipulation.BigEndianByteIndexerUInt64.ByteSize.md 'Jcd.BitManipulation.BigEndianByteIndexerUInt64.ByteSize') | The number of bytes this type will index |
-| [MaxByteIndex](Jcd.BitManipulation.BigEndianByteIndexerUInt64.MaxByteIndex.md 'Jcd.BitManipulation.BigEndianByteIndexerUInt64.MaxByteIndex') | The largest byte index available. |
+| Fields                                                                                                                                       |                                                                                                                   |
+|:---------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------|
+| [ByteSize](Jcd.BitManipulation.BigEndianByteIndexerUInt64.ByteSize.md 'Jcd.BitManipulation.BigEndianByteIndexerUInt64.ByteSize')             | The number of bytes this type will index                                                                          |
+| [MaxByteIndex](Jcd.BitManipulation.BigEndianByteIndexerUInt64.MaxByteIndex.md 'Jcd.BitManipulation.BigEndianByteIndexerUInt64.MaxByteIndex') | The largest [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') index available. |
 
 | Properties | |
 | :--- | :--- |

@@ -17,10 +17,10 @@ Implements [IByteIndexer](Jcd.BitManipulation.IByteIndexer.md 'Jcd.BitManipulati
 | :--- | :--- |
 | [BigEndianByteIndexerInt16(short)](Jcd.BitManipulation.BigEndianByteIndexerInt16.BigEndianByteIndexerInt16(short).md 'Jcd.BitManipulation.BigEndianByteIndexerInt16.BigEndianByteIndexerInt16(short)') | Constructs a [BigEndianByteIndexerInt16](Jcd.BitManipulation.BigEndianByteIndexerInt16.md 'Jcd.BitManipulation.BigEndianByteIndexerInt16') from an [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16'). |
 
-| Fields | |
-| :--- | :--- |
-| [ByteSize](Jcd.BitManipulation.BigEndianByteIndexerInt16.ByteSize.md 'Jcd.BitManipulation.BigEndianByteIndexerInt16.ByteSize') | The number of bytes this type will index |
-| [MaxByteIndex](Jcd.BitManipulation.BigEndianByteIndexerInt16.MaxByteIndex.md 'Jcd.BitManipulation.BigEndianByteIndexerInt16.MaxByteIndex') | The largest byte index available. |
+| Fields                                                                                                                                     |                                                                                                                   |
+|:-------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------|
+| [ByteSize](Jcd.BitManipulation.BigEndianByteIndexerInt16.ByteSize.md 'Jcd.BitManipulation.BigEndianByteIndexerInt16.ByteSize')             | The number of bytes this type will index                                                                          |
+| [MaxByteIndex](Jcd.BitManipulation.BigEndianByteIndexerInt16.MaxByteIndex.md 'Jcd.BitManipulation.BigEndianByteIndexerInt16.MaxByteIndex') | The largest [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') index available. |
 
 | Properties | |
 | :--- | :--- |

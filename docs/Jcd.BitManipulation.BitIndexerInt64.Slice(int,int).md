@@ -20,5 +20,6 @@ public bool[] Slice(int start, int length);
 Implements [Slice(int, int)](Jcd.BitManipulation.IBitIndexer.Slice(int,int).md 'Jcd.BitManipulation.IBitIndexer.Slice(int, int)')
 
 #### Returns
+
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 The enumerator

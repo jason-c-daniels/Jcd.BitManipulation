@@ -13,7 +13,7 @@ public static byte[] ToByteArray(this uint data, Jcd.BitManipulation.Endian endi
 
 `data` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
-the uint to convert
+the [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32') to convert
 
 <a name='Jcd.BitManipulation.ByteArrayExtensions.ToByteArray(thisuint,Jcd.BitManipulation.Endian).endian'></a>
 
@@ -22,5 +22,6 @@ the uint to convert
 The order in which to store the bytes
 
 #### Returns
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 The value as an array in the requested byte order

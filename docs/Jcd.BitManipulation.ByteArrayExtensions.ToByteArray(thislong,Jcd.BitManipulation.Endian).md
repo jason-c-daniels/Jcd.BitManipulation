@@ -2,7 +2,7 @@
 
 ## ByteArrayExtensions.ToByteArray(this long, Endian) Method
 
-Convert a long into an array of bytes
+Convert a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64') into an array of bytes
 
 ```csharp
 public static byte[] ToByteArray(this long data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
@@ -13,7 +13,7 @@ public static byte[] ToByteArray(this long data, Jcd.BitManipulation.Endian endi
 
 `data` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 
-the long to convert
+the [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64') to convert
 
 <a name='Jcd.BitManipulation.ByteArrayExtensions.ToByteArray(thislong,Jcd.BitManipulation.Endian).endian'></a>
 
@@ -22,5 +22,6 @@ the long to convert
 The order in which to store the bytes
 
 #### Returns
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 The value as an array in the requested byte order

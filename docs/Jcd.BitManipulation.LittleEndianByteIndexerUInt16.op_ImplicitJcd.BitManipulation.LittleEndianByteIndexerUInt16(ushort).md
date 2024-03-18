@@ -16,5 +16,6 @@ public static Jcd.BitManipulation.LittleEndianByteIndexerUInt16 implicit operato
 The underlying data type.
 
 #### Returns
+
 [LittleEndianByteIndexerUInt16](Jcd.BitManipulation.LittleEndianByteIndexerUInt16.md 'Jcd.BitManipulation.LittleEndianByteIndexerUInt16')
 A buffer type.

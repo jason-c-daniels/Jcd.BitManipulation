@@ -17,10 +17,10 @@ Implements [IByteIndexer](Jcd.BitManipulation.IByteIndexer.md 'Jcd.BitManipulati
 | :--- | :--- |
 | [LittleEndianByteIndexerInt64(long)](Jcd.BitManipulation.LittleEndianByteIndexerInt64.LittleEndianByteIndexerInt64(long).md 'Jcd.BitManipulation.LittleEndianByteIndexerInt64.LittleEndianByteIndexerInt64(long)') | Constructs a [LittleEndianByteIndexerInt64](Jcd.BitManipulation.LittleEndianByteIndexerInt64.md 'Jcd.BitManipulation.LittleEndianByteIndexerInt64') from an [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64'). |
 
-| Fields | |
-| :--- | :--- |
-| [ByteSize](Jcd.BitManipulation.LittleEndianByteIndexerInt64.ByteSize.md 'Jcd.BitManipulation.LittleEndianByteIndexerInt64.ByteSize') | The number of bytes this type will index |
-| [MaxByteIndex](Jcd.BitManipulation.LittleEndianByteIndexerInt64.MaxByteIndex.md 'Jcd.BitManipulation.LittleEndianByteIndexerInt64.MaxByteIndex') | The largest byte index available. |
+| Fields                                                                                                                                           |                                                                                                                   |
+|:-------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------|
+| [ByteSize](Jcd.BitManipulation.LittleEndianByteIndexerInt64.ByteSize.md 'Jcd.BitManipulation.LittleEndianByteIndexerInt64.ByteSize')             | The number of bytes this type will index                                                                          |
+| [MaxByteIndex](Jcd.BitManipulation.LittleEndianByteIndexerInt64.MaxByteIndex.md 'Jcd.BitManipulation.LittleEndianByteIndexerInt64.MaxByteIndex') | The largest [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') index available. |
 
 | Properties | |
 | :--- | :--- |

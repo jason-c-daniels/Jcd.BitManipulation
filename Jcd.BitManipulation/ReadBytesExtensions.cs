@@ -7,20 +7,19 @@ using System.Runtime.CompilerServices;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// Extension methods that aid in storing values into byte offsets within another integer data type.
-/// The offsets are Least Significant Byte. Index 0 is the 8 least significant bits....etc.
+/// Extension methods that aid in reading bytes from integer data types.
 /// </summary>
 public static class ReadBytesExtensions
 {
    #region operations on ranges of bytes.
 
    /// <summary>
-   /// Reads a set of bytes starting at the specified byte location within the value.
+   /// Reads a set of bytes starting at the specified offset within the value.
    /// </summary>
    /// <param name="value">The value to be read.</param>
-   /// <param name="offset">The byte location to store the value.</param>
-   /// <param name="size">The byte size of the value.</param>
-   /// <param name="endian">The endianness of the byte indexing within the value.</param>
+   /// <param name="offset">The offset to read the bytes from.</param>
+   /// <param name="size">The size of the value in bytes.</param>
+   /// <param name="endian">The endianness of the indexing within the value.</param>
    /// <returns>A little endian byte array of the value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ReadBytes(this short value, int offset, int size, Endian endian = Endian.Little)
@@ -34,10 +33,10 @@ public static class ReadBytesExtensions
    /// Reads a set of bytes starting at the specified byte location within the value.
    /// </summary>
    /// <param name="value">The value to be read.</param>
-   /// <param name="offset">The byte location to store the value.</param>
+   /// <param name="offset">The offset to read the bytes from.</param>
    /// <param name="size">The byte size of the value.</param>
-   /// <param name="endian">The endianness of the byte indexing within the value.</param>
-   /// <returns>A little endian byte array of the value.</returns>
+   /// <param name="endian">The endianness of the indexing.</param>
+   /// <returns>A byte array of the value in the specified endian.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ReadBytes(this int value, int offset, int size, Endian endian = Endian.Little)
    {
@@ -50,7 +49,7 @@ public static class ReadBytesExtensions
    /// Reads a set of bytes starting at the specified byte location within the value.
    /// </summary>
    /// <param name="value">The value to be read.</param>
-   /// <param name="offset">The byte location to store the value.</param>
+   /// <param name="offset">The offset to read the bytes from.</param>
    /// <param name="size">The byte size of the value.</param>
    /// <param name="endian">The endianness of the byte indexing within the value.</param>
    /// <returns>A little endian byte array of the value.</returns>
@@ -275,7 +274,7 @@ public static class ReadBytesExtensions
       if (endian == Endian.Little)
          return (byte) value.ReadBits(offset << 3, 8);
 
-      var beOffset = sizeof(uint) - offset - 1;
+      var beOffset = sizeof(ulong) - offset - 1;
 
       return (byte) value.ReadBits(beOffset << 3, 8);
    }
@@ -293,7 +292,7 @@ public static class ReadBytesExtensions
       if (endian == Endian.Little)
          return (byte) value.ReadBits(offset << 3, 8);
 
-      var beOffset = sizeof(uint) - offset - 1;
+      var beOffset = sizeof(long) - offset - 1;
 
       return (byte) value.ReadBits(beOffset << 3, 8);           
    }

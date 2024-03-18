@@ -2,7 +2,8 @@
 
 ## BitIndexerInt16 Struct
 
-Provides enumeration and indexed access to the bits on a stored short.
+Provides enumeration and indexed access to the bits on a
+stored [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16').
 
 ```csharp
 public struct BitIndexerInt16 :
@@ -29,10 +30,10 @@ Implements [IBitIndexer](Jcd.BitManipulation.IBitIndexer.md 'Jcd.BitManipulation
 | [Slice(int, int)](Jcd.BitManipulation.BitIndexerInt16.Slice(int,int).md 'Jcd.BitManipulation.BitIndexerInt16.Slice(int, int)') | Get a subset of bits given a starting offset and length. |
 | [ToString()](Jcd.BitManipulation.BitIndexerInt16.ToString().md 'Jcd.BitManipulation.BitIndexerInt16.ToString()') | Format as a bit representation |
 
-| Operators | |
-| :--- | :--- |
-| [implicit operator BitIndexerInt16(short)](Jcd.BitManipulation.BitIndexerInt16.op_ImplicitJcd.BitManipulation.BitIndexerInt16(short).md 'Jcd.BitManipulation.BitIndexerInt16.op_Implicit Jcd.BitManipulation.BitIndexerInt16(short)') | Automatically Convert from a short to a BitIndexerInt16 |
-| [implicit operator short(BitIndexerInt16)](Jcd.BitManipulation.BitIndexerInt16.op_Implicitshort(Jcd.BitManipulation.BitIndexerInt16).md 'Jcd.BitManipulation.BitIndexerInt16.op_Implicit short(Jcd.BitManipulation.BitIndexerInt16)') | Automatically convert from a BitIndexerInt16 to a short |
+| Operators                                                                                                                                                                                                                             |                                                                                                                                           |
+|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------|
+| [implicit operator BitIndexerInt16(short)](Jcd.BitManipulation.BitIndexerInt16.op_ImplicitJcd.BitManipulation.BitIndexerInt16(short).md 'Jcd.BitManipulation.BitIndexerInt16.op_Implicit Jcd.BitManipulation.BitIndexerInt16(short)') | Automatically Convert from a [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16') to a BitIndexerInt16 |
+| [implicit operator short(BitIndexerInt16)](Jcd.BitManipulation.BitIndexerInt16.op_Implicitshort(Jcd.BitManipulation.BitIndexerInt16).md 'Jcd.BitManipulation.BitIndexerInt16.op_Implicit short(Jcd.BitManipulation.BitIndexerInt16)') | Automatically convert from a BitIndexerInt16 to a [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16') |
 
 | Explicit Interface Implementations | |
 | :--- | :--- |

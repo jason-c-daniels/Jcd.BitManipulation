@@ -2,7 +2,8 @@
 
 ## BitIndexerUInt64 Struct
 
-Provides enumeration and indexed access to the bits on a stored ulong.
+Provides enumeration and indexed access to the bits on a
+stored [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64').
 
 ```csharp
 public struct BitIndexerUInt64 :
@@ -29,10 +30,10 @@ Implements [IBitIndexer](Jcd.BitManipulation.IBitIndexer.md 'Jcd.BitManipulation
 | [Slice(int, int)](Jcd.BitManipulation.BitIndexerUInt64.Slice(int,int).md 'Jcd.BitManipulation.BitIndexerUInt64.Slice(int, int)') | Get a subset of bits given a starting offset and length. |
 | [ToString()](Jcd.BitManipulation.BitIndexerUInt64.ToString().md 'Jcd.BitManipulation.BitIndexerUInt64.ToString()') | Format as a bit representation |
 
-| Operators | |
-| :--- | :--- |
-| [implicit operator BitIndexerUInt64(ulong)](Jcd.BitManipulation.BitIndexerUInt64.op_ImplicitJcd.BitManipulation.BitIndexerUInt64(ulong).md 'Jcd.BitManipulation.BitIndexerUInt64.op_Implicit Jcd.BitManipulation.BitIndexerUInt64(ulong)') | Automatically Convert from a ulong to a BitIndexerUInt64 |
-| [implicit operator ulong(BitIndexerUInt64)](Jcd.BitManipulation.BitIndexerUInt64.op_Implicitulong(Jcd.BitManipulation.BitIndexerUInt64).md 'Jcd.BitManipulation.BitIndexerUInt64.op_Implicit ulong(Jcd.BitManipulation.BitIndexerUInt64)') | Automatically convert from a BitIndexerUInt64 to a ulong |
+| Operators                                                                                                                                                                                                                                  |                                                                                                                                               |
+|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------|
+| [implicit operator BitIndexerUInt64(ulong)](Jcd.BitManipulation.BitIndexerUInt64.op_ImplicitJcd.BitManipulation.BitIndexerUInt64(ulong).md 'Jcd.BitManipulation.BitIndexerUInt64.op_Implicit Jcd.BitManipulation.BitIndexerUInt64(ulong)') | Automatically Convert from a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') to a BitIndexerUInt64 |
+| [implicit operator ulong(BitIndexerUInt64)](Jcd.BitManipulation.BitIndexerUInt64.op_Implicitulong(Jcd.BitManipulation.BitIndexerUInt64).md 'Jcd.BitManipulation.BitIndexerUInt64.op_Implicit ulong(Jcd.BitManipulation.BitIndexerUInt64)') | Automatically convert from a BitIndexerUInt64 to a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') |
 
 | Explicit Interface Implementations | |
 | :--- | :--- |

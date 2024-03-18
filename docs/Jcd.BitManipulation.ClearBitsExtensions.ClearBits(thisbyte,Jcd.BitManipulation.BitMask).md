@@ -22,5 +22,6 @@ The value to be modified.
 the bit mask of the bits to clear.
 
 #### Returns
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 The modified value.

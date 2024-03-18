@@ -277,7 +277,9 @@
         </member>
         <member name="F:Jcd.BitManipulation.BigEndianByteIndexerInt16.MaxByteIndex">
             <summary>
-            The largest byte index available.
+               The largest
+               <see cref="T:System.Byte"/>
+               index available.
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexerInt16.#ctor(System.Int16)">
@@ -300,7 +302,10 @@
             <summary>
             Access bytes from the underlying data.
             </summary>
-            <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying storage.</param>
+           <param name="index">The index of the
+              <see cref="T:System.Byte"/>
+              to get or set.
+           </param>
             <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexerInt16.Slice(System.Int32,System.Int32)">
@@ -343,7 +348,9 @@
         </member>
         <member name="F:Jcd.BitManipulation.BigEndianByteIndexerInt32.MaxByteIndex">
             <summary>
-            The largest byte index available.
+               The largest
+               <see cref="T:System.Byte"/>
+               index available.
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexerInt32.#ctor(System.Int32)">
@@ -366,7 +373,10 @@
             <summary>
             Access bytes from the underlying data.
             </summary>
-            <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying storage.</param>
+           <param name="index">The index of the
+              <see cref="T:System.Byte"/>
+              to get or set.
+           </param>
             <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexerInt32.Slice(System.Int32,System.Int32)">
@@ -409,7 +419,9 @@
         </member>
         <member name="F:Jcd.BitManipulation.BigEndianByteIndexerInt64.MaxByteIndex">
             <summary>
-            The largest byte index available.
+               The largest
+               <see cref="T:System.Byte"/>
+               index available.
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexerInt64.#ctor(System.Int64)">
@@ -432,7 +444,10 @@
             <summary>
             Access bytes from the underlying data.
             </summary>
-            <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying storage.</param>
+           <param name="index">The index of the
+              <see cref="T:System.Byte"/>
+              to get or set.
+           </param>
             <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexerInt64.Slice(System.Int32,System.Int32)">
@@ -475,7 +490,9 @@
         </member>
         <member name="F:Jcd.BitManipulation.BigEndianByteIndexerUInt16.MaxByteIndex">
             <summary>
-            The largest byte index available.
+               The largest
+               <see cref="T:System.Byte"/>
+               index available.
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt16.#ctor(System.UInt16)">
@@ -498,7 +515,7 @@
             <summary>
             Access bytes from the underlying data.
             </summary>
-            <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying storage.</param>
+           <param name="index">The index of the byte to get or set.</param>
             <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt16.Slice(System.Int32,System.Int32)">
@@ -541,7 +558,9 @@
         </member>
         <member name="F:Jcd.BitManipulation.BigEndianByteIndexerUInt32.MaxByteIndex">
             <summary>
-            The largest byte index available.
+               The largest
+               <see cref="T:System.Byte"/>
+               index available.
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt32.#ctor(System.UInt32)">
@@ -564,7 +583,7 @@
             <summary>
             Access bytes from the underlying data.
             </summary>
-            <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying storage.</param>
+           <param name="index">The index of the byte to get or set.</param>
             <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt32.Slice(System.Int32,System.Int32)">
@@ -607,7 +626,9 @@
         </member>
         <member name="F:Jcd.BitManipulation.BigEndianByteIndexerUInt64.MaxByteIndex">
             <summary>
-            The largest byte index available.
+               The largest
+               <see cref="T:System.Byte"/>
+               index available.
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt64.#ctor(System.UInt64)">
@@ -630,7 +651,7 @@
             <summary>
             Access bytes from the underlying data.
             </summary>
-            <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying storage.</param>
+           <param name="index">The index of the byte to get or set.</param>
             <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexerUInt64.Slice(System.Int32,System.Int32)">
@@ -663,7 +684,7 @@
         </member>
         <member name="T:Jcd.BitManipulation.BitIndexerByte">
             <summary>
-            Provides enumeration and indexed access to the bits on a stored byte. 
+               Provides enumeration and indexed access to the bits on a stored<see cref="T:System.Byte"/>.
             </summary>
         </member>
         <member name="F:Jcd.BitManipulation.BitIndexerByte.BitSize">
@@ -689,17 +710,22 @@
         </member>
         <member name="M:Jcd.BitManipulation.BitIndexerByte.op_Implicit(System.Byte)~Jcd.BitManipulation.BitIndexerByte">
             <summary>
-            Automatically Convert from a byte to a BitIndexerByte
+               Automatically Convert from a
+               <see cref="T:System.Byte"/>
+               to a BitIndexerByte
             </summary>
             <param name="bits">the initial value for the indexer's backing store</param>
             <returns>A new BitIndexerByte</returns>
         </member>
         <member name="M:Jcd.BitManipulation.BitIndexerByte.op_Implicit(Jcd.BitManipulation.BitIndexerByte)~System.Byte">
             <summary>
-            Automatically convert from a BitIndexerByte to a byte
+               Automatically convert from a BitIndexerByte to a
+               <see cref="T:System.Byte"/>
             </summary>
             <param name="indexer">the indexer to convert from</param>
-            <returns>the byte</returns>
+           <returns>the
+              <see cref="T:System.Byte"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.BitIndexerByte.GetEnumerator">
             <summary>
@@ -729,7 +755,7 @@
         </member>
         <member name="T:Jcd.BitManipulation.BitIndexerInt16">
             <summary>
-            Provides enumeration and indexed access to the bits on a stored short. 
+               Provides enumeration and indexed access to the bits on a stored<see cref="T:System.Int16"/>.
             </summary>
         </member>
         <member name="F:Jcd.BitManipulation.BitIndexerInt16.BitSize">
@@ -755,17 +781,22 @@
         </member>
         <member name="M:Jcd.BitManipulation.BitIndexerInt16.op_Implicit(System.Int16)~Jcd.BitManipulation.BitIndexerInt16">
             <summary>
-            Automatically Convert from a short to a BitIndexerInt16
+               Automatically Convert from a
+               <see cref="T:System.Int16"/>
+               to a BitIndexerInt16
             </summary>
             <param name="bits">the initial value for the indexer's backing store</param>
             <returns>A new BitIndexerInt16</returns>
         </member>
         <member name="M:Jcd.BitManipulation.BitIndexerInt16.op_Implicit(Jcd.BitManipulation.BitIndexerInt16)~System.Int16">
             <summary>
-            Automatically convert from a BitIndexerInt16 to a short
+               Automatically convert from a BitIndexerInt16 to a
+               <see cref="T:System.Int16"/>
             </summary>
             <param name="indexer">the indexer to convert from</param>
-            <returns>the short</returns>
+           <returns>the
+              <see cref="T:System.Int16"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.BitIndexerInt16.GetEnumerator">
             <summary>
@@ -795,7 +826,7 @@
         </member>
         <member name="T:Jcd.BitManipulation.BitIndexerInt32">
             <summary>
-            Provides enumeration and indexed access to the bits on a stored int. 
+               Provides enumeration and indexed access to the bits on a stored<see cref="T:System.Int32"/>.
             </summary>
         </member>
         <member name="F:Jcd.BitManipulation.BitIndexerInt32.BitSize">
@@ -821,17 +852,22 @@
         </member>
         <member name="M:Jcd.BitManipulation.BitIndexerInt32.op_Implicit(System.Int32)~Jcd.BitManipulation.BitIndexerInt32">
             <summary>
-            Automatically Convert from an int to a BitIndexerInt32
+               Automatically Convert from an
+               <see cref="T:System.Int32"/>
+               to a BitIndexerInt32
             </summary>
             <param name="bits">the initial value for the indexer's backing store</param>
             <returns>A new BitIndexerInt32</returns>
         </member>
         <member name="M:Jcd.BitManipulation.BitIndexerInt32.op_Implicit(Jcd.BitManipulation.BitIndexerInt32)~System.Int32">
             <summary>
-            Automatically convert from a BitIndexerInt32 to an int
+               Automatically convert from a BitIndexerInt32 to an
+               <see cref="T:System.Int32"/>
             </summary>
             <param name="indexer">the indexer to convert from</param>
-            <returns>the int</returns>
+           <returns>the
+              <see cref="T:System.Int32"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.BitIndexerInt32.GetEnumerator">
             <summary>
@@ -861,7 +897,7 @@
         </member>
         <member name="T:Jcd.BitManipulation.BitIndexerInt64">
             <summary>
-            Provides enumeration and indexed access to the bits on a stored long. 
+               Provides enumeration and indexed access to the bits on a stored<see cref="T:System.Int64"/>.
             </summary>
         </member>
         <member name="F:Jcd.BitManipulation.BitIndexerInt64.BitSize">
@@ -887,17 +923,20 @@
         </member>
         <member name="M:Jcd.BitManipulation.BitIndexerInt64.op_Implicit(System.Int64)~Jcd.BitManipulation.BitIndexerInt64">
             <summary>
-            Automatically Convert from a long to a BitIndexerInt64
+               Automatically Convert from a
+               <see cref="T:System.Int64"/>
+               to a BitIndexerInt64
             </summary>
             <param name="bits">the initial value for the indexer's backing store</param>
             <returns>A new BitIndexerInt64</returns>
         </member>
         <member name="M:Jcd.BitManipulation.BitIndexerInt64.op_Implicit(Jcd.BitManipulation.BitIndexerInt64)~System.Int64">
             <summary>
-            Automatically convert from a BitIndexerInt64 to a long
+               Automatically convert from a BitIndexerInt64 to a
+               <see cref="T:System.Int64"/>
             </summary>
             <param name="indexer">the indexer to convert from</param>
-            <returns>the long</returns>
+           <returns>the underlying value</returns>
         </member>
         <member name="M:Jcd.BitManipulation.BitIndexerInt64.GetEnumerator">
             <summary>
@@ -925,7 +964,7 @@
         </member>
         <member name="T:Jcd.BitManipulation.BitIndexerSByte">
             <summary>
-            Provides enumeration and indexed access to the bits on a stored sbyte. 
+               Provides enumeration and indexed access to the bits on a stored<see cref="T:System.SByte"/>.
             </summary>
         </member>
         <member name="F:Jcd.BitManipulation.BitIndexerSByte.BitSize">
@@ -951,17 +990,22 @@
         </member>
         <member name="M:Jcd.BitManipulation.BitIndexerSByte.op_Implicit(System.SByte)~Jcd.BitManipulation.BitIndexerSByte">
             <summary>
-            Automatically Convert from an sbyte to a BitIndexerSByte
+               Automatically Convert from an
+               <see cref="T:System.SByte"/>
+               to a BitIndexerSByte
             </summary>
             <param name="bits">the initial value for the indexer's backing store</param>
             <returns>A new BitIndexerSByte</returns>
         </member>
         <member name="M:Jcd.BitManipulation.BitIndexerSByte.op_Implicit(Jcd.BitManipulation.BitIndexerSByte)~System.SByte">
             <summary>
-            Automatically convert from a BitIndexerSByte to an sbyte
+               Automatically convert from a BitIndexerSByte to an
+               <see cref="T:System.SByte"/>
             </summary>
             <param name="indexer">the indexer to convert from</param>
-            <returns>the sbyte</returns>
+           <returns>the
+              <see cref="T:System.SByte"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.BitIndexerSByte.GetEnumerator">
             <summary>
@@ -991,7 +1035,7 @@
         </member>
         <member name="T:Jcd.BitManipulation.BitIndexerUInt16">
             <summary>
-            Provides enumeration and indexed access to the bits on a stored ushort. 
+               Provides enumeration and indexed access to the bits on a stored<see cref="T:System.UInt16"/>.
             </summary>
         </member>
         <member name="F:Jcd.BitManipulation.BitIndexerUInt16.BitSize">
@@ -1017,17 +1061,22 @@
         </member>
         <member name="M:Jcd.BitManipulation.BitIndexerUInt16.op_Implicit(System.UInt16)~Jcd.BitManipulation.BitIndexerUInt16">
             <summary>
-            Automatically Convert from a ushort to a BitIndexerUInt16
+               Automatically Convert from a
+               <see cref="T:System.UInt16"/>
+               to a BitIndexerUInt16
             </summary>
             <param name="bits">the initial value for the indexer's backing store</param>
             <returns>A new BitIndexerUInt16</returns>
         </member>
         <member name="M:Jcd.BitManipulation.BitIndexerUInt16.op_Implicit(Jcd.BitManipulation.BitIndexerUInt16)~System.UInt16">
             <summary>
-            Automatically convert from a BitIndexerUInt16 to a ushort
+               Automatically convert from a BitIndexerUInt16 to a
+               <see cref="T:System.UInt16"/>
             </summary>
             <param name="indexer">the indexer to convert from</param>
-            <returns>the ushort</returns>
+           <returns>the
+              <see cref="T:System.UInt16"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.BitIndexerUInt16.GetEnumerator">
             <summary>
@@ -1057,7 +1106,7 @@
         </member>
         <member name="T:Jcd.BitManipulation.BitIndexerUInt32">
             <summary>
-            Provides enumeration and indexed access to the bits on a stored uint. 
+               Provides enumeration and indexed access to the bits on a stored<see cref="T:System.UInt32"/>.
             </summary>
         </member>
         <member name="F:Jcd.BitManipulation.BitIndexerUInt32.BitSize">
@@ -1083,17 +1132,22 @@
         </member>
         <member name="M:Jcd.BitManipulation.BitIndexerUInt32.op_Implicit(System.UInt32)~Jcd.BitManipulation.BitIndexerUInt32">
             <summary>
-            Automatically Convert from a uint to a BitIndexerUInt32
+               Automatically Convert from a
+               <see cref="T:System.UInt32"/>
+               to a BitIndexerUInt32
             </summary>
             <param name="bits">the initial value for the indexer's backing store</param>
             <returns>A new BitIndexerUInt32</returns>
         </member>
         <member name="M:Jcd.BitManipulation.BitIndexerUInt32.op_Implicit(Jcd.BitManipulation.BitIndexerUInt32)~System.UInt32">
             <summary>
-            Automatically convert from a BitIndexerUInt32 to a uint
+               Automatically convert from a BitIndexerUInt32 to a
+               <see cref="T:System.UInt32"/>
             </summary>
             <param name="indexer">the indexer to convert from</param>
-            <returns>the uint</returns>
+           <returns>the
+              <see cref="T:System.UInt32"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.BitIndexerUInt32.GetEnumerator">
             <summary>
@@ -1123,7 +1177,7 @@
         </member>
         <member name="T:Jcd.BitManipulation.BitIndexerUInt64">
             <summary>
-            Provides enumeration and indexed access to the bits on a stored ulong. 
+               Provides enumeration and indexed access to the bits on a stored<see cref="T:System.UInt64"/>.
             </summary>
         </member>
         <member name="F:Jcd.BitManipulation.BitIndexerUInt64.BitSize">
@@ -1149,17 +1203,20 @@
         </member>
         <member name="M:Jcd.BitManipulation.BitIndexerUInt64.op_Implicit(System.UInt64)~Jcd.BitManipulation.BitIndexerUInt64">
             <summary>
-            Automatically Convert from a ulong to a BitIndexerUInt64
+               Automatically Convert from a
+               <see cref="T:System.UInt64"/>
+               to a BitIndexerUInt64
             </summary>
             <param name="bits">the initial value for the indexer's backing store</param>
             <returns>A new BitIndexerUInt64</returns>
         </member>
         <member name="M:Jcd.BitManipulation.BitIndexerUInt64.op_Implicit(Jcd.BitManipulation.BitIndexerUInt64)~System.UInt64">
             <summary>
-            Automatically convert from a BitIndexerUInt64 to a ulong
+               Automatically convert from a BitIndexerUInt64 to a
+               <see cref="T:System.UInt64"/>
             </summary>
             <param name="indexer">the indexer to convert from</param>
-            <returns>the ulong</returns>
+           <returns>the underlying value</returns>
         </member>
         <member name="M:Jcd.BitManipulation.BitIndexerUInt64.GetEnumerator">
             <summary>
@@ -1282,28 +1339,36 @@
             Automatically convert to <see cref="T:System.SByte"/> from a <see cref="T:Jcd.BitManipulation.BitMask"/>
             </summary>
             <param name="mask">the <see cref="T:Jcd.BitManipulation.BitMask"/> to convert from.</param>
-            <returns>the lowest 8 bits of the mask as a signed byte</returns>
+           <returns>the lowest 8 bits of the mask as a signed
+              <see cref="T:System.SByte"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.BitMask.op_Implicit(Jcd.BitManipulation.BitMask)~System.Byte">
             <summary>
             Automatically convert to <see cref="T:System.Byte"/> from a <see cref="T:Jcd.BitManipulation.BitMask"/>
             </summary>
             <param name="mask">the <see cref="T:Jcd.BitManipulation.BitMask"/> to convert from.</param>
-            <returns>the lowest 8 bits of the mask as a byte</returns>
+           <returns>the lowest 8 bits of the mask as a
+              <see cref="T:System.Byte"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.BitMask.op_Implicit(Jcd.BitManipulation.BitMask)~System.Int16">
             <summary>
             Automatically convert to <see cref="T:System.Int16"/> from a <see cref="T:Jcd.BitManipulation.BitMask"/>
             </summary>
             <param name="mask">the <see cref="T:Jcd.BitManipulation.BitMask"/> to convert from.</param>
-            <returns>the lowest 16 bits of the mask as a short</returns>
+           <returns>the lowest 16 bits of the mask as a
+              <see cref="T:System.Int16"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.BitMask.op_Implicit(Jcd.BitManipulation.BitMask)~System.UInt16">
             <summary>
             Automatically convert to <see cref="T:System.UInt16"/> from a <see cref="T:Jcd.BitManipulation.BitMask"/>
             </summary>
             <param name="mask">the <see cref="T:Jcd.BitManipulation.BitMask"/> to convert from.</param>
-            <returns>the lowest 16 bits of the mask as a ushort</returns>
+           <returns>the lowest 16 bits of the mask as a
+              <see cref="T:System.UInt16"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.BitMask.op_Implicit(Jcd.BitManipulation.BitMask)~System.Int32">
             <summary>
@@ -1324,14 +1389,18 @@
             Automatically convert to <see cref="T:System.Int64"/> from a <see cref="T:Jcd.BitManipulation.BitMask"/>
             </summary>
             <param name="mask">the <see cref="T:Jcd.BitManipulation.BitMask"/> to convert from.</param>
-            <returns>the bits of the mask as a long</returns>
+           <returns>the bits of the mask as a
+              <see cref="T:System.Int64"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.BitMask.op_Implicit(Jcd.BitManipulation.BitMask)~System.UInt64">
             <summary>
             Automatically convert to <see cref="T:System.UInt64"/> from a <see cref="T:Jcd.BitManipulation.BitMask"/>
             </summary>
             <param name="mask">the <see cref="T:Jcd.BitManipulation.BitMask"/> to convert from.</param>
-            <returns>the bits of the mask as a ulong</returns>
+           <returns>the bits of the mask as a
+              <see cref="T:System.UInt64"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.BitMask.op_Implicit(System.SByte)~Jcd.BitManipulation.BitMask">
             <summary>
@@ -1396,115 +1465,161 @@
         </member>
         <member name="M:Jcd.BitManipulation.BooleanArrayExtensions.ToBooleanArray(System.Byte)">
             <summary>
-            Convert a byte into an array of bools
+               Convert a
+               <see cref="T:System.Byte"/>
+               into an array of bools
             </summary>
             <param name="bits">the byte to convert</param>
             <returns>the array. Least Significant Bit at index 0</returns>
         </member>
         <member name="M:Jcd.BitManipulation.BooleanArrayExtensions.ToBooleanArray(System.SByte)">
             <summary>
-            Convert an sbyte into an array of bools
+               Convert an
+               <see cref="T:System.SByte"/>
+               into an array of bools
             </summary>
-            <param name="bits">the sbyte to convert</param>
+           <param name="bits">the
+              <see cref="T:System.SByte"/>
+              to convert
+           </param>
             <returns>the array. Least Significant Bit at index 0</returns>
         </member>
         <member name="M:Jcd.BitManipulation.BooleanArrayExtensions.ToBooleanArray(System.UInt16)">
             <summary>
-            Convert a ushort into an array of bools
+               Convert a
+               <see cref="T:System.UInt16"/>
+               into an array of bools
             </summary>
-            <param name="bits">the bits of the ushort to convert</param>
+           <param name="bits">the bits of the
+              <see cref="T:System.UInt16"/>
+              to convert
+           </param>
             <returns>the array. Least Significant Bit at index 0</returns>
         </member>
         <member name="M:Jcd.BitManipulation.BooleanArrayExtensions.ToBooleanArray(System.Int16)">
             <summary>
-            Convert a short into an array of bools
+               Convert a
+               <see cref="T:System.Int16"/>
+               into an array of bools
             </summary>
-            <param name="bits">the short to convert</param>
+           <param name="bits">the
+              <see cref="T:System.Int16"/>
+              to convert
+           </param>
             <returns>the array. Least Significant Bit at index 0</returns>
         </member>
         <member name="M:Jcd.BitManipulation.BooleanArrayExtensions.ToBooleanArray(System.UInt32)">
             <summary>
             Convert a uint into an array of bools
             </summary>
-            <param name="bits">the uint to convert</param>
+           <param name="bits">the
+              <see cref="T:System.UInt32"/>
+              to convert
+           </param>
             <returns>the array. Least Significant Bit at index 0</returns>
         </member>
         <member name="M:Jcd.BitManipulation.BooleanArrayExtensions.ToBooleanArray(System.Int32)">
             <summary>
             Convert an int into an array of bools
             </summary>
-            <param name="bits">the int to convert</param>
+           <param name="bits">the
+              <see cref="T:System.UInt32"/>
+              to convert
+           </param>
             <returns>the array. Least Significant Bit at index 0</returns>
         </member>
         <member name="M:Jcd.BitManipulation.BooleanArrayExtensions.ToBooleanArray(System.UInt64)">
             <summary>
-            Convert a ulong into an array of bools
+               Convert a
+               <see cref="T:System.UInt64"/>
+               into an array of bools
             </summary>
             <param name="bits">the ulong to convert</param>
             <returns>the array. Least Significant Bit at index 0</returns>
         </member>
         <member name="M:Jcd.BitManipulation.BooleanArrayExtensions.ToBooleanArray(System.Int64)">
             <summary>
-            Convert a long into an array of bools
+               Convert a
+               <see cref="T:System.Int64"/>
+               into an array of bools
             </summary>
-            <param name="bits">the long to convert</param>
+           <param name="bits">the
+              <see cref="T:System.Int64"/>
+              to convert
+           </param>
             <returns>the array. Least Significant Bit at index 0</returns>
         </member>
         <member name="M:Jcd.BitManipulation.BooleanArrayExtensions.ToByte(System.Boolean[])">
             <summary>
-            Converts an array of bools into a byte, discarding any excess bits.
+               Converts an array of bools into a<see cref="T:System.Byte"/>, discarding any excess bits.
             </summary>
             <param name="bits">the array of bools to convert, Least Significant Bit at index 0</param>
-            <returns>The converted byte</returns>
+           <returns>The converted
+              <see cref="T:System.Byte"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.BooleanArrayExtensions.ToSByte(System.Boolean[])">
             <summary>
-            Converts an array of bools into an sbyte, discarding any excess bits.
+               Converts an array of bools into an<see cref="T:System.SByte"/>, discarding any excess bits.
             </summary>
             <param name="bits">the array of bools to convert, Least Significant Bit at index 0</param>
-            <returns>The converted sbyte</returns>
+           <returns>The converted
+              <see cref="T:System.SByte"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.BooleanArrayExtensions.ToUInt16(System.Boolean[])">
             <summary>
-            Converts an array of bools into a ushort, discarding any excess bits.
+               Converts an array of bools into a<see cref="T:System.UInt16"/>, discarding any excess bits.
             </summary>
             <param name="bits">the array of bools to convert, Least Significant Bit at index 0</param>
-            <returns>The converted ushort</returns>
+           <returns>The converted
+              <see cref="T:System.UInt16"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.BooleanArrayExtensions.ToInt16(System.Boolean[])">
             <summary>
-            Converts an array of bools into a short, discarding any excess bits.
+               Converts an array of bools into a<see cref="T:System.Int16"/>, discarding any excess bits.
             </summary>
             <param name="bits">the array of bools to convert, Least Significant Bit at index 0</param>
-            <returns>The converted short</returns>
+           <returns>The converted
+              <see cref="T:System.Int16"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.BooleanArrayExtensions.ToUInt32(System.Boolean[])">
             <summary>
-            Converts an array of bools into a uint, discarding any excess bits.
+               Converts an array of bools into a<see cref="T:System.UInt32"/>, discarding any excess bits.
             </summary>
             <param name="bits">the array of bools to convert, Least Significant Bit at index 0</param>
-            <returns>The converted uint</returns>
+           <returns>The converted
+              <see cref="T:System.UInt32"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.BooleanArrayExtensions.ToInt32(System.Boolean[])">
             <summary>
-            Converts an array of bools into an int, discarding any excess bits.
+               Converts an array of bools into an<see cref="T:System.Int32"/>, discarding any excess bits.
             </summary>
             <param name="bits">the array of bools to convert, Least Significant Bit at index 0</param>
-            <returns>The converted int</returns>
+           <returns>The converted
+              <see cref="T:System.Int32"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.BooleanArrayExtensions.ToUInt64(System.Boolean[])">
             <summary>
-            Converts an array of bools into a ulong, discarding any excess bits.
+               Converts an array of bools into a<see cref="T:System.UInt64"/>, discarding any excess bits.
             </summary>
             <param name="bits">the array of bools to convert, Least Significant Bit at index 0</param>
-            <returns>The converted ulong</returns>
+           <returns>The converted
+              <see cref="T:System.UInt64"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.BooleanArrayExtensions.ToInt64(System.Boolean[])">
             <summary>
-            Converts an array of bools into a long, discarding any excess bits.
+               Converts an array of bools into a<see cref="T:System.Int64"/>, discarding any excess bits.
             </summary>
             <param name="bits">the array of bools to convert, Least Significant Bit at index 0</param>
-            <returns>The converted long</returns>
+           <returns>The converted
+              <see cref="T:System.Int64"/>
+           </returns>
         </member>
         <member name="T:Jcd.BitManipulation.ByteArrayExtensions">
             <summary>
@@ -1513,31 +1628,53 @@
         </member>
         <member name="M:Jcd.BitManipulation.ByteArrayExtensions.ToByteArray(System.Byte)">
             <summary>
-            Convert a byte into an array of bytes
+               Convert a
+               <see cref="T:System.Byte"/>
+               into an array of bytes
             </summary>
-            <param name="data">the byte to convert</param>
-            <returns>an array containing the byte.</returns>
+           <param name="data">the
+              <see cref="T:System.Byte"/>
+              to convert
+           </param>
+           <returns>an array containing the<see cref="T:System.Byte"/>.
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.ByteArrayExtensions.ToByteArray(System.SByte)">
             <summary>
-            Convert an sbyte into an array of bytes
+               Convert an
+               <see cref="T:System.SByte"/>
+               into an array of bytes
             </summary>
-            <param name="data">the sbyte to convert</param>
-            <returns>an array containing the byte.</returns>
+           <param name="data">the
+              <see cref="T:System.SByte"/>
+              to convert
+           </param>
+           <returns>an array containing the<see cref="T:System.SByte"/>.
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.ByteArrayExtensions.ToByteArray(System.UInt16,Jcd.BitManipulation.Endian)">
             <summary>
-            Convert a ushort into an array of bytes
+               Convert a
+               <see cref="T:System.UInt16"/>
+               into an array of bytes
             </summary>
-            <param name="data">the data of the ushort to convert</param>
+           <param name="data">the data of the
+              <see cref="T:System.UInt16"/>
+              to convert
+           </param>
             <param name="endian">The order in which to store the bytes</param>
             <returns>The value as an array in the requested byte order</returns>
         </member>
         <member name="M:Jcd.BitManipulation.ByteArrayExtensions.ToByteArray(System.Int16,Jcd.BitManipulation.Endian)">
             <summary>
-            Convert a short into an array of bytes
+               Convert a
+               <see cref="T:System.Int16"/>
+               into an array of bytes
             </summary>
-            <param name="data">the short to convert</param>
+           <param name="data">the
+              <see cref="T:System.Int16"/>
+              to convert
+           </param>
             <param name="endian">The order in which to store the bytes</param>
             <returns>The value as an array in the requested byte order</returns>
         </member>
@@ -1545,7 +1682,10 @@
             <summary>
             Convert a uint into an array of bytes
             </summary>
-            <param name="data">the uint to convert</param>
+           <param name="data">the
+              <see cref="T:System.UInt32"/>
+              to convert
+           </param>
             <param name="endian">The order in which to store the bytes</param>
             <returns>The value as an array in the requested byte order</returns>
         </member>
@@ -1553,185 +1693,196 @@
             <summary>
             Convert an int into an array of bytes
             </summary>
-            <param name="data">the int to convert</param>
+           <param name="data">the
+              <see cref="T:System.Int32"/>
+              to convert
+           </param>
             <param name="endian">The order in which to store the bytes</param>
             <returns>The value as an array in the requested byte order</returns>
         </member>
         <member name="M:Jcd.BitManipulation.ByteArrayExtensions.ToByteArray(System.UInt64,Jcd.BitManipulation.Endian)">
             <summary>
-            Convert a ulong into an array of bytes
+               Convert a
+               <see cref="T:System.UInt64"/>
+               into an array of bytes
             </summary>
-            <param name="data">the ulong to convert</param>
+           <param name="data">the
+              <see cref="T:System.UInt64"/>
+              to convert
+           </param>
             <param name="endian">The order in which to store the bytes</param>
             <returns>The value as an array in the requested byte order</returns>
         </member>
         <member name="M:Jcd.BitManipulation.ByteArrayExtensions.ToByteArray(System.Int64,Jcd.BitManipulation.Endian)">
             <summary>
-            Convert a long into an array of bytes
+               Convert a
+               <see cref="T:System.Int64"/>
+               into an array of bytes
             </summary>
-            <param name="data">the long to convert</param>
+           <param name="data">the
+              <see cref="T:System.Int64"/>
+              to convert
+           </param>
             <param name="endian">The order in which to store the bytes</param>
             <returns>The value as an array in the requested byte order</returns>
         </member>
         <member name="M:Jcd.BitManipulation.ByteArrayExtensions.ToByte(System.ReadOnlySpan{System.Byte},Jcd.BitManipulation.Endian)">
             <summary>
-            Converts bytes into a byte, discarding any excess data.
+               Converts bytes into a<see cref="T:System.Byte"/>, discarding any excess data.
             </summary>
             <param name="data">the bytes to convert</param>
-            <param name="endian">
-            A setting indicating the endianness of the source data. The default is Endian.Little.
-            </param>
-            <returns>The converted byte</returns>
+           <param name="endian">The endian for the bytes.</param>
+           <returns>The converted
+              <see cref="T:System.Byte"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.ByteArrayExtensions.ToSByte(System.ReadOnlySpan{System.Byte},Jcd.BitManipulation.Endian)">
             <summary>
-            Converts bytes into an sbyte, discarding any excess data.
+               Converts bytes into an<see cref="T:System.SByte"/>, discarding any excess data.
             </summary>
             <param name="data">the bytes to convert</param>
-            <param name="endian">
-            A setting indicating the endianness of the source data. The default is Endian.Little.
-            </param>
-            <returns>The converted sbyte</returns>
+           <param name="endian">The endian for the bytes.</param>
+           <returns>The converted
+              <see cref="T:System.SByte"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.ByteArrayExtensions.ToUInt16(System.ReadOnlySpan{System.Byte},Jcd.BitManipulation.Endian)">
             <summary>
-            Converts bytes into a ushort, discarding any excess data.
+               Converts bytes into a<see cref="T:System.UInt16"/>, discarding any excess data.
             </summary>
             <param name="data">the bytes to convert</param>
-            <param name="endian">
-            A setting indicating the endianness of the source data. The default is Endian.Little.
-            </param>
-            <returns>The converted ushort</returns>
+           <param name="endian">The endian for the bytes.</param>
+           <returns>The converted
+              <see cref="T:System.UInt16"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.ByteArrayExtensions.ToInt16(System.ReadOnlySpan{System.Byte},Jcd.BitManipulation.Endian)">
             <summary>
-            Converts bytes into a short, discarding any excess data.
+               Converts bytes into a<see cref="T:System.Int16"/>, discarding any excess data.
             </summary>
             <param name="data">the bytes to convert</param>
-            <param name="endian">
-            A setting indicating the endianness of the source data. The default is Endian.Little.
-            </param>
-            <returns>The converted short</returns>
+           <param name="endian">The endian for the bytes.</param>
+           <returns>The converted
+              <see cref="T:System.Int16"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.ByteArrayExtensions.ToUInt32(System.ReadOnlySpan{System.Byte},Jcd.BitManipulation.Endian)">
             <summary>
-            Converts bytes into a uint, discarding any excess data.
+               Converts bytes into a<see cref="T:System.UInt32"/>, discarding any excess data.
             </summary>
             <param name="data">the bytes to convert</param>
-            <param name="endian">
-            A setting indicating the endianness of the source data. The default is Endian.Little.
-            </param>
-            <returns>The converted uint</returns>
+           <param name="endian">The endian for the bytes.</param>
+           <returns>The converted
+              <see cref="T:System.UInt32"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.ByteArrayExtensions.ToInt32(System.ReadOnlySpan{System.Byte},Jcd.BitManipulation.Endian)">
             <summary>
-            Converts bytes into an int, discarding any excess data.
+               Converts bytes into an<see cref="T:System.Int32"/>, discarding any excess data.
             </summary>
             <param name="data">the bytes to convert</param>
-            <param name="endian">
-            A setting indicating the endianness of the source data. The default is Endian.Little.
-            </param>
-            <returns>The converted int</returns>
+           <param name="endian">The endian for the bytes.</param>
+           <returns>The converted
+              <see cref="T:System.Int32"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.ByteArrayExtensions.ToUInt64(System.ReadOnlySpan{System.Byte},Jcd.BitManipulation.Endian)">
             <summary>
-            Converts bytes into a ulong, discarding any excess data.
+               Converts bytes into a<see cref="T:System.UInt64"/>, discarding any excess data.
             </summary>
             <param name="data">the bytes to convert</param>
-            <param name="endian">
-            A setting indicating the endianness of the source data. The default is Endian.Little.
-            </param>
-            <returns>The converted ulong</returns>
+           <param name="endian">The endian for the bytes.</param>
+           <returns>The converted
+              <see cref="T:System.UInt64"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.ByteArrayExtensions.ToInt64(System.ReadOnlySpan{System.Byte},Jcd.BitManipulation.Endian)">
             <summary>
-            Converts bytes into a long, discarding any excess data.
+               Converts bytes into a<see cref="T:System.Int64"/>, discarding any excess data.
             </summary>
             <param name="data">the bytes to convert</param>
-            <param name="endian">
-            A setting indicating the endianness of the source data. The default is Endian.Little.
-            </param>
-            <returns>The converted long</returns>
+           <param name="endian">The endian for the bytes.</param>
+           <returns>The converted
+              <see cref="T:System.Int64"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.ByteArrayExtensions.ToByte(System.Byte[],Jcd.BitManipulation.Endian)">
             <summary>
-            Converts bytes into a byte, discarding any excess data.
+               Converts bytes into a<see cref="T:System.Byte"/>, discarding any excess data.
             </summary>
             <param name="data">the bytes to convert</param>
-            <param name="endian">
-            A setting indicating the endianness of the source data. The default is Endian.Little.
-            </param>
-            <returns>The converted byte</returns>
+           <param name="endian">The endian for the bytes.</param>
+           <returns>The converted
+              <see cref="T:System.Byte"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.ByteArrayExtensions.ToSByte(System.Byte[],Jcd.BitManipulation.Endian)">
             <summary>
-            Converts bytes into an sbyte, discarding any excess data.
+               Converts bytes into an<see cref="T:System.SByte"/>, discarding any excess data.
             </summary>
             <param name="data">the bytes to convert</param>
-            <param name="endian">
-            A setting indicating the endianness of the source data. The default is Endian.Little.
-            </param>
+           <param name="endian">The endian for the bytes.</param>
             <returns>The converted sbyte</returns>
         </member>
         <member name="M:Jcd.BitManipulation.ByteArrayExtensions.ToUInt16(System.Byte[],Jcd.BitManipulation.Endian)">
             <summary>
-            Converts bytes into a ushort, discarding any excess data.
+               Converts bytes into a<see cref="T:System.UInt16"/>, discarding any excess data.
             </summary>
             <param name="data">the bytes to convert</param>
-            <param name="endian">
-            A setting indicating the endianness of the source data. The default is Endian.Little.
-            </param>
-            <returns>The converted ushort</returns>
+           <param name="endian">The endian for the bytes.</param>
+           <returns>The converted
+              <see cref="T:System.UInt16"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.ByteArrayExtensions.ToInt16(System.Byte[],Jcd.BitManipulation.Endian)">
             <summary>
-            Converts bytes into a short, discarding any excess data.
+               Converts bytes into a<see cref="T:System.Int16"/>, discarding any excess data.
             </summary>
             <param name="data">the bytes to convert</param>
-            <param name="endian">
-            A setting indicating the endianness of the source data. The default is Endian.Little.
-            </param>
-            <returns>The converted short</returns>
+           <param name="endian">The endian for the bytes.</param>
+           <returns>The converted
+              <see cref="T:System.Int16"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.ByteArrayExtensions.ToUInt32(System.Byte[],Jcd.BitManipulation.Endian)">
             <summary>
-            Converts bytes into a uint, discarding any excess data.
+               Converts bytes into a<see cref="T:System.UInt32"/>, discarding any excess data.
             </summary>
             <param name="data">the bytes to convert</param>
-            <param name="endian">
-            A setting indicating the endianness of the source data. The default is Endian.Little.
-            </param>
-            <returns>The converted uint</returns>
+           <param name="endian">The endian for the bytes.</param>
+           <returns>The converted
+              <see cref="T:System.UInt32"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.ByteArrayExtensions.ToInt32(System.Byte[],Jcd.BitManipulation.Endian)">
             <summary>
-            Converts bytes into an int, discarding any excess data.
+               Converts bytes into an<see cref="T:System.UInt32"/>, discarding any excess data.
             </summary>
             <param name="data">the bytes to convert</param>
-            <param name="endian">
-            A setting indicating the endianness of the source data. The default is Endian.Little.
-            </param>
-            <returns>The converted int</returns>
+           <param name="endian">The endian for the bytes.</param>
+           <returns>The converted
+              <see cref="T:System.UInt32"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.ByteArrayExtensions.ToUInt64(System.Byte[],Jcd.BitManipulation.Endian)">
             <summary>
-            Converts bytes into a ulong, discarding any excess data.
+               Converts bytes into a<see cref="T:System.UInt64"/>, discarding any excess data.
             </summary>
             <param name="data">the bytes to convert</param>
-            <param name="endian">
-            A setting indicating the endianness of the source data. The default is Endian.Little.
-            </param>
-            <returns>The converted ulong</returns>
+           <param name="endian">The endian for the bytes.</param>
+           <returns>The converted
+              <see cref="T:System.UInt64"/>
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.ByteArrayExtensions.ToInt64(System.Byte[],Jcd.BitManipulation.Endian)">
             <summary>
-            Converts bytes into a long, discarding any excess data.
+               Converts bytes into a<see cref="T:System.Int64"/>, discarding any excess data.
             </summary>
             <param name="data">the bytes to convert</param>
-            <param name="endian">
-            A setting indicating the endianness of the source data. The default is Endian.Little.
-            </param>
-            <returns>The converted long</returns>
+           <param name="endian">The endian for the bytes.</param>
+           <returns>The converted
+              <see cref="T:System.Int64"/>
+           </returns>
         </member>
         <member name="T:Jcd.BitManipulation.ClearBitsExtensions">
             <summary>
@@ -2019,7 +2170,9 @@
         </member>
         <member name="F:Jcd.BitManipulation.LittleEndianByteIndexerInt16.MaxByteIndex">
             <summary>
-            The largest byte index available.
+               The largest
+               <see cref="T:System.Byte"/>
+               index available.
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt16.#ctor(System.Int16)">
@@ -2042,7 +2195,10 @@
             <summary>
             Access bytes from the underlying data.
             </summary>
-            <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying storage.</param>
+           <param name="index">The index of the
+              <see cref="T:System.Byte"/>
+              to get or set.
+           </param>
             <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
         </member>
         <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt16.Slice(System.Int32,System.Int32)">
@@ -2055,7 +2211,9 @@
         </member>
         <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt16.op_Implicit(Jcd.BitManipulation.LittleEndianByteIndexerInt16)~System.Int16">
             <summary>
-            Converts the byte indexer to its underlying data type.
+               Converts the
+               <see cref="T:System.Byte"/>
+               indexer to its underlying data type.
             </summary>
             <param name="buffer">The buffer to convert.</param>
             <returns>The raw data.</returns>
@@ -2085,7 +2243,9 @@
         </member>
         <member name="F:Jcd.BitManipulation.LittleEndianByteIndexerInt32.MaxByteIndex">
             <summary>
-            The largest byte index available.
+               The largest
+               <see cref="T:System.Byte"/>
+               index available.
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt32.#ctor(System.Int32)">
@@ -2108,7 +2268,7 @@
             <summary>
             Access bytes from the underlying data.
             </summary>
-            <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying storage.</param>
+           <param name="index">The index of the byte to get or set.</param>
             <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
         </member>
         <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt32.Slice(System.Int32,System.Int32)">
@@ -2121,7 +2281,9 @@
         </member>
         <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt32.op_Implicit(Jcd.BitManipulation.LittleEndianByteIndexerInt32)~System.Int32">
             <summary>
-            Converts the byte indexer to its underlying data type.
+               Converts the
+               <see cref="T:System.Byte"/>
+               indexer to its underlying data type.
             </summary>
             <param name="buffer">The buffer to convert.</param>
             <returns>The raw data.</returns>
@@ -2151,7 +2313,9 @@
         </member>
         <member name="F:Jcd.BitManipulation.LittleEndianByteIndexerInt64.MaxByteIndex">
             <summary>
-            The largest byte index available.
+               The largest
+               <see cref="T:System.Byte"/>
+               index available.
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt64.#ctor(System.Int64)">
@@ -2174,7 +2338,10 @@
             <summary>
             Access bytes from the underlying data.
             </summary>
-            <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying storage.</param>
+           <param name="index">The index of the
+              <see cref="T:System.Byte"/>
+              to get or set.
+           </param>
             <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
         </member>
         <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerInt64.Slice(System.Int32,System.Int32)">
@@ -2217,7 +2384,9 @@
         </member>
         <member name="F:Jcd.BitManipulation.LittleEndianByteIndexerUInt16.MaxByteIndex">
             <summary>
-            The largest byte index available.
+               The largest
+               <see cref="T:System.Byte"/>
+               index available.
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt16.#ctor(System.UInt16)">
@@ -2240,7 +2409,7 @@
             <summary>
             Access bytes from the underlying data.
             </summary>
-            <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying storage.</param>
+           <param name="index">The index of the byte to get or set.</param>
             <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
         </member>
         <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt16.Slice(System.Int32,System.Int32)">
@@ -2253,7 +2422,9 @@
         </member>
         <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt16.op_Implicit(Jcd.BitManipulation.LittleEndianByteIndexerUInt16)~System.UInt16">
             <summary>
-            Converts the byte indexer to its underlying data type.
+               Converts the
+               <see cref="T:System.Byte"/>
+               indexer to its underlying data type.
             </summary>
             <param name="buffer">The buffer to convert.</param>
             <returns>The raw data.</returns>
@@ -2283,7 +2454,9 @@
         </member>
         <member name="F:Jcd.BitManipulation.LittleEndianByteIndexerUInt32.MaxByteIndex">
             <summary>
-            The largest byte index available.
+               The largest
+               <see cref="T:System.Byte"/>
+               index available.
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt32.#ctor(System.UInt32)">
@@ -2306,7 +2479,7 @@
             <summary>
             Access bytes from the underlying data.
             </summary>
-            <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying storage.</param>
+           <param name="index">The index of the byte to get or set.</param>
             <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
         </member>
         <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt32.Slice(System.Int32,System.Int32)">
@@ -2319,7 +2492,9 @@
         </member>
         <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt32.op_Implicit(Jcd.BitManipulation.LittleEndianByteIndexerUInt32)~System.UInt32">
             <summary>
-            Converts the byte indexer to its underlying data type.
+               Converts the
+               <see cref="T:System.Byte"/>
+               indexer to its underlying data type.
             </summary>
             <param name="buffer">The buffer to convert.</param>
             <returns>The raw data.</returns>
@@ -2349,7 +2524,9 @@
         </member>
         <member name="F:Jcd.BitManipulation.LittleEndianByteIndexerUInt64.MaxByteIndex">
             <summary>
-            The largest byte index available.
+               The largest
+               <see cref="T:System.Byte"/>
+               index available.
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt64.#ctor(System.UInt64)">
@@ -2372,7 +2549,7 @@
             <summary>
             Access bytes from the underlying data.
             </summary>
-            <param name="index">The index of the byte to get or set. 0 is the least significant byte from the underlying storage.</param>
+           <param name="index">The index of the byte to get or set.</param>
             <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
         </member>
         <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt64.Slice(System.Int32,System.Int32)">
@@ -2385,7 +2562,9 @@
         </member>
         <member name="M:Jcd.BitManipulation.LittleEndianByteIndexerUInt64.op_Implicit(Jcd.BitManipulation.LittleEndianByteIndexerUInt64)~System.UInt64">
             <summary>
-            Converts the byte indexer to its underlying data type.
+               Converts the
+               <see cref="T:System.Byte"/>
+               indexer to its underlying data type.
             </summary>
             <param name="indexer">The indexer to convert.</param>
             <returns>The raw data.</returns>
@@ -2673,18 +2852,17 @@
         </member>
         <member name="T:Jcd.BitManipulation.ReadBytesExtensions">
             <summary>
-            Extension methods that aid in storing values into byte offsets within another integer data type.
-            The offsets are Least Significant Byte. Index 0 is the 8 least significant bits....etc.
+               Extension methods that aid in reading bytes from integer data types.
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(System.Int16,System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
             <summary>
-            Reads a set of bytes starting at the specified byte location within the value.
+               Reads a set of bytes starting at the specified offset within the value.
             </summary>
             <param name="value">The value to be read.</param>
-            <param name="offset">The byte location to store the value.</param>
-            <param name="size">The byte size of the value.</param>
-            <param name="endian">The endianness of the byte indexing within the value.</param>
+           <param name="offset">The offset to read the bytes from.</param>
+           <param name="size">The size of the value in bytes.</param>
+           <param name="endian">The endianness of the indexing within the value.</param>
             <returns>A little endian byte array of the value.</returns>
         </member>
         <member name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(System.Int32,System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
@@ -2692,17 +2870,17 @@
             Reads a set of bytes starting at the specified byte location within the value.
             </summary>
             <param name="value">The value to be read.</param>
-            <param name="offset">The byte location to store the value.</param>
+           <param name="offset">The offset to read the bytes from.</param>
             <param name="size">The byte size of the value.</param>
-            <param name="endian">The endianness of the byte indexing within the value.</param>
-            <returns>A little endian byte array of the value.</returns>
+           <param name="endian">The endianness of the indexing.</param>
+           <returns>A byte array of the value in the specified endian.</returns>
         </member>
         <member name="M:Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(System.Int64,System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
             <summary>
             Reads a set of bytes starting at the specified byte location within the value.
             </summary>
             <param name="value">The value to be read.</param>
-            <param name="offset">The byte location to store the value.</param>
+           <param name="offset">The offset to read the bytes from.</param>
             <param name="size">The byte size of the value.</param>
             <param name="endian">The endianness of the byte indexing within the value.</param>
             <returns>A little endian byte array of the value.</returns>

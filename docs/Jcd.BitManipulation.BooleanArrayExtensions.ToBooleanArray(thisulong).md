@@ -2,7 +2,8 @@
 
 ## BooleanArrayExtensions.ToBooleanArray(this ulong) Method
 
-Convert a ulong into an array of bools
+Convert a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') into an array of
+bools
 
 ```csharp
 public static bool[] ToBooleanArray(this ulong bits);
@@ -16,5 +17,6 @@ public static bool[] ToBooleanArray(this ulong bits);
 the ulong to convert
 
 #### Returns
+
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 the array. Least Significant Bit at index 0

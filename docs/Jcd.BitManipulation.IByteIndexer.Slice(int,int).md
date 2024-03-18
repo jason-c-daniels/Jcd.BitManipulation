@@ -22,5 +22,6 @@ starting offset of the bits to retrieve
 the number of bits to get
 
 #### Returns
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 Array of bits extracted

@@ -2,7 +2,8 @@
 
 ## BitIndexerInt16.implicit operator short(BitIndexerInt16) Operator
 
-Automatically convert from a BitIndexerInt16 to a short
+Automatically convert from a BitIndexerInt16 to
+a [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 
 ```csharp
 public static short implicit operator short(Jcd.BitManipulation.BitIndexerInt16 indexer);
@@ -16,5 +17,6 @@ public static short implicit operator short(Jcd.BitManipulation.BitIndexerInt16 
 the indexer to convert from
 
 #### Returns
+
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
-the short
+the [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')

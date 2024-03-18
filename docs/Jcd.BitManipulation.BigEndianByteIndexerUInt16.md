@@ -17,10 +17,10 @@ Implements [IByteIndexer](Jcd.BitManipulation.IByteIndexer.md 'Jcd.BitManipulati
 | :--- | :--- |
 | [BigEndianByteIndexerUInt16(ushort)](Jcd.BitManipulation.BigEndianByteIndexerUInt16.BigEndianByteIndexerUInt16(ushort).md 'Jcd.BitManipulation.BigEndianByteIndexerUInt16.BigEndianByteIndexerUInt16(ushort)') | Constructs a [BigEndianByteIndexerUInt16](Jcd.BitManipulation.BigEndianByteIndexerUInt16.md 'Jcd.BitManipulation.BigEndianByteIndexerUInt16') from a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16'). |
 
-| Fields | |
-| :--- | :--- |
-| [ByteSize](Jcd.BitManipulation.BigEndianByteIndexerUInt16.ByteSize.md 'Jcd.BitManipulation.BigEndianByteIndexerUInt16.ByteSize') | The number of bytes this type will index |
-| [MaxByteIndex](Jcd.BitManipulation.BigEndianByteIndexerUInt16.MaxByteIndex.md 'Jcd.BitManipulation.BigEndianByteIndexerUInt16.MaxByteIndex') | The largest byte index available. |
+| Fields                                                                                                                                       |                                                                                                                   |
+|:---------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------|
+| [ByteSize](Jcd.BitManipulation.BigEndianByteIndexerUInt16.ByteSize.md 'Jcd.BitManipulation.BigEndianByteIndexerUInt16.ByteSize')             | The number of bytes this type will index                                                                          |
+| [MaxByteIndex](Jcd.BitManipulation.BigEndianByteIndexerUInt16.MaxByteIndex.md 'Jcd.BitManipulation.BigEndianByteIndexerUInt16.MaxByteIndex') | The largest [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') index available. |
 
 | Properties | |
 | :--- | :--- |

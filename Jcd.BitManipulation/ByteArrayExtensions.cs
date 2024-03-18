@@ -19,25 +19,25 @@ namespace Jcd.BitManipulation;
 public static class ByteArrayExtensions
 {
    /// <summary>
-   /// Convert a byte into an array of bytes
+   /// Convert a <see cref="byte"/> into an array of bytes
    /// </summary>
-   /// <param name="data">the byte to convert</param>
-   /// <returns>an array containing the byte.</returns>
+   /// <param name="data">the <see cref="byte"/> to convert</param>
+   /// <returns>an array containing the <see cref="byte"/>.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ToByteArray(this byte data) { return [data]; }
 
    /// <summary>
-   /// Convert an sbyte into an array of bytes
+   /// Convert an <see cref="sbyte"/> into an array of bytes
    /// </summary>
-   /// <param name="data">the sbyte to convert</param>
-   /// <returns>an array containing the byte.</returns>
+   /// <param name="data">the <see cref="sbyte"/> to convert</param>
+   /// <returns>an array containing the <see cref="sbyte"/>.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ToByteArray(this sbyte data) { return [(byte) data]; }
 
    /// <summary>
-   /// Convert a ushort into an array of bytes
+   /// Convert a <see cref="ushort"/> into an array of bytes
    /// </summary>
-   /// <param name="data">the data of the ushort to convert</param>
+   /// <param name="data">the data of the <see cref="ushort"/> to convert</param>
    /// <param name="endian">The order in which to store the bytes</param>
    /// <returns>The value as an array in the requested byte order</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -49,9 +49,9 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Convert a short into an array of bytes
+   /// Convert a <see cref="short"/> into an array of bytes
    /// </summary>
-   /// <param name="data">the short to convert</param>
+   /// <param name="data">the <see cref="short"/> to convert</param>
    /// <param name="endian">The order in which to store the bytes</param>
    /// <returns>The value as an array in the requested byte order</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -65,7 +65,7 @@ public static class ByteArrayExtensions
    /// <summary>
    /// Convert a uint into an array of bytes
    /// </summary>
-   /// <param name="data">the uint to convert</param>
+   /// <param name="data">the <see cref="uint"/> to convert</param>
    /// <param name="endian">The order in which to store the bytes</param>
    /// <returns>The value as an array in the requested byte order</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -79,7 +79,7 @@ public static class ByteArrayExtensions
    /// <summary>
    /// Convert an int into an array of bytes
    /// </summary>
-   /// <param name="data">the int to convert</param>
+   /// <param name="data">the <see cref="int"/> to convert</param>
    /// <param name="endian">The order in which to store the bytes</param>
    /// <returns>The value as an array in the requested byte order</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -91,9 +91,9 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Convert a ulong into an array of bytes
+   /// Convert a <see cref="ulong"/> into an array of bytes
    /// </summary>
-   /// <param name="data">the ulong to convert</param>
+   /// <param name="data">the <see cref="ulong"/> to convert</param>
    /// <param name="endian">The order in which to store the bytes</param>
    /// <returns>The value as an array in the requested byte order</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -105,9 +105,9 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Convert a long into an array of bytes
+   /// Convert a <see cref="long"/> into an array of bytes
    /// </summary>
-   /// <param name="data">the long to convert</param>
+   /// <param name="data">the <see cref="long"/> to convert</param>
    /// <param name="endian">The order in which to store the bytes</param>
    /// <returns>The value as an array in the requested byte order</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -119,13 +119,11 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts bytes into a byte, discarding any excess data.
+   /// Converts bytes into a <see cref="byte"/>, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
-   /// <param name="endian">
-   /// A setting indicating the endianness of the source data. The default is Endian.Little.
-   /// </param>
-   /// <returns>The converted byte</returns>
+   /// <param name="endian">The endian for the bytes.</param>
+   /// <returns>The converted <see cref="byte"/></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte ToByte(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
@@ -135,13 +133,11 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts bytes into an sbyte, discarding any excess data.
+   /// Converts bytes into an <see cref="sbyte"/>, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
-   /// <param name="endian">
-   /// A setting indicating the endianness of the source data. The default is Endian.Little.
-   /// </param>
-   /// <returns>The converted sbyte</returns>
+   /// <param name="endian">The endian for the bytes.</param>
+   /// <returns>The converted <see cref="sbyte"/></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static sbyte ToSByte(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
@@ -151,13 +147,11 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts bytes into a ushort, discarding any excess data.
+   /// Converts bytes into a <see cref="ushort"/>, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
-   /// <param name="endian">
-   /// A setting indicating the endianness of the source data. The default is Endian.Little.
-   /// </param>
-   /// <returns>The converted ushort</returns>
+   /// <param name="endian">The endian for the bytes.</param>
+   /// <returns>The converted <see cref="ushort"/></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ushort ToUInt16(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
@@ -183,13 +177,11 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts bytes into a short, discarding any excess data.
+   /// Converts bytes into a <see cref="short"/>, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
-   /// <param name="endian">
-   /// A setting indicating the endianness of the source data. The default is Endian.Little.
-   /// </param>
-   /// <returns>The converted short</returns>
+   /// <param name="endian">The endian for the bytes.</param>
+   /// <returns>The converted <see cref="short"/></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static short ToInt16(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
@@ -217,13 +209,11 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts bytes into a uint, discarding any excess data.
+   /// Converts bytes into a <see cref="uint"/>, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
-   /// <param name="endian">
-   /// A setting indicating the endianness of the source data. The default is Endian.Little.
-   /// </param>
-   /// <returns>The converted uint</returns>
+   /// <param name="endian">The endian for the bytes.</param>
+   /// <returns>The converted <see cref="uint"/></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static uint ToUInt32(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
@@ -251,13 +241,11 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts bytes into an int, discarding any excess data.
+   /// Converts bytes into an <see cref="int"/>, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
-   /// <param name="endian">
-   /// A setting indicating the endianness of the source data. The default is Endian.Little.
-   /// </param>
-   /// <returns>The converted int</returns>
+   /// <param name="endian">The endian for the bytes.</param>
+   /// <returns>The converted <see cref="int"/></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int ToInt32(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
@@ -285,13 +273,11 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts bytes into a ulong, discarding any excess data.
+   /// Converts bytes into a <see cref="ulong"/>, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
-   /// <param name="endian">
-   /// A setting indicating the endianness of the source data. The default is Endian.Little.
-   /// </param>
-   /// <returns>The converted ulong</returns>
+   /// <param name="endian">The endian for the bytes.</param>
+   /// <returns>The converted <see cref="ulong"/></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ulong ToUInt64(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
@@ -319,13 +305,11 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts bytes into a long, discarding any excess data.
+   /// Converts bytes into a <see cref="long"/>, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
-   /// <param name="endian">
-   /// A setting indicating the endianness of the source data. The default is Endian.Little.
-   /// </param>
-   /// <returns>The converted long</returns>
+   /// <param name="endian">The endian for the bytes.</param>
+   /// <returns>The converted <see cref="long"/></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static long ToInt64(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
@@ -353,13 +337,11 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts bytes into a byte, discarding any excess data.
+   /// Converts bytes into a <see cref="byte"/>, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
-   /// <param name="endian">
-   /// A setting indicating the endianness of the source data. The default is Endian.Little.
-   /// </param>
-   /// <returns>The converted byte</returns>
+   /// <param name="endian">The endian for the bytes.</param>
+   /// <returns>The converted <see cref="byte"/></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte ToByte(this byte[] data, Endian endian = Endian.Little)
    {
@@ -369,12 +351,10 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts bytes into an sbyte, discarding any excess data.
+   /// Converts bytes into an <see cref="sbyte"/>, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
-   /// <param name="endian">
-   /// A setting indicating the endianness of the source data. The default is Endian.Little.
-   /// </param>
+   /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted sbyte</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static sbyte ToSByte(this byte[] data, Endian endian = Endian.Little)
@@ -385,13 +365,11 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts bytes into a ushort, discarding any excess data.
+   /// Converts bytes into a <see cref="ushort"/>, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
-   /// <param name="endian">
-   /// A setting indicating the endianness of the source data. The default is Endian.Little.
-   /// </param>
-   /// <returns>The converted ushort</returns>
+   /// <param name="endian">The endian for the bytes.</param>
+   /// <returns>The converted <see cref="ushort"/></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ushort ToUInt16(this byte[] data, Endian endian = Endian.Little)
    {
@@ -423,13 +401,11 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts bytes into a short, discarding any excess data.
+   /// Converts bytes into a <see cref="short"/>, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
-   /// <param name="endian">
-   /// A setting indicating the endianness of the source data. The default is Endian.Little.
-   /// </param>
-   /// <returns>The converted short</returns>
+   /// <param name="endian">The endian for the bytes.</param>
+   /// <returns>The converted <see cref="short"/></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static short ToInt16(this byte[] data, Endian endian = Endian.Little)
    {
@@ -461,13 +437,11 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts bytes into a uint, discarding any excess data.
+   /// Converts bytes into a <see cref="uint"/>, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
-   /// <param name="endian">
-   /// A setting indicating the endianness of the source data. The default is Endian.Little.
-   /// </param>
-   /// <returns>The converted uint</returns>
+   /// <param name="endian">The endian for the bytes.</param>
+   /// <returns>The converted <see cref="uint"/></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static uint ToUInt32(this byte[] data, Endian endian = Endian.Little)
    {
@@ -517,13 +491,11 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts bytes into an int, discarding any excess data.
+   /// Converts bytes into an <see cref="uint"/>, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
-   /// <param name="endian">
-   /// A setting indicating the endianness of the source data. The default is Endian.Little.
-   /// </param>
-   /// <returns>The converted int</returns>
+   /// <param name="endian">The endian for the bytes.</param>
+   /// <returns>The converted <see cref="uint"/></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int ToInt32(this byte[] data, Endian endian = Endian.Little)
    {
@@ -573,13 +545,11 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts bytes into a ulong, discarding any excess data.
+   /// Converts bytes into a <see cref="ulong"/>, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
-   /// <param name="endian">
-   /// A setting indicating the endianness of the source data. The default is Endian.Little.
-   /// </param>
-   /// <returns>The converted ulong</returns>
+   /// <param name="endian">The endian for the bytes.</param>
+   /// <returns>The converted <see cref="ulong"/></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ulong ToUInt64(this byte[] data, Endian endian = Endian.Little)
    {
@@ -665,13 +635,11 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts bytes into a long, discarding any excess data.
+   /// Converts bytes into a <see cref="long"/>, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
-   /// <param name="endian">
-   /// A setting indicating the endianness of the source data. The default is Endian.Little.
-   /// </param>
-   /// <returns>The converted long</returns>
+   /// <param name="endian">The endian for the bytes.</param>
+   /// <returns>The converted <see cref="long"/></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static long ToInt64(this byte[] data, Endian endian = Endian.Little)
    {

@@ -13,7 +13,7 @@ public byte this[int index] { get; set; }
 
 `index` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The index of the byte to get or set. 0 is the least significant byte from the underlying storage.
+The index of the byte to get or set.
 
 Implements [this[int]](Jcd.BitManipulation.IByteIndexer.this[int].md 'Jcd.BitManipulation.IByteIndexer.this[int]')
 

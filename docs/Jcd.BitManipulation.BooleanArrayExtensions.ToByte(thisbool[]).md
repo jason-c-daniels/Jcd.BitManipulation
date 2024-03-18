@@ -2,7 +2,8 @@
 
 ## BooleanArrayExtensions.ToByte(this bool[]) Method
 
-Converts an array of bools into a byte, discarding any excess bits.
+Converts an array of bools into a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte'),
+discarding any excess bits.
 
 ```csharp
 public static byte ToByte(this bool[] bits);
@@ -16,5 +17,6 @@ public static byte ToByte(this bool[] bits);
 the array of bools to convert, Least Significant Bit at index 0
 
 #### Returns
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
-The converted byte
+The converted [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')

@@ -2,7 +2,8 @@
 
 ## BitIndexerSByte Struct
 
-Provides enumeration and indexed access to the bits on a stored sbyte.
+Provides enumeration and indexed access to the bits on a
+stored [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte').
 
 ```csharp
 public struct BitIndexerSByte :
@@ -29,10 +30,10 @@ Implements [IBitIndexer](Jcd.BitManipulation.IBitIndexer.md 'Jcd.BitManipulation
 | [Slice(int, int)](Jcd.BitManipulation.BitIndexerSByte.Slice(int,int).md 'Jcd.BitManipulation.BitIndexerSByte.Slice(int, int)') | Get a subset of bits given a starting offset and length. |
 | [ToString()](Jcd.BitManipulation.BitIndexerSByte.ToString().md 'Jcd.BitManipulation.BitIndexerSByte.ToString()') | Format as a bit representation |
 
-| Operators | |
-| :--- | :--- |
-| [implicit operator BitIndexerSByte(sbyte)](Jcd.BitManipulation.BitIndexerSByte.op_ImplicitJcd.BitManipulation.BitIndexerSByte(sbyte).md 'Jcd.BitManipulation.BitIndexerSByte.op_Implicit Jcd.BitManipulation.BitIndexerSByte(sbyte)') | Automatically Convert from an sbyte to a BitIndexerSByte |
-| [implicit operator sbyte(BitIndexerSByte)](Jcd.BitManipulation.BitIndexerSByte.op_Implicitsbyte(Jcd.BitManipulation.BitIndexerSByte).md 'Jcd.BitManipulation.BitIndexerSByte.op_Implicit sbyte(Jcd.BitManipulation.BitIndexerSByte)') | Automatically convert from a BitIndexerSByte to an sbyte |
+| Operators                                                                                                                                                                                                                             |                                                                                                                                            |
+|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------|
+| [implicit operator BitIndexerSByte(sbyte)](Jcd.BitManipulation.BitIndexerSByte.op_ImplicitJcd.BitManipulation.BitIndexerSByte(sbyte).md 'Jcd.BitManipulation.BitIndexerSByte.op_Implicit Jcd.BitManipulation.BitIndexerSByte(sbyte)') | Automatically Convert from an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte') to a BitIndexerSByte |
+| [implicit operator sbyte(BitIndexerSByte)](Jcd.BitManipulation.BitIndexerSByte.op_Implicitsbyte(Jcd.BitManipulation.BitIndexerSByte).md 'Jcd.BitManipulation.BitIndexerSByte.op_Implicit sbyte(Jcd.BitManipulation.BitIndexerSByte)') | Automatically convert from a BitIndexerSByte to an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte') |
 
 | Explicit Interface Implementations | |
 | :--- | :--- |

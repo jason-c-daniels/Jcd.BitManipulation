@@ -2,7 +2,8 @@
 
 ## BitIndexerInt64.implicit operator BitIndexerInt64(long) Operator
 
-Automatically Convert from a long to a BitIndexerInt64
+Automatically Convert from a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64') to
+a BitIndexerInt64
 
 ```csharp
 public static Jcd.BitManipulation.BitIndexerInt64 implicit operator BitIndexerInt64(long bits);
@@ -16,5 +17,6 @@ public static Jcd.BitManipulation.BitIndexerInt64 implicit operator BitIndexerIn
 the initial value for the indexer's backing store
 
 #### Returns
+
 [BitIndexerInt64](Jcd.BitManipulation.BitIndexerInt64.md 'Jcd.BitManipulation.BitIndexerInt64')
 A new BitIndexerInt64

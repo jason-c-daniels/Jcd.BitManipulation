@@ -2,7 +2,8 @@
 
 ## LittleEndianByteIndexerInt16.implicit operator short(LittleEndianByteIndexerInt16) Operator
 
-Converts the byte indexer to its underlying data type.
+Converts the [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') indexer to its
+underlying data type.
 
 ```csharp
 public static short implicit operator short(Jcd.BitManipulation.LittleEndianByteIndexerInt16 buffer);
@@ -16,5 +17,6 @@ public static short implicit operator short(Jcd.BitManipulation.LittleEndianByte
 The buffer to convert.
 
 #### Returns
+
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 The raw data.

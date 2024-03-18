@@ -16,6 +16,5 @@ public static bool[] ToBooleanArray(this ulong bits);
 the ulong to convert
 
 #### Returns
-
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
-the array. LSB at index 0
+the array. Least Significant Bit at index 0

@@ -3,7 +3,6 @@
 ## ReadBytesExtensions.ReadBytes(this ushort, int, int, Endian) Method
 
 Reads a set of bytes starting at the specified byte location within the value.
-The offsets are in LSB, this means the array will be little endian.
 
 ```csharp
 public static byte[] ReadBytes(this ushort value, int offset, int size, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
@@ -35,6 +34,5 @@ The byte size of the value.
 The endianness of the byte indexing within the value.
 
 #### Returns
-
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 A little endian byte array of the value.

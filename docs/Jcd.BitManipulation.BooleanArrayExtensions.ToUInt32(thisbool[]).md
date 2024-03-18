@@ -13,9 +13,8 @@ public static uint ToUInt32(this bool[] bits);
 
 `bits` [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 
-the array of bools to convert, LSB at index 0
+the array of bools to convert, Least Significant Bit at index 0
 
 #### Returns
-
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 The converted uint

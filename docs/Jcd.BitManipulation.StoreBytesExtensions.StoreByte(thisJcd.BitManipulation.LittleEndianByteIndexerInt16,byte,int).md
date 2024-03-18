@@ -3,7 +3,6 @@
 ## StoreBytesExtensions.StoreByte(this LittleEndianByteIndexerInt16, byte, int) Method
 
 Store a single byte to the value at the specified byte offset.
-Byte indexing is LSB, least significant byte, at index/offset zero.
 
 ```csharp
 public static Jcd.BitManipulation.LittleEndianByteIndexerInt16 StoreByte(this Jcd.BitManipulation.LittleEndianByteIndexerInt16 value, byte @byte, int offset);
@@ -29,6 +28,5 @@ The byte value to set
 the offset of the byte to write
 
 #### Returns
-
 [LittleEndianByteIndexerInt16](Jcd.BitManipulation.LittleEndianByteIndexerInt16.md 'Jcd.BitManipulation.LittleEndianByteIndexerInt16')
 The modified value.

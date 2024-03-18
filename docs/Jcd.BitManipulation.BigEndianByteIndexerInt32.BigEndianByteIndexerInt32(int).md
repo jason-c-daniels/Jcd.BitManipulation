@@ -2,9 +2,7 @@
 
 ## BigEndianByteIndexerInt32(int) Constructor
 
-Constructs
-a [BigEndianByteIndexerInt32](Jcd.BitManipulation.BigEndianByteIndexerInt32.md 'Jcd.BitManipulation.BigEndianByteIndexerInt32')
-from an [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32').
+Constructs a [BigEndianByteIndexerInt32](Jcd.BitManipulation.BigEndianByteIndexerInt32.md 'Jcd.BitManipulation.BigEndianByteIndexerInt32') from an [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32').
 
 ```csharp
 public BigEndianByteIndexerInt32(int data=0);

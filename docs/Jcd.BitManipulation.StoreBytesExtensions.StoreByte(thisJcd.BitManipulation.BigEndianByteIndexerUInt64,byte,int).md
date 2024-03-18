@@ -3,7 +3,6 @@
 ## StoreBytesExtensions.StoreByte(this BigEndianByteIndexerUInt64, byte, int) Method
 
 Store a single byte to the value at the specified byte offset.
-Byte indexing is MSB, most significant byte, at index/offset zero.
 
 ```csharp
 public static Jcd.BitManipulation.BigEndianByteIndexerUInt64 StoreByte(this Jcd.BitManipulation.BigEndianByteIndexerUInt64 value, byte @byte, int offset);
@@ -29,6 +28,5 @@ The byte value to set
 the offset of the byte to write
 
 #### Returns
-
 [BigEndianByteIndexerUInt64](Jcd.BitManipulation.BigEndianByteIndexerUInt64.md 'Jcd.BitManipulation.BigEndianByteIndexerUInt64')
 The modified value.

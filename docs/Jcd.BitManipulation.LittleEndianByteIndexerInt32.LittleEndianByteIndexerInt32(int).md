@@ -2,9 +2,7 @@
 
 ## LittleEndianByteIndexerInt32(int) Constructor
 
-Constructs
-a [LittleEndianByteIndexerInt32](Jcd.BitManipulation.LittleEndianByteIndexerInt32.md 'Jcd.BitManipulation.LittleEndianByteIndexerInt32')
-from an [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32').
+Constructs a [LittleEndianByteIndexerInt32](Jcd.BitManipulation.LittleEndianByteIndexerInt32.md 'Jcd.BitManipulation.LittleEndianByteIndexerInt32') from an [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32').
 
 ```csharp
 public LittleEndianByteIndexerInt32(int data=0);

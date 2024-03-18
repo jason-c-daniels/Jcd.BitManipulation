@@ -3,7 +3,6 @@
 ## StoreBytesExtensions.StoreBytes(this BigEndianByteIndexerInt32, ReadOnlySpan<byte>, int, int) Method
 
 Stores a set of bytes starting at the specified byte location within the indexer.
-Byte indexing is LSB, least significant byte, at index/offset zero.
 
 ```csharp
 public static Jcd.BitManipulation.BigEndianByteIndexerInt32 StoreBytes(this Jcd.BitManipulation.BigEndianByteIndexerInt32 indexer, System.ReadOnlySpan<byte> bytes, int offset, int size=-1);
@@ -35,6 +34,5 @@ The byte location to store the value.
 The number of bytes from the source, to store. -1 means all bytes.
 
 #### Returns
-
 [BigEndianByteIndexerInt32](Jcd.BitManipulation.BigEndianByteIndexerInt32.md 'Jcd.BitManipulation.BigEndianByteIndexerInt32')
 The modified value.

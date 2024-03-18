@@ -1,11 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
    <PropertyGroup>
-      <TargetFramework>netstandard2.0</TargetFramework>
       <LangVersion>latest</LangVersion>
       <Nullable>disable</Nullable>
       <PackageTags>c# csharp bit manipulation</PackageTags>
       <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+      <DefineConstants Condition="'$(TargetFramework)' == 'netstandard2.0'">$(DefineConstants);SUPPRESS_SINGLE_CONVERSIONS</DefineConstants>
+      <TargetFramework>netstandard2.0</TargetFramework>
    </PropertyGroup>
 
    <ItemGroup>
@@ -64,6 +65,9 @@
       <Compile Remove="BigEndianByteIndexerUInt64.cs"/>
       <Compile Remove="LittleEndianByteIndexerInt32.cs"/>
       <Compile Remove="LittleEndianByteIndexerUInt32.cs"/>
+      <Compile Remove="ReadBitsExtensions.Int64AndUInt64.cs"/>
+      <Compile Remove="ReadBitsExtensions.Int32AndUInt32.cs"/>
+      <Compile Remove="ReadBitsExtensions.Int16AndUInt16.cs"/>
    </ItemGroup>
 
 </Project>

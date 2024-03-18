@@ -34,6 +34,8 @@ internal static class Program
       #else
       const int iterations = 100_000_000;
       #endif
+      var f      = 1.33f;
+      var bits   = f.ToUInt32Bits().ReadBits(0, 4);
       var ul     = 0xFFFEFDFEFCFBFAF9;
       var ulbi   = (BigEndianByteIndexerUInt64) ul;
       var b0     = ulbi[0];

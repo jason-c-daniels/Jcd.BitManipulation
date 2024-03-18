@@ -2403,6 +2403,115 @@
             Indicates that Big Endian is in use.
             </summary>
         </member>
+       <member name="T:Jcd.BitManipulation.FloatingPointExtensions">
+          <summary>
+             Methods to convert to and from like sized integers and floating point numbers.
+          </summary>
+       </member>
+       <member name="M:Jcd.BitManipulation.FloatingPointExtensions.ToUInt32Bits(System.Single)">
+          <summary>
+             Converts a
+             <see cref="T:System.Single"/>
+             to the bit-wise identical
+             <see cref="T:System.UInt32"/>
+          </summary>
+          <param name="value">The value to convert</param>
+          <returns>the
+             <see cref="T:System.UInt32"/>
+             representation of the underlying bits
+          </returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.FloatingPointExtensions.ToInt32Bits(System.Single)">
+          <summary>
+             Converts a
+             <see cref="T:System.Single"/>
+             to the bit-wise identical
+             <see cref="T:System.Int32"/>
+          </summary>
+          <param name="value">The value to convert</param>
+          <returns>the
+             <see cref="T:System.Int32"/>
+             representation of the underlying bits
+          </returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.FloatingPointExtensions.FromUInt32Bits(System.UInt32)">
+          <summary>
+             Converts a
+             <see cref="T:System.UInt32"/>
+             to the bit-wise identical
+             <see cref="T:System.Single"/>
+          </summary>
+          <param name="value">The value to convert</param>
+          <returns>the
+             <see cref="T:System.Single"/>
+             representation of the bits
+          </returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.FloatingPointExtensions.FromInt32Bits(System.Int32)">
+          <summary>
+             Converts a
+             <see cref="T:System.Int32"/>
+             to the bit-wise identical
+             <see cref="T:System.Single"/>
+          </summary>
+          <param name="value">The value to convert</param>
+          <returns>the
+             <see cref="T:System.Single"/>
+             representation of the bits
+          </returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.FloatingPointExtensions.ToUInt64Bits(System.Double)">
+          <summary>
+             Converts a
+             <see cref="T:System.Double"/>
+             to the bit-wise identical
+             <see cref="T:System.UInt64"/>
+          </summary>
+          <param name="value">The value to convert</param>
+          <returns>the
+             <see cref="T:System.UInt64"/>
+             representation of the underlying bits
+          </returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.FloatingPointExtensions.ToInt64Bits(System.Double)">
+          <summary>
+             Converts a
+             <see cref="T:System.Double"/>
+             to the bit-wise identical
+             <see cref="T:System.Int64"/>
+          </summary>
+          <param name="value">The value to convert</param>
+          <returns>the
+             <see cref="T:System.Int64"/>
+             representation of the underlying bits
+          </returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.FloatingPointExtensions.FromUInt64Bits(System.UInt64)">
+          <summary>
+             Converts a
+             <see cref="T:System.UInt64"/>
+             to the bit-wise identical
+             <see cref="T:System.Double"/>
+          </summary>
+          <param name="value">The value to convert</param>
+          <returns>the
+             <see cref="T:System.Double"/>
+             representation of the bits
+          </returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.FloatingPointExtensions.FromInt64Bits(System.Int64)">
+          <summary>
+             Converts a
+             <see cref="T:System.Int64"/>
+             to the bit-wise identical
+             <see cref="T:System.Double"/>
+          </summary>
+          <param name="value">The value to convert</param>
+          <returns>the
+             <see cref="T:System.Double"/>
+             representation of the bits
+          </returns>
+       </member>
         <member name="T:Jcd.BitManipulation.NamespaceDoc">
             <summary>
             Provides a set of extension methods and types to assist with

@@ -24,7 +24,7 @@ namespace Jcd.BitManipulation.Examples;
 
 internal static class Program
 {
-   private static void Main()
+   public static void Main()
    {
       ReadMe_BitManipulation_Example();
       // chaining operations, the same steps and end results

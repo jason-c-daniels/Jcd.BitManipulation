@@ -28,5 +28,6 @@ The offset of where to begin clearing bits.
 The number of bits to clear.
 
 #### Returns
+
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 The modified value.

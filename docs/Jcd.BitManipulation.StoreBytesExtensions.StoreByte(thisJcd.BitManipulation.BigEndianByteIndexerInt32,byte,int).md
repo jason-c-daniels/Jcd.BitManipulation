@@ -28,5 +28,6 @@ The byte value to set
 the offset of the byte to write
 
 #### Returns
+
 [BigEndianByteIndexerInt32](Jcd.BitManipulation.BigEndianByteIndexerInt32.md 'Jcd.BitManipulation.BigEndianByteIndexerInt32')
 The modified value.

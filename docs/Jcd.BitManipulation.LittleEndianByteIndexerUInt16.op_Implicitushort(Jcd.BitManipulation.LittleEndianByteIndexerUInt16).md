@@ -17,5 +17,6 @@ public static ushort implicit operator ushort(Jcd.BitManipulation.LittleEndianBy
 The buffer to convert.
 
 #### Returns
+
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 The raw data.

@@ -34,5 +34,6 @@ The byte location to store the value.
 The number of bytes from the source, to store. -1 means all bytes.
 
 #### Returns
+
 [BigEndianByteIndexerUInt16](Jcd.BitManipulation.BigEndianByteIndexerUInt16.md 'Jcd.BitManipulation.BigEndianByteIndexerUInt16')
 The modified value.

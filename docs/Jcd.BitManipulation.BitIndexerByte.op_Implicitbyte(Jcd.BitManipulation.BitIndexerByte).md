@@ -17,5 +17,6 @@ public static byte implicit operator byte(Jcd.BitManipulation.BitIndexerByte ind
 the indexer to convert from
 
 #### Returns
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 the [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')

@@ -4,7 +4,6 @@
 ## StoreBytesExtensions.StoreBytes(this short, ReadOnlySpan<byte>, int, int, Endian) Method
 
 Stores a set of bytes starting at the specified byte location within the value.
-Byte indexing is LSB, least significant byte, at index/offset zero.
 
 ```csharp
 public static short StoreBytes(this short value, System.ReadOnlySpan<byte> bytes, int offset, int size=-1, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);

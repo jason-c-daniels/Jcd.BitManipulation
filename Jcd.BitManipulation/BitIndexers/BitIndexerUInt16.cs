@@ -16,7 +16,7 @@ using System.Text;
 namespace Jcd.BitManipulation.BitIndexers;
 
 /// <summary>
-/// Provides enumeration and indexed access to the bits on a stored ushort. 
+/// Provides enumeration and indexed access to the bits on a stored <see cref="ushort"/>. 
 /// </summary>
 public struct BitIndexerUInt16 : IBitIndexer
 {
@@ -31,7 +31,7 @@ public struct BitIndexerUInt16 : IBitIndexer
    public ushort Bits { get; set; }
 
    /// <summary>
-   /// The length of enumerated bits
+   /// The number of bits indexable by this indexer.
    /// </summary>
    public int Length => BitSize;
 
@@ -46,7 +46,7 @@ public struct BitIndexerUInt16 : IBitIndexer
    }
 
    /// <summary>
-   /// Automatically Convert from a ushort to a BitIndexerUInt16
+   /// Automatically Convert from a <see cref="ushort"/> to a BitIndexerUInt16
    /// </summary>
    /// <param name="bits">the initial value for the indexer's backing store</param>
    /// <returns>A new BitIndexerUInt16</returns>
@@ -54,10 +54,10 @@ public struct BitIndexerUInt16 : IBitIndexer
    public static implicit operator BitIndexerUInt16(ushort bits) { return new BitIndexerUInt16 { Bits = bits }; }
 
    /// <summary>
-   /// Automatically convert from a BitIndexerUInt16 to a ushort
+   /// Automatically convert from a BitIndexerUInt16 to a <see cref="ushort"/>
    /// </summary>
    /// <param name="indexer">the indexer to convert from</param>
-   /// <returns>the ushort</returns>
+   /// <returns>the <see cref="ushort"/></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator ushort(BitIndexerUInt16 indexer) { return indexer.Bits; }
 

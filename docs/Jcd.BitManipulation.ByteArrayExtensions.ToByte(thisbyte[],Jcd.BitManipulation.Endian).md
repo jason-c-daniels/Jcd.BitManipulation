@@ -3,7 +3,8 @@
 
 ## ByteArrayExtensions.ToByte(this byte[], Endian) Method
 
-Converts bytes into a byte, discarding any excess data.
+Converts bytes into a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte'), discarding
+any excess data.
 
 ```csharp
 public static byte ToByte(this byte[] data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
@@ -20,9 +21,9 @@ the bytes to convert
 
 `endian` [Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian')
 
-A setting indicating the endianness of the source data. The default is Endian.Little.
+The endian for the bytes.
 
 #### Returns
 
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
-The converted byte
+The converted [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')

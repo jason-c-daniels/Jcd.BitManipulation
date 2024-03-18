@@ -4,7 +4,6 @@
 ## ReadBytesExtensions.ReadBytes(this int, int, int, Endian) Method
 
 Reads a set of bytes starting at the specified byte location within the value.
-The offsets are in LSB, this means the array will be little endian.
 
 ```csharp
 public static byte[] ReadBytes(this int value, int offset, int size, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
@@ -21,7 +20,7 @@ The value to be read.
 
 `offset` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The byte location to store the value.
+The offset to read the bytes from.
 
 <a name='Jcd.BitManipulation.ReadBytesExtensions.ReadBytes(thisint,int,int,Jcd.BitManipulation.Endian).size'></a>
 
@@ -33,9 +32,9 @@ The byte size of the value.
 
 `endian` [Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian')
 
-The endianness of the byte indexing within the value.
+The endianness of the indexing.
 
 #### Returns
 
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
-A little endian byte array of the value.
+A byte array of the value in the specified endian.

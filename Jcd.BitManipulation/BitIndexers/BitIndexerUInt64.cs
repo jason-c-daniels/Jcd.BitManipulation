@@ -16,7 +16,7 @@ using System.Text;
 namespace Jcd.BitManipulation.BitIndexers;
 
 /// <summary>
-/// Provides enumeration and indexed access to the bits on a stored ulong. 
+/// Provides enumeration and indexed access to the bits on a stored <see cref="ulong"/>. 
 /// </summary>
 public struct BitIndexerUInt64 : IBitIndexer
 {
@@ -31,7 +31,7 @@ public struct BitIndexerUInt64 : IBitIndexer
    public ulong Bits { get; set; }
 
    /// <summary>
-   /// The length of enumerated bits
+   /// The number of bits indexable by this indexer.
    /// </summary>
    public int Length => BitSize;
 
@@ -46,7 +46,7 @@ public struct BitIndexerUInt64 : IBitIndexer
    }
 
    /// <summary>
-   /// Automatically Convert from a ulong to a BitIndexerUInt64
+   /// Automatically Convert from a <see cref="ulong"/> to a BitIndexerUInt64
    /// </summary>
    /// <param name="bits">the initial value for the indexer's backing store</param>
    /// <returns>A new BitIndexerUInt64</returns>
@@ -54,10 +54,10 @@ public struct BitIndexerUInt64 : IBitIndexer
    public static implicit operator BitIndexerUInt64(ulong bits) { return new BitIndexerUInt64 { Bits = bits }; }
 
    /// <summary>
-   /// Automatically convert from a BitIndexerUInt64 to a ulong
+   /// Automatically convert from a BitIndexerUInt64 to a <see cref="ulong"/>
    /// </summary>
    /// <param name="indexer">the indexer to convert from</param>
-   /// <returns>the ulong</returns>
+   /// <returns>the underlying value</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator ulong(BitIndexerUInt64 indexer) { return indexer.Bits; }
 

@@ -20,67 +20,125 @@ public class StoreBytesExtensionsTests
    #region StoreByte - Intrinsic Data Types Tests
 
    [Theory]
-   [InlineData(0, (byte) 0x01, 0, 0x00_00_00_00_00_00_00_01)]
-   [InlineData(0, (byte) 0x02, 1, 0x00_00_00_00_00_00_02_00)]
-   [InlineData(0, (byte) 0xFF, 2, 0x00_00_00_00_00_FF_00_00)]
-   [InlineData(0, (byte) 0xFE, 3, 0x00_00_00_00_FE_00_00_00)]
-   [InlineData(0, (byte) 0xFD, 4, 0x00_00_00_FD_00_00_00_00)]
-   [InlineData(0, (byte) 0xFC, 5, 0x00_00_FC_00_00_00_00_00)]
-   [InlineData(0, (byte) 0xFB, 6, 0x00_FB_00_00_00_00_00_00)]
-   [InlineData(0, (byte) 0xFA, 7, 0xFA_00_00_00_00_00_00_00)]
-   public void StoreByte_On_UInt64_Returns_Expected_Value(ulong value, byte data, int offset, ulong expected)
+   [InlineData(0, (byte) 0x01, 0, 0x00_00_00_00_00_00_00_01, Endian.Little)]
+   [InlineData(0, (byte) 0x02, 1, 0x00_00_00_00_00_00_02_00, Endian.Little)]
+   [InlineData(0, (byte) 0xFF, 2, 0x00_00_00_00_00_FF_00_00, Endian.Little)]
+   [InlineData(0, (byte) 0xFE, 3, 0x00_00_00_00_FE_00_00_00, Endian.Little)]
+   [InlineData(0, (byte) 0xFD, 4, 0x00_00_00_FD_00_00_00_00, Endian.Little)]
+   [InlineData(0, (byte) 0xFC, 5, 0x00_00_FC_00_00_00_00_00, Endian.Little)]
+   [InlineData(0, (byte) 0xFB, 6, 0x00_FB_00_00_00_00_00_00, Endian.Little)]
+   [InlineData(0, (byte) 0xFA, 7, 0xFA_00_00_00_00_00_00_00, Endian.Little)]
+   [InlineData(0, (byte) 0x01, 7, 0x00_00_00_00_00_00_00_01, Endian.Big)]
+   [InlineData(0, (byte) 0x02, 6, 0x00_00_00_00_00_00_02_00, Endian.Big)]
+   [InlineData(0, (byte) 0xFF, 5, 0x00_00_00_00_00_FF_00_00, Endian.Big)]
+   [InlineData(0, (byte) 0xFE, 4, 0x00_00_00_00_FE_00_00_00, Endian.Big)]
+   [InlineData(0, (byte) 0xFD, 3, 0x00_00_00_FD_00_00_00_00, Endian.Big)]
+   [InlineData(0, (byte) 0xFC, 2, 0x00_00_FC_00_00_00_00_00, Endian.Big)]
+   [InlineData(0, (byte) 0xFB, 1, 0x00_FB_00_00_00_00_00_00, Endian.Big)]
+   [InlineData(0, (byte) 0xFA, 0, 0xFA_00_00_00_00_00_00_00, Endian.Big)]
+   public void StoreByte_On_UInt64_Returns_Expected_Value(
+      ulong  value
+    , byte   data
+    , int    offset
+    , ulong  expected
+    , Endian endian
+   )
    {
-      Assert.Equal(expected, value.StoreByte(data, offset));
+      Assert.Equal(expected, value.StoreByte(data, offset, endian));
    }
 
    [Theory]
-   [InlineData((long) 0, (byte) 0x01, 0, (long) 0x00_00_00_00_00_00_00_01)]
-   [InlineData((long) 0, (byte) 0x02, 1, (long) 0x00_00_00_00_00_00_02_00)]
-   [InlineData((long) 0, (byte) 0xFF, 2, (long) 0x00_00_00_00_00_FF_00_00)]
-   [InlineData((long) 0, (byte) 0xFE, 3, (long) 0x00_00_00_00_FE_00_00_00)]
-   [InlineData((long) 0, (byte) 0xFD, 4, 0x00_00_00_FD_00_00_00_00)]
-   [InlineData((long) 0, (byte) 0xFC, 5, 0x00_00_FC_00_00_00_00_00)]
-   [InlineData((long) 0, (byte) 0xFB, 6, 0x00_FB_00_00_00_00_00_00)]
-   [InlineData((long) 0, (byte) 0x0A, 7, 0x0A_00_00_00_00_00_00_00)]
-   public void StoreByte_On_Int64_Returns_Expected_Value(long value, byte data, int offset, long expected)
+   [InlineData(0, (byte) 0x01, 0, 0x00_00_00_00_00_00_00_01L, Endian.Little)]
+   [InlineData(0, (byte) 0x02, 1, 0x00_00_00_00_00_00_02_00L, Endian.Little)]
+   [InlineData(0, (byte) 0xFF, 2, 0x00_00_00_00_00_FF_00_00L, Endian.Little)]
+   [InlineData(0, (byte) 0xFE, 3, 0x00_00_00_00_FE_00_00_00L, Endian.Little)]
+   [InlineData(0, (byte) 0xFD, 4, 0x00_00_00_FD_00_00_00_00L, Endian.Little)]
+   [InlineData(0, (byte) 0xFC, 5, 0x00_00_FC_00_00_00_00_00L, Endian.Little)]
+   [InlineData(0, (byte) 0xFB, 6, 0x00_FB_00_00_00_00_00_00L, Endian.Little)]
+   [InlineData(0, (byte) 0xFA, 7, 0xFA_00_00_00_00_00_00_00L, Endian.Little)]
+   [InlineData(0, (byte) 0x01, 7, 0x00_00_00_00_00_00_00_01L, Endian.Big)]
+   [InlineData(0, (byte) 0x02, 6, 0x00_00_00_00_00_00_02_00L, Endian.Big)]
+   [InlineData(0, (byte) 0xFF, 5, 0x00_00_00_00_00_FF_00_00L, Endian.Big)]
+   [InlineData(0, (byte) 0xFE, 4, 0x00_00_00_00_FE_00_00_00L, Endian.Big)]
+   [InlineData(0, (byte) 0xFD, 3, 0x00_00_00_FD_00_00_00_00L, Endian.Big)]
+   [InlineData(0, (byte) 0xFC, 2, 0x00_00_FC_00_00_00_00_00L, Endian.Big)]
+   [InlineData(0, (byte) 0xFB, 1, 0x00_FB_00_00_00_00_00_00L, Endian.Big)]
+   [InlineData(0, (byte) 0xFA, 0, 0xFA_00_00_00_00_00_00_00L, Endian.Big)]
+   public void StoreByte_On_Int64_Returns_Expected_Value(
+      long   value
+    , byte   data
+    , int    offset
+    , ulong  expected
+    , Endian endian
+   )
    {
-      Assert.Equal(expected, value.StoreByte(data, offset));
+      Assert.Equal((long) expected, value.StoreByte(data, offset, endian));
    }
 
    [Theory]
-   [InlineData(0, (byte) 0x01, 0, 0x00_00_00_01)]
-   [InlineData(0, (byte) 0x02, 1, 0x00_00_02_00)]
-   [InlineData(0, (byte) 0xFF, 2, 0x00_FF_00_00)]
-   [InlineData(0, (byte) 0xFE, 3, 0xFE_00_00_00)]
-   public void StoreByte_On_UInt32_Returns_Expected_Value(uint value, byte data, int offset, uint expected)
+   [InlineData(0, (byte) 0x01, 0, 0x00_00_00_01, Endian.Little)]
+   [InlineData(0, (byte) 0x02, 1, 0x00_00_02_00, Endian.Little)]
+   [InlineData(0, (byte) 0xFF, 2, 0x00_FF_00_00, Endian.Little)]
+   [InlineData(0, (byte) 0xFE, 3, 0xFE_00_00_00, Endian.Little)]
+   [InlineData(0, (byte) 0x01, 0, 0x01_00_00_00, Endian.Big)]
+   [InlineData(0, (byte) 0x02, 1, 0x00_02_00_00, Endian.Big)]
+   [InlineData(0, (byte) 0xFF, 2, 0x00_00_FF_00, Endian.Big)]
+   [InlineData(0, (byte) 0xFE, 3, 0x00_00_00_FE, Endian.Big)]
+   public void StoreByte_On_UInt32_Returns_Expected_Value(
+      uint   value
+    , byte   data
+    , int    offset
+    , uint   expected
+    , Endian endian
+   )
    {
-      Assert.Equal(expected, value.StoreByte(data, offset));
+      Assert.Equal(expected, value.StoreByte(data, offset, endian));
    }
 
    [Theory]
-   [InlineData(0, (byte) 0x01, 0, 0x00_00_00_01)]
-   [InlineData(0, (byte) 0x02, 1, 0x00_00_02_00)]
-   [InlineData(0, (byte) 0xFF, 2, 0x00_FF_00_00)]
-   [InlineData(0, (byte) 0x0E, 3, 0x0E_00_00_00)]
-   public void StoreByte_On_Int32_Returns_Expected_Value(int value, byte data, int offset, int expected)
+   [InlineData(0, (byte) 0x01, 0, 0x00_00_00_01, Endian.Little)]
+   [InlineData(0, (byte) 0x02, 1, 0x00_00_02_00, Endian.Little)]
+   [InlineData(0, (byte) 0xFF, 2, 0x00_FF_00_00, Endian.Little)]
+   [InlineData(0, (byte) 0xFE, 3, 0xFE_00_00_00, Endian.Little)]
+   [InlineData(0, (byte) 0x01, 0, 0x01_00_00_00, Endian.Big)]
+   [InlineData(0, (byte) 0x02, 1, 0x00_02_00_00, Endian.Big)]
+   [InlineData(0, (byte) 0xFF, 2, 0x00_00_FF_00, Endian.Big)]
+   [InlineData(0, (byte) 0xFE, 3, 0x00_00_00_FE, Endian.Big)]
+   public void StoreByte_On_Int32_Returns_Expected_Value(int value, byte data, int offset, uint expected, Endian endian)
    {
-      Assert.Equal(expected, value.StoreByte(data, offset));
+      Assert.Equal((int) expected, value.StoreByte(data, offset, endian));
    }
 
    [Theory]
-   [InlineData(0, (byte) 0x01, 0, 0x00_01)]
-   [InlineData(0, (byte) 0x02, 1, 0x02_00)]
-   public void StoreByte_On_UInt16_Returns_Expected_Value(ushort value, byte data, int offset, ushort expected)
+   [InlineData(0, (byte) 0x01, 0, 0x00_01, Endian.Little)]
+   [InlineData(0, (byte) 0x02, 1, 0x02_00, Endian.Little)]
+   [InlineData(0, (byte) 0x01, 0, 0x01_00, Endian.Big)]
+   [InlineData(0, (byte) 0x02, 1, 0x00_02, Endian.Big)]
+   public void StoreByte_On_UInt16_Returns_Expected_Value(
+      ushort value
+    , byte   data
+    , int    offset
+    , ushort expected
+    , Endian endian
+   )
    {
-      Assert.Equal(expected, value.StoreByte(data, offset));
+      Assert.Equal(expected, value.StoreByte(data, offset, endian));
    }
 
    [Theory]
-   [InlineData((short) 0, (byte) 0x01, 0, (short) 0x00_01)]
-   [InlineData((short) 0, (byte) 0x02, 1, (short) 0x02_00)]
-   public void StoreByte_On_Int16_Returns_Expected_Value(short value, byte data, int offset, short expected)
+   [InlineData(0, (byte) 0x01, 0, (short) 0x00_01, Endian.Little)]
+   [InlineData(0, (byte) 0x02, 1, (short) 0x02_00, Endian.Little)]
+   [InlineData(0, (byte) 0x01, 0, (short) 0x01_00, Endian.Big)]
+   [InlineData(0, (byte) 0x02, 1, (short) 0x00_02, Endian.Big)]
+   public void StoreByte_On_Int16_Returns_Expected_Value(
+      short  value
+    , byte   data
+    , int    offset
+    , short  expected
+    , Endian endian
+   )
    {
-      Assert.Equal(expected, value.StoreByte(data, offset));
+      Assert.Equal(expected, value.StoreByte(data, offset, endian));
    }
 
    #endregion

@@ -5,7 +5,6 @@
 ## StoreBytesExtensions.StoreByte(this float, byte, int) Method
 
 Store a single byte to the value at the specified byte offset.
-Byte indexing is LSB, least significant byte, at index/offset zero.
 
 ```csharp
 public static float StoreByte(this float value, byte @byte, int offset);

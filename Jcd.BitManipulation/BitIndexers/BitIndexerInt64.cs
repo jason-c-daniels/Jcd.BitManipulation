@@ -16,7 +16,7 @@ using System.Text;
 namespace Jcd.BitManipulation.BitIndexers;
 
 /// <summary>
-/// Provides enumeration and indexed access to the bits on a stored long. 
+/// Provides enumeration and indexed access to the bits on a stored <see cref="long"/>. 
 /// </summary>
 public struct BitIndexerInt64 : IBitIndexer
 {
@@ -31,7 +31,7 @@ public struct BitIndexerInt64 : IBitIndexer
    public long Bits { get; set; }
 
    /// <summary>
-   /// The length of enumerated bits
+   /// The number of bits indexable by this indexer.
    /// </summary>
    public int Length => BitSize;
 
@@ -46,7 +46,7 @@ public struct BitIndexerInt64 : IBitIndexer
    }
 
    /// <summary>
-   /// Automatically Convert from a long to a BitIndexerInt64
+   /// Automatically Convert from a <see cref="long"/> to a BitIndexerInt64
    /// </summary>
    /// <param name="bits">the initial value for the indexer's backing store</param>
    /// <returns>A new BitIndexerInt64</returns>
@@ -54,10 +54,10 @@ public struct BitIndexerInt64 : IBitIndexer
    public static implicit operator BitIndexerInt64(long bits) { return new BitIndexerInt64 { Bits = bits }; }
 
    /// <summary>
-   /// Automatically convert from a BitIndexerInt64 to a long
+   /// Automatically convert from a BitIndexerInt64 to a <see cref="long"/>
    /// </summary>
    /// <param name="indexer">the indexer to convert from</param>
-   /// <returns>the long</returns>
+   /// <returns>the underlying value</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator long(BitIndexerInt64 indexer) { return indexer.Bits; }
 

@@ -16,7 +16,7 @@ using System.Text;
 namespace Jcd.BitManipulation.BitIndexers;
 
 /// <summary>
-/// Provides enumeration and indexed access to the bits on a stored short. 
+/// Provides enumeration and indexed access to the bits on a stored <see cref="short"/>. 
 /// </summary>
 public struct BitIndexerInt16 : IBitIndexer
 {
@@ -31,7 +31,7 @@ public struct BitIndexerInt16 : IBitIndexer
    public short Bits { get; set; }
 
    /// <summary>
-   /// The length of enumerated bits
+   /// The number of bits indexable by this indexer.
    /// </summary>
    public int Length => BitSize;
 
@@ -46,7 +46,7 @@ public struct BitIndexerInt16 : IBitIndexer
    }
 
    /// <summary>
-   /// Automatically Convert from a short to a BitIndexerInt16
+   /// Automatically Convert from a <see cref="short"/> to a BitIndexerInt16
    /// </summary>
    /// <param name="bits">the initial value for the indexer's backing store</param>
    /// <returns>A new BitIndexerInt16</returns>
@@ -54,10 +54,10 @@ public struct BitIndexerInt16 : IBitIndexer
    public static implicit operator BitIndexerInt16(short bits) { return new BitIndexerInt16 { Bits = bits }; }
 
    /// <summary>
-   /// Automatically convert from a BitIndexerInt16 to a short
+   /// Automatically convert from a BitIndexerInt16 to a <see cref="short"/>
    /// </summary>
    /// <param name="indexer">the indexer to convert from</param>
-   /// <returns>the short</returns>
+   /// <returns>the <see cref="short"/></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator short(BitIndexerInt16 indexer) { return indexer.Bits; }
 

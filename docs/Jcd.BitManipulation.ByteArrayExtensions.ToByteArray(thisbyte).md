@@ -3,7 +3,7 @@
 
 ## ByteArrayExtensions.ToByteArray(this byte) Method
 
-Convert a byte into an array of bytes
+Convert a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') into an array of bytes
 
 ```csharp
 public static byte[] ToByteArray(this byte data);
@@ -14,9 +14,9 @@ public static byte[] ToByteArray(this byte data);
 
 `data` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
-the byte to convert
+the [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') to convert
 
 #### Returns
 
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
-an array containing the byte.
+an array containing the [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte').

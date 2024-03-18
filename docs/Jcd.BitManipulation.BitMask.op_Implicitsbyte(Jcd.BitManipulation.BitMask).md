@@ -19,4 +19,5 @@ the [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') to c
 #### Returns
 
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
-the lowest 8 bits of the mask as a signed byte
+the lowest 8 bits of the mask as a
+signed [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')

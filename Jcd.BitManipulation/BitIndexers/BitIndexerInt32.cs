@@ -16,7 +16,7 @@ using System.Text;
 namespace Jcd.BitManipulation.BitIndexers;
 
 /// <summary>
-/// Provides enumeration and indexed access to the bits on a stored int. 
+/// Provides enumeration and indexed access to the bits on a stored <see cref="int"/>. 
 /// </summary>
 public struct BitIndexerInt32 : IBitIndexer
 {
@@ -31,7 +31,7 @@ public struct BitIndexerInt32 : IBitIndexer
    public int Bits { get; set; }
 
    /// <summary>
-   /// The length of enumerated bits
+   /// The number of bits indexable by this indexer.
    /// </summary>
    public int Length => BitSize;
 
@@ -46,7 +46,7 @@ public struct BitIndexerInt32 : IBitIndexer
    }
 
    /// <summary>
-   /// Automatically Convert from an int to a BitIndexerInt32
+   /// Automatically Convert from an <see cref="int"/> to a BitIndexerInt32
    /// </summary>
    /// <param name="bits">the initial value for the indexer's backing store</param>
    /// <returns>A new BitIndexerInt32</returns>
@@ -54,10 +54,10 @@ public struct BitIndexerInt32 : IBitIndexer
    public static implicit operator BitIndexerInt32(int bits) { return new BitIndexerInt32 { Bits = bits }; }
 
    /// <summary>
-   /// Automatically convert from a BitIndexerInt32 to an int
+   /// Automatically convert from a BitIndexerInt32 to an <see cref="int"/>
    /// </summary>
    /// <param name="indexer">the indexer to convert from</param>
-   /// <returns>the int</returns>
+   /// <returns>the <see cref="int"/></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator int(BitIndexerInt32 indexer) { return indexer.Bits; }
 

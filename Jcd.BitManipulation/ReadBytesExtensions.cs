@@ -16,7 +16,6 @@ public static class ReadBytesExtensions
 
    /// <summary>
    /// Reads a set of bytes starting at the specified byte location within the value.
-   /// The offsets are in LSB, this means the array will be little endian.
    /// </summary>
    /// <param name="value">The value to be read.</param>
    /// <param name="offset">The byte location to store the value.</param>
@@ -33,7 +32,6 @@ public static class ReadBytesExtensions
 
    /// <summary>
    /// Reads a set of bytes starting at the specified byte location within the value.
-   /// The offsets are in LSB, this means the array will be little endian.
    /// </summary>
    /// <param name="value">The value to be read.</param>
    /// <param name="offset">The byte location to store the value.</param>
@@ -50,7 +48,6 @@ public static class ReadBytesExtensions
 
    /// <summary>
    /// Reads a set of bytes starting at the specified byte location within the value.
-   /// The offsets are in LSB, this means the array will be little endian.
    /// </summary>
    /// <param name="value">The value to be read.</param>
    /// <param name="offset">The byte location to store the value.</param>
@@ -67,7 +64,6 @@ public static class ReadBytesExtensions
 
    /// <summary>
    /// Reads a set of bytes starting at the specified byte location within the value.
-   /// The offsets are in LSB, this means the array will be little endian.
    /// </summary>
    /// <param name="value">The value to be read.</param>
    /// <param name="offset">The byte location to store the value.</param>
@@ -84,7 +80,6 @@ public static class ReadBytesExtensions
 
    /// <summary>
    /// Reads a set of bytes starting at the specified byte location within the value.
-   /// The offsets are in LSB, this means the array will be little endian.
    /// </summary>
    /// <param name="value">The value to be read.</param>
    /// <param name="offset">The byte location to store the value.</param>
@@ -101,7 +96,6 @@ public static class ReadBytesExtensions
 
    /// <summary>
    /// Reads a set of bytes starting at the specified byte location within the value.
-   /// The offsets are in LSB, this means the array will be little endian.
    /// </summary>
    /// <param name="value">The value to be read.</param>
    /// <param name="offset">The byte location to store the value.</param>

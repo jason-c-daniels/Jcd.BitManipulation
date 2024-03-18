@@ -17,7 +17,7 @@ public static class BooleanArrayExtensions
    /// Convert a byte into an array of bools
    /// </summary>
    /// <param name="bits">the byte to convert</param>
-   /// <returns>the array. LSB at index 0</returns>
+   /// <returns>the array. Least Significant Bit at index 0</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool[] ToBooleanArray(this byte bits)
    {
@@ -28,7 +28,7 @@ public static class BooleanArrayExtensions
    /// Convert an sbyte into an array of bools
    /// </summary>
    /// <param name="bits">the sbyte to convert</param>
-   /// <returns>the array. LSB at index 0</returns>
+   /// <returns>the array. Least Significant Bit at index 0</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool[] ToBooleanArray(this sbyte bits)
    {
@@ -39,7 +39,7 @@ public static class BooleanArrayExtensions
    /// Convert a ushort into an array of bools
    /// </summary>
    /// <param name="bits">the bits of the ushort to convert</param>
-   /// <returns>the array. LSB at index 0</returns>
+   /// <returns>the array. Least Significant Bit at index 0</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool[] ToBooleanArray(this ushort bits)
    {
@@ -50,7 +50,7 @@ public static class BooleanArrayExtensions
    /// Convert a short into an array of bools
    /// </summary>
    /// <param name="bits">the short to convert</param>
-   /// <returns>the array. LSB at index 0</returns>
+   /// <returns>the array. Least Significant Bit at index 0</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool[] ToBooleanArray(this short bits)
    {
@@ -61,7 +61,7 @@ public static class BooleanArrayExtensions
    /// Convert a uint into an array of bools
    /// </summary>
    /// <param name="bits">the uint to convert</param>
-   /// <returns>the array. LSB at index 0</returns>
+   /// <returns>the array. Least Significant Bit at index 0</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool[] ToBooleanArray(this uint bits)
    {
@@ -72,7 +72,7 @@ public static class BooleanArrayExtensions
    /// Convert an int into an array of bools
    /// </summary>
    /// <param name="bits">the int to convert</param>
-   /// <returns>the array. LSB at index 0</returns>
+   /// <returns>the array. Least Significant Bit at index 0</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool[] ToBooleanArray(this int bits)
    {
@@ -83,7 +83,7 @@ public static class BooleanArrayExtensions
    /// Convert a ulong into an array of bools
    /// </summary>
    /// <param name="bits">the ulong to convert</param>
-   /// <returns>the array. LSB at index 0</returns>
+   /// <returns>the array. Least Significant Bit at index 0</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool[] ToBooleanArray(this ulong bits)
    {
@@ -94,7 +94,7 @@ public static class BooleanArrayExtensions
    /// Convert a long into an array of bools
    /// </summary>
    /// <param name="bits">the long to convert</param>
-   /// <returns>the array. LSB at index 0</returns>
+   /// <returns>the array. Least Significant Bit at index 0</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool[] ToBooleanArray(this long bits)
    {
@@ -104,7 +104,7 @@ public static class BooleanArrayExtensions
    /// <summary>
    /// Converts an array of bools into a byte, discarding any excess bits.
    /// </summary>
-   /// <param name="bits">the array of bools to convert, LSB at index 0</param>
+   /// <param name="bits">the array of bools to convert, Least Significant Bit at index 0</param>
    /// <returns>The converted byte</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte ToByte(this bool[] bits)
@@ -118,7 +118,7 @@ public static class BooleanArrayExtensions
    /// <summary>
    /// Converts an array of bools into an sbyte, discarding any excess bits.
    /// </summary>
-   /// <param name="bits">the array of bools to convert, LSB at index 0</param>
+   /// <param name="bits">the array of bools to convert, Least Significant Bit at index 0</param>
    /// <returns>The converted sbyte</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static sbyte ToSByte(this bool[] bits)
@@ -132,7 +132,7 @@ public static class BooleanArrayExtensions
    /// <summary>
    /// Converts an array of bools into a ushort, discarding any excess bits.
    /// </summary>
-   /// <param name="bits">the array of bools to convert, LSB at index 0</param>
+   /// <param name="bits">the array of bools to convert, Least Significant Bit at index 0</param>
    /// <returns>The converted ushort</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ushort ToUInt16(this bool[] bits)
@@ -146,7 +146,7 @@ public static class BooleanArrayExtensions
    /// <summary>
    /// Converts an array of bools into a short, discarding any excess bits.
    /// </summary>
-   /// <param name="bits">the array of bools to convert, LSB at index 0</param>
+   /// <param name="bits">the array of bools to convert, Least Significant Bit at index 0</param>
    /// <returns>The converted short</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static short ToInt16(this bool[] bits)
@@ -160,7 +160,7 @@ public static class BooleanArrayExtensions
    /// <summary>
    /// Converts an array of bools into a uint, discarding any excess bits.
    /// </summary>
-   /// <param name="bits">the array of bools to convert, LSB at index 0</param>
+   /// <param name="bits">the array of bools to convert, Least Significant Bit at index 0</param>
    /// <returns>The converted uint</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static uint ToUInt32(this bool[] bits)
@@ -174,7 +174,7 @@ public static class BooleanArrayExtensions
    /// <summary>
    /// Converts an array of bools into an int, discarding any excess bits.
    /// </summary>
-   /// <param name="bits">the array of bools to convert, LSB at index 0</param>
+   /// <param name="bits">the array of bools to convert, Least Significant Bit at index 0</param>
    /// <returns>The converted int</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int ToInt32(this bool[] bits)
@@ -188,7 +188,7 @@ public static class BooleanArrayExtensions
    /// <summary>
    /// Converts an array of bools into a ulong, discarding any excess bits.
    /// </summary>
-   /// <param name="bits">the array of bools to convert, LSB at index 0</param>
+   /// <param name="bits">the array of bools to convert, Least Significant Bit at index 0</param>
    /// <returns>The converted ulong</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ulong ToUInt64(this bool[] bits)
@@ -202,7 +202,7 @@ public static class BooleanArrayExtensions
    /// <summary>
    /// Converts an array of bools into a long, discarding any excess bits.
    /// </summary>
-   /// <param name="bits">the array of bools to convert, LSB at index 0</param>
+   /// <param name="bits">the array of bools to convert, Least Significant Bit at index 0</param>
    /// <returns>The converted long</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static long ToInt64(this bool[] bits)

@@ -5,7 +5,9 @@ using System.Linq;
 
 using Xunit;
 
+// ReSharper disable RedundantExplicitArrayCreation
 // ReSharper disable HeapView.ObjectAllocation.Evident
+// ReSharper disable HeapView.ObjectAllocation
 
 #endregion
 
@@ -887,7 +889,7 @@ public class ByteArrayExtensionTests
    [InlineData(0x03, 0x03)]
    public void ToByte_On_ReadOnlySpan(byte d0, byte expected)
    {
-      Assert.Equal(expected, new ReadOnlySpan<byte>(new[] { d0 }).ToByte());
+      Assert.Equal(expected, new ReadOnlySpan<byte>([d0]).ToByte());
    }
 
    [Theory]
@@ -896,7 +898,7 @@ public class ByteArrayExtensionTests
    [InlineData(0x03, 0x03)]
    public void ToSByte_On_ReadOnlySpan(byte d0, sbyte expected)
    {
-      Assert.Equal(expected, new ReadOnlySpan<byte>(new[] { d0 }).ToSByte());
+      Assert.Equal(expected, new ReadOnlySpan<byte>([d0]).ToSByte());
    }
 
    [Theory]

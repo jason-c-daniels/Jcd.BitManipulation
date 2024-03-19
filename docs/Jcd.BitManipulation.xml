@@ -2924,7 +2924,7 @@
                data = data.ToggleBits(); // value is now 0b0000111111110000
 
                var finalData = data;
-            // read the upper byte
+               // read the upper byte
                var upperByte = (byte) data.ReadBits(8, 8); // upperByte is now 0b00001111
             
             // write 0b1011 into the upper nybble
@@ -4362,7 +4362,8 @@
           <param name="endian">The endianness for indexing into the bytes.</param>
             <returns>The modified value.</returns>
         </member>
-       <member name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(System.Single,System.Byte,System.Int32)">
+       <member
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(System.Single,System.Byte,System.Int32,Jcd.BitManipulation.Endian)">
           <summary>
              Store a single byte to the value at the specified byte offset.
              Byte indexing is LSB, least significant byte, at index/offset zero.
@@ -4370,9 +4371,11 @@
           <param name="value">The value to be modified.</param>
           <param name="byte">The byte value to set</param>
           <param name="offset">the offset of the byte to write</param>
+          <param name="endian">The endianness of the indexing within the value.</param>
           <returns>The modified value.</returns>
        </member>
-       <member name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(System.Double,System.Byte,System.Int32)">
+       <member
+          name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(System.Double,System.Byte,System.Int32,Jcd.BitManipulation.Endian)">
           <summary>
              Store a single byte to the value at the specified byte offset.
              Byte indexing is LSB, least significant byte, at index/offset zero.
@@ -4380,6 +4383,7 @@
           <param name="value">The value to be modified.</param>
           <param name="byte">The byte value to set</param>
           <param name="offset">the offset of the byte to write</param>
+          <param name="endian">The endianness of the indexing within the value.</param>
           <returns>The modified value.</returns>
        </member>
         <member name="M:Jcd.BitManipulation.StoreBytesExtensions.StoreByte(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64,System.Byte,System.Int32)">

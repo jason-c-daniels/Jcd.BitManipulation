@@ -1,7 +1,12 @@
+#region
 using System;
 using System.Runtime.CompilerServices;
 
+// ReSharper disable MemberCanBePrivate.Global
+
 namespace Jcd.BitManipulation;
+
+#endregion
 
 /// <summary>
 /// Methods to convert to and from like sized integers and floating point numbers.

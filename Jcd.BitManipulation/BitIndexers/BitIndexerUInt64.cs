@@ -49,10 +49,10 @@ public struct BitIndexerUInt64 : IBitIndexer
    }
 
    /// <summary>
-   /// Automatically Convert from a <see cref="ulong"/> to a BitIndexerUInt64
+   /// Automatically Convert from a <see cref="ulong"/> to a <see cref="BitIndexerUInt64"/>
    /// </summary>
    /// <param name="bits">the initial value for the indexer's backing store</param>
-   /// <returns>A new BitIndexerUInt64</returns>
+   /// <returns>A new <see cref="BitIndexerUInt64"/></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitIndexerUInt64(ulong bits) { return new BitIndexerUInt64 { Bits = bits }; }
 

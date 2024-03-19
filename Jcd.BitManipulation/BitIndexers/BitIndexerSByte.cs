@@ -49,10 +49,10 @@ public struct BitIndexerSByte : IBitIndexer
    }
 
    /// <summary>
-   /// Automatically Convert from an <see cref="sbyte"/> to a BitIndexerSByte
+   /// Automatically Convert from an <see cref="sbyte"/> to a <see cref="BitIndexerSByte"/>
    /// </summary>
    /// <param name="bits">the initial value for the indexer's backing store</param>
-   /// <returns>A new BitIndexerSByte</returns>
+   /// <returns>A new <see cref="BitIndexerSByte"/></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitIndexerSByte(sbyte bits) { return new BitIndexerSByte { Bits = bits }; }
 

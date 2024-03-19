@@ -49,10 +49,10 @@ public struct BitIndexerInt64 : IBitIndexer
    }
 
    /// <summary>
-   /// Automatically Convert from a <see cref="long"/> to a BitIndexerInt64
+   /// Automatically Convert from a <see cref="long"/> to a <see cref="BitIndexerInt64"/>
    /// </summary>
    /// <param name="bits">the initial value for the indexer's backing store</param>
-   /// <returns>A new BitIndexerInt64</returns>
+   /// <returns>A new <see cref="BitIndexerInt64"/></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitIndexerInt64(long bits) { return new BitIndexerInt64 { Bits = bits }; }
 

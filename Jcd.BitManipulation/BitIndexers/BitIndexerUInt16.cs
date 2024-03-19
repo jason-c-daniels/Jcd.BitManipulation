@@ -49,10 +49,10 @@ public struct BitIndexerUInt16 : IBitIndexer
    }
 
    /// <summary>
-   /// Automatically Convert from a <see cref="ushort"/> to a BitIndexerUInt16
+   /// Automatically Convert from a <see cref="ushort"/> to a <see cref="BitIndexerUInt16"/>
    /// </summary>
    /// <param name="bits">the initial value for the indexer's backing store</param>
-   /// <returns>A new BitIndexerUInt16</returns>
+   /// <returns>A new <see cref="BitIndexerUInt16"/></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitIndexerUInt16(ushort bits) { return new BitIndexerUInt16 { Bits = bits }; }
 

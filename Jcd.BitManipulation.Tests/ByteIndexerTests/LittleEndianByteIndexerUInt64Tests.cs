@@ -20,7 +20,7 @@ namespace Jcd.BitManipulation.Tests.ByteIndexerTests;
 public class LittleEndianByteIndexerUInt64Tests
 {
    [Fact]
-   public void Constant_ByteSize_Is_Two() { Assert.Equal(sizeof(ulong), LittleEndianByteIndexerUInt64.ByteSize); }
+   public void Constant_ByteSize_Is_Eight() { Assert.Equal(sizeof(ulong), LittleEndianByteIndexerUInt64.ByteSize); }
 
    [Fact]
    public void Length_Is_BitSize()
@@ -34,9 +34,9 @@ public class LittleEndianByteIndexerUInt64Tests
    [InlineData(0x20FE)]
    [InlineData(0x337F)]
    [InlineData(0b111001100011000)]
-   public void Implicit_Conversion_Operators_Round_Trip_Returns_Original_Value(uint data)
+   public void Implicit_Conversion_Operators_Round_Trip_Returns_Original_Value(ulong data)
    {
-      var                           expected      = (ushort) data;
+      var                           expected      = data;
       LittleEndianByteIndexerUInt64 sut           = expected;
       ulong                         convertedBack = sut;
       Assert.Equal(expected, convertedBack);
@@ -49,7 +49,7 @@ public class LittleEndianByteIndexerUInt64Tests
    [InlineData(0x01FF, 1, 0x01)]
    [InlineData(0x02FE, 1, 0x02)]
    [InlineData(0x037F, 1, 0x03)]
-   public void Indexer_Get_Returns_Expected_Value(uint data, int index, uint extractedData)
+   public void Indexer_Get_Returns_Expected_Value(ulong data, int index, byte extractedData)
    {
       var                           expected = (ushort) extractedData;
       LittleEndianByteIndexerUInt64 sut      = (ushort) data;

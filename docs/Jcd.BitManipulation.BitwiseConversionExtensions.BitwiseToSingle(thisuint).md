@@ -1,7 +1,8 @@
 #### [Jcd.BitManipulation](index.md 'index')
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[FloatingPointExtensions](Jcd.BitManipulation.FloatingPointExtensions.md 'Jcd.BitManipulation.FloatingPointExtensions')
 
-## FloatingPointExtensions.BitwiseToSingle(this uint) Method
+### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BitwiseConversionExtensions](Jcd.BitManipulation.BitwiseConversionExtensions.md 'Jcd.BitManipulation.BitwiseConversionExtensions')
+
+## BitwiseConversionExtensions.BitwiseToSingle(this uint) Method
 
 Converts a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32') to the bit-wise
 identical [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
@@ -9,9 +10,10 @@ identical [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Sin
 ```csharp
 public static float BitwiseToSingle(this uint value);
 ```
+
 #### Parameters
 
-<a name='Jcd.BitManipulation.FloatingPointExtensions.BitwiseToSingle(thisuint).value'></a>
+<a name='Jcd.BitManipulation.BitwiseConversionExtensions.BitwiseToSingle(thisuint).value'></a>
 
 `value` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 

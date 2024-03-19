@@ -34,7 +34,7 @@ public class BigEndianByteIndexerInt16Tests
    [InlineData(0x20FE)]
    [InlineData(0x337F)]
    [InlineData(0b111001100011000)]
-   public void Implicit_Conversion_Operators_Round_Trip_Returns_Original_Value(uint data)
+   public void Implicit_Conversion_Operators_Round_Trip_Returns_Original_Value(short data)
    {
       var                       expected      = (short) data;
       BigEndianByteIndexerInt16 sut           = expected;
@@ -49,10 +49,10 @@ public class BigEndianByteIndexerInt16Tests
    [InlineData(0x01FF, 0, 0x01)]
    [InlineData(0x02FE, 0, 0x02)]
    [InlineData(0x037F, 0, 0x03)]
-   public void Indexer_Get_Returns_Expected_Value(uint data, int index, byte extractedData)
+   public void Indexer_Get_Returns_Expected_Value(short data, int index, byte extractedData)
    {
-      var                       expected = (short) extractedData;
-      BigEndianByteIndexerInt16 sut      = (short) data;
+      var                       expected = extractedData;
+      BigEndianByteIndexerInt16 sut      = data;
       Assert.Equal(expected, sut[index]);
    }
 

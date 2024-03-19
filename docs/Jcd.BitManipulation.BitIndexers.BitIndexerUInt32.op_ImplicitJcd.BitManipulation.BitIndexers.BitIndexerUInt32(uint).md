@@ -4,7 +4,8 @@
 ## BitIndexerUInt32.implicit operator BitIndexerUInt32(uint) Operator
 
 Automatically Convert from a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
-to a BitIndexerUInt32
+to
+a [BitIndexerUInt32](Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.md 'Jcd.BitManipulation.BitIndexers.BitIndexerUInt32')
 
 ```csharp
 public static Jcd.BitManipulation.BitIndexers.BitIndexerUInt32 implicit operator BitIndexerUInt32(uint bits);
@@ -20,4 +21,5 @@ the initial value for the indexer's backing store
 #### Returns
 
 [BitIndexerUInt32](Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.md 'Jcd.BitManipulation.BitIndexers.BitIndexerUInt32')
-A new BitIndexerUInt32
+A
+new [BitIndexerUInt32](Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.md 'Jcd.BitManipulation.BitIndexers.BitIndexerUInt32')

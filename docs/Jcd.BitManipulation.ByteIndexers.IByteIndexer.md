@@ -12,15 +12,19 @@ System.Collections.IEnumerable
 ```
 
 Derived
+&#8627; [BigEndianByteIndexerDouble](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerDouble.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerDouble')
 &#8627; [BigEndianByteIndexerInt16](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt16')
 &#8627; [BigEndianByteIndexerInt32](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt32.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt32')
 &#8627; [BigEndianByteIndexerInt64](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerInt64')
+&#8627; [BigEndianByteIndexerSingle](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerSingle.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerSingle')
 &#8627; [BigEndianByteIndexerUInt16](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt16.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt16')
 &#8627; [BigEndianByteIndexerUInt32](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt32.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt32')
 &#8627; [BigEndianByteIndexerUInt64](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt64.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt64')
+&#8627; [LittleEndianByteIndexerDouble](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerDouble.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerDouble')
 &#8627; [LittleEndianByteIndexerInt16](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt16.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt16')
 &#8627; [LittleEndianByteIndexerInt32](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt32')
 &#8627; [LittleEndianByteIndexerInt64](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt64.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerInt64')
+&#8627; [LittleEndianByteIndexerSingle](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerSingle.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerSingle')
 &#8627; [LittleEndianByteIndexerUInt16](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt16')
 &#8627; [LittleEndianByteIndexerUInt32](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt32.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt32')
 &#8627; [LittleEndianByteIndexerUInt64](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerUInt64')

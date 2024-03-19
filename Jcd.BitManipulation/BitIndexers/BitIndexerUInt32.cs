@@ -49,10 +49,10 @@ public struct BitIndexerUInt32 : IBitIndexer
    }
 
    /// <summary>
-   /// Automatically Convert from a <see cref="uint"/> to a BitIndexerUInt32
+   /// Automatically Convert from a <see cref="uint"/> to a <see cref="BitIndexerUInt32"/>
    /// </summary>
    /// <param name="bits">the initial value for the indexer's backing store</param>
-   /// <returns>A new BitIndexerUInt32</returns>
+   /// <returns>A new <see cref="BitIndexerUInt32"/></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitIndexerUInt32(uint bits) { return new BitIndexerUInt32 { Bits = bits }; }
 

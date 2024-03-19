@@ -20,7 +20,7 @@ namespace Jcd.BitManipulation.Tests.ByteIndexerTests;
 public class BigEndianByteIndexerUInt32Tests
 {
    [Fact]
-   public void Constant_ByteSize_Is_Two() { Assert.Equal(sizeof(int), BigEndianByteIndexerUInt32.ByteSize); }
+   public void Constant_ByteSize_Is_Four() { Assert.Equal(sizeof(uint), BigEndianByteIndexerUInt32.ByteSize); }
 
    [Fact]
    public void Length_Is_BitSize()

@@ -10,9 +10,9 @@ namespace Jcd.BitManipulation;
 #endregion
 
 /// <summary>
-/// Methods to convert to and from like sized integers and floating point numbers.
+/// Methods to convert bits to and from the same size integer and floating point numbers.
 /// </summary>
-public static class FloatingPointExtensions
+public static class BitwiseConversionExtensions
 {
    /// <summary>
    /// Converts a <see cref="float"/> to the bit-wise identical <see cref="uint"/>

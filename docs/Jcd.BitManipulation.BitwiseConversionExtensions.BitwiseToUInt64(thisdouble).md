@@ -1,7 +1,8 @@
 #### [Jcd.BitManipulation](index.md 'index')
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[FloatingPointExtensions](Jcd.BitManipulation.FloatingPointExtensions.md 'Jcd.BitManipulation.FloatingPointExtensions')
 
-## FloatingPointExtensions.BitwiseToUInt64(this double) Method
+### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BitwiseConversionExtensions](Jcd.BitManipulation.BitwiseConversionExtensions.md 'Jcd.BitManipulation.BitwiseConversionExtensions')
+
+## BitwiseConversionExtensions.BitwiseToUInt64(this double) Method
 
 Converts a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double') to the bit-wise
 identical [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
@@ -9,9 +10,10 @@ identical [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UIn
 ```csharp
 public static ulong BitwiseToUInt64(this double value);
 ```
+
 #### Parameters
 
-<a name='Jcd.BitManipulation.FloatingPointExtensions.BitwiseToUInt64(thisdouble).value'></a>
+<a name='Jcd.BitManipulation.BitwiseConversionExtensions.BitwiseToUInt64(thisdouble).value'></a>
 
 `value` [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 

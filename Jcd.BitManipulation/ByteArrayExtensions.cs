@@ -52,9 +52,7 @@ public static class ByteArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ToByteArray(this ushort data, Endian endian = Endian.Little)
    {
-      return endian == Endian.Big
-                ? new BigEndianByteIndexerUInt16 { Data    = data }[0..^0]
-                : new LittleEndianByteIndexerUInt16 { Data = data }[0..^0];
+      return endian == Endian.Big ? new BigEndianByteIndexerUInt16 { Data = data }[0..^0] : new LittleEndianByteIndexerUInt16 { Data = data }[0..^0];
    }
 
    /// <summary>
@@ -66,9 +64,7 @@ public static class ByteArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ToByteArray(this short data, Endian endian = Endian.Little)
    {
-      return endian == Endian.Big
-                ? new BigEndianByteIndexerInt16 { Data    = data }[0..^0]
-                : new LittleEndianByteIndexerInt16 { Data = data }[0..^0];
+      return endian == Endian.Big ? new BigEndianByteIndexerInt16 { Data = data }[0..^0] : new LittleEndianByteIndexerInt16 { Data = data }[0..^0];
    }
 
    /// <summary>
@@ -80,9 +76,7 @@ public static class ByteArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ToByteArray(this uint data, Endian endian = Endian.Little)
    {
-      return endian == Endian.Big
-                ? new BigEndianByteIndexerUInt32 { Data    = data }[0..^0]
-                : new LittleEndianByteIndexerUInt32 { Data = data }[0..^0];
+      return endian == Endian.Big ? new BigEndianByteIndexerUInt32 { Data = data }[0..^0] : new LittleEndianByteIndexerUInt32 { Data = data }[0..^0];
    }
 
    /// <summary>
@@ -94,9 +88,7 @@ public static class ByteArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ToByteArray(this int data, Endian endian = Endian.Little)
    {
-      return endian == Endian.Big
-                ? new BigEndianByteIndexerInt32 { Data    = data }[0..^0]
-                : new LittleEndianByteIndexerInt32 { Data = data }[0..^0];
+      return endian == Endian.Big ? new BigEndianByteIndexerInt32 { Data = data }[0..^0] : new LittleEndianByteIndexerInt32 { Data = data }[0..^0];
    }
 
    /// <summary>
@@ -108,9 +100,7 @@ public static class ByteArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ToByteArray(this ulong data, Endian endian = Endian.Little)
    {
-      return endian == Endian.Big
-                ? new BigEndianByteIndexerUInt64 { Data    = data }[0..^0]
-                : new LittleEndianByteIndexerUInt64 { Data = data }[0..^0];
+      return endian == Endian.Big ? new BigEndianByteIndexerUInt64 { Data = data }[0..^0] : new LittleEndianByteIndexerUInt64 { Data = data }[0..^0];
    }
 
    /// <summary>
@@ -122,9 +112,7 @@ public static class ByteArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ToByteArray(this long data, Endian endian = Endian.Little)
    {
-      return endian == Endian.Big
-                ? new BigEndianByteIndexerInt64 { Data    = data }[0..^0]
-                : new LittleEndianByteIndexerInt64 { Data = data }[0..^0];
+      return endian == Endian.Big ? new BigEndianByteIndexerInt64 { Data = data }[0..^0] : new LittleEndianByteIndexerInt64 { Data = data }[0..^0];
    }
 
    /// <summary>
@@ -138,9 +126,7 @@ public static class ByteArrayExtensions
    {
       var bits = data.BitwiseToUInt32();
 
-      return endian == Endian.Big
-                ? new BigEndianByteIndexerUInt32 { Data    = bits }[0..^0]
-                : new LittleEndianByteIndexerUInt32 { Data = bits }[0..^0];
+      return endian == Endian.Big ? new BigEndianByteIndexerUInt32 { Data = bits }[0..^0] : new LittleEndianByteIndexerUInt32 { Data = bits }[0..^0];
    }
 
    /// <summary>
@@ -154,9 +140,7 @@ public static class ByteArrayExtensions
    {
       var bits = data.BitwiseToUInt64();
 
-      return endian == Endian.Big
-                ? new BigEndianByteIndexerUInt64 { Data    = bits }[0..^0]
-                : new LittleEndianByteIndexerUInt64 { Data = bits }[0..^0];
+      return endian == Endian.Big ? new BigEndianByteIndexerUInt64 { Data = bits }[0..^0] : new LittleEndianByteIndexerUInt64 { Data = bits }[0..^0];
    }
 
    /// <summary>
@@ -231,9 +215,7 @@ public static class ByteArrayExtensions
       if (endian == Endian.Big)
       {
          BigEndianByteIndexerInt16 result = 0;
-         var o = data.Length >= result.Length
-                    ? 0
-                    : result.Length - data.Length;
+         var                       o      = data.Length >= result.Length ? 0 : result.Length - data.Length;
          for (var i = 0; i < data.Length && i < result.Length; i++)
             result[o + i] = data[i];
 
@@ -263,9 +245,7 @@ public static class ByteArrayExtensions
       if (endian == Endian.Big)
       {
          BigEndianByteIndexerUInt32 result = 0;
-         var o = data.Length >= result.Length
-                    ? 0
-                    : result.Length - data.Length;
+         var                        o      = data.Length >= result.Length ? 0 : result.Length - data.Length;
          for (var i = 0; i < data.Length && i < result.Length; i++)
             result[o + i] = data[i];
 
@@ -295,9 +275,7 @@ public static class ByteArrayExtensions
       if (endian == Endian.Big)
       {
          BigEndianByteIndexerInt32 result = 0;
-         var o = data.Length >= result.Length
-                    ? 0
-                    : result.Length - data.Length;
+         var                       o      = data.Length >= result.Length ? 0 : result.Length - data.Length;
          for (var i = 0; i < data.Length && i < result.Length; i++)
             result[o + i] = data[i];
 
@@ -327,9 +305,7 @@ public static class ByteArrayExtensions
       if (endian == Endian.Big)
       {
          BigEndianByteIndexerUInt64 result = 0;
-         var o = data.Length >= result.Length
-                    ? 0
-                    : result.Length - data.Length;
+         var                        o      = data.Length >= result.Length ? 0 : result.Length - data.Length;
          for (var i = 0; i < data.Length && i < result.Length; i++)
             result[o + i] = data[i];
 
@@ -359,9 +335,7 @@ public static class ByteArrayExtensions
       if (endian == Endian.Big)
       {
          BigEndianByteIndexerInt64 result = 0;
-         var o = data.Length >= result.Length
-                    ? 0
-                    : result.Length - data.Length;
+         var                       o      = data.Length >= result.Length ? 0 : result.Length - data.Length;
          for (var i = 0; i < data.Length && i < result.Length; i++)
             result[o + i] = data[i];
 
@@ -386,10 +360,7 @@ public static class ByteArrayExtensions
    /// </param>
    /// <returns>The converted ulong</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static double ToDouble(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
-   {
-      return data.ToUInt64(endian).BitwiseToDouble();
-   }
+   public static double ToDouble(this ReadOnlySpan<byte> data, Endian endian = Endian.Little) { return data.ToUInt64(endian).BitwiseToDouble(); }
 
    /// <summary>
    /// Converts bytes into a double, discarding any excess data.
@@ -400,10 +371,7 @@ public static class ByteArrayExtensions
    /// </param>
    /// <returns>The converted ulong</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static float ToSingle(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
-   {
-      return data.ToUInt32(endian).BitwiseToSingle();
-   }
+   public static float ToSingle(this ReadOnlySpan<byte> data, Endian endian = Endian.Little) { return data.ToUInt32(endian).BitwiseToSingle(); }
 
    /// <summary>
    /// Converts bytes into a <see cref="byte"/>, discarding any excess data.
@@ -802,10 +770,7 @@ public static class ByteArrayExtensions
    /// </param>
    /// <returns>The converted ulong</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static double ToDouble(this byte[] data, Endian endian = Endian.Little)
-   {
-      return data.ToUInt64(endian).BitwiseToDouble();
-   }
+   public static double ToDouble(this byte[] data, Endian endian = Endian.Little) { return data.ToUInt64(endian).BitwiseToDouble(); }
 
    /// <summary>
    /// Converts bytes into a double, discarding any excess data.
@@ -816,8 +781,5 @@ public static class ByteArrayExtensions
    /// </param>
    /// <returns>The converted ulong</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static float ToSingle(this byte[] data, Endian endian = Endian.Little)
-   {
-      return data.ToUInt32(endian).BitwiseToSingle();
-   }
+   public static float ToSingle(this byte[] data, Endian endian = Endian.Little) { return data.ToUInt32(endian).BitwiseToSingle(); }
 }

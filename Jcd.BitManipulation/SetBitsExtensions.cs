@@ -29,10 +29,7 @@ public static class SetBitsExtensions
    /// <param name="size">The number of bits to set on.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static sbyte SetBits(this sbyte value, int offset = 0, int size = 8)
-   {
-      return value.SetBits(BitMask.FromRange(offset, size));
-   }
+   public static sbyte SetBits(this sbyte value, int offset = 0, int size = 8) { return value.SetBits(BitMask.FromRange(offset, size)); }
 
    /// <summary>
    /// Sets all specified bits to "on" 
@@ -42,10 +39,7 @@ public static class SetBitsExtensions
    /// <param name="size">The number of bits to set on.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static short SetBits(this short value, int offset = 0, int size = 16)
-   {
-      return value.SetBits(BitMask.FromRange(offset, size));
-   }
+   public static short SetBits(this short value, int offset = 0, int size = 16) { return value.SetBits(BitMask.FromRange(offset, size)); }
 
    /// <summary>
    /// Sets all specified bits to "on" 
@@ -55,10 +49,7 @@ public static class SetBitsExtensions
    /// <param name="size">The number of bits to set on.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static int SetBits(this int value, int offset = 0, int size = 32)
-   {
-      return value.SetBits(BitMask.FromRange(offset, size));
-   }
+   public static int SetBits(this int value, int offset = 0, int size = 32) { return value.SetBits(BitMask.FromRange(offset, size)); }
 
    /// <summary>
    /// Sets all specified bits to "on" 
@@ -68,10 +59,7 @@ public static class SetBitsExtensions
    /// <param name="size">The number of bits to set on.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static long SetBits(this long value, int offset = 0, int size = 64)
-   {
-      return value.SetBits(BitMask.FromRange(offset, size));
-   }
+   public static long SetBits(this long value, int offset = 0, int size = 64) { return value.SetBits(BitMask.FromRange(offset, size)); }
 
    /// <summary>
    /// Sets all specified bits to "on" 
@@ -81,10 +69,7 @@ public static class SetBitsExtensions
    /// <param name="size">The number of bits to set on.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static byte SetBits(this byte value, int offset = 0, int size = 8)
-   {
-      return value.SetBits(BitMask.FromRange(offset, size));
-   }
+   public static byte SetBits(this byte value, int offset = 0, int size = 8) { return value.SetBits(BitMask.FromRange(offset, size)); }
 
    /// <summary>
    /// Sets all specified bits to "on" 
@@ -94,10 +79,7 @@ public static class SetBitsExtensions
    /// <param name="size">The number of bits to set on.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ushort SetBits(this ushort value, int offset = 0, int size = 16)
-   {
-      return value.SetBits(BitMask.FromRange(offset, size));
-   }
+   public static ushort SetBits(this ushort value, int offset = 0, int size = 16) { return value.SetBits(BitMask.FromRange(offset, size)); }
 
    /// <summary>
    /// Sets all specified bits to "on" 
@@ -107,10 +89,7 @@ public static class SetBitsExtensions
    /// <param name="size">The number of bits to set on.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static uint SetBits(this uint value, int offset = 0, int size = 32)
-   {
-      return value.SetBits(BitMask.FromRange(offset, size));
-   }
+   public static uint SetBits(this uint value, int offset = 0, int size = 32) { return value.SetBits(BitMask.FromRange(offset, size)); }
 
    /// <summary>
    /// Sets all specified bits to "on" 
@@ -120,10 +99,7 @@ public static class SetBitsExtensions
    /// <param name="size">The number of bits to set on.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ulong SetBits(this ulong value, int offset = 0, int size = 64)
-   {
-      return value.SetBits(BitMask.FromRange(offset, size));
-   }
+   public static ulong SetBits(this ulong value, int offset = 0, int size = 64) { return value.SetBits(BitMask.FromRange(offset, size)); }
 
    /// <summary>
    /// Sets all specified bits to "on" 
@@ -133,10 +109,7 @@ public static class SetBitsExtensions
    /// <param name="size">The number of bits to set on.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static float SetBits(this float value, int offset = 0, int size = 32)
-   {
-      return value.SetBits(BitMask.FromRange(offset, size));
-   }
+   public static float SetBits(this float value, int offset = 0, int size = 32) { return value.SetBits(BitMask.FromRange(offset, size)); }
 
    /// <summary>
    /// Sets all specified bits to "on" 
@@ -146,10 +119,7 @@ public static class SetBitsExtensions
    /// <param name="size">The number of bits to set on.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static double SetBits(this double value, int offset = 0, int size = 64)
-   {
-      return value.SetBits(BitMask.FromRange(offset, size));
-   }
+   public static double SetBits(this double value, int offset = 0, int size = 64) { return value.SetBits(BitMask.FromRange(offset, size)); }
 
    #endregion
 
@@ -328,12 +298,7 @@ public static class SetBitsExtensions
    /// <param name="mask">bits to set.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static float SetBits(this float value, BitMask mask)
-   {
-      return value.BitwiseToUInt32()
-                  .SetBits(mask)
-                  .BitwiseToSingle();
-   }
+   public static float SetBits(this float value, BitMask mask) { return value.BitwiseToUInt32().SetBits(mask).BitwiseToSingle(); }
 
    /// <summary>
    /// Sets all specified bits to "on" 
@@ -342,12 +307,7 @@ public static class SetBitsExtensions
    /// <param name="mask">bits to set.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static double SetBits(this double value, BitMask mask)
-   {
-      return value.BitwiseToUInt64()
-                  .SetBits(mask)
-                  .BitwiseToDouble();
-   }
+   public static double SetBits(this double value, BitMask mask) { return value.BitwiseToUInt64().SetBits(mask).BitwiseToDouble(); }
 
    #endregion
 }

@@ -1,4 +1,5 @@
 #region
+
 using System;
 using System.Runtime.CompilerServices;
 
@@ -43,10 +44,7 @@ public static class FloatingPointExtensions
    /// <param name="value">The value to convert</param>
    /// <returns>the <see cref="float"/> representation of the bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static float BitwiseToSingle(this int value)
-   {
-      return BitConverter.ToSingle(BitConverter.GetBytes(value), 0);
-   }
+   public static float BitwiseToSingle(this int value) { return BitConverter.ToSingle(BitConverter.GetBytes(value), 0); }
 
    /// <summary>
    /// Converts a <see cref="double"/> to the bit-wise identical <see cref="ulong"/>

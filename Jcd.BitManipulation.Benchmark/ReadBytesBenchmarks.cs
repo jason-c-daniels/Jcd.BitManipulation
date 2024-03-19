@@ -20,10 +20,7 @@ public class ReadBytesBenchmarks
    public byte[] ReadAllBytesOnUInt64AsBigEndian() { return Ui64.ReadBytes(0, sizeof(ulong), Endian.Big); }
 
    [Benchmark]
-   public byte[] ReadFirstFourBytesOnUInt64AsLittleEndian()
-   {
-      return Ui64.ReadBytes(0, sizeof(ulong) / 2, Endian.Little);
-   }
+   public byte[] ReadFirstFourBytesOnUInt64AsLittleEndian() { return Ui64.ReadBytes(0, sizeof(ulong) / 2, Endian.Little); }
 
    [Benchmark]
    public byte[] ReadFirstFourBytesOnUInt64AsBigEndian() { return Ui64.ReadBytes(0, sizeof(ulong) / 2, Endian.Big); }

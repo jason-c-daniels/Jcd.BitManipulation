@@ -86,56 +86,13 @@ public class BigEndianByteIndexerInt32Tests
 
    [Theory]
    [InlineData(0xFF010101, 0, 1, 1, 0xFF)]
-   [InlineData(0xFE020102
-             , 0
-             , 2
-             , 2
-             , 0xFE
-             , 0x02
-              )]
-   [InlineData(0x7F030201
-             , 0
-             , 3
-             , 3
-             , 0x7F
-             , 0x03
-             , 0x02
-              )]
-   [InlineData(0xFF010203
-             , 0
-             , 4
-             , 4
-             , 0xFF
-             , 0x01
-             , 0x02
-             , 0x03
-              )]
-   [InlineData(0xFE020304
-             , 1
-             , 3
-             , 3
-             , 0x02
-             , 0x03
-             , 0x04
-              )]
-   [InlineData(0x08070605
-             , 2
-             , 2
-             , 2
-             , 0x06
-             , 0x05
-              )]
+   [InlineData(0xFE020102, 0, 2, 2, 0xFE, 0x02)]
+   [InlineData(0x7F030201, 0, 3, 3, 0x7F, 0x03, 0x02)]
+   [InlineData(0xFF010203, 0, 4, 4, 0xFF, 0x01, 0x02, 0x03)]
+   [InlineData(0xFE020304, 1, 3, 3, 0x02, 0x03, 0x04)]
+   [InlineData(0x08070605, 2, 2, 2, 0x06, 0x05)]
    [InlineData(0x0807060F, 3, 1, 1, 0x0F)]
-   public void Slice_Returns_Expected_Subset(
-      uint udata
-    , int  index
-    , int  size
-    , int  expectedSize
-    , byte e0
-    , byte e1 = 0
-    , byte e2 = 0
-    , byte e3 = 0
-   )
+   public void Slice_Returns_Expected_Subset(uint udata, int index, int size, int expectedSize, byte e0, byte e1 = 0, byte e2 = 0, byte e3 = 0)
    {
       var data     = (int) udata;
       var expected = new List<byte>(new[] { e0 });

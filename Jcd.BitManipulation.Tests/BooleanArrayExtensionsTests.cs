@@ -93,4 +93,26 @@ public class BooleanArrayExtensionsTests
       var actual   = expected.ToBooleanArray().ToInt64();
       Assert.Equal(expected, actual);
    }
+
+   [Theory]
+   [InlineData(1.33f)]
+   [InlineData(1.22f)]
+   [InlineData(1.11f)]
+   public void Float_Round_Trip_Remains_Unaltered(float data)
+   {
+      var expected = data;
+      var actual   = expected.ToBooleanArray().ToSingle();
+      Assert.Equal(expected, actual);
+   }
+
+   [Theory]
+   [InlineData(1.33d)]
+   [InlineData(1.22d)]
+   [InlineData(1.11d)]
+   public void Double_Round_Trip_Remains_Unaltered(double data)
+   {
+      var expected = data;
+      var actual   = expected.ToBooleanArray().ToDouble();
+      Assert.Equal(expected, actual);
+   }
 }

@@ -100,10 +100,7 @@ public struct BigEndianByteIndexerUInt16 : IByteIndexer
    /// <param name="data">The underlying data type.</param>
    /// <returns>A indexer type.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static implicit operator BigEndianByteIndexerUInt16(ushort data)
-   {
-      return new BigEndianByteIndexerUInt16(data);
-   }
+   public static implicit operator BigEndianByteIndexerUInt16(ushort data) { return new BigEndianByteIndexerUInt16(data); }
 
    #region Implementation of IEnumerable
 

@@ -28,10 +28,7 @@ public static class BooleanArrayExtensions
    /// <param name="bits">the byte to convert</param>
    /// <returns>the array. Least Significant Bit at index 0</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static bool[] ToBooleanArray(this byte bits)
-   {
-      return new BitIndexerByte { Bits = bits }.Slice(0, BitIndexerByte.BitSize);
-   }
+   public static bool[] ToBooleanArray(this byte bits) { return new BitIndexerByte { Bits = bits }.Slice(0, BitIndexerByte.BitSize); }
 
    /// <summary>
    /// Convert an <see cref="sbyte"/> into an array of bools
@@ -39,10 +36,7 @@ public static class BooleanArrayExtensions
    /// <param name="bits">the <see cref="sbyte"/> to convert</param>
    /// <returns>the array. Least Significant Bit at index 0</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static bool[] ToBooleanArray(this sbyte bits)
-   {
-      return new BitIndexerSByte { Bits = bits }.Slice(0, BitIndexerSByte.BitSize);
-   }
+   public static bool[] ToBooleanArray(this sbyte bits) { return new BitIndexerSByte { Bits = bits }.Slice(0, BitIndexerSByte.BitSize); }
 
    /// <summary>
    /// Convert a <see cref="ushort"/> into an array of bools
@@ -50,10 +44,7 @@ public static class BooleanArrayExtensions
    /// <param name="bits">the bits of the <see cref="ushort"/> to convert</param>
    /// <returns>the array. Least Significant Bit at index 0</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static bool[] ToBooleanArray(this ushort bits)
-   {
-      return new BitIndexerUInt16 { Bits = bits }.Slice(0, BitIndexerUInt16.BitSize);
-   }
+   public static bool[] ToBooleanArray(this ushort bits) { return new BitIndexerUInt16 { Bits = bits }.Slice(0, BitIndexerUInt16.BitSize); }
 
    /// <summary>
    /// Convert a <see cref="short"/> into an array of bools
@@ -61,10 +52,7 @@ public static class BooleanArrayExtensions
    /// <param name="bits">the <see cref="short"/> to convert</param>
    /// <returns>the array. Least Significant Bit at index 0</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static bool[] ToBooleanArray(this short bits)
-   {
-      return new BitIndexerInt16 { Bits = bits }.Slice(0, BitIndexerInt16.BitSize);
-   }
+   public static bool[] ToBooleanArray(this short bits) { return new BitIndexerInt16 { Bits = bits }.Slice(0, BitIndexerInt16.BitSize); }
 
    /// <summary>
    /// Convert a uint into an array of bools
@@ -72,10 +60,7 @@ public static class BooleanArrayExtensions
    /// <param name="bits">the <see cref="uint"/> to convert</param>
    /// <returns>the array. Least Significant Bit at index 0</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static bool[] ToBooleanArray(this uint bits)
-   {
-      return new BitIndexerUInt32 { Bits = bits }.Slice(0, BitIndexerUInt32.BitSize);
-   }
+   public static bool[] ToBooleanArray(this uint bits) { return new BitIndexerUInt32 { Bits = bits }.Slice(0, BitIndexerUInt32.BitSize); }
 
    /// <summary>
    /// Convert an int into an array of bools
@@ -83,10 +68,7 @@ public static class BooleanArrayExtensions
    /// <param name="bits">the <see cref="uint"/> to convert</param>
    /// <returns>the array. Least Significant Bit at index 0</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static bool[] ToBooleanArray(this int bits)
-   {
-      return new BitIndexerInt32 { Bits = bits }.Slice(0, BitIndexerInt32.BitSize);
-   }
+   public static bool[] ToBooleanArray(this int bits) { return new BitIndexerInt32 { Bits = bits }.Slice(0, BitIndexerInt32.BitSize); }
 
    /// <summary>
    /// Convert a <see cref="ulong"/> into an array of bools
@@ -94,10 +76,7 @@ public static class BooleanArrayExtensions
    /// <param name="bits">the ulong to convert</param>
    /// <returns>the array. Least Significant Bit at index 0</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static bool[] ToBooleanArray(this ulong bits)
-   {
-      return new BitIndexerUInt64 { Bits = bits }.Slice(0, BitIndexerUInt64.BitSize);
-   }
+   public static bool[] ToBooleanArray(this ulong bits) { return new BitIndexerUInt64 { Bits = bits }.Slice(0, BitIndexerUInt64.BitSize); }
 
    /// <summary>
    /// Convert a <see cref="long"/> into an array of bools
@@ -105,10 +84,7 @@ public static class BooleanArrayExtensions
    /// <param name="bits">the <see cref="long"/> to convert</param>
    /// <returns>the array. Least Significant Bit at index 0</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static bool[] ToBooleanArray(this long bits)
-   {
-      return new BitIndexerInt64 { Bits = bits }.Slice(0, BitIndexerUInt64.BitSize);
-   }
+   public static bool[] ToBooleanArray(this long bits) { return new BitIndexerInt64 { Bits = bits }.Slice(0, BitIndexerUInt64.BitSize); }
 
    /// <summary>
    /// Convert a float into an array of bools
@@ -116,10 +92,7 @@ public static class BooleanArrayExtensions
    /// <param name="bits">the long to convert</param>
    /// <returns>the array. LSB at index 0</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static bool[] ToBooleanArray(this float bits)
-   {
-      return new BitIndexerUInt32 { Bits = bits.BitwiseToUInt32() }.Slice(0, BitIndexerUInt64.BitSize);
-   }
+   public static bool[] ToBooleanArray(this float bits) { return new BitIndexerUInt32 { Bits = bits.BitwiseToUInt32() }.Slice(0, BitIndexerUInt64.BitSize); }
 
    /// <summary>
    /// Convert a long into an array of bools
@@ -127,10 +100,7 @@ public static class BooleanArrayExtensions
    /// <param name="bits">the long to convert</param>
    /// <returns>the array. LSB at index 0</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static bool[] ToBooleanArray(this double bits)
-   {
-      return new BitIndexerUInt64 { Bits = bits.BitwiseToUInt64() }.Slice(0, BitIndexerUInt64.BitSize);
-   }
+   public static bool[] ToBooleanArray(this double bits) { return new BitIndexerUInt64 { Bits = bits.BitwiseToUInt64() }.Slice(0, BitIndexerUInt64.BitSize); }
 
    /// <summary>
    /// Converts an array of bools into a <see cref="byte"/>, discarding any excess bits.

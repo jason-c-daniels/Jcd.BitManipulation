@@ -93,91 +93,15 @@ public class BigEndianByteIndexerInt64Tests
 
    [Theory]
    [InlineData(0xFF01010100000000, 0, 1, 1, 0xFF)]
-   [InlineData(0xFE02020100000000
-             , 0
-             , 2
-             , 2
-             , 0xFE
-             , 0x02
-              )]
-   [InlineData(0x7F03020100000000
-             , 0
-             , 3
-             , 3
-             , 0x7F
-             , 0x03
-             , 0x02
-              )]
-   [InlineData(0xFF01020300000000
-             , 0
-             , 4
-             , 4
-             , 0xFF
-             , 0x01
-             , 0x02
-             , 0x03
-              )]
-   [InlineData(0xFF01020304050607
-             , 0
-             , 5
-             , 5
-             , 0xFF
-             , 0x01
-             , 0x02
-             , 0x03
-             , 0x04
-              )]
-   [InlineData(0xFF01020304050607
-             , 0
-             , 6
-             , 6
-             , 0xFF
-             , 0x01
-             , 0x02
-             , 0x03
-             , 0x04
-             , 0x05
-              )]
-   [InlineData(0xFF01020304050607
-             , 0
-             , 7
-             , 7
-             , 0xFF
-             , 0x01
-             , 0x02
-             , 0x03
-             , 0x04
-             , 0x05
-             , 0x06
-              )]
-   [InlineData(0xFF01020304050607
-             , 0
-             , 8
-             , 8
-             , 0xFF
-             , 0x01
-             , 0x02
-             , 0x03
-             , 0x04
-             , 0x05
-             , 0x06
-             , 0x07
-              )]
-   [InlineData(0xFE02030400000000
-             , 1
-             , 3
-             , 3
-             , 0x02
-             , 0x03
-             , 0x04
-              )]
-   [InlineData(0x0807060500000000
-             , 2
-             , 2
-             , 2
-             , 0x06
-             , 0x05
-              )]
+   [InlineData(0xFE02020100000000, 0, 2, 2, 0xFE, 0x02)]
+   [InlineData(0x7F03020100000000, 0, 3, 3, 0x7F, 0x03, 0x02)]
+   [InlineData(0xFF01020300000000, 0, 4, 4, 0xFF, 0x01, 0x02, 0x03)]
+   [InlineData(0xFF01020304050607, 0, 5, 5, 0xFF, 0x01, 0x02, 0x03, 0x04)]
+   [InlineData(0xFF01020304050607, 0, 6, 6, 0xFF, 0x01, 0x02, 0x03, 0x04, 0x05)]
+   [InlineData(0xFF01020304050607, 0, 7, 7, 0xFF, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06)]
+   [InlineData(0xFF01020304050607, 0, 8, 8, 0xFF, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07)]
+   [InlineData(0xFE02030400000000, 1, 3, 3, 0x02, 0x03, 0x04)]
+   [InlineData(0x0807060500000000, 2, 2, 2, 0x06, 0x05)]
    [InlineData(0x0807060F00000000, 3, 1, 1, 0x0F)]
    public void Slice_Returns_Expected_Subset(
       ulong data

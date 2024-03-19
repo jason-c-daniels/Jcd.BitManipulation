@@ -33,6 +33,42 @@ public class ReadBytesExtensionsTests
    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 2, 0xFD, Endian.Big)]
    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 1, 0xFE, Endian.Big)]
    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 0, 0xFF, Endian.Big)]
+   public void ReadByte_On_Double_Returns_Expected_Value(ulong data, int offset, byte expected, Endian endian)
+   {
+      Assert.Equal(expected, data.BitwiseToDouble().ReadByte(offset, endian));
+   }
+
+   [Theory]
+   [InlineData(0xFB_FA_F9_F8, 0, 0xF8, Endian.Little)]
+   [InlineData(0xFB_FA_F9_F8, 1, 0xF9, Endian.Little)]
+   [InlineData(0xFB_FA_F9_F8, 2, 0xFA, Endian.Little)]
+   [InlineData(0xFB_FA_F9_F8, 3, 0xFB, Endian.Little)]
+   [InlineData(0xFB_FA_F9_F8, 3, 0xF8, Endian.Big)]
+   [InlineData(0xFB_FA_F9_F8, 2, 0xF9, Endian.Big)]
+   [InlineData(0xFB_FA_F9_F8, 1, 0xFA, Endian.Big)]
+   [InlineData(0xFB_FA_F9_F8, 0, 0xFB, Endian.Big)]
+   public void ReadByte_On_Single_Returns_Expected_Value(uint data, int offset, byte expected, Endian endian)
+   {
+      Assert.Equal(expected, data.BitwiseToSingle().ReadByte(offset, endian));
+   }
+   
+   [Theory]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 0, 0xF8, Endian.Little)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 1, 0xF9, Endian.Little)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 2, 0xFA, Endian.Little)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 3, 0xFB, Endian.Little)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 4, 0xFC, Endian.Little)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 5, 0xFD, Endian.Little)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 6, 0xFE, Endian.Little)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 7, 0xFF, Endian.Little)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 7, 0xF8, Endian.Big)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 6, 0xF9, Endian.Big)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 5, 0xFA, Endian.Big)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 4, 0xFB, Endian.Big)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 3, 0xFC, Endian.Big)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 2, 0xFD, Endian.Big)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 1, 0xFE, Endian.Big)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 0, 0xFF, Endian.Big)]
    public void ReadByte_On_UInt64_Returns_Expected_Value(ulong data, int offset, byte expected, Endian endian)
    {
       Assert.Equal(expected, data.ReadByte(offset, endian));
@@ -115,6 +151,33 @@ public class ReadBytesExtensionsTests
 
    #region ReadBytes - Integral Data Type Tests
 
+   [Theory]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 0, 2)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 0, 3)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 0, 4)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 3, 4)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 4, 3)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 5, 2)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 6, 2)]
+   public void ReadBytes_On_Double_Returns_Expected_Array(ulong data, int offset, int size)
+   {
+      var expected = new List<byte>();
+      for (var i = 0; i < size; i++) expected.Add(data.ReadByte(i + offset));
+      Assert.Equal(expected.ToArray(), data.BitwiseToDouble().ReadBytes(offset, size));
+   }
+
+   [Theory]
+   [InlineData(0xFB_FA_F9_F8, 0, 4)]
+   [InlineData(0xFB_FA_F9_F8, 1, 3)]
+   [InlineData(0xFB_FA_F9_F8, 2, 2)]
+   [InlineData(0xFB_FA_F9_F8, 0, 3)]
+   public void ReadBytes_On_Single_Returns_Expected_Array(uint data, int offset, int size)
+   {
+      var expected = new List<byte>();
+      for (var i = 0; i < size; i++) expected.Add(data.ReadByte(i + offset));
+      Assert.Equal(expected.ToArray(), data.BitwiseToSingle().ReadBytes(offset, size));
+   }   
+   
    [Theory]
    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 0, 2)]
    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 0, 3)]

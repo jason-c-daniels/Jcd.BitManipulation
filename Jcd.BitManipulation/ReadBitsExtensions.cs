@@ -29,10 +29,7 @@ public static class ReadBitsExtensions
    /// <param name="size">The total number of bits to extract</param>
    /// <returns>The numeric value stored at that bit location</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static sbyte ReadBits(this sbyte value, int offset, int size)
-   {
-      return value.ReadBits(offset, BitMask.FromRange(offset, size));
-   }
+   public static sbyte ReadBits(this sbyte value, int offset, int size) { return value.ReadBits(offset, BitMask.FromRange(offset, size)); }
 
    /// <summary>
    /// For a given value return the specified bits from within it, right shifted pos bits.
@@ -42,10 +39,7 @@ public static class ReadBitsExtensions
    /// <param name="size">The total number of bits to extract</param>
    /// <returns>The numeric value stored at that bit location</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static short ReadBits(this short value, int offset, int size)
-   {
-      return value.ReadBits(offset, BitMask.FromRange(offset, size));
-   }
+   public static short ReadBits(this short value, int offset, int size) { return value.ReadBits(offset, BitMask.FromRange(offset, size)); }
 
    /// <summary>
    /// For a given value return the specified bits from within it, right shifted pos bits.
@@ -55,10 +49,7 @@ public static class ReadBitsExtensions
    /// <param name="size">The total number of bits to extract</param>
    /// <returns>The numeric value stored at that bit location</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static int ReadBits(this int value, int offset, int size)
-   {
-      return value.ReadBits(offset, BitMask.FromRange(offset, size));
-   }
+   public static int ReadBits(this int value, int offset, int size) { return value.ReadBits(offset, BitMask.FromRange(offset, size)); }
 
    /// <summary>
    /// For a given value return the specified bits from within it, right shifted pos bits.
@@ -68,10 +59,7 @@ public static class ReadBitsExtensions
    /// <param name="size">The total number of bits to extract</param>
    /// <returns>The numeric value stored at that bit location</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static long ReadBits(this long value, int offset, int size)
-   {
-      return value.ReadBits(offset, BitMask.FromRange(offset, size));
-   }
+   public static long ReadBits(this long value, int offset, int size) { return value.ReadBits(offset, BitMask.FromRange(offset, size)); }
 
    /// <summary>
    /// For a given value return the specified bits from within it, right shifted pos bits.
@@ -81,10 +69,7 @@ public static class ReadBitsExtensions
    /// <param name="size">The total number of bits to extract</param>
    /// <returns>The numeric value stored at that bit location</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static byte ReadBits(this byte value, int offset, int size)
-   {
-      return value.ReadBits(offset, BitMask.FromRange(offset, size));
-   }
+   public static byte ReadBits(this byte value, int offset, int size) { return value.ReadBits(offset, BitMask.FromRange(offset, size)); }
 
    /// <summary>
    /// For a given value return the specified bits from within it, right shifted pos bits.
@@ -94,10 +79,7 @@ public static class ReadBitsExtensions
    /// <param name="size">The total number of bits to extract</param>
    /// <returns>The numeric value stored at that bit location</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ushort ReadBits(this ushort value, int offset, int size)
-   {
-      return value.ReadBits(offset, BitMask.FromRange(offset, size));
-   }
+   public static ushort ReadBits(this ushort value, int offset, int size) { return value.ReadBits(offset, BitMask.FromRange(offset, size)); }
 
    /// <summary>
    /// For a given value return the specified bits from within it, right shifted pos bits.
@@ -107,10 +89,7 @@ public static class ReadBitsExtensions
    /// <param name="size">The total number of bits to extract</param>
    /// <returns>The numeric value stored at that bit location</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static uint ReadBits(this uint value, int offset, int size)
-   {
-      return value.ReadBits(offset, BitMask.FromRange(offset, size));
-   }
+   public static uint ReadBits(this uint value, int offset, int size) { return value.ReadBits(offset, BitMask.FromRange(offset, size)); }
 
    /// <summary>
    /// For a given value return the specified bits from within it, right shifted pos bits.
@@ -120,10 +99,7 @@ public static class ReadBitsExtensions
    /// <param name="size">The total number of bits to extract</param>
    /// <returns>The numeric value stored at that bit location</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ulong ReadBits(this ulong value, int offset, int size)
-   {
-      return value.ReadBits(offset, BitMask.FromRange(offset, size));
-   }
+   public static ulong ReadBits(this ulong value, int offset, int size) { return value.ReadBits(offset, BitMask.FromRange(offset, size)); }
 
    /// <summary>
    /// For a given value return the specified bits from within it, right shifted pos bits.
@@ -133,10 +109,7 @@ public static class ReadBitsExtensions
    /// <param name="size">The total number of bits to extract</param>
    /// <returns>The numeric value stored at that bit location</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static uint ReadBits(this float value, int offset, int size)
-   {
-      return value.ReadBits(offset, BitMask.FromRange(offset, size));
-   }
+   public static uint ReadBits(this float value, int offset, int size) { return value.ReadBits(offset, BitMask.FromRange(offset, size)); }
 
    /// <summary>
    /// For a given value return the specified bits from within it, right shifted pos bits.
@@ -146,10 +119,7 @@ public static class ReadBitsExtensions
    /// <param name="size">The total number of bits to extract</param>
    /// <returns>The numeric value stored at that bit location</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ulong ReadBits(this double value, int offset, int size)
-   {
-      return value.ReadBits(offset, BitMask.FromRange(offset, size));
-   }
+   public static ulong ReadBits(this double value, int offset, int size) { return value.ReadBits(offset, BitMask.FromRange(offset, size)); }
 
    #endregion
 
@@ -177,10 +147,7 @@ public static class ReadBitsExtensions
    /// </param>
    /// <returns>The right shifted value extracted from the value</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static long ReadBits(this long value, int offset, BitMask mask)
-   {
-      return (long) (((ulong) value & mask) >> offset);
-   }
+   public static long ReadBits(this long value, int offset, BitMask mask) { return (long) (((ulong) value & mask) >> offset); }
 
    /// <summary>
    /// Extract a subset of bits specified by a bitmask and right align the bits by the offset. 
@@ -219,10 +186,7 @@ public static class ReadBitsExtensions
    /// </param>
    /// <returns>The right shifted value extracted from the value</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ushort ReadBits(this ushort value, int offset, BitMask mask)
-   {
-      return (ushort) ((value & mask) >> offset);
-   }
+   public static ushort ReadBits(this ushort value, int offset, BitMask mask) { return (ushort) ((value & mask) >> offset); }
 
    /// <summary>
    /// Extract a subset of bits specified by a bitmask and right align the bits by the offset. 
@@ -234,10 +198,7 @@ public static class ReadBitsExtensions
    /// </param>
    /// <returns>The right shifted value extracted from the value</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static short ReadBits(this short value, int offset, BitMask mask)
-   {
-      return (short) (((ushort) value & mask) >> offset);
-   }
+   public static short ReadBits(this short value, int offset, BitMask mask) { return (short) (((ushort) value & mask) >> offset); }
 
    /// <summary>
    /// Extract a subset of bits specified by a bitmask and right align the bits by the offset. 
@@ -261,10 +222,7 @@ public static class ReadBitsExtensions
    /// </param>
    /// <returns>The right shifted value extracted from the value</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static sbyte ReadBits(this sbyte value, int offset, BitMask mask)
-   {
-      return (sbyte) (((byte) value & mask) >> offset);
-   }
+   public static sbyte ReadBits(this sbyte value, int offset, BitMask mask) { return (sbyte) (((byte) value & mask) >> offset); }
 
    /// <summary>
    /// Extract a subset of bits specified by a bitmask and right align the bits by the offset. 
@@ -276,10 +234,7 @@ public static class ReadBitsExtensions
    /// </param>
    /// <returns>The right shifted value extracted from the value</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static uint ReadBits(this float value, int offset, BitMask mask)
-   {
-      return value.BitwiseToUInt32().ReadBits(offset, mask);
-   }
+   public static uint ReadBits(this float value, int offset, BitMask mask) { return value.BitwiseToUInt32().ReadBits(offset, mask); }
 
    /// <summary>
    /// Extract a subset of bits specified by a bitmask and right align the bits by the offset. 
@@ -291,10 +246,7 @@ public static class ReadBitsExtensions
    /// </param>
    /// <returns>The right shifted value extracted from the value</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ulong ReadBits(this double value, int offset, BitMask mask)
-   {
-      return value.BitwiseToUInt64().ReadBits(offset, mask);
-   }
+   public static ulong ReadBits(this double value, int offset, BitMask mask) { return value.BitwiseToUInt64().ReadBits(offset, mask); }
 
    #endregion
 

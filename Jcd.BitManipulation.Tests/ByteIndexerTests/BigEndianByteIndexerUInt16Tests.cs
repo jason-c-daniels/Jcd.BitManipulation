@@ -95,35 +95,10 @@ public class BigEndianByteIndexerUInt16Tests
    [InlineData(0xFF01, 1, 1, 1, 0x01)]
    [InlineData(0xFE02, 1, 1, 1, 0x02)]
    [InlineData(0x7F03, 1, 1, 1, 0x03)]
-   [InlineData(0xFF01
-             , 0
-             , 2
-             , 2
-             , 0xFF
-             , 0x01
-              )]
-   [InlineData(0xFE02
-             , 0
-             , 2
-             , 2
-             , 0xFE
-             , 0x02
-              )]
-   [InlineData(0x7F03
-             , 0
-             , 2
-             , 2
-             , 0x7F
-             , 0x03
-              )]
-   public void Slice_Returns_Expected_Subset(
-      ushort data
-    , int    index
-    , int    size
-    , int    expectedSize
-    , byte   e0
-    , byte   e1 = 0
-   )
+   [InlineData(0xFF01, 0, 2, 2, 0xFF, 0x01)]
+   [InlineData(0xFE02, 0, 2, 2, 0xFE, 0x02)]
+   [InlineData(0x7F03, 0, 2, 2, 0x7F, 0x03)]
+   public void Slice_Returns_Expected_Subset(ushort data, int index, int size, int expectedSize, byte e0, byte e1 = 0)
    {
       var expected = new List<byte>(new[] { e0 });
       if (expectedSize >= 2) expected.Add(e1);

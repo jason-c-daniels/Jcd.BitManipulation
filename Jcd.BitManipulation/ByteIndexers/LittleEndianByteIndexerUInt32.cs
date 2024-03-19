@@ -100,10 +100,7 @@ public struct LittleEndianByteIndexerUInt32 : IByteIndexer
    /// <param name="data">The underlying data type.</param>
    /// <returns>A buffer type.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static implicit operator LittleEndianByteIndexerUInt32(uint data)
-   {
-      return new LittleEndianByteIndexerUInt32(data);
-   }
+   public static implicit operator LittleEndianByteIndexerUInt32(uint data) { return new LittleEndianByteIndexerUInt32(data); }
 
    #region Implementation of IEnumerable
 

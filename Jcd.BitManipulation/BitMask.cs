@@ -36,9 +36,7 @@ public readonly struct BitMask
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static BitMask FromRange(int offset = 0, int size = 64)
    {
-      return size == 64
-                ? new BitMask(ulong.MaxValue            << offset)
-                : new BitMask((((ulong) 1 << size) - 1) << offset);
+      return size == 64 ? new BitMask(ulong.MaxValue << offset) : new BitMask((((ulong) 1 << size) - 1) << offset);
    }
 
    /// <summary>

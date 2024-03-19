@@ -28,6 +28,7 @@ internal static class Program
    public static void Main()
    {
       ReadMe_BitManipulation_Example();
+
       // chaining operations, the same steps and end results
 
       #if DEBUG
@@ -127,7 +128,7 @@ internal static class Program
                  .ToggleBits();   // value is now 0b0000111111110000
 
          upperByte = ((byte) data.ReadBits(8, 8)) // extract the upper byte (0b00001111)
-           .StoreBits(0b1011, 4, 4); // store the value in the upper 4 bits, now upperByte is now 0b10111111
+           .StoreBits(0b1011, 4, 4);              // store the value in the upper 4 bits, now upperByte is now 0b10111111
       }
 
       sw.Stop();
@@ -195,21 +196,11 @@ internal static class Program
    {
       if (report) SystemInfo.Instance.RefreshInfo();
       if (report) Console.WriteLine($"  - Name: {nameof(TimeStore8BytesToLongCalls)}");
-      const int opsPerIteration = 1;
-      long      data            = 0;
-      byte      upperByte       = 0;
-      var bytes = new byte[]
-                  {
-                     0xFF
-                   , 0xFE
-                   , 0x0A
-                   , 0x0B
-                   , 0xFF
-                   , 0xFE
-                   , 0x0A
-                   , 0x0B
-                  };
-      var sw                                     = Stopwatch.StartNew();
+      const int opsPerIteration                  = 1;
+      long      data                             = 0;
+      byte      upperByte                        = 0;
+      var       bytes                            = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      var       sw                               = Stopwatch.StartNew();
       for (long i = 0; i < iterations; i++) data = i.StoreBytes(bytes, 0);
 
       sw.Stop();
@@ -225,21 +216,11 @@ internal static class Program
    {
       if (report) SystemInfo.Instance.RefreshInfo();
       if (report) Console.WriteLine($"  - Name: {nameof(TimeStore4BytesToLongCalls)}");
-      const int opsPerIteration = 1;
-      long      data            = 0;
-      byte      upperByte       = 0;
-      var bytes = new byte[]
-                  {
-                     0xFF
-                   , 0xFE
-                   , 0x0A
-                   , 0x0B
-                   , 0xFF
-                   , 0xFE
-                   , 0x0A
-                   , 0x0B
-                  };
-      var sw                                     = Stopwatch.StartNew();
+      const int opsPerIteration                  = 1;
+      long      data                             = 0;
+      byte      upperByte                        = 0;
+      var       bytes                            = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      var       sw                               = Stopwatch.StartNew();
       for (long i = 0; i < iterations; i++) data = i.StoreBytes(bytes, 0, 4);
 
       sw.Stop();
@@ -255,21 +236,11 @@ internal static class Program
    {
       if (report) SystemInfo.Instance.RefreshInfo();
       if (report) Console.WriteLine($"  - Name: {nameof(TimeStore2BytesToLongCalls)}");
-      const int opsPerIteration = 1;
-      long      data            = 0;
-      byte      upperByte       = 0;
-      var bytes = new byte[]
-                  {
-                     0xFF
-                   , 0xFE
-                   , 0x0A
-                   , 0x0B
-                   , 0xFF
-                   , 0xFE
-                   , 0x0A
-                   , 0x0B
-                  };
-      var sw                                     = Stopwatch.StartNew();
+      const int opsPerIteration                  = 1;
+      long      data                             = 0;
+      byte      upperByte                        = 0;
+      var       bytes                            = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      var       sw                               = Stopwatch.StartNew();
       for (long i = 0; i < iterations; i++) data = i.StoreBytes(bytes, 0, 2);
 
       sw.Stop();
@@ -285,21 +256,11 @@ internal static class Program
    {
       if (report) SystemInfo.Instance.RefreshInfo();
       if (report) Console.WriteLine($"  - Name: {nameof(TimeStore8BytesToIndexerCalls)}");
-      const int opsPerIteration = 1;
-      byte      upperByte       = 0;
-      var bytes = new byte[]
-                  {
-                     0xFF
-                   , 0xFE
-                   , 0x0A
-                   , 0x0B
-                   , 0xFF
-                   , 0xFE
-                   , 0x0A
-                   , 0x0B
-                  };
-      LittleEndianByteIndexerInt64 data = 0;
-      var                          sw   = Stopwatch.StartNew();
+      const int                    opsPerIteration = 1;
+      byte                         upperByte       = 0;
+      var                          bytes           = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      LittleEndianByteIndexerInt64 data            = 0;
+      var                          sw              = Stopwatch.StartNew();
       for (long i = 0; i < iterations; i++) data.StoreBytes(bytes, 0);
 
       sw.Stop();
@@ -318,18 +279,8 @@ internal static class Program
       const int                    opsPerIteration = 1;
       LittleEndianByteIndexerInt64 data            = 0;
       byte                         upperByte       = 0;
-      var bytes = new byte[]
-                  {
-                     0xFF
-                   , 0xFE
-                   , 0x0A
-                   , 0x0B
-                   , 0xFF
-                   , 0xFE
-                   , 0x0A
-                   , 0x0B
-                  };
-      var sw = Stopwatch.StartNew();
+      var                          bytes           = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      var                          sw              = Stopwatch.StartNew();
       for (long i = 0; i < iterations; i++) data.StoreBytes(bytes, 0, 4);
 
       sw.Stop();
@@ -348,18 +299,8 @@ internal static class Program
       const int                    opsPerIteration = 1;
       LittleEndianByteIndexerInt64 data            = 0;
       byte                         upperByte       = 0;
-      var bytes = new byte[]
-                  {
-                     0xFF
-                   , 0xFE
-                   , 0x0A
-                   , 0x0B
-                   , 0xFF
-                   , 0xFE
-                   , 0x0A
-                   , 0x0B
-                  };
-      var sw = Stopwatch.StartNew();
+      var                          bytes           = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      var                          sw              = Stopwatch.StartNew();
       for (long i = 0; i < iterations; i++) data.StoreBytes(bytes, 0, 2);
 
       sw.Stop();
@@ -378,18 +319,8 @@ internal static class Program
       const int opsPerIteration = 1;
       ulong     data            = 0;
       byte      upperByte       = 0;
-      var bytes = new byte[]
-                  {
-                     0xFF
-                   , 0xFE
-                   , 0x0A
-                   , 0x0B
-                   , 0xFF
-                   , 0xFE
-                   , 0x0A
-                   , 0x0B
-                  };
-      var sw = Stopwatch.StartNew();
+      var       bytes           = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      var       sw              = Stopwatch.StartNew();
 
       for (var i = 0; i < iterations; i++)
       {
@@ -413,18 +344,8 @@ internal static class Program
       const int opsPerIteration = 1;
       ulong     data            = 0;
       byte      upperByte       = 0;
-      var bytes = new byte[]
-                  {
-                     0xFF
-                   , 0xFE
-                   , 0x0A
-                   , 0x0B
-                   , 0xFF
-                   , 0xFE
-                   , 0x0A
-                   , 0x0B
-                  };
-      var sw = Stopwatch.StartNew();
+      var       bytes           = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      var       sw              = Stopwatch.StartNew();
 
       for (var i = 0; i < iterations; i++)
       {
@@ -472,19 +393,9 @@ internal static class Program
       const int opsPerIteration = 1;
       ulong     data            = 0;
       byte      upperByte       = 0;
-      var actualBytes = new byte[]
-                        {
-                           0xFF
-                         , 0xFE
-                         , 0x0A
-                         , 0x0B
-                         , 0xFF
-                         , 0xFE
-                         , 0x0A
-                         , 0x0B
-                        };
-      var bytes = new ReadOnlySpan<byte>();
-      var sw    = Stopwatch.StartNew();
+      var       actualBytes     = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      var       bytes           = new ReadOnlySpan<byte>();
+      var       sw              = Stopwatch.StartNew();
 
       for (var i = 0; i < iterations; i++)
       {
@@ -508,19 +419,9 @@ internal static class Program
       const int opsPerIteration = 1;
       ulong     data            = 0;
       byte      upperByte       = 0;
-      var actualBytes = new byte[]
-                        {
-                           0xFF
-                         , 0xFE
-                         , 0x0A
-                         , 0x0B
-                         , 0xFF
-                         , 0xFE
-                         , 0x0A
-                         , 0x0B
-                        };
-      var bytes = new ReadOnlySpan<byte>();
-      var sw    = Stopwatch.StartNew();
+      var       actualBytes     = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      var       bytes           = new ReadOnlySpan<byte>();
+      var       sw              = Stopwatch.StartNew();
 
       for (var i = 0; i < iterations; i++)
       {
@@ -546,11 +447,9 @@ internal static class Program
       Console.WriteLine($"    Total Time Elapsed: {stats.Elapsed:n3}");
       Console.WriteLine($"    Total CPU Cycles: {stats.TotalCpuCycles:n0}");
 
-      Console.WriteLine($"    Time Elapsed Per Iteration: {stats.ElapsedPerOperation * stats.OperationsPerIteration:n3}"
-                       );
+      Console.WriteLine($"    Time Elapsed Per Iteration: {stats.ElapsedPerOperation * stats.OperationsPerIteration:n3}");
 
-      Console.WriteLine($"    CPU Cycles Per Iteration: {stats.CpuCyclesPerOperation * stats.OperationsPerIteration:n3}"
-                       );
+      Console.WriteLine($"    CPU Cycles Per Iteration: {stats.CpuCyclesPerOperation * stats.OperationsPerIteration:n3}");
       Console.WriteLine($"    Time Elapsed Per Operation: {stats.ElapsedPerOperation:n3}");
       Console.WriteLine($"    CPU Cycles Per Operation: {stats.CpuCyclesPerOperation:n3}");
 
@@ -567,20 +466,11 @@ internal static class Program
       var duration                                 = stopwatch.Elapsed.As(Durations.Microsecond);
       var durationPer                              = (duration / operationCount).To(Durations.Nanosecond);
 
-      var totalCpuCycles = freq.To(Frequencies.Hertz)
-                               .RawValue
-                         * duration.To(Durations.Second)
-                                   .RawValue;
+      var totalCpuCycles = freq.To(Frequencies.Hertz).RawValue * duration.To(Durations.Second).RawValue;
 
       var cpuCyclesPer = totalCpuCycles / operationCount;
 
-      return new RunStats(duration
-                        , durationPer
-                        , totalCpuCycles
-                        , cpuCyclesPer
-                        , freq
-                        , operationCount / iterations
-                         );
+      return new RunStats(duration, durationPer, totalCpuCycles, cpuCyclesPer, freq, operationCount / iterations);
    }
 
    private static void ReadMe_BitManipulation_Example()
@@ -600,6 +490,7 @@ internal static class Program
       data = data.ToggleBits(); // value is now 0b0000111111110000
 
       var finalData = data;
+
       // read the upper byte 
       var upperByte = (byte) data.ReadBits(8, 8); // upperByte is now 0b00001111
 
@@ -620,10 +511,8 @@ internal static class Program
       var beByte0 = finalData.ReadByte(0, Endian.Big);    // 00001111 
       var leByte0 = finalData.ReadByte(0, Endian.Little); // 11110000
 
-      var mutatedData = finalData
-                       .StoreByte(0b10111111, 0, Endian.Big)
-                       .StoreByte(0b01010101, 0, Endian.Little) // lower byte is now 0b01010101
-         ;                                                      // mutatedData is now 0b1011111101010101
+      var mutatedData = finalData.StoreByte(0b10111111, 0, Endian.Big).StoreByte(0b01010101, 0, Endian.Little) // lower byte is now 0b01010101
+         ;                                                                                                     // mutatedData is now 0b1011111101010101
 
       var beBa = mutatedData.ToByteArray(Endian.Big); // beBa=[0b10111111, 0b01010101]
 

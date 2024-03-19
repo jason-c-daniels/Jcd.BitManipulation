@@ -707,11 +707,17 @@ public static class StoreBytesExtensions
    /// <param name="value">The value to be modified.</param>
    /// <param name="byte">The byte value to set</param>
    /// <param name="offset">the offset of the byte to write</param>
+   /// <param name="endian">The endianness of the indexing within the value.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static float StoreByte(this float value, byte @byte, int offset)
+   public static float StoreByte(this float value, byte @byte, int offset, Endian endian)
    {
-      return value.StoreBits(@byte, offset * 8, 8);
+      if (endian == Endian.Little)
+         return value.StoreBits(@byte, offset << 3, 8);
+
+      var beOffset = sizeof(float) - offset - 1;
+
+      return value.StoreBits(@byte, beOffset << 3, 8);
    }
 
    /// <summary>
@@ -721,11 +727,17 @@ public static class StoreBytesExtensions
    /// <param name="value">The value to be modified.</param>
    /// <param name="byte">The byte value to set</param>
    /// <param name="offset">the offset of the byte to write</param>
+   /// <param name="endian">The endianness of the indexing within the value.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static double StoreByte(this double value, byte @byte, int offset)
+   public static double StoreByte(this double value, byte @byte, int offset, Endian endian)
    {
-      return value.StoreBits(@byte, offset * 8, 8);
+      if (endian == Endian.Little)
+         return value.StoreBits(@byte, offset << 3, 8);
+
+      var beOffset = sizeof(double) - offset - 1;
+
+      return value.StoreBits(@byte, beOffset << 3, 8);
    }
 
    #endregion

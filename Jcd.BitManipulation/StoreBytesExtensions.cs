@@ -710,7 +710,7 @@ public static class StoreBytesExtensions
    /// <param name="endian">The endianness of the indexing within the value.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static float StoreByte(this float value, byte @byte, int offset, Endian endian)
+   public static float StoreByte(this float value, byte @byte, int offset, Endian endian = Endian.Little)
    {
       if (endian == Endian.Little)
          return value.StoreBits(@byte, offset << 3, 8);
@@ -730,7 +730,7 @@ public static class StoreBytesExtensions
    /// <param name="endian">The endianness of the indexing within the value.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static double StoreByte(this double value, byte @byte, int offset, Endian endian)
+   public static double StoreByte(this double value, byte @byte, int offset, Endian endian = Endian.Little)
    {
       if (endian == Endian.Little)
          return value.StoreBits(@byte, offset << 3, 8);

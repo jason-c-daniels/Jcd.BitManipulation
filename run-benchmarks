@@ -2,7 +2,7 @@
 pushd "$(git rev-parse --show-toplevel)/Jcd.BitManipulation.Benchmark" || exit
 if [ -d "./benchmarks/" ]; then rm -Rf ./benchmarks/; fi
 mkdir -p ./benchmarks/out
-dotnet run -c Release -f net8.0 -- -a ./benchmarks/out --warmupCount 10 --minIterationCount 10 --maxIterationCount 11 --runtimes net8.0 net462 --filter "*"
-rm ./benchmarks/out/results/*.csv
-rm ./benchmarks/out/results/*.html
-rm ./benchmarks/out/*.log
+dotnet run -c Release -f net8.0 -- --iterationTime 100 -a ./benchmarks/out --warmupCount 10 --minIterationCount 10 --maxIterationCount 11 --runtimes net8.0 net462 --filter "*BigEndianByteIndexer*"
+#rm ./benchmarks/out/results/*.csv
+#rm ./benchmarks/out/results/*.html
+#rm ./benchmarks/out/*.log

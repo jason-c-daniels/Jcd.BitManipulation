@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BitwiseConversionExtensions](Jcd.BitManipulation.BitwiseConversionExtensions.md 'Jcd.BitManipulation.BitwiseConversionExtensions')
 
 ## BitwiseConversionExtensions.BitwiseToSingle(this int) Method
@@ -10,7 +9,6 @@ identical [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Sin
 ```csharp
 public static float BitwiseToSingle(this int value);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitwiseConversionExtensions.BitwiseToSingle(thisint).value'></a>

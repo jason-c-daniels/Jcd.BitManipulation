@@ -351,6 +351,7 @@ public class ReadBytesExtensionsTests
    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 4, 3)]
    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 5, 2)]
    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 6, 2)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 7, 1)]
    public void ReadBytes_On_BigEndianByteIndexerUInt64_Returns_Expected_Array(ulong baseData, int offset, int size)
    {
       BigEndianByteIndexerUInt64 data     = baseData;

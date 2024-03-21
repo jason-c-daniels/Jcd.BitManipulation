@@ -27,6 +27,8 @@ internal static class Program
 {
    public static void Main()
    {
+      BigEndianByteIndexer bebiFlt      = float.MaxValue / 2;
+      var                  bebifltbytes = bebiFlt.Slice(0, sizeof(long));
       ReadMe_BitManipulation_Example();
 
       // chaining operations, the same steps and end results

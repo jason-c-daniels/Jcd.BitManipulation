@@ -6,7 +6,7 @@
 Get an enumerator to enumerate the bits with.
 
 ```csharp
-public bool[] Slice(int start, int length);
+public readonly bool[] Slice(int start, int length);
 ```
 #### Parameters
 

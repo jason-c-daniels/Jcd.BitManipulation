@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+   <meta charset='utf-8'/>
+   <title>Jcd.BitManipulation.Benchmark.BigEndianReadBytesBenchmarks-20240321-062344</title>
+
+   <style type="text/css">
+      table {
+         border-collapse: collapse;
+         display: block;
+         width: 100%;
+         overflow: auto;
+      }
+
+      td, th {
+         padding: 6px 13px;
+         border: 1px solid #ddd;
+         text-align: right;
+      }
+
+      tr {
+         background-color: #fff;
+         border-top: 1px solid #ccc;
+      }
+
+      tr:nth-child(even) {
+         background: #f8f8f8;
+      }
+   </style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.12, Windows 11 (10.0.22631.3296/23H2/2023Update/SunValley3)
+12th Gen Intel Core i7-12700H, 1 CPU, 20 logical and 14 physical cores
+.NET SDK 8.0.103
+  [Host]     : .NET 8.0.3 (8.0.324.11423), X64 RyuJIT AVX2
+  Job-VCRXGK : .NET 8.0.3 (8.0.324.11423), X64 RyuJIT AVX2
+  Job-DBRHDI : .NET Framework 4.8.1 (4.8.9181.0), X64 RyuJIT VectorSize=256
+</code></pre>
+<pre><code>IterationTime=100.0000 ms  MaxIterationCount=11  MinIterationCount=10  
+WarmupCount=10  
+</code></pre>
+
+<table>
+   <thead>
+   <tr>
+      <th>Method</th>
+      <th>Runtime</th>
+      <th>Mean</th>
+      <th>Error</th>
+      <th>StdDev</th>
+      <th>Ratio</th>
+      <th>RatioSD</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_Double</td>
+      <td>.NET 8.0</td>
+      <td>7.190 ns</td>
+      <td>0.3848 ns</td>
+      <td>0.2782 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_Double</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>7.210 ns</td>
+      <td>1.0657 ns</td>
+      <td>0.7705 ns</td>
+      <td>1.00</td>
+      <td>0.12</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_Float</td>
+      <td>.NET 8.0</td>
+      <td>6.554 ns</td>
+      <td>0.3935 ns</td>
+      <td>0.2845 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_Float</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>4.330 ns</td>
+      <td>0.1801 ns</td>
+      <td>0.1191 ns</td>
+      <td>0.66</td>
+      <td>0.03</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_UInt64</td>
+      <td>.NET 8.0</td>
+      <td>6.752 ns</td>
+      <td>0.2374 ns</td>
+      <td>0.1570 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_UInt64</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>6.772 ns</td>
+      <td>0.2561 ns</td>
+      <td>0.1852 ns</td>
+      <td>1.00</td>
+      <td>0.04</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_Int64</td>
+      <td>.NET 8.0</td>
+      <td>7.539 ns</td>
+      <td>0.5330 ns</td>
+      <td>0.3854 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_Int64</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>7.042 ns</td>
+      <td>0.2681 ns</td>
+      <td>0.1939 ns</td>
+      <td>0.94</td>
+      <td>0.06</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_UInt32</td>
+      <td>.NET 8.0</td>
+      <td>6.171 ns</td>
+      <td>0.2553 ns</td>
+      <td>0.1519 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_UInt32</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>4.538 ns</td>
+      <td>0.1745 ns</td>
+      <td>0.1262 ns</td>
+      <td>0.74</td>
+      <td>0.03</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_Int32</td>
+      <td>.NET 8.0</td>
+      <td>5.714 ns</td>
+      <td>0.3546 ns</td>
+      <td>0.2564 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_Int32</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>4.538 ns</td>
+      <td>0.4421 ns</td>
+      <td>0.3197 ns</td>
+      <td>0.80</td>
+      <td>0.07</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_UInt16</td>
+      <td>.NET 8.0</td>
+      <td>5.181 ns</td>
+      <td>0.3459 ns</td>
+      <td>0.2501 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_UInt16</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>3.476 ns</td>
+      <td>0.1231 ns</td>
+      <td>0.0733 ns</td>
+      <td>0.68</td>
+      <td>0.03</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_Int16</td>
+      <td>.NET 8.0</td>
+      <td>4.976 ns</td>
+      <td>0.2002 ns</td>
+      <td>0.1324 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_Int16</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>3.477 ns</td>
+      <td>0.1440 ns</td>
+      <td>0.1041 ns</td>
+      <td>0.70</td>
+      <td>0.03</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_Double_New_Inst</td>
+      <td>.NET 8.0</td>
+      <td>5.923 ns</td>
+      <td>0.3939 ns</td>
+      <td>0.2848 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_Double_New_Inst</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>6.811 ns</td>
+      <td>0.4576 ns</td>
+      <td>0.3309 ns</td>
+      <td>1.15</td>
+      <td>0.09</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_Float_New_Inst</td>
+      <td>.NET 8.0</td>
+      <td>7.217 ns</td>
+      <td>0.4556 ns</td>
+      <td>0.3294 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_Float_New_Inst</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>10.582 ns</td>
+      <td>0.6224 ns</td>
+      <td>0.4501 ns</td>
+      <td>1.47</td>
+      <td>0.09</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_UInt64_New_Inst</td>
+      <td>.NET 8.0</td>
+      <td>5.661 ns</td>
+      <td>0.4027 ns</td>
+      <td>0.2912 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_UInt64_New_Inst</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>6.567 ns</td>
+      <td>0.2993 ns</td>
+      <td>0.1980 ns</td>
+      <td>1.16</td>
+      <td>0.07</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_Int64_New_Inst</td>
+      <td>.NET 8.0</td>
+      <td>6.248 ns</td>
+      <td>0.3330 ns</td>
+      <td>0.2202 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_Int64_New_Inst</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>6.734 ns</td>
+      <td>0.3912 ns</td>
+      <td>0.2829 ns</td>
+      <td>1.07</td>
+      <td>0.04</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_UInt32_New_Inst</td>
+      <td>.NET 8.0</td>
+      <td>4.623 ns</td>
+      <td>0.6100 ns</td>
+      <td>0.4411 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_UInt32_New_Inst</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>4.038 ns</td>
+      <td>0.1870 ns</td>
+      <td>0.1352 ns</td>
+      <td>0.88</td>
+      <td>0.09</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_Int32_New_Inst</td>
+      <td>.NET 8.0</td>
+      <td>4.392 ns</td>
+      <td>0.2167 ns</td>
+      <td>0.1567 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_Int32_New_Inst</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>4.060 ns</td>
+      <td>0.1264 ns</td>
+      <td>0.0836 ns</td>
+      <td>0.92</td>
+      <td>0.04</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_UInt16_New_Inst</td>
+      <td>.NET 8.0</td>
+      <td>3.406 ns</td>
+      <td>0.2406 ns</td>
+      <td>0.1740 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_UInt16_New_Inst</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>3.027 ns</td>
+      <td>0.1829 ns</td>
+      <td>0.1322 ns</td>
+      <td>0.89</td>
+      <td>0.05</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_Int16_New_Inst</td>
+      <td>.NET 8.0</td>
+      <td>3.438 ns</td>
+      <td>0.3313 ns</td>
+      <td>0.2396 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexer_Slice_Int16_New_Inst</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>3.018 ns</td>
+      <td>0.1116 ns</td>
+      <td>0.0807 ns</td>
+      <td>0.88</td>
+      <td>0.07</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerFloat_Slice</td>
+      <td>.NET 8.0</td>
+      <td>4.753 ns</td>
+      <td>0.1757 ns</td>
+      <td>0.1162 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerFloat_Slice</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>4.783 ns</td>
+      <td>0.2289 ns</td>
+      <td>0.1655 ns</td>
+      <td>1.00</td>
+      <td>0.05</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerDouble_Slice</td>
+      <td>.NET 8.0</td>
+      <td>5.769 ns</td>
+      <td>0.3072 ns</td>
+      <td>0.2221 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerDouble_Slice</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>8.782 ns</td>
+      <td>0.6905 ns</td>
+      <td>0.4993 ns</td>
+      <td>1.53</td>
+      <td>0.12</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerUInt64_Slice</td>
+      <td>.NET 8.0</td>
+      <td>6.244 ns</td>
+      <td>0.2093 ns</td>
+      <td>0.1384 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerUInt64_Slice</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>7.840 ns</td>
+      <td>0.2265 ns</td>
+      <td>0.1498 ns</td>
+      <td>1.26</td>
+      <td>0.04</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerInt64_Slice</td>
+      <td>.NET 8.0</td>
+      <td>6.169 ns</td>
+      <td>0.2218 ns</td>
+      <td>0.1604 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerInt64_Slice</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>7.640 ns</td>
+      <td>0.1946 ns</td>
+      <td>0.1287 ns</td>
+      <td>1.24</td>
+      <td>0.04</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerUInt32_Slice</td>
+      <td>.NET 8.0</td>
+      <td>4.553 ns</td>
+      <td>0.2992 ns</td>
+      <td>0.2164 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerUInt32_Slice</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>4.941 ns</td>
+      <td>0.2315 ns</td>
+      <td>0.1674 ns</td>
+      <td>1.09</td>
+      <td>0.06</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerInt32_Slice</td>
+      <td>.NET 8.0</td>
+      <td>4.205 ns</td>
+      <td>0.2225 ns</td>
+      <td>0.1472 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerInt32_Slice</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>4.667 ns</td>
+      <td>0.1345 ns</td>
+      <td>0.0801 ns</td>
+      <td>1.11</td>
+      <td>0.03</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerUInt16_Slice</td>
+      <td>.NET 8.0</td>
+      <td>3.364 ns</td>
+      <td>0.2084 ns</td>
+      <td>0.1507 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerUInt16_Slice</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>3.816 ns</td>
+      <td>0.1235 ns</td>
+      <td>0.0893 ns</td>
+      <td>1.14</td>
+      <td>0.06</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerInt16_Slice</td>
+      <td>.NET 8.0</td>
+      <td>4.004 ns</td>
+      <td>0.3565 ns</td>
+      <td>0.2578 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerInt16_Slice</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>3.798 ns</td>
+      <td>0.1779 ns</td>
+      <td>0.1286 ns</td>
+      <td>0.95</td>
+      <td>0.07</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerDouble_Slice_New_Inst</td>
+      <td>.NET 8.0</td>
+      <td>5.439 ns</td>
+      <td>0.2618 ns</td>
+      <td>0.1732 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerDouble_Slice_New_Inst</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>8.090 ns</td>
+      <td>0.3961 ns</td>
+      <td>0.2620 ns</td>
+      <td>1.49</td>
+      <td>0.08</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerFloat_Slice_New_Inst</td>
+      <td>.NET 8.0</td>
+      <td>7.359 ns</td>
+      <td>0.3425 ns</td>
+      <td>0.2476 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerFloat_Slice_New_Inst</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>9.018 ns</td>
+      <td>0.3178 ns</td>
+      <td>0.2102 ns</td>
+      <td>1.23</td>
+      <td>0.04</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerUInt64_Slice_New_Inst</td>
+      <td>.NET 8.0</td>
+      <td>5.809 ns</td>
+      <td>0.4591 ns</td>
+      <td>0.3319 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerUInt64_Slice_New_Inst</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>6.685 ns</td>
+      <td>0.1996 ns</td>
+      <td>0.1443 ns</td>
+      <td>1.15</td>
+      <td>0.07</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerInt64_Slice_New_Inst</td>
+      <td>.NET 8.0</td>
+      <td>6.013 ns</td>
+      <td>0.4145 ns</td>
+      <td>0.2997 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerInt64_Slice_New_Inst</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>6.853 ns</td>
+      <td>0.3573 ns</td>
+      <td>0.2584 ns</td>
+      <td>1.14</td>
+      <td>0.07</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerUInt32_Slice_New_Inst</td>
+      <td>.NET 8.0</td>
+      <td>5.333 ns</td>
+      <td>0.2817 ns</td>
+      <td>0.2037 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerUInt32_Slice_New_Inst</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>4.146 ns</td>
+      <td>0.1850 ns</td>
+      <td>0.1337 ns</td>
+      <td>0.78</td>
+      <td>0.05</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerInt32_Slice_New_Inst</td>
+      <td>.NET 8.0</td>
+      <td>5.410 ns</td>
+      <td>0.2093 ns</td>
+      <td>0.1384 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerInt32_Slice_New_Inst</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>3.951 ns</td>
+      <td>0.1734 ns</td>
+      <td>0.1254 ns</td>
+      <td>0.73</td>
+      <td>0.02</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerUInt16_Slice_New_Inst</td>
+      <td>.NET 8.0</td>
+      <td>4.861 ns</td>
+      <td>0.4551 ns</td>
+      <td>0.3010 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerUInt16_Slice_New_Inst</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>5.898 ns</td>
+      <td>0.1419 ns</td>
+      <td>0.1026 ns</td>
+      <td>1.22</td>
+      <td>0.09</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerInt16_Slice_New_Inst</td>
+      <td>.NET 8.0</td>
+      <td>4.371 ns</td>
+      <td>0.5174 ns</td>
+      <td>0.3741 ns</td>
+      <td>1.00</td>
+      <td>0.00</td>
+   </tr>
+   <tr>
+      <td>BigEndianByteIndexerInt16_Slice_New_Inst</td>
+      <td>.NET Framework 4.6.2</td>
+      <td>3.037 ns</td>
+      <td>0.1885 ns</td>
+      <td>0.1363 ns</td>
+      <td>0.70</td>
+      <td>0.05</td>
+   </tr>
+   </tbody>
+</table>
+</body>
+</html>

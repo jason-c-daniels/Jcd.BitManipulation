@@ -6,7 +6,7 @@
 Format as a bit representation
 
 ```csharp
-public override string ToString();
+public override readonly string ToString();
 ```
 
 Implements [ToString()](Jcd.BitManipulation.BitIndexers.IBitIndexer.ToString().md 'Jcd.BitManipulation.BitIndexers.IBitIndexer.ToString()')

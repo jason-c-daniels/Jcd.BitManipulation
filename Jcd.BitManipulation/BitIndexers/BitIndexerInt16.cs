@@ -69,7 +69,7 @@ public struct BitIndexerInt16 : IBitIndexer
    /// </summary>
    /// <returns>The enumerator</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public IEnumerator<bool> GetEnumerator()
+   public readonly IEnumerator<bool> GetEnumerator()
    {
       for (var index = 0; index < BitSize; index++)
          yield return Bits.ReadBit(index);
@@ -80,7 +80,7 @@ public struct BitIndexerInt16 : IBitIndexer
    /// </summary>
    /// <returns>The enumerator</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   IEnumerator IEnumerable.GetEnumerator() { return GetEnumerator(); }
+   readonly IEnumerator IEnumerable.GetEnumerator() { return GetEnumerator(); }
 
    /// <summary>
    /// Get a subset of bits given a starting offset and length.
@@ -89,7 +89,7 @@ public struct BitIndexerInt16 : IBitIndexer
    /// <param name="length">The number of bits to extract</param>
    /// <returns>an array of bools for the subset of bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public bool[] Slice(int start, int length)
+   public readonly bool[] Slice(int start, int length)
    {
       var slice                                 = new bool[length];
       for (var i = 0; i < length; i++) slice[i] = this[i + start];
@@ -102,7 +102,7 @@ public struct BitIndexerInt16 : IBitIndexer
    /// </summary>
    /// <returns>the bits of the value formatted as 0b0101...1111</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public override string ToString()
+   public readonly override string ToString()
    {
       var sb = new StringBuilder();
       sb.Append("0b");

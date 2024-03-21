@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BitwiseConversionExtensions](Jcd.BitManipulation.BitwiseConversionExtensions.md 'Jcd.BitManipulation.BitwiseConversionExtensions')
 
 ## BitwiseConversionExtensions.BitwiseToInt32(this float) Method
@@ -10,7 +9,6 @@ identical [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int3
 ```csharp
 public static int BitwiseToInt32(this float value);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitwiseConversionExtensions.BitwiseToInt32(thisfloat).value'></a>

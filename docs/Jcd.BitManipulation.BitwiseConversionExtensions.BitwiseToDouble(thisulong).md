@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BitwiseConversionExtensions](Jcd.BitManipulation.BitwiseConversionExtensions.md 'Jcd.BitManipulation.BitwiseConversionExtensions')
 
 ## BitwiseConversionExtensions.BitwiseToDouble(this ulong) Method
@@ -10,7 +9,6 @@ identical [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Dou
 ```csharp
 public static double BitwiseToDouble(this ulong value);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitwiseConversionExtensions.BitwiseToDouble(thisulong).value'></a>

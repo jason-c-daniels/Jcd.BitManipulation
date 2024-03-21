@@ -58,14 +58,14 @@ public struct LittleEndianByteIndexerInt32 : IByteIndexer
       {
          if (index is < 0 or >= ByteSize) throw new ArgumentOutOfRangeException(nameof(index));
 
-         return (byte) Data.ReadBits(index << 3, 8);
+         return Data.ReadByte(index);
       }
 
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       set
       {
          if (index is < 0 or >= ByteSize) throw new ArgumentOutOfRangeException(nameof(index));
-         Data = Data.StoreBits(value, index << 3, 8);
+         Data = Data.StoreByte(value, index);
       }
    }
 
@@ -76,12 +76,12 @@ public struct LittleEndianByteIndexerInt32 : IByteIndexer
    /// <param name="length">The number of bits to extract</param>
    /// <returns>an array of bytes for the specified subset</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public byte[] Slice(int start, int length)
+   public readonly byte[] Slice(int start, int length)
    {
-      var len   = length < ByteSize ? length : ByteSize;
+      var len   = length + start > ByteSize ? ByteSize - start : length;
       var slice = new byte[len];
       for (var i = 0; i < length; i++)
-         slice[i] = this[i + start];
+         slice[i] = Data.ReadByte(start + i);
 
       return slice;
    }
@@ -106,14 +106,14 @@ public struct LittleEndianByteIndexerInt32 : IByteIndexer
 
    /// <inheritdoc />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public IEnumerator<byte> GetEnumerator()
+   public readonly IEnumerator<byte> GetEnumerator()
    {
       for (var i = 0; i < ByteSize; i++) yield return this[i];
    }
 
    /// <inheritdoc />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   IEnumerator IEnumerable.GetEnumerator() { return GetEnumerator(); }
+   readonly IEnumerator IEnumerable.GetEnumerator() { return GetEnumerator(); }
 
    #endregion
 }

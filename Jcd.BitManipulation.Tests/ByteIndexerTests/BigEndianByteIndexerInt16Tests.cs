@@ -36,7 +36,7 @@ public class BigEndianByteIndexerInt16Tests
    [InlineData(0b111001100011000)]
    public void Implicit_Conversion_Operators_Round_Trip_Returns_Original_Value(short data)
    {
-      var                       expected      = (short) data;
+      var                       expected      = data;
       BigEndianByteIndexerInt16 sut           = expected;
       short                     convertedBack = sut;
       Assert.Equal(expected, convertedBack);

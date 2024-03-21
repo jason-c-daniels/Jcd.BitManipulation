@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation.ByteIndexers](Jcd.BitManipulation.ByteIndexers.md 'Jcd.BitManipulation.ByteIndexers').[LittleEndianByteIndexerDouble](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerDouble.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerDouble')
 
 ## LittleEndianByteIndexerDouble.this[int] Property
@@ -9,7 +8,6 @@ Access bytes from the underlying data.
 ```csharp
 public byte this[int index] { get; set; }
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerDouble.this[int].index'></a>
@@ -21,7 +19,6 @@ The index of the byte to get or set.
 Implements [this[int]](Jcd.BitManipulation.ByteIndexers.IByteIndexer.this[int].md 'Jcd.BitManipulation.ByteIndexers.IByteIndexer.this[int]')
 
 #### Property Value
-
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
 #### Exceptions

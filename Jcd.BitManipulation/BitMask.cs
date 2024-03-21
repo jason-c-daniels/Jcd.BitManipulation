@@ -121,7 +121,7 @@ public readonly struct BitMask
    /// </summary>
    /// <returns>the bits of the mask formatted as 0b0101...1111</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public override string ToString()
+   public readonly override string ToString()
    {
       const ulong highBit = (ulong) 1 << 63;
       var         sb      = new StringBuilder();

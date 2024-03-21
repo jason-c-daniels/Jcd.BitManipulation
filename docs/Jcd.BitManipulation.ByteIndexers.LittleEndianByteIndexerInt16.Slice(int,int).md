@@ -6,7 +6,7 @@
 Get a subset of bytes given a starting offset and length.
 
 ```csharp
-public byte[] Slice(int start, int length);
+public readonly byte[] Slice(int start, int length);
 ```
 #### Parameters
 

@@ -1945,6 +1945,113 @@
           </param>
           <returns>The converted ulong</returns>
        </member>
+       <member name="T:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer">
+          <summary>
+             Provides byte level indexing operations (set, get) on a<see cref="T:System.UInt64"/>. Zero is the most
+             significant byte.
+          </summary>
+       </member>
+       <member name="P:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.ByteSize">
+          <summary>
+             The number of bytes this type will index
+          </summary>
+       </member>
+       <member name="P:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.MaxByteIndex">
+          <summary>
+             The largest
+             <see cref="T:System.Byte"/>
+             index available.
+          </summary>
+       </member>
+       <member name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.#ctor(System.UInt64)">
+          <summary>
+             Constructs a
+             <see cref="T:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer"/>
+             from a<see cref="T:System.UInt64"/>.
+          </summary>
+          <param name="data">The initial value of the underlying data.</param>
+       </member>
+       <member name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.#ctor(System.UInt64,System.Int32)">
+          <summary>
+             Constructs a
+             <see cref="T:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer"/>
+             from a<see cref="T:System.UInt64"/>.
+          </summary>
+          <param name="data">The initial value of the underlying data.</param>
+          <param name="byteSize">The number of bytes to index</param>
+       </member>
+       <member name="P:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.Length">
+          <summary>
+             The number of bytes indexable by this indexer.
+          </summary>
+       </member>
+       <member name="P:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.Data">
+          <summary>
+             The backing store.
+          </summary>
+       </member>
+       <member name="P:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.Item(System.Int32)">
+          <summary>
+             Access bytes from the underlying data.
+          </summary>
+          <param name="index">The index of the byte to get or set.</param>
+          <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
+       </member>
+       <member name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.Slice(System.Int32,System.Int32)">
+          <summary>
+             Get a subset of bytes given a starting offset and length.
+          </summary>
+          <param name="start">The starting bit offset</param>
+          <param name="length">The number of bits to extract</param>
+          <returns>an array of bytes for the specified subset</returns>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.op_Implicit(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer)~System.UInt64">
+          <summary>
+             Converts the byte indexer to its underlying data type.
+          </summary>
+          <param name="indexer">The indexer to convert.</param>
+          <returns>The raw data.</returns>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.op_Implicit(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer)~System.Single">
+          <summary>
+             Converts the byte indexer to its underlying data type.
+          </summary>
+          <param name="indexer">The indexer to convert.</param>
+          <returns>The raw data.</returns>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.op_Implicit(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer)~System.Double">
+          <summary>
+             Converts the byte indexer to its underlying data type.
+          </summary>
+          <param name="indexer">The indexer to convert.</param>
+          <returns>The raw data.</returns>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.op_Implicit(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer)~System.Byte[]">
+          <summary>
+             Converts the byte indexer to its underlying data type.
+          </summary>
+          <param name="indexer">The indexer to convert.</param>
+          <returns>The raw data.</returns>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.op_Implicit(System.UInt64)~Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer">
+          <summary>
+             Converts the underlying data type to the indexer type.
+          </summary>
+          <param name="data">The underlying data type.</param>
+          <returns>A indexer type.</returns>
+       </member>
+       <member name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.GetEnumerator">
+          <inheritdoc/>
+       </member>
+       <member
+          name="M:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.System#Collections#IEnumerable#GetEnumerator">
+          <inheritdoc/>
+       </member>
        <member name="T:Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerDouble">
           <summary>
              Provides byte level indexing operations (set, get) on a<see cref="T:System.Double"/>. Zero is the most

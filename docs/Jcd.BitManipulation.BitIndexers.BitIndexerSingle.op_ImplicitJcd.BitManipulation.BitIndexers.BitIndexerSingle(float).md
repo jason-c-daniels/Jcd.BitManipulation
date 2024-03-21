@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation.BitIndexers](Jcd.BitManipulation.BitIndexers.md 'Jcd.BitManipulation.BitIndexers').[BitIndexerSingle](Jcd.BitManipulation.BitIndexers.BitIndexerSingle.md 'Jcd.BitManipulation.BitIndexers.BitIndexerSingle')
 
 ## BitIndexerSingle.implicit operator BitIndexerSingle(float) Operator
@@ -11,7 +10,6 @@ a [BitIndexerSingle](Jcd.BitManipulation.BitIndexers.BitIndexerSingle.md 'Jcd.Bi
 ```csharp
 public static Jcd.BitManipulation.BitIndexers.BitIndexerSingle implicit operator BitIndexerSingle(float bits);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexers.BitIndexerSingle.op_ImplicitJcd.BitManipulation.BitIndexers.BitIndexerSingle(float).bits'></a>

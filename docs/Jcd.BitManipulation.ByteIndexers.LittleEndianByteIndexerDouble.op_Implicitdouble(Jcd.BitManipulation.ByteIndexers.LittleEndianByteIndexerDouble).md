@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation.ByteIndexers](Jcd.BitManipulation.ByteIndexers.md 'Jcd.BitManipulation.ByteIndexers').[LittleEndianByteIndexerDouble](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerDouble.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerDouble')
 
 ## LittleEndianByteIndexerDouble.implicit operator double(LittleEndianByteIndexerDouble) Operator
@@ -10,7 +9,6 @@ underlying data type.
 ```csharp
 public static double implicit operator double(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerDouble indexer);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerDouble.op_Implicitdouble(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerDouble).indexer'></a>

@@ -16,4 +16,8 @@
       <ProjectReference Include="..\Jcd.BitManipulation\Jcd.BitManipulation.csproj"/>
    </ItemGroup>
 
+   <ItemGroup>
+      <None Remove="benchmarks\out\results\Jcd.BitManipulation.Benchmark.BitConverterGetBytes-report-github.md"/>
+   </ItemGroup>
+
 </Project>

@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation.ByteIndexers](Jcd.BitManipulation.ByteIndexers.md 'Jcd.BitManipulation.ByteIndexers').[BigEndianByteIndexerSingle](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerSingle.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerSingle')
 
 ## BigEndianByteIndexerSingle.implicit operator BigEndianByteIndexerSingle(float) Operator
@@ -9,7 +8,6 @@ Converts the underlying data type to the indexer type.
 ```csharp
 public static Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerSingle implicit operator BigEndianByteIndexerSingle(float data);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerSingle.op_ImplicitJcd.BitManipulation.ByteIndexers.BigEndianByteIndexerSingle(float).data'></a>

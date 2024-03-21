@@ -96,7 +96,7 @@ public class BitIndexerSingleTests
    [InlineData(0b11101100000000)]
    public void Enumerator_Enumerates_Bits_In_Correct_Order_LSB_to_MSB(int data)
    {
-      var indexer   = new BitIndexerSingle { Bits = (float) data };
+      var indexer   = new BitIndexerSingle { Bits = data };
       var bitValues = indexer.ToArray();
 
       for (var i = 0; i < indexer.Length; i++) Assert.Equal(indexer.Bits.ReadBit(i), bitValues[i]);

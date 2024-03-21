@@ -277,7 +277,6 @@ public static class ReadBytesExtensions
          return (byte) value.ReadBits(offset << 3, 8);
 
       var beOffset = sizeof(ulong) - offset - 1;
-
       return (byte) value.ReadBits(beOffset << 3, 8);
    }
 

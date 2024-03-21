@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation.ByteIndexers](Jcd.BitManipulation.ByteIndexers.md 'Jcd.BitManipulation.ByteIndexers').[LittleEndianByteIndexerSingle](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerSingle.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerSingle')
 
 ## LittleEndianByteIndexerSingle.implicit operator float(LittleEndianByteIndexerSingle) Operator
@@ -10,7 +9,6 @@ underlying data type.
 ```csharp
 public static float implicit operator float(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerSingle buffer);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerSingle.op_Implicitfloat(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerSingle).buffer'></a>

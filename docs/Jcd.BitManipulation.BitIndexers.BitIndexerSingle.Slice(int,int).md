@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation.BitIndexers](Jcd.BitManipulation.BitIndexers.md 'Jcd.BitManipulation.BitIndexers').[BitIndexerSingle](Jcd.BitManipulation.BitIndexers.BitIndexerSingle.md 'Jcd.BitManipulation.BitIndexers.BitIndexerSingle')
 
 ## BitIndexerSingle.Slice(int, int) Method
@@ -7,9 +6,8 @@
 Get a subset of bits given a starting offset and length.
 
 ```csharp
-public bool[] Slice(int start, int length);
+public readonly bool[] Slice(int start, int length);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexers.BitIndexerSingle.Slice(int,int).start'></a>

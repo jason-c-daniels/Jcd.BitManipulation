@@ -27,7 +27,7 @@ public readonly struct BitMask
    #region Helpers
 
    /// <summary>
-   /// Create a 64 bit <see cref="BitMask"/> with a range of bits set.  
+   /// Create a 64 bit <see cref="BitMask"/> with a range of bits set.
    /// </summary>
    /// <param name="offset">the lowest bit to start turning on</param>
    /// <param name="size">the number of bits to set to 1</param>
@@ -57,49 +57,49 @@ public readonly struct BitMask
    public BitMask(BitMask mask) { Bits = mask.Bits; }
 
    /// <summary>
-   /// Constructs a <see cref="BitMask"/> from a <see cref="ulong"/>  
+   /// Constructs a <see cref="BitMask"/> from a <see cref="ulong"/>
    /// </summary>
    /// <param name="bits">The <see cref="BitMask"/> to use</param>
    public BitMask(ulong bits) { Bits = bits; }
 
    /// <summary>
-   /// Constructs a <see cref="BitMask"/> from a <see cref="long"/>  
+   /// Constructs a <see cref="BitMask"/> from a <see cref="long"/>
    /// </summary>
    /// <param name="bits">The <see cref="BitMask"/> to use</param>
    public BitMask(long bits) : this((ulong) bits) { }
 
    /// <summary>
-   /// Constructs a <see cref="BitMask"/> from a <see cref="uint"/>  
+   /// Constructs a <see cref="BitMask"/> from a <see cref="uint"/>
    /// </summary>
    /// <param name="bits">The <see cref="BitMask"/> to use</param>
    public BitMask(uint bits) : this((ulong) bits) { }
 
    /// <summary>
-   /// Constructs a <see cref="BitMask"/> from an <see cref="int"/>  
+   /// Constructs a <see cref="BitMask"/> from an <see cref="int"/>
    /// </summary>
    /// <param name="bits">The <see cref="BitMask"/> to use</param>
    public BitMask(int bits) : this((uint) bits) { }
 
    /// <summary>
-   /// Constructs a <see cref="BitMask"/> from a <see cref="ushort"/> 
+   /// Constructs a <see cref="BitMask"/> from a <see cref="ushort"/>
    /// </summary>
    /// <param name="bits">The <see cref="BitMask"/> to use</param>
    public BitMask(ushort bits) : this((ulong) bits) { }
 
    /// <summary>
-   /// Constructs a <see cref="BitMask"/> from a <see cref="short"/>  
+   /// Constructs a <see cref="BitMask"/> from a <see cref="short"/>
    /// </summary>
    /// <param name="bits">The <see cref="BitMask"/> to use</param>
    public BitMask(short bits) : this((ushort) bits) { }
 
    /// <summary>
-   /// Constructs a <see cref="BitMask"/> from a <see cref="byte"/>  
+   /// Constructs a <see cref="BitMask"/> from a <see cref="byte"/>
    /// </summary>
    /// <param name="bits">The <see cref="BitMask"/> to use</param>
    public BitMask(byte bits) : this((ulong) bits) { }
 
    /// <summary>
-   /// Constructs a <see cref="BitMask"/> from an <see cref="sbyte"/>  
+   /// Constructs a <see cref="BitMask"/> from an <see cref="sbyte"/>
    /// </summary>
    /// <param name="bits">The <see cref="BitMask"/> to use</param>
    public BitMask(sbyte bits) : this((byte) bits) { }

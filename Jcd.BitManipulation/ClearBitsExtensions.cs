@@ -27,7 +27,7 @@ public static class ClearBitsExtensions
    }
 
    /// <summary>
-   /// Sets all specified bits to "off" and returns the modified value. 
+   /// Sets all specified bits to "off" and returns the modified value.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The offset of where to begin clearing bits.</param>
@@ -105,7 +105,7 @@ public static class ClearBitsExtensions
    }
 
    /// <summary>
-   /// Sets all specified bits to "off" and returns the modified value. 
+   /// Sets all specified bits to "off" and returns the modified value.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The offset of where to begin clearing bits.</param>

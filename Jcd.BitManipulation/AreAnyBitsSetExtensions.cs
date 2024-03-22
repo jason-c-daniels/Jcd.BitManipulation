@@ -32,7 +32,7 @@ public static class AreAnyBitsSetExtensions
    /// <param name="bitmask">the bits to test.</param>
    /// <returns>True if any of the bits from the bitmask were set.</returns>
    /// <remarks>
-   /// NB: Only the lowest 32 bits of the bitmask will be used. 
+   /// NB: Only the lowest 32 bits of the bitmask will be used.
    /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool AreAnyBitsSet(this uint data, BitMask bitmask) { return data.ReadBits(0, bitmask) != 0; }
@@ -44,7 +44,7 @@ public static class AreAnyBitsSetExtensions
    /// <param name="bitmask">the bits to test.</param>
    /// <returns>True if any of the bits from the bitmask were set.</returns>
    /// <remarks>
-   /// NB: Only the lowest 32 bits of the bitmask will be used. 
+   /// NB: Only the lowest 32 bits of the bitmask will be used.
    /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool AreAnyBitsSet(this int data, BitMask bitmask) { return data.ReadBits(0, bitmask) != 0; }
@@ -56,7 +56,7 @@ public static class AreAnyBitsSetExtensions
    /// <param name="bitmask">the bits to test.</param>
    /// <returns>True if any of the bits from the bitmask were set.</returns>
    /// <remarks>
-   /// NB: Only the lowest 16 bits of the bitmask will be used. 
+   /// NB: Only the lowest 16 bits of the bitmask will be used.
    /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool AreAnyBitsSet(this ushort data, BitMask bitmask) { return data.ReadBits(0, bitmask) != 0; }
@@ -68,7 +68,7 @@ public static class AreAnyBitsSetExtensions
    /// <param name="bitmask">the bits to test.</param>
    /// <returns>True if any of the bits from the bitmask were set.</returns>
    /// <remarks>
-   /// NB: Only the lowest 16 bits of the bitmask will be used. 
+   /// NB: Only the lowest 16 bits of the bitmask will be used.
    /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool AreAnyBitsSet(this short data, BitMask bitmask) { return data.ReadBits(0, bitmask) != 0; }
@@ -80,7 +80,7 @@ public static class AreAnyBitsSetExtensions
    /// <param name="bitmask">the bits to test.</param>
    /// <returns>True if any of the bits from the bitmask were set.</returns>
    /// <remarks>
-   /// NB: Only the lowest 8 bits of the bitmask will be used. 
+   /// NB: Only the lowest 8 bits of the bitmask will be used.
    /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool AreAnyBitsSet(this byte data, BitMask bitmask) { return data.ReadBits(0, bitmask) != 0; }
@@ -92,7 +92,7 @@ public static class AreAnyBitsSetExtensions
    /// <param name="bitmask">the bits to test.</param>
    /// <returns>True if any of the bits from the bitmask were set.</returns>
    /// <remarks>
-   /// NB: Only the lowest 8 bits of the bitmask will be used. 
+   /// NB: Only the lowest 8 bits of the bitmask will be used.
    /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool AreAnyBitsSet(this sbyte data, BitMask bitmask) { return data.ReadBits(0, bitmask) != 0; }

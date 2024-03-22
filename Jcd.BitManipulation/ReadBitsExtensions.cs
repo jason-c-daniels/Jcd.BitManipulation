@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// Extension methods that enable reading one or more bits from a specified offset in an integer data type. 
+/// Extension methods that enable reading one or more bits from a specified offset in an integer data type.
 /// </summary>
 public static class ReadBitsExtensions
 {
@@ -124,7 +124,7 @@ public static class ReadBitsExtensions
    #region BitMask operations
 
    /// <summary>
-   /// Extract a subset of bits specified by a bitmask and right align the bits by the offset. 
+   /// Extract a subset of bits specified by a bitmask and right align the bits by the offset.
    /// </summary>
    /// <param name="value">the source of bits to read</param>
    /// <param name="offset">the bit offset to read from</param>
@@ -136,7 +136,7 @@ public static class ReadBitsExtensions
    public static ulong ReadBits(this ulong value, int offset, BitMask mask) { return (value & mask) >> offset; }
 
    /// <summary>
-   /// Extract a subset of bits specified by a bitmask and right align the bits by the offset. 
+   /// Extract a subset of bits specified by a bitmask and right align the bits by the offset.
    /// </summary>
    /// <param name="value">the source of bits to read</param>
    /// <param name="offset">the bit offset to read from</param>
@@ -151,7 +151,7 @@ public static class ReadBitsExtensions
    }
 
    /// <summary>
-   /// Extract a subset of bits specified by a bitmask and right align the bits by the offset. 
+   /// Extract a subset of bits specified by a bitmask and right align the bits by the offset.
    /// </summary>
    /// <param name="value">the source of bits to read</param>
    /// <param name="offset">the bit offset to read from</param>
@@ -163,7 +163,7 @@ public static class ReadBitsExtensions
    public static uint ReadBits(this uint value, int offset, BitMask mask) { return (value & mask) >> offset; }
 
    /// <summary>
-   /// Extract a subset of bits specified by a bitmask and right align the bits by the offset. 
+   /// Extract a subset of bits specified by a bitmask and right align the bits by the offset.
    /// </summary>
    /// <param name="value">the source of bits to read</param>
    /// <param name="offset">the bit offset to read from</param>
@@ -178,7 +178,7 @@ public static class ReadBitsExtensions
    }
 
    /// <summary>
-   /// Extract a subset of bits specified by a bitmask and right align the bits by the offset. 
+   /// Extract a subset of bits specified by a bitmask and right align the bits by the offset.
    /// </summary>
    /// <param name="value">the source of bits to read</param>
    /// <param name="offset">the bit offset to read from</param>
@@ -193,7 +193,7 @@ public static class ReadBitsExtensions
    }
 
    /// <summary>
-   /// Extract a subset of bits specified by a bitmask and right align the bits by the offset. 
+   /// Extract a subset of bits specified by a bitmask and right align the bits by the offset.
    /// </summary>
    /// <param name="value">the source of bits to read</param>
    /// <param name="offset">the bit offset to read from</param>
@@ -208,7 +208,7 @@ public static class ReadBitsExtensions
    }
 
    /// <summary>
-   /// Extract a subset of bits specified by a bitmask and right align the bits by the offset. 
+   /// Extract a subset of bits specified by a bitmask and right align the bits by the offset.
    /// </summary>
    /// <param name="value">the source of bits to read</param>
    /// <param name="offset">the bit offset to read from</param>
@@ -220,7 +220,7 @@ public static class ReadBitsExtensions
    public static byte ReadBits(this byte value, int offset, BitMask mask) { return (byte) ((value & mask) >> offset); }
 
    /// <summary>
-   /// Extract a subset of bits specified by a bitmask and right align the bits by the offset. 
+   /// Extract a subset of bits specified by a bitmask and right align the bits by the offset.
    /// </summary>
    /// <param name="value">the source of bits to read</param>
    /// <param name="offset">the bit offset to read from</param>

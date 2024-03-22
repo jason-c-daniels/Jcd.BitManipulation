@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// Extension methods to aid in toggling bits. 
+/// Extension methods to aid in toggling bits.
 /// </summary>
 public static class ToggleBitsExtensions
 {
@@ -15,7 +15,7 @@ public static class ToggleBitsExtensions
 
    /// <summary>
    /// Toggles bits and size.
-   /// The default values result in toggling all bits. 
+   /// The default values result in toggling all bits.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The offset of the bits to toggle.</param>
@@ -28,8 +28,8 @@ public static class ToggleBitsExtensions
    }
 
    /// <summary>
-   /// Toggles bits and size. 
-   /// The default values result in toggling all bits. 
+   /// Toggles bits and size.
+   /// The default values result in toggling all bits.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The offset of the bits to toggle.</param>
@@ -42,8 +42,8 @@ public static class ToggleBitsExtensions
    }
 
    /// <summary>
-   /// Toggles bits and size. 
-   /// The default values result in toggling all bits. 
+   /// Toggles bits and size.
+   /// The default values result in toggling all bits.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The offset of the bits to toggle.</param>
@@ -56,8 +56,8 @@ public static class ToggleBitsExtensions
    }
 
    /// <summary>
-   /// Toggles bits and size. 
-   /// The default values result in toggling all bits. 
+   /// Toggles bits and size.
+   /// The default values result in toggling all bits.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The offset of the bits to toggle.</param>
@@ -70,8 +70,8 @@ public static class ToggleBitsExtensions
    }
 
    /// <summary>
-   /// Toggles bits and size. 
-   /// The default values result in toggling all bits. 
+   /// Toggles bits and size.
+   /// The default values result in toggling all bits.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The offset of the bits to toggle.</param>
@@ -84,8 +84,8 @@ public static class ToggleBitsExtensions
    }
 
    /// <summary>
-   /// Toggles bits and size. 
-   /// The default values result in toggling all bits. 
+   /// Toggles bits and size.
+   /// The default values result in toggling all bits.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The offset of the bits to toggle.</param>
@@ -98,8 +98,8 @@ public static class ToggleBitsExtensions
    }
 
    /// <summary>
-   /// Toggles bits and size. 
-   /// The default values result in toggling all bits. 
+   /// Toggles bits and size.
+   /// The default values result in toggling all bits.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The offset of the bits to toggle.</param>
@@ -112,8 +112,8 @@ public static class ToggleBitsExtensions
    }
 
    /// <summary>
-   /// Toggles bits and size. 
-   /// The default values result in toggling all bits. 
+   /// Toggles bits and size.
+   /// The default values result in toggling all bits.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The offset of the bits to toggle.</param>
@@ -218,7 +218,7 @@ public static class ToggleBitsExtensions
    #region BitMask operations
 
    /// <summary>
-   /// Toggle all the bits according to the provided mask 
+   /// Toggle all the bits according to the provided mask
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="mask">bits to set.</param>
@@ -227,7 +227,7 @@ public static class ToggleBitsExtensions
    public static sbyte ToggleBits(this sbyte value, BitMask mask) { return (sbyte) (value ^ (sbyte) mask.Bits); }
 
    /// <summary>
-   /// Toggle all the bits according to the provided mask 
+   /// Toggle all the bits according to the provided mask
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="mask">bits to set.</param>
@@ -236,7 +236,7 @@ public static class ToggleBitsExtensions
    public static short ToggleBits(this short value, BitMask mask) { return (short) (value ^ (short) mask.Bits); }
 
    /// <summary>
-   /// Toggle all the bits according to the provided mask 
+   /// Toggle all the bits according to the provided mask
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="mask">bits to set.</param>
@@ -245,7 +245,7 @@ public static class ToggleBitsExtensions
    public static int ToggleBits(this int value, BitMask mask) { return value ^ (int) mask.Bits; }
 
    /// <summary>
-   /// Toggle all the bits according to the provided mask 
+   /// Toggle all the bits according to the provided mask
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="mask">bits to set.</param>
@@ -254,7 +254,7 @@ public static class ToggleBitsExtensions
    public static long ToggleBits(this long value, BitMask mask) { return value ^ (long) mask.Bits; }
 
    /// <summary>
-   /// Toggle all the bits according to the provided mask 
+   /// Toggle all the bits according to the provided mask
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="mask">bits to set.</param>
@@ -263,7 +263,7 @@ public static class ToggleBitsExtensions
    public static byte ToggleBits(this byte value, BitMask mask) { return (byte) (value ^ (byte) mask.Bits); }
 
    /// <summary>
-   /// Toggle all the bits according to the provided mask 
+   /// Toggle all the bits according to the provided mask
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="mask">bits to set.</param>
@@ -272,7 +272,7 @@ public static class ToggleBitsExtensions
    public static ushort ToggleBits(this ushort value, BitMask mask) { return (ushort) (value ^ (ushort) mask.Bits); }
 
    /// <summary>
-   /// Toggle all the bits according to the provided mask 
+   /// Toggle all the bits according to the provided mask
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="mask">bits to set.</param>
@@ -281,7 +281,7 @@ public static class ToggleBitsExtensions
    public static uint ToggleBits(this uint value, BitMask mask) { return value ^ (uint) mask.Bits; }
 
    /// <summary>
-   /// Toggle all the bits according to the provided mask 
+   /// Toggle all the bits according to the provided mask
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="mask">bits to set.</param>

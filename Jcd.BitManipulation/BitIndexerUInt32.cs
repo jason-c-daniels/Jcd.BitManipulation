@@ -15,7 +15,7 @@ using System.Text;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// Provides enumeration and indexed access to the bits on a stored <see cref="uint"/>. 
+/// Provides enumeration and indexed access to the bits on a stored <see cref="uint"/>.
 /// </summary>
 public struct BitIndexerUInt32 : IBitIndexer
 {
@@ -35,7 +35,7 @@ public struct BitIndexerUInt32 : IBitIndexer
    public int Length => BitSize;
 
    /// <summary>
-   /// Gets or sets individual bits within the backing store. 
+   /// Gets or sets individual bits within the backing store.
    /// </summary>
    /// <param name="index">the offset of the bit to access.</param>
    public bool this[int index]

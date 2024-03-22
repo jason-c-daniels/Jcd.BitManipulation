@@ -14,7 +14,7 @@ public static class SetBitsExtensions
    #region Range of bits operations
 
    /// <summary>
-   /// Sets all specified bits to "on" 
+   /// Sets all specified bits to "on"
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The bit location to store the value.</param>
@@ -27,7 +27,7 @@ public static class SetBitsExtensions
    }
 
    /// <summary>
-   /// Sets all specified bits to "on" 
+   /// Sets all specified bits to "on"
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The bit location to store the value.</param>
@@ -40,7 +40,7 @@ public static class SetBitsExtensions
    }
 
    /// <summary>
-   /// Sets all specified bits to "on" 
+   /// Sets all specified bits to "on"
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The bit location to store the value.</param>
@@ -53,7 +53,7 @@ public static class SetBitsExtensions
    }
 
    /// <summary>
-   /// Sets all specified bits to "on" 
+   /// Sets all specified bits to "on"
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The bit location to store the value.</param>
@@ -66,7 +66,7 @@ public static class SetBitsExtensions
    }
 
    /// <summary>
-   /// Sets all specified bits to "on" 
+   /// Sets all specified bits to "on"
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The bit location to store the value.</param>
@@ -79,7 +79,7 @@ public static class SetBitsExtensions
    }
 
    /// <summary>
-   /// Sets all specified bits to "on" 
+   /// Sets all specified bits to "on"
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The bit location to store the value.</param>
@@ -92,7 +92,7 @@ public static class SetBitsExtensions
    }
 
    /// <summary>
-   /// Sets all specified bits to "on" 
+   /// Sets all specified bits to "on"
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The bit location to store the value.</param>
@@ -105,7 +105,7 @@ public static class SetBitsExtensions
    }
 
    /// <summary>
-   /// Sets all specified bits to "on" 
+   /// Sets all specified bits to "on"
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The bit location to store the value.</param>
@@ -198,7 +198,7 @@ public static class SetBitsExtensions
    #region BitMask operations
 
    /// <summary>
-   /// Sets all specified bits to "on" 
+   /// Sets all specified bits to "on"
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="mask">bits to set.</param>
@@ -207,7 +207,7 @@ public static class SetBitsExtensions
    public static sbyte SetBits(this sbyte value, BitMask mask) { return (sbyte) (value | (sbyte) mask.Bits); }
 
    /// <summary>
-   /// Sets all specified bits to "on" 
+   /// Sets all specified bits to "on"
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="mask">bits to set.</param>
@@ -216,7 +216,7 @@ public static class SetBitsExtensions
    public static short SetBits(this short value, BitMask mask) { return (short) (value | (short) mask.Bits); }
 
    /// <summary>
-   /// Sets all specified bits to "on" 
+   /// Sets all specified bits to "on"
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="mask">bits to set.</param>
@@ -225,7 +225,7 @@ public static class SetBitsExtensions
    public static int SetBits(this int value, BitMask mask) { return value | (int) mask.Bits; }
 
    /// <summary>
-   /// Sets all specified bits to "on" 
+   /// Sets all specified bits to "on"
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="mask">bits to set.</param>
@@ -234,7 +234,7 @@ public static class SetBitsExtensions
    public static long SetBits(this long value, BitMask mask) { return value | (long) mask.Bits; }
 
    /// <summary>
-   /// Sets all specified bits to "on" 
+   /// Sets all specified bits to "on"
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="mask">bits to set.</param>
@@ -243,7 +243,7 @@ public static class SetBitsExtensions
    public static byte SetBits(this byte value, BitMask mask) { return (byte) (value | (byte) mask.Bits); }
 
    /// <summary>
-   /// Sets all specified bits to "on" 
+   /// Sets all specified bits to "on"
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="mask">bits to set.</param>
@@ -252,7 +252,7 @@ public static class SetBitsExtensions
    public static ushort SetBits(this ushort value, BitMask mask) { return (ushort) (value | (ushort) mask.Bits); }
 
    /// <summary>
-   /// Sets all specified bits to "on" 
+   /// Sets all specified bits to "on"
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="mask">bits to set.</param>
@@ -261,7 +261,7 @@ public static class SetBitsExtensions
    public static uint SetBits(this uint value, BitMask mask) { return value | (uint) mask.Bits; }
 
    /// <summary>
-   /// Sets all specified bits to "on" 
+   /// Sets all specified bits to "on"
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="mask">bits to set.</param>

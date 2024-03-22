@@ -1,7 +1,7 @@
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// A type indicating which endian is in use. 
+/// A type indicating which endian is in use.
 /// </summary>
 public enum Endian
 {

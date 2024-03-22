@@ -48,7 +48,7 @@ internal static class Program
       var ba1    = ul1.ToByteArray();
       var ba2    = ul2.ToByteArray();
 
-      // warm things up        
+      // warm things up
       TimeBitManipulations(iterations                       / 10, false);
       TimeStoreByteAndReadByteCalls(iterations              / 10, false);
       TimeStoreByteAndReadByteFromIndexerCalls(iterations   / 10, false);
@@ -597,7 +597,8 @@ internal static class Program
       data = data.ToggleBits(); // value is now 0b0000111111110000
 
       var finalData = data;
-      // read the upper byte 
+
+      // read the upper byte
       var upperByte = (byte) data.ReadBits(8, 8); // upperByte is now 0b00001111
 
       // write 0b1011 into the upper nybble
@@ -614,7 +615,7 @@ internal static class Program
         .StoreBits(0b1011, 4, 4);              // store the value in the upper 4 bits, now upperByte is now 0b10111111
 
       // finalData 0b0000111111110000
-      var beByte0 = finalData.ReadByte(0, Endian.Big);    // 00001111 
+      var beByte0 = finalData.ReadByte(0, Endian.Big);    // 00001111
       var leByte0 = finalData.ReadByte(0, Endian.Little); // 11110000
 
       var mutatedData = finalData
@@ -628,6 +629,6 @@ internal static class Program
 
       var leBaToUInt16Le = leBa.ToUInt16(Endian.Little); // leBaToUInt16Le = 0b1011111101010101
 
-      var leBaToUInt16Be = leBa.ToUInt16(Endian.Big); // leBaToUInt16Le = 0b0101010110111111 
+      var leBaToUInt16Be = leBa.ToUInt16(Endian.Big); // leBaToUInt16Le = 0b0101010110111111
    }
 }

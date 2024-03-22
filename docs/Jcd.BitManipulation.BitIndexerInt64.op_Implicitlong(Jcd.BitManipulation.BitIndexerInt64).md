@@ -2,8 +2,7 @@
 
 ## BitIndexerInt64.implicit operator long(BitIndexerInt64) Operator
 
-Automatically convert from a BitIndexerInt64 to
-a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
+Automatically convert from a BitIndexerInt64 to a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 
 ```csharp
 public static long implicit operator long(Jcd.BitManipulation.BitIndexerInt64 indexer);
@@ -17,6 +16,5 @@ public static long implicit operator long(Jcd.BitManipulation.BitIndexerInt64 in
 the indexer to convert from
 
 #### Returns
-
 [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 the underlying value

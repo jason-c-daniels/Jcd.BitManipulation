@@ -26,9 +26,8 @@ the bit offset to read from
 `mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
 the bitmask of which bits to read.
-            Zeroed bits in the mask will always extract 0 from the source.
+Zeroed bits in the mask will always extract 0 from the source.
 
 #### Returns
-
 [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 The right shifted value extracted from the value

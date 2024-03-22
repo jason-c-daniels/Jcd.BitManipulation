@@ -2,8 +2,7 @@
 
 ## BitIndexerSByte.implicit operator BitIndexerSByte(sbyte) Operator
 
-Automatically Convert from an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte') to
-a BitIndexerSByte
+Automatically Convert from an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte') to a BitIndexerSByte
 
 ```csharp
 public static Jcd.BitManipulation.BitIndexerSByte implicit operator BitIndexerSByte(sbyte bits);
@@ -17,6 +16,5 @@ public static Jcd.BitManipulation.BitIndexerSByte implicit operator BitIndexerSB
 the initial value for the indexer's backing store
 
 #### Returns
-
 [BitIndexerSByte](Jcd.BitManipulation.BitIndexerSByte.md 'Jcd.BitManipulation.BitIndexerSByte')
 A new BitIndexerSByte

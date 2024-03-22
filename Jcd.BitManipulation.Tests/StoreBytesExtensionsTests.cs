@@ -341,7 +341,7 @@ public class StoreBytesExtensionsTests
 
    #endregion
 
-   #region StoreBytes - ByteIndexer Tests
+   #region StoreBytes - LittleEndianByteIndexer Tests
 
    [Theory]
    [MemberData(nameof(UInt64StoreBytes))]
@@ -423,7 +423,7 @@ public class StoreBytesExtensionsTests
 
    #endregion
 
-   #region StoreBytes - ByteIndexer Tests
+   #region StoreBytes - BigEndianByteIndexer Tests
 
    [Theory]
    [MemberData(nameof(UInt64StoreBytes))]

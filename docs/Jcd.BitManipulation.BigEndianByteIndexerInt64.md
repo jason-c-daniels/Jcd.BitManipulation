@@ -17,16 +17,16 @@ Implements [IByteIndexer](Jcd.BitManipulation.IByteIndexer.md 'Jcd.BitManipulati
 | :--- | :--- |
 | [BigEndianByteIndexerInt64(long)](Jcd.BitManipulation.BigEndianByteIndexerInt64.BigEndianByteIndexerInt64(long).md 'Jcd.BitManipulation.BigEndianByteIndexerInt64.BigEndianByteIndexerInt64(long)') | Constructs a [BigEndianByteIndexerInt64](Jcd.BitManipulation.BigEndianByteIndexerInt64.md 'Jcd.BitManipulation.BigEndianByteIndexerInt64') from an [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64'). |
 
-| Fields                                                                                                                                     |                                                                                                                   |
-|:-------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------|
-| [ByteSize](Jcd.BitManipulation.BigEndianByteIndexerInt64.ByteSize.md 'Jcd.BitManipulation.BigEndianByteIndexerInt64.ByteSize')             | The number of bytes this type will index                                                                          |
+| Fields | |
+| :--- | :--- |
+| [ByteSize](Jcd.BitManipulation.BigEndianByteIndexerInt64.ByteSize.md 'Jcd.BitManipulation.BigEndianByteIndexerInt64.ByteSize') | The number of bytes this type will index |
 | [MaxByteIndex](Jcd.BitManipulation.BigEndianByteIndexerInt64.MaxByteIndex.md 'Jcd.BitManipulation.BigEndianByteIndexerInt64.MaxByteIndex') | The largest [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') index available. |
 
-| Properties                                                                                                                        |                                                |
-|:----------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------|
-| [Data](Jcd.BitManipulation.BigEndianByteIndexerInt64.Data.md 'Jcd.BitManipulation.BigEndianByteIndexerInt64.Data')                | The backing store.                             |
-| [Length](Jcd.BitManipulation.BigEndianByteIndexerInt64.Length.md 'Jcd.BitManipulation.BigEndianByteIndexerInt64.Length')          | The number of bytes indexable by this indexer. |
-| [this[int]](Jcd.BitManipulation.BigEndianByteIndexerInt64.this[int].md 'Jcd.BitManipulation.BigEndianByteIndexerInt64.this[int]') | Access bytes from the underlying data.         |
+| Properties | |
+| :--- | :--- |
+| [Data](Jcd.BitManipulation.BigEndianByteIndexerInt64.Data.md 'Jcd.BitManipulation.BigEndianByteIndexerInt64.Data') | The backing store. |
+| [Length](Jcd.BitManipulation.BigEndianByteIndexerInt64.Length.md 'Jcd.BitManipulation.BigEndianByteIndexerInt64.Length') | The number of bytes indexable by this indexer. |
+| [this[int]](Jcd.BitManipulation.BigEndianByteIndexerInt64.this[int].md 'Jcd.BitManipulation.BigEndianByteIndexerInt64.this[int]') | Access bytes from the underlying data. |
 
 | Methods | |
 | :--- | :--- |

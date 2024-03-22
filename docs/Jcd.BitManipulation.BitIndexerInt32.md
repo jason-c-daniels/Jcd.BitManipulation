@@ -2,8 +2,7 @@
 
 ## BitIndexerInt32 Struct
 
-Provides enumeration and indexed access to the bits on a
-stored [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32').
+Provides enumeration and indexed access to the bits on a stored [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32').
 
 ```csharp
 public struct BitIndexerInt32 :
@@ -18,10 +17,10 @@ Implements [IBitIndexer](Jcd.BitManipulation.IBitIndexer.md 'Jcd.BitManipulation
 | :--- | :--- |
 | [BitSize](Jcd.BitManipulation.BitIndexerInt32.BitSize.md 'Jcd.BitManipulation.BitIndexerInt32.BitSize') | The number of bits this type will index |
 
-| Properties                                                                                                    |                                                        |
-|:--------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------|
-| [Bits](Jcd.BitManipulation.BitIndexerInt32.Bits.md 'Jcd.BitManipulation.BitIndexerInt32.Bits')                | The backing store                                      |
-| [Length](Jcd.BitManipulation.BitIndexerInt32.Length.md 'Jcd.BitManipulation.BitIndexerInt32.Length')          | The number of bits indexable by this indexer.          |
+| Properties | |
+| :--- | :--- |
+| [Bits](Jcd.BitManipulation.BitIndexerInt32.Bits.md 'Jcd.BitManipulation.BitIndexerInt32.Bits') | The backing store |
+| [Length](Jcd.BitManipulation.BitIndexerInt32.Length.md 'Jcd.BitManipulation.BitIndexerInt32.Length') | The number of bits indexable by this indexer. |
 | [this[int]](Jcd.BitManipulation.BitIndexerInt32.this[int].md 'Jcd.BitManipulation.BitIndexerInt32.this[int]') | Gets or sets individual bits within the backing store. |
 
 | Methods | |
@@ -30,8 +29,8 @@ Implements [IBitIndexer](Jcd.BitManipulation.IBitIndexer.md 'Jcd.BitManipulation
 | [Slice(int, int)](Jcd.BitManipulation.BitIndexerInt32.Slice(int,int).md 'Jcd.BitManipulation.BitIndexerInt32.Slice(int, int)') | Get a subset of bits given a starting offset and length. |
 | [ToString()](Jcd.BitManipulation.BitIndexerInt32.ToString().md 'Jcd.BitManipulation.BitIndexerInt32.ToString()') | Format as a bit representation |
 
-| Operators                                                                                                                                                                                                                       |                                                                                                                                            |
-|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------|
+| Operators | |
+| :--- | :--- |
 | [implicit operator int(BitIndexerInt32)](Jcd.BitManipulation.BitIndexerInt32.op_Implicitint(Jcd.BitManipulation.BitIndexerInt32).md 'Jcd.BitManipulation.BitIndexerInt32.op_Implicit int(Jcd.BitManipulation.BitIndexerInt32)') | Automatically convert from a BitIndexerInt32 to an [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32') |
 | [implicit operator BitIndexerInt32(int)](Jcd.BitManipulation.BitIndexerInt32.op_ImplicitJcd.BitManipulation.BitIndexerInt32(int).md 'Jcd.BitManipulation.BitIndexerInt32.op_Implicit Jcd.BitManipulation.BitIndexerInt32(int)') | Automatically Convert from an [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32') to a BitIndexerInt32 |
 

@@ -18,16 +18,10 @@ namespace Jcd.BitManipulation.Tests.ByteIndexerTests;
 public class BigEndianByteIndexerInt64Tests
 {
    [Fact]
-   public void Constant_ByteSize_Is_Two()
+   public void Length_Is_SizeOf_Int64()
    {
-      Assert.Equal(sizeof(long), BigEndianByteIndexerInt64.ByteSize);
-   }
-
-   [Fact]
-   public void Length_Is_BitSize()
-   {
-      BigEndianByteIndexerInt64 sut = 0;
-      Assert.Equal(BigEndianByteIndexerInt64.ByteSize, sut.Length);
+      BigEndianByteIndexerInt64 sut = 0L;
+      Assert.Equal(sizeof(long), sut.Length);
    }
 
    [Theory]
@@ -76,7 +70,7 @@ public class BigEndianByteIndexerInt64Tests
 
    [Theory]
    [InlineData(-1)]
-   [InlineData(BigEndianByteIndexerInt64.ByteSize)]
+   [InlineData(sizeof(long))]
    public void Indexer_Get_Throws_Exception_When_Index_Is_Out_Of_Range(int index)
    {
       BigEndianByteIndexerInt64 sut = 0xFF;
@@ -85,7 +79,7 @@ public class BigEndianByteIndexerInt64Tests
 
    [Theory]
    [InlineData(-1)]
-   [InlineData(BigEndianByteIndexerInt64.ByteSize)]
+   [InlineData(sizeof(long))]
    public void Indexer_Set_Throws_Exception_When_Index_Is_Out_Of_Range(int index)
    {
       BigEndianByteIndexerInt64 sut = 0xFF;
@@ -105,18 +99,7 @@ public class BigEndianByteIndexerInt64Tests
    [InlineData(0x0807060500000000, 2, 2, 2, 0x06, 0x05)]
    [InlineData(0x0807060F00000000, 3, 1, 1, 0x0F)]
    public void Slice_Returns_Expected_Subset(
-      ulong data
-    , int index
-    , int size
-    , int expectedSize
-    , byte e0
-    , byte e1 = 0
-    , byte e2 = 0
-    , byte e3 = 0
-    , byte e4 = 0
-    , byte e5 = 0
-    , byte e6 = 0
-    , byte e7 = 0
+      ulong data, int index, int size, int expectedSize, byte e0, byte e1 = 0, byte e2 = 0, byte e3 = 0, byte e4 = 0, byte e5 = 0, byte e6 = 0, byte e7 = 0
    )
    {
       var expected = new List<byte>(new[] { e0 });

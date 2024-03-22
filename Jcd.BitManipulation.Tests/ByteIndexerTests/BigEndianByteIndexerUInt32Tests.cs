@@ -18,16 +18,10 @@ namespace Jcd.BitManipulation.Tests.ByteIndexerTests;
 public class BigEndianByteIndexerUInt32Tests
 {
    [Fact]
-   public void Constant_ByteSize_Is_Two()
-   {
-      Assert.Equal(sizeof(int), BigEndianByteIndexerUInt32.ByteSize);
-   }
-
-   [Fact]
-   public void Length_Is_BitSize()
+   public void Length_Is_SizeOf_UInt32()
    {
       BigEndianByteIndexerUInt32 sut = 0;
-      Assert.Equal(BigEndianByteIndexerUInt32.ByteSize, sut.Length);
+      Assert.Equal(sizeof(uint), sut.Length);
    }
 
    [Theory]
@@ -69,7 +63,7 @@ public class BigEndianByteIndexerUInt32Tests
 
    [Theory]
    [InlineData(-1)]
-   [InlineData(BigEndianByteIndexerUInt32.ByteSize)]
+   [InlineData(sizeof(uint))]
    public void Indexer_Get_Throws_Exception_When_Index_Is_Out_Of_Range(int index)
    {
       BigEndianByteIndexerUInt32 sut = 0xFF;
@@ -78,7 +72,7 @@ public class BigEndianByteIndexerUInt32Tests
 
    [Theory]
    [InlineData(-1)]
-   [InlineData(BigEndianByteIndexerUInt32.ByteSize)]
+   [InlineData(sizeof(uint))]
    public void Indexer_Set_Throws_Exception_When_Index_Is_Out_Of_Range(int index)
    {
       BigEndianByteIndexerUInt32 sut = 0xFF;

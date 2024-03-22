@@ -18,16 +18,10 @@ namespace Jcd.BitManipulation.Tests.ByteIndexerTests;
 public class LittleEndianByteIndexerInt16Tests
 {
    [Fact]
-   public void Constant_ByteSize_Is_Two()
-   {
-      Assert.Equal(sizeof(short), LittleEndianByteIndexerInt16.ByteSize);
-   }
-
-   [Fact]
    public void Length_Is_BitSize()
    {
       LittleEndianByteIndexerInt16 sut = 0;
-      Assert.Equal(LittleEndianByteIndexerInt16.ByteSize, sut.Length);
+      Assert.Equal(sizeof(short), sut.Length);
    }
 
    [Theory]
@@ -73,7 +67,7 @@ public class LittleEndianByteIndexerInt16Tests
 
    [Theory]
    [InlineData(-1)]
-   [InlineData(LittleEndianByteIndexerInt16.ByteSize)]
+   [InlineData(sizeof(short))]
    public void Indexer_Get_Throws_Exception_When_Index_Is_Out_Of_Range(int index)
    {
       LittleEndianByteIndexerInt16 sut = 0xFF;
@@ -82,7 +76,7 @@ public class LittleEndianByteIndexerInt16Tests
 
    [Theory]
    [InlineData(-1)]
-   [InlineData(LittleEndianByteIndexerInt32.ByteSize)]
+   [InlineData(sizeof(short))]
    public void Indexer_Set_Throws_Exception_When_Index_Is_Out_Of_Range(int index)
    {
       LittleEndianByteIndexerInt16 sut = 0xFF;

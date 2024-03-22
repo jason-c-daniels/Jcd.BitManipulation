@@ -41,7 +41,7 @@ internal static class Program
       var f      = 1.33f;
       var bits   = f.BitwiseToUInt32().ReadBits(0, 4);
       var ul     = 0xFFFEFDFEFCFBFAF9;
-      var ulbi   = (BigEndianByteIndexerUInt64) ul;
+      var ulbi   = (BigEndianByteIndexer) ul;
       var b0     = ulbi[0];
       var b1     = ulbi[1];
       var b2     = ulbi[2];
@@ -258,11 +258,11 @@ internal static class Program
    {
       if (report) SystemInfo.Instance.RefreshInfo();
       if (report) Console.WriteLine($"  - Name: {nameof(TimeStore8BytesToIndexerCalls)}");
-      const int                    opsPerIteration = 1;
-      byte                         upperByte       = 0;
-      var                          bytes           = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
-      LittleEndianByteIndexerInt64 data            = 0;
-      var                          sw              = Stopwatch.StartNew();
+      const int               opsPerIteration = 1;
+      byte                    upperByte       = 0;
+      var                     bytes           = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      LittleEndianByteIndexer data            = 0ul;
+      var                     sw              = Stopwatch.StartNew();
       for (long i = 0; i < iterations; i++) data.StoreBytes(bytes, 0);
 
       sw.Stop();
@@ -278,11 +278,11 @@ internal static class Program
    {
       if (report) SystemInfo.Instance.RefreshInfo();
       if (report) Console.WriteLine($"  - Name: {nameof(TimeStore4BytesToIndexerCalls)}");
-      const int                    opsPerIteration = 1;
-      LittleEndianByteIndexerInt64 data            = 0;
-      byte                         upperByte       = 0;
-      var                          bytes           = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
-      var                          sw              = Stopwatch.StartNew();
+      const int               opsPerIteration = 1;
+      LittleEndianByteIndexer data            = 0l;
+      byte                    upperByte       = 0;
+      var                     bytes           = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      var                     sw              = Stopwatch.StartNew();
       for (long i = 0; i < iterations; i++) data.StoreBytes(bytes, 0, 4);
 
       sw.Stop();
@@ -298,11 +298,11 @@ internal static class Program
    {
       if (report) SystemInfo.Instance.RefreshInfo();
       if (report) Console.WriteLine($"  - Name: {nameof(TimeStore2BytesToIndexerCalls)}");
-      const int                    opsPerIteration = 1;
-      LittleEndianByteIndexerInt64 data            = 0;
-      byte                         upperByte       = 0;
-      var                          bytes           = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
-      var                          sw              = Stopwatch.StartNew();
+      const int               opsPerIteration = 1;
+      LittleEndianByteIndexer data            = 0l;
+      byte                    upperByte       = 0;
+      var                     bytes           = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      var                     sw              = Stopwatch.StartNew();
       for (long i = 0; i < iterations; i++) data.StoreBytes(bytes, 0, 2);
 
       sw.Stop();

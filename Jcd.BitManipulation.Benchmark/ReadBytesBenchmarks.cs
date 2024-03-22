@@ -1,3 +1,4 @@
+#define REF_STRUCT
 using BenchmarkDotNet.Attributes;
 
 // ReSharper disable RedundantArgumentDefaultValue
@@ -94,6 +95,7 @@ public class BigEndianReadBytesBenchmarks
 
    #endregion
 
+   #if !REF_STRUCT
    #region BigEndianByteIndexer
 
    private static readonly BigEndianByteIndexer Bebiui64 = Ui64;
@@ -130,6 +132,7 @@ public class BigEndianReadBytesBenchmarks
    public byte[] BigEndianByteIndexer_Slice_Int16() { return Bebii16.Slice(0, sizeof(short)); }
 
    #endregion
+   #endif
 
    #region BigEndianByteIndexer New Instance Each Call
 

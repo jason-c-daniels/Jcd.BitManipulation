@@ -20,13 +20,10 @@ namespace Jcd.BitManipulation.Tests.ByteIndexerTests;
 public class LittleEndianByteIndexerInt64Tests
 {
    [Fact]
-   public void Constant_ByteSize_Is_Eight() { Assert.Equal(sizeof(long), LittleEndianByteIndexerInt64.ByteSize); }
-
-   [Fact]
    public void Length_Is_BitSize()
    {
-      LittleEndianByteIndexerInt64 sut = 0;
-      Assert.Equal(LittleEndianByteIndexerInt64.ByteSize, sut.Length);
+      LittleEndianByteIndexer sut = 0L;
+      Assert.Equal(sizeof(long), sut.Length);
    }
 
    [Theory]
@@ -35,9 +32,9 @@ public class LittleEndianByteIndexerInt64Tests
    [InlineData(0x337F)]
    public void Implicit_Conversion_Operators_Round_Trip_Returns_Original_Value(long data)
    {
-      var                          expected      = (int) data;
-      LittleEndianByteIndexerInt64 sut           = expected;
-      long                         convertedBack = sut;
+      var                     expected      = (int) data;
+      LittleEndianByteIndexer sut           = expected;
+      long                    convertedBack = sut;
       Assert.Equal(expected, convertedBack);
    }
 
@@ -52,8 +49,8 @@ public class LittleEndianByteIndexerInt64Tests
    [InlineData(0xFFFFFFFFFFFFFF05, 0, 0x05)]
    public void Indexer_Get_Returns_Expected_Value(ulong data, int index, ulong extractedData)
    {
-      var                          expected = (long) extractedData;
-      LittleEndianByteIndexerInt64 sut      = (long) data;
+      var                     expected = (long) extractedData;
+      LittleEndianByteIndexer sut      = (long) data;
       Assert.Equal(expected, sut[index]);
    }
 
@@ -68,26 +65,26 @@ public class LittleEndianByteIndexerInt64Tests
    [InlineData(0x0808080808080808, 0, 0x78, 0x0808080808080878)]
    public void Indexer_Set_Sets_The_Expected_Value(long data, int index, byte dataToSet, long expected)
    {
-      LittleEndianByteIndexerInt64 sut = data;
+      LittleEndianByteIndexer sut = data;
       sut[index] = dataToSet;
       Assert.Equal(expected, (long) sut);
    }
 
    [Theory]
    [InlineData(-1)]
-   [InlineData(LittleEndianByteIndexerInt64.ByteSize)]
+   [InlineData(sizeof(long))]
    public void Indexer_Get_Throws_Exception_When_Index_Is_Out_Of_Range(int index)
    {
-      LittleEndianByteIndexerInt64 sut = 0xFF;
+      LittleEndianByteIndexer sut = 0xFF;
       Assert.Throws<ArgumentOutOfRangeException>(() => sut[index]);
    }
 
    [Theory]
    [InlineData(-1)]
-   [InlineData(LittleEndianByteIndexerInt64.ByteSize)]
+   [InlineData(sizeof(long))]
    public void Indexer_Set_Throws_Exception_When_Index_Is_Out_Of_Range(int index)
    {
-      LittleEndianByteIndexerInt64 sut = 0xFF;
+      LittleEndianByteIndexer sut = 0xFF;
       Assert.Throws<ArgumentOutOfRangeException>(() => sut[index] = 0);
    }
 
@@ -127,7 +124,7 @@ public class LittleEndianByteIndexerInt64Tests
       if (expectedSize >= 7) expected.Add(e6);
       if (expectedSize == 8) expected.Add(e7);
 
-      LittleEndianByteIndexerInt64 sut = data;
+      LittleEndianByteIndexer sut = data;
       Assert.Equal(expected.ToArray(), sut.Slice(index, size));
    }
 }

@@ -20,13 +20,10 @@ namespace Jcd.BitManipulation.Tests.ByteIndexerTests;
 public class BigEndianByteIndexerSingleTests
 {
    [Fact]
-   public void Constant_ByteSize_Is_Four() { Assert.Equal(sizeof(float), BigEndianByteIndexerSingle.ByteSize); }
-
-   [Fact]
-   public void Length_Is_BitSize()
+   public void Length_Is_SizeOf_Single()
    {
-      BigEndianByteIndexerSingle sut = 0u.BitwiseToSingle();
-      Assert.Equal(BigEndianByteIndexerSingle.ByteSize, sut.Length);
+      BigEndianByteIndexer sut = 0u.BitwiseToSingle();
+      Assert.Equal(sizeof(float), sut.Length);
    }
 
    [Theory]
@@ -35,9 +32,9 @@ public class BigEndianByteIndexerSingleTests
    [InlineData(0x337FC0DE)]
    public void Implicit_Conversion_Operators_Round_Trip_Returns_Original_Value(uint data)
    {
-      var                        expected      = data.BitwiseToSingle();
-      BigEndianByteIndexerSingle sut           = expected;
-      float                      convertedBack = sut;
+      var                  expected      = data.BitwiseToSingle();
+      BigEndianByteIndexer sut           = expected;
+      float                convertedBack = sut;
       Assert.Equal(expected, convertedBack);
    }
 
@@ -48,8 +45,8 @@ public class BigEndianByteIndexerSingleTests
    [InlineData(0xFE7FFF03, 3, 0x03)]
    public void Indexer_Get_Returns_Expected_Value(uint data, int index, byte extractedData)
    {
-      var                        expected = extractedData;
-      BigEndianByteIndexerSingle sut      = data.BitwiseToSingle();
+      var                  expected = extractedData;
+      BigEndianByteIndexer sut      = data.BitwiseToSingle();
       Assert.Equal(expected, sut[index]);
    }
 
@@ -60,27 +57,27 @@ public class BigEndianByteIndexerSingleTests
    [InlineData(0xFEFEFEFE, 3, 0x0A, 0xFEFEFE0A)]
    public void Indexer_Set_Sets_The_Expected_Value(uint data, int index, byte dataToSet, uint uexpected)
    {
-      BigEndianByteIndexerSingle sut      = data.BitwiseToSingle();
-      var                        expected = uexpected.BitwiseToSingle();
+      BigEndianByteIndexer sut      = data.BitwiseToSingle();
+      var                  expected = uexpected.BitwiseToSingle();
       sut[index] = dataToSet;
       Assert.Equal(expected, (float) sut);
    }
 
    [Theory]
    [InlineData(-1)]
-   [InlineData(BigEndianByteIndexerSingle.ByteSize)]
+   [InlineData(sizeof(float))]
    public void Indexer_Get_Throws_Exception_When_Index_Is_Out_Of_Range(int index)
    {
-      BigEndianByteIndexerSingle sut = 0xFFu.BitwiseToSingle();
+      BigEndianByteIndexer sut = 0xFFu.BitwiseToSingle();
       Assert.Throws<ArgumentOutOfRangeException>(() => sut[index]);
    }
 
    [Theory]
    [InlineData(-1)]
-   [InlineData(BigEndianByteIndexerSingle.ByteSize)]
+   [InlineData(sizeof(float))]
    public void Indexer_Set_Throws_Exception_When_Index_Is_Out_Of_Range(int index)
    {
-      BigEndianByteIndexerSingle sut = 0xFFu.BitwiseToSingle();
+      BigEndianByteIndexer sut = 0xFFu.BitwiseToSingle();
       Assert.Throws<ArgumentOutOfRangeException>(() => sut[index] = 0);
    }
 
@@ -99,7 +96,7 @@ public class BigEndianByteIndexerSingleTests
       if (expectedSize >= 3) expected.Add(e2);
       if (expectedSize >= 4) expected.Add(e3);
 
-      BigEndianByteIndexerSingle sut = data.BitwiseToSingle();
+      BigEndianByteIndexer sut = data.BitwiseToSingle();
       Assert.Equal(expected.ToArray(), sut.Slice(index, size));
    }
 }

@@ -18,7 +18,7 @@ public class ReadBitsExtensionsTests
    [InlineData(0x3F,       4, 4, 0x03)]
    public void ReadBits_On_SByte_Reads_The_Correct_Bits(uint initial, int offset, int size, uint expected)
    {
-      var bits  = (sbyte) initial; // coerce to proper type
+      var bits = (sbyte) initial; // coerce to proper type
       var value = bits.ReadBits(offset, size);
       Assert.Equal((sbyte) expected, value);
    }
@@ -31,7 +31,7 @@ public class ReadBitsExtensionsTests
    [InlineData(0x3F,       4, 4, 0x03)]
    public void ReadBits_On_Byte_Reads_The_Correct_Bits(uint initial, int offset, int size, uint expected)
    {
-      var bits  = (byte) initial; // coerce to proper type
+      var bits = (byte) initial; // coerce to proper type
       var value = bits.ReadBits(offset, size);
       Assert.Equal((byte) expected, value);
    }
@@ -46,7 +46,7 @@ public class ReadBitsExtensionsTests
    [InlineData(0xF00F,     14, 2, 0x03)]
    public void ReadBits_On_Int16_Reads_The_Correct_Bits(uint initial, int offset, int size, uint expected)
    {
-      var bits  = (short) initial; // coerce to proper type
+      var bits = (short) initial; // coerce to proper type
       var value = bits.ReadBits(offset, size);
       Assert.Equal((short) expected, value);
    }
@@ -61,7 +61,7 @@ public class ReadBitsExtensionsTests
    [InlineData(0xF00F,     14, 2, 0x03)]
    public void ReadBits_On_UInt16_Reads_The_Correct_Bits(uint initial, int offset, int size, uint expected)
    {
-      var bits  = (ushort) initial; // coerce to proper type
+      var bits = (ushort) initial; // coerce to proper type
       var value = bits.ReadBits(offset, size);
       Assert.Equal((ushort) expected, value);
    }
@@ -78,7 +78,7 @@ public class ReadBitsExtensionsTests
    [InlineData(0xF000000F, 30, 2, 0x03)]
    public void ReadBits_On_Int32_Reads_The_Correct_Bits(uint initial, int offset, int size, uint expected)
    {
-      var bits  = (int) initial; // coerce to proper type
+      var bits = (int) initial; // coerce to proper type
       var value = bits.ReadBits(offset, size);
       Assert.Equal((int) expected, value);
    }
@@ -113,7 +113,7 @@ public class ReadBitsExtensionsTests
    [InlineData(0xF00000000000000F, 62, 2, 0x03)]
    public void ReadBits_On_Int64_Reads_The_Correct_Bits(ulong initial, int offset, int size, ulong expected)
    {
-      var bits  = (long) initial; // coerce to proper type
+      var bits = (long) initial; // coerce to proper type
       var value = bits.ReadBits(offset, size);
       Assert.Equal((long) expected, value);
    }

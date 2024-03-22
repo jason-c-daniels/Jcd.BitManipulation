@@ -15,7 +15,7 @@ using System.Text;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// Provides enumeration and indexed access to the bits on a stored <see cref="long"/>.
+/// Provides enumeration and indexed access to the bits on a stored <see cref="long" />.
 /// </summary>
 public struct BitIndexerInt64 : IBitIndexer
 {
@@ -45,18 +45,24 @@ public struct BitIndexerInt64 : IBitIndexer
    }
 
    /// <summary>
-   /// Automatically Convert from a <see cref="long"/> to a BitIndexerInt64
+   /// Automatically Convert from a <see cref="long" /> to a BitIndexerInt64
    /// </summary>
    /// <param name="bits">the initial value for the indexer's backing store</param>
    /// <returns>A new BitIndexerInt64</returns>
-   public static implicit operator BitIndexerInt64(long bits) { return new BitIndexerInt64 { Bits = bits }; }
+   public static implicit operator BitIndexerInt64(long bits)
+   {
+      return new BitIndexerInt64 { Bits = bits };
+   }
 
    /// <summary>
-   /// Automatically convert from a BitIndexerInt64 to a <see cref="long"/>
+   /// Automatically convert from a BitIndexerInt64 to a <see cref="long" />
    /// </summary>
    /// <param name="indexer">the indexer to convert from</param>
    /// <returns>the underlying value</returns>
-   public static implicit operator long(BitIndexerInt64 indexer) { return indexer.Bits; }
+   public static implicit operator long(BitIndexerInt64 indexer)
+   {
+      return indexer.Bits;
+   }
 
    /// <summary>
    /// Get an enumerator to enumerate the bits with.
@@ -72,7 +78,10 @@ public struct BitIndexerInt64 : IBitIndexer
    /// Get an enumerator to enumerate the bits with.
    /// </summary>
    /// <returns>The enumerator</returns>
-   IEnumerator IEnumerable.GetEnumerator() { return GetEnumerator(); }
+   IEnumerator IEnumerable.GetEnumerator()
+   {
+      return GetEnumerator();
+   }
 
    /// <summary>
    /// Get an enumerator to enumerate the bits with.
@@ -80,8 +89,9 @@ public struct BitIndexerInt64 : IBitIndexer
    /// <returns>The enumerator</returns>
    public bool[] Slice(int start, int length)
    {
-      var slice                                 = new bool[length];
-      for (var i = 0; i < length; i++) slice[i] = this[i + start];
+      var slice = new bool[length];
+      for (var i = 0; i < length; i++)
+         slice[i] = this[i + start];
 
       return slice;
    }
@@ -94,7 +104,8 @@ public struct BitIndexerInt64 : IBitIndexer
    {
       var sb = new StringBuilder();
       sb.Append("0b");
-      foreach (var value in this.Reverse()) sb.Append(value ? '1' : '0');
+      foreach (var value in this.Reverse())
+         sb.Append(value ? '1' : '0');
 
       return sb.ToString();
    }

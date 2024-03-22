@@ -15,7 +15,7 @@ using System.Runtime.CompilerServices;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// Provides byte level indexing operations (set, get) on a <see cref="Int16"/>. Zero is the least significant byte.
+/// Provides byte level indexing operations (set, get) on a <see cref="short" />. Zero is the least significant byte.
 /// </summary>
 public struct LittleEndianByteIndexerInt16 : IByteIndexer
 {
@@ -25,15 +25,18 @@ public struct LittleEndianByteIndexerInt16 : IByteIndexer
    public const int ByteSize = sizeof(short);
 
    /// <summary>
-   /// The largest <see cref="byte"/> index available.
+   /// The largest <see cref="byte" /> index available.
    /// </summary>
    public const int MaxByteIndex = ByteSize - 1;
 
    /// <summary>
-   /// Constructs a <see cref="LittleEndianByteIndexerInt16"/> from an <see cref="Int16"/>.
+   /// Constructs a <see cref="LittleEndianByteIndexerInt16" /> from an <see cref="short" />.
    /// </summary>
    /// <param name="data"> The initial value of the underlying data.</param>
-   public LittleEndianByteIndexerInt16(short data = 0) { Data = data; }
+   public LittleEndianByteIndexerInt16(short data = 0)
+   {
+      Data = data;
+   }
 
    /// <summary>
    /// The length of the buffer.
@@ -48,14 +51,15 @@ public struct LittleEndianByteIndexerInt16 : IByteIndexer
    /// <summary>
    /// Access bytes from the underlying data.
    /// </summary>
-   /// <param name="index">The index of the <see cref="byte"/> to get or set.</param>
+   /// <param name="index">The index of the <see cref="byte" /> to get or set.</param>
    /// <exception cref="ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
    public byte this[int index]
    {
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       get
       {
-         if (index is < 0 or >= ByteSize) throw new ArgumentOutOfRangeException(nameof(index));
+         if (index is < 0 or >= ByteSize)
+            throw new ArgumentOutOfRangeException(nameof(index));
 
          return (byte) Data.ReadBits(index << 3, 8);
       }
@@ -63,7 +67,9 @@ public struct LittleEndianByteIndexerInt16 : IByteIndexer
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       set
       {
-         if (index is < 0 or >= ByteSize) throw new ArgumentOutOfRangeException(nameof(index));
+         if (index is < 0 or >= ByteSize)
+            throw new ArgumentOutOfRangeException(nameof(index));
+
          Data = Data.StoreBits(value, index << 3, 8);
       }
    }
@@ -76,19 +82,23 @@ public struct LittleEndianByteIndexerInt16 : IByteIndexer
    /// <returns>an array of bytes for the specified subset</returns>
    public byte[] Slice(int start, int length)
    {
-      var slice                                 = new byte[length];
-      for (var i = 0; i < length; i++) slice[i] = this[i + start];
+      var slice = new byte[length];
+      for (var i = 0; i < length; i++)
+         slice[i] = this[i + start];
 
       return slice;
    }
 
    /// <summary>
-   /// Converts the <see cref="byte"/> indexer to its underlying data type.
+   /// Converts the <see cref="byte" /> indexer to its underlying data type.
    /// </summary>
    /// <param name="buffer">The buffer to convert.</param>
    /// <returns>The raw data.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static implicit operator short(LittleEndianByteIndexerInt16 buffer) { return buffer.Data; }
+   public static implicit operator short(LittleEndianByteIndexerInt16 buffer)
+   {
+      return buffer.Data;
+   }
 
    /// <summary>
    /// Converts the underlying data type to the buffer type.
@@ -106,11 +116,15 @@ public struct LittleEndianByteIndexerInt16 : IByteIndexer
    /// <inheritdoc />
    public IEnumerator<byte> GetEnumerator()
    {
-      for (var i = 0; i < ByteSize; i++) yield return this[i];
+      for (var i = 0; i < ByteSize; i++)
+         yield return this[i];
    }
 
    /// <inheritdoc />
-   IEnumerator IEnumerable.GetEnumerator() { return GetEnumerator(); }
+   IEnumerator IEnumerable.GetEnumerator()
+   {
+      return GetEnumerator();
+   }
 
    #endregion
 }

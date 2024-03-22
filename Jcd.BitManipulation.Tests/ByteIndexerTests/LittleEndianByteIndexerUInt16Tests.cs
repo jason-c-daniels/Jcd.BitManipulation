@@ -18,7 +18,10 @@ namespace Jcd.BitManipulation.Tests.ByteIndexerTests;
 public class LittleEndianByteIndexerUInt16Tests
 {
    [Fact]
-   public void Constant_ByteSize_Is_Two() { Assert.Equal(sizeof(ushort), LittleEndianByteIndexerUInt16.ByteSize); }
+   public void Constant_ByteSize_Is_Two()
+   {
+      Assert.Equal(sizeof(ushort), LittleEndianByteIndexerUInt16.ByteSize);
+   }
 
    [Fact]
    public void Length_Is_BitSize()
@@ -34,9 +37,9 @@ public class LittleEndianByteIndexerUInt16Tests
    [InlineData(0b111001100011000)]
    public void Implicit_Conversion_Operators_Round_Trip_Returns_Original_Value(uint data)
    {
-      var                           expected      = (ushort) data;
-      LittleEndianByteIndexerUInt16 sut           = expected;
-      ushort                        convertedBack = sut;
+      var expected = (ushort) data;
+      LittleEndianByteIndexerUInt16 sut = expected;
+      ushort convertedBack = sut;
       Assert.Equal(expected, convertedBack);
    }
 
@@ -49,8 +52,8 @@ public class LittleEndianByteIndexerUInt16Tests
    [InlineData(0x037F, 1, 0x03)]
    public void Indexer_Get_Returns_Expected_Value(uint data, int index, uint extractedData)
    {
-      var                           expected = (ushort) extractedData;
-      LittleEndianByteIndexerUInt16 sut      = (ushort) data;
+      var expected = (ushort) extractedData;
+      LittleEndianByteIndexerUInt16 sut = (ushort) data;
       Assert.Equal(expected, sut[index]);
    }
 
@@ -93,38 +96,14 @@ public class LittleEndianByteIndexerUInt16Tests
    [InlineData(0x01FF, 1, 1, 1, 0x01)]
    [InlineData(0x02FE, 1, 1, 1, 0x02)]
    [InlineData(0x037F, 1, 1, 1, 0x03)]
-   [InlineData(0x01FF
-             , 0
-             , 2
-             , 2
-             , 0xFF
-             , 0x01
-              )]
-   [InlineData(0x02FE
-             , 0
-             , 2
-             , 2
-             , 0xFE
-             , 0x02
-              )]
-   [InlineData(0x037F
-             , 0
-             , 2
-             , 2
-             , 0x7F
-             , 0x03
-              )]
-   public void Slice_Returns_Expected_Subset(
-      ushort data
-    , int    index
-    , int    size
-    , int    expectedSize
-    , byte   e0
-    , byte   e1 = 0
-   )
+   [InlineData(0x01FF, 0, 2, 2, 0xFF, 0x01)]
+   [InlineData(0x02FE, 0, 2, 2, 0xFE, 0x02)]
+   [InlineData(0x037F, 0, 2, 2, 0x7F, 0x03)]
+   public void Slice_Returns_Expected_Subset(ushort data, int index, int size, int expectedSize, byte e0, byte e1 = 0)
    {
       var expected = new List<byte>(new[] { e0 });
-      if (expectedSize >= 2) expected.Add(e1);
+      if (expectedSize >= 2)
+         expected.Add(e1);
 
       LittleEndianByteIndexerUInt16 sut = data;
       Assert.Equal(expected.ToArray(), sut.Slice(index, size));

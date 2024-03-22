@@ -14,7 +14,7 @@ using System.Collections.Generic;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// Provides byte level indexing operations (set, get) on a <see cref="Int32"/>. Zero is the most significant byte.
+/// Provides byte level indexing operations (set, get) on a <see cref="int" />. Zero is the most significant byte.
 /// </summary>
 public struct BigEndianByteIndexerInt32 : IByteIndexer
 {
@@ -24,15 +24,18 @@ public struct BigEndianByteIndexerInt32 : IByteIndexer
    public const int ByteSize = sizeof(int);
 
    /// <summary>
-   /// The largest <see cref="byte"/> index available.
+   /// The largest <see cref="byte" /> index available.
    /// </summary>
    public const int MaxByteIndex = ByteSize - 1;
 
    /// <summary>
-   /// Constructs a <see cref="BigEndianByteIndexerInt32"/> from an <see cref="Int32"/>.
+   /// Constructs a <see cref="BigEndianByteIndexerInt32" /> from an <see cref="int" />.
    /// </summary>
    /// <param name="data"> The initial value of the underlying data.</param>
-   public BigEndianByteIndexerInt32(int data = 0) { Data = data; }
+   public BigEndianByteIndexerInt32(int data = 0)
+   {
+      Data = data;
+   }
 
    /// <summary>
    /// The number of bytes indexable by this indexer.
@@ -47,20 +50,23 @@ public struct BigEndianByteIndexerInt32 : IByteIndexer
    /// <summary>
    /// Access bytes from the underlying data.
    /// </summary>
-   /// <param name="index">The index of the <see cref="byte"/> to get or set.</param>
+   /// <param name="index">The index of the <see cref="byte" /> to get or set.</param>
    /// <exception cref="ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
    public byte this[int index]
    {
       get
       {
-         if (index is < 0 or >= ByteSize) throw new ArgumentOutOfRangeException(nameof(index));
+         if (index is < 0 or >= ByteSize)
+            throw new ArgumentOutOfRangeException(nameof(index));
 
          return (byte) Data.ReadBits((MaxByteIndex - index) << 3, 8);
       }
 
       set
       {
-         if (index is < 0 or >= ByteSize) throw new ArgumentOutOfRangeException(nameof(index));
+         if (index is < 0 or >= ByteSize)
+            throw new ArgumentOutOfRangeException(nameof(index));
+
          Data = Data.StoreBits(value, (MaxByteIndex - index) << 3, 8);
       }
    }
@@ -73,8 +79,9 @@ public struct BigEndianByteIndexerInt32 : IByteIndexer
    /// <returns>an array of bytes for the specified subset</returns>
    public byte[] Slice(int start, int length)
    {
-      var slice                                 = new byte[length];
-      for (var i = 0; i < length; i++) slice[i] = this[i + start];
+      var slice = new byte[length];
+      for (var i = 0; i < length; i++)
+         slice[i] = this[i + start];
 
       return slice;
    }
@@ -84,25 +91,35 @@ public struct BigEndianByteIndexerInt32 : IByteIndexer
    /// </summary>
    /// <param name="indexer">The indexer to convert.</param>
    /// <returns>The raw data.</returns>
-   public static implicit operator int(BigEndianByteIndexerInt32 indexer) { return indexer.Data; }
+   public static implicit operator int(BigEndianByteIndexerInt32 indexer)
+   {
+      return indexer.Data;
+   }
 
    /// <summary>
    /// Converts the underlying data type to the indexer type.
    /// </summary>
    /// <param name="data">The underlying data type.</param>
    /// <returns>A indexer type.</returns>
-   public static implicit operator BigEndianByteIndexerInt32(int data) { return new BigEndianByteIndexerInt32(data); }
+   public static implicit operator BigEndianByteIndexerInt32(int data)
+   {
+      return new BigEndianByteIndexerInt32(data);
+   }
 
    #region Implementation of IEnumerable
 
    /// <inheritdoc />
    public IEnumerator<byte> GetEnumerator()
    {
-      for (var i = 0; i < ByteSize; i++) yield return this[i];
+      for (var i = 0; i < ByteSize; i++)
+         yield return this[i];
    }
 
    /// <inheritdoc />
-   IEnumerator IEnumerable.GetEnumerator() { return GetEnumerator(); }
+   IEnumerator IEnumerable.GetEnumerator()
+   {
+      return GetEnumerator();
+   }
 
    #endregion
 }

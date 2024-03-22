@@ -128,19 +128,24 @@ public static class ReadBitsExtensions
    /// </summary>
    /// <param name="value">the source of bits to read</param>
    /// <param name="offset">the bit offset to read from</param>
-   /// <param name="mask">the bitmask of which bits to read.
+   /// <param name="mask">
+   /// the bitmask of which bits to read.
    /// Zeroed bits in the mask will always extract 0 from the source.
    /// </param>
    /// <returns>The right shifted value extracted from the value</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ulong ReadBits(this ulong value, int offset, BitMask mask) { return (value & mask) >> offset; }
+   public static ulong ReadBits(this ulong value, int offset, BitMask mask)
+   {
+      return (value & mask) >> offset;
+   }
 
    /// <summary>
    /// Extract a subset of bits specified by a bitmask and right align the bits by the offset.
    /// </summary>
    /// <param name="value">the source of bits to read</param>
    /// <param name="offset">the bit offset to read from</param>
-   /// <param name="mask">the bitmask of which bits to read.
+   /// <param name="mask">
+   /// the bitmask of which bits to read.
    /// Zeroed bits in the mask will always extract 0 from the source.
    /// </param>
    /// <returns>The right shifted value extracted from the value</returns>
@@ -155,19 +160,24 @@ public static class ReadBitsExtensions
    /// </summary>
    /// <param name="value">the source of bits to read</param>
    /// <param name="offset">the bit offset to read from</param>
-   /// <param name="mask">the bitmask of which bits to read.
+   /// <param name="mask">
+   /// the bitmask of which bits to read.
    /// Zeroed bits in the mask will always extract 0 from the source.
    /// </param>
    /// <returns>The right shifted value extracted from the value</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static uint ReadBits(this uint value, int offset, BitMask mask) { return (value & mask) >> offset; }
+   public static uint ReadBits(this uint value, int offset, BitMask mask)
+   {
+      return (value & mask) >> offset;
+   }
 
    /// <summary>
    /// Extract a subset of bits specified by a bitmask and right align the bits by the offset.
    /// </summary>
    /// <param name="value">the source of bits to read</param>
    /// <param name="offset">the bit offset to read from</param>
-   /// <param name="mask">the bitmask of which bits to read.
+   /// <param name="mask">
+   /// the bitmask of which bits to read.
    /// Zeroed bits in the mask will always extract 0 from the source.
    /// </param>
    /// <returns>The right shifted value extracted from the value</returns>
@@ -182,7 +192,8 @@ public static class ReadBitsExtensions
    /// </summary>
    /// <param name="value">the source of bits to read</param>
    /// <param name="offset">the bit offset to read from</param>
-   /// <param name="mask">the bitmask of which bits to read.
+   /// <param name="mask">
+   /// the bitmask of which bits to read.
    /// Zeroed bits in the mask will always extract 0 from the source.
    /// </param>
    /// <returns>The right shifted value extracted from the value</returns>
@@ -197,7 +208,8 @@ public static class ReadBitsExtensions
    /// </summary>
    /// <param name="value">the source of bits to read</param>
    /// <param name="offset">the bit offset to read from</param>
-   /// <param name="mask">the bitmask of which bits to read.
+   /// <param name="mask">
+   /// the bitmask of which bits to read.
    /// Zeroed bits in the mask will always extract 0 from the source.
    /// </param>
    /// <returns>The right shifted value extracted from the value</returns>
@@ -212,19 +224,24 @@ public static class ReadBitsExtensions
    /// </summary>
    /// <param name="value">the source of bits to read</param>
    /// <param name="offset">the bit offset to read from</param>
-   /// <param name="mask">the bitmask of which bits to read.
+   /// <param name="mask">
+   /// the bitmask of which bits to read.
    /// Zeroed bits in the mask will always extract 0 from the source.
    /// </param>
    /// <returns>The right shifted value extracted from the value</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static byte ReadBits(this byte value, int offset, BitMask mask) { return (byte) ((value & mask) >> offset); }
+   public static byte ReadBits(this byte value, int offset, BitMask mask)
+   {
+      return (byte) ((value & mask) >> offset);
+   }
 
    /// <summary>
    /// Extract a subset of bits specified by a bitmask and right align the bits by the offset.
    /// </summary>
    /// <param name="value">the source of bits to read</param>
    /// <param name="offset">the bit offset to read from</param>
-   /// <param name="mask">the bitmask of which bits to read.
+   /// <param name="mask">
+   /// the bitmask of which bits to read.
    /// Zeroed bits in the mask will always extract 0 from the source.
    /// </param>
    /// <returns>The right shifted value extracted from the value</returns>
@@ -245,7 +262,10 @@ public static class ReadBitsExtensions
    /// <param name="offset">the offset of the bit to read</param>
    /// <returns>the bit (a bool) at the specified offset </returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static bool ReadBit(this ulong value, int offset) { return value.ReadBits(offset, 1) > 0; }
+   public static bool ReadBit(this ulong value, int offset)
+   {
+      return value.ReadBits(offset, 1) > 0;
+   }
 
    /// <summary>
    /// Read a single bit from the specified offset.
@@ -254,7 +274,10 @@ public static class ReadBitsExtensions
    /// <param name="offset">the offset of the bit to read</param>
    /// <returns>the bit (a bool) at the specified offset </returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static bool ReadBit(this long value, int offset) { return value.ReadBits(offset, 1) > 0; }
+   public static bool ReadBit(this long value, int offset)
+   {
+      return value.ReadBits(offset, 1) > 0;
+   }
 
    /// <summary>
    /// Read a single bit from the specified offset.
@@ -263,7 +286,10 @@ public static class ReadBitsExtensions
    /// <param name="offset">the offset of the bit to read</param>
    /// <returns>the bit (a bool) at the specified offset </returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static bool ReadBit(this uint value, int offset) { return value.ReadBits(offset, 1) > 0; }
+   public static bool ReadBit(this uint value, int offset)
+   {
+      return value.ReadBits(offset, 1) > 0;
+   }
 
    /// <summary>
    /// Read a single bit from the specified offset.
@@ -272,7 +298,10 @@ public static class ReadBitsExtensions
    /// <param name="offset">the offset of the bit to read</param>
    /// <returns>the bit (a bool) at the specified offset </returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static bool ReadBit(this int value, int offset) { return value.ReadBits(offset, 1) > 0; }
+   public static bool ReadBit(this int value, int offset)
+   {
+      return value.ReadBits(offset, 1) > 0;
+   }
 
    /// <summary>
    /// Read a single bit from the specified offset.
@@ -281,7 +310,10 @@ public static class ReadBitsExtensions
    /// <param name="offset">the offset of the bit to read</param>
    /// <returns>the bit (a bool) at the specified offset </returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static bool ReadBit(this ushort value, int offset) { return value.ReadBits(offset, 1) > 0; }
+   public static bool ReadBit(this ushort value, int offset)
+   {
+      return value.ReadBits(offset, 1) > 0;
+   }
 
    /// <summary>
    /// Read a single bit from the specified offset.
@@ -290,7 +322,10 @@ public static class ReadBitsExtensions
    /// <param name="offset">the offset of the bit to read</param>
    /// <returns>the bit (a bool) at the specified offset </returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static bool ReadBit(this short value, int offset) { return value.ReadBits(offset, 1) > 0; }
+   public static bool ReadBit(this short value, int offset)
+   {
+      return value.ReadBits(offset, 1) > 0;
+   }
 
    /// <summary>
    /// Read a single bit from the specified offset.
@@ -299,7 +334,10 @@ public static class ReadBitsExtensions
    /// <param name="offset">the offset of the bit to read</param>
    /// <returns>the bit (a bool) at the specified offset </returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static bool ReadBit(this byte value, int offset) { return value.ReadBits(offset, 1) > 0; }
+   public static bool ReadBit(this byte value, int offset)
+   {
+      return value.ReadBits(offset, 1) > 0;
+   }
 
    /// <summary>
    /// Read a single bit from the specified offset.
@@ -308,7 +346,10 @@ public static class ReadBitsExtensions
    /// <param name="offset">the offset of the bit to read</param>
    /// <returns>the bit (a bool) at the specified offset </returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static bool ReadBit(this sbyte value, int offset) { return value.ReadBits(offset, 1) > 0; }
+   public static bool ReadBit(this sbyte value, int offset)
+   {
+      return value.ReadBits(offset, 1) > 0;
+   }
 
    #endregion
 }

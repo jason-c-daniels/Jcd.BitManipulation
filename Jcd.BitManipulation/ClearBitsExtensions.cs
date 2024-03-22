@@ -128,7 +128,10 @@ public static class ClearBitsExtensions
    /// <param name="offset">The offset of the bit to clear.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static sbyte ClearBit(this sbyte value, int offset) { return value.ClearBits(BitMask.FromSingleBit(offset)); }
+   public static sbyte ClearBit(this sbyte value, int offset)
+   {
+      return value.ClearBits(BitMask.FromSingleBit(offset));
+   }
 
    /// <summary>
    /// Sets bit to "off" and returns the modified value.
@@ -137,7 +140,10 @@ public static class ClearBitsExtensions
    /// <param name="offset">The offset of the bit to clear.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static short ClearBit(this short value, int offset) { return value.ClearBits(BitMask.FromSingleBit(offset)); }
+   public static short ClearBit(this short value, int offset)
+   {
+      return value.ClearBits(BitMask.FromSingleBit(offset));
+   }
 
    /// <summary>
    /// Sets bit to "off" and returns the modified value.
@@ -146,7 +152,10 @@ public static class ClearBitsExtensions
    /// <param name="offset">The offset of the bit to clear.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static int ClearBit(this int value, int offset) { return value.ClearBits(BitMask.FromSingleBit(offset)); }
+   public static int ClearBit(this int value, int offset)
+   {
+      return value.ClearBits(BitMask.FromSingleBit(offset));
+   }
 
    /// <summary>
    /// Sets bit to "off" and returns the modified value.
@@ -155,7 +164,10 @@ public static class ClearBitsExtensions
    /// <param name="offset">The offset of the bit to clear.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static long ClearBit(this long value, int offset) { return value.ClearBits(BitMask.FromSingleBit(offset)); }
+   public static long ClearBit(this long value, int offset)
+   {
+      return value.ClearBits(BitMask.FromSingleBit(offset));
+   }
 
    /// <summary>
    /// Sets bit to "off" and returns the modified value.
@@ -164,7 +176,10 @@ public static class ClearBitsExtensions
    /// <param name="offset">The offset of the bit to clear.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static byte ClearBit(this byte value, int offset) { return value.ClearBits(BitMask.FromSingleBit(offset)); }
+   public static byte ClearBit(this byte value, int offset)
+   {
+      return value.ClearBits(BitMask.FromSingleBit(offset));
+   }
 
    /// <summary>
    /// Sets bit to "off" and returns the modified value.
@@ -185,7 +200,10 @@ public static class ClearBitsExtensions
    /// <param name="offset">The offset of the bit to clear.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static uint ClearBit(this uint value, int offset) { return value.ClearBits(BitMask.FromSingleBit(offset)); }
+   public static uint ClearBit(this uint value, int offset)
+   {
+      return value.ClearBits(BitMask.FromSingleBit(offset));
+   }
 
    /// <summary>
    /// Sets bit to "off" and returns the modified value.
@@ -194,7 +212,10 @@ public static class ClearBitsExtensions
    /// <param name="offset">The offset of the bit to clear.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ulong ClearBit(this ulong value, int offset) { return value.ClearBits(BitMask.FromSingleBit(offset)); }
+   public static ulong ClearBit(this ulong value, int offset)
+   {
+      return value.ClearBits(BitMask.FromSingleBit(offset));
+   }
 
    #endregion
 
@@ -207,7 +228,10 @@ public static class ClearBitsExtensions
    /// <param name="mask">the bit mask of the bits to clear.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static sbyte ClearBits(this sbyte value, BitMask mask) { return (sbyte) (value & (sbyte) ~mask.Bits); }
+   public static sbyte ClearBits(this sbyte value, BitMask mask)
+   {
+      return (sbyte) (value & (sbyte) ~mask.Bits);
+   }
 
    /// <summary>
    /// Sets all bits from a provided mask to "off" and returns the modified value.
@@ -216,7 +240,10 @@ public static class ClearBitsExtensions
    /// <param name="mask">the bit mask of the bits to clear.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static short ClearBits(this short value, BitMask mask) { return (short) (value & (short) ~mask.Bits); }
+   public static short ClearBits(this short value, BitMask mask)
+   {
+      return (short) (value & (short) ~mask.Bits);
+   }
 
    /// <summary>
    /// Sets all bits from a provided mask to "off" and returns the modified value.
@@ -225,7 +252,10 @@ public static class ClearBitsExtensions
    /// <param name="mask">the bit mask of the bits to clear.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static int ClearBits(this int value, BitMask mask) { return value & (int) ~mask.Bits; }
+   public static int ClearBits(this int value, BitMask mask)
+   {
+      return value & (int) ~mask.Bits;
+   }
 
    /// <summary>
    /// Sets all bits from a provided mask to "off" and returns the modified value.
@@ -234,7 +264,10 @@ public static class ClearBitsExtensions
    /// <param name="mask">the bit mask of the bits to clear.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static long ClearBits(this long value, BitMask mask) { return value & (long) ~mask.Bits; }
+   public static long ClearBits(this long value, BitMask mask)
+   {
+      return value & (long) ~mask.Bits;
+   }
 
    /// <summary>
    /// Sets all bits from a provided mask to "off" and returns the modified value.
@@ -243,7 +276,10 @@ public static class ClearBitsExtensions
    /// <param name="mask">the bit mask of the bits to clear.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static byte ClearBits(this byte value, BitMask mask) { return (byte) (value & (byte) ~mask.Bits); }
+   public static byte ClearBits(this byte value, BitMask mask)
+   {
+      return (byte) (value & (byte) ~mask.Bits);
+   }
 
    /// <summary>
    /// Sets all bits from a provided mask to "off" and returns the modified value.
@@ -252,7 +288,10 @@ public static class ClearBitsExtensions
    /// <param name="mask">the bit mask of the bits to clear.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ushort ClearBits(this ushort value, BitMask mask) { return (ushort) (value & (ushort) ~mask.Bits); }
+   public static ushort ClearBits(this ushort value, BitMask mask)
+   {
+      return (ushort) (value & (ushort) ~mask.Bits);
+   }
 
    /// <summary>
    /// Sets all bits from a provided mask to "off" and returns the modified value.
@@ -261,7 +300,10 @@ public static class ClearBitsExtensions
    /// <param name="mask">the bit mask of the bits to clear.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static uint ClearBits(this uint value, BitMask mask) { return value & (uint) ~mask.Bits; }
+   public static uint ClearBits(this uint value, BitMask mask)
+   {
+      return value & (uint) ~mask.Bits;
+   }
 
    /// <summary>
    /// Sets all bits from a provided mask to "off" and returns the modified value.
@@ -270,7 +312,10 @@ public static class ClearBitsExtensions
    /// <param name="mask">the bit mask of the bits to clear.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ulong ClearBits(this ulong value, BitMask mask) { return value & ~mask.Bits; }
+   public static ulong ClearBits(this ulong value, BitMask mask)
+   {
+      return value & ~mask.Bits;
+   }
 
    #endregion
 }

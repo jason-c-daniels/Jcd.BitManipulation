@@ -15,7 +15,7 @@ using System.Text;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// Provides enumeration and indexed access to the bits on a stored <see cref="uint"/>.
+/// Provides enumeration and indexed access to the bits on a stored <see cref="uint" />.
 /// </summary>
 public struct BitIndexerUInt32 : IBitIndexer
 {
@@ -45,18 +45,24 @@ public struct BitIndexerUInt32 : IBitIndexer
    }
 
    /// <summary>
-   /// Automatically Convert from a <see cref="uint"/> to a BitIndexerUInt32
+   /// Automatically Convert from a <see cref="uint" /> to a BitIndexerUInt32
    /// </summary>
    /// <param name="bits">the initial value for the indexer's backing store</param>
    /// <returns>A new BitIndexerUInt32</returns>
-   public static implicit operator BitIndexerUInt32(uint bits) { return new BitIndexerUInt32 { Bits = bits }; }
+   public static implicit operator BitIndexerUInt32(uint bits)
+   {
+      return new BitIndexerUInt32 { Bits = bits };
+   }
 
    /// <summary>
-   /// Automatically convert from a BitIndexerUInt32 to a <see cref="uint"/>
+   /// Automatically convert from a BitIndexerUInt32 to a <see cref="uint" />
    /// </summary>
    /// <param name="indexer">the indexer to convert from</param>
-   /// <returns>the <see cref="uint"/></returns>
-   public static implicit operator uint(BitIndexerUInt32 indexer) { return indexer.Bits; }
+   /// <returns>the <see cref="uint" /></returns>
+   public static implicit operator uint(BitIndexerUInt32 indexer)
+   {
+      return indexer.Bits;
+   }
 
    /// <summary>
    /// Get an enumerator to enumerate the bits with.
@@ -72,7 +78,10 @@ public struct BitIndexerUInt32 : IBitIndexer
    /// Get an enumerator to enumerate the bits with.
    /// </summary>
    /// <returns>The enumerator</returns>
-   IEnumerator IEnumerable.GetEnumerator() { return GetEnumerator(); }
+   IEnumerator IEnumerable.GetEnumerator()
+   {
+      return GetEnumerator();
+   }
 
    /// <summary>
    /// Get a subset of bits given a starting offset and length.
@@ -82,8 +91,9 @@ public struct BitIndexerUInt32 : IBitIndexer
    /// <returns>an array of bools for the subset of bits</returns>
    public bool[] Slice(int start, int length)
    {
-      var slice                                 = new bool[length];
-      for (var i = 0; i < length; i++) slice[i] = this[i + start];
+      var slice = new bool[length];
+      for (var i = 0; i < length; i++)
+         slice[i] = this[i + start];
 
       return slice;
    }
@@ -96,7 +106,8 @@ public struct BitIndexerUInt32 : IBitIndexer
    {
       var sb = new StringBuilder();
       sb.Append("0b");
-      foreach (var value in this.Reverse()) sb.Append(value ? '1' : '0');
+      foreach (var value in this.Reverse())
+         sb.Append(value ? '1' : '0');
 
       return sb.ToString();
    }

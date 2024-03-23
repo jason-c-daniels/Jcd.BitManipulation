@@ -1,4 +1,4 @@
-﻿version: 2.4.{build}
+﻿version: 3.0.{build}
 branches:
    only:
       - main
@@ -6,21 +6,23 @@ branches:
 skip_tags: true
 image: Ubuntu2204
 configuration: Release
+
 assembly_info:
    patch: true
    file: '**\AssemblyInfo.*'
    assembly_version: '{version}'
    assembly_file_version: '{version}'
-   assembly_informational_version: '{version}-pre'
+   assembly_informational_version: '{version}-alpha'
+
 dotnet_csproj:
    patch: true
    file: '**\*.csproj'
    version: '{version}'
    version_prefix: '{version}'
-   package_version: '{version}-pre'
+   package_version: '{version}-alpha'
    assembly_version: '{version}'
    file_version: '{version}'
-   informational_version: '{version}-pre'
+   informational_version: '{version}-alpha'
 install:
    - sh: >-
         #!/bin/bash
@@ -31,6 +33,7 @@ build:
    publish_nuget_symbols: true
    use_snupkg_format: true
    verbosity: minimal
+
 deploy:
    - provider: NuGet
      server: https://www.myget.org/F/jason-c-daniels/api/v2/package
@@ -38,14 +41,8 @@ deploy:
         secure: I8belHNTZOvJ4MZhZoH6bhQsVuAtAo/wvX2ypZENxIUJJJ+plfJ6pz2SJr8dlgEA
      symbol_server: https://www.myget.org/F/jason-c-daniels/api/v2/package
      on:
-        branch: main
-   - provider: NuGet
-     server: https://www.myget.org/F/jason-c-daniels/api/v2/package
-     api_key:
-        secure: I8belHNTZOvJ4MZhZoH6bhQsVuAtAo/wvX2ypZENxIUJJJ+plfJ6pz2SJr8dlgEA
-     symbol_server: https://www.myget.org/F/jason-c-daniels/api/v2/package
-     on:
-        branch: /release[/].*/
+        branch: /^(main|release[/].*)$/
+
 notifications:
    - provider: Email
      to:

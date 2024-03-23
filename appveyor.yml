@@ -2,7 +2,7 @@
 branches:
    only:
       - main
-      - /release.*/
+      - /release[/].*/
 skip_tags: true
 image: Ubuntu2204
 configuration: Release
@@ -43,7 +43,7 @@ deploy:
      api_key:
         secure: I8belHNTZOvJ4MZhZoH6bhQsVuAtAo/wvX2ypZENxIUJJJ+plfJ6pz2SJr8dlgEA
      on:
-        branch: release/*
+        branch: /release[/].*/
 notifications:
    - provider: Email
      to:

@@ -151,7 +151,7 @@ Below is are list of currently planned changes.
 ### 3.0 Tentative Feature/Addition
 
 - I will investigate .Net 7.0 generic math as a possible way of providing a truly generic implementation.
-  (i.e. BigEndianByteIndexer<int> for example.) If this approach proves performant enough, I'll create a
+  (i.e. BigEndianByteIndexer&lt;int&gt; for example.) If this approach proves performant enough, I'll create a
   .net 7.0 version of this library with that support built in. The .Net Standard 2.0 compatible indexers will
   still be provided.
 

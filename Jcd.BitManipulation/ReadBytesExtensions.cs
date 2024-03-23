@@ -24,7 +24,9 @@ public static class ReadBytesExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ReadBytes(this short value, int offset, int size, Endian endian = Endian.Little)
    {
-      return endian == Endian.Big ? ((BigEndianByteIndexerInt16) value).ReadBytes(offset, size) : ((LittleEndianByteIndexerInt16) value).ReadBytes(offset, size);
+      return endian == Endian.Big
+                ? ((BigEndianByteIndexerInt16) value).ReadBytes(offset, size)
+                : ((LittleEndianByteIndexerInt16) value).ReadBytes(offset, size);
    }
 
    /// <summary>
@@ -38,7 +40,9 @@ public static class ReadBytesExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ReadBytes(this int value, int offset, int size, Endian endian = Endian.Little)
    {
-      return endian == Endian.Big ? ((BigEndianByteIndexerInt32) value).ReadBytes(offset, size) : ((LittleEndianByteIndexerInt32) value).ReadBytes(offset, size);
+      return endian == Endian.Big
+                ? ((BigEndianByteIndexerInt32) value).ReadBytes(offset, size)
+                : ((LittleEndianByteIndexerInt32) value).ReadBytes(offset, size);
    }
 
    /// <summary>
@@ -52,7 +56,9 @@ public static class ReadBytesExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ReadBytes(this long value, int offset, int size, Endian endian = Endian.Little)
    {
-      return endian == Endian.Big ? ((BigEndianByteIndexerInt64) value).ReadBytes(offset, size) : ((LittleEndianByteIndexerInt64) value).ReadBytes(offset, size);
+      return endian == Endian.Big
+                ? ((BigEndianByteIndexerInt64) value).ReadBytes(offset, size)
+                : ((LittleEndianByteIndexerInt64) value).ReadBytes(offset, size);
    }
 
    /// <summary>
@@ -66,7 +72,9 @@ public static class ReadBytesExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ReadBytes(this ushort value, int offset, int size, Endian endian = Endian.Little)
    {
-      return endian == Endian.Big ? ((BigEndianByteIndexerUInt16) value).ReadBytes(offset, size) : ((LittleEndianByteIndexerUInt16) value).ReadBytes(offset, size);
+      return endian == Endian.Big
+                ? ((BigEndianByteIndexerUInt16) value).ReadBytes(offset, size)
+                : ((LittleEndianByteIndexerUInt16) value).ReadBytes(offset, size);
    }
 
    /// <summary>
@@ -80,7 +88,9 @@ public static class ReadBytesExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ReadBytes(this uint value, int offset, int size, Endian endian = Endian.Little)
    {
-      return endian == Endian.Big ? ((BigEndianByteIndexerUInt32) value).ReadBytes(offset, size) : ((LittleEndianByteIndexerUInt32) value).ReadBytes(offset, size);
+      return endian == Endian.Big
+                ? ((BigEndianByteIndexerUInt32) value).ReadBytes(offset, size)
+                : ((LittleEndianByteIndexerUInt32) value).ReadBytes(offset, size);
    }
 
    /// <summary>
@@ -94,7 +104,9 @@ public static class ReadBytesExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ReadBytes(this ulong value, int offset, int size, Endian endian = Endian.Little)
    {
-      return endian == Endian.Big ? ((BigEndianByteIndexerUInt64) value).ReadBytes(offset, size) : ((LittleEndianByteIndexerUInt64) value).ReadBytes(offset, size);
+      return endian == Endian.Big
+                ? ((BigEndianByteIndexerUInt64) value).ReadBytes(offset, size)
+                : ((LittleEndianByteIndexerUInt64) value).ReadBytes(offset, size);
    }
 
    #endregion

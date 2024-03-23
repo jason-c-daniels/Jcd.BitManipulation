@@ -289,7 +289,12 @@ public static class StoreBitsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ulong StoreBit(this ulong value, bool bit, int offset)
    {
-      return value.StoreBits((ulong) (bit ? 1 : 0), offset, 1);
+      return value.StoreBits((ulong) (bit
+                                         ? 1
+                                         : 0)
+                           , offset
+                           , 1
+                            );
    }
 
    /// <summary>
@@ -302,7 +307,12 @@ public static class StoreBitsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static long StoreBit(this long value, bool bit, int offset)
    {
-      return value.StoreBits(bit ? 1 : 0, offset, 1);
+      return value.StoreBits(bit
+                                ? 1
+                                : 0
+                           , offset
+                           , 1
+                            );
    }
 
    /// <summary>
@@ -315,7 +325,12 @@ public static class StoreBitsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static uint StoreBit(this uint value, bool bit, int offset)
    {
-      return value.StoreBits((uint) (bit ? 1 : 0), offset, 1);
+      return value.StoreBits((uint) (bit
+                                        ? 1
+                                        : 0)
+                           , offset
+                           , 1
+                            );
    }
 
    /// <summary>
@@ -328,7 +343,12 @@ public static class StoreBitsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int StoreBit(this int value, bool bit, int offset)
    {
-      return value.StoreBits(bit ? 1 : 0, offset, 1);
+      return value.StoreBits(bit
+                                ? 1
+                                : 0
+                           , offset
+                           , 1
+                            );
    }
 
    /// <summary>
@@ -341,7 +361,12 @@ public static class StoreBitsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ushort StoreBit(this ushort value, bool bit, int offset)
    {
-      return value.StoreBits((ushort) (bit ? 1 : 0), offset, 1);
+      return value.StoreBits((ushort) (bit
+                                          ? 1
+                                          : 0)
+                           , offset
+                           , 1
+                            );
    }
 
    /// <summary>
@@ -354,7 +379,12 @@ public static class StoreBitsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static short StoreBit(this short value, bool bit, int offset)
    {
-      return value.StoreBits((short) (bit ? 1 : 0), offset, 1);
+      return value.StoreBits((short) (bit
+                                         ? 1
+                                         : 0)
+                           , offset
+                           , 1
+                            );
    }
 
    /// <summary>
@@ -367,7 +397,12 @@ public static class StoreBitsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte StoreBit(this byte value, bool bit, int offset)
    {
-      return value.StoreBits((byte) (bit ? 1 : 0), offset, 1);
+      return value.StoreBits((byte) (bit
+                                        ? 1
+                                        : 0)
+                           , offset
+                           , 1
+                            );
    }
 
    /// <summary>
@@ -380,7 +415,12 @@ public static class StoreBitsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static sbyte StoreBit(this sbyte value, bool bit, int offset)
    {
-      return value.StoreBits((sbyte) (bit ? 1 : 0), offset, 1);
+      return value.StoreBits((sbyte) (bit
+                                         ? 1
+                                         : 0)
+                           , offset
+                           , 1
+                            );
    }
 
    #endregion

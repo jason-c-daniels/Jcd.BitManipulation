@@ -115,7 +115,10 @@ public struct BitIndexerInt64 : IBitIndexer
       var sb = new StringBuilder();
       sb.Append("0b");
       foreach (var value in this.Reverse())
-         sb.Append(value ? '1' : '0');
+         sb.Append(value
+                      ? '1'
+                      : '0'
+                  );
 
       return sb.ToString();
    }

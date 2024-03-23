@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation.ByteIndexers](Jcd.BitManipulation.ByteIndexers.md 'Jcd.BitManipulation.ByteIndexers').[LittleEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer')
 
 ## LittleEndianByteIndexer.implicit operator float(LittleEndianByteIndexer) Operator
@@ -11,7 +10,6 @@ to a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single '
 ```csharp
 public static float implicit operator float(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer indexer);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.op_Implicitfloat(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer).indexer'></a>

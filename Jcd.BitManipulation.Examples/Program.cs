@@ -27,8 +27,8 @@ internal static class Program
 {
    public static void Main()
    {
-      BigEndianByteIndexer bebiFlt      = float.MaxValue / 2;
-      var                  bebifltbytes = bebiFlt.Slice(0, sizeof(long));
+      BigEndianByteIndexer bebiFlt = float.MaxValue / 2;
+      var bebifltbytes = bebiFlt.Slice(0, sizeof(long));
       ReadMe_BitManipulation_Example();
 
       // chaining operations, the same steps and end results
@@ -38,23 +38,23 @@ internal static class Program
       #else
       const int iterations = 100_000_000;
       #endif
-      var f      = 1.33f;
-      var bits   = f.BitwiseToUInt32().ReadBits(0, 4);
-      var ul     = 0xFFFEFDFEFCFBFAF9;
-      var ulbi   = (BigEndianByteIndexer) ul;
-      var b0     = ulbi[0];
-      var b1     = ulbi[1];
-      var b2     = ulbi[2];
-      var ba     = ul.ToByteArray();
+      var f = 1.33f;
+      var bits = f.BitwiseToUInt32().ReadBits(0, 4);
+      var ul = 0xFFFEFDFEFCFBFAF9;
+      var ulbi = (BigEndianByteIndexer) ul;
+      var b0 = ulbi[0];
+      var b1 = ulbi[1];
+      var b2 = ulbi[2];
+      var ba = ul.ToByteArray();
       var baBigE = ul.ToByteArray(Endian.Big);
-      var ul1    = ba.ToUInt64();
-      var ul2    = ba.ToUInt64(Endian.Big);
-      var ul3    = baBigE.ToUInt64(Endian.Big);
-      var ul4    = baBigE.ToUInt64();
-      var ba1    = ul1.ToByteArray();
-      var ba2    = ul2.ToByteArray();
+      var ul1 = ba.ToUInt64();
+      var ul2 = ba.ToUInt64(Endian.Big);
+      var ul3 = baBigE.ToUInt64(Endian.Big);
+      var ul4 = baBigE.ToUInt64();
+      var ba1 = ul1.ToByteArray();
+      var ba2 = ul2.ToByteArray();
 
-      // warm things up        
+      // warm things up
       TimeBitManipulations(iterations                       / 10, false);
       TimeStoreByteAndReadByteCalls(iterations              / 10, false);
       TimeStoreByteAndReadByteFromIndexerCalls(iterations   / 10, false);
@@ -115,12 +115,14 @@ internal static class Program
 
    private static void TimeBitManipulations(int iterations, bool report = true)
    {
-      if (report) SystemInfo.Instance.RefreshInfo();
-      if (report) Console.WriteLine($"  - Name: {nameof(TimeBitManipulations)}");
+      if (report)
+         SystemInfo.Instance.RefreshInfo();
+      if (report)
+         Console.WriteLine($"  - Name: {nameof(TimeBitManipulations)}");
       const int opsPerIteration = 6;
-      var       data            = 0;
-      byte      upperByte       = 0;
-      var       sw              = Stopwatch.StartNew();
+      var data = 0;
+      byte upperByte = 0;
+      var sw = Stopwatch.StartNew();
 
       for (var i = 0; i < iterations; i++)
       {
@@ -135,22 +137,27 @@ internal static class Program
 
       sw.Stop();
 
-      if (!report) return;
+      if (!report)
+         return;
+
       var operationCount = iterations * opsPerIteration;
-      var stats          = CalculateStats(sw, operationCount, iterations);
+      var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time")
+         Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void TimeStoreByteAndReadByteCalls(int iterations, bool report = true)
    {
-      if (report) SystemInfo.Instance.RefreshInfo();
-      if (report) Console.WriteLine($"  - Name: {nameof(TimeStoreByteAndReadByteCalls)}");
+      if (report)
+         SystemInfo.Instance.RefreshInfo();
+      if (report)
+         Console.WriteLine($"  - Name: {nameof(TimeStoreByteAndReadByteCalls)}");
       const int opsPerIteration = 2;
-      long      data            = 0;
-      byte      upperByte       = 0;
-      var       fourBytes       = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B };
-      var       sw              = Stopwatch.StartNew();
+      long data = 0;
+      byte upperByte = 0;
+      var fourBytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B };
+      var sw = Stopwatch.StartNew();
 
       for (long i = 0; i < iterations; i++)
       {
@@ -161,283 +168,352 @@ internal static class Program
 
       sw.Stop();
 
-      if (!report) return;
+      if (!report)
+         return;
+
       var operationCount = iterations * opsPerIteration;
-      var stats          = CalculateStats(sw, operationCount, iterations);
+      var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time")
+         Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void TimeStoreByteAndReadByteFromIndexerCalls(int iterations, bool report = true)
    {
-      if (report) SystemInfo.Instance.RefreshInfo();
-      if (report) Console.WriteLine($"  - Name: {nameof(TimeStoreByteAndReadByteFromIndexerCalls)}");
-      const int                     opsPerIteration = 2;
-      long                          data            = 0;
-      byte                          upperByte       = 0;
-      var                           fourBytes       = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B };
-      var                           sw              = Stopwatch.StartNew();
-      LittleEndianByteIndexerUInt64 indexer         = 0ul;
+      if (report)
+         SystemInfo.Instance.RefreshInfo();
+      if (report)
+         Console.WriteLine($"  - Name: {nameof(TimeStoreByteAndReadByteFromIndexerCalls)}");
+      const int opsPerIteration = 2;
+      long data = 0;
+      byte upperByte = 0;
+      var fourBytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B };
+      var sw = Stopwatch.StartNew();
+      LittleEndianByteIndexerUInt64 indexer = 0ul;
 
       for (long i = 0; i < iterations; i++)
       {
          indexer[1] = 0xFF;
-         upperByte  = indexer[7];
+         upperByte = indexer[7];
       }
 
       sw.Stop();
 
-      if (!report) return;
+      if (!report)
+         return;
+
       var operationCount = iterations * opsPerIteration;
-      var stats          = CalculateStats(sw, operationCount, iterations);
+      var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time")
+         Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void TimeStore8BytesToLongCalls(int iterations, bool report = true)
    {
-      if (report) SystemInfo.Instance.RefreshInfo();
-      if (report) Console.WriteLine($"  - Name: {nameof(TimeStore8BytesToLongCalls)}");
-      const int opsPerIteration                  = 1;
-      long      data                             = 0;
-      byte      upperByte                        = 0;
-      var       bytes                            = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
-      var       sw                               = Stopwatch.StartNew();
-      for (long i = 0; i < iterations; i++) data = i.StoreBytes(bytes, 0);
+      if (report)
+         SystemInfo.Instance.RefreshInfo();
+      if (report)
+         Console.WriteLine($"  - Name: {nameof(TimeStore8BytesToLongCalls)}");
+      const int opsPerIteration = 1;
+      long data = 0;
+      byte upperByte = 0;
+      var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      var sw = Stopwatch.StartNew();
+      for (long i = 0; i < iterations; i++)
+         data = i.StoreBytes(bytes, 0);
 
       sw.Stop();
 
-      if (!report) return;
+      if (!report)
+         return;
+
       var operationCount = iterations * opsPerIteration;
-      var stats          = CalculateStats(sw, operationCount, iterations);
+      var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time")
+         Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void TimeStore4BytesToLongCalls(int iterations, bool report = true)
    {
-      if (report) SystemInfo.Instance.RefreshInfo();
-      if (report) Console.WriteLine($"  - Name: {nameof(TimeStore4BytesToLongCalls)}");
-      const int opsPerIteration                  = 1;
-      long      data                             = 0;
-      byte      upperByte                        = 0;
-      var       bytes                            = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
-      var       sw                               = Stopwatch.StartNew();
-      for (long i = 0; i < iterations; i++) data = i.StoreBytes(bytes, 0, 4);
+      if (report)
+         SystemInfo.Instance.RefreshInfo();
+      if (report)
+         Console.WriteLine($"  - Name: {nameof(TimeStore4BytesToLongCalls)}");
+      const int opsPerIteration = 1;
+      long data = 0;
+      byte upperByte = 0;
+      var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      var sw = Stopwatch.StartNew();
+      for (long i = 0; i < iterations; i++)
+         data = i.StoreBytes(bytes, 0, 4);
 
       sw.Stop();
 
-      if (!report) return;
+      if (!report)
+         return;
+
       var operationCount = iterations * opsPerIteration;
-      var stats          = CalculateStats(sw, operationCount, iterations);
+      var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time")
+         Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void TimeStore2BytesToLongCalls(int iterations, bool report = true)
    {
-      if (report) SystemInfo.Instance.RefreshInfo();
-      if (report) Console.WriteLine($"  - Name: {nameof(TimeStore2BytesToLongCalls)}");
-      const int opsPerIteration                  = 1;
-      long      data                             = 0;
-      byte      upperByte                        = 0;
-      var       bytes                            = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
-      var       sw                               = Stopwatch.StartNew();
-      for (long i = 0; i < iterations; i++) data = i.StoreBytes(bytes, 0, 2);
+      if (report)
+         SystemInfo.Instance.RefreshInfo();
+      if (report)
+         Console.WriteLine($"  - Name: {nameof(TimeStore2BytesToLongCalls)}");
+      const int opsPerIteration = 1;
+      long data = 0;
+      byte upperByte = 0;
+      var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      var sw = Stopwatch.StartNew();
+      for (long i = 0; i < iterations; i++)
+         data = i.StoreBytes(bytes, 0, 2);
 
       sw.Stop();
 
-      if (!report) return;
+      if (!report)
+         return;
+
       var operationCount = iterations * opsPerIteration;
-      var stats          = CalculateStats(sw, operationCount, iterations);
+      var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time")
+         Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void TimeStore8BytesToIndexerCalls(int iterations, bool report = true)
    {
-      if (report) SystemInfo.Instance.RefreshInfo();
-      if (report) Console.WriteLine($"  - Name: {nameof(TimeStore8BytesToIndexerCalls)}");
-      const int               opsPerIteration = 1;
-      byte                    upperByte       = 0;
-      var                     bytes           = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
-      LittleEndianByteIndexer data            = 0ul;
-      var                     sw              = Stopwatch.StartNew();
-      for (long i = 0; i < iterations; i++) data.StoreBytes(bytes, 0);
+      if (report)
+         SystemInfo.Instance.RefreshInfo();
+      if (report)
+         Console.WriteLine($"  - Name: {nameof(TimeStore8BytesToIndexerCalls)}");
+      const int opsPerIteration = 1;
+      byte upperByte = 0;
+      var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      LittleEndianByteIndexer data = 0;
+      var sw = Stopwatch.StartNew();
+      for (long i = 0; i < iterations; i++)
+         data.StoreBytes(bytes, 0);
 
       sw.Stop();
 
-      if (!report) return;
+      if (!report)
+         return;
+
       var operationCount = iterations * opsPerIteration;
-      var stats          = CalculateStats(sw, operationCount, iterations);
+      var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time")
+         Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void TimeStore4BytesToIndexerCalls(int iterations, bool report = true)
    {
-      if (report) SystemInfo.Instance.RefreshInfo();
-      if (report) Console.WriteLine($"  - Name: {nameof(TimeStore4BytesToIndexerCalls)}");
-      const int               opsPerIteration = 1;
-      LittleEndianByteIndexer data            = 0l;
-      byte                    upperByte       = 0;
-      var                     bytes           = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
-      var                     sw              = Stopwatch.StartNew();
-      for (long i = 0; i < iterations; i++) data.StoreBytes(bytes, 0, 4);
+      if (report)
+         SystemInfo.Instance.RefreshInfo();
+      if (report)
+         Console.WriteLine($"  - Name: {nameof(TimeStore4BytesToIndexerCalls)}");
+      const int opsPerIteration = 1;
+      LittleEndianByteIndexer data = 0;
+      byte upperByte = 0;
+      var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      var sw = Stopwatch.StartNew();
+      for (long i = 0; i < iterations; i++)
+         data.StoreBytes(bytes, 0, 4);
 
       sw.Stop();
 
-      if (!report) return;
+      if (!report)
+         return;
+
       var operationCount = iterations * opsPerIteration;
-      var stats          = CalculateStats(sw, operationCount, iterations);
+      var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time")
+         Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void TimeStore2BytesToIndexerCalls(int iterations, bool report = true)
    {
-      if (report) SystemInfo.Instance.RefreshInfo();
-      if (report) Console.WriteLine($"  - Name: {nameof(TimeStore2BytesToIndexerCalls)}");
-      const int               opsPerIteration = 1;
-      LittleEndianByteIndexer data            = 0l;
-      byte                    upperByte       = 0;
-      var                     bytes           = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
-      var                     sw              = Stopwatch.StartNew();
-      for (long i = 0; i < iterations; i++) data.StoreBytes(bytes, 0, 2);
+      if (report)
+         SystemInfo.Instance.RefreshInfo();
+      if (report)
+         Console.WriteLine($"  - Name: {nameof(TimeStore2BytesToIndexerCalls)}");
+      const int opsPerIteration = 1;
+      LittleEndianByteIndexer data = 0;
+      byte upperByte = 0;
+      var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      var sw = Stopwatch.StartNew();
+      for (long i = 0; i < iterations; i++)
+         data.StoreBytes(bytes, 0, 2);
 
       sw.Stop();
 
-      if (!report) return;
+      if (!report)
+         return;
+
       var operationCount = iterations * opsPerIteration;
-      var stats          = CalculateStats(sw, operationCount, iterations);
+      var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time")
+         Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void TimeByteArrayToUInt64LittleEndian(int iterations, bool report = true)
    {
-      if (report) SystemInfo.Instance.RefreshInfo();
-      if (report) Console.WriteLine($"  - Name: {nameof(TimeByteArrayToUInt64LittleEndian)}");
+      if (report)
+         SystemInfo.Instance.RefreshInfo();
+      if (report)
+         Console.WriteLine($"  - Name: {nameof(TimeByteArrayToUInt64LittleEndian)}");
       const int opsPerIteration = 1;
-      ulong     data            = 0;
-      byte      upperByte       = 0;
-      var       bytes           = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
-      var       sw              = Stopwatch.StartNew();
+      ulong data = 0;
+      byte upperByte = 0;
+      var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      var sw = Stopwatch.StartNew();
 
       for (var i = 0; i < iterations; i++)
       {
          bytes[0] = (byte) (i % 256);
-         data     = bytes.ToUInt64();
+         data = bytes.ToUInt64();
       }
 
       sw.Stop();
 
-      if (!report) return;
+      if (!report)
+         return;
+
       var operationCount = iterations * opsPerIteration;
-      var stats          = CalculateStats(sw, operationCount, iterations);
+      var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time")
+         Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void TimeByteArrayToUInt64BigEndian(int iterations, bool report = true)
    {
-      if (report) SystemInfo.Instance.RefreshInfo();
-      if (report) Console.WriteLine($"  - Name: {nameof(TimeByteArrayToUInt64BigEndian)}");
+      if (report)
+         SystemInfo.Instance.RefreshInfo();
+      if (report)
+         Console.WriteLine($"  - Name: {nameof(TimeByteArrayToUInt64BigEndian)}");
       const int opsPerIteration = 1;
-      ulong     data            = 0;
-      byte      upperByte       = 0;
-      var       bytes           = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
-      var       sw              = Stopwatch.StartNew();
+      ulong data = 0;
+      byte upperByte = 0;
+      var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      var sw = Stopwatch.StartNew();
 
       for (var i = 0; i < iterations; i++)
       {
          bytes[0] = (byte) (i % 256);
-         data     = bytes.ToUInt64(Endian.Big);
+         data = bytes.ToUInt64(Endian.Big);
       }
 
       sw.Stop();
 
-      if (!report) return;
+      if (!report)
+         return;
+
       var operationCount = iterations * opsPerIteration;
-      var stats          = CalculateStats(sw, operationCount, iterations);
+      var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time")
+         Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void TimeCastOperations(int iterations, bool report = true)
    {
-      if (report) SystemInfo.Instance.RefreshInfo();
-      if (report) Console.WriteLine($"  - Name: {nameof(TimeCastOperations)}");
-      const int                    opsPerIteration = 2;
-      LittleEndianByteIndexerInt64 idx             = 0;
-      long                         convertedBack   = 0;
-      var                          sw              = Stopwatch.StartNew();
+      if (report)
+         SystemInfo.Instance.RefreshInfo();
+      if (report)
+         Console.WriteLine($"  - Name: {nameof(TimeCastOperations)}");
+      const int opsPerIteration = 2;
+      LittleEndianByteIndexerInt64 idx = 0;
+      long convertedBack = 0;
+      var sw = Stopwatch.StartNew();
 
       for (var i = 0; i < iterations; i++)
       {
-         idx           = i;
+         idx = i;
          convertedBack = idx;
       }
 
       sw.Stop();
 
-      if (!report) return;
+      if (!report)
+         return;
+
       var operationCount = iterations * opsPerIteration;
-      var stats          = CalculateStats(sw, operationCount, iterations);
+      var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if (((long) idx).ToString() == "super happy fun time") Console.WriteLine($"{convertedBack}");
+      if (((long) idx).ToString() == "super happy fun time")
+         Console.WriteLine($"{convertedBack}");
    }
 
    private static void TimeReadOnlySpanOfByteToUInt64LittleEndian(int iterations, bool report = true)
    {
-      if (report) SystemInfo.Instance.RefreshInfo();
-      if (report) Console.WriteLine($"  - Name: {nameof(TimeReadOnlySpanOfByteToUInt64LittleEndian)}");
+      if (report)
+         SystemInfo.Instance.RefreshInfo();
+      if (report)
+         Console.WriteLine($"  - Name: {nameof(TimeReadOnlySpanOfByteToUInt64LittleEndian)}");
       const int opsPerIteration = 1;
-      ulong     data            = 0;
-      byte      upperByte       = 0;
-      var       actualBytes     = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
-      var       bytes           = new ReadOnlySpan<byte>();
-      var       sw              = Stopwatch.StartNew();
+      ulong data = 0;
+      byte upperByte = 0;
+      var actualBytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      var bytes = new ReadOnlySpan<byte>();
+      var sw = Stopwatch.StartNew();
 
       for (var i = 0; i < iterations; i++)
       {
          actualBytes[0] = (byte) (i % 256);
-         data           = bytes.ToUInt64();
+         data = bytes.ToUInt64();
       }
 
       sw.Stop();
 
-      if (!report) return;
+      if (!report)
+         return;
+
       var operationCount = iterations * opsPerIteration;
-      var stats          = CalculateStats(sw, operationCount, iterations);
+      var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time")
+         Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void TimeReadOnlySpanOfByteToUInt64BigEndian(int iterations, bool report = true)
    {
-      if (report) SystemInfo.Instance.RefreshInfo();
-      if (report) Console.WriteLine($"  - Name: {nameof(TimeReadOnlySpanOfByteToUInt64BigEndian)}");
+      if (report)
+         SystemInfo.Instance.RefreshInfo();
+      if (report)
+         Console.WriteLine($"  - Name: {nameof(TimeReadOnlySpanOfByteToUInt64BigEndian)}");
       const int opsPerIteration = 1;
-      ulong     data            = 0;
-      byte      upperByte       = 0;
-      var       actualBytes     = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
-      var       bytes           = new ReadOnlySpan<byte>();
-      var       sw              = Stopwatch.StartNew();
+      ulong data = 0;
+      byte upperByte = 0;
+      var actualBytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      var bytes = new ReadOnlySpan<byte>();
+      var sw = Stopwatch.StartNew();
 
       for (var i = 0; i < iterations; i++)
       {
          actualBytes[0] = (byte) (i % 256);
-         data           = bytes.ToUInt64(Endian.Big);
+         data = bytes.ToUInt64(Endian.Big);
       }
 
       sw.Stop();
 
-      if (!report) return;
+      if (!report)
+         return;
+
       var operationCount = iterations * opsPerIteration;
-      var stats          = CalculateStats(sw, operationCount, iterations);
+      var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
-      if (data.ToString() == "super happy fun time") Console.WriteLine($"{upperByte} {data}");
+      if (data.ToString() == "super happy fun time")
+         Console.WriteLine($"{upperByte} {data}");
    }
 
    private static void ReportStats(RunStats stats, int operationCount, int iterations)
@@ -462,11 +538,12 @@ internal static class Program
    {
       var cpuF1 = SystemInfo.Instance.CurrentCPUFrequency;
       SystemInfo.Instance.RefreshInfo();
-      var cpuF2                                    = SystemInfo.Instance.CurrentCPUFrequency;
-      var freq                                     = (cpuF1 + cpuF2) / 2;
-      if (freq < 1.As(Frequencies.Gigahertz)) freq = freq.To(Frequencies.Megahertz);
-      var duration                                 = stopwatch.Elapsed.As(Durations.Microsecond);
-      var durationPer                              = (duration / operationCount).To(Durations.Nanosecond);
+      var cpuF2 = SystemInfo.Instance.CurrentCPUFrequency;
+      var freq = (cpuF1 + cpuF2) / 2;
+      if (freq < 1.As(Frequencies.Gigahertz))
+         freq = freq.To(Frequencies.Megahertz);
+      var duration = stopwatch.Elapsed.As(Durations.Microsecond);
+      var durationPer = (duration / operationCount).To(Durations.Nanosecond);
 
       var totalCpuCycles = freq.To(Frequencies.Hertz).RawValue * duration.To(Durations.Second).RawValue;
 
@@ -510,7 +587,7 @@ internal static class Program
         .StoreBits(0b1011, 4, 4);              // store the value in the upper 4 bits, now upperByte is now 0b10111111
 
       // finalData 0b0000111111110000
-      var beByte0 = finalData.ReadByte(0, Endian.Big);    // 00001111 
+      var beByte0 = finalData.ReadByte(0, Endian.Big);    // 00001111
       var leByte0 = finalData.ReadByte(0, Endian.Little); // 11110000
 
       var mutatedData = finalData.StoreByte(0b10111111, 0, Endian.Big).StoreByte(0b01010101, 0, Endian.Little) // lower byte is now 0b01010101
@@ -522,6 +599,6 @@ internal static class Program
 
       var leBaToUInt16Le = leBa.ToUInt16(Endian.Little); // leBaToUInt16Le = 0b1011111101010101
 
-      var leBaToUInt16Be = leBa.ToUInt16(Endian.Big); // leBaToUInt16Le = 0b0101010110111111 
+      var leBaToUInt16Be = leBa.ToUInt16(Endian.Big); // leBaToUInt16Le = 0b0101010110111111
    }
 }

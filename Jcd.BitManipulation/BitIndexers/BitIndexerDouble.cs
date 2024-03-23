@@ -16,7 +16,7 @@ using System.Text;
 namespace Jcd.BitManipulation.BitIndexers;
 
 /// <summary>
-/// Provides enumeration and indexed access to the bits on a stored <see cref="double"/>. 
+/// Provides enumeration and indexed access to the bits on a stored <see cref="double" />.
 /// </summary>
 public struct BitIndexerDouble : IBitIndexer
 {
@@ -45,7 +45,7 @@ public struct BitIndexerDouble : IBitIndexer
    public int Length => BitSize;
 
    /// <summary>
-   /// Gets or sets individual bits within the backing store. 
+   /// Gets or sets individual bits within the backing store.
    /// </summary>
    /// <param name="index">the offset of the bit to access.</param>
    public bool this[int index]
@@ -58,20 +58,26 @@ public struct BitIndexerDouble : IBitIndexer
    }
 
    /// <summary>
-   /// Automatically Convert from a <see cref="double"/> to a <see cref="BitIndexerDouble"/>
+   /// Automatically Convert from a <see cref="double" /> to a <see cref="BitIndexerDouble" />
    /// </summary>
    /// <param name="bits">the initial value for the indexer's backing store</param>
-   /// <returns>A new <see cref="BitIndexerDouble"/></returns>
+   /// <returns>A new <see cref="BitIndexerDouble" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static implicit operator BitIndexerDouble(double bits) { return new BitIndexerDouble { Bits = bits }; }
+   public static implicit operator BitIndexerDouble(double bits)
+   {
+      return new BitIndexerDouble { Bits = bits };
+   }
 
    /// <summary>
-   /// Automatically convert from a <see cref="BitIndexerDouble"/> to a <see cref="double"/>
+   /// Automatically convert from a <see cref="BitIndexerDouble" /> to a <see cref="double" />
    /// </summary>
    /// <param name="indexer">the indexer to convert from</param>
    /// <returns>the underlying value</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static implicit operator double(BitIndexerDouble indexer) { return indexer.Bits; }
+   public static implicit operator double(BitIndexerDouble indexer)
+   {
+      return indexer.Bits;
+   }
 
    /// <summary>
    /// Get an enumerator to enumerate the bits with.
@@ -89,7 +95,10 @@ public struct BitIndexerDouble : IBitIndexer
    /// </summary>
    /// <returns>The enumerator</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   readonly IEnumerator IEnumerable.GetEnumerator() { return GetEnumerator(); }
+   readonly IEnumerator IEnumerable.GetEnumerator()
+   {
+      return GetEnumerator();
+   }
 
    /// <summary>
    /// Get a subset of bits given a starting offset and length.
@@ -100,8 +109,9 @@ public struct BitIndexerDouble : IBitIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public readonly bool[] Slice(int start, int length)
    {
-      var slice                                 = new bool[length];
-      for (var i = 0; i < length; i++) slice[i] = this[i + start];
+      var slice = new bool[length];
+      for (var i = 0; i < length; i++)
+         slice[i] = this[i + start];
 
       return slice;
    }
@@ -114,7 +124,14 @@ public struct BitIndexerDouble : IBitIndexer
    {
       var sb = new StringBuilder();
       sb.Append("0b");
-      foreach (var value in this.Reverse()) sb.Append(value ? '1' : '0');
+
+      foreach (var value in this.Reverse())
+      {
+         sb.Append(value
+                      ? '1'
+                      : '0'
+                  );
+      }
 
       return sb.ToString();
    }

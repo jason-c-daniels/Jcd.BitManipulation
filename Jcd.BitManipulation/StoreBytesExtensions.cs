@@ -3,6 +3,8 @@
 using System;
 using System.Runtime.CompilerServices;
 
+#region
+
 // ReSharper disable MemberCanBePrivate.Global
 // ReSharper disable UnusedMember.Global
 // ReSharper disable UnusedMember.Local
@@ -11,6 +13,8 @@ using System.Runtime.CompilerServices;
 // ReSharper disable UnusedMethodReturnValue.Global
 // ReSharper disable UnusedMemberInSuper.Global
 using Jcd.BitManipulation.ByteIndexers;
+
+#endregion
 
 // ReSharper disable UnusedMethodReturnValue.Global
 // ReSharper disable UnusedMemberInSuper.Global
@@ -164,7 +168,7 @@ public static class StoreBytesExtensions
    #endregion
 
    #region StoreBytes to IByteIndexer types from ReadOnlySpan of byte
-   
+
    /// <summary>
    /// Stores a set of bytes starting at the specified byte location within the indexer.
    /// </summary>
@@ -176,20 +180,24 @@ public static class StoreBytesExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static LittleEndianByteIndexer StoreBytes(this LittleEndianByteIndexer indexer, byte[] bytes, int offset, int size = -1)
    {
-      if (size == -1 || size > bytes.Length) size = bytes.Length;
-      var idx                                     = 0;
+      if (size == -1 || size > bytes.Length)
+         size = bytes.Length;
+      var idx = 0;
 
       foreach (var @byte in bytes)
       {
-         if (idx          >= size) return indexer;
-         if (offset + idx >= indexer.ByteSize) return indexer;
+         if (idx >= size)
+            return indexer;
+         if (offset + idx >= indexer.ByteSize)
+            return indexer;
+
          indexer[idx + offset] = @byte;
          idx++;
       }
 
       return indexer;
    }
-   
+
    /// <summary>
    /// Stores a set of bytes starting at the specified byte location within the indexer.
    /// </summary>
@@ -201,20 +209,24 @@ public static class StoreBytesExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static LittleEndianByteIndexer StoreBytes(this LittleEndianByteIndexer indexer, ReadOnlySpan<byte> bytes, int offset, int size = -1)
    {
-      if (size == -1 || size > bytes.Length) size = bytes.Length;
-      var idx                                     = 0;
+      if (size == -1 || size > bytes.Length)
+         size = bytes.Length;
+      var idx = 0;
 
       foreach (var @byte in bytes)
       {
-         if (idx          >= size) return indexer;
-         if (offset + idx >= indexer.ByteSize) return indexer;
+         if (idx >= size)
+            return indexer;
+         if (offset + idx >= indexer.ByteSize)
+            return indexer;
+
          indexer[idx + offset] = @byte;
          idx++;
       }
 
       return indexer;
    }
-   
+
    /// <summary>
    /// Stores a set of bytes starting at the specified byte location within the indexer.
    /// </summary>
@@ -226,13 +238,16 @@ public static class StoreBytesExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static BigEndianByteIndexer StoreBytes(this BigEndianByteIndexer indexer, byte[] bytes, int offset, int size = -1)
    {
-      if (size == -1 || size > bytes.Length) size = bytes.Length;
-      var idx                                     = 0;
+      if (size == -1 || size > bytes.Length)
+         size = bytes.Length;
+      var idx = 0;
 
       foreach (var @byte in bytes)
       {
-         if (idx          >= size) return indexer;
-         if (offset + idx >= indexer.ByteSize) return indexer;
+         if (idx >= size)
+            return indexer;
+         if (offset + idx >= indexer.ByteSize)
+            return indexer;
 
          indexer[idx + offset] = @byte;
          idx++;
@@ -252,13 +267,16 @@ public static class StoreBytesExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static BigEndianByteIndexer StoreBytes(this BigEndianByteIndexer indexer, ReadOnlySpan<byte> bytes, int offset, int size = -1)
    {
-      if (size == -1 || size > bytes.Length) size = bytes.Length;
-      var idx                                     = 0;
+      if (size == -1 || size > bytes.Length)
+         size = bytes.Length;
+      var idx = 0;
 
       foreach (var @byte in bytes)
       {
-         if (idx          >= size) return indexer;
-         if (offset + idx >= indexer.ByteSize) return indexer;
+         if (idx >= size)
+            return indexer;
+         if (offset + idx >= indexer.ByteSize)
+            return indexer;
 
          indexer[idx + offset] = @byte;
          idx++;
@@ -266,7 +284,7 @@ public static class StoreBytesExtensions
 
       return indexer;
    }
-   
+
    #endregion
 
    #region StoreByte to integral data type
@@ -443,7 +461,7 @@ public static class StoreBytesExtensions
 
       return value;
    }
-   
+
    /// <summary>
    /// Store a single byte to the value at the specified byte offset.
    /// </summary>
@@ -458,6 +476,6 @@ public static class StoreBytesExtensions
 
       return value;
    }
-   
+
    #endregion
 }

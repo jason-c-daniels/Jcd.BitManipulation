@@ -1,23 +1,10 @@
 #!/bin/sh
-return_dir="$(pwd)"
+returnd="$(pwd)"
 cd "$(git rev-parse --show-toplevel)" || exit
-echo finding markdown files
+echo finding files
 find . -type f -name '*.md'
-echo Removing trailing whitespace in files
+echo editing files
 find . -type f -name '*.md' -exec sed -i -Ee 's/[ ]+$//g' {} \;
-echo Removing embedded '<br/>' in files
 find . -type f -name '*.md' -exec sed -i -Ee 's:[\<]br[/][\>]: :g' {} \;
-echo Fixing line endings
-
-case "$(uname)" in
-   [Mm][Ii][Nn][Gg][Ww]*|[Cc][Yy][Gg][Ww][Ii][Nn]*)
-      echo using windows line endings.
-      find . -type f -name '*.md' -print0 | xargs -0 unix2dos      
-   ;;
-   *)
-      echo using '*nix' line endings.
-      find . -type f -name '*.md' -print0 | xargs -0 dos2unix
-   ;;
-esac
-
-cd "$return_dir" || exit
+find . -type f -name '*.md' -print0 | xargs -0 unix2dos
+cd "$returnd" || exit

@@ -16,7 +16,7 @@ public class SetBitsExtensionsTests
    [InlineData(0x00, 0, 8, 0xFF)]
    public void SetBits_On_SByte_Sets_The_Correct_Bits(uint initial, int offset, int size, uint expected)
    {
-      var value  = (sbyte) initial; // coerce to proper type
+      var value = (sbyte) initial; // coerce to proper type
       var result = value.SetBits((byte) offset, (byte) size);
       Assert.Equal((sbyte) expected, result);
    }
@@ -27,7 +27,7 @@ public class SetBitsExtensionsTests
    [InlineData(0x00, 0, 8, 0xFF)]
    public void SetBits_On_Byte_Sets_The_Correct_Bits(uint initial, int offset, int size, uint expected)
    {
-      var value  = (byte) initial; // coerce to proper type
+      var value = (byte) initial; // coerce to proper type
       var result = value.SetBits((byte) offset, (byte) size);
       Assert.Equal((byte) expected, result);
    }
@@ -40,7 +40,7 @@ public class SetBitsExtensionsTests
    [InlineData(0x00, 0,  16, 0xFFFF)]
    public void SetBits_On_Int16_Sets_The_Correct_Bits(uint initial, int offset, int size, uint expected)
    {
-      var value  = (short) initial; // coerce to proper type
+      var value = (short) initial; // coerce to proper type
       var result = value.SetBits((byte) offset, (byte) size);
       Assert.Equal((short) expected, result);
    }
@@ -53,7 +53,7 @@ public class SetBitsExtensionsTests
    [InlineData(0x00, 0,  16, 0xFFFF)]
    public void SetBits_On_UInt16_Sets_The_Correct_Bits(uint initial, int offset, int size, uint expected)
    {
-      var value  = (ushort) initial; // coerce to proper type, test data binder fails to do this correctly.
+      var value = (ushort) initial; // coerce to proper type, test data binder fails to do this correctly.
       var result = value.SetBits((byte) offset, (byte) size);
       Assert.Equal((ushort) expected, result);
    }
@@ -68,7 +68,7 @@ public class SetBitsExtensionsTests
    [InlineData(0x00, 0,  32, 0xFFFFFFFF)]
    public void SetBits_On_Int32_Sets_The_Correct_Bits(uint initial, int offset, int size, uint expected)
    {
-      var value  = (int) initial; // coerce to proper type
+      var value = (int) initial; // coerce to proper type
       var result = value.SetBits((byte) offset, (byte) size);
       Assert.Equal((int) expected, result);
    }
@@ -99,7 +99,7 @@ public class SetBitsExtensionsTests
    [InlineData(0x00, 0,  64, 0xFFFFFFFFFFFFFFFF)]
    public void SetBits_On_Int64_Sets_The_Correct_Bits(ulong initial, int offset, int size, ulong expected)
    {
-      var value  = (long) initial; // coerce to proper type
+      var value = (long) initial; // coerce to proper type
       var result = value.SetBits((byte) offset, (byte) size);
       Assert.Equal((long) expected, result);
    }
@@ -148,7 +148,8 @@ public class SetBitsExtensionsTests
    {
       var result = value.BitwiseToDouble().SetBits((byte) offset, (byte) size);
       Assert.Equal(expected.BitwiseToDouble(), result);
-   }   
+   }
+
    #endregion
 
    #region single bit tests
@@ -159,7 +160,7 @@ public class SetBitsExtensionsTests
    [InlineData(0x00, 7, 0x80)]
    public void SetBit_On_SByte_Sets_Correct_Bit(ulong initial, int bitToSet, ulong expected)
    {
-      var value  = (sbyte) initial;
+      var value = (sbyte) initial;
       var result = value.SetBit((byte) bitToSet);
       Assert.Equal((sbyte) expected, result);
    }
@@ -170,7 +171,7 @@ public class SetBitsExtensionsTests
    [InlineData(0x00, 7, 0x80)]
    public void SetBit_On_Byte_Sets_Correct_Bit(ulong initial, int bitToSet, ulong expected)
    {
-      var value  = (byte) initial;
+      var value = (byte) initial;
       var result = value.SetBit((byte) bitToSet);
       Assert.Equal((byte) expected, result);
    }
@@ -184,7 +185,7 @@ public class SetBitsExtensionsTests
    [InlineData(0x00, 15, 0x8000)]
    public void SetBit_On_Int16_Sets_Correct_Bit(ulong initial, int bitToSet, ulong expected)
    {
-      var value  = (short) initial;
+      var value = (short) initial;
       var result = value.SetBit((byte) bitToSet);
       Assert.Equal((short) expected, result);
    }
@@ -198,7 +199,7 @@ public class SetBitsExtensionsTests
    [InlineData(0x00, 15, 0x8000)]
    public void SetBit_On_UInt16_Sets_Correct_Bit(ulong initial, int bitToSet, ulong expected)
    {
-      var value  = (ushort) initial;
+      var value = (ushort) initial;
       var result = value.SetBit((byte) bitToSet);
       Assert.Equal((ushort) expected, result);
    }
@@ -214,7 +215,7 @@ public class SetBitsExtensionsTests
    [InlineData(0x00, 31, 0x80000000)]
    public void SetBit_On_Int32_Sets_Correct_Bit(ulong initial, int bitToSet, ulong expected)
    {
-      var value  = (int) initial;
+      var value = (int) initial;
       var result = value.SetBit((byte) bitToSet);
       Assert.Equal((int) expected, result);
    }
@@ -230,7 +231,7 @@ public class SetBitsExtensionsTests
    [InlineData(0x00, 31, 0x80000000)]
    public void SetBit_On_UInt32_Sets_Correct_Bit(ulong initial, int bitToSet, ulong expected)
    {
-      var value  = (uint) initial;
+      var value = (uint) initial;
       var result = value.SetBit((byte) bitToSet);
       Assert.Equal((uint) expected, result);
    }
@@ -248,7 +249,7 @@ public class SetBitsExtensionsTests
    [InlineData(0x00, 63, 0x8000000000000000)]
    public void SetBit_On_Int64_Sets_Correct_Bit(ulong initial, int bitToSet, ulong expected)
    {
-      var value  = (long) initial;
+      var value = (long) initial;
       var result = value.SetBit((byte) bitToSet);
       Assert.Equal((long) expected, result);
    }
@@ -281,7 +282,7 @@ public class SetBitsExtensionsTests
    [InlineData(0x00, 31, 0x80000000)]
    public void SetBit_On_Single_Sets_Correct_Bit(ulong initial, int bitToSet, uint expected)
    {
-      var value  = (uint) initial;
+      var value = (uint) initial;
       var result = value.BitwiseToSingle().SetBit((byte) bitToSet);
       Assert.Equal(expected.BitwiseToSingle(), result);
    }
@@ -301,8 +302,8 @@ public class SetBitsExtensionsTests
    {
       var result = value.BitwiseToDouble().SetBit((byte) bitToSet);
       Assert.Equal(expected.BitwiseToDouble(), result);
-   }   
-   
+   }
+
    #endregion
 
    #region BitMask tests
@@ -313,8 +314,8 @@ public class SetBitsExtensionsTests
    public void SetBits_For_SByte_When_Given_A_Mask_Directly_Sets_Only_The_Specified_Bits(uint initialValue, uint maskValue, uint expected)
    {
       // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
-      var value  = (sbyte) initialValue;
-      var mask   = new BitMask((sbyte) maskValue);
+      var value = (sbyte) initialValue;
+      var mask = new BitMask((sbyte) maskValue);
       var result = value.SetBits(mask);
       Assert.Equal((sbyte) expected, result);
    }
@@ -325,8 +326,8 @@ public class SetBitsExtensionsTests
    public void SetBits_For_Byte_When_Given_A_Mask_Directly_Sets_Only_The_Specified_Bits(uint initialValue, uint maskValue, uint expected)
    {
       // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
-      var value  = (byte) initialValue;
-      var mask   = new BitMask((byte) maskValue);
+      var value = (byte) initialValue;
+      var mask = new BitMask((byte) maskValue);
       var result = value.SetBits(mask);
       Assert.Equal((byte) expected, result);
    }
@@ -339,8 +340,8 @@ public class SetBitsExtensionsTests
    public void SetBits_For_Int16_When_Given_A_Mask_Directly_Sets_Only_The_Specified_Bits(uint initialValue, uint maskValue, uint expected)
    {
       // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
-      var value  = (short) initialValue;
-      var mask   = new BitMask((short) maskValue);
+      var value = (short) initialValue;
+      var mask = new BitMask((short) maskValue);
       var result = value.SetBits(mask);
       Assert.Equal((short) expected, result);
    }
@@ -353,8 +354,8 @@ public class SetBitsExtensionsTests
    public void SetBits_For_UInt16_When_Given_A_Mask_Directly_Sets_Only_The_Specified_Bits(uint initialValue, uint maskValue, uint expected)
    {
       // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
-      var value  = (ushort) initialValue;
-      var mask   = new BitMask((ushort) maskValue);
+      var value = (ushort) initialValue;
+      var mask = new BitMask((ushort) maskValue);
       var result = value.SetBits(mask);
       Assert.Equal((ushort) expected, result);
    }
@@ -369,8 +370,8 @@ public class SetBitsExtensionsTests
    public void SetBits_For_Int32_When_Given_A_Mask_Directly_Sets_Only_The_Specified_Bits(uint initialValue, uint maskValue, uint expected)
    {
       // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
-      var value  = (int) initialValue;
-      var mask   = new BitMask((int) maskValue);
+      var value = (int) initialValue;
+      var mask = new BitMask((int) maskValue);
       var result = value.SetBits(mask);
       Assert.Equal((int) expected, result);
    }
@@ -385,7 +386,7 @@ public class SetBitsExtensionsTests
    public void SetBits_For_UInt32_When_Given_A_Mask_Directly_Sets_Only_The_Specified_Bits(uint initialValue, uint maskValue, uint expected)
    {
       // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
-      var mask   = new BitMask(maskValue);
+      var mask = new BitMask(maskValue);
       var result = initialValue.SetBits(mask);
       Assert.Equal(expected, result);
    }
@@ -402,8 +403,8 @@ public class SetBitsExtensionsTests
    public void SetBits_For_Int64_When_Given_A_Mask_Directly_Sets_Only_The_Specified_Bits(ulong initialValue, ulong maskValue, ulong expected)
    {
       // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
-      var value  = (long) initialValue;
-      var mask   = new BitMask((long) maskValue);
+      var value = (long) initialValue;
+      var mask = new BitMask((long) maskValue);
       var result = value.SetBits(mask);
       Assert.Equal((long) expected, result);
    }
@@ -420,7 +421,7 @@ public class SetBitsExtensionsTests
    public void SetBits_For_UInt64_When_Given_A_Mask_Directly_Sets_Only_The_Specified_Bits(ulong initialValue, ulong maskValue, ulong expected)
    {
       // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
-      var mask   = new BitMask(maskValue);
+      var mask = new BitMask(maskValue);
       var result = initialValue.SetBits(mask);
       Assert.Equal(expected, result);
    }

@@ -6,7 +6,7 @@
 Get an enumerator to enumerate the bits with.
 
 ```csharp
-readonly System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator();
+System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator();
 ```
 
 Implements [GetEnumerator()](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerable.GetEnumerator 'System.Collections.IEnumerable.GetEnumerator')

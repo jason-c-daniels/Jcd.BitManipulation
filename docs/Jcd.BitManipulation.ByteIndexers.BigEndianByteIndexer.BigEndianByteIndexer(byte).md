@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation.ByteIndexers](Jcd.BitManipulation.ByteIndexers.md 'Jcd.BitManipulation.ByteIndexers').[BigEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer')
 
 ## BigEndianByteIndexer(byte) Constructor
@@ -11,7 +10,6 @@ from a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'Sy
 ```csharp
 private BigEndianByteIndexer(byte data);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.BigEndianByteIndexer(byte).data'></a>

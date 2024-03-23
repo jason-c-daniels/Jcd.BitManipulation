@@ -30,7 +30,10 @@ public static class StoreBitsExtensions
    /// <param name="size">The bit size of the value.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static sbyte StoreBits(this sbyte value, sbyte source, int offset, int size) { return value.StoreBits(source, offset, BitMask.FromRange(offset, size)); }
+   public static sbyte StoreBits(this sbyte value, sbyte source, int offset, int size)
+   {
+      return value.StoreBits(source, offset, BitMask.FromRange(offset, size));
+   }
 
    /// <summary>
    /// Stores a value at the specified bit location within the variable.
@@ -41,7 +44,10 @@ public static class StoreBitsExtensions
    /// <param name="size">The bit size of the value.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static short StoreBits(this short value, short source, int offset, int size) { return value.StoreBits(source, offset, BitMask.FromRange(offset, size)); }
+   public static short StoreBits(this short value, short source, int offset, int size)
+   {
+      return value.StoreBits(source, offset, BitMask.FromRange(offset, size));
+   }
 
    /// <summary>
    /// Stores a value at the specified bit location within the variable.
@@ -52,7 +58,10 @@ public static class StoreBitsExtensions
    /// <param name="size">The bit size of the value.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static int StoreBits(this int value, int source, int offset, int size) { return value.StoreBits(source, offset, BitMask.FromRange(offset, size)); }
+   public static int StoreBits(this int value, int source, int offset, int size)
+   {
+      return value.StoreBits(source, offset, BitMask.FromRange(offset, size));
+   }
 
    /// <summary>
    /// Stores a value at the specified bit location within the variable.
@@ -63,7 +72,10 @@ public static class StoreBitsExtensions
    /// <param name="size">The bit size of the value.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static long StoreBits(this long value, long source, int offset, int size) { return value.StoreBits(source, offset, BitMask.FromRange(offset, size)); }
+   public static long StoreBits(this long value, long source, int offset, int size)
+   {
+      return value.StoreBits(source, offset, BitMask.FromRange(offset, size));
+   }
 
    /// <summary>
    /// Stores a value at the specified bit location within the variable.
@@ -74,7 +86,10 @@ public static class StoreBitsExtensions
    /// <param name="size">The bit size of the value.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static byte StoreBits(this byte value, byte source, int offset, int size) { return value.StoreBits(source, offset, BitMask.FromRange(offset, size)); }
+   public static byte StoreBits(this byte value, byte source, int offset, int size)
+   {
+      return value.StoreBits(source, offset, BitMask.FromRange(offset, size));
+   }
 
    /// <summary>
    /// Stores a value at the specified bit location within the variable.
@@ -99,7 +114,10 @@ public static class StoreBitsExtensions
    /// <param name="size">The bit size of the value.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static uint StoreBits(this uint value, uint source, int offset, int size) { return value.StoreBits(source, offset, BitMask.FromRange(offset, size)); }
+   public static uint StoreBits(this uint value, uint source, int offset, int size)
+   {
+      return value.StoreBits(source, offset, BitMask.FromRange(offset, size));
+   }
 
    /// <summary>
    /// Stores a value at the specified bit location within the variable.
@@ -110,7 +128,10 @@ public static class StoreBitsExtensions
    /// <param name="size">The bit size of the value.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ulong StoreBits(this ulong value, ulong source, int offset, int size) { return value.StoreBits(source, offset, BitMask.FromRange(offset, size)); }
+   public static ulong StoreBits(this ulong value, ulong source, int offset, int size)
+   {
+      return value.StoreBits(source, offset, BitMask.FromRange(offset, size));
+   }
 
    /// <summary>
    /// Stores a value at the specified bit location within the variable.
@@ -156,7 +177,7 @@ public static class StoreBitsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ulong StoreBits(this ulong value, ulong source, int offset, BitMask mask)
    {
-      value =  value.ClearBits(mask);
+      value = value.ClearBits(mask);
       value |= (source << offset) & mask;
 
       return value;
@@ -174,7 +195,7 @@ public static class StoreBitsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static long StoreBits(this long value, long source, int offset, BitMask mask)
    {
-      value =  value.ClearBits(mask);
+      value = value.ClearBits(mask);
       value |= (source << offset) & (long) mask.Bits;
 
       return value;
@@ -192,7 +213,7 @@ public static class StoreBitsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static uint StoreBits(this uint value, uint source, int offset, BitMask mask)
    {
-      value =  value.ClearBits(mask);
+      value = value.ClearBits(mask);
       value |= (source << offset) & (uint) mask.Bits;
 
       return value;
@@ -210,7 +231,7 @@ public static class StoreBitsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int StoreBits(this int value, int source, int offset, BitMask mask)
    {
-      value =  value.ClearBits(mask);
+      value = value.ClearBits(mask);
       value |= (source << offset) & (int) mask.Bits;
 
       return value;
@@ -228,7 +249,7 @@ public static class StoreBitsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ushort StoreBits(this ushort value, ushort source, int offset, BitMask mask)
    {
-      value =  value.ClearBits(mask);
+      value = value.ClearBits(mask);
       value |= (ushort) ((source << offset) & (ushort) mask.Bits);
 
       return value;
@@ -246,7 +267,7 @@ public static class StoreBitsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static short StoreBits(this short value, short source, int offset, BitMask mask)
    {
-      value =  value.ClearBits(mask);
+      value = value.ClearBits(mask);
       value |= (short) ((source << offset) & (short) mask.Bits);
 
       return value;
@@ -264,7 +285,7 @@ public static class StoreBitsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte StoreBits(this byte value, byte source, int offset, BitMask mask)
    {
-      value =  value.ClearBits(mask);
+      value = value.ClearBits(mask);
       value |= (byte) ((source << offset) & (byte) mask.Bits);
 
       return value;
@@ -282,7 +303,7 @@ public static class StoreBitsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static sbyte StoreBits(this sbyte value, sbyte source, int offset, BitMask mask)
    {
-      value =  value.ClearBits(mask);
+      value = value.ClearBits(mask);
       value |= (sbyte) ((source << offset) & (sbyte) mask.Bits);
 
       return value;
@@ -330,7 +351,15 @@ public static class StoreBitsExtensions
    /// <param name="offset">the offset of the bit to write</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ulong StoreBit(this ulong value, bool bit, int offset) { return value.StoreBits((ulong) (bit ? 1 : 0), offset, 1); }
+   public static ulong StoreBit(this ulong value, bool bit, int offset)
+   {
+      return value.StoreBits((ulong) (bit
+                                         ? 1
+                                         : 0)
+                           , offset
+                           , 1
+                            );
+   }
 
    /// <summary>
    /// Store a single bit at the specified offset.
@@ -340,7 +369,15 @@ public static class StoreBitsExtensions
    /// <param name="offset">the offset of the bit to write</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static long StoreBit(this long value, bool bit, int offset) { return value.StoreBits(bit ? 1 : 0, offset, 1); }
+   public static long StoreBit(this long value, bool bit, int offset)
+   {
+      return value.StoreBits(bit
+                                ? 1
+                                : 0
+                           , offset
+                           , 1
+                            );
+   }
 
    /// <summary>
    /// Store a single bit at the specified offset.
@@ -350,7 +387,15 @@ public static class StoreBitsExtensions
    /// <param name="offset">the offset of the bit to write</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static uint StoreBit(this uint value, bool bit, int offset) { return value.StoreBits((uint) (bit ? 1 : 0), offset, 1); }
+   public static uint StoreBit(this uint value, bool bit, int offset)
+   {
+      return value.StoreBits((uint) (bit
+                                        ? 1
+                                        : 0)
+                           , offset
+                           , 1
+                            );
+   }
 
    /// <summary>
    /// Store a single bit at the specified offset.
@@ -360,7 +405,15 @@ public static class StoreBitsExtensions
    /// <param name="offset">the offset of the bit to write</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static int StoreBit(this int value, bool bit, int offset) { return value.StoreBits(bit ? 1 : 0, offset, 1); }
+   public static int StoreBit(this int value, bool bit, int offset)
+   {
+      return value.StoreBits(bit
+                                ? 1
+                                : 0
+                           , offset
+                           , 1
+                            );
+   }
 
    /// <summary>
    /// Store a single bit at the specified offset.
@@ -370,7 +423,15 @@ public static class StoreBitsExtensions
    /// <param name="offset">the offset of the bit to write</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ushort StoreBit(this ushort value, bool bit, int offset) { return value.StoreBits((ushort) (bit ? 1 : 0), offset, 1); }
+   public static ushort StoreBit(this ushort value, bool bit, int offset)
+   {
+      return value.StoreBits((ushort) (bit
+                                          ? 1
+                                          : 0)
+                           , offset
+                           , 1
+                            );
+   }
 
    /// <summary>
    /// Store a single bit at the specified offset.
@@ -380,7 +441,15 @@ public static class StoreBitsExtensions
    /// <param name="offset">the offset of the bit to write</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static short StoreBit(this short value, bool bit, int offset) { return value.StoreBits((short) (bit ? 1 : 0), offset, 1); }
+   public static short StoreBit(this short value, bool bit, int offset)
+   {
+      return value.StoreBits((short) (bit
+                                         ? 1
+                                         : 0)
+                           , offset
+                           , 1
+                            );
+   }
 
    /// <summary>
    /// Store a single bit at the specified offset.
@@ -390,7 +459,15 @@ public static class StoreBitsExtensions
    /// <param name="offset">the offset of the bit to write</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static byte StoreBit(this byte value, bool bit, int offset) { return value.StoreBits((byte) (bit ? 1 : 0), offset, 1); }
+   public static byte StoreBit(this byte value, bool bit, int offset)
+   {
+      return value.StoreBits((byte) (bit
+                                        ? 1
+                                        : 0)
+                           , offset
+                           , 1
+                            );
+   }
 
    /// <summary>
    /// Store a single bit at the specified offset.
@@ -400,7 +477,15 @@ public static class StoreBitsExtensions
    /// <param name="offset">the offset of the bit to write</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static sbyte StoreBit(this sbyte value, bool bit, int offset) { return value.StoreBits((sbyte) (bit ? 1 : 0), offset, 1); }
+   public static sbyte StoreBit(this sbyte value, bool bit, int offset)
+   {
+      return value.StoreBits((sbyte) (bit
+                                         ? 1
+                                         : 0)
+                           , offset
+                           , 1
+                            );
+   }
 
    /// <summary>
    /// Store a single bit at the specified offset.
@@ -410,7 +495,10 @@ public static class StoreBitsExtensions
    /// <param name="offset">the offset of the bit to write</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static float StoreBit(this float value, bool bit, int offset) { return value.BitwiseToUInt32().StoreBit(bit, offset).BitwiseToSingle(); }
+   public static float StoreBit(this float value, bool bit, int offset)
+   {
+      return value.BitwiseToUInt32().StoreBit(bit, offset).BitwiseToSingle();
+   }
 
    /// <summary>
    /// Store a single bit at the specified offset.
@@ -420,7 +508,10 @@ public static class StoreBitsExtensions
    /// <param name="offset">the offset of the bit to write</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static double StoreBit(this double value, bool bit, int offset) { return value.BitwiseToUInt64().StoreBit(bit, offset).BitwiseToDouble(); }
+   public static double StoreBit(this double value, bool bit, int offset)
+   {
+      return value.BitwiseToUInt64().StoreBit(bit, offset).BitwiseToDouble();
+   }
 
    #endregion
 }

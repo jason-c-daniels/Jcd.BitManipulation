@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation.ByteIndexers](Jcd.BitManipulation.ByteIndexers.md 'Jcd.BitManipulation.ByteIndexers').[LittleEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer')
 
 ## LittleEndianByteIndexer(long) Constructor
@@ -11,7 +10,6 @@ from an [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 
 ```csharp
 public LittleEndianByteIndexer(long data);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.LittleEndianByteIndexer(long).data'></a>

@@ -32,9 +32,9 @@ public class LittleEndianByteIndexerInt64Tests
    [InlineData(0x337F)]
    public void Implicit_Conversion_Operators_Round_Trip_Returns_Original_Value(long data)
    {
-      var                     expected      = (int) data;
-      LittleEndianByteIndexer sut           = expected;
-      long                    convertedBack = sut;
+      var expected = (int) data;
+      LittleEndianByteIndexer sut = expected;
+      long convertedBack = sut;
       Assert.Equal(expected, convertedBack);
    }
 
@@ -49,8 +49,8 @@ public class LittleEndianByteIndexerInt64Tests
    [InlineData(0xFFFFFFFFFFFFFF05, 0, 0x05)]
    public void Indexer_Get_Returns_Expected_Value(ulong data, int index, ulong extractedData)
    {
-      var                     expected = (long) extractedData;
-      LittleEndianByteIndexer sut      = (long) data;
+      var expected = (long) extractedData;
+      LittleEndianByteIndexer sut = (long) data;
       Assert.Equal(expected, sut[index]);
    }
 
@@ -101,28 +101,24 @@ public class LittleEndianByteIndexerInt64Tests
    [InlineData(0x0000000005060708, 2, 2, 2, 0x06, 0x05)]
    [InlineData(0x000000000F060708, 3, 1, 1, 0x0F)]
    public void Slice_Returns_Expected_Subset(
-      long data
-    , int  index
-    , int  size
-    , int  expectedSize
-    , byte e0
-    , byte e1 = 0
-    , byte e2 = 0
-    , byte e3 = 0
-    , byte e4 = 0
-    , byte e5 = 0
-    , byte e6 = 0
-    , byte e7 = 0
+      long data, int index, int size, int expectedSize, byte e0, byte e1 = 0, byte e2 = 0, byte e3 = 0, byte e4 = 0, byte e5 = 0, byte e6 = 0, byte e7 = 0
    )
    {
       var expected = new List<byte>(new[] { e0 });
-      if (expectedSize >= 2) expected.Add(e1);
-      if (expectedSize >= 3) expected.Add(e2);
-      if (expectedSize >= 4) expected.Add(e3);
-      if (expectedSize >= 5) expected.Add(e4);
-      if (expectedSize >= 6) expected.Add(e5);
-      if (expectedSize >= 7) expected.Add(e6);
-      if (expectedSize == 8) expected.Add(e7);
+      if (expectedSize >= 2)
+         expected.Add(e1);
+      if (expectedSize >= 3)
+         expected.Add(e2);
+      if (expectedSize >= 4)
+         expected.Add(e3);
+      if (expectedSize >= 5)
+         expected.Add(e4);
+      if (expectedSize >= 6)
+         expected.Add(e5);
+      if (expectedSize >= 7)
+         expected.Add(e6);
+      if (expectedSize == 8)
+         expected.Add(e7);
 
       LittleEndianByteIndexer sut = data;
       Assert.Equal(expected.ToArray(), sut.Slice(index, size));

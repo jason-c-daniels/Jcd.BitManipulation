@@ -18,10 +18,16 @@ namespace Jcd.BitManipulation.Tests.BitIndexersTests;
 public class BitIndexerSingleTests
 {
    [Fact]
-   public void Constant_Bit_Size_Is_32_Bits() { Assert.Equal(32, BitIndexerSingle.BitSize); }
+   public void Constant_Bit_Size_Is_32_Bits()
+   {
+      Assert.Equal(32, BitIndexerSingle.BitSize);
+   }
 
    [Fact]
-   public void Length_Is_Bit_Size() { Assert.Equal(BitIndexerSingle.BitSize, new BitIndexerSingle().Length); }
+   public void Length_Is_Bit_Size()
+   {
+      Assert.Equal(BitIndexerSingle.BitSize, new BitIndexerSingle().Length);
+   }
 
    [Theory]
    [InlineData(0x0FFF)]
@@ -42,8 +48,8 @@ public class BitIndexerSingleTests
    public void Implicit_Operator_From_BitIndexerSingle_To_Single_Sets_All_Bits_Correctly(uint data)
    {
       // HACK: Type binder for xUnit hates bytes as params. Coerce the value here.
-      var   indexer = new BitIndexerSingle { Bits = data.BitwiseToSingle() };
-      float bits    = indexer;
+      var indexer = new BitIndexerSingle { Bits = data.BitwiseToSingle() };
+      float bits = indexer;
 
       Assert.Equal(indexer.Bits, bits);
    }
@@ -56,7 +62,7 @@ public class BitIndexerSingleTests
    public void Indexer_Returns_Correct_Bit_Value(uint data)
    {
       BitIndexerSingle indexer = data.BitwiseToSingle();
-      uint             mask    = 0;
+      uint mask = 0;
 
       for (var i = 0; i < indexer.Length; i++)
       {
@@ -74,9 +80,9 @@ public class BitIndexerSingleTests
    [InlineData(14)]
    public void Indexer_Sets_Correct_Bit_Value(int index)
    {
-      BitIndexerSingle indexer  = 0;
-      float            expected = 0;
-      expected       = expected.SetBit(index);
+      BitIndexerSingle indexer = 0;
+      float expected = 0;
+      expected = expected.SetBit(index);
       indexer[index] = true;
       Assert.Equal(expected, indexer.Bits);
       Assert.True(indexer[index]);
@@ -96,10 +102,11 @@ public class BitIndexerSingleTests
    [InlineData(0b11101100000000)]
    public void Enumerator_Enumerates_Bits_In_Correct_Order_LSB_to_MSB(int data)
    {
-      var indexer   = new BitIndexerSingle { Bits = data };
+      var indexer = new BitIndexerSingle { Bits = data };
       var bitValues = indexer.ToArray();
 
-      for (var i = 0; i < indexer.Length; i++) Assert.Equal(indexer.Bits.ReadBit(i), bitValues[i]);
+      for (var i = 0; i < indexer.Length; i++)
+         Assert.Equal(indexer.Bits.ReadBit(i), bitValues[i]);
    }
 
    [Theory]
@@ -118,17 +125,17 @@ public class BitIndexerSingleTests
    [InlineData(0b00011100, 0, 8)]
    public void Slice_Returns_Correct_Subset_Of_Bools(uint data, int start, int end)
    {
-      var indexer  = new BitIndexerSingle { Bits = data.BitwiseToSingle() };
-      var bits     = indexer.ToArray();
+      var indexer = new BitIndexerSingle { Bits = data.BitwiseToSingle() };
+      var bits = indexer.ToArray();
       var expected = bits[start..end];
-      var actual   = indexer[start..end];
+      var actual = indexer[start..end];
       Assert.Equal(expected, actual);
    }
 
    [Fact]
    public void IEnumerable_GetEnumerator_Enumerates_The_Correct_Number_Of_Items()
    {
-      var itemCount  = 0;
+      var itemCount = 0;
       var enumerable = (IEnumerable) new BitIndexerSingle { Bits = 0x7FFF.BitwiseToSingle() };
 
       foreach (var item in enumerable)

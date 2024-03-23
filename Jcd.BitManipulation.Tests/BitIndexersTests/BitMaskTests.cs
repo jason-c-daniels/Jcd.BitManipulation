@@ -11,7 +11,10 @@ public class BitMaskTests
    [Theory]
    [InlineData(0b1010101010101010101010101010101010101010101010101010101010101010, "0b1010101010101010101010101010101010101010101010101010101010101010")]
    [InlineData(0b0101010101010101010101010101010101010101010101010101010101010101, "0b0101010101010101010101010101010101010101010101010101010101010101")]
-   public void ToString_Outputs_Correct_Formatted_String(ulong maskBits, string expected) { Assert.Equal(expected, ((BitMask) maskBits).ToString()); }
+   public void ToString_Outputs_Correct_Formatted_String(ulong maskBits, string expected)
+   {
+      Assert.Equal(expected, ((BitMask) maskBits).ToString());
+   }
 
    #region Constructor tests
 
@@ -34,7 +37,7 @@ public class BitMaskTests
    public void CopyConstructor_CopiesBitsCorrectly(ulong bits)
    {
       var initialMask = new BitMask(bits);
-      var mask        = new BitMask(initialMask);
+      var mask = new BitMask(initialMask);
       Assert.Equal(bits, mask.Bits);
    }
 
@@ -167,7 +170,7 @@ public class BitMaskTests
    [InlineData(ulong.MaxValue)]
    public void Implicit_Conversion_To_UInt64_CopiesBitsCorrectly(ulong bits)
    {
-      var   mask    = new BitMask(bits);
+      var mask = new BitMask(bits);
       ulong newBits = mask;
       Assert.Equal(bits, newBits);
    }
@@ -183,7 +186,7 @@ public class BitMaskTests
    [InlineData(long.MinValue)]
    public void Implicit_Conversion_To_Int64_CopiesBitsCorrectly(long bits)
    {
-      var  mask    = new BitMask(bits);
+      var mask = new BitMask(bits);
       long newBits = mask;
       Assert.Equal(bits, newBits);
    }
@@ -194,7 +197,7 @@ public class BitMaskTests
    [InlineData(uint.MaxValue)]
    public void Implicit_Conversion_To_UInt32_CopiesBitsCorrectly(uint bits)
    {
-      var  mask    = new BitMask(bits);
+      var mask = new BitMask(bits);
       uint newBits = mask;
       Assert.Equal(bits, newBits);
    }
@@ -205,7 +208,7 @@ public class BitMaskTests
    [InlineData(int.MaxValue)]
    public void Implicit_Conversion_To_Int32_CopiesBitsCorrectly(int bits)
    {
-      var mask    = new BitMask(bits);
+      var mask = new BitMask(bits);
       int newBits = mask;
       Assert.Equal(bits, newBits);
    }
@@ -215,7 +218,7 @@ public class BitMaskTests
    [InlineData(ushort.MaxValue)]
    public void Implicit_Conversion_To_UInt16_CopiesBitsCorrectly(ushort bits)
    {
-      var    mask    = new BitMask(bits);
+      var mask = new BitMask(bits);
       ushort newBits = mask;
       Assert.Equal(bits, newBits);
    }
@@ -225,7 +228,7 @@ public class BitMaskTests
    [InlineData(short.MaxValue)]
    public void Implicit_Conversion_To_Int16_CopiesBitsCorrectly(short bits)
    {
-      var   mask    = new BitMask(bits);
+      var mask = new BitMask(bits);
       short newBits = mask;
       Assert.Equal(bits, newBits);
    }
@@ -235,7 +238,7 @@ public class BitMaskTests
    [InlineData(byte.MaxValue - 1)]
    public void Implicit_Conversion_To_Byte_CopiesBitsCorrectly(byte bits)
    {
-      var  mask    = new BitMask(bits);
+      var mask = new BitMask(bits);
       byte newBits = mask;
       Assert.Equal(bits, newBits);
    }
@@ -245,7 +248,7 @@ public class BitMaskTests
    [InlineData(sbyte.MaxValue)]
    public void Implicit_Conversion_To_SByte_CopiesBitsCorrectly(sbyte bits)
    {
-      var   mask    = new BitMask((ulong) (byte) bits);
+      var mask = new BitMask((ulong) (byte) bits);
       sbyte newBits = mask;
       Assert.Equal(bits, newBits);
    }

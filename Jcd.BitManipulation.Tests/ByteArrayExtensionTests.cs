@@ -135,7 +135,8 @@ public class ByteArrayExtensionTests
    {
       var expected = new[] { e0, e1, e2, e3, e4, e5, e6, e7 };
       Assert.Equal(expected, data.BitwiseToDouble().ToByteArray(endian));
-   }   
+   }
+
    #endregion
 
    #region To[Integer Data Type] Tests on Array of bytes
@@ -144,13 +145,19 @@ public class ByteArrayExtensionTests
    [InlineData(0x01, 0x01)]
    [InlineData(0x02, 0x02)]
    [InlineData(0x03, 0x03)]
-   public void ToByte_On_Array(byte d0, byte expected) { Assert.Equal(expected, new[] { d0 }.ToByte()); }
+   public void ToByte_On_Array(byte d0, byte expected)
+   {
+      Assert.Equal(expected, new[] { d0 }.ToByte());
+   }
 
    [Theory]
    [InlineData(0x01, 0x01)]
    [InlineData(0x02, 0x02)]
    [InlineData(0x03, 0x03)]
-   public void ToSByte_On_Array(byte d0, sbyte expected) { Assert.Equal(expected, new[] { d0 }.ToSByte()); }
+   public void ToSByte_On_Array(byte d0, sbyte expected)
+   {
+      Assert.Equal(expected, new[] { d0 }.ToSByte());
+   }
 
    [Theory]
    [InlineData(0x01, 0x02, 2, Endian.Little, 0x0201)]
@@ -256,8 +263,8 @@ public class ByteArrayExtensionTests
    public void Single_On_Array(byte d0, byte d1, byte d2, byte d3, int size, Endian endian, int expected)
    {
       Assert.Equal(expected.BitwiseToSingle(), new byte[] { d0, d1, d2, d3 }.Take(size).ToArray().ToSingle(endian));
-   }   
-   
+   }
+
    [Theory]
    [InlineData(0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 8, Endian.Little, 0x0807060504030201)]
    [InlineData(0x08, 0x07, 0x06, 0x05, 0x04, 0x03, 0x02, 0x01, 8, Endian.Big,    0x0807060504030201)]
@@ -278,7 +285,8 @@ public class ByteArrayExtensionTests
    public void ToDouble_On_Array(byte d0, byte d1, byte d2, byte d3, byte d4, byte d5, byte d6, byte d7, int size, Endian endian, ulong expected)
    {
       Assert.Equal(expected.BitwiseToDouble(), new[] { d0, d1, d2, d3, d4, d5, d6, d7 }.Take(size).ToArray().ToDouble(endian));
-   }   
+   }
+
    #endregion
 
    #region To[Integer Data Type] Tests on Array of bytes
@@ -287,13 +295,19 @@ public class ByteArrayExtensionTests
    [InlineData(0x01, 0x01)]
    [InlineData(0x02, 0x02)]
    [InlineData(0x03, 0x03)]
-   public void ToByte_On_ReadOnlySpan(byte d0, byte expected) { Assert.Equal(expected, new ReadOnlySpan<byte>([d0]).ToByte()); }
+   public void ToByte_On_ReadOnlySpan(byte d0, byte expected)
+   {
+      Assert.Equal(expected, new ReadOnlySpan<byte>([d0]).ToByte());
+   }
 
    [Theory]
    [InlineData(0x01, 0x01)]
    [InlineData(0x02, 0x02)]
    [InlineData(0x03, 0x03)]
-   public void ToSByte_On_ReadOnlySpan(byte d0, sbyte expected) { Assert.Equal(expected, new ReadOnlySpan<byte>([d0]).ToSByte()); }
+   public void ToSByte_On_ReadOnlySpan(byte d0, sbyte expected)
+   {
+      Assert.Equal(expected, new ReadOnlySpan<byte>([d0]).ToSByte());
+   }
 
    [Theory]
    [InlineData(0x01, 0x02, 2, Endian.Little, 0x0201)]
@@ -342,7 +356,7 @@ public class ByteArrayExtensionTests
    {
       Assert.Equal(expected, new ReadOnlySpan<byte>(new[] { d0, d1, d2, d3 }.Take(size).ToArray()).ToInt32(endian));
    }
-   
+
    [Theory]
    [InlineData(0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 8, Endian.Little, 0x0807060504030201)]
    [InlineData(0x08, 0x07, 0x06, 0x05, 0x04, 0x03, 0x02, 0x01, 8, Endian.Big,    0x0807060504030201)]
@@ -422,5 +436,6 @@ public class ByteArrayExtensionTests
    {
       Assert.Equal(expected.BitwiseToDouble(), new ReadOnlySpan<byte>(new[] { d0, d1, d2, d3, d4, d5, d6, d7 }.Take(size).ToArray()).ToDouble(endian));
    }
+
    #endregion
 }

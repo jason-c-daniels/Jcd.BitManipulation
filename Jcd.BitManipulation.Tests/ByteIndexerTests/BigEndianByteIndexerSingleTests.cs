@@ -32,9 +32,9 @@ public class BigEndianByteIndexerSingleTests
    [InlineData(0x337FC0DE)]
    public void Implicit_Conversion_Operators_Round_Trip_Returns_Original_Value(uint data)
    {
-      var                  expected      = data.BitwiseToSingle();
-      BigEndianByteIndexer sut           = expected;
-      float                convertedBack = sut;
+      var expected = data.BitwiseToSingle();
+      BigEndianByteIndexer sut = expected;
+      float convertedBack = sut;
       Assert.Equal(expected, convertedBack);
    }
 
@@ -45,8 +45,8 @@ public class BigEndianByteIndexerSingleTests
    [InlineData(0xFE7FFF03, 3, 0x03)]
    public void Indexer_Get_Returns_Expected_Value(uint data, int index, byte extractedData)
    {
-      var                  expected = extractedData;
-      BigEndianByteIndexer sut      = data.BitwiseToSingle();
+      var expected = extractedData;
+      BigEndianByteIndexer sut = data.BitwiseToSingle();
       Assert.Equal(expected, sut[index]);
    }
 
@@ -57,8 +57,8 @@ public class BigEndianByteIndexerSingleTests
    [InlineData(0xFEFEFEFE, 3, 0x0A, 0xFEFEFE0A)]
    public void Indexer_Set_Sets_The_Expected_Value(uint data, int index, byte dataToSet, uint uexpected)
    {
-      BigEndianByteIndexer sut      = data.BitwiseToSingle();
-      var                  expected = uexpected.BitwiseToSingle();
+      BigEndianByteIndexer sut = data.BitwiseToSingle();
+      var expected = uexpected.BitwiseToSingle();
       sut[index] = dataToSet;
       Assert.Equal(expected, (float) sut);
    }
@@ -92,9 +92,12 @@ public class BigEndianByteIndexerSingleTests
    public void Slice_Returns_Expected_Subset(uint data, int index, int size, int expectedSize, byte e0, byte e1 = 0, byte e2 = 0, byte e3 = 0)
    {
       var expected = new List<byte>(new[] { e0 });
-      if (expectedSize >= 2) expected.Add(e1);
-      if (expectedSize >= 3) expected.Add(e2);
-      if (expectedSize >= 4) expected.Add(e3);
+      if (expectedSize >= 2)
+         expected.Add(e1);
+      if (expectedSize >= 3)
+         expected.Add(e2);
+      if (expectedSize >= 4)
+         expected.Add(e3);
 
       BigEndianByteIndexer sut = data.BitwiseToSingle();
       Assert.Equal(expected.ToArray(), sut.Slice(index, size));

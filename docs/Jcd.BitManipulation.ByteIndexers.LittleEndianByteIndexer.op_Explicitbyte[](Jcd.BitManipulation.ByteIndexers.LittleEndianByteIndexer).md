@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation.ByteIndexers](Jcd.BitManipulation.ByteIndexers.md 'Jcd.BitManipulation.ByteIndexers').[LittleEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer')
 
 ## LittleEndianByteIndexer.explicit operator byte[](LittleEndianByteIndexer) Operator
@@ -11,7 +10,6 @@ to an array of bytes.
 ```csharp
 public static byte[] explicit operator byte[](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer indexer);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.op_Explicitbyte[](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer).indexer'></a>

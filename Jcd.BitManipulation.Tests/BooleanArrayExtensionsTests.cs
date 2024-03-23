@@ -15,7 +15,7 @@ public class BooleanArrayExtensionsTests
    public void Byte_Round_Trip_Remains_Unaltered(uint data)
    {
       var expected = (byte) data;
-      var actual   = expected.ToBooleanArray().ToByte();
+      var actual = expected.ToBooleanArray().ToByte();
       Assert.Equal(expected, actual);
    }
 
@@ -26,7 +26,7 @@ public class BooleanArrayExtensionsTests
    public void SByte_Round_Trip_Remains_Unaltered(uint data)
    {
       var expected = (sbyte) data;
-      var actual   = expected.ToBooleanArray().ToSByte();
+      var actual = expected.ToBooleanArray().ToSByte();
       Assert.Equal(expected, actual);
    }
 
@@ -37,7 +37,7 @@ public class BooleanArrayExtensionsTests
    public void UInt16_Round_Trip_Remains_Unaltered(uint data)
    {
       var expected = (ushort) data;
-      var actual   = expected.ToBooleanArray().ToUInt16();
+      var actual = expected.ToBooleanArray().ToUInt16();
       Assert.Equal(expected, actual);
    }
 
@@ -48,7 +48,7 @@ public class BooleanArrayExtensionsTests
    public void Int16_Round_Trip_Remains_Unaltered(uint data)
    {
       var expected = (short) data;
-      var actual   = expected.ToBooleanArray().ToInt16();
+      var actual = expected.ToBooleanArray().ToInt16();
       Assert.Equal(expected, actual);
    }
 
@@ -69,7 +69,7 @@ public class BooleanArrayExtensionsTests
    public void Int32_Round_Trip_Remains_Unaltered(uint data)
    {
       var expected = (int) data;
-      var actual   = expected.ToBooleanArray().ToInt32();
+      var actual = expected.ToBooleanArray().ToInt32();
       Assert.Equal(expected, actual);
    }
 
@@ -90,7 +90,7 @@ public class BooleanArrayExtensionsTests
    public void Int64_Round_Trip_Remains_Unaltered(ulong data)
    {
       var expected = (long) data;
-      var actual   = expected.ToBooleanArray().ToInt64();
+      var actual = expected.ToBooleanArray().ToInt64();
       Assert.Equal(expected, actual);
    }
 
@@ -101,7 +101,7 @@ public class BooleanArrayExtensionsTests
    public void Float_Round_Trip_Remains_Unaltered(float data)
    {
       var expected = data;
-      var actual   = expected.ToBooleanArray().ToSingle();
+      var actual = expected.ToBooleanArray().ToSingle();
       Assert.Equal(expected, actual);
    }
 
@@ -112,7 +112,7 @@ public class BooleanArrayExtensionsTests
    public void Double_Round_Trip_Remains_Unaltered(double data)
    {
       var expected = data;
-      var actual   = expected.ToBooleanArray().ToDouble();
+      var actual = expected.ToBooleanArray().ToDouble();
       Assert.Equal(expected, actual);
    }
 }

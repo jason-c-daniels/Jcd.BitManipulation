@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation.ByteIndexers](Jcd.BitManipulation.ByteIndexers.md 'Jcd.BitManipulation.ByteIndexers').[LittleEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer')
 
 ## LittleEndianByteIndexer.implicit operator LittleEndianByteIndexer(long) Operator
@@ -10,7 +9,6 @@ a [LittleEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.LittleEndianByteInd
 ```csharp
 public static Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer implicit operator LittleEndianByteIndexer(long data);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.op_ImplicitJcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer(long).data'></a>

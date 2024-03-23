@@ -15,7 +15,7 @@ using System.Runtime.CompilerServices;
 namespace Jcd.BitManipulation.ByteIndexers;
 
 /// <summary>
-/// Provides byte level indexing operations (set, get) on a <see cref="double"/>. Zero is the most significant byte.
+/// Provides byte level indexing operations (set, get) on a <see cref="double" />. Zero is the most significant byte.
 /// </summary>
 public struct BigEndianByteIndexerDouble : IByteIndexer
 {
@@ -25,15 +25,18 @@ public struct BigEndianByteIndexerDouble : IByteIndexer
    public const int ByteSize = sizeof(double);
 
    /// <summary>
-   /// The largest <see cref="byte"/> index available.
+   /// The largest <see cref="byte" /> index available.
    /// </summary>
    public const int MaxByteIndex = ByteSize - 1;
 
    /// <summary>
-   /// Constructs a <see cref="BigEndianByteIndexerDouble"/> from a <see cref="double"/>.
+   /// Constructs a <see cref="BigEndianByteIndexerDouble" /> from a <see cref="double" />.
    /// </summary>
    /// <param name="data"> The initial value of the underlying data.</param>
-   public BigEndianByteIndexerDouble(double data = 0) { Data = data; }
+   public BigEndianByteIndexerDouble(double data = 0)
+   {
+      Data = data;
+   }
 
    /// <summary>
    /// The number of bytes indexable by this indexer.
@@ -64,7 +67,8 @@ public struct BigEndianByteIndexerDouble : IByteIndexer
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       readonly get
       {
-         if (index is < 0 or >= ByteSize) throw new ArgumentOutOfRangeException(nameof(index));
+         if (index is < 0 or >= ByteSize)
+            throw new ArgumentOutOfRangeException(nameof(index));
 
          return Data.ReadByte(index, Endian.Big);
       }
@@ -72,7 +76,9 @@ public struct BigEndianByteIndexerDouble : IByteIndexer
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       set
       {
-         if (index is < 0 or >= ByteSize) throw new ArgumentOutOfRangeException(nameof(index));
+         if (index is < 0 or >= ByteSize)
+            throw new ArgumentOutOfRangeException(nameof(index));
+
          data = data.StoreByte(value, index, Endian.Big);
       }
    }
@@ -86,7 +92,9 @@ public struct BigEndianByteIndexerDouble : IByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public readonly byte[] Slice(int start, int length)
    {
-      var len   = length + start > ByteSize ? ByteSize - start : length;
+      var len = length + start > ByteSize
+                   ? ByteSize - start
+                   : length;
       var slice = new byte[len];
       for (var i = 0; i < length; i++)
          slice[i] = Data.ReadByte(start + i, Endian.Big);
@@ -100,7 +108,10 @@ public struct BigEndianByteIndexerDouble : IByteIndexer
    /// <param name="indexer">The indexer to convert.</param>
    /// <returns>The raw data.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static implicit operator double(BigEndianByteIndexerDouble indexer) { return indexer.Data; }
+   public static implicit operator double(BigEndianByteIndexerDouble indexer)
+   {
+      return indexer.Data;
+   }
 
    /// <summary>
    /// Converts the underlying data type to the indexer type.
@@ -108,7 +119,10 @@ public struct BigEndianByteIndexerDouble : IByteIndexer
    /// <param name="data">The underlying data type.</param>
    /// <returns>A indexer type.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static implicit operator BigEndianByteIndexerDouble(double data) { return new BigEndianByteIndexerDouble(data); }
+   public static implicit operator BigEndianByteIndexerDouble(double data)
+   {
+      return new BigEndianByteIndexerDouble(data);
+   }
 
    #region Implementation of IEnumerable
 
@@ -116,12 +130,16 @@ public struct BigEndianByteIndexerDouble : IByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public readonly IEnumerator<byte> GetEnumerator()
    {
-      for (var i = 0; i < ByteSize; i++) yield return this[i];
+      for (var i = 0; i < ByteSize; i++)
+         yield return this[i];
    }
 
    /// <inheritdoc />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   readonly IEnumerator IEnumerable.GetEnumerator() { return GetEnumerator(); }
+   readonly IEnumerator IEnumerable.GetEnumerator()
+   {
+      return GetEnumerator();
+   }
 
    #endregion
 }

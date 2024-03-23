@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[StoreBytesExtensions](Jcd.BitManipulation.StoreBytesExtensions.md 'Jcd.BitManipulation.StoreBytesExtensions')
 
 ## StoreBytesExtensions.StoreBytes(this BigEndianByteIndexer, byte[], int, int) Method
@@ -9,7 +8,6 @@ Stores a set of bytes starting at the specified byte location within the indexer
 ```csharp
 public static Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer StoreBytes(this Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer indexer, byte[] bytes, int offset, int size=-1);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.StoreBytesExtensions.StoreBytes(thisJcd.BitManipulation.ByteIndexers.BigEndianByteIndexer,byte[],int,int).indexer'></a>

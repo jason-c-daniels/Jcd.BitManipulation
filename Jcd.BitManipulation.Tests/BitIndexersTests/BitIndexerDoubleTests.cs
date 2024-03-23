@@ -18,10 +18,16 @@ namespace Jcd.BitManipulation.Tests.BitIndexersTests;
 public class BitIndexerDoubleTests
 {
    [Fact]
-   public void Constant_Bit_Size_Is_64_Bits() { Assert.Equal(64, BitIndexerDouble.BitSize); }
+   public void Constant_Bit_Size_Is_64_Bits()
+   {
+      Assert.Equal(64, BitIndexerDouble.BitSize);
+   }
 
    [Fact]
-   public void Length_Is_Bit_Size() { Assert.Equal(BitIndexerDouble.BitSize, new BitIndexerDouble().Length); }
+   public void Length_Is_Bit_Size()
+   {
+      Assert.Equal(BitIndexerDouble.BitSize, new BitIndexerDouble().Length);
+   }
 
    [Theory]
    [InlineData(0x0FFF)]
@@ -41,9 +47,9 @@ public class BitIndexerDoubleTests
    [InlineData(0b00011000)]
    public void Implicit_Operator_From_BitIndexerDouble_To_Double_Sets_All_Bits_Correctly(ulong data)
    {
-      var    expected = data.BitwiseToDouble();
-      var    indexer  = new BitIndexerDouble { Bits = expected };
-      double actual   = indexer;
+      var expected = data.BitwiseToDouble();
+      var indexer = new BitIndexerDouble { Bits = expected };
+      double actual = indexer;
 
       Assert.Equal(expected, actual);
    }
@@ -56,7 +62,7 @@ public class BitIndexerDoubleTests
    public void Indexer_Returns_Correct_Bit_Value(ulong data)
    {
       BitIndexerDouble indexer = data.BitwiseToDouble();
-      ulong            mask    = 0;
+      ulong mask = 0;
 
       for (var i = 0; i < indexer.Length; i++)
       {
@@ -74,9 +80,9 @@ public class BitIndexerDoubleTests
    [InlineData(14)]
    public void Indexer_Sets_Correct_Bit_Value(int index)
    {
-      BitIndexerDouble indexer  = 0;
-      double           expected = 0;
-      expected       = expected.SetBit(index);
+      BitIndexerDouble indexer = 0;
+      double expected = 0;
+      expected = expected.SetBit(index);
       indexer[index] = true;
       Assert.Equal(expected, indexer.Bits);
       Assert.True(indexer[index]);
@@ -96,10 +102,11 @@ public class BitIndexerDoubleTests
    [InlineData(0b11101100000000)]
    public void Enumerator_Enumerates_Bits_In_Correct_Order_LSB_to_MSB(ulong data)
    {
-      var indexer   = new BitIndexerDouble { Bits = data.BitwiseToDouble() };
+      var indexer = new BitIndexerDouble { Bits = data.BitwiseToDouble() };
       var bitValues = indexer.ToArray();
 
-      for (var i = 0; i < indexer.Length; i++) Assert.Equal(indexer.Bits.ReadBit(i), bitValues[i]);
+      for (var i = 0; i < indexer.Length; i++)
+         Assert.Equal(indexer.Bits.ReadBit(i), bitValues[i]);
    }
 
    [Theory]
@@ -118,17 +125,17 @@ public class BitIndexerDoubleTests
    [InlineData(0b00011100, 0, 8)]
    public void Slice_Returns_Correct_Subset_Of_Bools(ulong data, int start, int end)
    {
-      var indexer  = new BitIndexerDouble { Bits = data.BitwiseToDouble() };
-      var bits     = indexer.ToArray();
+      var indexer = new BitIndexerDouble { Bits = data.BitwiseToDouble() };
+      var bits = indexer.ToArray();
       var expected = bits[start..end];
-      var actual   = indexer[start..end];
+      var actual = indexer[start..end];
       Assert.Equal(expected, actual);
    }
 
    [Fact]
    public void IEnumerable_GetEnumerator_Enumerates_The_Correct_Number_Of_Items()
    {
-      var itemCount  = 0;
+      var itemCount = 0;
       var enumerable = (IEnumerable) new BitIndexerDouble { Bits = 0x7FFFul.BitwiseToDouble() };
 
       foreach (var item in enumerable)

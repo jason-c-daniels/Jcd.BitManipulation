@@ -1,0 +1,12 @@
+#!/bin/sh
+returnd="$(pwd)"
+cd "$(git rev-parse --show-toplevel)" || exit
+echo finding files
+find . -type f -name '*.cs'
+find . -type f -name '*.md'
+echo editing files
+find . -type f -name '*.cs' -exec sed -i -Ee 's/[ ]+$//g' {} \;
+find . -type f -name '*.cs' -print0 | xargs -0 unix2dos
+find . -type f -name '*.md' -exec sed -i -Ee 's/[ ]+$//g' {} \;
+find . -type f -name '*.md' -print0 | xargs -0 unix2dos
+cd "$returnd" || exit

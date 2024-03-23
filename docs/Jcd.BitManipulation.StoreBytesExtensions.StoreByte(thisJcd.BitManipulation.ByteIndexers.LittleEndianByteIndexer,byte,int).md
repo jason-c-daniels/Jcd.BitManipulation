@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[StoreBytesExtensions](Jcd.BitManipulation.StoreBytesExtensions.md 'Jcd.BitManipulation.StoreBytesExtensions')
 
 ## StoreBytesExtensions.StoreByte(this LittleEndianByteIndexer, byte, int) Method
@@ -9,7 +8,6 @@ Store a single byte to the value at the specified byte offset.
 ```csharp
 public static Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer StoreByte(this Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer value, byte @byte, int offset);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.StoreBytesExtensions.StoreByte(thisJcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer,byte,int).value'></a>

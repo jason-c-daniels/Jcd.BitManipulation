@@ -33,9 +33,9 @@ public class LittleEndianByteIndexerUInt64Tests
    [InlineData(0b111001100011000)]
    public void Implicit_Conversion_Operators_Round_Trip_Returns_Original_Value(ulong data)
    {
-      var                     expected      = data;
-      LittleEndianByteIndexer sut           = expected;
-      ulong                   convertedBack = sut;
+      var expected = data;
+      LittleEndianByteIndexer sut = expected;
+      ulong convertedBack = sut;
       Assert.Equal(expected, convertedBack);
    }
 
@@ -99,28 +99,24 @@ public class LittleEndianByteIndexerUInt64Tests
    [InlineData(0x0000000005060708, 2, 2, 2, 0x06, 0x05)]
    [InlineData(0x000000000F060708, 3, 1, 1, 0x0F)]
    public void Slice_Returns_Expected_Subset(
-      ulong data
-    , int   index
-    , int   size
-    , int   expectedSize
-    , byte  e0
-    , byte  e1 = 0
-    , byte  e2 = 0
-    , byte  e3 = 0
-    , byte  e4 = 0
-    , byte  e5 = 0
-    , byte  e6 = 0
-    , byte  e7 = 0
+      ulong data, int index, int size, int expectedSize, byte e0, byte e1 = 0, byte e2 = 0, byte e3 = 0, byte e4 = 0, byte e5 = 0, byte e6 = 0, byte e7 = 0
    )
    {
       var expected = new List<byte>(new[] { e0 });
-      if (expectedSize >= 2) expected.Add(e1);
-      if (expectedSize >= 3) expected.Add(e2);
-      if (expectedSize >= 4) expected.Add(e3);
-      if (expectedSize >= 5) expected.Add(e4);
-      if (expectedSize >= 6) expected.Add(e5);
-      if (expectedSize >= 7) expected.Add(e6);
-      if (expectedSize == 8) expected.Add(e7);
+      if (expectedSize >= 2)
+         expected.Add(e1);
+      if (expectedSize >= 3)
+         expected.Add(e2);
+      if (expectedSize >= 4)
+         expected.Add(e3);
+      if (expectedSize >= 5)
+         expected.Add(e4);
+      if (expectedSize >= 6)
+         expected.Add(e5);
+      if (expectedSize >= 7)
+         expected.Add(e6);
+      if (expectedSize == 8)
+         expected.Add(e7);
 
       LittleEndianByteIndexer sut = data;
       Assert.Equal(expected.ToArray(), sut.Slice(index, size));

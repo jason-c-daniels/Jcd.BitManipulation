@@ -18,10 +18,16 @@ namespace Jcd.BitManipulation.Tests.BitIndexersTests;
 public class BitIndexerUInt64Tests
 {
    [Fact]
-   public void Constant_Bit_Size_Is_64_Bits() { Assert.Equal(64, BitIndexerUInt64.BitSize); }
+   public void Constant_Bit_Size_Is_64_Bits()
+   {
+      Assert.Equal(64, BitIndexerUInt64.BitSize);
+   }
 
    [Fact]
-   public void Length_Is_Bit_Size() { Assert.Equal(BitIndexerUInt64.BitSize, new BitIndexerUInt64().Length); }
+   public void Length_Is_Bit_Size()
+   {
+      Assert.Equal(BitIndexerUInt64.BitSize, new BitIndexerUInt64().Length);
+   }
 
    [Theory]
    [InlineData(0x0FFF)]
@@ -42,8 +48,8 @@ public class BitIndexerUInt64Tests
    public void Implicit_Operator_From_BitIndexerUInt64_To_UInt64_Sets_All_Bits_Correctly(ulong data)
    {
       // HACK: Type binder for xUnit hates bytes as params. Coerce the value here.
-      var   indexer = new BitIndexerUInt64 { Bits = data };
-      ulong bits    = indexer;
+      var indexer = new BitIndexerUInt64 { Bits = data };
+      ulong bits = indexer;
 
       Assert.Equal((ulong) indexer, bits);
    }
@@ -56,7 +62,7 @@ public class BitIndexerUInt64Tests
    public void Indexer_Returns_Correct_Bit_Value(ulong data)
    {
       BitIndexerUInt64 indexer = data;
-      ulong            mask    = 0;
+      ulong mask = 0;
 
       for (var i = 0; i < indexer.Length; i++)
       {
@@ -74,9 +80,9 @@ public class BitIndexerUInt64Tests
    [InlineData(14)]
    public void Indexer_Sets_Correct_Bit_Value(int index)
    {
-      BitIndexerUInt64 indexer  = 0;
-      ulong            expected = 0;
-      expected       = expected.SetBit(index);
+      BitIndexerUInt64 indexer = 0;
+      ulong expected = 0;
+      expected = expected.SetBit(index);
       indexer[index] = true;
       Assert.Equal(expected, indexer.Bits);
       Assert.True(indexer[index]);
@@ -96,10 +102,11 @@ public class BitIndexerUInt64Tests
    [InlineData(0b11101100000000)]
    public void Enumerator_Enumerates_Bits_In_Correct_Order_LSB_to_MSB(ulong data)
    {
-      var indexer   = new BitIndexerUInt64 { Bits = data };
+      var indexer = new BitIndexerUInt64 { Bits = data };
       var bitValues = indexer.ToArray();
 
-      for (var i = 0; i < indexer.Length; i++) Assert.Equal(indexer.Bits.ReadBit(i), bitValues[i]);
+      for (var i = 0; i < indexer.Length; i++)
+         Assert.Equal(indexer.Bits.ReadBit(i), bitValues[i]);
    }
 
    [Theory]
@@ -118,17 +125,17 @@ public class BitIndexerUInt64Tests
    [InlineData(0b00011100, 0, 8)]
    public void Slice_Returns_Correct_Subset_Of_Bools(ulong data, int start, int end)
    {
-      var indexer  = new BitIndexerUInt64 { Bits = data };
-      var bits     = indexer.ToArray();
+      var indexer = new BitIndexerUInt64 { Bits = data };
+      var bits = indexer.ToArray();
       var expected = bits[start..end];
-      var actual   = indexer[start..end];
+      var actual = indexer[start..end];
       Assert.Equal(expected, actual);
    }
 
    [Fact]
    public void IEnumerable_GetEnumerator_Enumerates_The_Correct_Number_Of_Items()
    {
-      var itemCount  = 0;
+      var itemCount = 0;
       var enumerable = (IEnumerable) new BitIndexerUInt64 { Bits = 0x7FFF };
 
       foreach (var item in enumerable)

@@ -15,7 +15,7 @@ using System.Runtime.CompilerServices;
 namespace Jcd.BitManipulation.ByteIndexers;
 
 /// <summary>
-/// Provides byte level indexing operations (set, get) on a <see cref="Int64"/>. Zero is the least significant byte.
+/// Provides byte level indexing operations (set, get) on a <see cref="long" />. Zero is the least significant byte.
 /// </summary>
 public struct LittleEndianByteIndexerInt64 : IByteIndexer
 {
@@ -25,16 +25,19 @@ public struct LittleEndianByteIndexerInt64 : IByteIndexer
    public const int ByteSize = sizeof(long);
 
    /// <summary>
-   /// The largest <see cref="byte"/> index available.
+   /// The largest <see cref="byte" /> index available.
    /// </summary>
    public const int MaxByteIndex = ByteSize - 1;
 
    /// <summary>
-   /// Constructs a <see cref="LittleEndianByteIndexerInt64"/> from an <see cref="Int64"/>.
+   /// Constructs a <see cref="LittleEndianByteIndexerInt64" /> from an <see cref="long" />.
    /// </summary>
    /// <param name="data"> The initial value of the underlying data.</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public LittleEndianByteIndexerInt64(long data = 0) { Data = data; }
+   public LittleEndianByteIndexerInt64(long data = 0)
+   {
+      Data = data;
+   }
 
    /// <summary>
    /// The length of the buffer.
@@ -49,14 +52,15 @@ public struct LittleEndianByteIndexerInt64 : IByteIndexer
    /// <summary>
    /// Access bytes from the underlying data.
    /// </summary>
-   /// <param name="index">The index of the <see cref="byte"/> to get or set.</param>
+   /// <param name="index">The index of the <see cref="byte" /> to get or set.</param>
    /// <exception cref="ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
    public byte this[int index]
    {
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       get
       {
-         if (index is < 0 or >= ByteSize) throw new ArgumentOutOfRangeException(nameof(index));
+         if (index is < 0 or >= ByteSize)
+            throw new ArgumentOutOfRangeException(nameof(index));
 
          return Data.ReadByte(index);
       }
@@ -64,8 +68,10 @@ public struct LittleEndianByteIndexerInt64 : IByteIndexer
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       set
       {
-         if (index is < 0 or >= ByteSize) throw new ArgumentOutOfRangeException(nameof(index));
-         Data = Data.StoreByte(value, index);
+         if (index is < 0 or >= ByteSize)
+            throw new ArgumentOutOfRangeException(nameof(index));
+
+         Data = Data.StoreBits(value, index << 3, 8);
       }
    }
 
@@ -78,10 +84,13 @@ public struct LittleEndianByteIndexerInt64 : IByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public readonly byte[] Slice(int start, int length)
    {
-      var len   = length + start > ByteSize ? ByteSize - start : length;
+      var len = length + start > ByteSize
+                   ? ByteSize - start
+                   : length;
       var slice = new byte[len];
-      for (var i = 0; i < length; i++)
-         slice[i] = Data.ReadByte(start + i);
+      var j = start;
+      for (var i = 0; i < len; i++, j++)
+         slice[i] = Data.ReadByte(j);
 
       return slice;
    }
@@ -92,7 +101,10 @@ public struct LittleEndianByteIndexerInt64 : IByteIndexer
    /// <param name="buffer">The buffer to convert.</param>
    /// <returns>The raw data.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static implicit operator long(LittleEndianByteIndexerInt64 buffer) { return buffer.Data; }
+   public static implicit operator long(LittleEndianByteIndexerInt64 buffer)
+   {
+      return buffer.Data;
+   }
 
    /// <summary>
    /// Converts the underlying data type to the buffer type.
@@ -100,7 +112,10 @@ public struct LittleEndianByteIndexerInt64 : IByteIndexer
    /// <param name="data">The underlying data type.</param>
    /// <returns>A buffer type.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static implicit operator LittleEndianByteIndexerInt64(long data) { return new LittleEndianByteIndexerInt64(data); }
+   public static implicit operator LittleEndianByteIndexerInt64(long data)
+   {
+      return new LittleEndianByteIndexerInt64(data);
+   }
 
    #region Implementation of IEnumerable
 
@@ -108,12 +123,16 @@ public struct LittleEndianByteIndexerInt64 : IByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public readonly IEnumerator<byte> GetEnumerator()
    {
-      for (var i = 0; i < ByteSize; i++) yield return this[i];
+      for (var i = 0; i < ByteSize; i++)
+         yield return this[i];
    }
 
    /// <inheritdoc />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   readonly IEnumerator IEnumerable.GetEnumerator() { return GetEnumerator(); }
+   IEnumerator IEnumerable.GetEnumerator()
+   {
+      return GetEnumerator();
+   }
 
    #endregion
 }

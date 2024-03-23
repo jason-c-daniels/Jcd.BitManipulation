@@ -33,9 +33,9 @@ public class BigEndianByteIndexerInt16Tests
    [InlineData(0b111001100011000)]
    public void Implicit_Conversion_Operators_Round_Trip_Returns_Original_Value(short data)
    {
-      var                  expected      = data;
-      BigEndianByteIndexer sut           = data;
-      short                convertedBack = sut;
+      var expected = data;
+      BigEndianByteIndexer sut = data;
+      short convertedBack = sut;
       Assert.Equal(expected, convertedBack);
    }
 
@@ -48,8 +48,8 @@ public class BigEndianByteIndexerInt16Tests
    [InlineData(0x037F, 0, 0x03)]
    public void Indexer_Get_Returns_Expected_Value(short data, int index, byte extractedData)
    {
-      var                  expected = extractedData;
-      BigEndianByteIndexer sut      = data;
+      var expected = extractedData;
+      BigEndianByteIndexer sut = data;
       Assert.Equal(expected, sut[index]);
    }
 
@@ -97,9 +97,10 @@ public class BigEndianByteIndexerInt16Tests
    [InlineData(0x7F03, 0, 2, 2, 0x7F, 0x03)]
    public void Slice_Returns_Expected_Subset(ushort udata, int index, int size, int expectedSize, byte e0, byte e1 = 0)
    {
-      var data     = (short) udata;
+      var data = (short) udata;
       var expected = new List<byte>(new[] { e0 });
-      if (expectedSize >= 2) expected.Add(e1);
+      if (expectedSize >= 2)
+         expected.Add(e1);
 
       BigEndianByteIndexer sut = data;
       Assert.Equal(expected.ToArray(), sut.Slice(index, size));

@@ -32,9 +32,9 @@ public class LittleEndianByteIndexerInt32Tests
    [InlineData(0x337FC0DE)]
    public void Implicit_Conversion_Operators_Round_Trip_Returns_Original_Value(uint data)
    {
-      var                     expected      = (int) data;
-      LittleEndianByteIndexer sut           = expected;
-      int                     convertedBack = sut;
+      var expected = (int) data;
+      LittleEndianByteIndexer sut = expected;
+      int convertedBack = sut;
       Assert.Equal(expected, convertedBack);
    }
 
@@ -45,8 +45,8 @@ public class LittleEndianByteIndexerInt32Tests
    [InlineData(0xFE7FFF03, 0, 0x03)]
    public void Indexer_Get_Returns_Expected_Value(uint data, int index, byte extractedData)
    {
-      var                     expected = extractedData;
-      LittleEndianByteIndexer sut      = (int) data;
+      var expected = extractedData;
+      LittleEndianByteIndexer sut = (int) data;
       Assert.Equal(expected, sut[index]);
    }
 
@@ -93,9 +93,12 @@ public class LittleEndianByteIndexerInt32Tests
    public void Slice_Returns_Expected_Subset(int data, int index, int size, int expectedSize, byte e0, byte e1 = 0, byte e2 = 0, byte e3 = 0)
    {
       var expected = new List<byte>(new[] { e0 });
-      if (expectedSize >= 2) expected.Add(e1);
-      if (expectedSize >= 3) expected.Add(e2);
-      if (expectedSize >= 4) expected.Add(e3);
+      if (expectedSize >= 2)
+         expected.Add(e1);
+      if (expectedSize >= 3)
+         expected.Add(e2);
+      if (expectedSize >= 4)
+         expected.Add(e3);
 
       LittleEndianByteIndexer sut = data;
       Assert.Equal(expected.ToArray(), sut.Slice(index, size));

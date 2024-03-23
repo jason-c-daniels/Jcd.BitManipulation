@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ReadBytesExtensions](Jcd.BitManipulation.ReadBytesExtensions.md 'Jcd.BitManipulation.ReadBytesExtensions')
 
 ## ReadBytesExtensions.ReadByte(this LittleEndianByteIndexer, int) Method
@@ -9,7 +8,6 @@ Read a single byte from the value at the specified byte offset.
 ```csharp
 public static byte ReadByte(this Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer indexer, int offset);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ReadBytesExtensions.ReadByte(thisJcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer,int).indexer'></a>

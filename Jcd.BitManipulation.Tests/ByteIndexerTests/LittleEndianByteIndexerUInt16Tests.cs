@@ -19,7 +19,6 @@ namespace Jcd.BitManipulation.Tests.ByteIndexerTests;
 
 public class LittleEndianByteIndexerUInt16Tests
 {
-
    [Fact]
    public void Length_Is_BitSize()
    {
@@ -34,9 +33,9 @@ public class LittleEndianByteIndexerUInt16Tests
    [InlineData(0b111001100011000)]
    public void Implicit_Conversion_Operators_Round_Trip_Returns_Original_Value(uint data)
    {
-      var                     expected      = (ushort) data;
-      LittleEndianByteIndexer sut           = expected;
-      ushort                  convertedBack = sut;
+      var expected = (ushort) data;
+      LittleEndianByteIndexer sut = expected;
+      ushort convertedBack = sut;
       Assert.Equal(expected, convertedBack);
    }
 
@@ -49,8 +48,8 @@ public class LittleEndianByteIndexerUInt16Tests
    [InlineData(0x037F, 1, 0x03)]
    public void Indexer_Get_Returns_Expected_Value(uint data, int index, uint extractedData)
    {
-      var                     expected = (ushort) extractedData;
-      LittleEndianByteIndexer sut      = (ushort) data;
+      var expected = (ushort) extractedData;
+      LittleEndianByteIndexer sut = (ushort) data;
       Assert.Equal(expected, sut[index]);
    }
 
@@ -99,7 +98,8 @@ public class LittleEndianByteIndexerUInt16Tests
    public void Slice_Returns_Expected_Subset(ushort data, int index, int size, int expectedSize, byte e0, byte e1 = 0)
    {
       var expected = new List<byte>(new[] { e0 });
-      if (expectedSize >= 2) expected.Add(e1);
+      if (expectedSize >= 2)
+         expected.Add(e1);
 
       LittleEndianByteIndexer sut = data;
       Assert.Equal(expected.ToArray(), sut.Slice(index, size));

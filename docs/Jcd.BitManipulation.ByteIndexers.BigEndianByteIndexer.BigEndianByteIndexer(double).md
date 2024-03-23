@@ -1,5 +1,4 @@
 #### [Jcd.BitManipulation](index.md 'index')
-
 ### [Jcd.BitManipulation.ByteIndexers](Jcd.BitManipulation.ByteIndexers.md 'Jcd.BitManipulation.ByteIndexers').[BigEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer')
 
 ## BigEndianByteIndexer(double) Constructor
@@ -11,7 +10,6 @@ from an [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Doubl
 ```csharp
 private BigEndianByteIndexer(double data);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.BigEndianByteIndexer(double).data'></a>

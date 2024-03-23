@@ -21,14 +21,14 @@ public readonly struct BitMask
    public static readonly BitMask AllBits = ulong.MaxValue;
 
    /// <summary>
-   /// The backing store for the actual bits of the <see cref="BitMask"/>.
+   /// The backing store for the actual bits of the <see cref="BitMask" />.
    /// </summary>
    public readonly ulong Bits;
 
    #region Helpers
 
    /// <summary>
-   /// Create a 64 bit <see cref="BitMask"/> with a range of bits set.  
+   /// Create a 64 bit <see cref="BitMask" /> with a range of bits set.
    /// </summary>
    /// <param name="offset">the lowest bit to start turning on</param>
    /// <param name="size">the number of bits to set to 1</param>
@@ -36,101 +36,136 @@ public readonly struct BitMask
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static BitMask FromRange(int offset = 0, int size = 64)
    {
-      return size == 64 ? new BitMask(ulong.MaxValue << offset) : new BitMask((((ulong) 1 << size) - 1) << offset);
+      return size == 64
+                ? new BitMask(ulong.MaxValue            << offset)
+                : new BitMask((((ulong) 1 << size) - 1) << offset);
    }
 
    /// <summary>
-   /// Create a 64 bit bit <see cref="BitMask"/> with a single bit set.
+   /// Create a 64 bit bit <see cref="BitMask" /> with a single bit set.
    /// </summary>
    /// <param name="offset">the bit to set</param>
-   /// <returns>a <see cref="BitMask"/> with the specified bit set.</returns>
+   /// <returns>a <see cref="BitMask" /> with the specified bit set.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static BitMask FromSingleBit(int offset) { return new BitMask((ulong) 1 << offset); }
+   public static BitMask FromSingleBit(int offset)
+   {
+      return new BitMask((ulong) 1 << offset);
+   }
 
    #endregion
 
    #region constructors
 
    /// <summary>
-   /// Copies an existing <see cref="BitMask"/>
+   /// Copies an existing <see cref="BitMask" />
    /// </summary>
-   /// <param name="mask">The <see cref="BitMask"/> to copy</param>
+   /// <param name="mask">The <see cref="BitMask" /> to copy</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public BitMask(BitMask mask) { Bits = mask.Bits; }
+   public BitMask(BitMask mask)
+   {
+      Bits = mask.Bits;
+   }
 
    /// <summary>
-   /// Constructs a <see cref="BitMask"/> from a <see cref="ulong"/>  
+   /// Constructs a <see cref="BitMask" /> from a <see cref="ulong" />
    /// </summary>
-   /// <param name="bits">The <see cref="BitMask"/> to use</param>
+   /// <param name="bits">The <see cref="BitMask" /> to use</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public BitMask(ulong bits) { Bits = bits; }
+   public BitMask(ulong bits)
+   {
+      Bits = bits;
+   }
 
    /// <summary>
-   /// Constructs a <see cref="BitMask"/> from a <see cref="long"/>  
+   /// Constructs a <see cref="BitMask" /> from a <see cref="long" />
    /// </summary>
-   /// <param name="bits">The <see cref="BitMask"/> to use</param>
+   /// <param name="bits">The <see cref="BitMask" /> to use</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public BitMask(long bits) : this((ulong) bits) { }
+   public BitMask(long bits)
+      : this((ulong) bits)
+   {
+   }
 
    /// <summary>
-   /// Constructs a <see cref="BitMask"/> from a <see cref="uint"/>  
+   /// Constructs a <see cref="BitMask" /> from a <see cref="uint" />
    /// </summary>
-   /// <param name="bits">The <see cref="BitMask"/> to use</param>
+   /// <param name="bits">The <see cref="BitMask" /> to use</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public BitMask(uint bits) : this((ulong) bits) { }
+   public BitMask(uint bits)
+      : this((ulong) bits)
+   {
+   }
 
    /// <summary>
-   /// Constructs a <see cref="BitMask"/> from an <see cref="int"/>  
+   /// Constructs a <see cref="BitMask" /> from an <see cref="int" />
    /// </summary>
-   /// <param name="bits">The <see cref="BitMask"/> to use</param>
+   /// <param name="bits">The <see cref="BitMask" /> to use</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public BitMask(int bits) : this((uint) bits) { }
+   public BitMask(int bits)
+      : this((uint) bits)
+   {
+   }
 
    /// <summary>
-   /// Constructs a <see cref="BitMask"/> from a <see cref="ushort"/> 
+   /// Constructs a <see cref="BitMask" /> from a <see cref="ushort" />
    /// </summary>
-   /// <param name="bits">The <see cref="BitMask"/> to use</param>
+   /// <param name="bits">The <see cref="BitMask" /> to use</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public BitMask(ushort bits) : this((ulong) bits) { }
+   public BitMask(ushort bits)
+      : this((ulong) bits)
+   {
+   }
 
    /// <summary>
-   /// Constructs a <see cref="BitMask"/> from a <see cref="short"/>  
+   /// Constructs a <see cref="BitMask" /> from a <see cref="short" />
    /// </summary>
-   /// <param name="bits">The <see cref="BitMask"/> to use</param>
+   /// <param name="bits">The <see cref="BitMask" /> to use</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public BitMask(short bits) : this((ushort) bits) { }
+   public BitMask(short bits)
+      : this((ushort) bits)
+   {
+   }
 
    /// <summary>
-   /// Constructs a <see cref="BitMask"/> from a <see cref="byte"/>  
+   /// Constructs a <see cref="BitMask" /> from a <see cref="byte" />
    /// </summary>
-   /// <param name="bits">The <see cref="BitMask"/> to use</param>
+   /// <param name="bits">The <see cref="BitMask" /> to use</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public BitMask(byte bits) : this((ulong) bits) { }
+   public BitMask(byte bits)
+      : this((ulong) bits)
+   {
+   }
 
    /// <summary>
-   /// Constructs a <see cref="BitMask"/> from an <see cref="sbyte"/>  
+   /// Constructs a <see cref="BitMask" /> from an <see cref="sbyte" />
    /// </summary>
-   /// <param name="bits">The <see cref="BitMask"/> to use</param>
+   /// <param name="bits">The <see cref="BitMask" /> to use</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public BitMask(sbyte bits) : this((byte) bits) { }
+   public BitMask(sbyte bits)
+      : this((byte) bits)
+   {
+   }
 
    #endregion
 
    /// <summary>
-   /// Formats the <see cref="BitMask"/> as a "0b" prefixed string of zeroes and ones.
+   /// Formats the <see cref="BitMask" /> as a "0b" prefixed string of zeroes and ones.
    /// </summary>
    /// <returns>the bits of the mask formatted as 0b0101...1111</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public readonly override string ToString()
    {
       const ulong highBit = (ulong) 1 << 63;
-      var         sb      = new StringBuilder();
-      var         tmp     = Bits;
+      var sb = new StringBuilder();
+      var tmp = Bits;
       sb.Append("0b");
 
       for (var i = 0; i < 64; i++)
       {
-         sb.Append((tmp & highBit) > 0 ? '1' : '0');
+         sb.Append((tmp & highBit) > 0
+                      ? '1'
+                      : '0'
+                  );
          tmp <<= 1;
       }
 
@@ -140,72 +175,62 @@ public readonly struct BitMask
    #region implicit conversion operators.
 
    /// <summary>
-   /// Automatically convert to <see cref="sbyte"/> from a <see cref="BitMask"/>
+   /// Automatically convert to <see cref="sbyte" /> from a <see cref="BitMask" />
    /// </summary>
-   /// <param name="mask">the <see cref="BitMask"/> to convert from.</param>
-   /// <returns>the lowest 8 bits of the mask as a signed <see cref="sbyte"/></returns>
+   /// <param name="mask">the <see cref="BitMask" /> to convert from.</param>
+   /// <returns>the lowest 8 bits of the mask as an <see cref="sbyte" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator sbyte(BitMask mask)
    {
       return (sbyte) (mask.Bits & byte.MaxValue);
-
-      // limit to the lower 8 bits.
    }
 
    /// <summary>
-   /// Automatically convert to <see cref="byte"/> from a <see cref="BitMask"/>
+   /// Automatically convert to <see cref="byte" /> from a <see cref="BitMask" />
    /// </summary>
-   /// <param name="mask">the <see cref="BitMask"/> to convert from.</param>
-   /// <returns>the lowest 8 bits of the mask as a <see cref="byte"/></returns>
+   /// <param name="mask">the <see cref="BitMask" /> to convert from.</param>
+   /// <returns>the lowest 8 bits of the mask as a <see cref="byte" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator byte(BitMask mask)
    {
       return (byte) (mask.Bits & byte.MaxValue);
-
-      // ensure we only return the lower 8 bits
    }
 
    /// <summary>
-   /// Automatically convert to <see cref="short"/> from a <see cref="BitMask"/>
+   /// Automatically convert to <see cref="short" /> from a <see cref="BitMask" />
    /// </summary>
-   /// <param name="mask">the <see cref="BitMask"/> to convert from.</param>
-   /// <returns>the lowest 16 bits of the mask as a <see cref="short"/></returns>
+   /// <param name="mask">the <see cref="BitMask" /> to convert from.</param>
+   /// <returns>the lowest 16 bits of the mask as a <see cref="short" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator short(BitMask mask)
    {
       return (short) (mask.Bits & ushort.MaxValue);
-
-      // limit to the lower 16 bits
    }
 
    /// <summary>
-   /// Automatically convert to <see cref="ushort"/> from a <see cref="BitMask"/>
+   /// Automatically convert to <see cref="ushort" /> from a <see cref="BitMask" />
    /// </summary>
-   /// <param name="mask">the <see cref="BitMask"/> to convert from.</param>
-   /// <returns>the lowest 16 bits of the mask as a <see cref="ushort"/></returns>
+   /// <param name="mask">the <see cref="BitMask" /> to convert from.</param>
+   /// <returns>the lowest 16 bits of the mask as a <see cref="ushort" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator ushort(BitMask mask)
    {
       return (ushort) (mask.Bits & ushort.MaxValue);
-
-      // ensure we only return the lower 16 bits
    }
 
    /// <summary>
-   /// Automatically convert to <see cref="int"/> from a <see cref="BitMask"/>
+   /// Automatically convert to <see cref="int" /> from a <see cref="BitMask" />
    /// </summary>
-   /// <param name="mask">the <see cref="BitMask"/> to convert from.</param>
+   /// <param name="mask">the <see cref="BitMask" /> to convert from.</param>
    /// <returns>the lowest 32 bits of the mask as an int</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator int(BitMask mask)
    {
       return (int) (mask.Bits & uint.MaxValue);
-
-      // limit to the lower 32 bits
    }
 
    /// <summary>
-   /// Automatically convert to <see cref="uint"/> from a <see cref="BitMask"/>
+   /// Automatically convert to <see cref="uint" /> from a <see cref="BitMask" />
    /// </summary>
    /// <param name="mask"></param>
    /// <returns>the lowest 32 bits of the mask as a uint</returns>
@@ -213,89 +238,117 @@ public readonly struct BitMask
    public static implicit operator uint(BitMask mask)
    {
       return (uint) (mask.Bits & uint.MaxValue);
-
-      // ensure we only return the lower 32 bits
    }
 
    /// <summary>
-   /// Automatically convert to <see cref="long"/> from a <see cref="BitMask"/>
+   /// Automatically convert to <see cref="long" /> from a <see cref="BitMask" />
    /// </summary>
-   /// <param name="mask">the <see cref="BitMask"/> to convert from.</param>
-   /// <returns>the bits of the mask as a <see cref="long"/></returns>
+   /// <param name="mask">the <see cref="BitMask" /> to convert from.</param>
+   /// <returns>the bits of the mask as a <see cref="long" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static implicit operator long(BitMask mask) { return (long) mask.Bits; }
+   public static implicit operator long(BitMask mask)
+   {
+      return (long) mask.Bits;
+   }
 
    /// <summary>
-   /// Automatically convert to <see cref="ulong"/> from a <see cref="BitMask"/>
+   /// Automatically convert to <see cref="ulong" /> from a <see cref="BitMask" />
    /// </summary>
-   /// <param name="mask">the <see cref="BitMask"/> to convert from.</param>
-   /// <returns>the bits of the mask as a <see cref="ulong"/></returns>
+   /// <param name="mask">the <see cref="BitMask" /> to convert from.</param>
+   /// <returns>the bits of the mask as a <see cref="ulong" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static implicit operator ulong(BitMask mask) { return mask.Bits; }
+   public static implicit operator ulong(BitMask mask)
+   {
+      return mask.Bits;
+   }
 
    /// <summary>
-   /// Automatically convert to <see cref="BitMask"/> from an <see cref="sbyte"/>
+   /// Automatically convert to <see cref="BitMask" /> from an <see cref="sbyte" />
    /// </summary>
-   /// <param name="bits">the value to convert to a <see cref="BitMask"/></param>
-   /// <returns>the <see cref="BitMask"/> object constructed from the bits</returns>
+   /// <param name="bits">the value to convert to a <see cref="BitMask" /></param>
+   /// <returns>the <see cref="BitMask" /> object constructed from the bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static implicit operator BitMask(sbyte bits) { return new BitMask(bits); }
+   public static implicit operator BitMask(sbyte bits)
+   {
+      return new BitMask(bits);
+   }
 
    /// <summary>
-   /// Automatically convert to <see cref="BitMask"/> from a <see cref="byte"/>
+   /// Automatically convert to <see cref="BitMask" /> from a <see cref="byte" />
    /// </summary>
    /// <param name="bits">the value to convert to a BitMask</param>
-   /// <returns>the <see cref="BitMask"/> object constructed from the bits</returns>
+   /// <returns>the <see cref="BitMask" /> object constructed from the bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static implicit operator BitMask(short bits) { return new BitMask(bits); }
+   public static implicit operator BitMask(short bits)
+   {
+      return new BitMask(bits);
+   }
 
    /// <summary>
-   /// Automatically convert to <see cref="BitMask"/> from an <see cref="int"/>
+   /// Automatically convert to <see cref="BitMask" /> from an <see cref="int" />
    /// </summary>
-   /// <param name="bits">the value to convert to a <see cref="BitMask"/></param>
-   /// <returns>the <see cref="BitMask"/> object constructed from the bits</returns>
+   /// <param name="bits">the value to convert to a <see cref="BitMask" /></param>
+   /// <returns>the <see cref="BitMask" /> object constructed from the bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static implicit operator BitMask(int bits) { return new BitMask(bits); }
+   public static implicit operator BitMask(int bits)
+   {
+      return new BitMask(bits);
+   }
 
    /// <summary>
-   /// Automatically convert to <see cref="BitMask"/> from a <see cref="long"/>
+   /// Automatically convert to <see cref="BitMask" /> from a <see cref="long" />
    /// </summary>
-   /// <param name="bits">the value to convert to a <see cref="BitMask"/></param>
-   /// <returns>the <see cref="BitMask"/> object constructed from the bits</returns>
+   /// <param name="bits">the value to convert to a <see cref="BitMask" /></param>
+   /// <returns>the <see cref="BitMask" /> object constructed from the bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static implicit operator BitMask(long bits) { return new BitMask(bits); }
+   public static implicit operator BitMask(long bits)
+   {
+      return new BitMask(bits);
+   }
 
    /// <summary>
-   /// Automatically convert to <see cref="BitMask"/> from a <see cref="byte"/>
+   /// Automatically convert to <see cref="BitMask" /> from a <see cref="byte" />
    /// </summary>
-   /// <param name="bits">the value to convert to a <see cref="BitMask"/></param>
-   /// <returns>the <see cref="BitMask"/> object constructed from the bits</returns>
+   /// <param name="bits">the value to convert to a <see cref="BitMask" /></param>
+   /// <returns>the <see cref="BitMask" /> object constructed from the bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static implicit operator BitMask(byte bits) { return new BitMask(bits); }
+   public static implicit operator BitMask(byte bits)
+   {
+      return new BitMask(bits);
+   }
 
    /// <summary>
-   /// Automatically convert to <see cref="BitMask"/> from a <see cref="ushort"/>
+   /// Automatically convert to <see cref="BitMask" /> from a <see cref="ushort" />
    /// </summary>
-   /// <param name="bits">the value to convert to a <see cref="BitMask"/></param>
-   /// <returns>the <see cref="BitMask"/> object constructed from the bits</returns>
+   /// <param name="bits">the value to convert to a <see cref="BitMask" /></param>
+   /// <returns>the <see cref="BitMask" /> object constructed from the bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static implicit operator BitMask(ushort bits) { return new BitMask(bits); }
+   public static implicit operator BitMask(ushort bits)
+   {
+      return new BitMask(bits);
+   }
 
    /// <summary>
-   /// Automatically convert to <see cref="BitMask"/> from a <see cref="uint"/>
+   /// Automatically convert to <see cref="BitMask" /> from a <see cref="uint" />
    /// </summary>
-   /// <param name="bits">the value to convert to a <see cref="BitMask"/></param>
-   /// <returns>the <see cref="BitMask"/> object constructed from the bits</returns>
+   /// <param name="bits">the value to convert to a <see cref="BitMask" /></param>
+   /// <returns>the <see cref="BitMask" /> object constructed from the bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static implicit operator BitMask(uint bits) { return new BitMask(bits); }
+   public static implicit operator BitMask(uint bits)
+   {
+      return new BitMask(bits);
+   }
 
    /// <summary>
-   /// Automatically convert to <see cref="BitMask"/> from a <see cref="ulong"/>
+   /// Automatically convert to <see cref="BitMask" /> from a <see cref="ulong" />
    /// </summary>
-   /// <param name="bits">the value to convert to a <see cref="BitMask"/></param>
-   /// <returns>the <see cref="BitMask"/> object constructed from the bits</returns>
+   /// <param name="bits">the value to convert to a <see cref="BitMask" /></param>
+   /// <returns>the <see cref="BitMask" /> object constructed from the bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static implicit operator BitMask(ulong bits) { return new BitMask(bits); }
+   public static implicit operator BitMask(ulong bits)
+   {
+      return new BitMask(bits);
+   }
 
    #endregion
 }

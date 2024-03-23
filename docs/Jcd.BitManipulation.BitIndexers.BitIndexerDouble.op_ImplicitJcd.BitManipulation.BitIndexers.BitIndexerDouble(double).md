@@ -3,9 +3,7 @@
 
 ## BitIndexerDouble.implicit operator BitIndexerDouble(double) Operator
 
-Automatically Convert from a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
-to
-a [BitIndexerDouble](Jcd.BitManipulation.BitIndexers.BitIndexerDouble.md 'Jcd.BitManipulation.BitIndexers.BitIndexerDouble')
+Automatically Convert from a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double') to a [BitIndexerDouble](Jcd.BitManipulation.BitIndexers.BitIndexerDouble.md 'Jcd.BitManipulation.BitIndexers.BitIndexerDouble')
 
 ```csharp
 public static Jcd.BitManipulation.BitIndexers.BitIndexerDouble implicit operator BitIndexerDouble(double bits);
@@ -19,7 +17,5 @@ public static Jcd.BitManipulation.BitIndexers.BitIndexerDouble implicit operator
 the initial value for the indexer's backing store
 
 #### Returns
-
 [BitIndexerDouble](Jcd.BitManipulation.BitIndexers.BitIndexerDouble.md 'Jcd.BitManipulation.BitIndexers.BitIndexerDouble')
-A
-new [BitIndexerDouble](Jcd.BitManipulation.BitIndexers.BitIndexerDouble.md 'Jcd.BitManipulation.BitIndexers.BitIndexerDouble')
+A new [BitIndexerDouble](Jcd.BitManipulation.BitIndexers.BitIndexerDouble.md 'Jcd.BitManipulation.BitIndexers.BitIndexerDouble')

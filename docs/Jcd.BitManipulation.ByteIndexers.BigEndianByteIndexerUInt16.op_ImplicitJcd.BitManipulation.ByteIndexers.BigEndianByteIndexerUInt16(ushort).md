@@ -17,6 +17,5 @@ public static Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt16 implic
 The underlying data type.
 
 #### Returns
-
 [BigEndianByteIndexerUInt16](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt16.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerUInt16')
 A indexer type.

@@ -3,8 +3,7 @@
 
 ## BigEndianByteIndexer.implicit operator BigEndianByteIndexer(float) Operator
 
-Implicitly converts a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single') to
-a [BigEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer').
+Implicitly converts a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single') to a [BigEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer').
 
 ```csharp
 public static Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer implicit operator BigEndianByteIndexer(float data);
@@ -18,6 +17,5 @@ public static Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer implicit ope
 The underlying data type.
 
 #### Returns
-
 [BigEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer')
 A indexer type.

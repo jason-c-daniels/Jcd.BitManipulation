@@ -3,8 +3,7 @@
 
 ## LittleEndianByteIndexerDouble.implicit operator double(LittleEndianByteIndexerDouble) Operator
 
-Converts the [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') indexer to its
-underlying data type.
+Converts the [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') indexer to its underlying data type.
 
 ```csharp
 public static double implicit operator double(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerDouble indexer);
@@ -18,6 +17,5 @@ public static double implicit operator double(Jcd.BitManipulation.ByteIndexers.L
 The indexer to convert.
 
 #### Returns
-
 [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 The raw data.

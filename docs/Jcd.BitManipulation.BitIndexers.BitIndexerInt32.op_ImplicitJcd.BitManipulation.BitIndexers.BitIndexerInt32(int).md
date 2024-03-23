@@ -3,8 +3,7 @@
 
 ## BitIndexerInt32.implicit operator BitIndexerInt32(int) Operator
 
-Automatically Convert from an [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32') to
-a [BitIndexerInt32](Jcd.BitManipulation.BitIndexers.BitIndexerInt32.md 'Jcd.BitManipulation.BitIndexers.BitIndexerInt32')
+Automatically Convert from an [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32') to a [BitIndexerInt32](Jcd.BitManipulation.BitIndexers.BitIndexerInt32.md 'Jcd.BitManipulation.BitIndexers.BitIndexerInt32')
 
 ```csharp
 public static Jcd.BitManipulation.BitIndexers.BitIndexerInt32 implicit operator BitIndexerInt32(int bits);
@@ -18,7 +17,5 @@ public static Jcd.BitManipulation.BitIndexers.BitIndexerInt32 implicit operator 
 the initial value for the indexer's backing store
 
 #### Returns
-
 [BitIndexerInt32](Jcd.BitManipulation.BitIndexers.BitIndexerInt32.md 'Jcd.BitManipulation.BitIndexers.BitIndexerInt32')
-A
-new [BitIndexerInt32](Jcd.BitManipulation.BitIndexers.BitIndexerInt32.md 'Jcd.BitManipulation.BitIndexers.BitIndexerInt32')
+A new [BitIndexerInt32](Jcd.BitManipulation.BitIndexers.BitIndexerInt32.md 'Jcd.BitManipulation.BitIndexers.BitIndexerInt32')

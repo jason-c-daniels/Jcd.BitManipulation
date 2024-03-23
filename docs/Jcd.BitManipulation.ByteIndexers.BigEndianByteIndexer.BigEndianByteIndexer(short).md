@@ -3,9 +3,7 @@
 
 ## BigEndianByteIndexer(short) Constructor
 
-Constructs
-a [BigEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer')
-from an [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16').
+Constructs a [BigEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer') from an [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16').
 
 ```csharp
 private BigEndianByteIndexer(short data);

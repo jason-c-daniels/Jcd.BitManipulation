@@ -29,6 +29,5 @@ The offset of where to begin clearing bits.
 The number of bits to clear.
 
 #### Returns
-
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 The modified value.

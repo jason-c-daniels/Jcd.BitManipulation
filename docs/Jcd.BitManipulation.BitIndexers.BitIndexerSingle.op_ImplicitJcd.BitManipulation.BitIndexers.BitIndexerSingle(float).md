@@ -3,9 +3,7 @@
 
 ## BitIndexerSingle.implicit operator BitIndexerSingle(float) Operator
 
-Automatically Convert from a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
-to
-a [BitIndexerSingle](Jcd.BitManipulation.BitIndexers.BitIndexerSingle.md 'Jcd.BitManipulation.BitIndexers.BitIndexerSingle')
+Automatically Convert from a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single') to a [BitIndexerSingle](Jcd.BitManipulation.BitIndexers.BitIndexerSingle.md 'Jcd.BitManipulation.BitIndexers.BitIndexerSingle')
 
 ```csharp
 public static Jcd.BitManipulation.BitIndexers.BitIndexerSingle implicit operator BitIndexerSingle(float bits);
@@ -19,7 +17,5 @@ public static Jcd.BitManipulation.BitIndexers.BitIndexerSingle implicit operator
 the initial value for the indexer's backing store
 
 #### Returns
-
 [BitIndexerSingle](Jcd.BitManipulation.BitIndexers.BitIndexerSingle.md 'Jcd.BitManipulation.BitIndexers.BitIndexerSingle')
-A
-new [BitIndexerSingle](Jcd.BitManipulation.BitIndexers.BitIndexerSingle.md 'Jcd.BitManipulation.BitIndexers.BitIndexerSingle')
+A new [BitIndexerSingle](Jcd.BitManipulation.BitIndexers.BitIndexerSingle.md 'Jcd.BitManipulation.BitIndexers.BitIndexerSingle')

@@ -3,8 +3,7 @@
 
 ## LittleEndianByteIndexerSingle.implicit operator float(LittleEndianByteIndexerSingle) Operator
 
-Converts the [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') indexer to its
-underlying data type.
+Converts the [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') indexer to its underlying data type.
 
 ```csharp
 public static float implicit operator float(Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerSingle buffer);
@@ -18,6 +17,5 @@ public static float implicit operator float(Jcd.BitManipulation.ByteIndexers.Lit
 The buffer to convert.
 
 #### Returns
-
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 The raw data.

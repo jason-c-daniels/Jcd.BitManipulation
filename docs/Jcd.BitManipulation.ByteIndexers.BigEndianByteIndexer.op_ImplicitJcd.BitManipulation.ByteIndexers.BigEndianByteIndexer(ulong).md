@@ -3,8 +3,7 @@
 
 ## BigEndianByteIndexer.implicit operator BigEndianByteIndexer(ulong) Operator
 
-Implicitly converts a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') to
-a [BigEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer').
+Implicitly converts a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') to a [BigEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer').
 
 ```csharp
 public static Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer implicit operator BigEndianByteIndexer(ulong data);
@@ -18,6 +17,5 @@ public static Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer implicit ope
 The underlying data type.
 
 #### Returns
-
 [BigEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer')
 A indexer type.

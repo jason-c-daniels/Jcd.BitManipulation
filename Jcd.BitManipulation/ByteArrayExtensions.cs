@@ -59,8 +59,8 @@ public static class ByteArrayExtensions
    public static byte[] ToByteArray(this ushort data, Endian endian = Endian.Little)
    {
       return endian == Endian.Big
-                ? new BigEndianByteIndexerUInt16 { Data = data }[0..^0]
-                : new LittleEndianByteIndexerUInt16 { Data = data }[0..^0];
+                ? ((BigEndianByteIndexer) data)[0..^0]
+                : ((LittleEndianByteIndexer) data)[0..^0];
    }
 
    /// <summary>
@@ -73,8 +73,8 @@ public static class ByteArrayExtensions
    public static byte[] ToByteArray(this short data, Endian endian = Endian.Little)
    {
       return endian == Endian.Big
-                ? new BigEndianByteIndexerInt16 { Data = data }[0..^0]
-                : new LittleEndianByteIndexerInt16 { Data = data }[0..^0];
+                ? ((BigEndianByteIndexer) data)[0..^0]
+                : ((LittleEndianByteIndexer) data)[0..^0];
    }
 
    /// <summary>
@@ -87,8 +87,8 @@ public static class ByteArrayExtensions
    public static byte[] ToByteArray(this uint data, Endian endian = Endian.Little)
    {
       return endian == Endian.Big
-                ? new BigEndianByteIndexerUInt32 { Data = data }[0..^0]
-                : new LittleEndianByteIndexerUInt32 { Data = data }[0..^0];
+                ? ((BigEndianByteIndexer) data)[0..^0]
+                : ((LittleEndianByteIndexer) data)[0..^0];
    }
 
    /// <summary>
@@ -101,8 +101,8 @@ public static class ByteArrayExtensions
    public static byte[] ToByteArray(this int data, Endian endian = Endian.Little)
    {
       return endian == Endian.Big
-                ? new BigEndianByteIndexerInt32 { Data = data }[0..^0]
-                : new LittleEndianByteIndexerInt32 { Data = data }[0..^0];
+                ? ((BigEndianByteIndexer) data)[0..^0]
+                : ((LittleEndianByteIndexer) data)[0..^0];
    }
 
    /// <summary>
@@ -115,8 +115,8 @@ public static class ByteArrayExtensions
    public static byte[] ToByteArray(this ulong data, Endian endian = Endian.Little)
    {
       return endian == Endian.Big
-                ? new BigEndianByteIndexerUInt64 { Data = data }[0..^0]
-                : new LittleEndianByteIndexerUInt64 { Data = data }[0..^0];
+                ? ((BigEndianByteIndexer) data)[0..^0]
+                : ((LittleEndianByteIndexer) data)[0..^0];
    }
 
    /// <summary>
@@ -129,8 +129,8 @@ public static class ByteArrayExtensions
    public static byte[] ToByteArray(this long data, Endian endian = Endian.Little)
    {
       return endian == Endian.Big
-                ? new BigEndianByteIndexerInt64 { Data = data }[0..^0]
-                : new LittleEndianByteIndexerInt64 { Data = data }[0..^0];
+                ? ((BigEndianByteIndexer) data)[0..^0]
+                : ((LittleEndianByteIndexer) data)[0..^0];
    }
 
    /// <summary>

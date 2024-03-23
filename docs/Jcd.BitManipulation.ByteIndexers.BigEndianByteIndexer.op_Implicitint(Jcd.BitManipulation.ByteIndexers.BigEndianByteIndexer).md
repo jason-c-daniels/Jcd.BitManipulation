@@ -3,9 +3,7 @@
 
 ## BigEndianByteIndexer.implicit operator int(BigEndianByteIndexer) Operator
 
-Implicitly converts
-the [BigEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer')
-to a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64').
+Implicitly converts the [BigEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer') to a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64').
 
 ```csharp
 public static int implicit operator int(Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer indexer);
@@ -19,6 +17,5 @@ public static int implicit operator int(Jcd.BitManipulation.ByteIndexers.BigEndi
 The indexer to convert.
 
 #### Returns
-
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 The raw data.

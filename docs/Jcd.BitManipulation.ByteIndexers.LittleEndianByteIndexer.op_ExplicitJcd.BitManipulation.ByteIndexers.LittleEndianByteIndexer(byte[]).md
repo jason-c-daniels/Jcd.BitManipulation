@@ -3,8 +3,7 @@
 
 ## LittleEndianByteIndexer.explicit operator LittleEndianByteIndexer(byte[]) Operator
 
-Explicitly converts an array of bytes to
-a [LittleEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer').
+Explicitly converts an array of  bytes to a [LittleEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer').
 
 ```csharp
 public static Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer explicit operator LittleEndianByteIndexer(byte[] data);
@@ -18,6 +17,5 @@ public static Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer explicit 
 The underlying data type.
 
 #### Returns
-
 [LittleEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer')
 A indexer type.

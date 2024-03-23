@@ -17,6 +17,5 @@ public static long implicit operator long(Jcd.BitManipulation.ByteIndexers.Littl
 The buffer to convert.
 
 #### Returns
-
 [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 The raw data.

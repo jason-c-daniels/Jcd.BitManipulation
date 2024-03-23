@@ -17,6 +17,5 @@ public static Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerDouble imp
 The underlying data type.
 
 #### Returns
-
 [LittleEndianByteIndexerDouble](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerDouble.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerDouble')
 A indexer type.

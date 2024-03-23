@@ -3,8 +3,7 @@
 
 ## LittleEndianByteIndexer.implicit operator LittleEndianByteIndexer(double) Operator
 
-Implicitly converts a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double') to
-a [LittleEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer').
+Implicitly converts a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double') to a [LittleEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer').
 
 ```csharp
 public static Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer implicit operator LittleEndianByteIndexer(double data);
@@ -18,6 +17,5 @@ public static Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer implicit 
 The underlying data type.
 
 #### Returns
-
 [LittleEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer')
 A indexer type.

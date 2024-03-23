@@ -3,9 +3,7 @@
 
 ## BigEndianByteIndexer.explicit operator byte[](BigEndianByteIndexer) Operator
 
-Explicitly converts
-the [BigEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer')
-to an array of bytes.
+Explicitly converts the [BigEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer') to an array of bytes.
 
 ```csharp
 public static byte[] explicit operator byte[](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer indexer);
@@ -19,6 +17,5 @@ public static byte[] explicit operator byte[](Jcd.BitManipulation.ByteIndexers.B
 The indexer to convert.
 
 #### Returns
-
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 The raw data converted to an array, serialized as big endian.

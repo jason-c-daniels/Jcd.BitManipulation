@@ -25,6 +25,5 @@ The number of bits to extract
 Implements [Slice(int, int)](Jcd.BitManipulation.ByteIndexers.IByteIndexer.Slice(int,int).md 'Jcd.BitManipulation.ByteIndexers.IByteIndexer.Slice(int, int)')
 
 #### Returns
-
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 an array of bytes for the specified subset

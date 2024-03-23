@@ -3,9 +3,7 @@
 
 ## BitIndexerSingle.implicit operator float(BitIndexerSingle) Operator
 
-Automatically convert from
-a [BitIndexerSingle](Jcd.BitManipulation.BitIndexers.BitIndexerSingle.md 'Jcd.BitManipulation.BitIndexers.BitIndexerSingle')
-to a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
+Automatically convert from a [BitIndexerSingle](Jcd.BitManipulation.BitIndexers.BitIndexerSingle.md 'Jcd.BitManipulation.BitIndexers.BitIndexerSingle') to a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
 ```csharp
 public static float implicit operator float(Jcd.BitManipulation.BitIndexers.BitIndexerSingle indexer);
@@ -19,6 +17,5 @@ public static float implicit operator float(Jcd.BitManipulation.BitIndexers.BitI
 the indexer to convert from
 
 #### Returns
-
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 the [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')

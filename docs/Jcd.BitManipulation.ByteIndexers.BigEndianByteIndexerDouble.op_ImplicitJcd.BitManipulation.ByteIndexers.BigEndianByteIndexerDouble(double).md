@@ -17,6 +17,5 @@ public static Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerDouble implic
 The underlying data type.
 
 #### Returns
-
 [BigEndianByteIndexerDouble](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerDouble.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexerDouble')
 A indexer type.

@@ -35,6 +35,5 @@ The bit location to store the value.
 The bit size of the value.
 
 #### Returns
-
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 The modified value.

@@ -3,8 +3,7 @@
 
 ## BitIndexerByte Struct
 
-Provides enumeration and indexed access to the bits on a
-stored [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte').
+Provides enumeration and indexed access to the bits on a stored [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte').
 
 ```csharp
 public struct BitIndexerByte :
@@ -19,10 +18,10 @@ Implements [IBitIndexer](Jcd.BitManipulation.BitIndexers.IBitIndexer.md 'Jcd.Bit
 | :--- | :--- |
 | [BitSize](Jcd.BitManipulation.BitIndexers.BitIndexerByte.BitSize.md 'Jcd.BitManipulation.BitIndexers.BitIndexerByte.BitSize') | The number of bits this type will index |
 
-| Properties                                                                                                                          |                                                        |
-|:------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------|
-| [Bits](Jcd.BitManipulation.BitIndexers.BitIndexerByte.Bits.md 'Jcd.BitManipulation.BitIndexers.BitIndexerByte.Bits')                | The backing store                                      |
-| [Length](Jcd.BitManipulation.BitIndexers.BitIndexerByte.Length.md 'Jcd.BitManipulation.BitIndexers.BitIndexerByte.Length')          | The number of bits indexable by this indexer.          |
+| Properties | |
+| :--- | :--- |
+| [Bits](Jcd.BitManipulation.BitIndexers.BitIndexerByte.Bits.md 'Jcd.BitManipulation.BitIndexers.BitIndexerByte.Bits') | The backing store |
+| [Length](Jcd.BitManipulation.BitIndexers.BitIndexerByte.Length.md 'Jcd.BitManipulation.BitIndexers.BitIndexerByte.Length') | The number of bits indexable by this indexer. |
 | [this[int]](Jcd.BitManipulation.BitIndexers.BitIndexerByte.this[int].md 'Jcd.BitManipulation.BitIndexers.BitIndexerByte.this[int]') | Gets or sets individual bits within the backing store. |
 
 | Methods | |
@@ -31,9 +30,9 @@ Implements [IBitIndexer](Jcd.BitManipulation.BitIndexers.IBitIndexer.md 'Jcd.Bit
 | [Slice(int, int)](Jcd.BitManipulation.BitIndexers.BitIndexerByte.Slice(int,int).md 'Jcd.BitManipulation.BitIndexers.BitIndexerByte.Slice(int, int)') | Gets a subset of bits given a starting offset and length. |
 | [ToString()](Jcd.BitManipulation.BitIndexers.BitIndexerByte.ToString().md 'Jcd.BitManipulation.BitIndexers.BitIndexerByte.ToString()') | Format as a bit representation |
 
-| Operators                                                                                                                                                                                                                                                                     |                                                                                                                                                                                                                                             |
-|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [implicit operator byte(BitIndexerByte)](Jcd.BitManipulation.BitIndexers.BitIndexerByte.op_Implicitbyte(Jcd.BitManipulation.BitIndexers.BitIndexerByte).md 'Jcd.BitManipulation.BitIndexers.BitIndexerByte.op_Implicit byte(Jcd.BitManipulation.BitIndexers.BitIndexerByte)') | Automatically convert from a BitIndexerByte to a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')                                                                                                       |
+| Operators | |
+| :--- | :--- |
+| [implicit operator byte(BitIndexerByte)](Jcd.BitManipulation.BitIndexers.BitIndexerByte.op_Implicitbyte(Jcd.BitManipulation.BitIndexers.BitIndexerByte).md 'Jcd.BitManipulation.BitIndexers.BitIndexerByte.op_Implicit byte(Jcd.BitManipulation.BitIndexers.BitIndexerByte)') | Automatically convert from a BitIndexerByte to a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') |
 | [implicit operator BitIndexerByte(byte)](Jcd.BitManipulation.BitIndexers.BitIndexerByte.op_ImplicitJcd.BitManipulation.BitIndexers.BitIndexerByte(byte).md 'Jcd.BitManipulation.BitIndexers.BitIndexerByte.op_Implicit Jcd.BitManipulation.BitIndexers.BitIndexerByte(byte)') | Automatically Convert from a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') to a [BitIndexerByte](Jcd.BitManipulation.BitIndexers.BitIndexerByte.md 'Jcd.BitManipulation.BitIndexers.BitIndexerByte') |
 
 | Explicit Interface Implementations | |

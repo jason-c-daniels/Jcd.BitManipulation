@@ -3,8 +3,7 @@
 
 ## LittleEndianByteIndexer.implicit operator LittleEndianByteIndexer(sbyte) Operator
 
-Implicitly converts an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte') to
-a [LittleEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer').
+Implicitly converts an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte') to a [LittleEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer').
 
 ```csharp
 public static Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer implicit operator LittleEndianByteIndexer(sbyte data);
@@ -18,6 +17,5 @@ public static Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer implicit 
 The underlying data type.
 
 #### Returns
-
 [LittleEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer')
 A indexer type.

@@ -3,9 +3,7 @@
 
 ## LittleEndianByteIndexer.explicit operator byte[](LittleEndianByteIndexer) Operator
 
-Explicitly converts
-the [LittleEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer')
-to an array of bytes.
+Explicitly converts the [LittleEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer') to an array of bytes.
 
 ```csharp
 public static byte[] explicit operator byte[](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer indexer);
@@ -19,6 +17,5 @@ public static byte[] explicit operator byte[](Jcd.BitManipulation.ByteIndexers.L
 The indexer to convert.
 
 #### Returns
-
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 The raw data converted to an array, serialized as big endian.

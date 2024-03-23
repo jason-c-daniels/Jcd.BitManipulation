@@ -3,9 +3,7 @@
 
 ## LittleEndianByteIndexer() Constructor
 
-Constructs a 64
-bit [LittleEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer')
-defaulted to 0.
+Constructs a 64 bit [LittleEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer') defaulted to 0.
 
 ```csharp
 public LittleEndianByteIndexer();

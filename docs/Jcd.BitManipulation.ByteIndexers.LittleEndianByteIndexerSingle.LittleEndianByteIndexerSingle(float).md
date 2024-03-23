@@ -3,9 +3,7 @@
 
 ## LittleEndianByteIndexerSingle(float) Constructor
 
-Constructs
-a [LittleEndianByteIndexerSingle](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerSingle.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerSingle')
-from a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single').
+Constructs a [LittleEndianByteIndexerSingle](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerSingle.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexerSingle') from a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single').
 
 ```csharp
 public LittleEndianByteIndexerSingle(float data=0f);

@@ -3,9 +3,7 @@
 
 ## BigEndianByteIndexer() Constructor
 
-Constructs a 64
-bit [BigEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer')
-defaulted to 0.
+Constructs a 64 bit [BigEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer') defaulted to 0.
 
 ```csharp
 public BigEndianByteIndexer();

@@ -16,6 +16,5 @@ public static Jcd.BitManipulation.LittleEndianByteIndexerInt64 implicit operator
 The underlying data type.
 
 #### Returns
-
 [LittleEndianByteIndexerInt64](Jcd.BitManipulation.LittleEndianByteIndexerInt64.md 'Jcd.BitManipulation.LittleEndianByteIndexerInt64')
 A buffer type.

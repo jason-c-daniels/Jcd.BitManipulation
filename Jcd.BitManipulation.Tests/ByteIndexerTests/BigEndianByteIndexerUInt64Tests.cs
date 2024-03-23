@@ -18,13 +18,10 @@ namespace Jcd.BitManipulation.Tests.ByteIndexerTests;
 public class BigEndianByteIndexerUInt64Tests
 {
    [Fact]
-   public void Constant_ByteSize_Is_Two() { Assert.Equal(sizeof(long), BigEndianByteIndexerUInt64.ByteSize); }
-
-   [Fact]
-   public void Length_Is_BitSize()
+   public void Length_Is_SizeOf_UInt64()
    {
       BigEndianByteIndexerUInt64 sut = 0;
-      Assert.Equal(BigEndianByteIndexerUInt64.ByteSize, sut.Length);
+      Assert.Equal(sizeof(ulong), sut.Length);
    }
 
    [Theory]
@@ -33,9 +30,9 @@ public class BigEndianByteIndexerUInt64Tests
    [InlineData(0x337F)]
    public void Implicit_Conversion_Operators_Round_Trip_Returns_Original_Value(ulong data)
    {
-      var                        expected      = data;
-      BigEndianByteIndexerUInt64 sut           = expected;
-      ulong                      convertedBack = sut;
+      var expected = data;
+      BigEndianByteIndexerUInt64 sut = expected;
+      ulong convertedBack = sut;
       Assert.Equal(expected, convertedBack);
    }
 
@@ -50,8 +47,8 @@ public class BigEndianByteIndexerUInt64Tests
    [InlineData(0xFFFFFFFFFFFFFF05, 7, 0x05)]
    public void Indexer_Get_Returns_Expected_Value(ulong data, int index, ulong extractedData)
    {
-      var                        expected = extractedData;
-      BigEndianByteIndexerUInt64 sut      = data;
+      var expected = extractedData;
+      BigEndianByteIndexerUInt64 sut = data;
       Assert.Equal(expected, sut[index]);
    }
 
@@ -73,7 +70,7 @@ public class BigEndianByteIndexerUInt64Tests
 
    [Theory]
    [InlineData(-1)]
-   [InlineData(BigEndianByteIndexerUInt64.ByteSize)]
+   [InlineData(sizeof(ulong))]
    public void Indexer_Get_Throws_Exception_When_Index_Is_Out_Of_Range(int index)
    {
       BigEndianByteIndexerUInt64 sut = 0xFF;
@@ -82,7 +79,7 @@ public class BigEndianByteIndexerUInt64Tests
 
    [Theory]
    [InlineData(-1)]
-   [InlineData(BigEndianByteIndexerUInt64.ByteSize)]
+   [InlineData(sizeof(ulong))]
    public void Indexer_Set_Throws_Exception_When_Index_Is_Out_Of_Range(int index)
    {
       BigEndianByteIndexerUInt64 sut = 0xFF;
@@ -91,115 +88,35 @@ public class BigEndianByteIndexerUInt64Tests
 
    [Theory]
    [InlineData(0xFF01010100000000, 0, 1, 1, 0xFF)]
-   [InlineData(0xFE02020100000000
-             , 0
-             , 2
-             , 2
-             , 0xFE
-             , 0x02
-              )]
-   [InlineData(0x7F03020100000000
-             , 0
-             , 3
-             , 3
-             , 0x7F
-             , 0x03
-             , 0x02
-              )]
-   [InlineData(0xFF01020300000000
-             , 0
-             , 4
-             , 4
-             , 0xFF
-             , 0x01
-             , 0x02
-             , 0x03
-              )]
-   [InlineData(0xFF01020304050607
-             , 0
-             , 5
-             , 5
-             , 0xFF
-             , 0x01
-             , 0x02
-             , 0x03
-             , 0x04
-              )]
-   [InlineData(0xFF01020304050607
-             , 0
-             , 6
-             , 6
-             , 0xFF
-             , 0x01
-             , 0x02
-             , 0x03
-             , 0x04
-             , 0x05
-              )]
-   [InlineData(0xFF01020304050607
-             , 0
-             , 7
-             , 7
-             , 0xFF
-             , 0x01
-             , 0x02
-             , 0x03
-             , 0x04
-             , 0x05
-             , 0x06
-              )]
-   [InlineData(0xFF01020304050607
-             , 0
-             , 8
-             , 8
-             , 0xFF
-             , 0x01
-             , 0x02
-             , 0x03
-             , 0x04
-             , 0x05
-             , 0x06
-             , 0x07
-              )]
-   [InlineData(0xFE02030400000000
-             , 1
-             , 3
-             , 3
-             , 0x02
-             , 0x03
-             , 0x04
-              )]
-   [InlineData(0x0807060500000000
-             , 2
-             , 2
-             , 2
-             , 0x06
-             , 0x05
-              )]
+   [InlineData(0xFE02020100000000, 0, 2, 2, 0xFE, 0x02)]
+   [InlineData(0x7F03020100000000, 0, 3, 3, 0x7F, 0x03, 0x02)]
+   [InlineData(0xFF01020300000000, 0, 4, 4, 0xFF, 0x01, 0x02, 0x03)]
+   [InlineData(0xFF01020304050607, 0, 5, 5, 0xFF, 0x01, 0x02, 0x03, 0x04)]
+   [InlineData(0xFF01020304050607, 0, 6, 6, 0xFF, 0x01, 0x02, 0x03, 0x04, 0x05)]
+   [InlineData(0xFF01020304050607, 0, 7, 7, 0xFF, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06)]
+   [InlineData(0xFF01020304050607, 0, 8, 8, 0xFF, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07)]
+   [InlineData(0xFE02030400000000, 1, 3, 3, 0x02, 0x03, 0x04)]
+   [InlineData(0x0807060500000000, 2, 2, 2, 0x06, 0x05)]
    [InlineData(0x0807060F00000000, 3, 1, 1, 0x0F)]
    public void Slice_Returns_Expected_Subset(
-      ulong data
-    , int   index
-    , int   size
-    , int   expectedSize
-    , byte  e0
-    , byte  e1 = 0
-    , byte  e2 = 0
-    , byte  e3 = 0
-    , byte  e4 = 0
-    , byte  e5 = 0
-    , byte  e6 = 0
-    , byte  e7 = 0
+      ulong data, int index, int size, int expectedSize, byte e0, byte e1 = 0, byte e2 = 0, byte e3 = 0, byte e4 = 0, byte e5 = 0, byte e6 = 0, byte e7 = 0
    )
    {
       var expected = new List<byte>(new[] { e0 });
-      if (expectedSize >= 2) expected.Add(e1);
-      if (expectedSize >= 3) expected.Add(e2);
-      if (expectedSize >= 4) expected.Add(e3);
-      if (expectedSize >= 5) expected.Add(e4);
-      if (expectedSize >= 6) expected.Add(e5);
-      if (expectedSize >= 7) expected.Add(e6);
-      if (expectedSize == 8) expected.Add(e7);
+      if (expectedSize >= 2)
+         expected.Add(e1);
+      if (expectedSize >= 3)
+         expected.Add(e2);
+      if (expectedSize >= 4)
+         expected.Add(e3);
+      if (expectedSize >= 5)
+         expected.Add(e4);
+      if (expectedSize >= 6)
+         expected.Add(e5);
+      if (expectedSize >= 7)
+         expected.Add(e6);
+      if (expectedSize == 8)
+         expected.Add(e7);
 
       BigEndianByteIndexerUInt64 sut = data;
 

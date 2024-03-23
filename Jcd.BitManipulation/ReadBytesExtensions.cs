@@ -370,4 +370,156 @@ public static class ReadBytesExtensions
    }
 
    #endregion
+
+   #region LittleEndianByteIndexer - Single Byte Operations
+
+   /// <summary>
+   /// Read a single byte from the value at the specified byte offset.
+   /// </summary>
+   /// <param name="value">The value to be read.</param>
+   /// <param name="offset">the offset of the byte to write</param>
+   /// <returns>The specified byte.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static byte ReadByte(this LittleEndianByteIndexerUInt16 value, int offset)
+   {
+      return value[offset];
+   }
+
+   /// <summary>
+   /// Read a single byte from the value at the specified byte offset.
+   /// </summary>
+   /// <param name="value">The value to be read.</param>
+   /// <param name="offset">the offset of the byte to write</param>
+   /// <returns>The specified byte.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static byte ReadByte(this LittleEndianByteIndexerInt16 value, int offset)
+   {
+      return value[offset];
+   }
+
+   /// <summary>
+   /// Read a single byte from the value at the specified byte offset.
+   /// </summary>
+   /// <param name="value">The value to be read.</param>
+   /// <param name="offset">the offset of the byte to write</param>
+   /// <returns>The specified byte.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static byte ReadByte(this LittleEndianByteIndexerUInt32 value, int offset)
+   {
+      return value[offset];
+   }
+
+   /// <summary>
+   /// Read a single byte from the value at the specified byte offset.
+   /// </summary>
+   /// <param name="value">The value to be read.</param>
+   /// <param name="offset">the offset of the byte to write</param>
+   /// <returns>The specified byte.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static byte ReadByte(this LittleEndianByteIndexerInt32 value, int offset)
+   {
+      return value[offset];
+   }
+
+   /// <summary>
+   /// Read a single byte from the value at the specified byte offset.
+   /// </summary>
+   /// <param name="value">The value to be read.</param>
+   /// <param name="offset">the offset of the byte to write</param>
+   /// <returns>The specified byte.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static byte ReadByte(this LittleEndianByteIndexerInt64 value, int offset)
+   {
+      return value[offset];
+   }
+
+   /// <summary>
+   /// Read a single byte from the value at the specified byte offset.
+   /// </summary>
+   /// <param name="value">The value to be read.</param>
+   /// <param name="offset">the offset of the byte to write</param>
+   /// <returns>The specified byte.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static byte ReadByte(this LittleEndianByteIndexerUInt64 value, int offset)
+   {
+      return value[offset];
+   }
+
+   #endregion
+
+   #region BigEndianByteIndexer - Single Byte Operations
+
+   /// <summary>
+   /// Read a single byte from the value at the specified byte offset.
+   /// </summary>
+   /// <param name="value">The value to be read.</param>
+   /// <param name="offset">the offset of the byte to write</param>
+   /// <returns>The specified byte.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static byte ReadByte(this BigEndianByteIndexerUInt16 value, int offset)
+   {
+      return value[offset];
+   }
+
+   /// <summary>
+   /// Read a single byte from the value at the specified byte offset.
+   /// </summary>
+   /// <param name="value">The value to be read.</param>
+   /// <param name="offset">the offset of the byte to write</param>
+   /// <returns>The specified byte.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static byte ReadByte(this BigEndianByteIndexerInt16 value, int offset)
+   {
+      return value[offset];
+   }
+
+   /// <summary>
+   /// Read a single byte from the value at the specified byte offset.
+   /// </summary>
+   /// <param name="value">The value to be read.</param>
+   /// <param name="offset">the offset of the byte to write</param>
+   /// <returns>The specified byte.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static byte ReadByte(this BigEndianByteIndexerUInt32 value, int offset)
+   {
+      return value[offset];
+   }
+
+   /// <summary>
+   /// Read a single byte from the value at the specified byte offset.
+   /// </summary>
+   /// <param name="value">The value to be read.</param>
+   /// <param name="offset">the offset of the byte to write</param>
+   /// <returns>The specified byte.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static byte ReadByte(this BigEndianByteIndexerInt32 value, int offset)
+   {
+      return value[offset];
+   }
+
+   /// <summary>
+   /// Read a single byte from the value at the specified byte offset.
+   /// </summary>
+   /// <param name="value">The value to be read.</param>
+   /// <param name="offset">the offset of the byte to write</param>
+   /// <returns>The specified byte.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static byte ReadByte(this BigEndianByteIndexerInt64 value, int offset)
+   {
+      return value[offset];
+   }
+
+   /// <summary>
+   /// Read a single byte from the value at the specified byte offset.
+   /// </summary>
+   /// <param name="value">The value to be read.</param>
+   /// <param name="offset">the offset of the byte to write</param>
+   /// <returns>The specified byte.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static byte ReadByte(this BigEndianByteIndexerUInt64 value, int offset)
+   {
+      return value[offset];
+   }
+
+   #endregion
 }

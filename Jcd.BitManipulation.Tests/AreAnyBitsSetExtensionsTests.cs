@@ -1,4 +1,8 @@
+#region
+
 using Xunit;
+
+#endregion
 
 namespace Jcd.BitManipulation.Tests;
 

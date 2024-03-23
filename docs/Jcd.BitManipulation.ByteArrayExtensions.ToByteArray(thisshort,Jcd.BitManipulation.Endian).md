@@ -22,6 +22,5 @@ the [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'Sys
 The order in which to store the bytes
 
 #### Returns
-
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 The value as an array in the requested byte order

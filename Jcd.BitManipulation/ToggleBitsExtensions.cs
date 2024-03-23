@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// Extension methods to aid in toggling bits. 
+/// Extension methods to aid in toggling bits.
 /// </summary>
 public static class ToggleBitsExtensions
 {
@@ -15,7 +15,7 @@ public static class ToggleBitsExtensions
 
    /// <summary>
    /// Toggles bits and size.
-   /// The default values result in toggling all bits. 
+   /// The default values result in toggling all bits.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The offset of the bits to toggle.</param>
@@ -28,8 +28,8 @@ public static class ToggleBitsExtensions
    }
 
    /// <summary>
-   /// Toggles bits and size. 
-   /// The default values result in toggling all bits. 
+   /// Toggles bits and size.
+   /// The default values result in toggling all bits.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The offset of the bits to toggle.</param>
@@ -42,8 +42,8 @@ public static class ToggleBitsExtensions
    }
 
    /// <summary>
-   /// Toggles bits and size. 
-   /// The default values result in toggling all bits. 
+   /// Toggles bits and size.
+   /// The default values result in toggling all bits.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The offset of the bits to toggle.</param>
@@ -56,8 +56,8 @@ public static class ToggleBitsExtensions
    }
 
    /// <summary>
-   /// Toggles bits and size. 
-   /// The default values result in toggling all bits. 
+   /// Toggles bits and size.
+   /// The default values result in toggling all bits.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The offset of the bits to toggle.</param>
@@ -70,8 +70,8 @@ public static class ToggleBitsExtensions
    }
 
    /// <summary>
-   /// Toggles bits and size. 
-   /// The default values result in toggling all bits. 
+   /// Toggles bits and size.
+   /// The default values result in toggling all bits.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The offset of the bits to toggle.</param>
@@ -84,8 +84,8 @@ public static class ToggleBitsExtensions
    }
 
    /// <summary>
-   /// Toggles bits and size. 
-   /// The default values result in toggling all bits. 
+   /// Toggles bits and size.
+   /// The default values result in toggling all bits.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The offset of the bits to toggle.</param>
@@ -98,8 +98,8 @@ public static class ToggleBitsExtensions
    }
 
    /// <summary>
-   /// Toggles bits and size. 
-   /// The default values result in toggling all bits. 
+   /// Toggles bits and size.
+   /// The default values result in toggling all bits.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The offset of the bits to toggle.</param>
@@ -112,8 +112,8 @@ public static class ToggleBitsExtensions
    }
 
    /// <summary>
-   /// Toggles bits and size. 
-   /// The default values result in toggling all bits. 
+   /// Toggles bits and size.
+   /// The default values result in toggling all bits.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="offset">The offset of the bits to toggle.</param>
@@ -160,7 +160,10 @@ public static class ToggleBitsExtensions
    /// <param name="offset">The bit location to toggle.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static int ToggleBit(this int value, int offset) { return value.ToggleBits(BitMask.FromSingleBit(offset)); }
+   public static int ToggleBit(this int value, int offset)
+   {
+      return value.ToggleBits(BitMask.FromSingleBit(offset));
+   }
 
    /// <summary>
    /// Toggles a bit.
@@ -169,7 +172,10 @@ public static class ToggleBitsExtensions
    /// <param name="offset">The bit location to toggle.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static long ToggleBit(this long value, int offset) { return value.ToggleBits(BitMask.FromSingleBit(offset)); }
+   public static long ToggleBit(this long value, int offset)
+   {
+      return value.ToggleBits(BitMask.FromSingleBit(offset));
+   }
 
    /// <summary>
    /// Toggles a bit.
@@ -178,7 +184,10 @@ public static class ToggleBitsExtensions
    /// <param name="offset">The bit location to toggle.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static byte ToggleBit(this byte value, int offset) { return value.ToggleBits(BitMask.FromSingleBit(offset)); }
+   public static byte ToggleBit(this byte value, int offset)
+   {
+      return value.ToggleBits(BitMask.FromSingleBit(offset));
+   }
 
    /// <summary>
    /// Toggles a bit.
@@ -199,7 +208,10 @@ public static class ToggleBitsExtensions
    /// <param name="offset">The bit location to toggle.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static uint ToggleBit(this uint value, int offset) { return value.ToggleBits(BitMask.FromSingleBit(offset)); }
+   public static uint ToggleBit(this uint value, int offset)
+   {
+      return value.ToggleBits(BitMask.FromSingleBit(offset));
+   }
 
    /// <summary>
    /// Toggles a bit.
@@ -218,76 +230,100 @@ public static class ToggleBitsExtensions
    #region BitMask operations
 
    /// <summary>
-   /// Toggle all the bits according to the provided mask 
+   /// Toggle all the bits according to the provided mask
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="mask">bits to set.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static sbyte ToggleBits(this sbyte value, BitMask mask) { return (sbyte) (value ^ (sbyte) mask.Bits); }
+   public static sbyte ToggleBits(this sbyte value, BitMask mask)
+   {
+      return (sbyte) (value ^ (sbyte) mask.Bits);
+   }
 
    /// <summary>
-   /// Toggle all the bits according to the provided mask 
+   /// Toggle all the bits according to the provided mask
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="mask">bits to set.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static short ToggleBits(this short value, BitMask mask) { return (short) (value ^ (short) mask.Bits); }
+   public static short ToggleBits(this short value, BitMask mask)
+   {
+      return (short) (value ^ (short) mask.Bits);
+   }
 
    /// <summary>
-   /// Toggle all the bits according to the provided mask 
+   /// Toggle all the bits according to the provided mask
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="mask">bits to set.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static int ToggleBits(this int value, BitMask mask) { return value ^ (int) mask.Bits; }
+   public static int ToggleBits(this int value, BitMask mask)
+   {
+      return value ^ (int) mask.Bits;
+   }
 
    /// <summary>
-   /// Toggle all the bits according to the provided mask 
+   /// Toggle all the bits according to the provided mask
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="mask">bits to set.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static long ToggleBits(this long value, BitMask mask) { return value ^ (long) mask.Bits; }
+   public static long ToggleBits(this long value, BitMask mask)
+   {
+      return value ^ (long) mask.Bits;
+   }
 
    /// <summary>
-   /// Toggle all the bits according to the provided mask 
+   /// Toggle all the bits according to the provided mask
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="mask">bits to set.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static byte ToggleBits(this byte value, BitMask mask) { return (byte) (value ^ (byte) mask.Bits); }
+   public static byte ToggleBits(this byte value, BitMask mask)
+   {
+      return (byte) (value ^ (byte) mask.Bits);
+   }
 
    /// <summary>
-   /// Toggle all the bits according to the provided mask 
+   /// Toggle all the bits according to the provided mask
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="mask">bits to set.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ushort ToggleBits(this ushort value, BitMask mask) { return (ushort) (value ^ (ushort) mask.Bits); }
+   public static ushort ToggleBits(this ushort value, BitMask mask)
+   {
+      return (ushort) (value ^ (ushort) mask.Bits);
+   }
 
    /// <summary>
-   /// Toggle all the bits according to the provided mask 
+   /// Toggle all the bits according to the provided mask
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="mask">bits to set.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static uint ToggleBits(this uint value, BitMask mask) { return value ^ (uint) mask.Bits; }
+   public static uint ToggleBits(this uint value, BitMask mask)
+   {
+      return value ^ (uint) mask.Bits;
+   }
 
    /// <summary>
-   /// Toggle all the bits according to the provided mask 
+   /// Toggle all the bits according to the provided mask
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="mask">bits to set.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ulong ToggleBits(this ulong value, BitMask mask) { return value ^ mask.Bits; }
+   public static ulong ToggleBits(this ulong value, BitMask mask)
+   {
+      return value ^ mask.Bits;
+   }
 
    #endregion
 }

@@ -17,9 +17,9 @@ Implements [IByteIndexer](Jcd.BitManipulation.IByteIndexer.md 'Jcd.BitManipulati
 | :--- | :--- |
 | [LittleEndianByteIndexerInt32(int)](Jcd.BitManipulation.LittleEndianByteIndexerInt32.LittleEndianByteIndexerInt32(int).md 'Jcd.BitManipulation.LittleEndianByteIndexerInt32.LittleEndianByteIndexerInt32(int)') | Constructs a [LittleEndianByteIndexerInt32](Jcd.BitManipulation.LittleEndianByteIndexerInt32.md 'Jcd.BitManipulation.LittleEndianByteIndexerInt32') from an [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32'). |
 
-| Fields                                                                                                                                           |                                                                                                                   |
-|:-------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------|
-| [ByteSize](Jcd.BitManipulation.LittleEndianByteIndexerInt32.ByteSize.md 'Jcd.BitManipulation.LittleEndianByteIndexerInt32.ByteSize')             | The number of bytes this type will index                                                                          |
+| Fields | |
+| :--- | :--- |
+| [ByteSize](Jcd.BitManipulation.LittleEndianByteIndexerInt32.ByteSize.md 'Jcd.BitManipulation.LittleEndianByteIndexerInt32.ByteSize') | The number of bytes this type will index |
 | [MaxByteIndex](Jcd.BitManipulation.LittleEndianByteIndexerInt32.MaxByteIndex.md 'Jcd.BitManipulation.LittleEndianByteIndexerInt32.MaxByteIndex') | The largest [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') index available. |
 
 | Properties | |
@@ -32,7 +32,7 @@ Implements [IByteIndexer](Jcd.BitManipulation.IByteIndexer.md 'Jcd.BitManipulati
 | :--- | :--- |
 | [Slice(int, int)](Jcd.BitManipulation.LittleEndianByteIndexerInt32.Slice(int,int).md 'Jcd.BitManipulation.LittleEndianByteIndexerInt32.Slice(int, int)') | Get a subset of bytes given a starting offset and length. |
 
-| Operators                                                                                                                                                                                                                                                                                        |                                                                                                                                        |
-|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------|
+| Operators | |
+| :--- | :--- |
 | [implicit operator int(LittleEndianByteIndexerInt32)](Jcd.BitManipulation.LittleEndianByteIndexerInt32.op_Implicitint(Jcd.BitManipulation.LittleEndianByteIndexerInt32).md 'Jcd.BitManipulation.LittleEndianByteIndexerInt32.op_Implicit int(Jcd.BitManipulation.LittleEndianByteIndexerInt32)') | Converts the [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') indexer to its underlying data type. |
-| [implicit operator LittleEndianByteIndexerInt32(int)](Jcd.BitManipulation.LittleEndianByteIndexerInt32.op_ImplicitJcd.BitManipulation.LittleEndianByteIndexerInt32(int).md 'Jcd.BitManipulation.LittleEndianByteIndexerInt32.op_Implicit Jcd.BitManipulation.LittleEndianByteIndexerInt32(int)') | Converts the underlying data type to the buffer type.                                                                                  |
+| [implicit operator LittleEndianByteIndexerInt32(int)](Jcd.BitManipulation.LittleEndianByteIndexerInt32.op_ImplicitJcd.BitManipulation.LittleEndianByteIndexerInt32(int).md 'Jcd.BitManipulation.LittleEndianByteIndexerInt32.op_Implicit Jcd.BitManipulation.LittleEndianByteIndexerInt32(int)') | Converts the underlying data type to the buffer type. |

@@ -2,8 +2,7 @@
 
 ## ByteArrayExtensions.ToInt16(this ReadOnlySpan<byte>, Endian) Method
 
-Converts bytes into a [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16'),
-discarding any excess data.
+Converts bytes into a [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16'), discarding any excess data.
 
 ```csharp
 public static short ToInt16(this System.ReadOnlySpan<byte> data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
@@ -23,6 +22,5 @@ the bytes to convert
 The endian for the bytes.
 
 #### Returns
-
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 The converted [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')

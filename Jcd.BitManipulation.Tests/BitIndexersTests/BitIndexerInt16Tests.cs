@@ -16,10 +16,16 @@ namespace Jcd.BitManipulation.Tests.BitIndexersTests;
 public class BitIndexerInt16Tests
 {
    [Fact]
-   public void Constant_Bit_Size_Is_16_Bits() { Assert.Equal(16, BitIndexerInt16.BitSize); }
+   public void Constant_Bit_Size_Is_16_Bits()
+   {
+      Assert.Equal(16, BitIndexerInt16.BitSize);
+   }
 
    [Fact]
-   public void Length_Is_Bit_Size() { Assert.Equal(BitIndexerInt16.BitSize, new BitIndexerInt16().Length); }
+   public void Length_Is_Bit_Size()
+   {
+      Assert.Equal(BitIndexerInt16.BitSize, new BitIndexerInt16().Length);
+   }
 
    [Theory]
    [InlineData(0x0FFF)]
@@ -29,7 +35,7 @@ public class BitIndexerInt16Tests
    public void Implicit_Operator_To_BitIndexerInt16_From_Int16_Sets_All_Bits_Correctly(uint data)
    {
       // HACK: Type binder for xUnit hates bytes as params. Coerce the value here.
-      var             bits    = (short) data;
+      var bits = (short) data;
       BitIndexerInt16 indexer = bits;
       Assert.Equal(bits, indexer.Bits);
    }
@@ -42,8 +48,8 @@ public class BitIndexerInt16Tests
    public void Implicit_Operator_From_BitIndexerInt16_To_Int16_Sets_All_Bits_Correctly(uint data)
    {
       // HACK: Type binder for xUnit hates bytes as params. Coerce the value here.
-      var   indexer = new BitIndexerInt16 { Bits = (short) data };
-      short bits    = indexer;
+      var indexer = new BitIndexerInt16 { Bits = (short) data };
+      short bits = indexer;
 
       Assert.Equal(indexer.Bits, bits);
    }
@@ -55,9 +61,9 @@ public class BitIndexerInt16Tests
    [InlineData(0b0100000101000001)]
    public void Indexer_Returns_Correct_Bit_Value(uint data)
    {
-      var             value   = (short) data;
+      var value = (short) data;
       BitIndexerInt16 indexer = value;
-      short           mask    = 0;
+      short mask = 0;
 
       for (var i = 0; i < indexer.Length; i++)
       {
@@ -75,9 +81,9 @@ public class BitIndexerInt16Tests
    [InlineData(14)]
    public void Indexer_Sets_Correct_Bit_Value(int index)
    {
-      BitIndexerInt16 indexer  = 0;
-      short           expected = 0;
-      expected       = expected.SetBit(index);
+      BitIndexerInt16 indexer = 0;
+      short expected = 0;
+      expected = expected.SetBit(index);
       indexer[index] = true;
       Assert.Equal(expected, indexer.Bits);
       Assert.True(indexer[index]);
@@ -97,10 +103,11 @@ public class BitIndexerInt16Tests
    [InlineData(0b11101100000000)]
    public void Enumerator_Enumerates_Bits_In_Correct_Order_LSB_to_MSB(int data)
    {
-      var indexer   = new BitIndexerInt16 { Bits = (short) data };
+      var indexer = new BitIndexerInt16 { Bits = (short) data };
       var bitValues = indexer.ToArray();
 
-      for (var i = 0; i < indexer.Length; i++) Assert.Equal(indexer.Bits.ReadBit(i), bitValues[i]);
+      for (var i = 0; i < indexer.Length; i++)
+         Assert.Equal(indexer.Bits.ReadBit(i), bitValues[i]);
    }
 
    [Theory]
@@ -119,17 +126,17 @@ public class BitIndexerInt16Tests
    [InlineData(0b00011100, 0, 8)]
    public void Slice_Returns_Correct_Subset_Of_Bools(uint data, int start, int end)
    {
-      var indexer  = new BitIndexerInt16 { Bits = (short) data };
-      var bits     = indexer.ToArray();
+      var indexer = new BitIndexerInt16 { Bits = (short) data };
+      var bits = indexer.ToArray();
       var expected = bits[start..end];
-      var actual   = indexer[start..end];
+      var actual = indexer[start..end];
       Assert.Equal(expected, actual);
    }
 
    [Fact]
    public void IEnumerable_GetEnumerator_Enumerates_The_Correct_Number_Of_Items()
    {
-      var itemCount  = 0;
+      var itemCount = 0;
       var enumerable = (IEnumerable) new BitIndexerInt16 { Bits = 0x7FFF };
 
       foreach (var item in enumerable)

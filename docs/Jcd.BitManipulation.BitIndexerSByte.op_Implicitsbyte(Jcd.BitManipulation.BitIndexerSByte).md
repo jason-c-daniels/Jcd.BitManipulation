@@ -2,8 +2,7 @@
 
 ## BitIndexerSByte.implicit operator sbyte(BitIndexerSByte) Operator
 
-Automatically convert from a BitIndexerSByte to
-an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
+Automatically convert from a BitIndexerSByte to an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 
 ```csharp
 public static sbyte implicit operator sbyte(Jcd.BitManipulation.BitIndexerSByte indexer);
@@ -17,6 +16,5 @@ public static sbyte implicit operator sbyte(Jcd.BitManipulation.BitIndexerSByte 
 the indexer to convert from
 
 #### Returns
-
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 the [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')

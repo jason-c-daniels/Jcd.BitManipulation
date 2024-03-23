@@ -28,6 +28,5 @@ The byte value to set
 the offset of the byte to write
 
 #### Returns
-
 [LittleEndianByteIndexerUInt32](Jcd.BitManipulation.LittleEndianByteIndexerUInt32.md 'Jcd.BitManipulation.LittleEndianByteIndexerUInt32')
 The modified value.

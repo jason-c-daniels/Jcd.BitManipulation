@@ -19,148 +19,163 @@ namespace Jcd.BitManipulation;
 public static class ByteArrayExtensions
 {
    /// <summary>
-   /// Convert a <see cref="byte"/> into an array of bytes
+   /// Convert a <see cref="byte" /> into an array of bytes
    /// </summary>
-   /// <param name="data">the <see cref="byte"/> to convert</param>
-   /// <returns>an array containing the <see cref="byte"/>.</returns>
+   /// <param name="data">the <see cref="byte" /> to convert</param>
+   /// <returns>an array containing the <see cref="byte" />.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static byte[] ToByteArray(this byte data) { return [data]; }
+   public static byte[] ToByteArray(this byte data)
+   {
+      return [data];
+   }
 
    /// <summary>
-   /// Convert an <see cref="sbyte"/> into an array of bytes
+   /// Convert an <see cref="sbyte" /> into an array of bytes
    /// </summary>
-   /// <param name="data">the <see cref="sbyte"/> to convert</param>
-   /// <returns>an array containing the <see cref="sbyte"/>.</returns>
+   /// <param name="data">the <see cref="sbyte" /> to convert</param>
+   /// <returns>an array containing the <see cref="sbyte" />.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static byte[] ToByteArray(this sbyte data) { return [(byte) data]; }
+   public static byte[] ToByteArray(this sbyte data)
+   {
+      return [(byte) data];
+   }
 
    /// <summary>
-   /// Convert a <see cref="ushort"/> into an array of bytes
+   /// Convert a <see cref="ushort" /> into an array of bytes
    /// </summary>
-   /// <param name="data">the data of the <see cref="ushort"/> to convert</param>
+   /// <param name="data">the data of the <see cref="ushort" /> to convert</param>
    /// <param name="endian">The order in which to store the bytes</param>
    /// <returns>The value as an array in the requested byte order</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ToByteArray(this ushort data, Endian endian = Endian.Little)
    {
       return endian == Endian.Big
-                ? new BigEndianByteIndexerUInt16 { Data    = data }[0..^0]
+                ? new BigEndianByteIndexerUInt16 { Data = data }[0..^0]
                 : new LittleEndianByteIndexerUInt16 { Data = data }[0..^0];
    }
 
    /// <summary>
-   /// Convert a <see cref="short"/> into an array of bytes
+   /// Convert a <see cref="short" /> into an array of bytes
    /// </summary>
-   /// <param name="data">the <see cref="short"/> to convert</param>
+   /// <param name="data">the <see cref="short" /> to convert</param>
    /// <param name="endian">The order in which to store the bytes</param>
    /// <returns>The value as an array in the requested byte order</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ToByteArray(this short data, Endian endian = Endian.Little)
    {
       return endian == Endian.Big
-                ? new BigEndianByteIndexerInt16 { Data    = data }[0..^0]
+                ? new BigEndianByteIndexerInt16 { Data = data }[0..^0]
                 : new LittleEndianByteIndexerInt16 { Data = data }[0..^0];
    }
 
    /// <summary>
    /// Convert a uint into an array of bytes
    /// </summary>
-   /// <param name="data">the <see cref="uint"/> to convert</param>
+   /// <param name="data">the <see cref="uint" /> to convert</param>
    /// <param name="endian">The order in which to store the bytes</param>
    /// <returns>The value as an array in the requested byte order</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ToByteArray(this uint data, Endian endian = Endian.Little)
    {
       return endian == Endian.Big
-                ? new BigEndianByteIndexerUInt32 { Data    = data }[0..^0]
+                ? new BigEndianByteIndexerUInt32 { Data = data }[0..^0]
                 : new LittleEndianByteIndexerUInt32 { Data = data }[0..^0];
    }
 
    /// <summary>
    /// Convert an int into an array of bytes
    /// </summary>
-   /// <param name="data">the <see cref="int"/> to convert</param>
+   /// <param name="data">the <see cref="int" /> to convert</param>
    /// <param name="endian">The order in which to store the bytes</param>
    /// <returns>The value as an array in the requested byte order</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ToByteArray(this int data, Endian endian = Endian.Little)
    {
       return endian == Endian.Big
-                ? new BigEndianByteIndexerInt32 { Data    = data }[0..^0]
+                ? new BigEndianByteIndexerInt32 { Data = data }[0..^0]
                 : new LittleEndianByteIndexerInt32 { Data = data }[0..^0];
    }
 
    /// <summary>
-   /// Convert a <see cref="ulong"/> into an array of bytes
+   /// Convert a <see cref="ulong" /> into an array of bytes
    /// </summary>
-   /// <param name="data">the <see cref="ulong"/> to convert</param>
+   /// <param name="data">the <see cref="ulong" /> to convert</param>
    /// <param name="endian">The order in which to store the bytes</param>
    /// <returns>The value as an array in the requested byte order</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ToByteArray(this ulong data, Endian endian = Endian.Little)
    {
       return endian == Endian.Big
-                ? new BigEndianByteIndexerUInt64 { Data    = data }[0..^0]
+                ? new BigEndianByteIndexerUInt64 { Data = data }[0..^0]
                 : new LittleEndianByteIndexerUInt64 { Data = data }[0..^0];
    }
 
    /// <summary>
-   /// Convert a <see cref="long"/> into an array of bytes
+   /// Convert a <see cref="long" /> into an array of bytes
    /// </summary>
-   /// <param name="data">the <see cref="long"/> to convert</param>
+   /// <param name="data">the <see cref="long" /> to convert</param>
    /// <param name="endian">The order in which to store the bytes</param>
    /// <returns>The value as an array in the requested byte order</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ToByteArray(this long data, Endian endian = Endian.Little)
    {
       return endian == Endian.Big
-                ? new BigEndianByteIndexerInt64 { Data    = data }[0..^0]
+                ? new BigEndianByteIndexerInt64 { Data = data }[0..^0]
                 : new LittleEndianByteIndexerInt64 { Data = data }[0..^0];
    }
 
    /// <summary>
-   /// Converts bytes into a <see cref="byte"/>, discarding any excess data.
+   /// Converts bytes into a <see cref="byte" />, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
    /// <param name="endian">The endian for the bytes.</param>
-   /// <returns>The converted <see cref="byte"/></returns>
+   /// <returns>The converted <see cref="byte" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte ToByte(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
-      if (data == null || data.Length == 0) return 0;
+      if (data == null || data.Length == 0)
+         return 0;
 
-      return endian == Endian.Big ? data[^1] : data[0];
+      return endian == Endian.Big
+                ? data[^1]
+                : data[0];
    }
 
    /// <summary>
-   /// Converts bytes into an <see cref="sbyte"/>, discarding any excess data.
+   /// Converts bytes into an <see cref="sbyte" />, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
    /// <param name="endian">The endian for the bytes.</param>
-   /// <returns>The converted <see cref="sbyte"/></returns>
+   /// <returns>The converted <see cref="sbyte" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static sbyte ToSByte(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
-      if (data == null || data.Length == 0) return 0;
+      if (data == null || data.Length == 0)
+         return 0;
 
-      return endian == Endian.Big ? (sbyte) data[^1] : (sbyte) data[0];
+      return endian == Endian.Big
+                ? (sbyte) data[^1]
+                : (sbyte) data[0];
    }
 
    /// <summary>
-   /// Converts bytes into a <see cref="ushort"/>, discarding any excess data.
+   /// Converts bytes into a <see cref="ushort" />, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
    /// <param name="endian">The endian for the bytes.</param>
-   /// <returns>The converted <see cref="ushort"/></returns>
+   /// <returns>The converted <see cref="ushort" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ushort ToUInt16(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
-      if (data == null || data.Length == 0) return 0;
+      if (data == null || data.Length == 0)
+         return 0;
 
       if (endian == Endian.Big)
       {
          BigEndianByteIndexerUInt16 result = 0;
-         var                        o      = data.Length >= result.Length ? 0 : result.Length - data.Length;
+         var o = data.Length >= result.Length
+                    ? 0
+                    : result.Length - data.Length;
          for (var i = 0; i < data.Length && i < result.Length; i++)
             result[o + i] = data[i];
 
@@ -177,15 +192,16 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts bytes into a <see cref="short"/>, discarding any excess data.
+   /// Converts bytes into a <see cref="short" />, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
    /// <param name="endian">The endian for the bytes.</param>
-   /// <returns>The converted <see cref="short"/></returns>
+   /// <returns>The converted <see cref="short" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static short ToInt16(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
-      if (data == null || data.Length == 0) return 0;
+      if (data == null || data.Length == 0)
+         return 0;
 
       if (endian == Endian.Big)
       {
@@ -209,15 +225,16 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts bytes into a <see cref="uint"/>, discarding any excess data.
+   /// Converts bytes into a <see cref="uint" />, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
    /// <param name="endian">The endian for the bytes.</param>
-   /// <returns>The converted <see cref="uint"/></returns>
+   /// <returns>The converted <see cref="uint" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static uint ToUInt32(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
-      if (data == null || data.Length == 0) return 0;
+      if (data == null || data.Length == 0)
+         return 0;
 
       if (endian == Endian.Big)
       {
@@ -241,15 +258,16 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts bytes into an <see cref="int"/>, discarding any excess data.
+   /// Converts bytes into an <see cref="int" />, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
    /// <param name="endian">The endian for the bytes.</param>
-   /// <returns>The converted <see cref="int"/></returns>
+   /// <returns>The converted <see cref="int" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int ToInt32(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
-      if (data == null || data.Length == 0) return 0;
+      if (data == null || data.Length == 0)
+         return 0;
 
       if (endian == Endian.Big)
       {
@@ -273,15 +291,16 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts bytes into a <see cref="ulong"/>, discarding any excess data.
+   /// Converts bytes into a <see cref="ulong" />, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
    /// <param name="endian">The endian for the bytes.</param>
-   /// <returns>The converted <see cref="ulong"/></returns>
+   /// <returns>The converted <see cref="ulong" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ulong ToUInt64(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
-      if (data == null || data.Length == 0) return 0;
+      if (data == null || data.Length == 0)
+         return 0;
 
       if (endian == Endian.Big)
       {
@@ -305,15 +324,16 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts bytes into a <see cref="long"/>, discarding any excess data.
+   /// Converts bytes into a <see cref="long" />, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
    /// <param name="endian">The endian for the bytes.</param>
-   /// <returns>The converted <see cref="long"/></returns>
+   /// <returns>The converted <see cref="long" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static long ToInt64(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
-      if (data == null || data.Length == 0) return 0;
+      if (data == null || data.Length == 0)
+         return 0;
 
       if (endian == Endian.Big)
       {
@@ -337,21 +357,24 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts bytes into a <see cref="byte"/>, discarding any excess data.
+   /// Converts bytes into a <see cref="byte" />, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
    /// <param name="endian">The endian for the bytes.</param>
-   /// <returns>The converted <see cref="byte"/></returns>
+   /// <returns>The converted <see cref="byte" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte ToByte(this byte[] data, Endian endian = Endian.Little)
    {
-      if (data == null || data.Length == 0) return 0;
+      if (data == null || data.Length == 0)
+         return 0;
 
-      return endian == Endian.Little ? data[0] : data[^1];
+      return endian == Endian.Little
+                ? data[0]
+                : data[^1];
    }
 
    /// <summary>
-   /// Converts bytes into an <see cref="sbyte"/>, discarding any excess data.
+   /// Converts bytes into an <see cref="sbyte" />, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
    /// <param name="endian">The endian for the bytes.</param>
@@ -359,23 +382,28 @@ public static class ByteArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static sbyte ToSByte(this byte[] data, Endian endian = Endian.Little)
    {
-      if (data == null || data.Length == 0) return 0;
+      if (data == null || data.Length == 0)
+         return 0;
 
-      return endian == Endian.Little ? (sbyte) data[0] : (sbyte) data[^1];
+      return endian == Endian.Little
+                ? (sbyte) data[0]
+                : (sbyte) data[^1];
    }
 
    /// <summary>
-   /// Converts bytes into a <see cref="ushort"/>, discarding any excess data.
+   /// Converts bytes into a <see cref="ushort" />, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
    /// <param name="endian">The endian for the bytes.</param>
-   /// <returns>The converted <see cref="ushort"/></returns>
+   /// <returns>The converted <see cref="ushort" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ushort ToUInt16(this byte[] data, Endian endian = Endian.Little)
    {
-      if (data == null || data.Length == 0) return 0;
+      if (data == null || data.Length == 0)
+         return 0;
+
       ushort result = 0;
-      var    len    = data.Length;
+      var len = data.Length;
 
       if (endian == Endian.Little)
       {
@@ -383,7 +411,9 @@ public static class ByteArrayExtensions
          result = result.StoreBits(data[i], i << 3, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result = result.StoreBits(data[i], i << 3, 8);
       }
       else
@@ -392,7 +422,9 @@ public static class ByteArrayExtensions
          result = result.StoreBits(data[i], 0, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result = (ushort) (result << 8);
          result = result.StoreBits(data[i], 0, 8);
       }
@@ -401,17 +433,19 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts bytes into a <see cref="short"/>, discarding any excess data.
+   /// Converts bytes into a <see cref="short" />, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
    /// <param name="endian">The endian for the bytes.</param>
-   /// <returns>The converted <see cref="short"/></returns>
+   /// <returns>The converted <see cref="short" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static short ToInt16(this byte[] data, Endian endian = Endian.Little)
    {
-      if (data == null || data.Length == 0) return 0;
+      if (data == null || data.Length == 0)
+         return 0;
+
       short result = 0;
-      var   len    = data.Length;
+      var len = data.Length;
 
       if (endian == Endian.Little)
       {
@@ -419,7 +453,9 @@ public static class ByteArrayExtensions
          result = result.StoreBits(data[i], i << 3, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result = result.StoreBits(data[i], i << 3, 8);
       }
       else
@@ -428,7 +464,9 @@ public static class ByteArrayExtensions
          result = result.StoreBits(data[i], 0, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result = (short) (result << 8);
          result = result.StoreBits(data[i], 0, 8);
       }
@@ -437,17 +475,19 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts bytes into a <see cref="uint"/>, discarding any excess data.
+   /// Converts bytes into a <see cref="uint" />, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
    /// <param name="endian">The endian for the bytes.</param>
-   /// <returns>The converted <see cref="uint"/></returns>
+   /// <returns>The converted <see cref="uint" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static uint ToUInt32(this byte[] data, Endian endian = Endian.Little)
    {
-      if (data == null || data.Length == 0) return 0;
+      if (data == null || data.Length == 0)
+         return 0;
+
       uint result = 0;
-      var  len    = data.Length;
+      var len = data.Length;
 
       if (endian == Endian.Little)
       {
@@ -455,15 +495,21 @@ public static class ByteArrayExtensions
          result = result.StoreBits(data[i], i << 3, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result = result.StoreBits(data[i], i << 3, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result = result.StoreBits(data[i], i << 3, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result = result.StoreBits(data[i], i << 3, 8);
       }
       else
@@ -472,36 +518,44 @@ public static class ByteArrayExtensions
          result = result.StoreBits(data[i], 0, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result <<= 8;
-         result =   result.StoreBits(data[i], 0, 8);
+         result = result.StoreBits(data[i], 0, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result <<= 8;
-         result =   result.StoreBits(data[i], 0, 8);
+         result = result.StoreBits(data[i], 0, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result <<= 8;
-         result =   result.StoreBits(data[i], 0, 8);
+         result = result.StoreBits(data[i], 0, 8);
       }
 
       return result;
    }
 
    /// <summary>
-   /// Converts bytes into an <see cref="uint"/>, discarding any excess data.
+   /// Converts bytes into an <see cref="uint" />, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
    /// <param name="endian">The endian for the bytes.</param>
-   /// <returns>The converted <see cref="uint"/></returns>
+   /// <returns>The converted <see cref="uint" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int ToInt32(this byte[] data, Endian endian = Endian.Little)
    {
-      if (data == null || data.Length == 0) return 0;
+      if (data == null || data.Length == 0)
+         return 0;
+
       var result = 0;
-      var len    = data.Length;
+      var len = data.Length;
 
       if (endian == Endian.Little)
       {
@@ -509,15 +563,21 @@ public static class ByteArrayExtensions
          result = result.StoreBits(data[i], i << 3, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result = result.StoreBits(data[i], i << 3, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result = result.StoreBits(data[i], i << 3, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result = result.StoreBits(data[i], i << 3, 8);
       }
       else
@@ -526,36 +586,44 @@ public static class ByteArrayExtensions
          result = result.StoreBits(data[i], 0, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result <<= 8;
-         result =   result.StoreBits(data[i], 0, 8);
+         result = result.StoreBits(data[i], 0, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result <<= 8;
-         result =   result.StoreBits(data[i], 0, 8);
+         result = result.StoreBits(data[i], 0, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result <<= 8;
-         result =   result.StoreBits(data[i], 0, 8);
+         result = result.StoreBits(data[i], 0, 8);
       }
 
       return result;
    }
 
    /// <summary>
-   /// Converts bytes into a <see cref="ulong"/>, discarding any excess data.
+   /// Converts bytes into a <see cref="ulong" />, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
    /// <param name="endian">The endian for the bytes.</param>
-   /// <returns>The converted <see cref="ulong"/></returns>
+   /// <returns>The converted <see cref="ulong" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ulong ToUInt64(this byte[] data, Endian endian = Endian.Little)
    {
-      if (data == null || data.Length == 0) return 0;
+      if (data == null || data.Length == 0)
+         return 0;
+
       ulong result = 0;
-      var   len    = data.Length;
+      var len = data.Length;
 
       if (endian == Endian.Little)
       {
@@ -563,31 +631,45 @@ public static class ByteArrayExtensions
          result = result.StoreBits(data[i], i << 3, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result = result.StoreBits(data[i], i << 3, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result = result.StoreBits(data[i], i << 3, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result = result.StoreBits(data[i], i << 3, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result = result.StoreBits(data[i], i << 3, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result = result.StoreBits(data[i], i << 3, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result = result.StoreBits(data[i], i << 3, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result = result.StoreBits(data[i], i << 3, 8);
       }
       else
@@ -596,56 +678,72 @@ public static class ByteArrayExtensions
          result = result.StoreBits(data[i], 0, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result <<= 8;
-         result =   result.StoreBits(data[i], 0, 8);
+         result = result.StoreBits(data[i], 0, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result <<= 8;
-         result =   result.StoreBits(data[i], 0, 8);
+         result = result.StoreBits(data[i], 0, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result <<= 8;
-         result =   result.StoreBits(data[i], 0, 8);
+         result = result.StoreBits(data[i], 0, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result <<= 8;
-         result =   result.StoreBits(data[i], 0, 8);
+         result = result.StoreBits(data[i], 0, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result <<= 8;
-         result =   result.StoreBits(data[i], 0, 8);
+         result = result.StoreBits(data[i], 0, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result <<= 8;
-         result =   result.StoreBits(data[i], 0, 8);
+         result = result.StoreBits(data[i], 0, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result <<= 8;
-         result =   result.StoreBits(data[i], 0, 8);
+         result = result.StoreBits(data[i], 0, 8);
       }
 
       return result;
    }
 
    /// <summary>
-   /// Converts bytes into a <see cref="long"/>, discarding any excess data.
+   /// Converts bytes into a <see cref="long" />, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert</param>
    /// <param name="endian">The endian for the bytes.</param>
-   /// <returns>The converted <see cref="long"/></returns>
+   /// <returns>The converted <see cref="long" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static long ToInt64(this byte[] data, Endian endian = Endian.Little)
    {
-      if (data == null || data.Length == 0) return 0;
+      if (data == null || data.Length == 0)
+         return 0;
+
       long result = 0;
-      var  len    = data.Length;
+      var len = data.Length;
 
       if (endian == Endian.Little)
       {
@@ -653,31 +751,45 @@ public static class ByteArrayExtensions
          result = result.StoreBits(data[i], i << 3, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result = result.StoreBits(data[i], i << 3, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result = result.StoreBits(data[i], i << 3, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result = result.StoreBits(data[i], i << 3, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result = result.StoreBits(data[i], i << 3, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result = result.StoreBits(data[i], i << 3, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result = result.StoreBits(data[i], i << 3, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result = result.StoreBits(data[i], i << 3, 8);
       }
       else
@@ -686,39 +798,53 @@ public static class ByteArrayExtensions
          result = result.StoreBits(data[i], 0, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result <<= 8;
-         result =   result.StoreBits(data[i], 0, 8);
+         result = result.StoreBits(data[i], 0, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result <<= 8;
-         result =   result.StoreBits(data[i], 0, 8);
+         result = result.StoreBits(data[i], 0, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result <<= 8;
-         result =   result.StoreBits(data[i], 0, 8);
+         result = result.StoreBits(data[i], 0, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result <<= 8;
-         result =   result.StoreBits(data[i], 0, 8);
+         result = result.StoreBits(data[i], 0, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result <<= 8;
-         result =   result.StoreBits(data[i], 0, 8);
+         result = result.StoreBits(data[i], 0, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result <<= 8;
-         result =   result.StoreBits(data[i], 0, 8);
+         result = result.StoreBits(data[i], 0, 8);
          i++;
 
-         if (i >= len) return result;
+         if (i >= len)
+            return result;
+
          result <<= 8;
-         result =   result.StoreBits(data[i], 0, 8);
+         result = result.StoreBits(data[i], 0, 8);
       }
 
       return result;

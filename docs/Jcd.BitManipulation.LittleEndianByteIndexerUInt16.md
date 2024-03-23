@@ -17,9 +17,9 @@ Implements [IByteIndexer](Jcd.BitManipulation.IByteIndexer.md 'Jcd.BitManipulati
 | :--- | :--- |
 | [LittleEndianByteIndexerUInt16(ushort)](Jcd.BitManipulation.LittleEndianByteIndexerUInt16.LittleEndianByteIndexerUInt16(ushort).md 'Jcd.BitManipulation.LittleEndianByteIndexerUInt16.LittleEndianByteIndexerUInt16(ushort)') | Constructs a [LittleEndianByteIndexerUInt16](Jcd.BitManipulation.LittleEndianByteIndexerUInt16.md 'Jcd.BitManipulation.LittleEndianByteIndexerUInt16') from a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16'). |
 
-| Fields                                                                                                                                             |                                                                                                                   |
-|:---------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------|
-| [ByteSize](Jcd.BitManipulation.LittleEndianByteIndexerUInt16.ByteSize.md 'Jcd.BitManipulation.LittleEndianByteIndexerUInt16.ByteSize')             | The number of bytes this type will index                                                                          |
+| Fields | |
+| :--- | :--- |
+| [ByteSize](Jcd.BitManipulation.LittleEndianByteIndexerUInt16.ByteSize.md 'Jcd.BitManipulation.LittleEndianByteIndexerUInt16.ByteSize') | The number of bytes this type will index |
 | [MaxByteIndex](Jcd.BitManipulation.LittleEndianByteIndexerUInt16.MaxByteIndex.md 'Jcd.BitManipulation.LittleEndianByteIndexerUInt16.MaxByteIndex') | The largest [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') index available. |
 
 | Properties | |
@@ -32,7 +32,7 @@ Implements [IByteIndexer](Jcd.BitManipulation.IByteIndexer.md 'Jcd.BitManipulati
 | :--- | :--- |
 | [Slice(int, int)](Jcd.BitManipulation.LittleEndianByteIndexerUInt16.Slice(int,int).md 'Jcd.BitManipulation.LittleEndianByteIndexerUInt16.Slice(int, int)') | Get a subset of bytes given a starting offset and length. |
 
-| Operators                                                                                                                                                                                                                                                                                                      |                                                                                                                                        |
-|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------|
-| [implicit operator LittleEndianByteIndexerUInt16(ushort)](Jcd.BitManipulation.LittleEndianByteIndexerUInt16.op_ImplicitJcd.BitManipulation.LittleEndianByteIndexerUInt16(ushort).md 'Jcd.BitManipulation.LittleEndianByteIndexerUInt16.op_Implicit Jcd.BitManipulation.LittleEndianByteIndexerUInt16(ushort)') | Converts the underlying data type to the buffer type.                                                                                  |
+| Operators | |
+| :--- | :--- |
+| [implicit operator LittleEndianByteIndexerUInt16(ushort)](Jcd.BitManipulation.LittleEndianByteIndexerUInt16.op_ImplicitJcd.BitManipulation.LittleEndianByteIndexerUInt16(ushort).md 'Jcd.BitManipulation.LittleEndianByteIndexerUInt16.op_Implicit Jcd.BitManipulation.LittleEndianByteIndexerUInt16(ushort)') | Converts the underlying data type to the buffer type. |
 | [implicit operator ushort(LittleEndianByteIndexerUInt16)](Jcd.BitManipulation.LittleEndianByteIndexerUInt16.op_Implicitushort(Jcd.BitManipulation.LittleEndianByteIndexerUInt16).md 'Jcd.BitManipulation.LittleEndianByteIndexerUInt16.op_Implicit ushort(Jcd.BitManipulation.LittleEndianByteIndexerUInt16)') | Converts the [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') indexer to its underlying data type. |

@@ -6,5 +6,5 @@ find . -type f -name '*.md'
 echo editing files
 find . -type f -name '*.md' -exec sed -i -Ee 's/[ ]+$//g' {} \;
 find . -type f -name '*.md' -exec sed -i -Ee 's:[\<]br[/][\>]: :g' {} \;
-find . -type f -print0 -name '*.md' | xargs -0 dos2unix
+find . -type f -name '*.md' -print0 | xargs -0 unix2dos
 cd "$returnd" || exit

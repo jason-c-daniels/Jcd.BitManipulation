@@ -11,16 +11,16 @@ assembly_info:
    file: '**\AssemblyInfo.*'
    assembly_version: '{version}'
    assembly_file_version: '{version}'
-   assembly_informational_version: '{version}-pre'
+   assembly_informational_version: '{version}'
 dotnet_csproj:
    patch: true
    file: '**\*.csproj'
    version: '{version}'
    version_prefix: '{version}'
-   package_version: '{version}-pre'
+   package_version: '{version}'
    assembly_version: '{version}'
    file_version: '{version}'
-   informational_version: '{version}-pre'
+   informational_version: '{version}'
 install:
    - sh: >-
         #!/bin/bash

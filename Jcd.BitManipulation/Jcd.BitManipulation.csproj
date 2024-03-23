@@ -28,7 +28,7 @@
       <RepositoryType>GitHub</RepositoryType>
       <PackageVersion>2.4.0</PackageVersion>
       <AssemblyVersion>2.4.0</AssemblyVersion>
-      <InformationalVersion>2.4.0-pre</InformationalVersion>
+      <InformationalVersion>2.4.0</InformationalVersion>
       <FileVersion>2.4.0</FileVersion>
       <TargetFramework>netstandard2.0</TargetFramework>
       <PackageIcon>Jason.C.Daniels.jpg</PackageIcon>

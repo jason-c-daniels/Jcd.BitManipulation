@@ -17,7 +17,7 @@ dotnet_csproj:
    file: '**\*.csproj'
    version: '{version}'
    version_prefix: '{version}'
-   package_version: '{version}'
+   package_version: '{version}-pre'
    assembly_version: '{version}'
    file_version: '{version}'
    informational_version: '{version}-pre'
@@ -29,6 +29,7 @@ install:
 build:
    publish_nuget: true
    publish_nuget_symbols: true
+   use_snupkg_format: true
    verbosity: minimal
 deploy:
    - provider: NuGet
@@ -42,7 +43,7 @@ deploy:
      api_key:
         secure: I8belHNTZOvJ4MZhZoH6bhQsVuAtAo/wvX2ypZENxIUJJJ+plfJ6pz2SJr8dlgEA
      on:
-        branch: /release.*/
+        branch: release/*
 notifications:
    - provider: Email
      to:

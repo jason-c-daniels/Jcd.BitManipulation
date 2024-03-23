@@ -1,0 +1,57 @@
+﻿version: 2.4.{build}
+branches:
+   only:
+      - main
+      - /release[/].*/
+skip_tags: true
+image: Ubuntu2204
+configuration: Release
+assembly_info:
+   patch: true
+   file: '**\AssemblyInfo.*'
+   assembly_version: '{version}'
+   assembly_file_version: '{version}'
+   assembly_informational_version: '{version}-pre'
+dotnet_csproj:
+   patch: true
+   file: '**\*.csproj'
+   version: '{version}'
+   version_prefix: '{version}'
+   package_version: '{version}-pre'
+   assembly_version: '{version}'
+   file_version: '{version}'
+   informational_version: '{version}-pre'
+install:
+   - sh: >-
+        #!/bin/bash
+        
+        sudo apt-get update && sudo apt-get install -y dotnet-sdk-8.0
+build:
+   publish_nuget: true
+   publish_nuget_symbols: true
+   use_snupkg_format: true
+   verbosity: minimal
+deploy:
+   - provider: NuGet
+     server: https://www.myget.org/F/jason-c-daniels/api/v2/package
+     api_key:
+        secure: I8belHNTZOvJ4MZhZoH6bhQsVuAtAo/wvX2ypZENxIUJJJ+plfJ6pz2SJr8dlgEA
+     symbol_server: https://www.myget.org/F/jason-c-daniels/api/v2/package
+     on:
+        branch: main
+   - provider: NuGet
+     server: https://www.myget.org/F/jason-c-daniels/api/v2/package
+     api_key:
+        secure: I8belHNTZOvJ4MZhZoH6bhQsVuAtAo/wvX2ypZENxIUJJJ+plfJ6pz2SJr8dlgEA
+     symbol_server: https://www.myget.org/F/jason-c-daniels/api/v2/package
+     on:
+        branch: /release[/].*/
+notifications:
+   - provider: Email
+     to:
+        - jason.c.daniels@gmail.com
+     subject: Build failure - Jcd.BitManipulation {version}
+     message: Build failure - Jcd.BitManipulation {version}
+     on_build_success: false
+     on_build_failure: true
+     on_build_status_changed: false

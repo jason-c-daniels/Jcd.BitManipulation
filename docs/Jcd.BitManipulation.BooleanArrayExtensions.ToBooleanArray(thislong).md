@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BooleanArrayExtensions](Jcd.BitManipulation.BooleanArrayExtensions.md 'Jcd.BitManipulation.BooleanArrayExtensions')
 
 ## BooleanArrayExtensions.ToBooleanArray(this long) Method
@@ -16,5 +17,6 @@ public static bool[] ToBooleanArray(this long bits);
 the [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64') to convert
 
 #### Returns
+
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 the array. Least Significant Bit at index 0

@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ByteArrayExtensions](Jcd.BitManipulation.ByteArrayExtensions.md 'Jcd.BitManipulation.ByteArrayExtensions')
 
 ## ByteArrayExtensions.ToByteArray(this ushort, Endian) Method
@@ -22,5 +23,6 @@ the data of the [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/Syst
 The order in which to store the bytes
 
 #### Returns
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 The value as an array in the requested byte order

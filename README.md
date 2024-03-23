@@ -74,6 +74,13 @@ Even more extensive performance testing is underway with version 3.0. Read below
 
 See [Release Notes](RELEASE_NOTES.md)
 
+## Dev Notes
+
+1. v3.0.x-alpha development is now happening in the `main` branch.
+   A release branch will be created once its ready to be released.
+2. v2.4.x development will now happen in the `release/2.4` branch.
+   Only backports from main will be accepted there.
+
 ## Build, Code Stats and Nuget
 
 [![GitHub](https://img.shields.io/github/license/jason-c-daniels/Jcd.BitManipulation)](https://github.com/jason-c-daniels/Jcd.BitManipulation/blob/main/LICENSE)

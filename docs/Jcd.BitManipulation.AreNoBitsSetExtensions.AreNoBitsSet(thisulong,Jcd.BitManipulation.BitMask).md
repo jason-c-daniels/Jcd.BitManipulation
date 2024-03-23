@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[AreNoBitsSetExtensions](Jcd.BitManipulation.AreNoBitsSetExtensions.md 'Jcd.BitManipulation.AreNoBitsSetExtensions')
 
 ## AreNoBitsSetExtensions.AreNoBitsSet(this ulong, BitMask) Method
@@ -22,5 +23,6 @@ The data to inspect.
 the bits to test.
 
 #### Returns
+
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 True if all of the bits from the bitmask were set.

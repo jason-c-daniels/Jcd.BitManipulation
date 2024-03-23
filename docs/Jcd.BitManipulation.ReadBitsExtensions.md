@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation')
 
 ## ReadBitsExtensions Class
@@ -13,6 +14,8 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 | Methods | |
 | :--- | :--- |
 | [ReadBit(this byte, int)](Jcd.BitManipulation.ReadBitsExtensions.ReadBit(thisbyte,int).md 'Jcd.BitManipulation.ReadBitsExtensions.ReadBit(this byte, int)') | Read a single bit from the specified offset. |
+| [ReadBit(this double, int)](Jcd.BitManipulation.ReadBitsExtensions.ReadBit(thisdouble,int).md 'Jcd.BitManipulation.ReadBitsExtensions.ReadBit(this double, int)') | Read a single bit from the specified offset. |
+| [ReadBit(this float, int)](Jcd.BitManipulation.ReadBitsExtensions.ReadBit(thisfloat,int).md 'Jcd.BitManipulation.ReadBitsExtensions.ReadBit(this float, int)') | Read a single bit from the specified offset. |
 | [ReadBit(this int, int)](Jcd.BitManipulation.ReadBitsExtensions.ReadBit(thisint,int).md 'Jcd.BitManipulation.ReadBitsExtensions.ReadBit(this int, int)') | Read a single bit from the specified offset. |
 | [ReadBit(this long, int)](Jcd.BitManipulation.ReadBitsExtensions.ReadBit(thislong,int).md 'Jcd.BitManipulation.ReadBitsExtensions.ReadBit(this long, int)') | Read a single bit from the specified offset. |
 | [ReadBit(this sbyte, int)](Jcd.BitManipulation.ReadBitsExtensions.ReadBit(thissbyte,int).md 'Jcd.BitManipulation.ReadBitsExtensions.ReadBit(this sbyte, int)') | Read a single bit from the specified offset. |
@@ -22,6 +25,10 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 | [ReadBit(this ushort, int)](Jcd.BitManipulation.ReadBitsExtensions.ReadBit(thisushort,int).md 'Jcd.BitManipulation.ReadBitsExtensions.ReadBit(this ushort, int)') | Read a single bit from the specified offset. |
 | [ReadBits(this byte, int, int)](Jcd.BitManipulation.ReadBitsExtensions.ReadBits(thisbyte,int,int).md 'Jcd.BitManipulation.ReadBitsExtensions.ReadBits(this byte, int, int)') | For a given value return the specified bits from within it, right shifted pos bits. |
 | [ReadBits(this byte, int, BitMask)](Jcd.BitManipulation.ReadBitsExtensions.ReadBits(thisbyte,int,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.ReadBitsExtensions.ReadBits(this byte, int, Jcd.BitManipulation.BitMask)') | Extract a subset of bits specified by a bitmask and right align the bits by the offset. |
+| [ReadBits(this double, int, int)](Jcd.BitManipulation.ReadBitsExtensions.ReadBits(thisdouble,int,int).md 'Jcd.BitManipulation.ReadBitsExtensions.ReadBits(this double, int, int)') | For a given value return the specified bits from within it, right shifted pos bits. |
+| [ReadBits(this double, int, BitMask)](Jcd.BitManipulation.ReadBitsExtensions.ReadBits(thisdouble,int,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.ReadBitsExtensions.ReadBits(this double, int, Jcd.BitManipulation.BitMask)') | Extract a subset of bits specified by a bitmask and right align the bits by the offset. |
+| [ReadBits(this float, int, int)](Jcd.BitManipulation.ReadBitsExtensions.ReadBits(thisfloat,int,int).md 'Jcd.BitManipulation.ReadBitsExtensions.ReadBits(this float, int, int)') | For a given value return the specified bits from within it, right shifted pos bits. |
+| [ReadBits(this float, int, BitMask)](Jcd.BitManipulation.ReadBitsExtensions.ReadBits(thisfloat,int,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.ReadBitsExtensions.ReadBits(this float, int, Jcd.BitManipulation.BitMask)') | Extract a subset of bits specified by a bitmask and right align the bits by the offset. |
 | [ReadBits(this int, int, int)](Jcd.BitManipulation.ReadBitsExtensions.ReadBits(thisint,int,int).md 'Jcd.BitManipulation.ReadBitsExtensions.ReadBits(this int, int, int)') | For a given value return the specified bits from within it, right shifted pos bits. |
 | [ReadBits(this int, int, BitMask)](Jcd.BitManipulation.ReadBitsExtensions.ReadBits(thisint,int,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.ReadBitsExtensions.ReadBits(this int, int, Jcd.BitManipulation.BitMask)') | Extract a subset of bits specified by a bitmask and right align the bits by the offset. |
 | [ReadBits(this long, int, int)](Jcd.BitManipulation.ReadBitsExtensions.ReadBits(thislong,int,int).md 'Jcd.BitManipulation.ReadBitsExtensions.ReadBits(this long, int, int)') | For a given value return the specified bits from within it, right shifted pos bits. |

@@ -87,4 +87,24 @@ public class AreNoBitsSetExtensionsTests
    {
       Assert.Equal(expected, data.AreNoBitsSet(mask));
    }
+
+   [Theory]
+   [InlineData(0,    ulong.MaxValue, true)]
+   [InlineData(0b11, ulong.MaxValue, false)]
+   [InlineData(0b10, 0b10,           false)]
+   [InlineData(0b11, 0b10,           false)]
+   public void AreNoBits_On_A_Float_Returns_The_Expected_Result(uint data, ulong mask, bool expected)
+   {
+      Assert.Equal(expected, data.BitwiseToSingle().AreNoBitsSet(mask));
+   }
+
+   [Theory]
+   [InlineData(0,    ulong.MaxValue, true)]
+   [InlineData(0b11, ulong.MaxValue, false)]
+   [InlineData(0b10, 0b10,           false)]
+   [InlineData(0b11, 0b10,           false)]
+   public void AreNoBits_On_A_Double_Returns_The_Expected_Result(ulong data, ulong mask, bool expected)
+   {
+      Assert.Equal(expected, data.BitwiseToDouble().AreNoBitsSet(mask));
+   }
 }

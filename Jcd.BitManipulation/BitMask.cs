@@ -153,7 +153,7 @@ public readonly struct BitMask
    /// </summary>
    /// <returns>the bits of the mask formatted as 0b0101...1111</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public override string ToString()
+   public readonly override string ToString()
    {
       const ulong highBit = (ulong) 1 << 63;
       var sb = new StringBuilder();
@@ -178,7 +178,7 @@ public readonly struct BitMask
    /// Automatically convert to <see cref="sbyte" /> from a <see cref="BitMask" />
    /// </summary>
    /// <param name="mask">the <see cref="BitMask" /> to convert from.</param>
-   /// <returns>the lowest 8 bits of the mask as a signed <see cref="sbyte" /></returns>
+   /// <returns>the lowest 8 bits of the mask as an <see cref="sbyte" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator sbyte(BitMask mask)
    {

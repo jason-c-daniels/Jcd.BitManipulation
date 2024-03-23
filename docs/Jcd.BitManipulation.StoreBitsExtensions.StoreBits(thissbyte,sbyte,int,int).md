@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[StoreBitsExtensions](Jcd.BitManipulation.StoreBitsExtensions.md 'Jcd.BitManipulation.StoreBitsExtensions')
 
 ## StoreBitsExtensions.StoreBits(this sbyte, sbyte, int, int) Method
@@ -34,5 +35,6 @@ The bit location to store the value.
 The bit size of the value.
 
 #### Returns
+
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 The modified value.

@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[SetBitsExtensions](Jcd.BitManipulation.SetBitsExtensions.md 'Jcd.BitManipulation.SetBitsExtensions')
 
 ## SetBitsExtensions.SetBits(this int, int, int) Method
@@ -28,5 +29,6 @@ The bit location to store the value.
 The number of bits to set on.
 
 #### Returns
+
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 The modified value.

@@ -120,6 +120,36 @@ public class SetBitsExtensionsTests
       Assert.Equal(expected, result);
    }
 
+   [Theory]
+   [InlineData(0x00, 0,  2,  0x03)]
+   [InlineData(0x00, 6,  2,  0b11000000)]
+   [InlineData(0x00, 0,  8,  0xFF)]
+   [InlineData(0x00, 12, 2,  0b0011000000000000)]
+   [InlineData(0x00, 0,  16, 0xFFFF)]
+   [InlineData(0x00, 28, 2,  0b00110000000000000000000000000000)]
+   [InlineData(0x00, 0,  32, 0xFFFFFFFF)]
+   public void SetBits_On_Single_Sets_The_Correct_Bits(uint value, int offset, int size, uint expected)
+   {
+      var result = value.BitwiseToSingle().SetBits((byte) offset, (byte) size);
+      Assert.Equal(expected.BitwiseToSingle(), result);
+   }
+
+   [Theory]
+   [InlineData(0x00, 0,  2,  0x03)]
+   [InlineData(0x00, 6,  2,  0b11000000)]
+   [InlineData(0x00, 0,  8,  0xFF)]
+   [InlineData(0x00, 12, 2,  0b0011000000000000)]
+   [InlineData(0x00, 0,  16, 0xFFFF)]
+   [InlineData(0x00, 28, 2,  0b00110000000000000000000000000000)]
+   [InlineData(0x00, 0,  32, 0xFFFFFFFF)]
+   [InlineData(0x00, 60, 2,  0b0011000000000000000000000000000000000000000000000000000000000000)]
+   [InlineData(0x00, 0,  64, 0xFFFFFFFFFFFFFFFF)]
+   public void SetBits_On_Double_Sets_The_Correct_Bits(ulong value, int offset, int size, ulong expected)
+   {
+      var result = value.BitwiseToDouble().SetBits((byte) offset, (byte) size);
+      Assert.Equal(expected.BitwiseToDouble(), result);
+   }
+
    #endregion
 
    #region single bit tests
@@ -239,6 +269,39 @@ public class SetBitsExtensionsTests
    {
       var result = value.SetBit((byte) bitToSet);
       Assert.Equal(expected, result);
+   }
+
+   [Theory]
+   [InlineData(0x00, 3,  0x08)]
+   [InlineData(0x80, 3,  0x88)]
+   [InlineData(0x00, 7,  0x80)]
+   [InlineData(0x00, 8,  0x0100)]
+   [InlineData(0x80, 8,  0x0180)]
+   [InlineData(0x00, 15, 0x8000)]
+   [InlineData(0x80, 16, 0x00010080)]
+   [InlineData(0x00, 31, 0x80000000)]
+   public void SetBit_On_Single_Sets_Correct_Bit(ulong initial, int bitToSet, uint expected)
+   {
+      var value = (uint) initial;
+      var result = value.BitwiseToSingle().SetBit((byte) bitToSet);
+      Assert.Equal(expected.BitwiseToSingle(), result);
+   }
+
+   [Theory]
+   [InlineData(0x00, 3,  0x08)]
+   [InlineData(0x80, 3,  0x88)]
+   [InlineData(0x00, 7,  0x80)]
+   [InlineData(0x00, 8,  0x0100)]
+   [InlineData(0x80, 8,  0x0180)]
+   [InlineData(0x00, 15, 0x8000)]
+   [InlineData(0x80, 16, 0x00010080)]
+   [InlineData(0x00, 31, 0x80000000)]
+   [InlineData(0x80, 32, 0x0000000100000080)]
+   [InlineData(0x00, 63, 0x8000000000000000)]
+   public void SetBit_On_Double_Sets_Correct_Bit(ulong value, int bitToSet, ulong expected)
+   {
+      var result = value.BitwiseToDouble().SetBit((byte) bitToSet);
+      Assert.Equal(expected.BitwiseToDouble(), result);
    }
 
    #endregion

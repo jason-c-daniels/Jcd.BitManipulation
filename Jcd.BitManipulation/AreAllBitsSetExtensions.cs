@@ -2,6 +2,14 @@
 
 using System.Runtime.CompilerServices;
 
+// ReSharper disable MemberCanBePrivate.Global
+// ReSharper disable UnusedMember.Global
+// ReSharper disable UnusedMember.Local
+// ReSharper disable UnusedVariable
+// ReSharper disable UnusedType.Global
+// ReSharper disable UnusedMethodReturnValue.Global
+// ReSharper disable UnusedMemberInSuper.Global
+
 #endregion
 
 namespace Jcd.BitManipulation;
@@ -121,6 +129,36 @@ public static class AreAllBitsSetExtensions
    /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool AreAllBitsSet(this sbyte data, BitMask bitmask)
+   {
+      return data.ReadBits(0, bitmask) == bitmask;
+   }
+
+   /// <summary>
+   /// Tests if all of the bits from the bitmask are set on a <see cref="float" />.
+   /// </summary>
+   /// <param name="data">The data to inspect.</param>
+   /// <param name="bitmask">the bits to test.</param>
+   /// <returns>True if all of the bits from the bitmask were set.</returns>
+   /// <remarks>
+   /// NB: Only the lowest 8 bits of the bitmask will be used.
+   /// </remarks>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static bool AreAllBitsSet(this float data, BitMask bitmask)
+   {
+      return data.ReadBits(0, bitmask) == bitmask;
+   }
+
+   /// <summary>
+   /// Tests if all of the bits from the bitmask are set on a <see cref="double" />.
+   /// </summary>
+   /// <param name="data">The data to inspect.</param>
+   /// <param name="bitmask">the bits to test.</param>
+   /// <returns>True if all of the bits from the bitmask were set.</returns>
+   /// <remarks>
+   /// NB: Only the lowest 8 bits of the bitmask will be used.
+   /// </remarks>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static bool AreAllBitsSet(this double data, BitMask bitmask)
    {
       return data.ReadBits(0, bitmask) == bitmask;
    }

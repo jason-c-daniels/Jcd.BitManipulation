@@ -1,8 +1,14 @@
-// ReSharper disable MemberCanBePrivate.Global
-
 #region
 
 using System.Runtime.CompilerServices;
+
+// ReSharper disable MemberCanBePrivate.Global
+// ReSharper disable UnusedMember.Global
+// ReSharper disable UnusedMember.Local
+// ReSharper disable UnusedVariable
+// ReSharper disable UnusedType.Global
+// ReSharper disable UnusedMethodReturnValue.Global
+// ReSharper disable UnusedMemberInSuper.Global
 
 #endregion
 
@@ -123,6 +129,34 @@ public static class StoreBitsExtensions
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ulong StoreBits(this ulong value, ulong source, int offset, int size)
+   {
+      return value.StoreBits(source, offset, BitMask.FromRange(offset, size));
+   }
+
+   /// <summary>
+   /// Stores a value at the specified bit location within the variable.
+   /// </summary>
+   /// <param name="value">The value to be modified.</param>
+   /// <param name="source">The value to be stored at the bit location.</param>
+   /// <param name="offset">The bit location to store the value.</param>
+   /// <param name="size">The bit size of the value.</param>
+   /// <returns>The modified value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static float StoreBits(this float value, uint source, int offset, int size)
+   {
+      return value.StoreBits(source, offset, BitMask.FromRange(offset, size));
+   }
+
+   /// <summary>
+   /// Stores a value at the specified bit location within the variable.
+   /// </summary>
+   /// <param name="value">The value to be modified.</param>
+   /// <param name="source">The value to be stored at the bit location.</param>
+   /// <param name="offset">The bit location to store the value.</param>
+   /// <param name="size">The bit size of the value.</param>
+   /// <returns>The modified value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static double StoreBits(this double value, ulong source, int offset, int size)
    {
       return value.StoreBits(source, offset, BitMask.FromRange(offset, size));
    }
@@ -275,6 +309,36 @@ public static class StoreBitsExtensions
       return value;
    }
 
+   /// <summary>
+   /// Store a masked set of bits from a value to an offset in the destination
+   /// The mask must apply to the destination bits.
+   /// </summary>
+   /// <param name="value">the destination for the stored bits</param>
+   /// <param name="source">the source of the bits to store</param>
+   /// <param name="offset">the destination offset of where to store the bits</param>
+   /// <param name="mask">the mask of which bits to store</param>
+   /// <returns>The modified value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static float StoreBits(this float value, uint source, int offset, BitMask mask)
+   {
+      return value.BitwiseToUInt32().StoreBits(source, offset, mask).BitwiseToSingle();
+   }
+
+   /// <summary>
+   /// Store a masked set of bits from a value to an offset in the destination
+   /// The mask must apply to the destination bits.
+   /// </summary>
+   /// <param name="value">the destination for the stored bits</param>
+   /// <param name="source">the source of the bits to store</param>
+   /// <param name="offset">the destination offset of where to store the bits</param>
+   /// <param name="mask">the mask of which bits to store</param>
+   /// <returns>The modified value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static double StoreBits(this double value, ulong source, int offset, BitMask mask)
+   {
+      return value.BitwiseToUInt64().StoreBits(source, offset, mask).BitwiseToDouble();
+   }
+
    #endregion
 
    #region single bit operations
@@ -421,6 +485,32 @@ public static class StoreBitsExtensions
                            , offset
                            , 1
                             );
+   }
+
+   /// <summary>
+   /// Store a single bit at the specified offset.
+   /// </summary>
+   /// <param name="value">The value to be modified.</param>
+   /// <param name="bit">The bit value to set</param>
+   /// <param name="offset">the offset of the bit to write</param>
+   /// <returns>The modified value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static float StoreBit(this float value, bool bit, int offset)
+   {
+      return value.BitwiseToUInt32().StoreBit(bit, offset).BitwiseToSingle();
+   }
+
+   /// <summary>
+   /// Store a single bit at the specified offset.
+   /// </summary>
+   /// <param name="value">The value to be modified.</param>
+   /// <param name="bit">The bit value to set</param>
+   /// <param name="offset">the offset of the bit to write</param>
+   /// <returns>The modified value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static double StoreBit(this double value, bool bit, int offset)
+   {
+      return value.BitwiseToUInt64().StoreBit(bit, offset).BitwiseToDouble();
    }
 
    #endregion

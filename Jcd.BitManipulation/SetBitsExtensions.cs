@@ -2,6 +2,14 @@
 
 using System.Runtime.CompilerServices;
 
+// ReSharper disable MemberCanBePrivate.Global
+// ReSharper disable UnusedMember.Global
+// ReSharper disable UnusedMember.Local
+// ReSharper disable UnusedVariable
+// ReSharper disable UnusedType.Global
+// ReSharper disable UnusedMethodReturnValue.Global
+// ReSharper disable UnusedMemberInSuper.Global
+
 #endregion
 
 namespace Jcd.BitManipulation;
@@ -117,6 +125,32 @@ public static class SetBitsExtensions
       return value.SetBits(BitMask.FromRange(offset, size));
    }
 
+   /// <summary>
+   /// Sets all specified bits to "on"
+   /// </summary>
+   /// <param name="value">The value to be modified.</param>
+   /// <param name="offset">The bit location to store the value.</param>
+   /// <param name="size">The number of bits to set on.</param>
+   /// <returns>The modified value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static float SetBits(this float value, int offset = 0, int size = 32)
+   {
+      return value.SetBits(BitMask.FromRange(offset, size));
+   }
+
+   /// <summary>
+   /// Sets all specified bits to "on"
+   /// </summary>
+   /// <param name="value">The value to be modified.</param>
+   /// <param name="offset">The bit location to store the value.</param>
+   /// <param name="size">The number of bits to set on.</param>
+   /// <returns>The modified value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static double SetBits(this double value, int offset = 0, int size = 64)
+   {
+      return value.SetBits(BitMask.FromRange(offset, size));
+   }
+
    #endregion
 
    #region Single bit operations
@@ -213,6 +247,30 @@ public static class SetBitsExtensions
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ulong SetBit(this ulong value, int offset)
+   {
+      return value.SetBits(BitMask.FromSingleBit(offset));
+   }
+
+   /// <summary>
+   /// Sets specified bit to "on"
+   /// </summary>
+   /// <param name="value">The value to be modified.</param>
+   /// <param name="offset">The offset of the bit to set.</param>
+   /// <returns>The modified value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static float SetBit(this float value, int offset)
+   {
+      return value.SetBits(BitMask.FromSingleBit(offset));
+   }
+
+   /// <summary>
+   /// Sets specified bit to "on"
+   /// </summary>
+   /// <param name="value">The value to be modified.</param>
+   /// <param name="offset">The offset of the bit to set.</param>
+   /// <returns>The modified value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static double SetBit(this double value, int offset)
    {
       return value.SetBits(BitMask.FromSingleBit(offset));
    }
@@ -315,6 +373,30 @@ public static class SetBitsExtensions
    public static ulong SetBits(this ulong value, BitMask mask)
    {
       return value | mask.Bits;
+   }
+
+   /// <summary>
+   /// Sets all specified bits to "on"
+   /// </summary>
+   /// <param name="value">The value to be modified.</param>
+   /// <param name="mask">bits to set.</param>
+   /// <returns>The modified value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static float SetBits(this float value, BitMask mask)
+   {
+      return value.BitwiseToUInt32().SetBits(mask).BitwiseToSingle();
+   }
+
+   /// <summary>
+   /// Sets all specified bits to "on"
+   /// </summary>
+   /// <param name="value">The value to be modified.</param>
+   /// <param name="mask">bits to set.</param>
+   /// <returns>The modified value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static double SetBits(this double value, BitMask mask)
+   {
+      return value.BitwiseToUInt64().SetBits(mask).BitwiseToDouble();
    }
 
    #endregion

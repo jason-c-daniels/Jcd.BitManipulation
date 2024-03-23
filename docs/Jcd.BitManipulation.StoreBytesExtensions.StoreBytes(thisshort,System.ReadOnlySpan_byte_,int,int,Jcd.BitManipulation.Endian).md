@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[StoreBytesExtensions](Jcd.BitManipulation.StoreBytesExtensions.md 'Jcd.BitManipulation.StoreBytesExtensions')
 
 ## StoreBytesExtensions.StoreBytes(this short, ReadOnlySpan<byte>, int, int, Endian) Method
@@ -40,5 +41,6 @@ The number of bytes from the source, to store. -1 means all bytes.
 The endianness of the byte indexing within the value.
 
 #### Returns
+
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 The modified value.

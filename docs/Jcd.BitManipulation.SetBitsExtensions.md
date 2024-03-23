@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation')
 
 ## SetBitsExtensions Class
@@ -13,6 +14,8 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 | Methods | |
 | :--- | :--- |
 | [SetBit(this byte, int)](Jcd.BitManipulation.SetBitsExtensions.SetBit(thisbyte,int).md 'Jcd.BitManipulation.SetBitsExtensions.SetBit(this byte, int)') | Sets specified bit to "on" |
+| [SetBit(this double, int)](Jcd.BitManipulation.SetBitsExtensions.SetBit(thisdouble,int).md 'Jcd.BitManipulation.SetBitsExtensions.SetBit(this double, int)') | Sets specified bit to "on" |
+| [SetBit(this float, int)](Jcd.BitManipulation.SetBitsExtensions.SetBit(thisfloat,int).md 'Jcd.BitManipulation.SetBitsExtensions.SetBit(this float, int)') | Sets specified bit to "on" |
 | [SetBit(this int, int)](Jcd.BitManipulation.SetBitsExtensions.SetBit(thisint,int).md 'Jcd.BitManipulation.SetBitsExtensions.SetBit(this int, int)') | Sets specified bit to "on" |
 | [SetBit(this long, int)](Jcd.BitManipulation.SetBitsExtensions.SetBit(thislong,int).md 'Jcd.BitManipulation.SetBitsExtensions.SetBit(this long, int)') | Sets specified bit to "on" |
 | [SetBit(this sbyte, int)](Jcd.BitManipulation.SetBitsExtensions.SetBit(thissbyte,int).md 'Jcd.BitManipulation.SetBitsExtensions.SetBit(this sbyte, int)') | Sets specified bit to "on" |
@@ -22,6 +25,10 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 | [SetBit(this ushort, int)](Jcd.BitManipulation.SetBitsExtensions.SetBit(thisushort,int).md 'Jcd.BitManipulation.SetBitsExtensions.SetBit(this ushort, int)') | Sets specified bit to "on" |
 | [SetBits(this byte, int, int)](Jcd.BitManipulation.SetBitsExtensions.SetBits(thisbyte,int,int).md 'Jcd.BitManipulation.SetBitsExtensions.SetBits(this byte, int, int)') | Sets all specified bits to "on" |
 | [SetBits(this byte, BitMask)](Jcd.BitManipulation.SetBitsExtensions.SetBits(thisbyte,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.SetBitsExtensions.SetBits(this byte, Jcd.BitManipulation.BitMask)') | Sets all specified bits to "on" |
+| [SetBits(this double, int, int)](Jcd.BitManipulation.SetBitsExtensions.SetBits(thisdouble,int,int).md 'Jcd.BitManipulation.SetBitsExtensions.SetBits(this double, int, int)') | Sets all specified bits to "on" |
+| [SetBits(this double, BitMask)](Jcd.BitManipulation.SetBitsExtensions.SetBits(thisdouble,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.SetBitsExtensions.SetBits(this double, Jcd.BitManipulation.BitMask)') | Sets all specified bits to "on" |
+| [SetBits(this float, int, int)](Jcd.BitManipulation.SetBitsExtensions.SetBits(thisfloat,int,int).md 'Jcd.BitManipulation.SetBitsExtensions.SetBits(this float, int, int)') | Sets all specified bits to "on" |
+| [SetBits(this float, BitMask)](Jcd.BitManipulation.SetBitsExtensions.SetBits(thisfloat,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.SetBitsExtensions.SetBits(this float, Jcd.BitManipulation.BitMask)') | Sets all specified bits to "on" |
 | [SetBits(this int, int, int)](Jcd.BitManipulation.SetBitsExtensions.SetBits(thisint,int,int).md 'Jcd.BitManipulation.SetBitsExtensions.SetBits(this int, int, int)') | Sets all specified bits to "on" |
 | [SetBits(this int, BitMask)](Jcd.BitManipulation.SetBitsExtensions.SetBits(thisint,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.SetBitsExtensions.SetBits(this int, Jcd.BitManipulation.BitMask)') | Sets all specified bits to "on" |
 | [SetBits(this long, int, int)](Jcd.BitManipulation.SetBitsExtensions.SetBits(thislong,int,int).md 'Jcd.BitManipulation.SetBitsExtensions.SetBits(this long, int, int)') | Sets all specified bits to "on" |

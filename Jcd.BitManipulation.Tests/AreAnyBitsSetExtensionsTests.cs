@@ -87,4 +87,24 @@ public class AreAnyBitsSetExtensionsTests
    {
       Assert.Equal(expected, data.AreAnyBitsSet(mask));
    }
+
+   [Theory]
+   [InlineData(0,     ulong.MaxValue, false)]
+   [InlineData(0b11,  ulong.MaxValue, true)]
+   [InlineData(0b100, 0b10,           false)]
+   [InlineData(0b011, 0b10,           true)]
+   public void AreAnyBits_On_A_Float_Returns_The_Expected_Result(uint data, ulong mask, bool expected)
+   {
+      Assert.Equal(expected, data.BitwiseToSingle().AreAnyBitsSet(mask));
+   }
+
+   [Theory]
+   [InlineData(0,     ulong.MaxValue, false)]
+   [InlineData(0b11,  ulong.MaxValue, true)]
+   [InlineData(0b100, 0b10,           false)]
+   [InlineData(0b011, 0b10,           true)]
+   public void AreAnyBits_On_A_Double_Returns_The_Expected_Result(ulong data, ulong mask, bool expected)
+   {
+      Assert.Equal(expected, data.BitwiseToDouble().AreAnyBitsSet(mask));
+   }
 }

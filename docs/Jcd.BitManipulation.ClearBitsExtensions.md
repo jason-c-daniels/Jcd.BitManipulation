@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation')
 
 ## ClearBitsExtensions Class
@@ -13,6 +14,8 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 | Methods | |
 | :--- | :--- |
 | [ClearBit(this byte, int)](Jcd.BitManipulation.ClearBitsExtensions.ClearBit(thisbyte,int).md 'Jcd.BitManipulation.ClearBitsExtensions.ClearBit(this byte, int)') | Sets bit to "off" and returns the modified value. |
+| [ClearBit(this double, int)](Jcd.BitManipulation.ClearBitsExtensions.ClearBit(thisdouble,int).md 'Jcd.BitManipulation.ClearBitsExtensions.ClearBit(this double, int)') | Sets bit to "off" and returns the modified value. |
+| [ClearBit(this float, int)](Jcd.BitManipulation.ClearBitsExtensions.ClearBit(thisfloat,int).md 'Jcd.BitManipulation.ClearBitsExtensions.ClearBit(this float, int)') | Sets bit to "off" and returns the modified value. |
 | [ClearBit(this int, int)](Jcd.BitManipulation.ClearBitsExtensions.ClearBit(thisint,int).md 'Jcd.BitManipulation.ClearBitsExtensions.ClearBit(this int, int)') | Sets bit to "off" and returns the modified value. |
 | [ClearBit(this long, int)](Jcd.BitManipulation.ClearBitsExtensions.ClearBit(thislong,int).md 'Jcd.BitManipulation.ClearBitsExtensions.ClearBit(this long, int)') | Sets bit to "off" and returns the modified value. |
 | [ClearBit(this sbyte, int)](Jcd.BitManipulation.ClearBitsExtensions.ClearBit(thissbyte,int).md 'Jcd.BitManipulation.ClearBitsExtensions.ClearBit(this sbyte, int)') | Sets bit to "off" and returns the modified value. |
@@ -22,6 +25,10 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 | [ClearBit(this ushort, int)](Jcd.BitManipulation.ClearBitsExtensions.ClearBit(thisushort,int).md 'Jcd.BitManipulation.ClearBitsExtensions.ClearBit(this ushort, int)') | Sets bit to "off" and returns the modified value. |
 | [ClearBits(this byte, int, int)](Jcd.BitManipulation.ClearBitsExtensions.ClearBits(thisbyte,int,int).md 'Jcd.BitManipulation.ClearBitsExtensions.ClearBits(this byte, int, int)') | Sets all specified bits to "off" and returns the modified value. |
 | [ClearBits(this byte, BitMask)](Jcd.BitManipulation.ClearBitsExtensions.ClearBits(thisbyte,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.ClearBitsExtensions.ClearBits(this byte, Jcd.BitManipulation.BitMask)') | Sets all bits from a provided mask to "off" and returns the modified value. |
+| [ClearBits(this double, int, int)](Jcd.BitManipulation.ClearBitsExtensions.ClearBits(thisdouble,int,int).md 'Jcd.BitManipulation.ClearBitsExtensions.ClearBits(this double, int, int)') | Sets all specified bits to "off" and returns the modified value. |
+| [ClearBits(this double, BitMask)](Jcd.BitManipulation.ClearBitsExtensions.ClearBits(thisdouble,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.ClearBitsExtensions.ClearBits(this double, Jcd.BitManipulation.BitMask)') | Sets all bits from a provided mask to "off" and returns the modified value. |
+| [ClearBits(this float, int, int)](Jcd.BitManipulation.ClearBitsExtensions.ClearBits(thisfloat,int,int).md 'Jcd.BitManipulation.ClearBitsExtensions.ClearBits(this float, int, int)') | Sets all specified bits to "off" and returns the modified value. |
+| [ClearBits(this float, BitMask)](Jcd.BitManipulation.ClearBitsExtensions.ClearBits(thisfloat,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.ClearBitsExtensions.ClearBits(this float, Jcd.BitManipulation.BitMask)') | Sets all bits from a provided mask to "off" and returns the modified value. |
 | [ClearBits(this int, int, int)](Jcd.BitManipulation.ClearBitsExtensions.ClearBits(thisint,int,int).md 'Jcd.BitManipulation.ClearBitsExtensions.ClearBits(this int, int, int)') | Sets all specified bits to "off" and returns the modified value. |
 | [ClearBits(this int, BitMask)](Jcd.BitManipulation.ClearBitsExtensions.ClearBits(thisint,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.ClearBitsExtensions.ClearBits(this int, Jcd.BitManipulation.BitMask)') | Sets all bits from a provided mask to "off" and returns the modified value. |
 | [ClearBits(this long, int, int)](Jcd.BitManipulation.ClearBitsExtensions.ClearBits(thislong,int,int).md 'Jcd.BitManipulation.ClearBitsExtensions.ClearBits(this long, int, int)') | Sets all specified bits to "off" and returns the modified value. |

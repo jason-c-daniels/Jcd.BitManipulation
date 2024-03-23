@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ClearBitsExtensions](Jcd.BitManipulation.ClearBitsExtensions.md 'Jcd.BitManipulation.ClearBitsExtensions')
 
 ## ClearBitsExtensions.ClearBits(this uint, BitMask) Method
@@ -22,5 +23,6 @@ The value to be modified.
 the bit mask of the bits to clear.
 
 #### Returns
+
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 The modified value.

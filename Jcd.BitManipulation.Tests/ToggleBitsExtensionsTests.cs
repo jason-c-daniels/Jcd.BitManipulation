@@ -108,6 +108,31 @@ public class ToggleBitsExtensionsTests
       Assert.Equal(expected, result);
    }
 
+   [Theory]
+   [InlineData(0b11111111,                         0,  2, 0b11111100)] // toggle lower 2 bits
+   [InlineData(0b11111111,                         4,  2, 0b11001111)] // toggle middle 2 bits of lower byte
+   [InlineData(0b11111111,                         6,  2, 0b00111111)] // toggle upper 2 bits of lower byte
+   [InlineData(0b111111111111,                     8,  2, 0b110011111111)]
+   [InlineData(0b11111111111111111111111111111111, 26, 2, 0b11110011111111111111111111111111)]
+   public void ToggleBits_On_Single_Toggles_The_Correct_Bits(uint value, int offset, int size, uint expected)
+   {
+      var result = value.BitwiseToSingle().ToggleBits((byte) offset, (byte) size);
+      Assert.Equal(expected.BitwiseToSingle(), result);
+   }
+
+   [Theory]
+   [InlineData(0b11111111,                             0,  2, 0b11111100)] // toggle lower 2 bits
+   [InlineData(0b11111111,                             4,  2, 0b11001111)] // toggle middle 2 bits of lower byte
+   [InlineData(0b11111111,                             6,  2, 0b00111111)] // toggle upper 2 bits of lower byte
+   [InlineData(0b111111111111,                         8,  2, 0b110011111111)]
+   [InlineData(0b00111111111111111111111111111111,     26, 2, 0b00110011111111111111111111111111)]
+   [InlineData(0b111111111111111111111111111111111111, 32, 2, 0b110011111111111111111111111111111111)]
+   public void ToggleBits_On_Double_Toggles_The_Correct_Bits(ulong value, int offset, int size, ulong expected)
+   {
+      var result = value.BitwiseToDouble().ToggleBits((byte) offset, (byte) size);
+      Assert.Equal(expected.BitwiseToDouble(), result);
+   }
+
    #endregion
 
    #region single bit tests
@@ -203,6 +228,29 @@ public class ToggleBitsExtensionsTests
    {
       var result = value.ToggleBit((byte) bitToToggle);
       Assert.Equal(expected, result);
+   }
+
+   [Theory]
+   [InlineData(0xFFFFFFFF, 0,  0xFFFFFFFE)]
+   [InlineData(0xFFFFFFFF, 4,  0xFFFFFFEF)]
+   [InlineData(0xFFFFFFFF, 15, 0xFFFF7FFF)]
+   [InlineData(0xFFFFFFFF, 31, 0x7FFFFFFF)]
+   public void ToggleBit_On_Single_Toggles_Correct_Bit(uint value, int bitToToggle, uint expected)
+   {
+      var result = value.BitwiseToSingle().ToggleBit((byte) bitToToggle);
+      Assert.Equal(expected.BitwiseToSingle(), result);
+   }
+
+   [Theory]
+   [InlineData(0xFFFFFFFFFFFFFFFF, 0,  0xFFFFFFFFFFFFFFFE)]
+   [InlineData(0xFFFFFFFFFFFFFFFF, 4,  0xFFFFFFFFFFFFFFEF)]
+   [InlineData(0xFFFFFFFFFFFFFFFF, 15, 0xFFFFFFFFFFFF7FFF)]
+   [InlineData(0xFFFFFFFFFFFFFFFF, 31, 0xFFFFFFFF7FFFFFFF)]
+   [InlineData(0xFFFFFFFFFFFFFFFF, 63, 0x7FFFFFFFFFFFFFFF)]
+   public void ToggleBit_On_Double_Toggles_Correct_Bit(ulong value, int bitToToggle, ulong expected)
+   {
+      var result = value.BitwiseToDouble().ToggleBit((byte) bitToToggle);
+      Assert.Equal(expected.BitwiseToDouble(), result);
    }
 
    #endregion
@@ -325,6 +373,38 @@ public class ToggleBitsExtensionsTests
       var mask = new BitMask(maskValue);
       var result = initialValue.ToggleBits(mask);
       Assert.Equal(expected, result);
+   }
+
+   [Theory]
+   [InlineData(0b11111111,                         0b0000110,                          0b11111001)]
+   [InlineData(0b10111111,                         0b0000100,                          0b10111011)]
+   [InlineData(0b1111111111111111,                 0b0100000000000110,                 0b1011111111111001)]
+   [InlineData(0b1111111110111111,                 0b0100000000000100,                 0b1011111110111011)]
+   [InlineData(0b11111111111111111111111111111111, 0b00100001000000000100000000000110, 0b11011110111111111011111111111001)]
+   public void ToggleBits_For_Single_When_Given_A_Mask_Directly_Toggles_Only_The_Specified_Bits(uint initialValue, uint maskValue, uint expected)
+   {
+      // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
+      var mask = new BitMask(maskValue);
+      var result = initialValue.BitwiseToSingle().ToggleBits(mask);
+      Assert.Equal(expected.BitwiseToSingle(), result);
+   }
+
+   [Theory]
+   [InlineData(0b11111111,                         0b0000110,                          0b11111001)]
+   [InlineData(0b10111111,                         0b0000100,                          0b10111011)]
+   [InlineData(0b1111111111111111,                 0b0100000000000110,                 0b1011111111111001)]
+   [InlineData(0b1111111110111111,                 0b0100000000000100,                 0b1011111110111011)]
+   [InlineData(0b11111111111111111111111111111111, 0b00100001000000000100000000000110, 0b11011110111111111011111111111001)]
+   [InlineData(0b1111111111111111111111111111111111111111111111111111111111111111
+             , 0b0000010000000000000000000000000000100001000000000100000000000110
+             , 0b1111101111111111111111111111111111011110111111111011111111111001
+              )]
+   public void ToggleBits_For_Double_When_Given_A_Mask_Directly_Toggles_Only_The_Specified_Bits(ulong initialValue, ulong maskValue, ulong expected)
+   {
+      // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
+      var mask = new BitMask(maskValue);
+      var result = initialValue.BitwiseToDouble().ToggleBits(mask);
+      Assert.Equal(expected.BitwiseToDouble(), result);
    }
 
    #endregion

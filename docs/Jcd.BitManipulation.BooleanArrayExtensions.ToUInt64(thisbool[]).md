@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BooleanArrayExtensions](Jcd.BitManipulation.BooleanArrayExtensions.md 'Jcd.BitManipulation.BooleanArrayExtensions')
 
 ## BooleanArrayExtensions.ToUInt64(this bool[]) Method
@@ -16,5 +17,6 @@ public static ulong ToUInt64(this bool[] bits);
 the array of bools to convert, Least Significant Bit at index 0
 
 #### Returns
+
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 The converted [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')

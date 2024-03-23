@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation')
 
 ## AreNoBitsSetExtensions Class
@@ -13,6 +14,8 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 | Methods | |
 | :--- | :--- |
 | [AreNoBitsSet(this byte, BitMask)](Jcd.BitManipulation.AreNoBitsSetExtensions.AreNoBitsSet(thisbyte,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.AreNoBitsSetExtensions.AreNoBitsSet(this byte, Jcd.BitManipulation.BitMask)') | Tests if none of the bits from the bitmask are set on a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte'). |
+| [AreNoBitsSet(this double, BitMask)](Jcd.BitManipulation.AreNoBitsSetExtensions.AreNoBitsSet(thisdouble,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.AreNoBitsSetExtensions.AreNoBitsSet(this double, Jcd.BitManipulation.BitMask)') | Tests if none of the bits from the bitmask are set on an [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double'). |
+| [AreNoBitsSet(this float, BitMask)](Jcd.BitManipulation.AreNoBitsSetExtensions.AreNoBitsSet(thisfloat,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.AreNoBitsSetExtensions.AreNoBitsSet(this float, Jcd.BitManipulation.BitMask)') | Tests if none of the bits from the bitmask are set on an [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single'). |
 | [AreNoBitsSet(this int, BitMask)](Jcd.BitManipulation.AreNoBitsSetExtensions.AreNoBitsSet(thisint,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.AreNoBitsSetExtensions.AreNoBitsSet(this int, Jcd.BitManipulation.BitMask)') | Tests if none of the bits from the bitmask are set on an [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32'). |
 | [AreNoBitsSet(this long, BitMask)](Jcd.BitManipulation.AreNoBitsSetExtensions.AreNoBitsSet(thislong,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.AreNoBitsSetExtensions.AreNoBitsSet(this long, Jcd.BitManipulation.BitMask)') | Tests if none of the bits from the bitmask are set on a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64'). |
 | [AreNoBitsSet(this sbyte, BitMask)](Jcd.BitManipulation.AreNoBitsSetExtensions.AreNoBitsSet(thissbyte,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.AreNoBitsSetExtensions.AreNoBitsSet(this sbyte, Jcd.BitManipulation.BitMask)') | Tests if none of the bits from the bitmask are set on an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte'). |

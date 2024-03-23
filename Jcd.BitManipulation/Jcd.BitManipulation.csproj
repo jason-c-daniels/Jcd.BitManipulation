@@ -1,10 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
    <PropertyGroup>
-      <TargetFramework>netstandard2.0</TargetFramework>
       <LangVersion>latest</LangVersion>
       <Nullable>disable</Nullable>
       <PackageTags>c# csharp bit manipulation</PackageTags>
+      <DefineConstants Condition="'$(TargetFramework)' == 'netstandard2.0'">$(DefineConstants);SUPPRESS_SINGLE_CONVERSIONS</DefineConstants>
+      <TargetFramework>netstandard2.0</TargetFramework>
    </PropertyGroup>
 
    <ItemGroup>
@@ -26,11 +27,9 @@
       <PackageLicenseExpression>MIT</PackageLicenseExpression>
       <RepositoryUrl>https://github.com/jason-c-daniels/Jcd.BitManipulation</RepositoryUrl>
       <RepositoryType>GitHub</RepositoryType>
-      <PackageVersion>2.4.0</PackageVersion>
-      <AssemblyVersion>2.4.0</AssemblyVersion>
-      <InformationalVersion>2.4.0</InformationalVersion>
-      <FileVersion>2.4.0</FileVersion>
-      <TargetFramework>netstandard2.0</TargetFramework>
+      <AssemblyVersion>3.0.0</AssemblyVersion>
+      <PackageVersion>3.0.0</PackageVersion>
+      <FileVersion>3.0.0</FileVersion>
       <PackageIcon>Jason.C.Daniels.jpg</PackageIcon>
       <PackageReadmeFile>README.md</PackageReadmeFile>
       <SymbolPackageFormat>snupkg</SymbolPackageFormat>      
@@ -55,6 +54,17 @@
       <Content Include="icon\Jason.C.Daniels.jpg" Pack="true" PackagePath="\">
          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
+   </ItemGroup>
+
+   <ItemGroup>
+      <Compile Remove="BitIndexerUInt32.cs"/>
+      <Compile Remove="IBitIndexer.cs"/>
+      <Compile Remove="BigEndianByteIndexerUInt64.cs"/>
+      <Compile Remove="LittleEndianByteIndexerInt32.cs"/>
+      <Compile Remove="LittleEndianByteIndexerUInt32.cs"/>
+      <Compile Remove="ReadBitsExtensions.Int64AndUInt64.cs"/>
+      <Compile Remove="ReadBitsExtensions.Int32AndUInt32.cs"/>
+      <Compile Remove="ReadBitsExtensions.Int16AndUInt16.cs"/>
    </ItemGroup>
 
 </Project>

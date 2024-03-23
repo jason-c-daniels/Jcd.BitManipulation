@@ -3,6 +3,8 @@
 using System;
 using System.Collections.Generic;
 
+using Jcd.BitManipulation.ByteIndexers;
+
 using Xunit;
 
 // ReSharper disable InlineTemporaryVariable
@@ -20,7 +22,7 @@ public class BigEndianByteIndexerUInt64Tests
    [Fact]
    public void Length_Is_SizeOf_UInt64()
    {
-      BigEndianByteIndexerUInt64 sut = 0;
+      BigEndianByteIndexer sut = (ulong) 0;
       Assert.Equal(sizeof(ulong), sut.Length);
    }
 
@@ -31,7 +33,7 @@ public class BigEndianByteIndexerUInt64Tests
    public void Implicit_Conversion_Operators_Round_Trip_Returns_Original_Value(ulong data)
    {
       var expected = data;
-      BigEndianByteIndexerUInt64 sut = expected;
+      BigEndianByteIndexer sut = expected;
       ulong convertedBack = sut;
       Assert.Equal(expected, convertedBack);
    }
@@ -48,7 +50,7 @@ public class BigEndianByteIndexerUInt64Tests
    public void Indexer_Get_Returns_Expected_Value(ulong data, int index, ulong extractedData)
    {
       var expected = extractedData;
-      BigEndianByteIndexerUInt64 sut = data;
+      BigEndianByteIndexer sut = data;
       Assert.Equal(expected, sut[index]);
    }
 
@@ -63,7 +65,7 @@ public class BigEndianByteIndexerUInt64Tests
    [InlineData(0x0808080808080808, 7, 0x78, 0x0808080808080878)]
    public void Indexer_Set_Sets_The_Expected_Value(ulong data, int index, byte dataToSet, ulong expected)
    {
-      BigEndianByteIndexerUInt64 sut = data;
+      BigEndianByteIndexer sut = data;
       sut[index] = dataToSet;
       Assert.Equal(expected, (ulong) sut);
    }
@@ -73,8 +75,13 @@ public class BigEndianByteIndexerUInt64Tests
    [InlineData(sizeof(ulong))]
    public void Indexer_Get_Throws_Exception_When_Index_Is_Out_Of_Range(int index)
    {
-      BigEndianByteIndexerUInt64 sut = 0xFF;
-      Assert.Throws<ArgumentOutOfRangeException>(() => sut[index]);
+      Assert.Throws<ArgumentOutOfRangeException>(() =>
+                                                 {
+                                                    BigEndianByteIndexer sut = 0xFFul;
+
+                                                    return sut[index];
+                                                 }
+                                                );
    }
 
    [Theory]
@@ -82,8 +89,13 @@ public class BigEndianByteIndexerUInt64Tests
    [InlineData(sizeof(ulong))]
    public void Indexer_Set_Throws_Exception_When_Index_Is_Out_Of_Range(int index)
    {
-      BigEndianByteIndexerUInt64 sut = 0xFF;
-      Assert.Throws<ArgumentOutOfRangeException>(() => sut[index] = 0);
+      Assert.Throws<ArgumentOutOfRangeException>(() =>
+                                                 {
+                                                    BigEndianByteIndexer sut = 0xFFul;
+
+                                                    return sut[index] = 0;
+                                                 }
+                                                );
    }
 
    [Theory]
@@ -99,8 +111,26 @@ public class BigEndianByteIndexerUInt64Tests
    [InlineData(0x0807060500000000, 2, 2, 2, 0x06, 0x05)]
    [InlineData(0x0807060F00000000, 3, 1, 1, 0x0F)]
    public void Slice_Returns_Expected_Subset(
-      ulong data, int index, int size, int expectedSize, byte e0, byte e1 = 0, byte e2 = 0, byte e3 = 0, byte e4 = 0, byte e5 = 0, byte e6 = 0, byte e7 = 0
+      ulong data, int index, int size, int expectedArraySize, byte e0, byte e1 = 0, byte e2 = 0, byte e3 = 0, byte e4 = 0, byte e5 = 0, byte e6 = 0, byte e7 = 0
    )
+   {
+      var expected = CreateExpectedArray(expectedArraySize, e0, e1, e2, e3, e4, e5, e6, e7);
+
+      BigEndianByteIndexer sut = data;
+
+      Assert.Equal(expected.ToArray(), sut.Slice(index, size));
+   }
+
+   [Theory]
+   [InlineData(0x6F01010100000000, "6F 01 01 01 00 00 00 00")]
+   [InlineData(0x7F03020100000000, "7F 03 02 01 00 00 00 00")]
+   public void ToString_Returns_Expected_Value(ulong data, string expectedValue)
+   {
+      BigEndianByteIndexer sut = data;
+      Assert.Equal(sut.ToString(), expectedValue);
+   }
+
+   private static List<byte> CreateExpectedArray(int expectedSize, byte e0, byte e1, byte e2, byte e3, byte e4, byte e5, byte e6, byte e7)
    {
       var expected = new List<byte>(new[] { e0 });
       if (expectedSize >= 2)
@@ -118,8 +148,6 @@ public class BigEndianByteIndexerUInt64Tests
       if (expectedSize == 8)
          expected.Add(e7);
 
-      BigEndianByteIndexerUInt64 sut = data;
-
-      Assert.Equal(expected.ToArray(), sut.Slice(index, size));
+      return expected;
    }
 }

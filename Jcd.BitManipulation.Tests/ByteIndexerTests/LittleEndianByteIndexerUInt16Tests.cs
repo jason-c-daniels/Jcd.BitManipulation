@@ -3,6 +3,8 @@
 using System;
 using System.Collections.Generic;
 
+using Jcd.BitManipulation.ByteIndexers;
+
 using Xunit;
 
 // ReSharper disable HeapView.DelegateAllocation
@@ -20,7 +22,7 @@ public class LittleEndianByteIndexerUInt16Tests
    [Fact]
    public void Length_Is_BitSize()
    {
-      LittleEndianByteIndexerUInt16 sut = 0;
+      LittleEndianByteIndexer sut = (ushort) 0;
       Assert.Equal(sizeof(ushort), sut.Length);
    }
 
@@ -32,7 +34,7 @@ public class LittleEndianByteIndexerUInt16Tests
    public void Implicit_Conversion_Operators_Round_Trip_Returns_Original_Value(uint data)
    {
       var expected = (ushort) data;
-      LittleEndianByteIndexerUInt16 sut = expected;
+      LittleEndianByteIndexer sut = expected;
       ushort convertedBack = sut;
       Assert.Equal(expected, convertedBack);
    }
@@ -47,7 +49,7 @@ public class LittleEndianByteIndexerUInt16Tests
    public void Indexer_Get_Returns_Expected_Value(uint data, int index, uint extractedData)
    {
       var expected = (ushort) extractedData;
-      LittleEndianByteIndexerUInt16 sut = (ushort) data;
+      LittleEndianByteIndexer sut = (ushort) data;
       Assert.Equal(expected, sut[index]);
    }
 
@@ -60,7 +62,7 @@ public class LittleEndianByteIndexerUInt16Tests
    [InlineData(0x0303, 0, 0x7F, 0x037F)]
    public void Indexer_Set_Sets_The_Expected_Value(ushort data, int index, byte dataToSet, ushort expected)
    {
-      LittleEndianByteIndexerUInt16 sut = data;
+      LittleEndianByteIndexer sut = data;
       sut[index] = dataToSet;
       Assert.Equal(expected, (ushort) sut);
    }
@@ -70,8 +72,13 @@ public class LittleEndianByteIndexerUInt16Tests
    [InlineData(sizeof(ushort))]
    public void Indexer_Get_Throws_Exception_When_Index_Is_Out_Of_Range(int index)
    {
-      LittleEndianByteIndexerUInt16 sut = 0xFF;
-      Assert.Throws<ArgumentOutOfRangeException>(() => sut[index]);
+      Assert.Throws<ArgumentOutOfRangeException>(() =>
+                                                 {
+                                                    LittleEndianByteIndexer sut = (ushort) 0xFF;
+
+                                                    return sut[index];
+                                                 }
+                                                );
    }
 
    [Theory]
@@ -79,8 +86,13 @@ public class LittleEndianByteIndexerUInt16Tests
    [InlineData(sizeof(ushort))]
    public void Indexer_Set_Throws_Exception_When_Index_Is_Out_Of_Range(int index)
    {
-      LittleEndianByteIndexerUInt16 sut = 0xFF;
-      Assert.Throws<ArgumentOutOfRangeException>(() => sut[index] = 0);
+      Assert.Throws<ArgumentOutOfRangeException>(() =>
+                                                 {
+                                                    LittleEndianByteIndexer sut = (ushort) 0xFF;
+
+                                                    return sut[index] = 0;
+                                                 }
+                                                );
    }
 
    [Theory]
@@ -93,13 +105,29 @@ public class LittleEndianByteIndexerUInt16Tests
    [InlineData(0x01FF, 0, 2, 2, 0xFF, 0x01)]
    [InlineData(0x02FE, 0, 2, 2, 0xFE, 0x02)]
    [InlineData(0x037F, 0, 2, 2, 0x7F, 0x03)]
-   public void Slice_Returns_Expected_Subset(ushort data, int index, int size, int expectedSize, byte e0, byte e1 = 0)
+   public void Slice_Returns_Expected_Subset(ushort data, int index, int size, int expectedArraySize, byte e0, byte e1 = 0)
+   {
+      var expected = CreateExpectedArray(expectedArraySize, e0, e1);
+
+      LittleEndianByteIndexer sut = data;
+      Assert.Equal(expected.ToArray(), sut.Slice(index, size));
+   }
+
+   [Theory]
+   [InlineData(0x6F01, "01 6F")]
+   [InlineData(0x7F03, "03 7F")]
+   public void ToString_Returns_Expected_Value(ushort data, string expectedValue)
+   {
+      LittleEndianByteIndexer sut = data;
+      Assert.Equal(sut.ToString(), expectedValue);
+   }
+
+   private static List<byte> CreateExpectedArray(int expectedSize, byte e0, byte e1)
    {
       var expected = new List<byte>(new[] { e0 });
       if (expectedSize >= 2)
          expected.Add(e1);
 
-      LittleEndianByteIndexerUInt16 sut = data;
-      Assert.Equal(expected.ToArray(), sut.Slice(index, size));
+      return expected;
    }
 }

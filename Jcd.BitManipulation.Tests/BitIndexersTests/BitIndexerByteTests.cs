@@ -3,6 +3,8 @@
 using System.Collections;
 using System.Linq;
 
+using Jcd.BitManipulation.BitIndexers;
+
 using Xunit;
 
 // ReSharper disable HeapView.BoxingAllocation

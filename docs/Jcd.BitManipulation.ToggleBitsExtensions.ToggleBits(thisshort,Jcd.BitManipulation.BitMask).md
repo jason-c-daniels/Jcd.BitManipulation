@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ToggleBitsExtensions](Jcd.BitManipulation.ToggleBitsExtensions.md 'Jcd.BitManipulation.ToggleBitsExtensions')
 
 ## ToggleBitsExtensions.ToggleBits(this short, BitMask) Method
@@ -22,5 +23,6 @@ The value to be modified.
 bits to set.
 
 #### Returns
+
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 The modified value.

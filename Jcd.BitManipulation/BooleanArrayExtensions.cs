@@ -1,8 +1,17 @@
-// ReSharper disable ReplaceSliceWithRangeIndexer
-
 #region
 
 using System.Runtime.CompilerServices;
+
+using Jcd.BitManipulation.BitIndexers;
+
+// ReSharper disable ReplaceSliceWithRangeIndexer
+// ReSharper disable MemberCanBePrivate.Global
+// ReSharper disable UnusedMember.Global
+// ReSharper disable UnusedMember.Local
+// ReSharper disable UnusedVariable
+// ReSharper disable UnusedType.Global
+// ReSharper disable UnusedMethodReturnValue.Global
+// ReSharper disable UnusedMemberInSuper.Global
 
 #endregion
 
@@ -99,6 +108,28 @@ public static class BooleanArrayExtensions
    public static bool[] ToBooleanArray(this long bits)
    {
       return new BitIndexerInt64 { Bits = bits }.Slice(0, BitIndexerUInt64.BitSize);
+   }
+
+   /// <summary>
+   /// Convert a float into an array of bools
+   /// </summary>
+   /// <param name="bits">the long to convert</param>
+   /// <returns>the array. LSB at index 0</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static bool[] ToBooleanArray(this float bits)
+   {
+      return new BitIndexerUInt32 { Bits = bits.BitwiseToUInt32() }.Slice(0, BitIndexerUInt64.BitSize);
+   }
+
+   /// <summary>
+   /// Convert a long into an array of bools
+   /// </summary>
+   /// <param name="bits">the long to convert</param>
+   /// <returns>the array. LSB at index 0</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static bool[] ToBooleanArray(this double bits)
+   {
+      return new BitIndexerUInt64 { Bits = bits.BitwiseToUInt64() }.Slice(0, BitIndexerUInt64.BitSize);
    }
 
    /// <summary>
@@ -219,5 +250,35 @@ public static class BooleanArrayExtensions
          result = result.StoreBit(bits[i], i);
 
       return result;
+   }
+
+   /// <summary>
+   /// Converts an array of bools into a double, discarding any excess bits.
+   /// </summary>
+   /// <param name="bits">the array of bools to convert, LSB at index 0</param>
+   /// <returns>The converted double</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static double ToDouble(this bool[] bits)
+   {
+      ulong result = 0;
+      for (var i = 0; i < bits.Length && i < 64; i++)
+         result = result.StoreBit(bits[i], i);
+
+      return result.BitwiseToDouble();
+   }
+
+   /// <summary>
+   /// Converts an array of bools into a float, discarding any excess bits.
+   /// </summary>
+   /// <param name="bits">the array of bools to convert, LSB at index 0</param>
+   /// <returns>The converted float</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static float ToSingle(this bool[] bits)
+   {
+      uint result = 0;
+      for (var i = 0; i < bits.Length && i < 32; i++)
+         result = result.StoreBit(bits[i], i);
+
+      return result.BitwiseToSingle();
    }
 }

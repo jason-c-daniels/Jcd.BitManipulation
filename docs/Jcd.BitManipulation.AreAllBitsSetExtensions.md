@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation')
 
 ## AreAllBitsSetExtensions Class
@@ -13,6 +14,8 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 | Methods | |
 | :--- | :--- |
 | [AreAllBitsSet(this byte, BitMask)](Jcd.BitManipulation.AreAllBitsSetExtensions.AreAllBitsSet(thisbyte,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.AreAllBitsSetExtensions.AreAllBitsSet(this byte, Jcd.BitManipulation.BitMask)') | Tests if all of the bits from the bitmask are set on a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte'). |
+| [AreAllBitsSet(this double, BitMask)](Jcd.BitManipulation.AreAllBitsSetExtensions.AreAllBitsSet(thisdouble,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.AreAllBitsSetExtensions.AreAllBitsSet(this double, Jcd.BitManipulation.BitMask)') | Tests if all of the bits from the bitmask are set on a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double'). |
+| [AreAllBitsSet(this float, BitMask)](Jcd.BitManipulation.AreAllBitsSetExtensions.AreAllBitsSet(thisfloat,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.AreAllBitsSetExtensions.AreAllBitsSet(this float, Jcd.BitManipulation.BitMask)') | Tests if all of the bits from the bitmask are set on a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single'). |
 | [AreAllBitsSet(this int, BitMask)](Jcd.BitManipulation.AreAllBitsSetExtensions.AreAllBitsSet(thisint,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.AreAllBitsSetExtensions.AreAllBitsSet(this int, Jcd.BitManipulation.BitMask)') | Tests if all of the bits from the bitmask are set on an [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32'). |
 | [AreAllBitsSet(this long, BitMask)](Jcd.BitManipulation.AreAllBitsSetExtensions.AreAllBitsSet(thislong,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.AreAllBitsSetExtensions.AreAllBitsSet(this long, Jcd.BitManipulation.BitMask)') | Tests if all of the bits from the bitmask are set on a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64'). |
 | [AreAllBitsSet(this sbyte, BitMask)](Jcd.BitManipulation.AreAllBitsSetExtensions.AreAllBitsSet(thissbyte,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.AreAllBitsSetExtensions.AreAllBitsSet(this sbyte, Jcd.BitManipulation.BitMask)') | Tests if all of the bits from the bitmask are set on an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte'). |

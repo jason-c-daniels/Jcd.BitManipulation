@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[StoreBitsExtensions](Jcd.BitManipulation.StoreBitsExtensions.md 'Jcd.BitManipulation.StoreBitsExtensions')
 
 ## StoreBitsExtensions.StoreBits(this short, short, int, BitMask) Method
@@ -35,5 +36,6 @@ the destination offset of where to store the bits
 the mask of which bits to store
 
 #### Returns
+
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 The modified value.

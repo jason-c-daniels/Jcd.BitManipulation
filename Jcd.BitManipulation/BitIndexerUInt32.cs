@@ -3,6 +3,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 
 // ReSharper disable HeapView.ObjectAllocation.Evident
@@ -40,7 +41,10 @@ public struct BitIndexerUInt32 : IBitIndexer
    /// <param name="index">the offset of the bit to access.</param>
    public bool this[int index]
    {
+      [MethodImpl(MethodImplOptions.AggressiveInlining)]
       get => Bits.ReadBit(index);
+
+      [MethodImpl(MethodImplOptions.AggressiveInlining)]
       set => Bits = Bits.StoreBit(value, index);
    }
 
@@ -49,6 +53,7 @@ public struct BitIndexerUInt32 : IBitIndexer
    /// </summary>
    /// <param name="bits">the initial value for the indexer's backing store</param>
    /// <returns>A new BitIndexerUInt32</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitIndexerUInt32(uint bits)
    {
       return new BitIndexerUInt32 { Bits = bits };
@@ -59,6 +64,7 @@ public struct BitIndexerUInt32 : IBitIndexer
    /// </summary>
    /// <param name="indexer">the indexer to convert from</param>
    /// <returns>the <see cref="uint" /></returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator uint(BitIndexerUInt32 indexer)
    {
       return indexer.Bits;
@@ -68,6 +74,7 @@ public struct BitIndexerUInt32 : IBitIndexer
    /// Get an enumerator to enumerate the bits with.
    /// </summary>
    /// <returns>The enumerator</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public IEnumerator<bool> GetEnumerator()
    {
       for (var index = 0; index < BitSize; index++)
@@ -89,6 +96,7 @@ public struct BitIndexerUInt32 : IBitIndexer
    /// <param name="start">The starting bit offset</param>
    /// <param name="length">The number of bits to extract</param>
    /// <returns>an array of bools for the subset of bits</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public bool[] Slice(int start, int length)
    {
       var slice = new bool[length];
@@ -102,6 +110,7 @@ public struct BitIndexerUInt32 : IBitIndexer
    /// Format as a bit representation
    /// </summary>
    /// <returns>the bits of the value formatted as 0b0101...1111</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public override string ToString()
    {
       var sb = new StringBuilder();

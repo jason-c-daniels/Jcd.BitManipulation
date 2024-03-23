@@ -33,6 +33,7 @@ public struct LittleEndianByteIndexerInt32 : IByteIndexer
    /// Constructs a <see cref="LittleEndianByteIndexerInt32" /> from an <see cref="int" />.
    /// </summary>
    /// <param name="data"> The initial value of the underlying data.</param>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public LittleEndianByteIndexerInt32(int data = 0)
    {
       Data = data;

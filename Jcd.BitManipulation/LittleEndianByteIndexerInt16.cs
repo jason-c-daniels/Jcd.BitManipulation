@@ -33,6 +33,7 @@ public struct LittleEndianByteIndexerInt16 : IByteIndexer
    /// Constructs a <see cref="LittleEndianByteIndexerInt16" /> from an <see cref="short" />.
    /// </summary>
    /// <param name="data"> The initial value of the underlying data.</param>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public LittleEndianByteIndexerInt16(short data = 0)
    {
       Data = data;
@@ -80,6 +81,7 @@ public struct LittleEndianByteIndexerInt16 : IByteIndexer
    /// <param name="start">The starting bit offset</param>
    /// <param name="length">The number of bits to extract</param>
    /// <returns>an array of bytes for the specified subset</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] Slice(int start, int length)
    {
       var slice = new byte[length];
@@ -114,6 +116,7 @@ public struct LittleEndianByteIndexerInt16 : IByteIndexer
    #region Implementation of IEnumerable
 
    /// <inheritdoc />
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public IEnumerator<byte> GetEnumerator()
    {
       for (var i = 0; i < ByteSize; i++)
@@ -121,6 +124,7 @@ public struct LittleEndianByteIndexerInt16 : IByteIndexer
    }
 
    /// <inheritdoc />
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    IEnumerator IEnumerable.GetEnumerator()
    {
       return GetEnumerator();

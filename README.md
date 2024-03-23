@@ -160,7 +160,8 @@ Below is are list of currently planned changes.
 ### Version 2.4 Released
 
 1. Added `ReadByte` extension methods for `IByteIndexer` derived types.
-2. Added `AggressiveInlining` hints to help boost performance.
+2. Updated all `Slice` methods to prevent possible array index out of bounds.
+3. Added `AggressiveInlining` hints to help boost performance.
 
 ### Version 2.3 Released
 

@@ -60,7 +60,7 @@ If you read the code you'll notice a fair number of abstractions at play. These 
 significant impact on release mode performance. In fact running on at roughly 3.5GHz to 4.0Ghz
 (my CPU auto-scales performance based on load.) doing the 6 chained operations at the end of
 the example below, but on the loop index instead of just zero, 10+e9 times completes in roughly
-830-890ms in Release mode. 10+e6 iterations in debug mode completes in roughly 50-65ms.
+830-890ms in Release mode.
 
 To see how it performs on your system run the code in the Main function of the examples app.
 
@@ -68,17 +68,18 @@ To see how it performs on your system run the code in the Main function of the e
 1,000,000,000 iterations with 6 operations per iteration took 868.58 ms for an average of 14.5 ns per operation.
 ```
 
+Even more extensive performance testing is underway with version 3.0. Read below for details.
+
 ## Upcoming Changes
 
 ### 2.x Summary
 
 - In the rush to get 2.x out the door I missed including Endianness with some of the extension methods
-  and related unit tests. I've found a number of these in my work on 3.0 These fixes will be back ported
-  to 2.x from 3.0 as I find them. They will be released in 2.x well ahead of the 3.0 release.
+  and related unit tests. I've found a number of these in my work on 3.0. Many of these fixes and improvements
+  have already been back ported to 2.x from 3.0. Others will follow as I find them and will be released in
+  2.x well ahead of the 3.0 release.
 
   _You have my sincerest apologies for these oversights._
-
-- Other fixes and improvements will be backported from 3.0 to 2.x as appropriate. (e.g. `AggressiveInlining`).
 
 ### 3.0 Summary
 
@@ -104,7 +105,9 @@ Below is are list of currently planned changes.
 - The `IByteIndexer` and `IBitIndexer` interfaces will go away. I'm not using them internally and using them causes
   boxing allocations. Frequent boxing allocations can consume a lot of heap memory. The intended use case for the
   indexers was at the point where bit/byte level access is **required** (i.e. stack allocated).
-- To the end of making the indexers stack allocated and used in place, the bit and byte indexer types will become
+- For the same reasons as above none of the indexer types will derive from IEnumerable. Instead explicit
+  conversion operators will be provided to and from `Span`s and `Array`s.
+- To the end of enforcing the indexers stack allocated and used in place, the bit and byte indexer types will become
   `ref structs`. This carries some implications such as making them non-viable as fields and async return types.
   That's in keeping with the original intent and a desirable change, from my view. If you need them to remain
   heap allocatable, add an issue or open a dialog with me about your needs.

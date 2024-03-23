@@ -570,7 +570,7 @@ internal static class Program
 
       var finalData = data;
 
-      // read the upper byte 
+      // read the upper byte
       var upperByte = (byte) data.ReadBits(8, 8); // upperByte is now 0b00001111
 
       // write 0b1011 into the upper nybble

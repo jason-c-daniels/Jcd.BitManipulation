@@ -132,16 +132,6 @@ public ref struct LittleEndianByteIndexer
       Data = data;
    }
 
-   /// <summary>
-   /// Constructs a 64 bit <see cref="LittleEndianByteIndexer" /> defaulted to 0.
-   /// </summary>
-   [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public LittleEndianByteIndexer()
-   {
-      Data = 0;
-      ByteSize = sizeof(ulong);
-   }
-
    #endregion
 
    /// <summary>
@@ -151,7 +141,7 @@ public ref struct LittleEndianByteIndexer
    {
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       get;
-   }
+   } = sizeof(ulong);
 
    /// <summary>
    /// The number of bytes indexable by this indexer.

@@ -311,90 +311,90 @@ public class StoreBytesExtensionsTests
    #region StoreBytes - Integral Data Type Tests
 
    [Theory]
-   [MemberData(nameof(UInt64StoreBytes))]
-   public void StoreBytes_On_Double_Returns_Expected_Value(ulong data, int offset, int size, byte[] bytes)
+   [MemberData(nameof(UInt64StoreBytesWithEndian))]
+   public void StoreBytes_On_Double_Returns_Expected_Value(ulong data, int offset, int size, byte[] bytes, Endian endian)
    {
       var expected = data.BitwiseToDouble();
       for (var i = 0; i < size && i + offset < sizeof(ulong); i++)
-         expected = expected.StoreByte(bytes[i], offset + i);
-      var actual = data.BitwiseToDouble().StoreBytes(bytes, offset, size);
+         expected = expected.StoreByte(bytes[i], offset + i, endian);
+      var actual = data.BitwiseToDouble().StoreBytes(bytes, offset, size, endian);
       Assert.Equal(expected, actual);
    }
 
    [Theory]
-   [MemberData(nameof(UInt32StoreBytes))]
-   public void StoreBytes_On_Single_Returns_Expected_Value(uint data, int offset, int size, byte[] bytes)
+   [MemberData(nameof(UInt32StoreBytesWithEndian))]
+   public void StoreBytes_On_Single_Returns_Expected_Value(uint data, int offset, int size, byte[] bytes, Endian endian)
    {
       var expected = data.BitwiseToSingle();
       for (var i = 0; i < size && i + offset < sizeof(uint); i++)
-         expected = expected.StoreByte(bytes[i], offset + i);
-      var actual = data.BitwiseToSingle().StoreBytes(bytes, offset, size);
+         expected = expected.StoreByte(bytes[i], offset + i, endian);
+      var actual = data.BitwiseToSingle().StoreBytes(bytes, offset, size, endian);
       Assert.Equal(expected, actual);
    }
 
    [Theory]
-   [MemberData(nameof(UInt64StoreBytes))]
-   public void StoreBytes_On_UInt64_Returns_Expected_Value(ulong data, int offset, int size, byte[] bytes)
+   [MemberData(nameof(UInt64StoreBytesWithEndian))]
+   public void StoreBytes_On_UInt64_Returns_Expected_Value(ulong data, int offset, int size, byte[] bytes, Endian endian)
    {
       var expected = data;
       for (var i = 0; i < size && i + offset < sizeof(ulong); i++)
-         expected = expected.StoreByte(bytes[i], offset + i);
-      var actual = data.StoreBytes(bytes, offset, size);
+         expected = expected.StoreByte(bytes[i], offset + i, endian);
+      var actual = data.StoreBytes(bytes, offset, size, endian);
       Assert.Equal(expected, actual);
    }
 
    [Theory]
-   [MemberData(nameof(Int64StoreBytes))]
-   public void StoreBytes_On_Int64_Returns_Expected_Value(long data, int offset, int size, byte[] bytes)
+   [MemberData(nameof(Int64StoreBytesWithEndian))]
+   public void StoreBytes_On_Int64_Returns_Expected_Value(long data, int offset, int size, byte[] bytes, Endian endian)
    {
       var expected = data;
       for (var i = 0; i < size && i + offset < sizeof(long); i++)
-         expected = expected.StoreByte(bytes[i], offset + i);
-      var actual = data.StoreBytes(bytes, offset, size);
+         expected = expected.StoreByte(bytes[i], offset + i, endian);
+      var actual = data.StoreBytes(bytes, offset, size, endian);
       Assert.Equal(expected, actual);
    }
 
    [Theory]
-   [MemberData(nameof(UInt32StoreBytes))]
-   public void StoreBytes_On_UInt32_Returns_Expected_Value(uint data, int offset, int size, byte[] bytes)
+   [MemberData(nameof(UInt32StoreBytesWithEndian))]
+   public void StoreBytes_On_UInt32_Returns_Expected_Value(uint data, int offset, int size, byte[] bytes, Endian endian)
    {
       var expected = data;
       for (var i = 0; i < size && i + offset < sizeof(uint); i++)
-         expected = expected.StoreByte(bytes[i], offset + i);
-      var actual = data.StoreBytes(bytes, offset, size);
+         expected = expected.StoreByte(bytes[i], offset + i, endian);
+      var actual = data.StoreBytes(bytes, offset, size, endian);
       Assert.Equal(expected, actual);
    }
 
    [Theory]
-   [MemberData(nameof(Int32StoreBytes))]
-   public void StoreBytes_On_Int32_Returns_Expected_Value(int data, int offset, int size, byte[] bytes)
+   [MemberData(nameof(Int32StoreBytesWithEndian))]
+   public void StoreBytes_On_Int32_Returns_Expected_Value(int data, int offset, int size, byte[] bytes, Endian endian)
    {
       var expected = data;
       for (var i = 0; i < size && i + offset < sizeof(int); i++)
-         expected = expected.StoreByte(bytes[i], offset + i);
-      var actual = data.StoreBytes(bytes, offset, size);
+         expected = expected.StoreByte(bytes[i], offset + i, endian);
+      var actual = data.StoreBytes(bytes, offset, size, endian);
       Assert.Equal(expected, actual);
    }
 
    [Theory]
-   [MemberData(nameof(UInt16StoreBytes))]
-   public void StoreBytes_On_UInt16_Returns_Expected_Value(ushort data, int offset, int size, byte[] bytes)
+   [MemberData(nameof(UInt16StoreBytesWithEndian))]
+   public void StoreBytes_On_UInt16_Returns_Expected_Value(ushort data, int offset, int size, byte[] bytes, Endian endian)
    {
       var expected = data;
       for (var i = 0; i < size && i + offset < sizeof(ushort); i++)
-         expected = expected.StoreByte(bytes[i], offset + i);
-      var actual = data.StoreBytes(bytes, offset, size);
+         expected = expected.StoreByte(bytes[i], offset + i, endian);
+      var actual = data.StoreBytes(bytes, offset, size, endian);
       Assert.Equal(expected, actual);
    }
 
    [Theory]
-   [MemberData(nameof(Int16StoreBytes))]
-   public void StoreBytes_On_Int16_Returns_Expected_Value(short data, int offset, int size, byte[] bytes)
+   [MemberData(nameof(Int16StoreBytesWithEndian))]
+   public void StoreBytes_On_Int16_Returns_Expected_Value(short data, int offset, int size, byte[] bytes, Endian endian)
    {
       var expected = data;
       for (var i = 0; i < size && i + offset < sizeof(short); i++)
-         expected = expected.StoreByte(bytes[i], offset + i);
-      var actual = data.StoreBytes(bytes, offset, size);
+         expected = expected.StoreByte(bytes[i], offset + i, endian);
+      var actual = data.StoreBytes(bytes, offset, size, endian);
       Assert.Equal(expected, actual);
    }
 
@@ -628,6 +628,108 @@ public class StoreBytesExtensionsTests
           , new object[] { (short) 0x0E_00, 1, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB } }
           , new object[] { (short) 0x0E_00, 2, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB } }
           , new object[] { (short) 0x0E_00, 2, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB } }
+         };
+
+   #endregion
+
+   #region DataMember Data Providers With Endian
+
+   public static IEnumerable<object[]> UInt64StoreBytesWithEndian
+      => new List<object[]>
+         {
+            new object[] { 0xFF_00_00_00_00_00_00_00, 0, 2, new byte[] { 0xFF, 0xFE }, Endian.Little }
+          , new object[] { 0xFE_00_00_00_00_00_00_00, 1, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Little }
+          , new object[] { 0xFE_00_00_00_00_00_20_00, 3, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Little }
+          , new object[] { 0xFE_00_00_00_00_00_00_01, 4, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Little }
+          , new object[] { 0xFE_00_00_00_00_00_00_01, 5, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Little }
+          , new object[] { 0xFE_00_00_00_00_00_00_01, 8, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Little }
+          , new object[] { 0xFE_00_00_00_00_00_00_01, 8, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Little }
+          , new object[] { 0xFF_00_00_00_00_00_00_00, 0, 2, new byte[] { 0xFF, 0xFE }, Endian.Big }
+          , new object[] { 0xFE_00_00_00_00_00_00_00, 1, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Big }
+          , new object[] { 0xFE_00_00_00_00_00_20_00, 3, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Big }
+          , new object[] { 0xFE_00_00_00_00_00_00_01, 4, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Big }
+          , new object[] { 0xFE_00_00_00_00_00_00_01, 5, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Big }
+          , new object[] { 0xFE_00_00_00_00_00_00_01, 8, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Big }
+          , new object[] { 0xFE_00_00_00_00_00_00_01, 8, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Big }
+         };
+
+   public static IEnumerable<object[]> Int64StoreBytesWithEndian
+      => new List<object[]>
+         {
+            new object[] { 0x0F_00_00_00_00_00_00_00, 0, 2, new byte[] { 0xFF, 0xFE }, Endian.Little }
+          , new object[] { 0x0E_00_00_00_00_00_00_00, 1, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Little }
+          , new object[] { 0x0E_00_00_00_00_00_20_00, 3, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Little }
+          , new object[] { 0x0E_00_00_00_00_00_00_01, 4, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Little }
+          , new object[] { 0x0E_00_00_00_00_00_00_01, 5, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Little }
+          , new object[] { 0x0E_00_00_00_00_00_00_01, 8, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Little }
+          , new object[] { 0x0E_00_00_00_00_00_00_01, 8, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Little }
+          , new object[] { 0x0F_00_00_00_00_00_00_00, 0, 2, new byte[] { 0xFF, 0xFE }, Endian.Big }
+          , new object[] { 0x0E_00_00_00_00_00_00_00, 1, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Big }
+          , new object[] { 0x0E_00_00_00_00_00_20_00, 3, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Big }
+          , new object[] { 0x0E_00_00_00_00_00_00_01, 4, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Big }
+          , new object[] { 0x0E_00_00_00_00_00_00_01, 5, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Big }
+          , new object[] { 0x0E_00_00_00_00_00_00_01, 8, 4, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Big }
+          , new object[] { 0x0E_00_00_00_00_00_00_01, 8, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Big }
+         };
+
+   public static IEnumerable<object[]> UInt32StoreBytesWithEndian
+      => new List<object[]>
+         {
+            new object[] { 0xFF_00_00_00, 0, 2, new byte[] { 0xFF, 0xFE }, Endian.Little }
+          , new object[] { 0xFE_00_00_00, 1, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Little }
+          , new object[] { 0xFE_00_00_00, 2, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Little }
+          , new object[] { 0xFE_00_00_00, 3, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Little }
+          , new object[] { 0xFE_00_00_00, 4, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Little }
+          , new object[] { 0xFE_00_00_00, 4, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Little }
+          , new object[] { 0xFF_00_00_00, 0, 2, new byte[] { 0xFF, 0xFE }, Endian.Big }
+          , new object[] { 0xFE_00_00_00, 1, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Big }
+          , new object[] { 0xFE_00_00_00, 2, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Big }
+          , new object[] { 0xFE_00_00_00, 3, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Big }
+          , new object[] { 0xFE_00_00_00, 4, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Big }
+          , new object[] { 0xFE_00_00_00, 4, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Big }
+         };
+
+   public static IEnumerable<object[]> Int32StoreBytesWithEndian
+      => new List<object[]>
+         {
+            new object[] { 0x0F_00_00_00, 0, 2, new byte[] { 0xFF, 0xFE }, Endian.Little }
+          , new object[] { 0x0E_00_00_00, 1, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Little }
+          , new object[] { 0x0E_00_00_00, 2, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Little }
+          , new object[] { 0x0E_00_00_00, 3, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Little }
+          , new object[] { 0x0E_00_00_00, 4, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Little }
+          , new object[] { 0x0E_00_00_00, 4, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Little }
+          , new object[] { 0x0F_00_00_00, 0, 2, new byte[] { 0xFF, 0xFE }, Endian.Big }
+          , new object[] { 0x0E_00_00_00, 1, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Big }
+          , new object[] { 0x0E_00_00_00, 2, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Big }
+          , new object[] { 0x0E_00_00_00, 3, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Big }
+          , new object[] { 0x0E_00_00_00, 4, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Big }
+          , new object[] { 0x0E_00_00_00, 4, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB, 0x0C, 0x0D }, Endian.Big }
+         };
+
+   public static IEnumerable<object[]> UInt16StoreBytesWithEndian
+      => new List<object[]>
+         {
+            new object[] { (ushort) 0xFF_00, 0, 2, new byte[] { 0xFF, 0xFE }, Endian.Little }
+          , new object[] { (ushort) 0xFE_00, 1, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Little }
+          , new object[] { (ushort) 0xFE_00, 2, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Little }
+          , new object[] { (ushort) 0xFE_00, 2, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Little }
+          , new object[] { (ushort) 0xFF_00, 0, 2, new byte[] { 0xFF, 0xFE }, Endian.Big }
+          , new object[] { (ushort) 0xFE_00, 1, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Big }
+          , new object[] { (ushort) 0xFE_00, 2, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Big }
+          , new object[] { (ushort) 0xFE_00, 2, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Big }
+         };
+
+   public static IEnumerable<object[]> Int16StoreBytesWithEndian
+      => new List<object[]>
+         {
+            new object[] { (short) 0x0F_00, 0, 2, new byte[] { 0xFF, 0xFE }, Endian.Little }
+          , new object[] { (short) 0x0E_00, 1, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Little }
+          , new object[] { (short) 0x0E_00, 2, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Little }
+          , new object[] { (short) 0x0E_00, 2, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Little }
+          , new object[] { (short) 0x0F_00, 0, 2, new byte[] { 0xFF, 0xFE }, Endian.Big }
+          , new object[] { (short) 0x0E_00, 1, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Big }
+          , new object[] { (short) 0x0E_00, 2, 2, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Big }
+          , new object[] { (short) 0x0E_00, 2, -1, new byte[] { 0xAF, 0xEE, 0xFA, 0xBB }, Endian.Big }
          };
 
    #endregion

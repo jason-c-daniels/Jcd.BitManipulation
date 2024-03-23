@@ -105,13 +105,29 @@ public class LittleEndianByteIndexerUInt16Tests
    [InlineData(0x01FF, 0, 2, 2, 0xFF, 0x01)]
    [InlineData(0x02FE, 0, 2, 2, 0xFE, 0x02)]
    [InlineData(0x037F, 0, 2, 2, 0x7F, 0x03)]
-   public void Slice_Returns_Expected_Subset(ushort data, int index, int size, int expectedSize, byte e0, byte e1 = 0)
+   public void Slice_Returns_Expected_Subset(ushort data, int index, int size, int expectedArraySize, byte e0, byte e1 = 0)
+   {
+      var expected = CreateExpectedArray(expectedArraySize, e0, e1);
+
+      LittleEndianByteIndexer sut = data;
+      Assert.Equal(expected.ToArray(), sut.Slice(index, size));
+   }
+
+   [Theory]
+   [InlineData(0x6F01, "01 6F")]
+   [InlineData(0x7F03, "03 7F")]
+   public void ToString_Returns_Expected_Value(ushort data, string expectedValue)
+   {
+      LittleEndianByteIndexer sut = data;
+      Assert.Equal(sut.ToString(), expectedValue);
+   }
+
+   private static List<byte> CreateExpectedArray(int expectedSize, byte e0, byte e1)
    {
       var expected = new List<byte>(new[] { e0 });
       if (expectedSize >= 2)
          expected.Add(e1);
 
-      LittleEndianByteIndexer sut = data;
-      Assert.Equal(expected.ToArray(), sut.Slice(index, size));
+      return expected;
    }
 }

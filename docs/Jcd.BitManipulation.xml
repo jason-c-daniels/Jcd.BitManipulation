@@ -2012,11 +2012,6 @@
             <param name="data"> The initial value of the underlying data.</param>
             <param name="byteSize">The number of bytes to index</param>
         </member>
-        <member name="M:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.#ctor">
-            <summary>
-            Constructs a 64 bit <see cref="T:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer" /> defaulted to 0.
-            </summary>
-        </member>
         <member name="P:Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.ByteSize">
             <summary>
             The number of bytes this type will index

@@ -144,7 +144,7 @@ public ref struct BigEndianByteIndexer
    {
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       get;
-   }
+   } = sizeof(ulong);
 
    /// <summary>
    /// The number of bytes indexable by this indexer.
@@ -154,7 +154,7 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// The backing store.
    /// </summary>
-   public ulong Data { get; private set; }
+   internal ulong Data { get; private set; }
 
    /// <summary>
    /// Access bytes from the underlying data.

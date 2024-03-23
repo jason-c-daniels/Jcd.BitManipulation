@@ -111,12 +111,21 @@ public class LittleEndianByteIndexerInt64Tests
    [InlineData(0x0000000005060708, 2, 2, 2, 0x06, 0x05)]
    [InlineData(0x000000000F060708, 3, 1, 1, 0x0F)]
    public void Slice_Returns_Expected_Subset(
-      long data, int index, int size, int expectedSize, byte e0, byte e1 = 0, byte e2 = 0, byte e3 = 0, byte e4 = 0, byte e5 = 0, byte e6 = 0, byte e7 = 0
+      long data, int index, int size, int expectedArraySize, byte e0, byte e1 = 0, byte e2 = 0, byte e3 = 0, byte e4 = 0, byte e5 = 0, byte e6 = 0, byte e7 = 0
    )
    {
-      var expected = CreateExpectedArray(expectedSize, e0, e1, e2, e3, e4, e5, e6, e7);
+      var expected = CreateExpectedArray(expectedArraySize, e0, e1, e2, e3, e4, e5, e6, e7);
       LittleEndianByteIndexer sut = data;
       Assert.Equal(expected.ToArray(), sut.Slice(index, size));
+   }
+
+   [Theory]
+   [InlineData(0x6F01010F04030102, "02 01 03 04 0F 01 01 6F")]
+   [InlineData(0x7F03020F0708090A, "0A 09 08 07 0F 02 03 7F")]
+   public void ToString_Returns_Expected_Value(long data, string expectedValue)
+   {
+      LittleEndianByteIndexer sut = data;
+      Assert.Equal(sut.ToString(), expectedValue);
    }
 
    private static List<byte> CreateExpectedArray(int expectedSize, byte e0, byte e1, byte e2, byte e3, byte e4, byte e5, byte e6, byte e7)

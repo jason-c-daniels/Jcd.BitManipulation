@@ -84,9 +84,13 @@ public struct BigEndianByteIndexerInt64 : IByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] Slice(int start, int length)
    {
-      var slice = new byte[length];
-      for (var i = 0; i < length; i++)
-         slice[i] = this[i + start];
+      var len = length + start > ByteSize
+                   ? ByteSize - start
+                   : length;
+      var slice = new byte[len];
+      var j = start;
+      for (var i = 0; i < len; i++, j++)
+         slice[i] = Data.ReadByte(j, Endian.Big);
 
       return slice;
    }

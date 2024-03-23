@@ -100,9 +100,13 @@ public struct BitIndexerInt32 : IBitIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public bool[] Slice(int start, int length)
    {
-      var slice = new bool[length];
-      for (var i = 0; i < length; i++)
-         slice[i] = this[i + start];
+      var len = length + start > BitSize
+                   ? BitSize - start
+                   : length;
+      var slice = new bool[len];
+      var j = start;
+      for (var i = 0; i < len; i++, j++)
+         slice[i] = Bits.ReadBit(j);
 
       return slice;
    }

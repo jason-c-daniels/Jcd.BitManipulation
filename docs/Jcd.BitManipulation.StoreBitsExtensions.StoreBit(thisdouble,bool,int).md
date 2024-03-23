@@ -29,5 +29,6 @@ The bit value to set
 the offset of the bit to write
 
 #### Returns
+
 [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 The modified value.

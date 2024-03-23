@@ -68,8 +68,13 @@ public class BigEndianByteIndexerSingleTests
    [InlineData(sizeof(float))]
    public void Indexer_Get_Throws_Exception_When_Index_Is_Out_Of_Range(int index)
    {
-      BigEndianByteIndexer sut = 0xFFu.BitwiseToSingle();
-      Assert.Throws<ArgumentOutOfRangeException>(() => sut[index]);
+      Assert.Throws<ArgumentOutOfRangeException>(() =>
+                                                 {
+                                                    BigEndianByteIndexer sut = 0xFFu.BitwiseToSingle();
+
+                                                    return sut[index];
+                                                 }
+                                                );
    }
 
    [Theory]
@@ -77,8 +82,13 @@ public class BigEndianByteIndexerSingleTests
    [InlineData(sizeof(float))]
    public void Indexer_Set_Throws_Exception_When_Index_Is_Out_Of_Range(int index)
    {
-      BigEndianByteIndexer sut = 0xFFu.BitwiseToSingle();
-      Assert.Throws<ArgumentOutOfRangeException>(() => sut[index] = 0);
+      Assert.Throws<ArgumentOutOfRangeException>(() =>
+                                                 {
+                                                    BigEndianByteIndexer sut = 0xFFu.BitwiseToSingle();
+
+                                                    return sut[index] = 0;
+                                                 }
+                                                );
    }
 
    [Theory]

@@ -160,11 +160,10 @@ public class StoreBytesExtensionsTests
    [InlineData(0, (byte) 0xFC, 2, 0x00_00_FC_00_00_00_00_00)]
    [InlineData(0, (byte) 0xFB, 1, 0x00_FB_00_00_00_00_00_00)]
    [InlineData(0, (byte) 0xFA, 0, 0xFA_00_00_00_00_00_00_00)]
-   public void StoreByte_On_BigEndianByteIndexerUInt64_Returns_Expected_Value(ulong rawValue, byte data, int offset, ulong rawExpected)
+   public void StoreByte_On_BigEndianByteIndexerUInt64_Returns_Expected_Value(ulong rawValue, byte data, int offset, ulong expected)
    {
-      BigEndianByteIndexer expected = rawExpected;
       BigEndianByteIndexer value = rawValue;
-      Assert.Equal(expected, value.StoreByte(data, offset));
+      Assert.Equal(expected, (ulong) value.StoreByte(data, offset));
    }
 
    [Theory]
@@ -180,7 +179,7 @@ public class StoreBytesExtensionsTests
    {
       BigEndianByteIndexer expected = rawExpected;
       BigEndianByteIndexer value = rawValue;
-      Assert.Equal(expected, value.StoreByte(data, offset));
+      Assert.Equal(expected.Data, value.StoreByte(data, offset).Data);
    }
 
    [Theory]
@@ -192,7 +191,7 @@ public class StoreBytesExtensionsTests
    {
       BigEndianByteIndexer expected = rawExpected;
       BigEndianByteIndexer value = rawValue;
-      Assert.Equal(expected, value.StoreByte(data, offset));
+      Assert.Equal(expected.Data, value.StoreByte(data, offset).Data);
    }
 
    [Theory]
@@ -204,7 +203,7 @@ public class StoreBytesExtensionsTests
    {
       BigEndianByteIndexer expected = rawExpected;
       BigEndianByteIndexer value = rawValue;
-      Assert.Equal(expected, value.StoreByte(data, offset));
+      Assert.Equal(expected.Data, value.StoreByte(data, offset).Data);
    }
 
    [Theory]
@@ -214,7 +213,7 @@ public class StoreBytesExtensionsTests
    {
       BigEndianByteIndexer expected = rawExpected;
       BigEndianByteIndexer value = rawValue;
-      Assert.Equal(expected, value.StoreByte(data, offset));
+      Assert.Equal(expected.Data, value.StoreByte(data, offset).Data);
    }
 
    [Theory]
@@ -224,7 +223,7 @@ public class StoreBytesExtensionsTests
    {
       BigEndianByteIndexer expected = rawExpected;
       BigEndianByteIndexer value = rawValue;
-      Assert.Equal(expected, value.StoreByte(data, offset));
+      Assert.Equal(expected.Data, value.StoreByte(data, offset).Data);
    }
 
    #endregion
@@ -244,7 +243,7 @@ public class StoreBytesExtensionsTests
    {
       LittleEndianByteIndexer expected = rawExpected;
       LittleEndianByteIndexer value = rawValue;
-      Assert.Equal(expected, value.StoreByte(data, offset));
+      Assert.Equal(expected.Data, value.StoreByte(data, offset).Data);
    }
 
    [Theory]
@@ -260,7 +259,7 @@ public class StoreBytesExtensionsTests
    {
       LittleEndianByteIndexer expected = rawExpected;
       LittleEndianByteIndexer value = rawValue;
-      Assert.Equal(expected, value.StoreByte(data, offset));
+      Assert.Equal(expected.Data, value.StoreByte(data, offset).Data);
    }
 
    [Theory]
@@ -272,7 +271,7 @@ public class StoreBytesExtensionsTests
    {
       LittleEndianByteIndexer expected = rawExpected;
       LittleEndianByteIndexer value = rawValue;
-      Assert.Equal(expected, value.StoreByte(data, offset));
+      Assert.Equal(expected.Data, value.StoreByte(data, offset).Data);
    }
 
    [Theory]
@@ -284,7 +283,7 @@ public class StoreBytesExtensionsTests
    {
       LittleEndianByteIndexer expected = rawExpected;
       LittleEndianByteIndexer value = rawValue;
-      Assert.Equal(expected, value.StoreByte(data, offset));
+      Assert.Equal(expected.Data, value.StoreByte(data, offset).Data);
    }
 
    [Theory]
@@ -294,7 +293,7 @@ public class StoreBytesExtensionsTests
    {
       LittleEndianByteIndexer expected = rawExpected;
       LittleEndianByteIndexer value = rawValue;
-      Assert.Equal(expected, value.StoreByte(data, offset));
+      Assert.Equal(expected.Data, value.StoreByte(data, offset).Data);
    }
 
    [Theory]
@@ -304,7 +303,7 @@ public class StoreBytesExtensionsTests
    {
       LittleEndianByteIndexer expected = rawExpected;
       LittleEndianByteIndexer value = rawValue;
-      Assert.Equal(expected, value.StoreByte(data, offset));
+      Assert.Equal(expected.Data, value.StoreByte(data, offset).Data);
    }
 
    #endregion
@@ -413,7 +412,7 @@ public class StoreBytesExtensionsTests
          rawExpected = rawExpected.StoreByte(bytes[i], offset + i);
       LittleEndianByteIndexer expected = rawExpected;
       var actual = data.StoreBytes(bytes, offset, size);
-      Assert.Equal(expected, actual);
+      Assert.Equal(expected.Data, actual.Data);
    }
 
    [Theory]
@@ -426,7 +425,7 @@ public class StoreBytesExtensionsTests
          rawExpected = rawExpected.StoreByte(bytes[i], offset + i);
       LittleEndianByteIndexer expected = rawExpected;
       var actual = data.StoreBytes(bytes, offset, size);
-      Assert.Equal(expected, actual);
+      Assert.Equal(expected.Data, actual.Data);
    }
 
    [Theory]
@@ -439,7 +438,7 @@ public class StoreBytesExtensionsTests
          rawExpected = rawExpected.StoreByte(bytes[i], offset + i);
       LittleEndianByteIndexer expected = rawExpected;
       var actual = data.StoreBytes(bytes, offset, size);
-      Assert.Equal(expected, actual);
+      Assert.Equal(expected.Data, actual.Data);
    }
 
    [Theory]
@@ -452,7 +451,7 @@ public class StoreBytesExtensionsTests
          rawExpected = rawExpected.StoreByte(bytes[i], offset + i);
       LittleEndianByteIndexer expected = rawExpected;
       var actual = data.StoreBytes(bytes, offset, size);
-      Assert.Equal(expected, actual);
+      Assert.Equal(expected.Data, actual.Data);
    }
 
    [Theory]
@@ -465,7 +464,7 @@ public class StoreBytesExtensionsTests
          rawExpected = rawExpected.StoreByte(bytes[i], offset + i);
       LittleEndianByteIndexer expected = rawExpected;
       var actual = data.StoreBytes(bytes, offset, size);
-      Assert.Equal(expected, actual);
+      Assert.Equal(expected.Data, actual.Data);
    }
 
    [Theory]
@@ -478,7 +477,7 @@ public class StoreBytesExtensionsTests
          rawExpected = rawExpected.StoreByte(bytes[i], offset + i);
       LittleEndianByteIndexer expected = rawExpected;
       var actual = data.StoreBytes(bytes, offset, size);
-      Assert.Equal(expected, actual);
+      Assert.Equal(expected.Data, actual.Data);
    }
 
    #endregion
@@ -495,7 +494,7 @@ public class StoreBytesExtensionsTests
          rawExpected = rawExpected.StoreByte(bytes[i], sizeof(ulong) - (offset + i) - 1);
       BigEndianByteIndexer expected = rawExpected;
       var actual = data.StoreBytes(bytes, offset, size);
-      Assert.Equal(expected, actual);
+      Assert.Equal(expected.Data, actual.Data);
    }
 
    [Theory]
@@ -508,7 +507,7 @@ public class StoreBytesExtensionsTests
          rawExpected = rawExpected.StoreByte(bytes[i], sizeof(long) - (offset + i) - 1);
       BigEndianByteIndexer expected = rawExpected;
       var actual = data.StoreBytes(bytes, offset, size);
-      Assert.Equal(expected, actual);
+      Assert.Equal(expected.Data, actual.Data);
    }
 
    [Theory]
@@ -521,7 +520,7 @@ public class StoreBytesExtensionsTests
          rawExpected = rawExpected.StoreByte(bytes[i], sizeof(uint) - (offset + i) - 1);
       BigEndianByteIndexer expected = rawExpected;
       var actual = data.StoreBytes(bytes, offset, size);
-      Assert.Equal(expected, actual);
+      Assert.Equal(expected.Data, actual.Data);
    }
 
    [Theory]
@@ -534,7 +533,7 @@ public class StoreBytesExtensionsTests
          rawExpected = rawExpected.StoreByte(bytes[i], sizeof(int) - (offset + i) - 1);
       BigEndianByteIndexer expected = rawExpected;
       var actual = data.StoreBytes(bytes, offset, size);
-      Assert.Equal(expected, actual);
+      Assert.Equal(expected.Data, actual.Data);
    }
 
    [Theory]
@@ -547,7 +546,7 @@ public class StoreBytesExtensionsTests
          rawExpected = rawExpected.StoreByte(bytes[i], sizeof(ushort) - (offset + i) - 1);
       BigEndianByteIndexer expected = rawExpected;
       var actual = data.StoreBytes(bytes, offset, size);
-      Assert.Equal(expected, actual);
+      Assert.Equal(expected.Data, actual.Data);
    }
 
    [Theory]
@@ -560,7 +559,7 @@ public class StoreBytesExtensionsTests
          rawExpected = rawExpected.StoreByte(bytes[i], sizeof(short) - (offset + i) - 1);
       BigEndianByteIndexer expected = rawExpected;
       var actual = data.StoreBytes(bytes, offset, size);
-      Assert.Equal(expected, actual);
+      Assert.Equal(expected.Data, actual.Data);
    }
 
    #endregion

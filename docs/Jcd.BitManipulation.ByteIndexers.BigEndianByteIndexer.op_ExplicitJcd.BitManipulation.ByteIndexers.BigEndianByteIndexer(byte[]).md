@@ -17,5 +17,6 @@ public static Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer explicit ope
 The underlying data type.
 
 #### Returns
+
 [BigEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer')
 A indexer type.

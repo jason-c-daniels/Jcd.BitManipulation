@@ -35,5 +35,6 @@ the offset of the byte to write
 The endianness for indexing into the bytes.
 
 #### Returns
+
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 The modified value.

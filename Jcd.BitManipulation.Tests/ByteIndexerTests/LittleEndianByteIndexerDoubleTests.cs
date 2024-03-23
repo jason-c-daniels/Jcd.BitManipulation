@@ -74,8 +74,7 @@ public class LittleEndianByteIndexerDoubleTests
    [InlineData(sizeof(double))]
    public void Indexer_Get_Throws_Exception_When_Index_Is_Out_Of_Range(int index)
    {
-      LittleEndianByteIndexer sut = 0xFFul.BitwiseToDouble();
-      Assert.Throws<ArgumentOutOfRangeException>(() => sut[index]);
+      Assert.Throws<ArgumentOutOfRangeException>(() => ((LittleEndianByteIndexer) 0xFFul.BitwiseToDouble())[index]);
    }
 
    [Theory]
@@ -83,8 +82,12 @@ public class LittleEndianByteIndexerDoubleTests
    [InlineData(sizeof(double))]
    public void Indexer_Set_Throws_Exception_When_Index_Is_Out_Of_Range(int index)
    {
-      LittleEndianByteIndexer sut = 0xFFul.BitwiseToDouble();
-      Assert.Throws<ArgumentOutOfRangeException>(() => sut[index] = 0);
+      Assert.Throws<ArgumentOutOfRangeException>(() =>
+                                                 {
+                                                    LittleEndianByteIndexer sut = 0xFFul.BitwiseToDouble();
+                                                    sut[index] = 0;
+                                                 }
+                                                );
    }
 
    [Theory]

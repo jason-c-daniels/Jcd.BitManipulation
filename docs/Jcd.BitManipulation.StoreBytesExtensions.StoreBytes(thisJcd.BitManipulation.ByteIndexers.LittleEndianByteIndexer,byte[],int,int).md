@@ -35,5 +35,6 @@ The byte location to store the value.
 The number of bytes from the source to store. -1 means all bytes.
 
 #### Returns
+
 [LittleEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer')
 The modified value.

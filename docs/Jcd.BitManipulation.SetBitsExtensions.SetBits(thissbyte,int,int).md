@@ -29,5 +29,6 @@ The bit location to store the value.
 The number of bits to set on.
 
 #### Returns
+
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 The modified value.

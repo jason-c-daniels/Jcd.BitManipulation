@@ -6,12 +6,8 @@
 Provides byte level indexing operations (set, get) on a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64'). Zero is the most significant byte.
 
 ```csharp
-public struct LittleEndianByteIndexer :
-System.Collections.Generic.IEnumerable<byte>,
-System.Collections.IEnumerable
+public ref struct LittleEndianByteIndexer
 ```
-
-Implements [System.Collections.Generic.IEnumerable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1')[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.IEnumerable-1 'System.Collections.Generic.IEnumerable`1'), [System.Collections.IEnumerable](https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IEnumerable 'System.Collections.IEnumerable')
 
 | Constructors | |
 | :--- | :--- |
@@ -33,12 +29,12 @@ Implements [System.Collections.Generic.IEnumerable&lt;](https://docs.microsoft.c
 | [ByteSize](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.ByteSize.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.ByteSize') | The number of bytes this type will index |
 | [Data](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.Data.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.Data') | The backing store. |
 | [Length](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.Length.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.Length') | The number of bytes indexable by this indexer. |
-| [MaxByteIndex](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.MaxByteIndex.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.MaxByteIndex') | The largest [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') index available. |
 | [this[int]](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.this[int].md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.this[int]') | Access bytes from the underlying data. |
 
-| Methods | |
-| :--- | :--- |
-| [Slice(int, int)](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.Slice(int,int).md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.Slice(int, int)') | Get a subset of bytes given a starting offset and length. |
+| Methods                                                                                                                                                                  |                                                                                    |
+|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------|
+| [Slice(int, int)](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.Slice(int,int).md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.Slice(int, int)') | Get a subset of bytes given a starting offset and length.                          |
+| [ToString()](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.ToString().md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.ToString()')               | Creates a string of the data formatted as hex for the bytes in big endian notation |
 
 | Operators | |
 | :--- | :--- |

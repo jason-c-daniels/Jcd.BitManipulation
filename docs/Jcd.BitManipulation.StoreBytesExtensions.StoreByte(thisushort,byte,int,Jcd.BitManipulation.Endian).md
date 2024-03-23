@@ -35,5 +35,6 @@ the offset of the byte to write
 The endianness for indexing into the bytes.
 
 #### Returns
+
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 The modified value.

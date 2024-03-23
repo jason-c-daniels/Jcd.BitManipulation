@@ -35,5 +35,6 @@ The size of the value in bytes.
 The endianness of the indexing within the value.
 
 #### Returns
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 A little endian byte array of the value.

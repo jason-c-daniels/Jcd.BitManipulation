@@ -17,5 +17,6 @@ public static Jcd.BitManipulation.BitIndexers.BitIndexerDouble implicit operator
 the initial value for the indexer's backing store
 
 #### Returns
+
 [BitIndexerDouble](Jcd.BitManipulation.BitIndexers.BitIndexerDouble.md 'Jcd.BitManipulation.BitIndexers.BitIndexerDouble')
 A new [BitIndexerDouble](Jcd.BitManipulation.BitIndexers.BitIndexerDouble.md 'Jcd.BitManipulation.BitIndexers.BitIndexerDouble')

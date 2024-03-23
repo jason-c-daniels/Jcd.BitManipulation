@@ -6,7 +6,7 @@
 The backing store.
 
 ```csharp
-private ulong Data { get; set; }
+public ulong Data { get; set; }
 ```
 
 #### Property Value

@@ -23,5 +23,6 @@ The indexer to be read from.
 the offset of the byte to write
 
 #### Returns
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 The specified byte.

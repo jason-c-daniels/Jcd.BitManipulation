@@ -29,5 +29,6 @@ The byte location to store the value.
 The number of bytes from the source, to store.
 
 #### Returns
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 A big endian byte array of the value.

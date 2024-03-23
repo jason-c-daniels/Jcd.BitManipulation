@@ -17,5 +17,6 @@ public static Jcd.BitManipulation.BitIndexers.BitIndexerUInt64 implicit operator
 the initial value for the indexer's backing store
 
 #### Returns
+
 [BitIndexerUInt64](Jcd.BitManipulation.BitIndexers.BitIndexerUInt64.md 'Jcd.BitManipulation.BitIndexers.BitIndexerUInt64')
 A new [BitIndexerUInt64](Jcd.BitManipulation.BitIndexers.BitIndexerUInt64.md 'Jcd.BitManipulation.BitIndexers.BitIndexerUInt64')

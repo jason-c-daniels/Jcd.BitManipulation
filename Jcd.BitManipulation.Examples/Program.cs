@@ -189,7 +189,7 @@ internal static class Program
       byte upperByte = 0;
       var fourBytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B };
       var sw = Stopwatch.StartNew();
-      LittleEndianByteIndexerUInt64 indexer = 0ul;
+      LittleEndianByteIndexer indexer = 0ul;
 
       for (long i = 0; i < iterations; i++)
       {
@@ -432,7 +432,7 @@ internal static class Program
       if (report)
          Console.WriteLine($"  - Name: {nameof(TimeCastOperations)}");
       const int opsPerIteration = 2;
-      LittleEndianByteIndexerInt64 idx = 0;
+      LittleEndianByteIndexer idx = 0L;
       long convertedBack = 0;
       var sw = Stopwatch.StartNew();
 

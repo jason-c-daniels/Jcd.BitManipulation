@@ -1,11 +1,8 @@
-﻿#define REF_STRUCT
-
-#region
+﻿#region
 
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.Text;
 
 // ReSharper disable HeapView.ObjectAllocation.Evident
 // ReSharper disable HeapView.ObjectAllocation
@@ -19,7 +16,7 @@ namespace Jcd.BitManipulation.ByteIndexers;
 /// <summary>
 /// Provides byte level indexing operations (set, get) on a <see cref="ulong" />. Zero is the most significant byte.
 /// </summary>
-public struct BigEndianByteIndexer : IEnumerable<byte>
+public ref struct BigEndianByteIndexer
 {
    #region Constructors
 
@@ -132,20 +129,8 @@ public struct BigEndianByteIndexer : IEnumerable<byte>
    private BigEndianByteIndexer(ulong data, int byteSize)
    {
       ByteSize = byteSize;
-      MaxByteIndex = ByteSize    - 1;
       dataOffset = sizeof(ulong) - ByteSize;
       Data = data;
-   }
-
-   /// <summary>
-   /// Constructs a 64 bit <see cref="BigEndianByteIndexer" /> defaulted to 0.
-   /// </summary>
-   [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public BigEndianByteIndexer()
-   {
-      Data = 0;
-      ByteSize = sizeof(ulong);
-      MaxByteIndex = ByteSize - 1;
    }
 
    #endregion
@@ -162,15 +147,6 @@ public struct BigEndianByteIndexer : IEnumerable<byte>
    }
 
    /// <summary>
-   /// The largest <see cref="byte" /> index available.
-   /// </summary>
-   public int MaxByteIndex
-   {
-      [MethodImpl(MethodImplOptions.AggressiveInlining)]
-      get;
-   }
-
-   /// <summary>
    /// The number of bytes indexable by this indexer.
    /// </summary>
    public int Length => ByteSize;
@@ -178,7 +154,7 @@ public struct BigEndianByteIndexer : IEnumerable<byte>
    /// <summary>
    /// The backing store.
    /// </summary>
-   private ulong Data { get; set; }
+   public ulong Data { get; private set; }
 
    /// <summary>
    /// Access bytes from the underlying data.
@@ -476,22 +452,21 @@ public struct BigEndianByteIndexer : IEnumerable<byte>
 
    #endregion
 
-   #region Implementation of IEnumerable
-
-   /// <inheritdoc />
-   [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public readonly IEnumerator<byte> GetEnumerator()
+   /// <summary>
+   /// Creates a string of the data formatted as hex for the bytes in big endian notation
+   /// </summary>
+   /// <returns>a string of the data formatted as hex bytes</returns>
+   public override string ToString()
    {
+      var sb = new StringBuilder(ByteSize * 3);
+
       for (var i = 0; i < ByteSize; i++)
-         yield return Data.ReadByte(i + dataOffset, Endian.Big);
-   }
+      {
+         if (i != 0)
+            sb.Append(" ");
+         sb.AppendFormat("{0:X2}", this[i]);
+      }
 
-   /// <inheritdoc />
-   [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   readonly IEnumerator IEnumerable.GetEnumerator()
-   {
-      return GetEnumerator();
+      return sb.ToString();
    }
-
-   #endregion
 }

@@ -36,12 +36,14 @@ deploy:
      server: https://www.myget.org/F/jason-c-daniels/api/v2/package
      api_key:
         secure: I8belHNTZOvJ4MZhZoH6bhQsVuAtAo/wvX2ypZENxIUJJJ+plfJ6pz2SJr8dlgEA
+     symbol_server: https://www.myget.org/F/jason-c-daniels/api/v2/package
      on:
         branch: main
    - provider: NuGet
      server: https://www.myget.org/F/jason-c-daniels/api/v2/package
      api_key:
         secure: I8belHNTZOvJ4MZhZoH6bhQsVuAtAo/wvX2ypZENxIUJJJ+plfJ6pz2SJr8dlgEA
+     symbol_server: https://www.myget.org/F/jason-c-daniels/api/v2/package
      on:
         branch: /release[/].*/
 notifications:

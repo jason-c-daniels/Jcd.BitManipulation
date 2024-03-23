@@ -32,13 +32,10 @@
       <FileVersion>2.4.0</FileVersion>
       <TargetFramework>netstandard2.0</TargetFramework>
       <PackageIcon>Jason.C.Daniels.jpg</PackageIcon>
-      <PackageReleaseNotes>Added bit testing extensions.</PackageReleaseNotes>
+      <PackageReadmeFile>README.md</PackageReadmeFile>
       <SymbolPackageFormat>snupkg</SymbolPackageFormat>      
    </PropertyGroup>
 
-   <PropertyGroup>
-      <PackageReadmeFile>README.md</PackageReadmeFile>
-   </PropertyGroup>
 
    <ItemGroup>
       <None Include="..\README.md" Pack="true" PackagePath="\"/>

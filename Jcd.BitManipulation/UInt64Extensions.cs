@@ -325,11 +325,23 @@ public static class UInt64Extensions
    public static ulong StoreByte(this ulong value, byte @byte, int offset, Endian endian = Endian.Little)
    {
       if (endian == Endian.Little)
-         return value.StoreBits(@byte, offset << 3, 8);
+         return value.LittleEndianUncheckedStoreByte(@byte, offset);
 
+      return value.BigEndianUncheckedStoreByte(@byte, offset);
+   }
+
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   internal static ulong BigEndianUncheckedStoreByte(this ulong value, byte @byte, int offset)
+   {
       var beOffset = sizeof(ulong) - offset - 1;
 
       return value.StoreBits(@byte, beOffset << 3, 8);
+   }
+
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   internal static ulong LittleEndianUncheckedStoreByte(this ulong value, byte @byte, int offset)
+   {
+      return value.StoreBits(@byte, offset << 3, 8);
    }
 
    /// <summary>

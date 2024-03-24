@@ -195,7 +195,8 @@ public ref struct LittleEndianByteIndexer
          if (index < 0 || index >= ByteSize)
             throw new ArgumentOutOfRangeException(nameof(index));
 
-         Data = Data.StoreByte(value, index);
+         Data = Data.LittleEndianUncheckedStoreByte(value, index);
+
       }
    }
 
@@ -491,9 +492,8 @@ public ref struct LittleEndianByteIndexer
                    ? ByteSize - offset
                    : size;
 
-      var j = offset;
-      for (var i = 0; i < len; i++, j++)
-         this[j] = bytes[i];
+      for (int i = 0, j = offset; i < len; i++, j++)
+         Data = Data.LittleEndianUncheckedStoreByte(bytes[i], j);
 
       return this;
    }
@@ -515,9 +515,8 @@ public ref struct LittleEndianByteIndexer
                    ? ByteSize - offset
                    : size;
 
-      var j = offset;
-      for (var i = 0; i < len; i++, j++)
-         this[j] = bytes[i];
+      for (int i = 0, j = offset; i < len; i++, j++)
+         Data = Data.LittleEndianUncheckedStoreByte(bytes[i], j);
 
       return this;
    }

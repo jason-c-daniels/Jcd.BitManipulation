@@ -197,7 +197,7 @@ public ref struct BigEndianByteIndexer
          if (index < 0 || index >= ByteSize)
             throw new ArgumentOutOfRangeException(nameof(index));
 
-         Data = Data.StoreByte(value, index + dataOffset, Endian.Big);
+         Data = Data.BigEndianUncheckedStoreByte(value, index + dataOffset);
       }
    }
 
@@ -513,9 +513,8 @@ public ref struct BigEndianByteIndexer
                    ? ByteSize - offset
                    : size;
 
-      var j = offset;
-      for (var i = 0; i < len; i++, j++)
-         this[j] = bytes[i];
+      for (int i = 0, j = offset + dataOffset; i < len; i++, j++)
+         Data = Data.BigEndianUncheckedStoreByte(bytes[i], j);
 
       return this;
    }
@@ -537,9 +536,8 @@ public ref struct BigEndianByteIndexer
                    ? ByteSize - offset
                    : size;
 
-      var j = offset;
-      for (var i = 0; i < len; i++, j++)
-         this[j] = bytes[i];
+      for (int i = 0, j = offset + dataOffset; i < len; i++, j++)
+         Data = Data.BigEndianUncheckedStoreByte(bytes[i], j);
 
       return this;
    }

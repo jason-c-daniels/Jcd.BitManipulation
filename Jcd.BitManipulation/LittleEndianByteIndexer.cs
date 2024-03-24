@@ -484,20 +484,16 @@ public ref struct LittleEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public LittleEndianByteIndexer StoreBytes(byte[] bytes, int offset, int size = -1)
    {
-      if (size == -1 || size > bytes.Length)
-         size = bytes.Length;
-      var idx = 0;
+      if (size == -1)
+         size = ByteSize - offset;
 
-      foreach (var @byte in bytes)
-      {
-         if (idx >= size)
-            return this;
-         if (offset + idx >= ByteSize)
-            return this;
+      var len = size + offset > ByteSize
+                   ? ByteSize - offset
+                   : size;
 
-         this[idx + offset] = @byte;
-         idx++;
-      }
+      var j = offset;
+      for (var i = 0; i < len; i++, j++)
+         this[j] = bytes[i];
 
       return this;
    }
@@ -512,20 +508,16 @@ public ref struct LittleEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public LittleEndianByteIndexer StoreBytes(ReadOnlySpan<byte> bytes, int offset, int size = -1)
    {
-      if (size == -1 || size > bytes.Length)
-         size = bytes.Length;
-      var idx = 0;
+      if (size == -1)
+         size = ByteSize - offset;
 
-      foreach (var @byte in bytes)
-      {
-         if (idx >= size)
-            return this;
-         if (offset + idx >= ByteSize)
-            return this;
+      var len = size + offset > ByteSize
+                   ? ByteSize - offset
+                   : size;
 
-         this[idx + offset] = @byte;
-         idx++;
-      }
+      var j = offset;
+      for (var i = 0; i < len; i++, j++)
+         this[j] = bytes[i];
 
       return this;
    }

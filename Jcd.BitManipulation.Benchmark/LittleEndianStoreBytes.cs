@@ -1,7 +1,4 @@
-﻿// ReSharper disable UnusedType.Global
-// ReSharper disable RedundantTypeDeclarationBody
-
-#region
+﻿#region
 
 using BenchmarkDotNet.Attributes;
 
@@ -9,7 +6,7 @@ using BenchmarkDotNet.Attributes;
 
 namespace Jcd.BitManipulation.Benchmark;
 
-public class LittleEndianStoreByte
+public class LittleEndianStoreBytes
 {
    private const ulong Ui64 = ulong.MaxValue   / 2;
    private const long I64 = long.MaxValue      / 2;
@@ -82,56 +79,55 @@ public class LittleEndianStoreByte
    }
 
    #endregion
-   
-   
+
    #region Extension Methods
 
    [Benchmark]
    public double ExtensionMethod_Double()
    {
-      return Dbl.StoreByte(0xDD, 0);
+      return Dbl.StoreBytes(Bytes, 0, endian: Endian.Little);
    }
 
    [Benchmark]
    public float ExtensionMethod_Float()
    {
-      return Flt.StoreByte(0xDD, 0);
+      return Flt.StoreBytes(Bytes, 0, endian: Endian.Little);
    }
 
    [Benchmark]
    public ulong ExtensionMethod_UInt64()
    {
-      return Ui64.StoreByte(0xDD, 0);
+      return Ui64.StoreBytes(Bytes, 0, endian: Endian.Little);
    }
 
    [Benchmark]
    public long ExtensionMethod_Int64()
    {
-      return I64.StoreByte(0xDD, 0);
+      return I64.StoreBytes(Bytes, 0, endian: Endian.Little);
    }
 
    [Benchmark]
    public uint ExtensionMethod_UInt32()
    {
-      return Ui32.StoreByte(0xDD, 0);
+      return Ui32.StoreBytes(Bytes, 0, endian: Endian.Little);
    }
 
    [Benchmark]
    public int ExtensionMethod_Int32()
    {
-      return I32.StoreByte(0xDD, 0);
+      return I32.StoreBytes(Bytes, 0, endian: Endian.Little);
    }
 
    [Benchmark]
    public ushort ExtensionMethod_UInt16()
    {
-      return Ui16.StoreByte(0xDD, 0);
+      return Ui16.StoreBytes(Bytes, 0, endian: Endian.Little);
    }
 
    [Benchmark]
    public short ExtensionMethod_Int16()
    {
-      return I16.StoreByte(0xDD, 0);
+      return I16.StoreBytes(Bytes, 0, endian: Endian.Little);
    }
 
    #endregion
@@ -141,49 +137,49 @@ public class LittleEndianStoreByte
    [Benchmark]
    public double ByteIndexer_Double()
    {
-      return ((LittleEndianByteIndexer) Dbl).StoreByte(0xDD, 0);
+      return ((LittleEndianByteIndexer) Dbl).StoreBytes(Bytes, 0);
    }
 
    [Benchmark]
    public float ByteIndexer_Float()
    {
-      return ((LittleEndianByteIndexer) Flt).StoreByte(0xDD, 0);
+      return ((LittleEndianByteIndexer) Flt).StoreBytes(Bytes, 0);
    }
 
    [Benchmark]
    public ulong ByteIndexer_UInt64()
    {
-      return ((LittleEndianByteIndexer) Ui64).StoreByte(0xDD, 0);
+      return ((LittleEndianByteIndexer) Ui64).StoreBytes(Bytes, 0);
    }
 
    [Benchmark]
    public long ByteIndexer_Int64()
    {
-      return ((LittleEndianByteIndexer) I64).StoreByte(0xDD, 0);
+      return ((LittleEndianByteIndexer) I64).StoreBytes(Bytes, 0);
    }
 
    [Benchmark]
    public uint ByteIndexer_UInt32()
    {
-      return ((LittleEndianByteIndexer) Ui32).StoreByte(0xDD, 0);
+      return ((LittleEndianByteIndexer) Ui32).StoreBytes(Bytes, 0);
    }
 
    [Benchmark]
    public int ByteIndexer_Int32()
    {
-      return ((LittleEndianByteIndexer) I32).StoreByte(0xDD, 0);
+      return ((LittleEndianByteIndexer) I32).StoreBytes(Bytes, 0);
    }
 
    [Benchmark]
    public ushort ByteIndexer_UInt16()
    {
-      return ((LittleEndianByteIndexer) Ui16).StoreByte(0xDD, 0);
+      return ((LittleEndianByteIndexer) Ui16).StoreBytes(Bytes, 0);
    }
 
    [Benchmark]
    public short ByteIndexer_Int16()
    {
-      return ((LittleEndianByteIndexer) I16).StoreByte(0xDD, 0);
+      return ((LittleEndianByteIndexer) I16).StoreBytes(Bytes, 0);
    }
 
    #endregion

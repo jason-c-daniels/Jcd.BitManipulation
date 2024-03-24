@@ -178,6 +178,16 @@
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Explicit(Jcd.BitManipulation.BigEndianByteIndexer)~System.Byte[]">
             <summary>
+               Explicitly converts the
+               <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
+               to an array of bytes.
+            </summary>
+           <param name="indexer">The indexer to convert.</param>
+           <returns>The raw data converted to an array, serialized as big endian.</returns>
+        </member>
+       <member
+          name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Explicit(Jcd.BitManipulation.BigEndianByteIndexer)~System.ReadOnlySpan{System.Byte}">
+          <summary>
             Explicitly converts the <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> to an array of bytes.
             </summary>
             <param name="indexer">The indexer to convert.</param>
@@ -260,6 +270,14 @@
             <param name="data">The underlying data type.</param>
             <returns>A indexer type.</returns>
         </member>
+       <member
+          name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Explicit(System.ReadOnlySpan{System.Byte})~Jcd.BitManipulation.BigEndianByteIndexer">
+          <summary>
+             Explicitly converts an array of bytes to a<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
+          </summary>
+          <param name="data">The underlying data type.</param>
+          <returns>A indexer type.</returns>
+       </member>
        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.StoreBytes(System.Byte[],System.Int32,System.Int32)">
           <summary>
              Stores a set of bytes starting at the specified byte location within the indexer.

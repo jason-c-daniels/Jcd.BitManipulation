@@ -17,6 +17,5 @@ public static double BitwiseToDouble(this long value);
 The value to convert
 
 #### Returns
-
 [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 the [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double') representation of the bits

@@ -17,6 +17,5 @@ public static short implicit operator short(Jcd.BitManipulation.ByteIndexers.Lit
 The indexer to convert.
 
 #### Returns
-
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 The raw data.

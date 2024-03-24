@@ -17,6 +17,5 @@ public static sbyte implicit operator sbyte(Jcd.BitManipulation.BitIndexers.BitI
 the indexer to convert from
 
 #### Returns
-
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 the [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')

@@ -23,6 +23,5 @@ The value to be modified.
 the bit mask of the bits to clear.
 
 #### Returns
-
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 The modified value.

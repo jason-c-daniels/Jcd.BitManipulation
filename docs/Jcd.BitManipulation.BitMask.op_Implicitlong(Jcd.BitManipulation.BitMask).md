@@ -17,6 +17,5 @@ public static long implicit operator long(Jcd.BitManipulation.BitMask mask);
 the [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') to convert from.
 
 #### Returns
-
 [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 the bits of the mask as a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')

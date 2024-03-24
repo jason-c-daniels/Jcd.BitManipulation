@@ -17,6 +17,5 @@ public static ulong implicit operator ulong(Jcd.BitManipulation.BitIndexers.BitI
 the indexer to convert from
 
 #### Returns
-
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 the underlying value

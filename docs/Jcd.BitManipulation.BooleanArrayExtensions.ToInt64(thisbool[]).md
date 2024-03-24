@@ -17,6 +17,5 @@ public static long ToInt64(this bool[] bits);
 the array of bools to convert, Least Significant Bit at index 0
 
 #### Returns
-
 [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 The converted [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')

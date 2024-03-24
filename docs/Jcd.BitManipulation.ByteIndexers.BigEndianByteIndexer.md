@@ -30,10 +30,10 @@ public ref struct BigEndianByteIndexer
 | [Length](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.Length.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.Length') | The number of bytes indexable by this indexer. |
 | [this[int]](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.this[int].md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.this[int]') | Access bytes from the underlying data. |
 
-| Methods                                                                                                                                                            |                                                                                    |
-|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------|
-| [Slice(int, int)](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.Slice(int,int).md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.Slice(int, int)') | Get a subset of bytes given a starting offset and length.                          |
-| [ToString()](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.ToString().md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.ToString()')               | Creates a string of the data formatted as hex for the bytes in big endian notation |
+| Methods | |
+| :--- | :--- |
+| [Slice(int, int)](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.Slice(int,int).md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.Slice(int, int)') | Get a subset of bytes given a starting offset and length. |
+| [ToString()](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.ToString().md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.ToString()') | Creates a string of the data formatted as hex for the bytes in big endian notation |
 
 | Operators | |
 | :--- | :--- |

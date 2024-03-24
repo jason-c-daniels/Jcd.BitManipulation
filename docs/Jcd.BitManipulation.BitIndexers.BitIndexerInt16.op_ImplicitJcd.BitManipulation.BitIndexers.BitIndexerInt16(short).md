@@ -17,6 +17,5 @@ public static Jcd.BitManipulation.BitIndexers.BitIndexerInt16 implicit operator 
 the initial value for the indexer's backing store
 
 #### Returns
-
 [BitIndexerInt16](Jcd.BitManipulation.BitIndexers.BitIndexerInt16.md 'Jcd.BitManipulation.BitIndexers.BitIndexerInt16')
 A new BitIndexerInt16

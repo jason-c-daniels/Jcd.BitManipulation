@@ -17,6 +17,5 @@ public static float ToSingle(this bool[] bits);
 the array of bools to convert, LSB at index 0
 
 #### Returns
-
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 The converted float

@@ -29,6 +29,5 @@ the bit offset to read from
 The total number of bits to extract
 
 #### Returns
-
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 The numeric value stored at that bit location

@@ -22,5 +22,6 @@ The value to be modified.
 bits to set.
 
 #### Returns
+
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 The modified value.

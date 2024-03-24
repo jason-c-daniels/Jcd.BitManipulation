@@ -16,5 +16,6 @@ public static int implicit operator int(Jcd.BitManipulation.LittleEndianByteInde
 The indexer to convert.
 
 #### Returns
+
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 The raw data.

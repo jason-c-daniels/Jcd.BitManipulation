@@ -16,5 +16,6 @@ public static double implicit operator double(Jcd.BitManipulation.BitIndexer ind
 the indexer to convert from
 
 #### Returns
+
 [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 the bits converted to a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')

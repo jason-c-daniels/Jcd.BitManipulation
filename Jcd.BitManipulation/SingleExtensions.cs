@@ -99,8 +99,6 @@ public static class SingleExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ToByteArray(this float data, Endian endian = Endian.Little)
    {
-      var bits = data.BitwiseToUInt32();
-
       return endian == Endian.Big
                 ? (byte[]) (BigEndianByteIndexer) data
                 : (byte[]) (LittleEndianByteIndexer) data;

@@ -544,7 +544,6 @@ public ref struct LittleEndianByteIndexer
       return this;
    }
 
-   
    /// <summary>
    /// Creates a string of the data formatted as hex for the bytes in big endian notation
    /// </summary>

@@ -16,6 +16,5 @@ public static float implicit operator float(Jcd.BitManipulation.BigEndianByteInd
 The indexer to convert.
 
 #### Returns
-
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 The raw data.

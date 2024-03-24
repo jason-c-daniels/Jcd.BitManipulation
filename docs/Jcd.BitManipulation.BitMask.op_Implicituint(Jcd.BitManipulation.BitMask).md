@@ -14,6 +14,5 @@ public static uint implicit operator uint(Jcd.BitManipulation.BitMask mask);
 `mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
 #### Returns
-
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 the lowest 32 bits of the mask as a uint

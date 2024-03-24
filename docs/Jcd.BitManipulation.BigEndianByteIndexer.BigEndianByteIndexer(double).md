@@ -9,7 +9,6 @@ an [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'Sy
 ```csharp
 private BigEndianByteIndexer(double data);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(double).data'></a>

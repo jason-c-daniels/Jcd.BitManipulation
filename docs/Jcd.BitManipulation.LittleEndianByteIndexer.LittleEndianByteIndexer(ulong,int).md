@@ -9,7 +9,6 @@ from a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64
 ```csharp
 private LittleEndianByteIndexer(ulong data, int byteSize);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(ulong,int).data'></a>

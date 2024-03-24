@@ -8,7 +8,6 @@ The default values result in toggling all bits.
 ```csharp
 public static float ToggleBits(this float value, int offset=0, int size=32);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.SingleExtensions.ToggleBits(thisfloat,int,int).value'></a>
@@ -30,6 +29,5 @@ The offset of the bits to toggle.
 The number of bits to toggle.
 
 #### Returns
-
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 The modified value.

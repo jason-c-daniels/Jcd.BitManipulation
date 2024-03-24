@@ -7,7 +7,6 @@ Store a single bit at the specified offset.
 ```csharp
 public static uint StoreBit(this uint value, bool bit, int offset);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt32Extensions.StoreBit(thisuint,bool,int).value'></a>
@@ -29,6 +28,5 @@ The bit value to set
 the offset of the bit to write
 
 #### Returns
-
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 The modified value.

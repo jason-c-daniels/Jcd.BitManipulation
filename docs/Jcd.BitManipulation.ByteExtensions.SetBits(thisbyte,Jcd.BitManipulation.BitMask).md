@@ -7,7 +7,6 @@ Sets all specified bits to "on"
 ```csharp
 public static byte SetBits(this byte value, Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteExtensions.SetBits(thisbyte,Jcd.BitManipulation.BitMask).value'></a>
@@ -23,6 +22,5 @@ The value to be modified.
 bits to set.
 
 #### Returns
-
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 The modified value.

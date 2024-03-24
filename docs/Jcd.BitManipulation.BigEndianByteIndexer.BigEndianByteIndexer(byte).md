@@ -9,7 +9,6 @@ a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.
 ```csharp
 private BigEndianByteIndexer(byte data);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(byte).data'></a>

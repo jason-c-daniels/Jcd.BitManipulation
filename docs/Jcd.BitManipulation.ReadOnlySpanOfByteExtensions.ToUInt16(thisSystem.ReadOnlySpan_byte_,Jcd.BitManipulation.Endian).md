@@ -8,7 +8,6 @@ discarding any excess data.
 ```csharp
 public static ushort ToUInt16(this System.ReadOnlySpan<byte> data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ReadOnlySpanOfByteExtensions.ToUInt16(thisSystem.ReadOnlySpan_byte_,Jcd.BitManipulation.Endian).data'></a>
@@ -24,6 +23,5 @@ the bytes to convert
 The endian for the bytes.
 
 #### Returns
-
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 The converted [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')

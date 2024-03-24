@@ -9,7 +9,6 @@ an [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'Sy
 ```csharp
 private BigEndianByteIndexer(float data);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(float).data'></a>

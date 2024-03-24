@@ -65,7 +65,11 @@ public static class Int32Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static float BitwiseToSingle(this int value)
    {
+      #if NETSTANDARD2_0
       return BitConverter.ToSingle(BitConverter.GetBytes(value), 0);
+      #else
+      return BitConverter.Int32BitsToSingle(value);
+      #endif
    }
 
    /// <summary>
@@ -290,6 +294,23 @@ public static class Int32Extensions
                            , offset
                            , 1
                             );
+   }
+
+   /// <summary>
+   /// Stores a set of bytes starting at the specified byte location within the value.
+   /// </summary>
+   /// <param name="value">The value to be modified.</param>
+   /// <param name="bytes">The value to be stored at the byte location.</param>
+   /// <param name="offset">The byte location to store the value.</param>
+   /// <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
+   /// <param name="endian">The endianness of the byte indexing within the value.</param>
+   /// <returns>The modified value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static int StoreBytes(this int value, byte[] bytes, int offset, int size = -1, Endian endian = Endian.Little)
+   {
+      return endian == Endian.Big
+                ? ((BigEndianByteIndexer) value).StoreBytes(bytes, offset, size)
+                : ((LittleEndianByteIndexer) value).StoreBytes(bytes, offset, size);
    }
 
    /// <summary>

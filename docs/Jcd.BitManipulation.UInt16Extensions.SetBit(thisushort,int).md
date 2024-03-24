@@ -7,7 +7,6 @@ Sets specified bit to "on"
 ```csharp
 public static ushort SetBit(this ushort value, int offset);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt16Extensions.SetBit(thisushort,int).value'></a>
@@ -23,6 +22,5 @@ The value to be modified.
 The offset of the bit to set.
 
 #### Returns
-
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 The modified value.

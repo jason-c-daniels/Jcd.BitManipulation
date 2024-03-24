@@ -9,7 +9,6 @@ a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'Sys
 ```csharp
 public static sbyte implicit operator sbyte(Jcd.BitManipulation.BigEndianByteIndexer indexer);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BigEndianByteIndexer.op_Implicitsbyte(Jcd.BitManipulation.BigEndianByteIndexer).indexer'></a>
@@ -19,6 +18,5 @@ public static sbyte implicit operator sbyte(Jcd.BitManipulation.BigEndianByteInd
 The indexer to convert.
 
 #### Returns
-
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 The raw data.

@@ -101,22 +101,22 @@ public ref struct BigEndianByteIndexer
    /// <param name="data"> The initial value of the underlying data.</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private BigEndianByteIndexer(float data)
-      : this(BitConverter.ToUInt32(BitConverter.GetBytes(data), 0), sizeof(float))
+      : this(data.BitwiseToUInt32(), sizeof(float))
    {
    }
 
    /// <summary>
-   /// Constructs a <see cref="BigEndianByteIndexer" /> from an <see cref="Double" />.
+   /// Constructs a <see cref="BigEndianByteIndexer" /> from an <see cref="double" />.
    /// </summary>
    /// <param name="data"> The initial value of the underlying data.</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private BigEndianByteIndexer(double data)
-      : this((ulong) BitConverter.DoubleToInt64Bits(data), sizeof(double))
+      : this(data.BitwiseToUInt64(), sizeof(double))
    {
    }
 
    /// <summary>
-   /// Constructs a <see cref="BigEndianByteIndexer" /> from a <see cref="UInt64" />.
+   /// Constructs a <see cref="BigEndianByteIndexer" /> from a <see cref="ulong" />.
    /// </summary>
    /// <param name="data"> The initial value of the underlying data.</param>
    /// <param name="byteSize">The number of bytes to index</param>
@@ -320,7 +320,7 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator float(BigEndianByteIndexer indexer)
    {
-      return BitConverter.ToSingle(BitConverter.GetBytes((uint) indexer.Data), 0);
+      return ((uint) indexer.Data).BitwiseToSingle();
    }
 
    /// <summary>
@@ -331,7 +331,7 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator double(BigEndianByteIndexer indexer)
    {
-      return BitConverter.Int64BitsToDouble((long) indexer.Data);
+      return indexer.Data.BitwiseToDouble();
    }
 
    /// <summary>

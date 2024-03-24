@@ -7,7 +7,6 @@ Store a single bit at the specified offset.
 ```csharp
 public static long StoreBit(this long value, bool bit, int offset);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int64Extensions.StoreBit(thislong,bool,int).value'></a>
@@ -29,6 +28,5 @@ The bit value to set
 the offset of the bit to write
 
 #### Returns
-
 [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 The modified value.

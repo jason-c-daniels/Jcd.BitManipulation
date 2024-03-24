@@ -8,7 +8,6 @@ a [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitMan
 ```csharp
 public static Jcd.BitManipulation.BigEndianByteIndexer explicit operator BigEndianByteIndexer(System.ReadOnlySpan<byte> data);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BigEndianByteIndexer.op_ExplicitJcd.BitManipulation.BigEndianByteIndexer(System.ReadOnlySpan_byte_).data'></a>
@@ -18,6 +17,5 @@ public static Jcd.BitManipulation.BigEndianByteIndexer explicit operator BigEndi
 The underlying data type.
 
 #### Returns
-
 [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer')
 A indexer type.

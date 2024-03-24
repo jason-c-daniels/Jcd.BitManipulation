@@ -9,7 +9,6 @@ to a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 '
 ```csharp
 public static sbyte implicit operator sbyte(Jcd.BitManipulation.LittleEndianByteIndexer indexer);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicitsbyte(Jcd.BitManipulation.LittleEndianByteIndexer).indexer'></a>
@@ -19,6 +18,5 @@ public static sbyte implicit operator sbyte(Jcd.BitManipulation.LittleEndianByte
 The indexer to convert.
 
 #### Returns
-
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 The raw data.

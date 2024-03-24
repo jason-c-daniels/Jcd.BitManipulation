@@ -8,7 +8,6 @@ a [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'Syste
 ```csharp
 public BitMask(short bits);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.BitMask(short).bits'></a>

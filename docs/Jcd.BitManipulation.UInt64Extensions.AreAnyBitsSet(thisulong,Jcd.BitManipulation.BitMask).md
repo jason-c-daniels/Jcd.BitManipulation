@@ -8,7 +8,6 @@ a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'Sys
 ```csharp
 public static bool AreAnyBitsSet(this ulong data, Jcd.BitManipulation.BitMask bitmask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt64Extensions.AreAnyBitsSet(thisulong,Jcd.BitManipulation.BitMask).data'></a>
@@ -24,6 +23,5 @@ The data to inspect.
 the bits to test.
 
 #### Returns
-
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 True if any of the bits from the bitmask were set.

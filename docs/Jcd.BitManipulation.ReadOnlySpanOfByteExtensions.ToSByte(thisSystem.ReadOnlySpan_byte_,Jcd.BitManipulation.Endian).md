@@ -8,7 +8,6 @@ discarding any excess data.
 ```csharp
 public static sbyte ToSByte(this System.ReadOnlySpan<byte> data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ReadOnlySpanOfByteExtensions.ToSByte(thisSystem.ReadOnlySpan_byte_,Jcd.BitManipulation.Endian).data'></a>
@@ -24,6 +23,5 @@ the bytes to convert
 The endian for the bytes.
 
 #### Returns
-
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 The converted [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')

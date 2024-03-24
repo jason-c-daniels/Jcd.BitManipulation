@@ -7,7 +7,6 @@ Stores a value at the specified bit location within the variable.
 ```csharp
 public static float StoreBits(this float value, uint source, int offset, int size);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.SingleExtensions.StoreBits(thisfloat,uint,int,int).value'></a>
@@ -35,6 +34,5 @@ The bit location to store the value.
 The bit size of the value.
 
 #### Returns
-
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 The modified value.

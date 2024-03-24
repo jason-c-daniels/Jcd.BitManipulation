@@ -7,7 +7,6 @@ Converts an array of bools into a float, discarding any excess bits.
 ```csharp
 public static float ToSingle(this bool[] bits);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BooleanArrayExtensions.ToSingle(thisbool[]).bits'></a>
@@ -17,6 +16,5 @@ public static float ToSingle(this bool[] bits);
 the array of bools to convert, LSB at index 0
 
 #### Returns
-
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 The converted float

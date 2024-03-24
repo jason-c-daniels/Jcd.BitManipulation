@@ -8,7 +8,6 @@ identical [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UIn
 ```csharp
 public static uint BitwiseToUInt32(this float value);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.SingleExtensions.BitwiseToUInt32(thisfloat).value'></a>
@@ -18,7 +17,6 @@ public static uint BitwiseToUInt32(this float value);
 The value to convert
 
 #### Returns
-
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 the [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32') representation of the
 underlying bits

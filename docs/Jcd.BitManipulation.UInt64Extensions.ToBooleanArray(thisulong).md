@@ -8,7 +8,6 @@ bools
 ```csharp
 public static bool[] ToBooleanArray(this ulong bits);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ToBooleanArray(thisulong).bits'></a>
@@ -18,6 +17,5 @@ public static bool[] ToBooleanArray(this ulong bits);
 the ulong to convert
 
 #### Returns
-
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 the array. Least Significant Bit at index 0

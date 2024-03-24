@@ -9,7 +9,6 @@ an [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'Syst
 ```csharp
 private BigEndianByteIndexer(short data);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(short).data'></a>

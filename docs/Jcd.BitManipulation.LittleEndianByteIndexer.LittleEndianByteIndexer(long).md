@@ -9,7 +9,6 @@ from an [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 
 ```csharp
 private LittleEndianByteIndexer(long data);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(long).data'></a>

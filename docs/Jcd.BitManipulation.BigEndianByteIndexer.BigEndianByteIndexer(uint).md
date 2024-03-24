@@ -9,7 +9,6 @@ a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'Sys
 ```csharp
 private BigEndianByteIndexer(uint data);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(uint).data'></a>

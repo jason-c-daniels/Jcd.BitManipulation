@@ -1664,10 +1664,21 @@
          <returns>The modified value.</returns>
       </member>
       <member
+         name="M:Jcd.BitManipulation.DoubleExtensions.StoreBytes(System.Double,System.Byte[],System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
+         <summary>
+            Stores a set of bytes starting at the specified byte location within the value.
+         </summary>
+         <param name="value">The value to be modified.</param>
+         <param name="bytes">The value to be stored at the byte location.</param>
+         <param name="offset">The byte location to store the value.</param>
+         <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
+         <param name="endian">The endianness of the byte indexing within the value.</param>
+         <returns>The modified value.</returns>
+      </member>
+      <member
          name="M:Jcd.BitManipulation.DoubleExtensions.StoreBytes(System.Double,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
          <summary>
             Stores a set of bytes starting at the specified byte location within the value.
-            Byte indexing is LSB, least significant byte, at index/offset zero.
          </summary>
          <param name="value">The value to be modified.</param>
          <param name="bytes">The value to be stored at the byte location.</param>
@@ -1680,7 +1691,6 @@
          name="M:Jcd.BitManipulation.DoubleExtensions.StoreByte(System.Double,System.Byte,System.Int32,Jcd.BitManipulation.Endian)">
          <summary>
             Store a single byte to the value at the specified byte offset.
-            Byte indexing is LSB, least significant byte, at index/offset zero.
          </summary>
          <param name="value">The value to be modified.</param>
          <param name="byte">The byte value to set</param>
@@ -1924,6 +1934,18 @@
          <param name="value">The value to be modified.</param>
          <param name="bit">The bit value to set</param>
          <param name="offset">the offset of the bit to write</param>
+         <returns>The modified value.</returns>
+      </member>
+      <member
+         name="M:Jcd.BitManipulation.Int16Extensions.StoreBytes(System.Int16,System.Byte[],System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
+         <summary>
+            Stores a set of bytes starting at the specified byte location within the value.
+         </summary>
+         <param name="value">The value to be modified.</param>
+         <param name="bytes">The value to be stored at the byte location.</param>
+         <param name="offset">The byte location to store the value.</param>
+         <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
+         <param name="endian">The endianness of the byte indexing within the value.</param>
          <returns>The modified value.</returns>
       </member>
       <member
@@ -2182,6 +2204,18 @@
          <returns>The modified value.</returns>
       </member>
       <member
+         name="M:Jcd.BitManipulation.Int32Extensions.StoreBytes(System.Int32,System.Byte[],System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
+         <summary>
+            Stores a set of bytes starting at the specified byte location within the value.
+         </summary>
+         <param name="value">The value to be modified.</param>
+         <param name="bytes">The value to be stored at the byte location.</param>
+         <param name="offset">The byte location to store the value.</param>
+         <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
+         <param name="endian">The endianness of the byte indexing within the value.</param>
+         <returns>The modified value.</returns>
+      </member>
+      <member
          name="M:Jcd.BitManipulation.Int32Extensions.StoreBytes(System.Int32,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
          <summary>
             Stores a set of bytes starting at the specified byte location within the value.
@@ -2429,6 +2463,18 @@
          <param name="value">The value to be modified.</param>
          <param name="bit">The bit value to set</param>
          <param name="offset">the offset of the bit to write</param>
+         <returns>The modified value.</returns>
+      </member>
+      <member
+         name="M:Jcd.BitManipulation.Int64Extensions.StoreBytes(System.Int64,System.Byte[],System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
+         <summary>
+            Stores a set of bytes starting at the specified byte location within the value.
+         </summary>
+         <param name="value">The value to be modified.</param>
+         <param name="bytes">The value to be stored at the byte location.</param>
+         <param name="offset">The byte location to store the value.</param>
+         <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
+         <param name="endian">The endianness of the byte indexing within the value.</param>
          <returns>The modified value.</returns>
       </member>
       <member
@@ -3445,10 +3491,21 @@
          <returns>The modified value.</returns>
       </member>
       <member
+         name="M:Jcd.BitManipulation.SingleExtensions.StoreBytes(System.Single,System.Byte[],System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
+         <summary>
+            Stores a set of bytes starting at the specified byte location within the value.
+         </summary>
+         <param name="value">The value to be modified.</param>
+         <param name="bytes">The value to be stored at the byte location.</param>
+         <param name="offset">The byte location to store the value.</param>
+         <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
+         <param name="endian">The endianness of the byte indexing within the value.</param>
+         <returns>The modified value.</returns>
+      </member>
+      <member
          name="M:Jcd.BitManipulation.SingleExtensions.StoreBytes(System.Single,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
          <summary>
             Stores a set of bytes starting at the specified byte location within the value.
-            Byte indexing is LSB, least significant byte, at index/offset zero.
          </summary>
          <param name="value">The value to be modified.</param>
          <param name="bytes">The value to be stored at the byte location.</param>
@@ -3461,7 +3518,6 @@
          name="M:Jcd.BitManipulation.SingleExtensions.StoreByte(System.Single,System.Byte,System.Int32,Jcd.BitManipulation.Endian)">
          <summary>
             Store a single byte to the value at the specified byte offset.
-            Byte indexing is LSB, least significant byte, at index/offset zero.
          </summary>
          <param name="value">The value to be modified.</param>
          <param name="byte">The byte value to set</param>
@@ -3641,6 +3697,41 @@
          </summary>
          <param name="value">The value to be modified.</param>
          <param name="offset">The offset of the bit to set.</param>
+         <returns>The modified value.</returns>
+      </member>
+      <member
+         name="M:Jcd.BitManipulation.UInt16Extensions.StoreByte(System.UInt16,System.Byte,System.Int32,Jcd.BitManipulation.Endian)">
+         <summary>
+            Store a single byte to the value at the specified byte offset.
+         </summary>
+         <param name="value">The value to be modified.</param>
+         <param name="byte">The byte value to set</param>
+         <param name="offset">the offset of the byte to write</param>
+         <param name="endian">The endianness for indexing into the bytes.</param>
+         <returns>The modified value.</returns>
+      </member>
+      <member
+         name="M:Jcd.BitManipulation.UInt16Extensions.StoreBytes(System.UInt16,System.Byte[],System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
+         <summary>
+            Stores a set of bytes starting at the specified byte location within the value.
+         </summary>
+         <param name="value">The value to be modified.</param>
+         <param name="bytes">The value to be stored at the byte location.</param>
+         <param name="offset">The byte location to store the value.</param>
+         <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
+         <param name="endian">The endianness of the byte indexing within the value.</param>
+         <returns>The modified value.</returns>
+      </member>
+      <member
+         name="M:Jcd.BitManipulation.UInt16Extensions.StoreBytes(System.UInt16,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
+         <summary>
+            Stores a set of bytes starting at the specified byte location within the value.
+         </summary>
+         <param name="value">The value to be modified.</param>
+         <param name="bytes">The value to be stored at the byte location.</param>
+         <param name="offset">The byte location to store the value.</param>
+         <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
+         <param name="endian">The endianness of the byte indexing within the value.</param>
          <returns>The modified value.</returns>
       </member>
       <member name="M:Jcd.BitManipulation.UInt16Extensions.SetBits(System.UInt16,Jcd.BitManipulation.BitMask)">
@@ -3916,7 +4007,7 @@
          <returns>The modified value.</returns>
       </member>
       <member
-         name="M:Jcd.BitManipulation.UInt32Extensions.StoreBytes(System.UInt16,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
+         name="M:Jcd.BitManipulation.UInt32Extensions.StoreBytes(System.UInt32,System.Byte[],System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
          <summary>
             Stores a set of bytes starting at the specified byte location within the value.
          </summary>
@@ -3925,17 +4016,6 @@
          <param name="offset">The byte location to store the value.</param>
          <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
          <param name="endian">The endianness of the byte indexing within the value.</param>
-         <returns>The modified value.</returns>
-      </member>
-      <member
-         name="M:Jcd.BitManipulation.UInt32Extensions.StoreByte(System.UInt16,System.Byte,System.Int32,Jcd.BitManipulation.Endian)">
-         <summary>
-            Store a single byte to the value at the specified byte offset.
-         </summary>
-         <param name="value">The value to be modified.</param>
-         <param name="byte">The byte value to set</param>
-         <param name="offset">the offset of the byte to write</param>
-         <param name="endian">The endianness for indexing into the bytes.</param>
          <returns>The modified value.</returns>
       </member>
       <member
@@ -4196,6 +4276,18 @@
       </member>
       <member
          name="M:Jcd.BitManipulation.UInt64Extensions.StoreBytes(System.UInt64,System.ReadOnlySpan{System.Byte},System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
+         <summary>
+            Stores a set of bytes starting at the specified byte location within the value.
+         </summary>
+         <param name="value">The value to be modified.</param>
+         <param name="bytes">The value to be stored at the byte location.</param>
+         <param name="offset">The byte location to store the value.</param>
+         <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
+         <param name="endian">The endianness of the byte indexing within the value.</param>
+         <returns>The modified value.</returns>
+      </member>
+      <member
+         name="M:Jcd.BitManipulation.UInt64Extensions.StoreBytes(System.UInt64,System.Byte[],System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
          <summary>
             Stores a set of bytes starting at the specified byte location within the value.
          </summary>

@@ -7,7 +7,6 @@ Convert a uint into an array of bytes
 ```csharp
 public static byte[] ToByteArray(this uint data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt32Extensions.ToByteArray(thisuint,Jcd.BitManipulation.Endian).data'></a>
@@ -23,6 +22,5 @@ the [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'S
 The order in which to store the bytes
 
 #### Returns
-
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 The value as an array in the requested byte order

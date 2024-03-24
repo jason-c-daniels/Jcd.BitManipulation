@@ -9,7 +9,6 @@ to a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 '
 ```csharp
 public static int implicit operator int(Jcd.BitManipulation.LittleEndianByteIndexer indexer);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicitint(Jcd.BitManipulation.LittleEndianByteIndexer).indexer'></a>
@@ -19,6 +18,5 @@ public static int implicit operator int(Jcd.BitManipulation.LittleEndianByteInde
 The indexer to convert.
 
 #### Returns
-
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 The raw data.

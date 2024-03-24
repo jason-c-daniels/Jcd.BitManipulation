@@ -1,7 +1,5 @@
 #region
 
-using Jcd.BitManipulation.BitIndexers;
-
 using Xunit;
 
 // ReSharper disable HeapView.ObjectAllocation

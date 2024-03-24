@@ -1,4 +1,3 @@
-#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ToggleBitsExtensions](Jcd.BitManipulation.ToggleBitsExtensions.md 'Jcd.BitManipulation.ToggleBitsExtensions')
 
 ## ToggleBitsExtensions.ToggleBits(this sbyte, BitMask) Method

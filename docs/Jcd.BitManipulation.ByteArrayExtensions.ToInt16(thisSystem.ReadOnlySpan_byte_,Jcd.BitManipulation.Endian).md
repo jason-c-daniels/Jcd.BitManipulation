@@ -1,4 +1,3 @@
-#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ByteArrayExtensions](Jcd.BitManipulation.ByteArrayExtensions.md 'Jcd.BitManipulation.ByteArrayExtensions')
 
 ## ByteArrayExtensions.ToInt16(this ReadOnlySpan<byte>, Endian) Method

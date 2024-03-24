@@ -1,5 +1,3 @@
-#### [Jcd.BitManipulation](index.md 'index')
-
 ## Jcd.BitManipulation Namespace
 
 Provides a set of extension methods and types to assist with
@@ -75,7 +73,10 @@ var leBaToUInt16Be = leBa.ToUInt16(Endian.Big); // leBaToUInt16Le = 0b0101010110
 
 | Structs | |
 | :--- | :--- |
+| [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') | Provides byte level indexing operations (set, get) on a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64'). Zero is the most significant byte. |
+| [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer') | Provides enumeration and indexed access to the bits on a stored [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64'). |
 | [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') | An conceptual abstraction for a bit mask. |
+| [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') | Provides byte level indexing operations (set, get) on a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64'). Zero is the most significant byte. |
 
 | Enums | |
 | :--- | :--- |

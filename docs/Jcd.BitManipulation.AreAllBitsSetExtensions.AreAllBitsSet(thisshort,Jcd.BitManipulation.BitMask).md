@@ -1,4 +1,3 @@
-#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[AreAllBitsSetExtensions](Jcd.BitManipulation.AreAllBitsSetExtensions.md 'Jcd.BitManipulation.AreAllBitsSetExtensions')
 
 ## AreAllBitsSetExtensions.AreAllBitsSet(this short, BitMask) Method

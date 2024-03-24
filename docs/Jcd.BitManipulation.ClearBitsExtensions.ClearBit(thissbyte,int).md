@@ -1,4 +1,3 @@
-#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ClearBitsExtensions](Jcd.BitManipulation.ClearBitsExtensions.md 'Jcd.BitManipulation.ClearBitsExtensions')
 
 ## ClearBitsExtensions.ClearBit(this sbyte, int) Method

@@ -1,4 +1,3 @@
-#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BooleanArrayExtensions](Jcd.BitManipulation.BooleanArrayExtensions.md 'Jcd.BitManipulation.BooleanArrayExtensions')
 
 ## BooleanArrayExtensions.ToBooleanArray(this short) Method

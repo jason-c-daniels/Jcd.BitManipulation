@@ -2,8 +2,6 @@
 
 using BenchmarkDotNet.Attributes;
 
-using Jcd.BitManipulation.ByteIndexers;
-
 // ReSharper disable RedundantArgumentDefaultValue
 // ReSharper disable UnusedMember.Local
 // ReSharper disable MemberCanBePrivate.Global

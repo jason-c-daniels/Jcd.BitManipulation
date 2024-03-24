@@ -1,4 +1,3 @@
-#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BitwiseConversionExtensions](Jcd.BitManipulation.BitwiseConversionExtensions.md 'Jcd.BitManipulation.BitwiseConversionExtensions')
 
 ## BitwiseConversionExtensions.BitwiseToSingle(this uint) Method

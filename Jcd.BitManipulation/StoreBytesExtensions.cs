@@ -12,7 +12,6 @@ using System.Runtime.CompilerServices;
 // ReSharper disable UnusedType.Global
 // ReSharper disable UnusedMethodReturnValue.Global
 // ReSharper disable UnusedMemberInSuper.Global
-using Jcd.BitManipulation.ByteIndexers;
 
 #endregion
 

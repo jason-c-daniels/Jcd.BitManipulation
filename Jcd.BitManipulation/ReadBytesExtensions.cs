@@ -2,8 +2,6 @@
 
 using System.Runtime.CompilerServices;
 
-using Jcd.BitManipulation.ByteIndexers;
-
 // ReSharper disable MemberCanBePrivate.Global
 // ReSharper disable UnusedMember.Global
 // ReSharper disable UnusedMember.Local

@@ -24,7 +24,7 @@ and keeping acceptable performance<sup>1</sup>.
 
 - I've found myself strongly disliking the proliferation of types. All of the type specific `BitIndexer` and
   `ByteIndexer` types will be replaced with four types: `BigEndianByteIndexer`, `LittleEndianByteIndexer`,
-  `BigEndianBitIndexer`, `LittleEndianBitIndexer`.
+  `BitIndexer`, `ReverseBitIndexer`.
 - The old indexer types will be deprecated in an upcoming release of 2.x, shortly before 3.0 is released. If you're
   using them keep in mind that you will need to change over. Consider scoping out the change once the first
   prerelease of 3.0 is published.
@@ -36,7 +36,9 @@ and keeping acceptable performance<sup>1</sup>.
 - To the end of enforcing the indexers stack allocated and used in place, the bit and byte indexer types will become
   `ref structs`. This carries some implications such as making them non-viable as fields and async return types.
   That's in keeping with the original intent and a desirable change, from my view. If you need them to remain
-  heap allocatable, add an issue or open a dialog with me about your needs.
+  heap allocatable, add an issue or open a dialog some other way about your needs.
+- All extension methods will be moved into type-specific extesion classes (e.g. `UInt64Extensions`). This will
+  only break direct calls such as ReadBytesExtensions.ReadBytes(myInt,offset,length,Endian.Big).
 
 ### New Features / Improvements
 
@@ -65,8 +67,7 @@ and keeping acceptable performance<sup>1</sup>.
         is performant enough for the target audience.
       - If you really need as fast of performance as possible in converting integer to and from arrays, you may need to
         roll your own solution tailored to the hardware you're running on. Even `BitConverter` can be less performant
-        than
-        hand-rolled solutions for 16 bit integers on my machine.
+        than hand-rolled solutions for 16 bit integers on my machine.
 - Improved documentation. I will improve the documentation on how to properly use the extension methods as well
   as their underlying types. One area currently lacking is on how to expect a big endian conversion from a
   a byte array to behave when the array is smaller than the destination type. (fills from position 0)

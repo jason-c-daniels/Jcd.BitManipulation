@@ -22,5 +22,6 @@ The starting bit offset
 The number of bits to extract
 
 #### Returns
+
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 an array of bools for the subset of bits

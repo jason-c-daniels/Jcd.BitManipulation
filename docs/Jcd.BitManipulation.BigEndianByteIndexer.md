@@ -29,10 +29,13 @@ public ref struct BigEndianByteIndexer
 | [Length](Jcd.BitManipulation.BigEndianByteIndexer.Length.md 'Jcd.BitManipulation.BigEndianByteIndexer.Length') | The number of bytes indexable by this indexer. |
 | [this[int]](Jcd.BitManipulation.BigEndianByteIndexer.this[int].md 'Jcd.BitManipulation.BigEndianByteIndexer.this[int]') | Access bytes from the underlying data. |
 
-| Methods | |
-| :--- | :--- |
-| [Slice(int, int)](Jcd.BitManipulation.BigEndianByteIndexer.Slice(int,int).md 'Jcd.BitManipulation.BigEndianByteIndexer.Slice(int, int)') | Get a subset of bytes given a starting offset and length. |
-| [ToString()](Jcd.BitManipulation.BigEndianByteIndexer.ToString().md 'Jcd.BitManipulation.BigEndianByteIndexer.ToString()') | Creates a string of the data formatted as hex for the bytes in big endian notation |
+| Methods                                                                                                                                                                                                                                |                                                                                    |
+|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------|
+| [Slice(int, int)](Jcd.BitManipulation.BigEndianByteIndexer.Slice(int,int).md 'Jcd.BitManipulation.BigEndianByteIndexer.Slice(int, int)')                                                                                               | Get a subset of bytes given a starting offset and length.                          |
+| [StoreByte(byte, int)](Jcd.BitManipulation.BigEndianByteIndexer.StoreByte(byte,int).md 'Jcd.BitManipulation.BigEndianByteIndexer.StoreByte(byte, int)')                                                                                | Store a single byte to the value at the specified byte offset.                     |
+| [StoreBytes(byte[], int, int)](Jcd.BitManipulation.BigEndianByteIndexer.StoreBytes(byte[],int,int).md 'Jcd.BitManipulation.BigEndianByteIndexer.StoreBytes(byte[], int, int)')                                                         | Stores a set of bytes starting at the specified byte location within the indexer.  |
+| [StoreBytes(ReadOnlySpan&lt;byte&gt;, int, int)](Jcd.BitManipulation.BigEndianByteIndexer.StoreBytes(System.ReadOnlySpan_byte_,int,int).md 'Jcd.BitManipulation.BigEndianByteIndexer.StoreBytes(System.ReadOnlySpan<byte>, int, int)') | Stores a set of bytes starting at the specified byte location within the indexer.  |
+| [ToString()](Jcd.BitManipulation.BigEndianByteIndexer.ToString().md 'Jcd.BitManipulation.BigEndianByteIndexer.ToString()')                                                                                                             | Creates a string of the data formatted as hex for the bytes in big endian notation |
 
 | Operators | |
 | :--- | :--- |

@@ -16,5 +16,6 @@ public static double implicit operator double(Jcd.BitManipulation.BigEndianByteI
 The indexer to convert.
 
 #### Returns
+
 [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 The raw data.

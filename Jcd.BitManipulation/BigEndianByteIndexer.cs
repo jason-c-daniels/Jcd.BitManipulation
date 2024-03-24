@@ -196,7 +196,7 @@ public ref struct BigEndianByteIndexer
          if (index < 0 || index >= ByteSize)
             throw new ArgumentOutOfRangeException(nameof(index));
 
-         Data = Data.BigEndianUncheckedStoreByte(value, index + dataOffset);
+         Data = Data.InternalBigEndianStoreByte(value, index + dataOffset);
       }
    }
 
@@ -215,9 +215,8 @@ public ref struct BigEndianByteIndexer
 
       // ReSharper disable once HeapView.ObjectAllocation.Evident
       var slice = new byte[len];
-      var j = dataOffset + start;
-      for (var i = 0; i < len; i++, j++)
-         slice[i] = Data.ReadByte(j, Endian.Big);
+      for (int i = 0, j = dataOffset + start; i < len; i++, j++)
+         slice[i] = Data.InternalBigEndianReadByte(j);
 
       return slice;
    }
@@ -515,7 +514,7 @@ public ref struct BigEndianByteIndexer
                    : size;
 
       for (int i = 0, j = offset + dataOffset; i < len; i++, j++)
-         Data = Data.BigEndianUncheckedStoreByte(bytes[i], j);
+         Data = Data.InternalBigEndianStoreByte(bytes[i], j);
 
       return this;
    }
@@ -538,7 +537,7 @@ public ref struct BigEndianByteIndexer
                    : size;
 
       for (int i = 0, j = offset + dataOffset; i < len; i++, j++)
-         Data = Data.BigEndianUncheckedStoreByte(bytes[i], j);
+         Data = Data.InternalBigEndianStoreByte(bytes[i], j);
 
       return this;
    }

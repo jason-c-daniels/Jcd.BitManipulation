@@ -195,7 +195,7 @@ public ref struct LittleEndianByteIndexer
          if (index < 0 || index >= ByteSize)
             throw new ArgumentOutOfRangeException(nameof(index));
 
-         Data = Data.LittleEndianUncheckedStoreByte(value, index);
+         Data = Data.InternalLittleEndianStoreByte(value, index);
       }
    }
 
@@ -214,9 +214,9 @@ public ref struct LittleEndianByteIndexer
 
       // ReSharper disable once HeapView.ObjectAllocation.Evident
       var slice = new byte[len];
-      var j = start;
-      for (var i = 0; i < len; i++, j++)
-         slice[i] = Data.ReadByte(j);
+      ;
+      for (int i = 0, j = start; i < len; i++, j++)
+         slice[i] = Data.InternalLittleEndianReadByte(j);
 
       return slice;
    }
@@ -492,7 +492,7 @@ public ref struct LittleEndianByteIndexer
                    : size;
 
       for (int i = 0, j = offset; i < len; i++, j++)
-         Data = Data.LittleEndianUncheckedStoreByte(bytes[i], j);
+         Data = Data.InternalLittleEndianStoreByte(bytes[i], j);
 
       return this;
    }
@@ -515,7 +515,7 @@ public ref struct LittleEndianByteIndexer
                    : size;
 
       for (int i = 0, j = offset; i < len; i++, j++)
-         Data = Data.LittleEndianUncheckedStoreByte(bytes[i], j);
+         Data = Data.InternalLittleEndianStoreByte(bytes[i], j);
 
       return this;
    }

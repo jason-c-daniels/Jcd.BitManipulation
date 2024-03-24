@@ -202,11 +202,9 @@ public static class UInt64Extensions
    public static byte ReadByte(this ulong value, int offset, Endian endian = Endian.Little)
    {
       if (endian == Endian.Little)
-         return (byte) value.ReadBits(offset << 3, 8);
+         return value.InternalLittleEndianReadByte(offset);
 
-      var beOffset = sizeof(ulong) - offset - 1;
-
-      return (byte) value.ReadBits(beOffset << 3, 8);
+      return value.InternalBigEndianReadByte(offset);
    }
 
    /// <summary>
@@ -342,24 +340,11 @@ public static class UInt64Extensions
    public static ulong StoreByte(this ulong value, byte @byte, int offset, Endian endian = Endian.Little)
    {
       if (endian == Endian.Little)
-         return value.LittleEndianUncheckedStoreByte(@byte, offset);
+         return value.InternalLittleEndianStoreByte(@byte, offset);
 
-      return value.BigEndianUncheckedStoreByte(@byte, offset);
+      return value.InternalBigEndianStoreByte(@byte, offset);
    }
-
-   [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   internal static ulong BigEndianUncheckedStoreByte(this ulong value, byte @byte, int offset)
-   {
-      var beOffset = sizeof(ulong) - offset - 1;
-
-      return value.StoreBits(@byte, beOffset << 3, 8);
-   }
-
-   [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   internal static ulong LittleEndianUncheckedStoreByte(this ulong value, byte @byte, int offset)
-   {
-      return value.StoreBits(@byte, offset << 3, 8);
-   }
+   
 
    /// <summary>
    /// Toggles bits and size.
@@ -397,5 +382,33 @@ public static class UInt64Extensions
    public static ulong ToggleBits(this ulong value, BitMask mask)
    {
       return value ^ mask.Bits;
+   }
+
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   internal static ulong InternalBigEndianStoreByte(this ulong value, byte @byte, int offset)
+   {
+      var beOffset = sizeof(ulong) - offset - 1;
+
+      return value.StoreBits(@byte, beOffset << 3, 8);
+   }
+
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   internal static ulong InternalLittleEndianStoreByte(this ulong value, byte @byte, int offset)
+   {
+      return value.StoreBits(@byte, offset << 3, 8);
+   }
+
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   internal static byte InternalBigEndianReadByte(this ulong value, int offset)
+   {
+      var beOffset = sizeof(ulong) - offset - 1;
+
+      return (byte) value.ReadBits(beOffset << 3, BitMask.BigEndianByteMasks[offset]);
+   }
+
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   internal static byte InternalLittleEndianReadByte(this ulong value, int offset)
+   {
+      return (byte) value.ReadBits(offset << 3, BitMask.LittleEndianByteMasks[offset]);
    }
 }

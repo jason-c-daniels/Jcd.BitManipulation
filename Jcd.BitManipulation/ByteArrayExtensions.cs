@@ -153,9 +153,7 @@ public static class ByteArrayExtensions
    {
       if (data == null || data.Length == 0)
          return 0;
-
-      var len = data.Length;
-
+      
       return endian == Endian.Little
                 ? GetLittleEndianUInt32(data, data.Length)
                 : GetBigEndianUInt32(data, data.Length);

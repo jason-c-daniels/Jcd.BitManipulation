@@ -1,4 +1,3 @@
-#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BitwiseConversionExtensions](Jcd.BitManipulation.BitwiseConversionExtensions.md 'Jcd.BitManipulation.BitwiseConversionExtensions')
 
 ## BitwiseConversionExtensions.BitwiseToInt32(this float) Method
@@ -17,6 +16,5 @@ public static int BitwiseToInt32(this float value);
 The value to convert
 
 #### Returns
-
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 the [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32') representation of the underlying bits

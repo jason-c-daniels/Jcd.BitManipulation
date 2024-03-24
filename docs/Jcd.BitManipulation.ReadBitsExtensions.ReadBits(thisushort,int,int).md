@@ -1,4 +1,3 @@
-#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ReadBitsExtensions](Jcd.BitManipulation.ReadBitsExtensions.md 'Jcd.BitManipulation.ReadBitsExtensions')
 
 ## ReadBitsExtensions.ReadBits(this ushort, int, int) Method
@@ -29,6 +28,5 @@ the bit offset to read from
 The total number of bits to extract
 
 #### Returns
-
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 The numeric value stored at that bit location

@@ -1,4 +1,3 @@
-#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
 ## BitMask.implicit operator BitMask(uint) Operator
@@ -17,6 +16,5 @@ public static Jcd.BitManipulation.BitMask implicit operator BitMask(uint bits);
 the value to convert to a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
 #### Returns
-
 [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 the [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') object constructed from the bits

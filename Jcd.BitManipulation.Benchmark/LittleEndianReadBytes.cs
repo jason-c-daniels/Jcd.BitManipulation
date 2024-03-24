@@ -2,8 +2,6 @@
 
 using BenchmarkDotNet.Attributes;
 
-using Jcd.BitManipulation.ByteIndexers;
-
 #endregion
 
 namespace Jcd.BitManipulation.Benchmark;

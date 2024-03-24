@@ -1,4 +1,3 @@
-#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
 ## BitMask.FromSingleBit(int) Method
@@ -17,6 +16,5 @@ public static Jcd.BitManipulation.BitMask FromSingleBit(int offset);
 the bit to set
 
 #### Returns
-
 [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') with the specified bit set.

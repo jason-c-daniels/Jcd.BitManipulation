@@ -1,4 +1,3 @@
-#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BitwiseConversionExtensions](Jcd.BitManipulation.BitwiseConversionExtensions.md 'Jcd.BitManipulation.BitwiseConversionExtensions')
 
 ## BitwiseConversionExtensions.BitwiseToSingle(this uint) Method
@@ -17,6 +16,5 @@ public static float BitwiseToSingle(this uint value);
 The value to convert
 
 #### Returns
-
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 the [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single') representation of the bits

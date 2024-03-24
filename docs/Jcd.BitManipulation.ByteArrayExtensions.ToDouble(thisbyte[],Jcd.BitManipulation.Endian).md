@@ -1,4 +1,3 @@
-#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ByteArrayExtensions](Jcd.BitManipulation.ByteArrayExtensions.md 'Jcd.BitManipulation.ByteArrayExtensions')
 
 ## ByteArrayExtensions.ToDouble(this byte[], Endian) Method
@@ -23,6 +22,5 @@ the bytes to convert
 A setting indicating the endianness of the source data. The default is Endian.Little.
 
 #### Returns
-
 [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 The converted ulong

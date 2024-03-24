@@ -1,4 +1,3 @@
-#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ReadBitsExtensions](Jcd.BitManipulation.ReadBitsExtensions.md 'Jcd.BitManipulation.ReadBitsExtensions')
 
 ## ReadBitsExtensions.ReadBits(this ushort, int, BitMask) Method
@@ -30,6 +29,5 @@ the bitmask of which bits to read.
 Zeroed bits in the mask will always extract 0 from the source.
 
 #### Returns
-
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 The right shifted value extracted from the value

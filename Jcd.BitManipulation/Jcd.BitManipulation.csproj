@@ -57,7 +57,6 @@
    </ItemGroup>
 
    <ItemGroup>
-      <Compile Remove="BitIndexerUInt32.cs"/>
       <Compile Remove="IBitIndexer.cs"/>
       <Compile Remove="BigEndianByteIndexerUInt64.cs"/>
       <Compile Remove="LittleEndianByteIndexerInt32.cs"/>

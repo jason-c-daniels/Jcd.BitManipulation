@@ -3,8 +3,6 @@
 using System;
 using System.Runtime.CompilerServices;
 
-using Jcd.BitManipulation.ByteIndexers;
-
 // ReSharper disable HeapView.ObjectAllocation
 // ReSharper disable CognitiveComplexity
 // ReSharper disable ReplaceSliceWithRangeIndexer

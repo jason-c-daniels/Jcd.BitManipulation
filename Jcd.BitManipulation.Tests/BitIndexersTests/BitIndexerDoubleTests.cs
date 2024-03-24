@@ -10,7 +10,6 @@ namespace Jcd.BitManipulation.Tests.BitIndexersTests;
 
 public class BitIndexerDoubleTests
 {
-
    [Fact]
    public void Length_Is_Correct_Bit_Size()
    {
@@ -109,5 +108,4 @@ public class BitIndexerDoubleTests
       var actual = indexer[start..end];
       Assert.Equal(expected, actual);
    }
-   
 }

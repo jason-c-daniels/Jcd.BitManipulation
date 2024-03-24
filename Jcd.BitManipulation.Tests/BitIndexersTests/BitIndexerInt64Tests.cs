@@ -1,8 +1,5 @@
 #region
 
-using System.Collections;
-using System.Linq;
-
 using Jcd.BitManipulation.BitIndexers;
 
 using Xunit;
@@ -18,15 +15,10 @@ namespace Jcd.BitManipulation.Tests.BitIndexersTests;
 public class BitIndexerInt64Tests
 {
    [Fact]
-   public void Constant_Bit_Size_Is_64_Bits()
+   public void Length_Is_Correct_Bit_Size()
    {
-      Assert.Equal(64, BitIndexerInt64.BitSize);
-   }
-
-   [Fact]
-   public void Length_Is_Bit_Size()
-   {
-      Assert.Equal(BitIndexerInt64.BitSize, new BitIndexerInt64().Length);
+      BitIndexer sut = (long) 0;
+      Assert.Equal(64, sut.Length);
    }
 
    [Theory]
@@ -36,8 +28,8 @@ public class BitIndexerInt64Tests
    [InlineData(0b00011000)]
    public void Implicit_Operator_To_BitIndexerInt64_From_Int64_Sets_All_Bits_Correctly(long data)
    {
-      BitIndexerInt64 indexer = data;
-      Assert.Equal(data, indexer.Bits);
+      BitIndexer indexer = data;
+      Assert.Equal(data, (long) indexer);
    }
 
    [Theory]
@@ -47,8 +39,7 @@ public class BitIndexerInt64Tests
    [InlineData(0b00011000)]
    public void Implicit_Operator_From_BitIndexerInt64_To_Int64_Sets_All_Bits_Correctly(long data)
    {
-      // HACK: Type binder for xUnit hates bytes as params. Coerce the value here.
-      var indexer = new BitIndexerInt64 { Bits = data };
+      BitIndexer indexer = data;
       long bits = indexer;
 
       Assert.Equal((long) indexer, bits);
@@ -61,7 +52,7 @@ public class BitIndexerInt64Tests
    [InlineData(0b0100000101000001)]
    public void Indexer_Returns_Correct_Bit_Value(long data)
    {
-      BitIndexerInt64 indexer = data;
+      BitIndexer indexer = data;
       long mask = 0;
 
       for (var i = 0; i < indexer.Length; i++)
@@ -80,11 +71,11 @@ public class BitIndexerInt64Tests
    [InlineData(14)]
    public void Indexer_Sets_Correct_Bit_Value(int index)
    {
-      BitIndexerInt64 indexer = 0;
+      BitIndexer indexer = 0;
       long expected = 0;
       expected = expected.SetBit(index);
       indexer[index] = true;
-      Assert.Equal(expected, indexer.Bits);
+      Assert.Equal(expected, (long) indexer);
       Assert.True(indexer[index]);
       indexer[index] = false;
       Assert.False(indexer[index]);
@@ -93,20 +84,8 @@ public class BitIndexerInt64Tests
    [Fact]
    public void Enumerator_Enumerates_Correct_Number_Of_Bits()
    {
-      var indexer = new BitIndexerInt64 { Bits = 0x7e };
-      Assert.Equal(BitIndexerInt64.BitSize, indexer.ToArray().Length);
-   }
-
-   [Theory]
-   [InlineData(0b10101000000000)]
-   [InlineData(0b11101100000000)]
-   public void Enumerator_Enumerates_Bits_In_Correct_Order_LSB_to_MSB(long data)
-   {
-      var indexer = new BitIndexerInt64 { Bits = data };
-      var bitValues = indexer.ToArray();
-
-      for (var i = 0; i < indexer.Length; i++)
-         Assert.Equal(indexer.Bits.ReadBit(i), bitValues[i]);
+      BitIndexer indexer = 0x7Eul;
+      Assert.Equal(64, indexer.Length);
    }
 
    [Theory]
@@ -115,7 +94,7 @@ public class BitIndexerInt64Tests
    [InlineData(0b0000000000000000111000000000000000000000000000000000000000000000, "0b0000000000000000111000000000000000000000000000000000000000000000")]
    public void ToString_Formats_As_Binary_Int_Representation(long data, string expected)
    {
-      var indexer = new BitIndexerInt64 { Bits = data };
+      BitIndexer indexer = data;
       Assert.Equal(expected, indexer.ToString());
    }
 
@@ -125,25 +104,10 @@ public class BitIndexerInt64Tests
    [InlineData(0b00011100, 0, 8)]
    public void Slice_Returns_Correct_Subset_Of_Bools(long data, int start, int end)
    {
-      var indexer = new BitIndexerInt64 { Bits = data };
-      var bits = indexer.ToArray();
+      BitIndexer indexer = data;
+      var bits = data.ToBooleanArray();
       var expected = bits[start..end];
       var actual = indexer[start..end];
       Assert.Equal(expected, actual);
-   }
-
-   [Fact]
-   public void IEnumerable_GetEnumerator_Enumerates_The_Correct_Number_Of_Items()
-   {
-      var itemCount = 0;
-      var enumerable = (IEnumerable) new BitIndexerInt64 { Bits = 0x7FFF };
-
-      foreach (var item in enumerable)
-      {
-         Assert.IsType<bool>(item);
-         itemCount++;
-      }
-
-      Assert.Equal(BitIndexerInt64.BitSize, itemCount);
    }
 }

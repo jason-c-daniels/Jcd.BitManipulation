@@ -15,7 +15,7 @@ namespace Jcd.BitManipulation.Tests.BitIndexersTests;
 public class BitIndexerByteTests
 {
    [Fact]
-   public void Length_Is_Bit_Size()
+   public void Length_Is_Correct_Bit_Size()
    {
       BitIndexer sut = (byte) 0;
       Assert.Equal(sizeof(byte) << 3, sut.BitSize);
@@ -26,12 +26,11 @@ public class BitIndexerByteTests
    [InlineData(0xFE)]
    [InlineData(0x7F)]
    [InlineData(0b00011000)]
-   public void Implicit_Operator_To_BitIndexerByte_From_Byte_Sets_All_Bits_Correctly(uint data)
+   public void Implicit_Operator_To_BitIndexerByte_From_Byte_Sets_All_Bits_Correctly(byte data)
    {
-      // HACK: Type binder for xUnit hates bytes as params. Coerce the value here.
-      var bits = (byte) data;
+      var bits = data;
       BitIndexer indexer = bits;
-      Assert.Equal(bits, indexer.Bits);
+      Assert.Equal(data, (byte) indexer);
    }
 
    [Theory]
@@ -78,12 +77,12 @@ public class BitIndexerByteTests
       byte expected = 0;
       expected = expected.SetBit(index);
       indexer[index] = true;
-      Assert.Equal(expected, indexer.Bits);
+      Assert.Equal(expected, (byte) indexer);
       Assert.True(indexer[index]);
       indexer[index] = false;
       Assert.False(indexer[index]);
    }
-   
+
    [Theory]
    [InlineData(0b00000000, "0b00000000")]
    [InlineData(0b00011100, "0b00011100")]

@@ -1,8 +1,5 @@
 #region
 
-using System.Collections;
-using System.Linq;
-
 using Jcd.BitManipulation.BitIndexers;
 
 using Xunit;
@@ -18,15 +15,10 @@ namespace Jcd.BitManipulation.Tests.BitIndexersTests;
 public class BitIndexerUInt32Tests
 {
    [Fact]
-   public void Constant_Bit_Size_Is_32_Bits()
+   public void Length_Is_Correct_Bit_Size()
    {
-      Assert.Equal(32, BitIndexerUInt32.BitSize);
-   }
-
-   [Fact]
-   public void Length_Is_Bit_Size()
-   {
-      Assert.Equal(BitIndexerUInt32.BitSize, new BitIndexerUInt32().Length);
+      BitIndexer sut = (uint) 0;
+      Assert.Equal(32, sut.Length);
    }
 
    [Theory]
@@ -36,7 +28,7 @@ public class BitIndexerUInt32Tests
    [InlineData(0b00011000)]
    public void Implicit_Operator_To_BitIndexerUInt32_From_UInt32_Sets_All_Bits_Correctly(uint data)
    {
-      BitIndexerUInt32 indexer = data;
+      BitIndexer indexer = data;
       Assert.Equal(data, indexer.Bits);
    }
 
@@ -47,8 +39,7 @@ public class BitIndexerUInt32Tests
    [InlineData(0b00011000)]
    public void Implicit_Operator_From_BitIndexerUInt32_To_UInt32_Sets_All_Bits_Correctly(uint data)
    {
-      // HACK: Type binder for xUnit hates bytes as params. Coerce the value here.
-      var indexer = new BitIndexerUInt32 { Bits = data };
+      BitIndexer indexer = data;
       uint bits = indexer;
 
       Assert.Equal(indexer.Bits, bits);
@@ -61,7 +52,7 @@ public class BitIndexerUInt32Tests
    [InlineData(0b0100000101000001)]
    public void Indexer_Returns_Correct_Bit_Value(uint data)
    {
-      BitIndexerUInt32 indexer = data;
+      BitIndexer indexer = data;
       uint mask = 0;
 
       for (var i = 0; i < indexer.Length; i++)
@@ -80,33 +71,14 @@ public class BitIndexerUInt32Tests
    [InlineData(14)]
    public void Indexer_Sets_Correct_Bit_Value(int index)
    {
-      BitIndexerUInt32 indexer = 0;
+      BitIndexer indexer = 0;
       uint expected = 0;
       expected = expected.SetBit(index);
       indexer[index] = true;
-      Assert.Equal(expected, indexer.Bits);
+      Assert.Equal(expected, (uint) indexer);
       Assert.True(indexer[index]);
       indexer[index] = false;
       Assert.False(indexer[index]);
-   }
-
-   [Fact]
-   public void Enumerator_Enumerates_Correct_Number_Of_Bits()
-   {
-      var indexer = new BitIndexerUInt32 { Bits = 0x7e };
-      Assert.Equal(BitIndexerUInt32.BitSize, indexer.ToArray().Length);
-   }
-
-   [Theory]
-   [InlineData(0b10101000000000)]
-   [InlineData(0b11101100000000)]
-   public void Enumerator_Enumerates_Bits_In_Correct_Order_LSB_to_MSB(int data)
-   {
-      var indexer = new BitIndexerUInt32 { Bits = (uint) data };
-      var bitValues = indexer.ToArray();
-
-      for (var i = 0; i < indexer.Length; i++)
-         Assert.Equal(indexer.Bits.ReadBit(i), bitValues[i]);
    }
 
    [Theory]
@@ -115,7 +87,7 @@ public class BitIndexerUInt32Tests
    [InlineData(0b00000000000000001110000000000000, "0b00000000000000001110000000000000")]
    public void ToString_Formats_As_Binary_Int_Representation(uint data, string expected)
    {
-      var indexer = new BitIndexerUInt32 { Bits = data };
+      BitIndexer indexer = data;
       Assert.Equal(expected, indexer.ToString());
    }
 
@@ -125,25 +97,10 @@ public class BitIndexerUInt32Tests
    [InlineData(0b00011100, 0, 8)]
    public void Slice_Returns_Correct_Subset_Of_Bools(uint data, int start, int end)
    {
-      var indexer = new BitIndexerUInt32 { Bits = data };
-      var bits = indexer.ToArray();
+      BitIndexer indexer = data;
+      var bits = data.ToBooleanArray();
       var expected = bits[start..end];
       var actual = indexer[start..end];
       Assert.Equal(expected, actual);
-   }
-
-   [Fact]
-   public void IEnumerable_GetEnumerator_Enumerates_The_Correct_Number_Of_Items()
-   {
-      var itemCount = 0;
-      var enumerable = (IEnumerable) new BitIndexerUInt32 { Bits = 0x7FFF };
-
-      foreach (var item in enumerable)
-      {
-         Assert.IsType<bool>(item);
-         itemCount++;
-      }
-
-      Assert.Equal(BitIndexerUInt32.BitSize, itemCount);
    }
 }

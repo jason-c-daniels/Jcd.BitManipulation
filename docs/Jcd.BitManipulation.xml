@@ -591,59 +591,65 @@
             </summary>
             <returns>the bits of the value formatted as 0b0101...1111</returns>
         </member>
-        <member name="T:Jcd.BitManipulation.BitIndexers.BitIndexerInt16">
+       <member name="T:Jcd.BitManipulation.BitIndexers.BitIndexer">
             <summary>
             Provides enumeration and indexed access to the bits on a stored <see cref="T:System.Int16" />.
             </summary>
         </member>
-        <member name="F:Jcd.BitManipulation.BitIndexers.BitIndexerInt16.BitSize">
+       <member name="F:Jcd.BitManipulation.BitIndexers.BitIndexer.BitSize">
             <summary>
             The number of bits this type will index
             </summary>
         </member>
-        <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerInt16.Bits">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexer.Bits">
             <summary>
             The backing store
             </summary>
         </member>
-        <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerInt16.Length">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexer.Length">
             <summary>
             The number of bits indexable by this indexer.
             </summary>
         </member>
-        <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerInt16.Item(System.Int32)">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexer.Item(System.Int32)">
             <summary>
             Gets or sets individual bits within the backing store.
             </summary>
             <param name="index">the offset of the bit to access.</param>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt16.op_Implicit(System.Int16)~Jcd.BitManipulation.BitIndexers.BitIndexerInt16">
+       <member
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.op_Implicit(System.Int16)~Jcd.BitManipulation.BitIndexers.BitIndexer">
             <summary>
-            Automatically Convert from a <see cref="T:System.Int16" /> to a <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexerInt16" />
+               Automatically Convert from a
+               <see cref="T:System.Int16"/>
+               to a
+               <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexer"/>
             </summary>
             <param name="bits">the initial value for the indexer's backing store</param>
-            <returns>A new BitIndexerInt16</returns>
+          <returns>A new BitIndexer</returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt16.op_Implicit(Jcd.BitManipulation.BitIndexers.BitIndexerInt16)~System.Int16">
+       <member
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.op_Implicit(Jcd.BitManipulation.BitIndexers.BitIndexer)~System.Int16">
             <summary>
-            Automatically convert from a BitIndexerInt16 to a <see cref="T:System.Int16" />
+               Automatically convert from a BitIndexer to a
+               <see cref="T:System.Int16"/>
             </summary>
             <param name="indexer">the indexer to convert from</param>
             <returns>the <see cref="T:System.Int16" /></returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt16.GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt16.System#Collections#IEnumerable#GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt16.Slice(System.Int32,System.Int32)">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.Slice(System.Int32,System.Int32)">
             <summary>
             Get a subset of bits given a starting offset and length.
             </summary>
@@ -651,65 +657,73 @@
             <param name="length">The number of bits to extract</param>
             <returns>an array of bools for the subset of bits</returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt16.ToString">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.ToString">
             <summary>
             Format as a bit representation
             </summary>
             <returns>the bits of the value formatted as 0b0101...1111</returns>
         </member>
-        <member name="T:Jcd.BitManipulation.BitIndexers.BitIndexerInt32">
+       <member name="T:Jcd.BitManipulation.BitIndexers.BitIndexer">
             <summary>
             Provides enumeration and indexed access to the bits on a stored <see cref="T:System.Int32" />.
             </summary>
         </member>
-        <member name="F:Jcd.BitManipulation.BitIndexers.BitIndexerInt32.BitSize">
+       <member name="F:Jcd.BitManipulation.BitIndexers.BitIndexer.BitSize">
             <summary>
             The number of bits this type will index
             </summary>
         </member>
-        <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerInt32.Bits">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexer.Bits">
             <summary>
             The backing store
             </summary>
         </member>
-        <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerInt32.Length">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexer.Length">
             <summary>
             The number of bits indexable by this indexer.
             </summary>
         </member>
-        <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerInt32.Item(System.Int32)">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexer.Item(System.Int32)">
             <summary>
             Gets or sets individual bits within the backing store.
             </summary>
             <param name="index">the offset of the bit to access.</param>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt32.op_Implicit(System.Int32)~Jcd.BitManipulation.BitIndexers.BitIndexerInt32">
+       <member
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.op_Implicit(System.Int32)~Jcd.BitManipulation.BitIndexers.BitIndexer">
             <summary>
-            Automatically Convert from an <see cref="T:System.Int32" /> to a <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexerInt32" />
+               Automatically Convert from an
+               <see cref="T:System.Int32"/>
+               to a
+               <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexer"/>
             </summary>
             <param name="bits">the initial value for the indexer's backing store</param>
-            <returns>A new <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexerInt32" /></returns>
+          <returns>A new
+             <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexer"/>
+          </returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt32.op_Implicit(Jcd.BitManipulation.BitIndexers.BitIndexerInt32)~System.Int32">
+       <member
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.op_Implicit(Jcd.BitManipulation.BitIndexers.BitIndexer)~System.Int32">
             <summary>
-            Automatically convert from a BitIndexerInt32 to an <see cref="T:System.Int32" />
+               Automatically convert from a BitIndexer to an
+               <see cref="T:System.Int32"/>
             </summary>
             <param name="indexer">the indexer to convert from</param>
             <returns>the <see cref="T:System.Int32" /></returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt32.GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt32.System#Collections#IEnumerable#GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt32.Slice(System.Int32,System.Int32)">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.Slice(System.Int32,System.Int32)">
             <summary>
             Get a subset of bits given a starting offset and length.
             </summary>
@@ -717,129 +731,145 @@
             <param name="length">The number of bits to extract</param>
             <returns>an array of bools for the subset of bits</returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt32.ToString">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.ToString">
             <summary>
             Format as a bit representation
             </summary>
             <returns>the bits of the value formatted as 0b0101...1111</returns>
         </member>
-        <member name="T:Jcd.BitManipulation.BitIndexers.BitIndexerInt64">
+       <member name="T:Jcd.BitManipulation.BitIndexers.BitIndexer">
             <summary>
             Provides enumeration and indexed access to the bits on a stored <see cref="T:System.Int64" />.
             </summary>
         </member>
-        <member name="F:Jcd.BitManipulation.BitIndexers.BitIndexerInt64.BitSize">
+       <member name="F:Jcd.BitManipulation.BitIndexers.BitIndexer.BitSize">
             <summary>
             The number of bits this type will index
             </summary>
         </member>
-        <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerInt64.Bits">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexer.Bits">
             <summary>
             The backing store
             </summary>
         </member>
-        <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerInt64.Length">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexer.Length">
             <summary>
             The number of bits indexable by this indexer.
             </summary>
         </member>
-        <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerInt64.Item(System.Int32)">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexer.Item(System.Int32)">
             <summary>
             Gets or sets individual bits within the backing store.
             </summary>
             <param name="index">the offset of the bit to access.</param>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt64.op_Implicit(System.Int64)~Jcd.BitManipulation.BitIndexers.BitIndexerInt64">
+       <member
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.op_Implicit(System.Int64)~Jcd.BitManipulation.BitIndexers.BitIndexer">
             <summary>
-            Automatically Convert from a <see cref="T:System.Int64" /> to a <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexerInt64" />
+               Automatically Convert from a
+               <see cref="T:System.Int64"/>
+               to a
+               <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexer"/>
             </summary>
             <param name="bits">the initial value for the indexer's backing store</param>
-            <returns>A new <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexerInt64" /></returns>
+          <returns>A new
+             <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexer"/>
+          </returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt64.op_Implicit(Jcd.BitManipulation.BitIndexers.BitIndexerInt64)~System.Int64">
+       <member
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.op_Implicit(Jcd.BitManipulation.BitIndexers.BitIndexer)~System.Int64">
             <summary>
-            Automatically convert from a BitIndexerInt64 to a <see cref="T:System.Int64" />
+               Automatically convert from a BitIndexer to a
+               <see cref="T:System.Int64"/>
             </summary>
             <param name="indexer">the indexer to convert from</param>
             <returns>the underlying value</returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt64.GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt64.System#Collections#IEnumerable#GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt64.Slice(System.Int32,System.Int32)">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.Slice(System.Int32,System.Int32)">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerInt64.ToString">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.ToString">
             <summary>
             Format as a bit representation
             </summary>
             <returns>the bits of the value formatted as 0b0101...1111</returns>
         </member>
-        <member name="T:Jcd.BitManipulation.BitIndexers.BitIndexerSByte">
+       <member name="T:Jcd.BitManipulation.BitIndexers.BitIndexer">
             <summary>
             Provides enumeration and indexed access to the bits on a stored <see cref="T:System.SByte" />.
             </summary>
         </member>
-        <member name="F:Jcd.BitManipulation.BitIndexers.BitIndexerSByte.BitSize">
+       <member name="F:Jcd.BitManipulation.BitIndexers.BitIndexer.BitSize">
             <summary>
             The number of bits this type will index
             </summary>
         </member>
-        <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerSByte.Bits">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexer.Bits">
             <summary>
             The backing store
             </summary>
         </member>
-        <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerSByte.Length">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexer.Length">
             <summary>
             The number of bits indexable by this indexer.
             </summary>
         </member>
-        <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerSByte.Item(System.Int32)">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexer.Item(System.Int32)">
             <summary>
             Gets or sets individual bits within the backing store.
             </summary>
             <param name="index">the offset of the bit to access.</param>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerSByte.op_Implicit(System.SByte)~Jcd.BitManipulation.BitIndexers.BitIndexerSByte">
+       <member
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.op_Implicit(System.SByte)~Jcd.BitManipulation.BitIndexers.BitIndexer">
             <summary>
-            Automatically Convert from an <see cref="T:System.SByte" /> to a <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexerSByte" />
+               Automatically Convert from an
+               <see cref="T:System.SByte"/>
+               to a
+               <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexer"/>
             </summary>
             <param name="bits">the initial value for the indexer's backing store</param>
-            <returns>A new <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexerSByte" /></returns>
+          <returns>A new
+             <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexer"/>
+          </returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerSByte.op_Implicit(Jcd.BitManipulation.BitIndexers.BitIndexerSByte)~System.SByte">
+       <member
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.op_Implicit(Jcd.BitManipulation.BitIndexers.BitIndexer)~System.SByte">
             <summary>
-            Automatically convert from a BitIndexerSByte to an <see cref="T:System.SByte" />
+               Automatically convert from a BitIndexer to an
+               <see cref="T:System.SByte"/>
             </summary>
             <param name="indexer">the indexer to convert from</param>
             <returns>the <see cref="T:System.SByte" /></returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerSByte.GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerSByte.System#Collections#IEnumerable#GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerSByte.Slice(System.Int32,System.Int32)">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.Slice(System.Int32,System.Int32)">
             <summary>
             Get a subset of bits given a starting offset and length.
             </summary>
@@ -847,7 +877,7 @@
             <param name="length">The number of bits to extract</param>
             <returns>an array of bools for the subset of bits</returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerSByte.ToString">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.ToString">
             <summary>
             Format as a bit representation
             </summary>
@@ -919,59 +949,67 @@
             </summary>
             <returns>the bits of the value formatted as 0b0101...1111</returns>
         </member>
-        <member name="T:Jcd.BitManipulation.BitIndexers.BitIndexerUInt16">
+       <member name="T:Jcd.BitManipulation.BitIndexers.BitIndexer">
             <summary>
             Provides enumeration and indexed access to the bits on a stored <see cref="T:System.UInt16" />.
             </summary>
         </member>
-        <member name="F:Jcd.BitManipulation.BitIndexers.BitIndexerUInt16.BitSize">
+       <member name="F:Jcd.BitManipulation.BitIndexers.BitIndexer.BitSize">
             <summary>
             The number of bits this type will index
             </summary>
         </member>
-        <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerUInt16.Bits">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexer.Bits">
             <summary>
             The backing store
             </summary>
         </member>
-        <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerUInt16.Length">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexer.Length">
             <summary>
             The number of bits indexable by this indexer.
             </summary>
         </member>
-        <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerUInt16.Item(System.Int32)">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexer.Item(System.Int32)">
             <summary>
             Gets or sets individual bits within the backing store.
             </summary>
             <param name="index">the offset of the bit to access.</param>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt16.op_Implicit(System.UInt16)~Jcd.BitManipulation.BitIndexers.BitIndexerUInt16">
+       <member
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.op_Implicit(System.UInt16)~Jcd.BitManipulation.BitIndexers.BitIndexer">
             <summary>
-            Automatically Convert from a <see cref="T:System.UInt16" /> to a <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexerUInt16" />
+               Automatically Convert from a
+               <see cref="T:System.UInt16"/>
+               to a
+               <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexer"/>
             </summary>
             <param name="bits">the initial value for the indexer's backing store</param>
-            <returns>A new <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexerUInt16" /></returns>
+          <returns>A new
+             <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexer"/>
+          </returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt16.op_Implicit(Jcd.BitManipulation.BitIndexers.BitIndexerUInt16)~System.UInt16">
+       <member
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.op_Implicit(Jcd.BitManipulation.BitIndexers.BitIndexer)~System.UInt16">
             <summary>
-            Automatically convert from a BitIndexerUInt16 to a <see cref="T:System.UInt16" />
+               Automatically convert from a BitIndexer to a
+               <see cref="T:System.UInt16"/>
             </summary>
             <param name="indexer">the indexer to convert from</param>
             <returns>the <see cref="T:System.UInt16" /></returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt16.GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt16.System#Collections#IEnumerable#GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt16.Slice(System.Int32,System.Int32)">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.Slice(System.Int32,System.Int32)">
             <summary>
             Get a subset of bits given a starting offset and length.
             </summary>
@@ -979,65 +1017,73 @@
             <param name="length">The number of bits to extract</param>
             <returns>an array of bools for the subset of bits</returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt16.ToString">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.ToString">
             <summary>
             Format as a bit representation
             </summary>
             <returns>the bits of the value formatted as 0b0101...1111</returns>
         </member>
-        <member name="T:Jcd.BitManipulation.BitIndexers.BitIndexerUInt32">
+       <member name="T:Jcd.BitManipulation.BitIndexers.BitIndexer">
             <summary>
             Provides enumeration and indexed access to the bits on a stored <see cref="T:System.UInt32" />.
             </summary>
         </member>
-        <member name="F:Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.BitSize">
+       <member name="F:Jcd.BitManipulation.BitIndexers.BitIndexer.BitSize">
             <summary>
             The number of bits this type will index
             </summary>
         </member>
-        <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.Bits">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexer.Bits">
             <summary>
             The backing store
             </summary>
         </member>
-        <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.Length">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexer.Length">
             <summary>
             The number of bits indexable by this indexer.
             </summary>
         </member>
-        <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.Item(System.Int32)">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexer.Item(System.Int32)">
             <summary>
             Gets or sets individual bits within the backing store.
             </summary>
             <param name="index">the offset of the bit to access.</param>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.op_Implicit(System.UInt32)~Jcd.BitManipulation.BitIndexers.BitIndexerUInt32">
+       <member
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.op_Implicit(System.UInt32)~Jcd.BitManipulation.BitIndexers.BitIndexer">
             <summary>
-            Automatically Convert from a <see cref="T:System.UInt32" /> to a <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexerUInt32" />
+               Automatically Convert from a
+               <see cref="T:System.UInt32"/>
+               to a
+               <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexer"/>
             </summary>
             <param name="bits">the initial value for the indexer's backing store</param>
-            <returns>A new <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexerUInt32" /></returns>
+          <returns>A new
+             <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexer"/>
+          </returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.op_Implicit(Jcd.BitManipulation.BitIndexers.BitIndexerUInt32)~System.UInt32">
+       <member
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.op_Implicit(Jcd.BitManipulation.BitIndexers.BitIndexer)~System.UInt32">
             <summary>
-            Automatically convert from a BitIndexerUInt32 to a <see cref="T:System.UInt32" />
+               Automatically convert from a BitIndexer to a
+               <see cref="T:System.UInt32"/>
             </summary>
             <param name="indexer">the indexer to convert from</param>
             <returns>the <see cref="T:System.UInt32" /></returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.System#Collections#IEnumerable#GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.Slice(System.Int32,System.Int32)">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.Slice(System.Int32,System.Int32)">
             <summary>
             Get a subset of bits given a starting offset and length.
             </summary>
@@ -1045,65 +1091,73 @@
             <param name="length">The number of bits to extract</param>
             <returns>an array of bools for the subset of bits</returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt32.ToString">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.ToString">
             <summary>
             Format as a bit representation
             </summary>
             <returns>the bits of the value formatted as 0b0101...1111</returns>
         </member>
-        <member name="T:Jcd.BitManipulation.BitIndexers.BitIndexerUInt64">
+       <member name="T:Jcd.BitManipulation.BitIndexers.BitIndexer">
             <summary>
             Provides enumeration and indexed access to the bits on a stored <see cref="T:System.UInt64" />.
             </summary>
         </member>
-        <member name="F:Jcd.BitManipulation.BitIndexers.BitIndexerUInt64.BitSize">
+       <member name="F:Jcd.BitManipulation.BitIndexers.BitIndexer.BitSize">
             <summary>
             The number of bits this type will index
             </summary>
         </member>
-        <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerUInt64.Bits">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexer.Bits">
             <summary>
             The backing store
             </summary>
         </member>
-        <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerUInt64.Length">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexer.Length">
             <summary>
             The number of bits indexable by this indexer.
             </summary>
         </member>
-        <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexerUInt64.Item(System.Int32)">
+       <member name="P:Jcd.BitManipulation.BitIndexers.BitIndexer.Item(System.Int32)">
             <summary>
             Gets or sets individual bits within the backing store.
             </summary>
             <param name="index">the offset of the bit to access.</param>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt64.op_Implicit(System.UInt64)~Jcd.BitManipulation.BitIndexers.BitIndexerUInt64">
+       <member
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.op_Implicit(System.UInt64)~Jcd.BitManipulation.BitIndexers.BitIndexer">
             <summary>
-            Automatically Convert from a <see cref="T:System.UInt64" /> to a <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexerUInt64" />
+               Automatically Convert from a
+               <see cref="T:System.UInt64"/>
+               to a
+               <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexer"/>
             </summary>
             <param name="bits">the initial value for the indexer's backing store</param>
-            <returns>A new <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexerUInt64" /></returns>
+          <returns>A new
+             <see cref="T:Jcd.BitManipulation.BitIndexers.BitIndexer"/>
+          </returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt64.op_Implicit(Jcd.BitManipulation.BitIndexers.BitIndexerUInt64)~System.UInt64">
+       <member
+          name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.op_Implicit(Jcd.BitManipulation.BitIndexers.BitIndexer)~System.UInt64">
             <summary>
-            Automatically convert from a BitIndexerUInt64 to a <see cref="T:System.UInt64" />
+               Automatically convert from a BitIndexer to a
+               <see cref="T:System.UInt64"/>
             </summary>
             <param name="indexer">the indexer to convert from</param>
             <returns>the underlying value</returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt64.GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt64.System#Collections#IEnumerable#GetEnumerator">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.System#Collections#IEnumerable#GetEnumerator">
             <summary>
             Get an enumerator to enumerate the bits with.
             </summary>
             <returns>The enumerator</returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt64.Slice(System.Int32,System.Int32)">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.Slice(System.Int32,System.Int32)">
             <summary>
             Get a subset of bits given a starting offset and length.
             </summary>
@@ -1111,7 +1165,7 @@
             <param name="length">The number of bits to extract</param>
             <returns>an array of bools for the subset of bits</returns>
         </member>
-        <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexerUInt64.ToString">
+       <member name="M:Jcd.BitManipulation.BitIndexers.BitIndexer.ToString">
             <summary>
             Format as a bit representation
             </summary>

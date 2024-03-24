@@ -26,6 +26,8 @@ public class LittleEndianReadBytes
    public byte[] BitConverter_GetBytes_Double()
    {
       var bytes = BitConverter.GetBytes(Dbl);
+      if (!BitConverter.IsLittleEndian)
+         Array.Reverse(bytes);
 
       return bytes;
    }
@@ -35,6 +37,8 @@ public class LittleEndianReadBytes
    public byte[] BitConverter_GetBytes_Float()
    {
       var bytes = BitConverter.GetBytes(Flt);
+      if (!BitConverter.IsLittleEndian)
+         Array.Reverse(bytes);
 
       return bytes;
    }
@@ -44,6 +48,8 @@ public class LittleEndianReadBytes
    public byte[] BitConverter_GetBytes_UInt64()
    {
       var bytes = BitConverter.GetBytes(Ui64);
+      if (!BitConverter.IsLittleEndian)
+         Array.Reverse(bytes);
 
       return bytes;
    }
@@ -53,6 +59,8 @@ public class LittleEndianReadBytes
    public byte[] BitConverter_GetBytes_Int64()
    {
       var bytes = BitConverter.GetBytes(I64);
+      if (!BitConverter.IsLittleEndian)
+         Array.Reverse(bytes);
 
       return bytes;
    }
@@ -62,6 +70,8 @@ public class LittleEndianReadBytes
    public byte[] BitConverter_GetBytes_UInt32()
    {
       var bytes = BitConverter.GetBytes(Ui32);
+      if (!BitConverter.IsLittleEndian)
+         Array.Reverse(bytes);
 
       return bytes;
    }
@@ -71,6 +81,8 @@ public class LittleEndianReadBytes
    public byte[] BitConverter_GetBytes_Int32()
    {
       var bytes = BitConverter.GetBytes(I32);
+      if (!BitConverter.IsLittleEndian)
+         Array.Reverse(bytes);
 
       return bytes;
    }
@@ -80,6 +92,8 @@ public class LittleEndianReadBytes
    public byte[] BitConverter_GetBytes_UInt16()
    {
       var bytes = BitConverter.GetBytes(Ui16);
+      if (!BitConverter.IsLittleEndian)
+         Array.Reverse(bytes);
 
       return bytes;
    }
@@ -88,6 +102,8 @@ public class LittleEndianReadBytes
    public byte[] BitConverter_GetBytes_Int16()
    {
       var bytes = BitConverter.GetBytes(I16);
+      if (!BitConverter.IsLittleEndian)
+         Array.Reverse(bytes);
 
       return bytes;
    }

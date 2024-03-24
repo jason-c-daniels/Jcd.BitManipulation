@@ -36,7 +36,8 @@ public class BigEndianStoreBytes
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public double BitConverter_ToDouble()
    {
-      Array.Reverse(DblBytes);
+      if (BitConverter.IsLittleEndian)
+         Array.Reverse(DblBytes);
 
       return BitConverter.ToDouble(DblBytes, 0);
    }
@@ -45,7 +46,8 @@ public class BigEndianStoreBytes
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public float BitConverter_ToFloat()
    {
-      Array.Reverse(FltBytes);
+      if (BitConverter.IsLittleEndian)
+         Array.Reverse(FltBytes);
 
       return BitConverter.ToSingle(FltBytes, 0);
    }
@@ -54,7 +56,8 @@ public class BigEndianStoreBytes
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public ulong BitConverter_ToUInt64()
    {
-      Array.Reverse(Ui64Bytes);
+      if (BitConverter.IsLittleEndian)
+         Array.Reverse(Ui64Bytes);
 
       return BitConverter.ToUInt64(Ui64Bytes, 0);
    }
@@ -63,7 +66,8 @@ public class BigEndianStoreBytes
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public long BitConverter_ToInt64()
    {
-      Array.Reverse(I64Bytes);
+      if (BitConverter.IsLittleEndian)
+         Array.Reverse(I64Bytes);
 
       return BitConverter.ToInt64(Ui64Bytes, 0);
    }
@@ -72,7 +76,8 @@ public class BigEndianStoreBytes
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public uint BitConverter_ToUInt32()
    {
-      Array.Reverse(Ui32Bytes);
+      if (BitConverter.IsLittleEndian)
+         Array.Reverse(Ui32Bytes);
 
       return BitConverter.ToUInt32(Ui32Bytes, 0);
    }
@@ -81,7 +86,8 @@ public class BigEndianStoreBytes
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public int BitConverter_ToInt32()
    {
-      Array.Reverse(Ui32Bytes);
+      if (BitConverter.IsLittleEndian)
+         Array.Reverse(Ui32Bytes);
 
       return BitConverter.ToInt32(I32Bytes, 0);
    }
@@ -90,7 +96,8 @@ public class BigEndianStoreBytes
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public ushort BitConverter_ToUInt16()
    {
-      Array.Reverse(Ui16Bytes);
+      if (BitConverter.IsLittleEndian)
+         Array.Reverse(Ui16Bytes);
 
       return BitConverter.ToUInt16(Ui16Bytes, 0);
    }
@@ -98,7 +105,8 @@ public class BigEndianStoreBytes
    [Benchmark(Baseline = true)]
    public short BitConverter_ToInt16()
    {
-      Array.Reverse(I16Bytes);
+      if (BitConverter.IsLittleEndian)
+         Array.Reverse(I16Bytes);
 
       return BitConverter.ToInt16(I16Bytes, 0);
    }

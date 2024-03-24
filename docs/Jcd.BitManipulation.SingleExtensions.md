@@ -2,13 +2,15 @@
 
 ## SingleExtensions Class
 
-Provides methods to perform easy to read bit and byte manipulations on a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
+Provides methods to perform easy to read bit and byte manipulations on
+a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
 ```csharp
 public static class SingleExtensions
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; SingleExtensions
+Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106;
+SingleExtensions
 
 | Methods                                                                                                                                                                                                                                                                                                                         |                                                                                                                                                                                                                            |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

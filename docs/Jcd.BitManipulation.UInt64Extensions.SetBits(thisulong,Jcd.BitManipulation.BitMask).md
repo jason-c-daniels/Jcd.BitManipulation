@@ -7,6 +7,7 @@ Sets all specified bits to "on"
 ```csharp
 public static ulong SetBits(this ulong value, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt64Extensions.SetBits(thisulong,Jcd.BitManipulation.BitMask).value'></a>

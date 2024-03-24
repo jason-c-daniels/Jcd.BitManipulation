@@ -7,6 +7,7 @@ Store a single byte to the value at the specified byte offset.
 ```csharp
 public Jcd.BitManipulation.LittleEndianByteIndexer StoreByte(byte @byte, int offset);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexer.StoreByte(byte,int).byte'></a>

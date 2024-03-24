@@ -7,6 +7,7 @@ For a given value return the specified bits from within it, right shifted pos bi
 ```csharp
 public static short ReadBits(this short value, int offset, int size);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int16Extensions.ReadBits(thisshort,int,int).value'></a>

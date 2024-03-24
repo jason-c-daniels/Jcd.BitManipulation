@@ -7,6 +7,7 @@ Convert an int into an array of bools
 ```csharp
 public static bool[] ToBooleanArray(this int bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int32Extensions.ToBooleanArray(thisint).bits'></a>

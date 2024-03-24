@@ -2,11 +2,13 @@
 
 ## UInt16Extensions.ToBooleanArray(this ushort) Method
 
-Convert a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16') into an array of bools
+Convert a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16') into an array of
+bools
 
 ```csharp
 public static bool[] ToBooleanArray(this ushort bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt16Extensions.ToBooleanArray(thisushort).bits'></a>

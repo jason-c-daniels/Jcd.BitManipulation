@@ -8,6 +8,7 @@ Byte indexing is LSB, least significant byte, at index/offset zero.
 ```csharp
 public static double StoreByte(this double value, byte @byte, int offset, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.StoreByte(thisdouble,byte,int,Jcd.BitManipulation.Endian).value'></a>

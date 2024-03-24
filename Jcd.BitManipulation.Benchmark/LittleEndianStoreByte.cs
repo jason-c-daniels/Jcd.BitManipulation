@@ -82,8 +82,7 @@ public class LittleEndianStoreByte
    }
 
    #endregion
-   
-   
+
    #region Extension Methods
 
    [Benchmark]

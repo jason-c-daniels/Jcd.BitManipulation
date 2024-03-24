@@ -7,6 +7,7 @@ Reads a set of bytes starting at the specified byte location within the value.
 ```csharp
 public static byte[] ReadBytes(this double value, int offset, int size, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.ReadBytes(thisdouble,int,int,Jcd.BitManipulation.Endian).value'></a>

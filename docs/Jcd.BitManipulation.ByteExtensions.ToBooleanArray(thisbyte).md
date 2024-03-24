@@ -7,6 +7,7 @@ Convert a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 
 ```csharp
 public static bool[] ToBooleanArray(this byte bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteExtensions.ToBooleanArray(thisbyte).bits'></a>

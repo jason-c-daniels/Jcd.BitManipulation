@@ -2,11 +2,13 @@
 
 ## ReadOnlySpanOfByteExtensions.ToUInt32(this ReadOnlySpan<byte>, Endian) Method
 
-Converts bytes into a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32'), discarding any excess data.
+Converts bytes into a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32'),
+discarding any excess data.
 
 ```csharp
 public static uint ToUInt32(this System.ReadOnlySpan<byte> data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.ReadOnlySpanOfByteExtensions.ToUInt32(thisSystem.ReadOnlySpan_byte_,Jcd.BitManipulation.Endian).data'></a>

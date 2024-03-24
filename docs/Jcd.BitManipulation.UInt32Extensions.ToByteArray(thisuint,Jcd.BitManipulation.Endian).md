@@ -7,6 +7,7 @@ Convert a uint into an array of bytes
 ```csharp
 public static byte[] ToByteArray(this uint data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt32Extensions.ToByteArray(thisuint,Jcd.BitManipulation.Endian).data'></a>

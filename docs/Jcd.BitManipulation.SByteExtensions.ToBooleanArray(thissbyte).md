@@ -2,11 +2,13 @@
 
 ## SByteExtensions.ToBooleanArray(this sbyte) Method
 
-Convert an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte') into an array of bools
+Convert an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte') into an array of
+bools
 
 ```csharp
 public static bool[] ToBooleanArray(this sbyte bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SByteExtensions.ToBooleanArray(thissbyte).bits'></a>

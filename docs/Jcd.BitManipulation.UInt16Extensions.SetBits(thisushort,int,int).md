@@ -7,6 +7,7 @@ Sets all specified bits to "on"
 ```csharp
 public static ushort SetBits(this ushort value, int offset=0, int size=16);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt16Extensions.SetBits(thisushort,int,int).value'></a>

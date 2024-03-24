@@ -8,6 +8,7 @@ The mask must apply to the destination bits.
 ```csharp
 public static double StoreBits(this double value, ulong source, int offset, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.StoreBits(thisdouble,ulong,int,Jcd.BitManipulation.BitMask).value'></a>

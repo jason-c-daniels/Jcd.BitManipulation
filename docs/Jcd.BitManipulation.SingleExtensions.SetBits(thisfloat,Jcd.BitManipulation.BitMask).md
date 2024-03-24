@@ -7,6 +7,7 @@ Sets all specified bits to "on"
 ```csharp
 public static float SetBits(this float value, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SingleExtensions.SetBits(thisfloat,Jcd.BitManipulation.BitMask).value'></a>

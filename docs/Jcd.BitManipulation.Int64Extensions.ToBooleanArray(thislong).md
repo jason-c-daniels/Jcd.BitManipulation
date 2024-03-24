@@ -7,6 +7,7 @@ Convert a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int6
 ```csharp
 public static bool[] ToBooleanArray(this long bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int64Extensions.ToBooleanArray(thislong).bits'></a>

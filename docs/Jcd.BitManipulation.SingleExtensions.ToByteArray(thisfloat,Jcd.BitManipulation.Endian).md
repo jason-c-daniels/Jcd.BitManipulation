@@ -7,6 +7,7 @@ Convert a float into an array of bytes
 ```csharp
 public static byte[] ToByteArray(this float data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SingleExtensions.ToByteArray(thisfloat,Jcd.BitManipulation.Endian).data'></a>

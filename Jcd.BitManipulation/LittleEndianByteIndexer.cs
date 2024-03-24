@@ -196,7 +196,6 @@ public ref struct LittleEndianByteIndexer
             throw new ArgumentOutOfRangeException(nameof(index));
 
          Data = Data.LittleEndianUncheckedStoreByte(value, index);
-
       }
    }
 

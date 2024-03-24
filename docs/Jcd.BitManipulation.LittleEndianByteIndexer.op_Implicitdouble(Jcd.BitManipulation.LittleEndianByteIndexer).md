@@ -7,6 +7,7 @@ Implicitly converts the byte indexer to its underlying data type.
 ```csharp
 public static double implicit operator double(Jcd.BitManipulation.LittleEndianByteIndexer indexer);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicitdouble(Jcd.BitManipulation.LittleEndianByteIndexer).indexer'></a>

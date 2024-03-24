@@ -142,7 +142,6 @@ public ref struct BigEndianByteIndexer
       ByteSize = byteSize;
 
       StoreBytes(data, 0, byteSize);
-
    }
 
    private static int GetIntegerByteSize(int count)
@@ -345,6 +344,7 @@ public ref struct BigEndianByteIndexer
    {
       // ReSharper disable RedundantRangeBound -- false positive
       return indexer[0..^0];
+
       // ReSharper enable RedundantRangeBound -- false positive
    }
 
@@ -494,6 +494,7 @@ public ref struct BigEndianByteIndexer
    {
       return new BigEndianByteIndexer(data);
    }
+
    #endregion
 
    /// <summary>

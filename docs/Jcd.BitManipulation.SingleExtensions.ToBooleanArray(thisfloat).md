@@ -7,6 +7,7 @@ Convert a float into an array of bools
 ```csharp
 public static bool[] ToBooleanArray(this float bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SingleExtensions.ToBooleanArray(thisfloat).bits'></a>

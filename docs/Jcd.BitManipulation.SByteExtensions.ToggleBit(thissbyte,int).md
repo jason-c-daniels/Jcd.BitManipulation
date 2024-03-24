@@ -7,6 +7,7 @@ Toggles a bit.
 ```csharp
 public static sbyte ToggleBit(this sbyte value, int offset);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SByteExtensions.ToggleBit(thissbyte,int).value'></a>

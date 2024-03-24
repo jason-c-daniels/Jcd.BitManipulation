@@ -2,11 +2,13 @@
 
 ## BooleanArrayExtensions.ToInt64(this bool[]) Method
 
-Converts an array of bools into a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64'), discarding any excess bits.
+Converts an array of bools into
+a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64'), discarding any excess bits.
 
 ```csharp
 public static long ToInt64(this bool[] bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BooleanArrayExtensions.ToInt64(thisbool[]).bits'></a>

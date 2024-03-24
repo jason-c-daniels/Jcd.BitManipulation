@@ -8,6 +8,7 @@ The mask must apply to the destination bits.
 ```csharp
 public static float StoreBits(this float value, uint source, int offset, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SingleExtensions.StoreBits(thisfloat,uint,int,Jcd.BitManipulation.BitMask).value'></a>

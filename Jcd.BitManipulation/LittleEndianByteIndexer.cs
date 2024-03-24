@@ -475,6 +475,76 @@ public ref struct LittleEndianByteIndexer
    #endregion
 
    /// <summary>
+   /// Stores a set of bytes starting at the specified byte location within the indexer.
+   /// </summary>
+   /// <param name="bytes">The value to be stored at the byte location.</param>
+   /// <param name="offset">The byte location to store the value.</param>
+   /// <param name="size">The number of bytes from the source to store. -1 means all bytes.</param>
+   /// <returns>The modified value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public LittleEndianByteIndexer StoreBytes(byte[] bytes, int offset, int size = -1)
+   {
+      if (size == -1 || size > bytes.Length)
+         size = bytes.Length;
+      var idx = 0;
+
+      foreach (var @byte in bytes)
+      {
+         if (idx >= size)
+            return this;
+         if (offset + idx >= ByteSize)
+            return this;
+
+         this[idx + offset] = @byte;
+         idx++;
+      }
+
+      return this;
+   }
+
+   /// <summary>
+   /// Stores a set of bytes starting at the specified byte location within the indexer.
+   /// </summary>
+   /// <param name="bytes">The value to be stored at the byte location.</param>
+   /// <param name="offset">The byte location to store the value.</param>
+   /// <param name="size">The number of bytes from the source to store. -1 means all bytes.</param>
+   /// <returns>The modified value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public LittleEndianByteIndexer StoreBytes(ReadOnlySpan<byte> bytes, int offset, int size = -1)
+   {
+      if (size == -1 || size > bytes.Length)
+         size = bytes.Length;
+      var idx = 0;
+
+      foreach (var @byte in bytes)
+      {
+         if (idx >= size)
+            return this;
+         if (offset + idx >= ByteSize)
+            return this;
+
+         this[idx + offset] = @byte;
+         idx++;
+      }
+
+      return this;
+   }
+
+   /// <summary>
+   /// Store a single byte to the value at the specified byte offset.
+   /// </summary>
+   /// <param name="byte">The byte value to set</param>
+   /// <param name="offset">the offset of the byte to write</param>
+   /// <returns>The modified value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public LittleEndianByteIndexer StoreByte(byte @byte, int offset)
+   {
+      this[offset] = @byte;
+
+      return this;
+   }
+
+   /// <summary>
    /// Creates a string of the data formatted as hex for the bytes in big endian notation
    /// </summary>
    /// <returns>a string of the data formatted as hex bytes</returns>

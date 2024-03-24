@@ -32,7 +32,7 @@
       <FileVersion>3.0.0</FileVersion>
       <PackageIcon>Jason.C.Daniels.jpg</PackageIcon>
       <PackageReadmeFile>README.md</PackageReadmeFile>
-      <SymbolPackageFormat>snupkg</SymbolPackageFormat>      
+      <SymbolPackageFormat>snupkg</SymbolPackageFormat>
    </PropertyGroup>
 
 

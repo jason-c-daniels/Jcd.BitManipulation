@@ -16,5 +16,6 @@ public static byte implicit operator byte(Jcd.BitManipulation.LittleEndianByteIn
 The indexer to convert.
 
 #### Returns
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 The raw data.

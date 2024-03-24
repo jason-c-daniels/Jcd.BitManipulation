@@ -4,61 +4,61 @@ BenchmarkDotNet v0.13.12, Windows 11 (10.0.22631.3296/23H2/2023Update/SunValley3
 12th Gen Intel Core i7-12700H, 1 CPU, 20 logical and 14 physical cores
 .NET SDK 8.0.103
   [Host]     : .NET 8.0.3 (8.0.324.11423), X64 RyuJIT AVX2
-  Job-JSAIVR : .NET 8.0.3 (8.0.324.11423), X64 RyuJIT AVX2
-  Job-PHWTJI : .NET Framework 4.8.1 (4.8.9181.0), X64 RyuJIT VectorSize=256
+  Job-ROROES : .NET 8.0.3 (8.0.324.11423), X64 RyuJIT AVX2
+  Job-CCUDDK : .NET Framework 4.8.1 (4.8.9181.0), X64 RyuJIT VectorSize=256
 
-IterationTime=500.0000 ms  MaxIterationCount=15  MinIterationCount=10
+IterationTime=120.0000 ms  MaxIterationCount=15  MinIterationCount=10
 WarmupCount=10
 
 ```
 
 | Method                            | Runtime              |      Mean |     Error |    StdDev | Ratio | RatioSD |
 |-----------------------------------|----------------------|----------:|----------:|----------:|------:|--------:|
-| BitConverter_GetBytes_Double      | .NET 8.0             |  4.069 ns | 0.1149 ns | 0.0831 ns |  1.02 |    0.02 |
-| BitConverter_GetBytes_Float       | .NET 8.0             |  3.936 ns | 0.1262 ns | 0.1119 ns |  0.99 |    0.03 |
-| BitConverter_GetBytes_UInt64      | .NET 8.0             |  4.413 ns | 0.1355 ns | 0.1201 ns |  1.11 |    0.03 |
-| BitConverter_GetBytes_Int64       | .NET 8.0             |  4.572 ns | 0.2707 ns | 0.2399 ns |  1.15 |    0.07 |
-| BitConverter_GetBytes_UInt32      | .NET 8.0             |  4.415 ns | 0.2850 ns | 0.2666 ns |  1.09 |    0.05 |
-| BitConverter_GetBytes_Int32       | .NET 8.0             |  4.020 ns | 0.0564 ns | 0.0373 ns |  1.01 |    0.01 |
-| BitConverter_GetBytes_UInt16      | .NET 8.0             |  3.991 ns | 0.0631 ns | 0.0375 ns |  1.00 |    0.01 |
-| BitConverter_GetBytes_Int16       | .NET 8.0             |  4.000 ns | 0.0575 ns | 0.0380 ns |  1.00 |    0.00 |
-| BigEndianByteIndexer_Slice_Double | .NET 8.0             |  6.172 ns | 0.0769 ns | 0.0402 ns |  1.55 |    0.02 |
-| BigEndianByteIndexer_Slice_Float  | .NET 8.0             |  6.907 ns | 0.0940 ns | 0.0622 ns |  1.73 |    0.02 |
-| BigEndianByteIndexer_Slice_UInt64 | .NET 8.0             |  5.706 ns | 0.1522 ns | 0.1007 ns |  1.43 |    0.04 |
-| BigEndianByteIndexer_Slice_Int64  | .NET 8.0             |  5.663 ns | 0.0797 ns | 0.0527 ns |  1.42 |    0.02 |
-| BigEndianByteIndexer_Slice_UInt32 | .NET 8.0             |  4.598 ns | 0.0582 ns | 0.0346 ns |  1.15 |    0.02 |
-| BigEndianByteIndexer_Slice_Int32  | .NET 8.0             |  4.514 ns | 0.0294 ns | 0.0175 ns |  1.13 |    0.01 |
-| BigEndianByteIndexer_Slice_UInt16 | .NET 8.0             |  3.429 ns | 0.0420 ns | 0.0250 ns |  0.86 |    0.01 |
-| BigEndianByteIndexer_Slice_Int16  | .NET 8.0             |  3.466 ns | 0.0900 ns | 0.0595 ns |  0.87 |    0.02 |
-| ExtensionMethod_ReadBytes_Double  | .NET 8.0             |  5.948 ns | 0.0673 ns | 0.0445 ns |  1.49 |    0.02 |
-| ExtensionMethod_ReadBytes_Float   | .NET 8.0             |  6.943 ns | 0.0583 ns | 0.0347 ns |  1.74 |    0.02 |
-| ExtensionMethod_ReadBytes_UInt64  | .NET 8.0             |  6.030 ns | 0.0567 ns | 0.0297 ns |  1.51 |    0.02 |
-| ExtensionMethod_ReadBytes_Int64   | .NET 8.0             |  5.407 ns | 0.1682 ns | 0.1573 ns |  1.36 |    0.04 |
-| ExtensionMethod_ReadBytes_UInt32  | .NET 8.0             |  4.760 ns | 0.1678 ns | 0.1570 ns |  1.21 |    0.02 |
-| ExtensionMethod_ReadBytes_Int32   | .NET 8.0             |  3.617 ns | 0.1007 ns | 0.0666 ns |  0.90 |    0.02 |
-| ExtensionMethod_ReadBytes_UInt16  | .NET 8.0             |  3.658 ns | 0.0698 ns | 0.0462 ns |  0.91 |    0.02 |
-| ExtensionMethod_ReadBytes_Int16   | .NET 8.0             |  3.208 ns | 0.0412 ns | 0.0273 ns |  0.80 |    0.01 |
-| BitConverter_GetBytes_Double      | .NET Framework 4.6.2 | 25.232 ns | 0.1386 ns | 0.0917 ns |  6.31 |    0.07 |
-| BitConverter_GetBytes_Float       | .NET Framework 4.6.2 | 24.254 ns | 0.1278 ns | 0.0760 ns |  6.07 |    0.06 |
-| BitConverter_GetBytes_UInt64      | .NET Framework 4.6.2 | 25.696 ns | 0.5363 ns | 0.4754 ns |  6.47 |    0.15 |
-| BitConverter_GetBytes_Int64       | .NET Framework 4.6.2 | 25.621 ns | 0.2265 ns | 0.1348 ns |  6.42 |    0.07 |
-| BitConverter_GetBytes_UInt32      | .NET Framework 4.6.2 | 24.513 ns | 0.2552 ns | 0.1688 ns |  6.13 |    0.06 |
-| BitConverter_GetBytes_Int32       | .NET Framework 4.6.2 | 24.545 ns | 0.2127 ns | 0.1407 ns |  6.14 |    0.08 |
-| BitConverter_GetBytes_UInt16      | .NET Framework 4.6.2 | 22.665 ns | 0.1956 ns | 0.1164 ns |  5.68 |    0.07 |
-| BitConverter_GetBytes_Int16       | .NET Framework 4.6.2 | 22.452 ns | 0.1034 ns | 0.0684 ns |  5.61 |    0.06 |
-| BigEndianByteIndexer_Slice_Double | .NET Framework 4.6.2 |  6.553 ns | 0.0840 ns | 0.0500 ns |  1.64 |    0.02 |
-| BigEndianByteIndexer_Slice_Float  | .NET Framework 4.6.2 |  9.887 ns | 0.0448 ns | 0.0266 ns |  2.48 |    0.02 |
-| BigEndianByteIndexer_Slice_UInt64 | .NET Framework 4.6.2 |  6.824 ns | 0.0326 ns | 0.0171 ns |  1.71 |    0.01 |
-| BigEndianByteIndexer_Slice_Int64  | .NET Framework 4.6.2 |  6.714 ns | 0.0258 ns | 0.0135 ns |  1.68 |    0.02 |
-| BigEndianByteIndexer_Slice_UInt32 | .NET Framework 4.6.2 |  3.771 ns | 0.0718 ns | 0.0475 ns |  0.94 |    0.01 |
-| BigEndianByteIndexer_Slice_Int32  | .NET Framework 4.6.2 |  3.883 ns | 0.0500 ns | 0.0331 ns |  0.97 |    0.01 |
-| BigEndianByteIndexer_Slice_UInt16 | .NET Framework 4.6.2 |  2.948 ns | 0.0211 ns | 0.0126 ns |  0.74 |    0.01 |
-| BigEndianByteIndexer_Slice_Int16  | .NET Framework 4.6.2 |  2.873 ns | 0.0579 ns | 0.0383 ns |  0.72 |    0.01 |
-| ExtensionMethod_ReadBytes_Double  | .NET Framework 4.6.2 |  6.781 ns | 0.1573 ns | 0.1040 ns |  1.70 |    0.03 |
-| ExtensionMethod_ReadBytes_Float   | .NET Framework 4.6.2 |  8.955 ns | 0.0617 ns | 0.0367 ns |  2.24 |    0.02 |
-| ExtensionMethod_ReadBytes_UInt64  | .NET Framework 4.6.2 |  6.471 ns | 0.1214 ns | 0.0803 ns |  1.62 |    0.03 |
-| ExtensionMethod_ReadBytes_Int64   | .NET Framework 4.6.2 |  4.079 ns | 0.0664 ns | 0.0439 ns |  1.02 |    0.01 |
-| ExtensionMethod_ReadBytes_UInt32  | .NET Framework 4.6.2 |  3.775 ns | 0.0925 ns | 0.0612 ns |  0.94 |    0.02 |
-| ExtensionMethod_ReadBytes_Int32   | .NET Framework 4.6.2 |  3.216 ns | 0.1042 ns | 0.0689 ns |  0.80 |    0.02 |
-| ExtensionMethod_ReadBytes_UInt16  | .NET Framework 4.6.2 |  3.009 ns | 0.0534 ns | 0.0318 ns |  0.75 |    0.01 |
-| ExtensionMethod_ReadBytes_Int16   | .NET Framework 4.6.2 |  2.582 ns | 0.0229 ns | 0.0137 ns |  0.65 |    0.01 |
+| BitConverter_GetBytes_Double      | .NET 8.0             |  4.528 ns | 0.2671 ns | 0.2499 ns |  1.11 |    0.08 |
+| BitConverter_GetBytes_Float       | .NET 8.0             |  3.809 ns | 0.1447 ns | 0.1283 ns |  0.93 |    0.04 |
+| BitConverter_GetBytes_UInt64      | .NET 8.0             |  4.037 ns | 0.1962 ns | 0.1835 ns |  0.99 |    0.06 |
+| BitConverter_GetBytes_Int64       | .NET 8.0             |  4.613 ns | 0.2277 ns | 0.2129 ns |  1.13 |    0.05 |
+| BitConverter_GetBytes_UInt32      | .NET 8.0             |  4.115 ns | 0.0865 ns | 0.0572 ns |  1.00 |    0.03 |
+| BitConverter_GetBytes_Int32       | .NET 8.0             |  4.010 ns | 0.1024 ns | 0.0678 ns |  0.97 |    0.02 |
+| BitConverter_GetBytes_UInt16      | .NET 8.0             |  3.998 ns | 0.0799 ns | 0.0418 ns |  0.97 |    0.03 |
+| BitConverter_GetBytes_Int16       | .NET 8.0             |  4.110 ns | 0.1210 ns | 0.1011 ns |  1.00 |    0.00 |
+| BigEndianByteIndexer_Slice_Double | .NET 8.0             |  5.490 ns | 0.1028 ns | 0.0680 ns |  1.33 |    0.05 |
+| BigEndianByteIndexer_Slice_Float  | .NET 8.0             |  5.998 ns | 0.2494 ns | 0.2083 ns |  1.46 |    0.07 |
+| BigEndianByteIndexer_Slice_UInt64 | .NET 8.0             |  5.811 ns | 0.1332 ns | 0.0881 ns |  1.41 |    0.03 |
+| BigEndianByteIndexer_Slice_Int64  | .NET 8.0             |  5.910 ns | 0.1286 ns | 0.0851 ns |  1.43 |    0.04 |
+| BigEndianByteIndexer_Slice_UInt32 | .NET 8.0             |  4.220 ns | 0.1294 ns | 0.0935 ns |  1.02 |    0.03 |
+| BigEndianByteIndexer_Slice_Int32  | .NET 8.0             |  4.356 ns | 0.1301 ns | 0.0861 ns |  1.06 |    0.04 |
+| BigEndianByteIndexer_Slice_UInt16 | .NET 8.0             |  3.595 ns | 0.1168 ns | 0.1092 ns |  0.87 |    0.03 |
+| BigEndianByteIndexer_Slice_Int16  | .NET 8.0             |  3.131 ns | 0.1021 ns | 0.0797 ns |  0.76 |    0.03 |
+| ExtensionMethod_ReadBytes_Double  | .NET 8.0             |  5.696 ns | 0.1365 ns | 0.0903 ns |  1.38 |    0.04 |
+| ExtensionMethod_ReadBytes_Float   | .NET 8.0             |  6.482 ns | 0.1023 ns | 0.0676 ns |  1.57 |    0.04 |
+| ExtensionMethod_ReadBytes_UInt64  | .NET 8.0             |  5.413 ns | 0.1193 ns | 0.0789 ns |  1.31 |    0.04 |
+| ExtensionMethod_ReadBytes_Int64   | .NET 8.0             |  4.803 ns | 0.1030 ns | 0.0681 ns |  1.16 |    0.03 |
+| ExtensionMethod_ReadBytes_UInt32  | .NET 8.0             |  4.787 ns | 0.1343 ns | 0.0971 ns |  1.16 |    0.03 |
+| ExtensionMethod_ReadBytes_Int32   | .NET 8.0             |  3.640 ns | 0.0919 ns | 0.0547 ns |  0.88 |    0.02 |
+| ExtensionMethod_ReadBytes_UInt16  | .NET 8.0             |  3.560 ns | 0.1041 ns | 0.0923 ns |  0.86 |    0.03 |
+| ExtensionMethod_ReadBytes_Int16   | .NET 8.0             |  3.171 ns | 0.1206 ns | 0.1069 ns |  0.77 |    0.02 |
+| BitConverter_GetBytes_Double      | .NET Framework 4.6.2 | 24.306 ns | 0.2819 ns | 0.1474 ns |  5.89 |    0.16 |
+| BitConverter_GetBytes_Float       | .NET Framework 4.6.2 | 23.403 ns | 0.5036 ns | 0.3932 ns |  5.69 |    0.17 |
+| BitConverter_GetBytes_UInt64      | .NET Framework 4.6.2 | 24.285 ns | 0.4090 ns | 0.2705 ns |  5.88 |    0.17 |
+| BitConverter_GetBytes_Int64       | .NET Framework 4.6.2 | 23.961 ns | 0.3999 ns | 0.2645 ns |  5.81 |    0.19 |
+| BitConverter_GetBytes_UInt32      | .NET Framework 4.6.2 | 23.955 ns | 0.5497 ns | 0.5142 ns |  5.83 |    0.17 |
+| BitConverter_GetBytes_Int32       | .NET Framework 4.6.2 | 23.364 ns | 0.5130 ns | 0.4284 ns |  5.69 |    0.16 |
+| BitConverter_GetBytes_UInt16      | .NET Framework 4.6.2 | 22.083 ns | 0.7352 ns | 0.6517 ns |  5.38 |    0.22 |
+| BitConverter_GetBytes_Int16       | .NET Framework 4.6.2 | 22.094 ns | 0.6433 ns | 0.6018 ns |  5.39 |    0.20 |
+| BigEndianByteIndexer_Slice_Double | .NET Framework 4.6.2 |  6.466 ns | 0.1574 ns | 0.1138 ns |  1.57 |    0.04 |
+| BigEndianByteIndexer_Slice_Float  | .NET Framework 4.6.2 |  8.452 ns | 0.2173 ns | 0.1293 ns |  2.04 |    0.05 |
+| BigEndianByteIndexer_Slice_UInt64 | .NET Framework 4.6.2 |  6.758 ns | 0.1694 ns | 0.1008 ns |  1.63 |    0.03 |
+| BigEndianByteIndexer_Slice_Int64  | .NET Framework 4.6.2 |  6.762 ns | 0.1189 ns | 0.0786 ns |  1.64 |    0.05 |
+| BigEndianByteIndexer_Slice_UInt32 | .NET Framework 4.6.2 |  3.514 ns | 0.0827 ns | 0.0492 ns |  0.85 |    0.03 |
+| BigEndianByteIndexer_Slice_Int32  | .NET Framework 4.6.2 |  3.588 ns | 0.1359 ns | 0.1271 ns |  0.87 |    0.05 |
+| BigEndianByteIndexer_Slice_UInt16 | .NET Framework 4.6.2 |  2.473 ns | 0.0934 ns | 0.0556 ns |  0.60 |    0.01 |
+| BigEndianByteIndexer_Slice_Int16  | .NET Framework 4.6.2 |  2.495 ns | 0.0854 ns | 0.0565 ns |  0.60 |    0.02 |
+| ExtensionMethod_ReadBytes_Double  | .NET Framework 4.6.2 |  6.391 ns | 0.2377 ns | 0.2107 ns |  1.56 |    0.05 |
+| ExtensionMethod_ReadBytes_Float   | .NET Framework 4.6.2 |  7.735 ns | 0.1462 ns | 0.0870 ns |  1.87 |    0.05 |
+| ExtensionMethod_ReadBytes_UInt64  | .NET Framework 4.6.2 |  6.153 ns | 0.1750 ns | 0.1552 ns |  1.50 |    0.04 |
+| ExtensionMethod_ReadBytes_Int64   | .NET Framework 4.6.2 |  3.607 ns | 0.0622 ns | 0.0412 ns |  0.87 |    0.03 |
+| ExtensionMethod_ReadBytes_UInt32  | .NET Framework 4.6.2 |  3.249 ns | 0.0759 ns | 0.0452 ns |  0.78 |    0.02 |
+| ExtensionMethod_ReadBytes_Int32   | .NET Framework 4.6.2 |  2.443 ns | 0.0912 ns | 0.0659 ns |  0.59 |    0.03 |
+| ExtensionMethod_ReadBytes_UInt16  | .NET Framework 4.6.2 |  2.346 ns | 0.0662 ns | 0.0438 ns |  0.57 |    0.02 |
+| ExtensionMethod_ReadBytes_Int16   | .NET Framework 4.6.2 |  2.028 ns | 0.0621 ns | 0.0370 ns |  0.49 |    0.02 |

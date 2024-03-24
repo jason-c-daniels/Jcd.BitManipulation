@@ -12,7 +12,6 @@ System.Collections.IEnumerable
 ```
 
 Derived
-&#8627; [BitIndexerByte](Jcd.BitManipulation.BitIndexers.BitIndexerByte.md 'Jcd.BitManipulation.BitIndexers.BitIndexerByte')
 &#8627; [BitIndexerDouble](Jcd.BitManipulation.BitIndexers.BitIndexerDouble.md 'Jcd.BitManipulation.BitIndexers.BitIndexerDouble')
 &#8627; [BitIndexerInt16](Jcd.BitManipulation.BitIndexers.BitIndexerInt16.md 'Jcd.BitManipulation.BitIndexers.BitIndexerInt16')
 &#8627; [BitIndexerInt32](Jcd.BitManipulation.BitIndexers.BitIndexerInt32.md 'Jcd.BitManipulation.BitIndexers.BitIndexerInt32')

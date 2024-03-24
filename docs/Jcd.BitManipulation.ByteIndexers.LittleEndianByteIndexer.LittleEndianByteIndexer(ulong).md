@@ -6,7 +6,7 @@
 Constructs a [LittleEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.LittleEndianByteIndexer') from a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64').
 
 ```csharp
-public LittleEndianByteIndexer(ulong data=0uL);
+private LittleEndianByteIndexer(ulong data=0uL);
 ```
 #### Parameters
 

@@ -1,13 +1,9 @@
 ﻿#region
 
 using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text;
-
-// ReSharper disable HeapView.ObjectAllocation.Evident
-// ReSharper disable HeapView.ObjectAllocation
-// ReSharper disable UnusedMember.Global
-// ReSharper disable MemberCanBePrivate.Global
 
 #endregion
 
@@ -25,7 +21,7 @@ public ref struct BigEndianByteIndexer
    /// </summary>
    /// <param name="data"> The initial value of the underlying data.</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public BigEndianByteIndexer(ulong data = 0)
+   private BigEndianByteIndexer(ulong data = 0)
       : this(data, sizeof(ulong))
    {
    }
@@ -35,7 +31,7 @@ public ref struct BigEndianByteIndexer
    /// </summary>
    /// <param name="data"> The initial value of the underlying data.</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public BigEndianByteIndexer(long data)
+   private BigEndianByteIndexer(long data)
       : this((ulong) data, sizeof(long))
    {
    }
@@ -45,7 +41,7 @@ public ref struct BigEndianByteIndexer
    /// </summary>
    /// <param name="data"> The initial value of the underlying data.</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public BigEndianByteIndexer(uint data)
+   private BigEndianByteIndexer(uint data)
       : this(data, sizeof(uint))
    {
    }
@@ -55,7 +51,7 @@ public ref struct BigEndianByteIndexer
    /// </summary>
    /// <param name="data"> The initial value of the underlying data.</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public BigEndianByteIndexer(int data)
+   private BigEndianByteIndexer(int data)
       : this((uint) data, sizeof(int))
    {
    }
@@ -137,6 +133,30 @@ public ref struct BigEndianByteIndexer
 
    private readonly int dataOffset;
 
+   private BigEndianByteIndexer(IReadOnlyList<byte> data)
+      : this(data, GetIntegerByteSize(data))
+   {
+   }
+
+   private BigEndianByteIndexer(IReadOnlyList<byte> data, int byteSize)
+   {
+      ByteSize = byteSize;
+
+      for (var i = 0; i < data.Count && i < byteSize; i++)
+         Data.StoreByte(data[i], i);
+   }
+
+   private static int GetIntegerByteSize(IReadOnlyCollection<byte> array)
+   {
+      return array.Count switch
+             {
+                <= sizeof(byte)   => sizeof(byte)
+              , <= sizeof(ushort) => sizeof(ushort)
+              , <= sizeof(uint)   => sizeof(uint)
+              , _                 => sizeof(ulong)
+             };
+   }
+
    /// <summary>
    /// The number of bytes this type will index
    /// </summary>
@@ -166,7 +186,7 @@ public ref struct BigEndianByteIndexer
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       readonly get
       {
-         if (index is < 0 || index >= ByteSize)
+         if (index < 0 || index >= ByteSize)
             throw new ArgumentOutOfRangeException(nameof(index));
 
          return Data.ReadByte(index + dataOffset, Endian.Big);
@@ -175,7 +195,7 @@ public ref struct BigEndianByteIndexer
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       set
       {
-         if (index is < 0 || index >= ByteSize)
+         if (index < 0 || index >= ByteSize)
             throw new ArgumentOutOfRangeException(nameof(index));
 
          Data = Data.StoreByte(value, index + dataOffset, Endian.Big);
@@ -194,6 +214,8 @@ public ref struct BigEndianByteIndexer
       var len = length + start > ByteSize
                    ? ByteSize - start
                    : length;
+
+      // ReSharper disable once HeapView.ObjectAllocation.Evident
       var slice = new byte[len];
       var j = dataOffset + start;
       for (var i = 0; i < len; i++, j++)
@@ -322,7 +344,10 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static explicit operator byte[](BigEndianByteIndexer indexer)
    {
-      return indexer.Slice(0, indexer.Length);
+      // ReSharper disable RedundantRangeBound -- false positive
+      return indexer[0..^0];
+
+      // ReSharper enable RedundantRangeBound -- false positive
    }
 
    #endregion
@@ -447,7 +472,7 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static explicit operator BigEndianByteIndexer(byte[] data)
    {
-      return new BigEndianByteIndexer(data.ToUInt64(Endian.Big));
+      return new BigEndianByteIndexer(data);
    }
 
    #endregion
@@ -458,13 +483,14 @@ public ref struct BigEndianByteIndexer
    /// <returns>a string of the data formatted as hex bytes</returns>
    public override string ToString()
    {
+      // ReSharper disable once HeapView.ObjectAllocation.Evident
       var sb = new StringBuilder(ByteSize * 3);
 
       for (var i = 0; i < ByteSize; i++)
       {
          if (i != 0)
             sb.Append(" ");
-         sb.AppendFormat("{0:X2}", this[i]);
+         sb.AppendFormat(this[i].ToString("X2"));
       }
 
       return sb.ToString();

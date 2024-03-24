@@ -4,15 +4,6 @@ using System.Runtime.CompilerServices;
 
 using Jcd.BitManipulation.BitIndexers;
 
-// ReSharper disable ReplaceSliceWithRangeIndexer
-// ReSharper disable MemberCanBePrivate.Global
-// ReSharper disable UnusedMember.Global
-// ReSharper disable UnusedMember.Local
-// ReSharper disable UnusedVariable
-// ReSharper disable UnusedType.Global
-// ReSharper disable UnusedMethodReturnValue.Global
-// ReSharper disable UnusedMemberInSuper.Global
-
 #endregion
 
 namespace Jcd.BitManipulation;
@@ -30,7 +21,7 @@ public static class BooleanArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool[] ToBooleanArray(this byte bits)
    {
-      return new BitIndexerByte { Bits = bits }.Slice(0, BitIndexerByte.BitSize);
+      return (BitIndexer) bits;
    }
 
    /// <summary>
@@ -41,7 +32,7 @@ public static class BooleanArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool[] ToBooleanArray(this sbyte bits)
    {
-      return new BitIndexerSByte { Bits = bits }.Slice(0, BitIndexerSByte.BitSize);
+      return (BitIndexer) bits;
    }
 
    /// <summary>
@@ -52,7 +43,7 @@ public static class BooleanArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool[] ToBooleanArray(this ushort bits)
    {
-      return new BitIndexerUInt16 { Bits = bits }.Slice(0, BitIndexerUInt16.BitSize);
+      return (BitIndexer) bits;
    }
 
    /// <summary>
@@ -63,7 +54,7 @@ public static class BooleanArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool[] ToBooleanArray(this short bits)
    {
-      return new BitIndexerInt16 { Bits = bits }.Slice(0, BitIndexerInt16.BitSize);
+      return (BitIndexer) bits;
    }
 
    /// <summary>
@@ -74,7 +65,7 @@ public static class BooleanArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool[] ToBooleanArray(this uint bits)
    {
-      return new BitIndexerUInt32 { Bits = bits }.Slice(0, BitIndexerUInt32.BitSize);
+      return (BitIndexer) bits;
    }
 
    /// <summary>
@@ -85,7 +76,7 @@ public static class BooleanArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool[] ToBooleanArray(this int bits)
    {
-      return new BitIndexerInt32 { Bits = bits }.Slice(0, BitIndexerInt32.BitSize);
+      return (BitIndexer) bits;
    }
 
    /// <summary>
@@ -96,7 +87,7 @@ public static class BooleanArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool[] ToBooleanArray(this ulong bits)
    {
-      return new BitIndexerUInt64 { Bits = bits }.Slice(0, BitIndexerUInt64.BitSize);
+      return (BitIndexer) bits;
    }
 
    /// <summary>
@@ -107,7 +98,7 @@ public static class BooleanArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool[] ToBooleanArray(this long bits)
    {
-      return new BitIndexerInt64 { Bits = bits }.Slice(0, BitIndexerUInt64.BitSize);
+      return (BitIndexer) bits;
    }
 
    /// <summary>
@@ -118,7 +109,7 @@ public static class BooleanArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool[] ToBooleanArray(this float bits)
    {
-      return new BitIndexerUInt32 { Bits = bits.BitwiseToUInt32() }.Slice(0, BitIndexerUInt64.BitSize);
+      return (BitIndexer) bits;
    }
 
    /// <summary>
@@ -129,7 +120,7 @@ public static class BooleanArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool[] ToBooleanArray(this double bits)
    {
-      return new BitIndexerUInt64 { Bits = bits.BitwiseToUInt64() }.Slice(0, BitIndexerUInt64.BitSize);
+      return (BitIndexer) bits;
    }
 
    /// <summary>
@@ -140,11 +131,7 @@ public static class BooleanArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte ToByte(this bool[] bits)
    {
-      byte result = 0;
-      for (var i = 0; i < bits.Length && i < 8; i++)
-         result = result.StoreBit(bits[i], i);
-
-      return result;
+      return (BitIndexer) bits;
    }
 
    /// <summary>
@@ -155,11 +142,7 @@ public static class BooleanArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static sbyte ToSByte(this bool[] bits)
    {
-      sbyte result = 0;
-      for (var i = 0; i < bits.Length && i < 8; i++)
-         result = result.StoreBit(bits[i], i);
-
-      return result;
+      return (BitIndexer) bits;
    }
 
    /// <summary>
@@ -170,11 +153,7 @@ public static class BooleanArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ushort ToUInt16(this bool[] bits)
    {
-      ushort result = 0;
-      for (var i = 0; i < bits.Length && i < 16; i++)
-         result = result.StoreBit(bits[i], i);
-
-      return result;
+      return (BitIndexer) bits;
    }
 
    /// <summary>
@@ -185,11 +164,7 @@ public static class BooleanArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static short ToInt16(this bool[] bits)
    {
-      short result = 0;
-      for (var i = 0; i < bits.Length && i < 16; i++)
-         result = result.StoreBit(bits[i], i);
-
-      return result;
+      return (BitIndexer) bits;
    }
 
    /// <summary>
@@ -200,11 +175,7 @@ public static class BooleanArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static uint ToUInt32(this bool[] bits)
    {
-      uint result = 0;
-      for (var i = 0; i < bits.Length && i < 32; i++)
-         result = result.StoreBit(bits[i], i);
-
-      return result;
+      return (BitIndexer) bits;
    }
 
    /// <summary>
@@ -215,11 +186,7 @@ public static class BooleanArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int ToInt32(this bool[] bits)
    {
-      var result = 0;
-      for (var i = 0; i < bits.Length && i < 32; i++)
-         result = result.StoreBit(bits[i], i);
-
-      return result;
+      return (BitIndexer) bits;
    }
 
    /// <summary>
@@ -230,11 +197,7 @@ public static class BooleanArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ulong ToUInt64(this bool[] bits)
    {
-      ulong result = 0;
-      for (var i = 0; i < bits.Length && i < 64; i++)
-         result = result.StoreBit(bits[i], i);
-
-      return result;
+      return (BitIndexer) bits;
    }
 
    /// <summary>
@@ -245,11 +208,7 @@ public static class BooleanArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static long ToInt64(this bool[] bits)
    {
-      long result = 0;
-      for (var i = 0; i < bits.Length && i < 64; i++)
-         result = result.StoreBit(bits[i], i);
-
-      return result;
+      return (BitIndexer) bits;
    }
 
    /// <summary>
@@ -260,11 +219,7 @@ public static class BooleanArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static double ToDouble(this bool[] bits)
    {
-      ulong result = 0;
-      for (var i = 0; i < bits.Length && i < 64; i++)
-         result = result.StoreBit(bits[i], i);
-
-      return result.BitwiseToDouble();
+      return (BitIndexer) bits;
    }
 
    /// <summary>
@@ -275,10 +230,6 @@ public static class BooleanArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static float ToSingle(this bool[] bits)
    {
-      uint result = 0;
-      for (var i = 0; i < bits.Length && i < 32; i++)
-         result = result.StoreBit(bits[i], i);
-
-      return result.BitwiseToSingle();
+      return (BitIndexer) bits;
    }
 }

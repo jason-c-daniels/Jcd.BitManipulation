@@ -6,7 +6,7 @@
 Constructs a [BigEndianByteIndexer](Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer.md 'Jcd.BitManipulation.ByteIndexers.BigEndianByteIndexer') from an [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32').
 
 ```csharp
-public BigEndianByteIndexer(int data);
+private BigEndianByteIndexer(int data);
 ```
 #### Parameters
 

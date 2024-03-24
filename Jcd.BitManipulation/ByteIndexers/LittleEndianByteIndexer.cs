@@ -1,13 +1,9 @@
 ﻿#region
 
 using System;
+using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text;
-
-// ReSharper disable HeapView.ObjectAllocation.Evident
-// ReSharper disable HeapView.ObjectAllocation
-// ReSharper disable UnusedMember.Global
-// ReSharper disable MemberCanBePrivate.Global
 
 #endregion
 
@@ -25,7 +21,7 @@ public ref struct LittleEndianByteIndexer
    /// </summary>
    /// <param name="data"> The initial value of the underlying data.</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public LittleEndianByteIndexer(ulong data = 0)
+   private LittleEndianByteIndexer(ulong data = 0)
       : this(data, sizeof(ulong))
    {
    }
@@ -35,7 +31,7 @@ public ref struct LittleEndianByteIndexer
    /// </summary>
    /// <param name="data"> The initial value of the underlying data.</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public LittleEndianByteIndexer(long data)
+   private LittleEndianByteIndexer(long data)
       : this((ulong) data, sizeof(long))
    {
    }
@@ -45,7 +41,7 @@ public ref struct LittleEndianByteIndexer
    /// </summary>
    /// <param name="data"> The initial value of the underlying data.</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public LittleEndianByteIndexer(uint data)
+   private LittleEndianByteIndexer(uint data)
       : this(data, sizeof(uint))
    {
    }
@@ -55,7 +51,7 @@ public ref struct LittleEndianByteIndexer
    /// </summary>
    /// <param name="data"> The initial value of the underlying data.</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public LittleEndianByteIndexer(int data)
+   private LittleEndianByteIndexer(int data)
       : this((uint) data, sizeof(int))
    {
    }
@@ -120,6 +116,30 @@ public ref struct LittleEndianByteIndexer
    {
    }
 
+   private LittleEndianByteIndexer(IReadOnlyList<byte> data)
+      : this(data, GetIntegerByteSize(data))
+   {
+   }
+
+   private LittleEndianByteIndexer(IReadOnlyList<byte> data, int byteSize)
+   {
+      ByteSize = byteSize;
+
+      for (var i = 0; i < data.Count && i < byteSize; i++)
+         Data.StoreByte(data[i], i);
+   }
+
+   private static int GetIntegerByteSize(IReadOnlyCollection<byte> array)
+   {
+      return array.Count switch
+             {
+                <= sizeof(byte)   => sizeof(byte)
+              , <= sizeof(ushort) => sizeof(ushort)
+              , <= sizeof(uint)   => sizeof(uint)
+              , _                 => sizeof(ulong)
+             };
+   }
+
    /// <summary>
    /// Constructs a <see cref="LittleEndianByteIndexer" /> from a <see cref="UInt64" />.
    /// </summary>
@@ -163,7 +183,7 @@ public ref struct LittleEndianByteIndexer
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       readonly get
       {
-         if (index is < 0 || index >= ByteSize)
+         if (index < 0 || index >= ByteSize)
             throw new ArgumentOutOfRangeException(nameof(index));
 
          return Data.ReadByte(index);
@@ -172,7 +192,7 @@ public ref struct LittleEndianByteIndexer
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       set
       {
-         if (index is < 0 || index >= ByteSize)
+         if (index < 0 || index >= ByteSize)
             throw new ArgumentOutOfRangeException(nameof(index));
 
          Data = Data.StoreByte(value, index);
@@ -191,6 +211,8 @@ public ref struct LittleEndianByteIndexer
       var len = length + start > ByteSize
                    ? ByteSize - start
                    : length;
+
+      // ReSharper disable once HeapView.ObjectAllocation.Evident
       var slice = new byte[len];
       var j = start;
       for (var i = 0; i < len; i++, j++)
@@ -319,7 +341,10 @@ public ref struct LittleEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static explicit operator byte[](LittleEndianByteIndexer indexer)
    {
-      return indexer.Slice(0, indexer.Length);
+      // ReSharper disable RedundantRangeBound
+      return indexer[0..^0];
+
+      // ReSharper enable RedundantRangeBound
    }
 
    #endregion
@@ -444,7 +469,7 @@ public ref struct LittleEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static explicit operator LittleEndianByteIndexer(byte[] data)
    {
-      return new LittleEndianByteIndexer(data.ToUInt64());
+      return new LittleEndianByteIndexer(data);
    }
 
    #endregion
@@ -455,13 +480,14 @@ public ref struct LittleEndianByteIndexer
    /// <returns>a string of the data formatted as hex bytes</returns>
    public override string ToString()
    {
+      // ReSharper disable once HeapView.ObjectAllocation.Evident
       var sb = new StringBuilder(ByteSize * 3);
 
       for (var i = 0; i < ByteSize; i++)
       {
          if (i != 0)
             sb.Append(" ");
-         sb.AppendFormat("{0:X2}", this[i]);
+         sb.AppendFormat(this[i].ToString("X2"));
       }
 
       return sb.ToString();

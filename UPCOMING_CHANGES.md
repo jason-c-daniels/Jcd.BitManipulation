@@ -35,7 +35,7 @@ and keeping acceptable performance<sup>1</sup>.
   That's in keeping with the original intent and a desirable change, from my view. If you need them to remain
   heap allocatable, add an issue or open a dialog some other way about your needs.
 - All extension methods will be moved into type-specific extesion classes (e.g. `UInt64Extensions`). This will
-  only break direct calls such as ReadBytesExtensions.ReadBytes(myInt,offset,length,Endian.Big).
+  only break direct calls such as `ReadBytesExtensions.ReadBytes(myInt,offset,length,Endian.Big)`.
 
 ### New Features / Improvements
 

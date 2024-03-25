@@ -127,23 +127,30 @@ public ref struct BigEndianByteIndexer
       dataOffset = sizeof(ulong) - ByteSize;
       Data = data;
    }
-
-   #endregion
-
-   private readonly int dataOffset;
-
+   
    private BigEndianByteIndexer(ReadOnlySpan<byte> data)
-      : this(data, GetIntegerByteSize(data.Length))
+      : this(data, data.Length)
    {
    }
 
    private BigEndianByteIndexer(ReadOnlySpan<byte> data, int byteSize)
    {
-      ByteSize = byteSize;
+      ByteSize = GetIntegerByteSize(byteSize);
 
       StoreBytes(data, 0, byteSize);
    }
 
+   private BigEndianByteIndexer(byte[] data)
+      : this(data, data.Length)
+   {
+   }
+
+   private BigEndianByteIndexer(byte[] data, int byteSize)
+   {
+      ByteSize = GetIntegerByteSize(byteSize);
+
+      StoreBytes(data, 0, byteSize);
+   }
    private static int GetIntegerByteSize(int count)
    {
       return count switch
@@ -154,6 +161,10 @@ public ref struct BigEndianByteIndexer
               , _                 => sizeof(ulong)
              };
    }
+
+   #endregion
+
+   private readonly int dataOffset;
 
    /// <summary>
    /// The number of bytes this type will index

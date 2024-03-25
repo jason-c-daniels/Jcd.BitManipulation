@@ -7,7 +7,6 @@ Stores a set of bytes starting at the specified byte location within the value.
 ```csharp
 public static ushort StoreBytes(this ushort value, byte[] bytes, int offset, int size=-1, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt16Extensions.StoreBytes(thisushort,byte[],int,int,Jcd.BitManipulation.Endian).value'></a>

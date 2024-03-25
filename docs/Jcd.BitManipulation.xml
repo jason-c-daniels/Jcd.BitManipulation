@@ -695,6 +695,46 @@
             A default bitmask signifying all bits have been set.
          </summary>
       </member>
+      <member name="F:Jcd.BitManipulation.BitMask.Byte">
+         <summary>
+            A bitmask for the first byte in a number.
+         </summary>
+      </member>
+      <member name="F:Jcd.BitManipulation.BitMask.Byte1">
+         <summary>
+            A bitmask for the second byte in a number.
+         </summary>
+      </member>
+      <member name="F:Jcd.BitManipulation.BitMask.Byte2">
+         <summary>
+            A bitmask for the third byte in a number.
+         </summary>
+      </member>
+      <member name="F:Jcd.BitManipulation.BitMask.Byte3">
+         <summary>
+            A bitmask for the fourth byte in a number.
+         </summary>
+      </member>
+      <member name="F:Jcd.BitManipulation.BitMask.Byte4">
+         <summary>
+            A bitmask for the fifth byte in a number.
+         </summary>
+      </member>
+      <member name="F:Jcd.BitManipulation.BitMask.Byte5">
+         <summary>
+            A bitmask for the sixth byte in a number.
+         </summary>
+      </member>
+      <member name="F:Jcd.BitManipulation.BitMask.Byte6">
+         <summary>
+            A bitmask for the seventh byte in a number.
+         </summary>
+      </member>
+      <member name="F:Jcd.BitManipulation.BitMask.Byte7">
+         <summary>
+            A bitmask for the seventh byte in a number.
+         </summary>
+      </member>
       <member name="F:Jcd.BitManipulation.BitMask.Bits">
          <summary>
             The backing store for the actual bits of the<see cref="T:Jcd.BitManipulation.BitMask"/>.
@@ -2761,6 +2801,16 @@
          <returns>The raw data converted to an array, serialized as big endian.</returns>
       </member>
       <member
+         name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Explicit(Jcd.BitManipulation.LittleEndianByteIndexer)~System.ReadOnlySpan{System.Byte}">
+         <summary>
+            Explicitly converts the
+            <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>
+            to an array of bytes.
+         </summary>
+         <param name="indexer">The indexer to convert.</param>
+         <returns>The raw data converted to an array, serialized as big endian.</returns>
+      </member>
+      <member
          name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(System.UInt64)~Jcd.BitManipulation.LittleEndianByteIndexer">
          <summary>
             Implicitly converts a
@@ -2862,6 +2912,14 @@
       </member>
       <member
          name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Explicit(System.Byte[])~Jcd.BitManipulation.LittleEndianByteIndexer">
+         <summary>
+            Explicitly converts an array of bytes to a<see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>.
+         </summary>
+         <param name="data">The underlying data type.</param>
+         <returns>A indexer type.</returns>
+      </member>
+      <member
+         name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Explicit(System.ReadOnlySpan{System.Byte})~Jcd.BitManipulation.LittleEndianByteIndexer">
          <summary>
             Explicitly converts an array of bytes to a<see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>.
          </summary>

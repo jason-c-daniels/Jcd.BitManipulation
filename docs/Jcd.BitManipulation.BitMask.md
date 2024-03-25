@@ -24,6 +24,14 @@ public readonly struct BitMask
 |:----------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------|
 | [AllBits](Jcd.BitManipulation.BitMask.AllBits.md 'Jcd.BitManipulation.BitMask.AllBits') | A default bitmask signifying all bits have been set.                                                                  |
 | [Bits](Jcd.BitManipulation.BitMask.Bits.md 'Jcd.BitManipulation.BitMask.Bits')          | The backing store for the actual bits of the [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask'). |
+| [Byte](Jcd.BitManipulation.BitMask.Byte.md 'Jcd.BitManipulation.BitMask.Byte')          | A bitmask for the first byte in a number.                                                                             |
+| [Byte1](Jcd.BitManipulation.BitMask.Byte1.md 'Jcd.BitManipulation.BitMask.Byte1')       | A bitmask for the second byte in a number.                                                                            |
+| [Byte2](Jcd.BitManipulation.BitMask.Byte2.md 'Jcd.BitManipulation.BitMask.Byte2')       | A bitmask for the third byte in a number.                                                                             |
+| [Byte3](Jcd.BitManipulation.BitMask.Byte3.md 'Jcd.BitManipulation.BitMask.Byte3')       | A bitmask for the fourth byte in a number.                                                                            |
+| [Byte4](Jcd.BitManipulation.BitMask.Byte4.md 'Jcd.BitManipulation.BitMask.Byte4')       | A bitmask for the fifth byte in a number.                                                                             |
+| [Byte5](Jcd.BitManipulation.BitMask.Byte5.md 'Jcd.BitManipulation.BitMask.Byte5')       | A bitmask for the sixth byte in a number.                                                                             |
+| [Byte6](Jcd.BitManipulation.BitMask.Byte6.md 'Jcd.BitManipulation.BitMask.Byte6')       | A bitmask for the seventh byte in a number.                                                                           |
+| [Byte7](Jcd.BitManipulation.BitMask.Byte7.md 'Jcd.BitManipulation.BitMask.Byte7')       | A bitmask for the seventh byte in a number.                                                                           |
 
 | Methods                                                                                                                    |                                                                                                                                   |
 |:---------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------|

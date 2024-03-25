@@ -1,7 +1,6 @@
 ﻿#region
 
 using System;
-using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text;
 
@@ -116,22 +115,31 @@ public ref struct LittleEndianByteIndexer
    {
    }
 
-   private LittleEndianByteIndexer(IReadOnlyList<byte> data)
-      : this(data, GetIntegerByteSize(data))
+   private LittleEndianByteIndexer(byte[] data)
+      : this(data, data.Length)
    {
    }
 
-   private LittleEndianByteIndexer(IReadOnlyList<byte> data, int byteSize)
+   private LittleEndianByteIndexer(byte[] data, int byteSize)
    {
-      ByteSize = byteSize;
-
-      for (var i = 0; i < data.Count && i < byteSize; i++)
-         Data.StoreByte(data[i], i);
+      ByteSize = GetIntegerByteSize(byteSize);
+      StoreBytes(data, 0, byteSize);
    }
 
-   private static int GetIntegerByteSize(IReadOnlyCollection<byte> array)
+   private LittleEndianByteIndexer(ReadOnlySpan<byte> data)
+      : this(data, data.Length)
    {
-      return array.Count switch
+   }
+
+   private LittleEndianByteIndexer(ReadOnlySpan<byte> data, int byteSize)
+   {
+      ByteSize = GetIntegerByteSize(byteSize);
+      StoreBytes(data, 0, byteSize);
+   }
+
+   private static int GetIntegerByteSize(int count)
+   {
+      return count switch
              {
                 <= sizeof(byte)   => sizeof(byte)
               , <= sizeof(ushort) => sizeof(ushort)
@@ -151,7 +159,7 @@ public ref struct LittleEndianByteIndexer
       ByteSize = byteSize;
       Data = data;
    }
-
+   
    #endregion
 
    /// <summary>
@@ -347,6 +355,17 @@ public ref struct LittleEndianByteIndexer
       // ReSharper enable RedundantRangeBound
    }
 
+   /// <summary>
+   /// Explicitly converts the <see cref="LittleEndianByteIndexer" /> to an array of bytes.
+   /// </summary>
+   /// <param name="indexer">The indexer to convert.</param>
+   /// <returns>The raw data converted to an array, serialized as big endian.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static explicit operator ReadOnlySpan<byte>(LittleEndianByteIndexer indexer)
+   {
+      return (byte[]) indexer;
+   }
+
    #endregion
 
    #region Conversion From Operators
@@ -472,6 +491,17 @@ public ref struct LittleEndianByteIndexer
       return new LittleEndianByteIndexer(data);
    }
 
+   /// <summary>
+   /// Explicitly converts an array of  bytes to a <see cref="LittleEndianByteIndexer" />.
+   /// </summary>
+   /// <param name="data">The underlying data type.</param>
+   /// <returns>A indexer type.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static explicit operator LittleEndianByteIndexer(ReadOnlySpan<byte> data)
+   {
+      return new LittleEndianByteIndexer(data);
+   }
+   
    #endregion
 
    /// <summary>

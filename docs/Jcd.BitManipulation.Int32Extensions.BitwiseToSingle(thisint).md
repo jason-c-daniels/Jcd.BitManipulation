@@ -17,6 +17,7 @@ public static float BitwiseToSingle(this int value);
 The value to convert
 
 #### Returns
+
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 the [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single') representation of the
 bits

@@ -16,5 +16,6 @@ public static bool[] ToBooleanArray(this float bits);
 the long to convert
 
 #### Returns
+
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 the array. LSB at index 0

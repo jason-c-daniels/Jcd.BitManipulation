@@ -34,5 +34,6 @@ The bit location to store the value.
 The bit size of the value.
 
 #### Returns
+
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 The modified value.

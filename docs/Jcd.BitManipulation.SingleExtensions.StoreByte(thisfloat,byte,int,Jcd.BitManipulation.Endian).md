@@ -34,6 +34,5 @@ the offset of the byte to write
 The endianness of the indexing within the value.
 
 #### Returns
-
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 The modified value.

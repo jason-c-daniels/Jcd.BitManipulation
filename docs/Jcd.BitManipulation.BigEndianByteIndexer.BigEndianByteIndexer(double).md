@@ -2,9 +2,7 @@
 
 ## BigEndianByteIndexer(double) Constructor
 
-Constructs
-a [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') from
-an [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double').
+Constructs a [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') from an [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double').
 
 ```csharp
 private BigEndianByteIndexer(double data);

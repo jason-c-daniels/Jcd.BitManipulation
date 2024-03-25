@@ -2,8 +2,7 @@
 
 ## Int64Extensions.AreAnyBitsSet(this long, BitMask) Method
 
-Tests if any bits from the bitmask are set on
-a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64').
+Tests if any bits from the bitmask are set on a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64').
 
 ```csharp
 public static bool AreAnyBitsSet(this long data, Jcd.BitManipulation.BitMask bitmask);
@@ -23,6 +22,5 @@ The data to inspect.
 the bits to test.
 
 #### Returns
-
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 True if any of the bits from the bitmask were set.

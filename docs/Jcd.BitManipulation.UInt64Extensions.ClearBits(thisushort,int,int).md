@@ -7,7 +7,6 @@ Sets all specified bits to "off" and returns the modified value.
 ```csharp
 public static ushort ClearBits(this ushort value, int offset=0, int size=16);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ClearBits(thisushort,int,int).value'></a>
@@ -29,6 +28,5 @@ The offset of where to begin clearing bits.
 The number of bits to clear.
 
 #### Returns
-
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 The modified value.

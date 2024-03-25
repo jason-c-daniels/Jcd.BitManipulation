@@ -7,7 +7,6 @@ Read a single byte from the value at the specified byte offset.
 ```csharp
 public static byte ReadByte(this ulong value, int offset, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ReadByte(thisulong,int,Jcd.BitManipulation.Endian).value'></a>
@@ -29,6 +28,5 @@ the offset of the byte to write
 The endianness of the byte indexing within the value.
 
 #### Returns
-
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 The specified byte.

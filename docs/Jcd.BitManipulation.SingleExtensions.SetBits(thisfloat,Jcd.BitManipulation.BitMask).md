@@ -22,6 +22,5 @@ The value to be modified.
 bits to set.
 
 #### Returns
-
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 The modified value.

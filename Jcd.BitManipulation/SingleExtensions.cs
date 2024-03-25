@@ -76,10 +76,10 @@ public static class SingleExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int BitwiseToInt32(this float value)
    {
-      #if NETSTANDARD2_0
-      return BitConverter.ToInt32(BitConverter.GetBytes(value), 0);
-      #else
+      #if NETSTANDARD2_1_OR_GREATER
       return BitConverter.SingleToInt32Bits(value);
+      #else
+      return BitConverter.ToInt32(BitConverter.GetBytes(value), 0);
       #endif
    }
 

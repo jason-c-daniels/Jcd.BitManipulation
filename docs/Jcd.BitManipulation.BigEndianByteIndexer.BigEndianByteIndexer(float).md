@@ -2,9 +2,7 @@
 
 ## BigEndianByteIndexer(float) Constructor
 
-Constructs
-a [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') from
-an [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single').
+Constructs a [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') from an [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single').
 
 ```csharp
 private BigEndianByteIndexer(float data);

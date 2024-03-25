@@ -2,9 +2,7 @@
 
 ## LittleEndianByteIndexer(long) Constructor
 
-Constructs
-a [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
-from an [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64').
+Constructs a [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') from an [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64').
 
 ```csharp
 private LittleEndianByteIndexer(long data);

@@ -159,7 +159,7 @@ public ref struct LittleEndianByteIndexer
       ByteSize = byteSize;
       Data = data;
    }
-   
+
    #endregion
 
    /// <summary>
@@ -187,7 +187,7 @@ public ref struct LittleEndianByteIndexer
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       private set;
    }
-   
+
    /// <summary>
    /// Access bytes from the underlying data.
    /// </summary>
@@ -546,7 +546,7 @@ public ref struct LittleEndianByteIndexer
    {
       return new LittleEndianByteIndexer(data);
    }
-   
+
    #endregion
 
    /// <summary>

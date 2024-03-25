@@ -127,7 +127,7 @@ public ref struct BigEndianByteIndexer
       dataOffset = sizeof(ulong) - ByteSize;
       Data = data;
    }
-   
+
    private BigEndianByteIndexer(ReadOnlySpan<byte> data)
       : this(data, data.Length)
    {
@@ -151,6 +151,7 @@ public ref struct BigEndianByteIndexer
 
       StoreBytes(data, 0, byteSize);
    }
+
    private static int GetIntegerByteSize(int count)
    {
       return count switch
@@ -191,7 +192,7 @@ public ref struct BigEndianByteIndexer
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       private set;
    }
-   
+
    /// <summary>
    /// Access bytes from the underlying data.
    /// </summary>

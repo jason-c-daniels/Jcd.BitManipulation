@@ -49,6 +49,7 @@ public class LittleEndianStoreByte
    {
       if (!BitConverter.IsLittleEndian)
          Array.Reverse(FltBytes);
+
       return BitConverter.ToSingle(FltBytes, 0);
    }
 
@@ -58,6 +59,7 @@ public class LittleEndianStoreByte
    {
       if (!BitConverter.IsLittleEndian)
          Array.Reverse(Ui64Bytes);
+
       return BitConverter.ToUInt64(Ui64Bytes, 0);
    }
 
@@ -77,6 +79,7 @@ public class LittleEndianStoreByte
    {
       if (!BitConverter.IsLittleEndian)
          Array.Reverse(Ui32Bytes);
+
       return BitConverter.ToUInt32(Ui32Bytes, 0);
    }
 
@@ -86,6 +89,7 @@ public class LittleEndianStoreByte
    {
       if (!BitConverter.IsLittleEndian)
          Array.Reverse(I32Bytes);
+
       return BitConverter.ToInt32(I32Bytes, 0);
    }
 
@@ -95,6 +99,7 @@ public class LittleEndianStoreByte
    {
       if (!BitConverter.IsLittleEndian)
          Array.Reverse(Ui16Bytes);
+
       return BitConverter.ToUInt16(Ui16Bytes, 0);
    }
 
@@ -103,7 +108,7 @@ public class LittleEndianStoreByte
    {
       if (!BitConverter.IsLittleEndian)
          Array.Reverse(I16Bytes);
-      
+
       return BitConverter.ToInt16(I16Bytes, 0);
    }
 

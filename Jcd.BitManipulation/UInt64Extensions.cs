@@ -344,7 +344,6 @@ public static class UInt64Extensions
 
       return value.InternalBigEndianStoreByte(@byte, offset);
    }
-   
 
    /// <summary>
    /// Toggles bits and size.

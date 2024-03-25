@@ -1,7 +1,5 @@
 #region
 
-using System;
-
 using Xunit;
 
 // ReSharper disable HeapView.BoxingAllocation
@@ -109,27 +107,5 @@ public class BitIndexerInt64Tests
       var expected = bits[start..end];
       var actual = indexer[start..end];
       Assert.Equal(expected, actual);
-   }
-}
-
-public static class RuntimeHelpers
-{
-   /// <summary>
-   /// Slices the specified array using the specified range.
-   /// </summary>
-   public static T[] GetSubArray<T>(T[] array, Range range)
-   {
-      if (array == null)
-         throw new ArgumentNullException(nameof(array));
-
-      var (offset, length) = range.GetOffsetAndLength(array.Length);
-
-      if (length == 0)
-         return Array.Empty<T>();
-
-      ReadOnlySpan<T> span = array;
-      var subset = span.Slice(offset, length);
-
-      return subset.ToArray();
    }
 }

@@ -63,7 +63,7 @@ public readonly struct BitMask
    internal static readonly BitMask[] BigEndianByteMasks = [Byte7, Byte6, Byte5, Byte4, Byte3, Byte2, Byte1, Byte];
 
    internal static readonly BitMask[] LittleEndianByteMasks = [Byte, Byte1, Byte2, Byte3, Byte4, Byte5, Byte6, Byte7];
-   
+
    /// <summary>
    /// The backing store for the actual bits of the <see cref="BitMask" />.
    /// </summary>

@@ -3,7 +3,6 @@
 ## DoubleExtensions.StoreByte(this double, byte, int, Endian) Method
 
 Store a single byte to the value at the specified byte offset.
-Byte indexing is LSB, least significant byte, at index/offset zero.
 
 ```csharp
 public static double StoreByte(this double value, byte @byte, int offset, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
@@ -35,6 +34,5 @@ the offset of the byte to write
 The endianness of the indexing within the value.
 
 #### Returns
-
 [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 The modified value.

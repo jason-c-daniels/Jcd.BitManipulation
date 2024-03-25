@@ -302,30 +302,11 @@ public static class UInt32Extensions
    /// <param name="endian">The endianness of the byte indexing within the value.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ushort StoreBytes(this ushort value, ReadOnlySpan<byte> bytes, int offset, int size = -1, Endian endian = Endian.Little)
+   public static uint StoreBytes(this uint value, byte[] bytes, int offset, int size = -1, Endian endian = Endian.Little)
    {
       return endian == Endian.Big
                 ? ((BigEndianByteIndexer) value).StoreBytes(bytes, offset, size)
                 : ((LittleEndianByteIndexer) value).StoreBytes(bytes, offset, size);
-   }
-
-   /// <summary>
-   /// Store a single byte to the value at the specified byte offset.
-   /// </summary>
-   /// <param name="value">The value to be modified.</param>
-   /// <param name="byte">The byte value to set</param>
-   /// <param name="offset">the offset of the byte to write</param>
-   /// <param name="endian">The endianness for indexing into the bytes.</param>
-   /// <returns>The modified value.</returns>
-   [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ushort StoreByte(this ushort value, byte @byte, int offset, Endian endian = Endian.Little)
-   {
-      if (endian == Endian.Little)
-         return value.StoreBits(@byte, offset << 3, 8);
-
-      var beOffset = sizeof(ushort) - offset - 1;
-
-      return value.StoreBits(@byte, beOffset << 3, 8);
    }
 
    /// <summary>

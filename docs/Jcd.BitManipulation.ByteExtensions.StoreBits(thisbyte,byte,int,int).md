@@ -34,6 +34,5 @@ The bit location to store the value.
 The bit size of the value.
 
 #### Returns
-
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 The modified value.

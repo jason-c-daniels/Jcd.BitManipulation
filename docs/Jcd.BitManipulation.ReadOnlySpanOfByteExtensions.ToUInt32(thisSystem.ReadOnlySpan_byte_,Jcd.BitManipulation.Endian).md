@@ -22,6 +22,5 @@ the bytes to convert
 The endian for the bytes.
 
 #### Returns
-
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 The converted [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')

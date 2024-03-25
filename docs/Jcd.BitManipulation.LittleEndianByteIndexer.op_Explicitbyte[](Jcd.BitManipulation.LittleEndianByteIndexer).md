@@ -16,6 +16,5 @@ public static byte[] explicit operator byte[](Jcd.BitManipulation.LittleEndianBy
 The indexer to convert.
 
 #### Returns
-
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 The raw data converted to an array, serialized as big endian.

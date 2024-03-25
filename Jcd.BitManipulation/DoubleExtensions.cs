@@ -291,7 +291,21 @@ public static class DoubleExtensions
 
    /// <summary>
    /// Stores a set of bytes starting at the specified byte location within the value.
-   /// Byte indexing is LSB, least significant byte, at index/offset zero.
+   /// </summary>
+   /// <param name="value">The value to be modified.</param>
+   /// <param name="bytes">The value to be stored at the byte location.</param>
+   /// <param name="offset">The byte location to store the value.</param>
+   /// <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
+   /// <param name="endian">The endianness of the byte indexing within the value.</param>
+   /// <returns>The modified value.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static double StoreBytes(this double value, byte[] bytes, int offset, int size = -1, Endian endian = Endian.Little)
+   {
+      return value.BitwiseToUInt64().StoreBytes(bytes, offset, size, endian).BitwiseToDouble();
+   }
+
+   /// <summary>
+   /// Stores a set of bytes starting at the specified byte location within the value.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="bytes">The value to be stored at the byte location.</param>
@@ -307,7 +321,6 @@ public static class DoubleExtensions
 
    /// <summary>
    /// Store a single byte to the value at the specified byte offset.
-   /// Byte indexing is LSB, least significant byte, at index/offset zero.
    /// </summary>
    /// <param name="value">The value to be modified.</param>
    /// <param name="byte">The byte value to set</param>

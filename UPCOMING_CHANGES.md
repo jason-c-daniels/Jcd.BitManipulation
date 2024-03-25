@@ -17,9 +17,6 @@ any wants from this library please add an issue with your request.
 The biggest changes are focused on completeness, simplifying the API surface/reducing volume of code, and
 and keeping acceptable performance<sup>1</sup>.
 
-1. One notable exception is a known performance hit caused by simplifying the API surface. It's described in detail
-   below.
-
 ### Breaking Changes
 
 - I've found myself strongly disliking the proliferation of types. All of the type specific `BitIndexer` and
@@ -38,7 +35,7 @@ and keeping acceptable performance<sup>1</sup>.
   That's in keeping with the original intent and a desirable change, from my view. If you need them to remain
   heap allocatable, add an issue or open a dialog some other way about your needs.
 - All extension methods will be moved into type-specific extesion classes (e.g. `UInt64Extensions`). This will
-  only break direct calls such as ReadBytesExtensions.ReadBytes(myInt,offset,length,Endian.Big).
+  only break direct calls such as `ReadBytesExtensions.ReadBytes(myInt,offset,length,Endian.Big)`.
 
 ### New Features / Improvements
 
@@ -48,32 +45,30 @@ and keeping acceptable performance<sup>1</sup>.
   return a `float` with the specified bits altered)
 - Performance improvements via `AggressiveInlining`. In many places in 1.x and 2.x, `AggressiveInlining` is missing.
   Using this consistently has halved and quartered the run time of some of the extension methods in the 3.0 branch.
-- Performance benchmarks! I will include both the most recent performance benchmark runs as well as the benchmark
-  application in 3.0. In running this I confirmed that the slight performance boost I got going with the
-  type specific byte indexers, was not worth the hassle of the volume of code it requires for a .Net standard 2.0
-  library. To illustrate (in the 3.0 branch, using my machine):
-   - Using `BitConverter` to create an array from any int of any size and reverse the array (big endian on Intel
-     processors) is 4ns on .Net 8.0 and 25ns in .Net Framework 4.8.1.
-   - Using `BigEndianByteIndexerUInt64` takes rougly 6ns on both .Net 8.0 and 10ns on .Net Framework 4.8.1,
-   - Using `BigEndianByteIndexerUInt16` takes roughly 3ns on both .Net 8.0 and 10ns on .Net Framework 4.8.1,
-   - The replacement indexers need more logic as they are handling multiple bit sizes. `BigEndianByteIndexer` runs at
-     roughly 8ns per conversion of the `UInt64` to an array of bytes.
-   - This loss of performance to accomodate easier to maintain code is acceptable for two reasons:
-      - In the worst case there's 6ns difference from `BitConverter`, and 5ns from the baseline implementation. 8ns per
-        operation at 4GHz is still sufficiently fast for most purposes.
-      - The target audience for this library are people who want more readable code. This sometimes comes at a slight
-        performance hit. I believe a loss of performance of 6ns per conversion to a big endian array on an Intel
-        processor
-        is performant enough for the target audience.
-      - If you really need as fast of performance as possible in converting integer to and from arrays, you may need to
-        roll your own solution tailored to the hardware you're running on. Even `BitConverter` can be less performant
-        than hand-rolled solutions for 16 bit integers on my machine.
 - Improved documentation. I will improve the documentation on how to properly use the extension methods as well
   as their underlying types. One area currently lacking is on how to expect a big endian conversion from a
   a byte array to behave when the array is smaller than the destination type. (fills from position 0)
 - ReSharper auto-formatting updates. Some of the code just looks silly with the settings used in 2.x (main) branch. I
   will update these settings to remove that odd formatting. (This mostly impacts data driven unit tests making it harder
   than necessary to comprehend what's happening)
+- Performance benchmarks! I will include both the most recent performance benchmark runs as well as the benchmark
+  application in 3.0. In running this I confirmed that the slight performance boost I got going with the
+  type specific byte indexers, was not worth the hassle of the volume of code it requires for a .Net standard 2.0
+  library. To illustrate (in the 3.0 branch, using my machine):
+   - Using `BitConverter` to create an array from any int of any size and reverse the array (big endian on Intel
+     processors) is 4ns on .Net 8.0 and 25ns in .Net Framework 4.8.1.
+   - The replacement indexers need more logic as they are handling multiple bit sizes. `BigEndianByteIndexer` runs at
+     roughly 4ns per conversion of a `UInt64` to an array of bytes. This is on par with `BitConverter`.
+   - Converting a `UInt16` to an array of bytes takes around 3.8ns now, when previously it took around 2-3ns.
+   - This very minor loss of performance to accomodate easier to maintain code is acceptable for two reasons:
+      - In the worst case there's 0.1ns difference from `BitConverter`, and 2ns from the baseline implementation. 2ns
+        dealy per operation at 4GHz is still sufficiently fast for most purposes.
+      - The target audience for this library are people who want more readable code. This sometimes comes at a slight
+        performance hit. I believe a loss of performance of 2ns per integer conversion to a big endian array on an Intel
+        processor is performant enough for the target audience.
+      - If you really need as fast of performance as possible in converting integer to and from arrays, you may need to
+        roll your own C++ solution tailored to the hardware you're running on. Even `BitConverter` can be less performant
+        than hand-rolled C# solutions for 16 bit integers on my machine. C++ will usually run faster.
 
 ### Tentative Feature/Addition
 

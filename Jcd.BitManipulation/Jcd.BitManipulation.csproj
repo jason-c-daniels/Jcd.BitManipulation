@@ -5,7 +5,7 @@
       <Nullable>disable</Nullable>
       <PackageTags>c# csharp bit manipulation</PackageTags>
       <DefineConstants Condition="'$(TargetFramework)' == 'netstandard2.0'">$(DefineConstants);SUPPRESS_SINGLE_CONVERSIONS</DefineConstants>
-      <TargetFramework>netstandard2.0</TargetFramework>
+      <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
    </PropertyGroup>
 
    <ItemGroup>

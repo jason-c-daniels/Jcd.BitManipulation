@@ -22,6 +22,5 @@ The value to be modified.
 bits to set.
 
 #### Returns
-
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 The modified value.

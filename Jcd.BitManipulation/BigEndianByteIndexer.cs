@@ -1,7 +1,6 @@
 ﻿#region
 
 using System;
-using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text;
 
@@ -102,22 +101,22 @@ public ref struct BigEndianByteIndexer
    /// <param name="data"> The initial value of the underlying data.</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private BigEndianByteIndexer(float data)
-      : this(BitConverter.ToUInt32(BitConverter.GetBytes(data), 0), sizeof(float))
+      : this(data.BitwiseToUInt32(), sizeof(float))
    {
    }
 
    /// <summary>
-   /// Constructs a <see cref="BigEndianByteIndexer" /> from an <see cref="Double" />.
+   /// Constructs a <see cref="BigEndianByteIndexer" /> from an <see cref="double" />.
    /// </summary>
    /// <param name="data"> The initial value of the underlying data.</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private BigEndianByteIndexer(double data)
-      : this((ulong) BitConverter.DoubleToInt64Bits(data), sizeof(double))
+      : this(data.BitwiseToUInt64(), sizeof(double))
    {
    }
 
    /// <summary>
-   /// Constructs a <see cref="BigEndianByteIndexer" /> from a <see cref="UInt64" />.
+   /// Constructs a <see cref="BigEndianByteIndexer" /> from a <see cref="ulong" />.
    /// </summary>
    /// <param name="data"> The initial value of the underlying data.</param>
    /// <param name="byteSize">The number of bytes to index</param>
@@ -129,26 +128,33 @@ public ref struct BigEndianByteIndexer
       Data = data;
    }
 
-   #endregion
-
-   private readonly int dataOffset;
-
-   private BigEndianByteIndexer(IReadOnlyList<byte> data)
-      : this(data, GetIntegerByteSize(data))
+   private BigEndianByteIndexer(ReadOnlySpan<byte> data)
+      : this(data, data.Length)
    {
    }
 
-   private BigEndianByteIndexer(IReadOnlyList<byte> data, int byteSize)
+   private BigEndianByteIndexer(ReadOnlySpan<byte> data, int byteSize)
    {
-      ByteSize = byteSize;
+      ByteSize = GetIntegerByteSize(byteSize);
 
-      for (var i = 0; i < data.Count && i < byteSize; i++)
-         Data.StoreByte(data[i], i);
+      StoreBytes(data, 0, byteSize);
    }
 
-   private static int GetIntegerByteSize(IReadOnlyCollection<byte> array)
+   private BigEndianByteIndexer(byte[] data)
+      : this(data, data.Length)
    {
-      return array.Count switch
+   }
+
+   private BigEndianByteIndexer(byte[] data, int byteSize)
+   {
+      ByteSize = GetIntegerByteSize(byteSize);
+
+      StoreBytes(data, 0, byteSize);
+   }
+
+   private static int GetIntegerByteSize(int count)
+   {
+      return count switch
              {
                 <= sizeof(byte)   => sizeof(byte)
               , <= sizeof(ushort) => sizeof(ushort)
@@ -156,6 +162,10 @@ public ref struct BigEndianByteIndexer
               , _                 => sizeof(ulong)
              };
    }
+
+   #endregion
+
+   private readonly int dataOffset;
 
    /// <summary>
    /// The number of bytes this type will index
@@ -174,7 +184,14 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// The backing store.
    /// </summary>
-   internal ulong Data { get; private set; }
+   internal ulong Data
+   {
+      [MethodImpl(MethodImplOptions.AggressiveInlining)]
+      readonly get;
+
+      [MethodImpl(MethodImplOptions.AggressiveInlining)]
+      private set;
+   }
 
    /// <summary>
    /// Access bytes from the underlying data.
@@ -198,7 +215,7 @@ public ref struct BigEndianByteIndexer
          if (index < 0 || index >= ByteSize)
             throw new ArgumentOutOfRangeException(nameof(index));
 
-         Data = Data.StoreByte(value, index + dataOffset, Endian.Big);
+         Data = Data.InternalBigEndianStoreByte(value, index + dataOffset);
       }
    }
 
@@ -211,15 +228,53 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public readonly byte[] Slice(int start, int length)
    {
+      if (start == 0 && length >= ByteSize)
+         return GetAllBytes();
+
+      return GetSubset(start, length);
+   }
+
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   private readonly byte[] GetAllBytes()
+   {
+      #if NETSTANDARD2_1_OR_GREATER
+      var result = ByteSize switch
+                   {
+                      8 => BitConverter.GetBytes(Data)
+                    , 4 => BitConverter.GetBytes((uint) Data)
+
+                      //, 2 => BitConverter.GetBytes((ushort)Data)
+                    , 1 => [(byte) Data]
+                    , _ => null
+                   };
+
+      if (result != null)
+      {
+         if (BitConverter.IsLittleEndian && ByteSize > 1)
+            Array.Reverse(result);
+
+         return result;
+      }
+      #endif
+
+      var slice = new byte[ByteSize];
+      for (int i = 0, j = dataOffset; i < ByteSize; i++, j++)
+         slice[i] = Data.InternalBigEndianReadByte(j);
+
+      return slice;
+   }
+
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   private readonly byte[] GetSubset(int start, int length)
+   {
       var len = length + start > ByteSize
                    ? ByteSize - start
                    : length;
 
       // ReSharper disable once HeapView.ObjectAllocation.Evident
       var slice = new byte[len];
-      var j = dataOffset + start;
-      for (var i = 0; i < len; i++, j++)
-         slice[i] = Data.ReadByte(j, Endian.Big);
+      for (int i = 0, j = dataOffset + start; i < len; i++, j++)
+         slice[i] = Data.InternalBigEndianReadByte(j);
 
       return slice;
    }
@@ -322,7 +377,7 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator float(BigEndianByteIndexer indexer)
    {
-      return BitConverter.ToSingle(BitConverter.GetBytes((uint) indexer.Data), 0);
+      return ((uint) indexer.Data).BitwiseToSingle();
    }
 
    /// <summary>
@@ -333,7 +388,7 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator double(BigEndianByteIndexer indexer)
    {
-      return BitConverter.Int64BitsToDouble((long) indexer.Data);
+      return indexer.Data.BitwiseToDouble();
    }
 
    /// <summary>
@@ -348,6 +403,17 @@ public ref struct BigEndianByteIndexer
       return indexer[0..^0];
 
       // ReSharper enable RedundantRangeBound -- false positive
+   }
+
+   /// <summary>
+   /// Explicitly converts the <see cref="BigEndianByteIndexer" /> to an array of bytes.
+   /// </summary>
+   /// <param name="indexer">The indexer to convert.</param>
+   /// <returns>The raw data converted to an array, serialized as big endian.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static explicit operator ReadOnlySpan<byte>(BigEndianByteIndexer indexer)
+   {
+      return (byte[]) indexer;
    }
 
    #endregion
@@ -475,6 +541,17 @@ public ref struct BigEndianByteIndexer
       return new BigEndianByteIndexer(data);
    }
 
+   /// <summary>
+   /// Explicitly converts an array of  bytes to a <see cref="BigEndianByteIndexer" />.
+   /// </summary>
+   /// <param name="data">The underlying data type.</param>
+   /// <returns>A indexer type.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static explicit operator BigEndianByteIndexer(ReadOnlySpan<byte> data)
+   {
+      return new BigEndianByteIndexer(data);
+   }
+
    #endregion
 
    /// <summary>
@@ -487,20 +564,15 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public BigEndianByteIndexer StoreBytes(byte[] bytes, int offset, int size = -1)
    {
-      if (size == -1 || size > bytes.Length)
-         size = bytes.Length;
-      var idx = 0;
+      if (size == -1)
+         size = ByteSize - offset;
 
-      foreach (var @byte in bytes)
-      {
-         if (idx >= size)
-            return this;
-         if (offset + idx >= ByteSize)
-            return this;
+      var len = size + offset > ByteSize
+                   ? ByteSize - offset
+                   : size;
 
-         this[idx + offset] = @byte;
-         idx++;
-      }
+      for (int i = 0, j = offset + dataOffset; i < len; i++, j++)
+         Data = Data.InternalBigEndianStoreByte(bytes[i], j);
 
       return this;
    }
@@ -515,20 +587,15 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public BigEndianByteIndexer StoreBytes(ReadOnlySpan<byte> bytes, int offset, int size = -1)
    {
-      if (size == -1 || size > bytes.Length)
-         size = bytes.Length;
-      var idx = 0;
+      if (size == -1)
+         size = ByteSize - offset;
 
-      foreach (var @byte in bytes)
-      {
-         if (idx >= size)
-            return this;
-         if (offset + idx >= ByteSize)
-            return this;
+      var len = size + offset > ByteSize
+                   ? ByteSize - offset
+                   : size;
 
-         this[idx + offset] = @byte;
-         idx++;
-      }
+      for (int i = 0, j = offset + dataOffset; i < len; i++, j++)
+         Data = Data.InternalBigEndianStoreByte(bytes[i], j);
 
       return this;
    }
@@ -551,7 +618,7 @@ public ref struct BigEndianByteIndexer
    /// Creates a string of the data formatted as hex for the bytes in big endian notation
    /// </summary>
    /// <returns>a string of the data formatted as hex bytes</returns>
-   public override string ToString()
+   public readonly override string ToString()
    {
       // ReSharper disable once HeapView.ObjectAllocation.Evident
       var sb = new StringBuilder(ByteSize * 3);

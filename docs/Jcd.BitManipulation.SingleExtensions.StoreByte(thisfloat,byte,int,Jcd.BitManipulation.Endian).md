@@ -3,7 +3,6 @@
 ## SingleExtensions.StoreByte(this float, byte, int, Endian) Method
 
 Store a single byte to the value at the specified byte offset.
-Byte indexing is LSB, least significant byte, at index/offset zero.
 
 ```csharp
 public static float StoreByte(this float value, byte @byte, int offset, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
@@ -35,6 +34,5 @@ the offset of the byte to write
 The endianness of the indexing within the value.
 
 #### Returns
-
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 The modified value.

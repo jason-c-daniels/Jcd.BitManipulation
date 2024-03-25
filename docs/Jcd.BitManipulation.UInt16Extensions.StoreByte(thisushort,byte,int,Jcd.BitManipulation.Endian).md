@@ -1,6 +1,6 @@
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[UInt32Extensions](Jcd.BitManipulation.UInt32Extensions.md 'Jcd.BitManipulation.UInt32Extensions')
+### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[UInt16Extensions](Jcd.BitManipulation.UInt16Extensions.md 'Jcd.BitManipulation.UInt16Extensions')
 
-## UInt32Extensions.StoreByte(this ushort, byte, int, Endian) Method
+## UInt16Extensions.StoreByte(this ushort, byte, int, Endian) Method
 
 Store a single byte to the value at the specified byte offset.
 
@@ -9,31 +9,30 @@ public static ushort StoreByte(this ushort value, byte @byte, int offset, Jcd.Bi
 ```
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt32Extensions.StoreByte(thisushort,byte,int,Jcd.BitManipulation.Endian).value'></a>
+<a name='Jcd.BitManipulation.UInt16Extensions.StoreByte(thisushort,byte,int,Jcd.BitManipulation.Endian).value'></a>
 
 `value` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 
 The value to be modified.
 
-<a name='Jcd.BitManipulation.UInt32Extensions.StoreByte(thisushort,byte,int,Jcd.BitManipulation.Endian).byte'></a>
+<a name='Jcd.BitManipulation.UInt16Extensions.StoreByte(thisushort,byte,int,Jcd.BitManipulation.Endian).byte'></a>
 
 `byte` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
 The byte value to set
 
-<a name='Jcd.BitManipulation.UInt32Extensions.StoreByte(thisushort,byte,int,Jcd.BitManipulation.Endian).offset'></a>
+<a name='Jcd.BitManipulation.UInt16Extensions.StoreByte(thisushort,byte,int,Jcd.BitManipulation.Endian).offset'></a>
 
 `offset` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
 the offset of the byte to write
 
-<a name='Jcd.BitManipulation.UInt32Extensions.StoreByte(thisushort,byte,int,Jcd.BitManipulation.Endian).endian'></a>
+<a name='Jcd.BitManipulation.UInt16Extensions.StoreByte(thisushort,byte,int,Jcd.BitManipulation.Endian).endian'></a>
 
 `endian` [Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian')
 
 The endianness for indexing into the bytes.
 
 #### Returns
-
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 The modified value.

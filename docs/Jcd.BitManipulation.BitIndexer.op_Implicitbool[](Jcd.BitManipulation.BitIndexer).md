@@ -16,6 +16,5 @@ public static bool[] implicit operator bool[](Jcd.BitManipulation.BitIndexer ind
 the indexer to convert from
 
 #### Returns
-
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 An array of bools for each bit with Least Significant Bit at index 0.

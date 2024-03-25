@@ -20,4 +20,8 @@
       <None Remove="benchmarks\out\results\Jcd.BitManipulation.Benchmark.BitConverterGetBytes-report-github.md"/>
    </ItemGroup>
 
+   <ItemGroup>
+      <Folder Include="benchmarks\out\results\"/>
+   </ItemGroup>
+
 </Project>

@@ -35,6 +35,5 @@ the destination offset of where to store the bits
 the mask of which bits to store
 
 #### Returns
-
 [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 The modified value.

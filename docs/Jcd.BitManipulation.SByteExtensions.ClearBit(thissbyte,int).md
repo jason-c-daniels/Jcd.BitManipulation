@@ -22,6 +22,5 @@ The value to be modified.
 The offset of the bit to clear.
 
 #### Returns
-
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 The modified value.

@@ -28,6 +28,5 @@ The bit value to set
 the offset of the bit to write
 
 #### Returns
-
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 The modified value.

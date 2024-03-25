@@ -179,8 +179,15 @@ public ref struct LittleEndianByteIndexer
    /// <summary>
    /// The backing store.
    /// </summary>
-   public ulong Data { get; private set; }
+   internal ulong Data
+   {
+      [MethodImpl(MethodImplOptions.AggressiveInlining)]
+      readonly get;
 
+      [MethodImpl(MethodImplOptions.AggressiveInlining)]
+      private set;
+   }
+   
    /// <summary>
    /// Access bytes from the underlying data.
    /// </summary>
@@ -216,13 +223,51 @@ public ref struct LittleEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public readonly byte[] Slice(int start, int length)
    {
+      if (start == 0 && length >= ByteSize)
+         return GetAllBytes();
+
+      return GetSubset(start, length);
+   }
+
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   private readonly byte[] GetAllBytes()
+   {
+      #if NETSTANDARD2_1_OR_GREATER
+      var result = ByteSize switch
+                   {
+                      8 => BitConverter.GetBytes(Data)
+                    , 4 => BitConverter.GetBytes((uint) Data)
+
+                      //, 2 => BitConverter.GetBytes((ushort)Data)
+                    , 1 => [(byte) Data]
+                    , _ => null
+                   };
+
+      if (result != null)
+      {
+         if (!BitConverter.IsLittleEndian && ByteSize > 1)
+            Array.Reverse(result);
+
+         return result;
+      }
+      #endif
+
+      var slice = new byte[ByteSize];
+      for (var i = 0; i < ByteSize; i++)
+         slice[i] = Data.InternalLittleEndianReadByte(i);
+
+      return slice;
+   }
+
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   private readonly byte[] GetSubset(int start, int length)
+   {
       var len = length + start > ByteSize
                    ? ByteSize - start
                    : length;
 
       // ReSharper disable once HeapView.ObjectAllocation.Evident
       var slice = new byte[len];
-      ;
       for (int i = 0, j = start; i < len; i++, j++)
          slice[i] = Data.InternalLittleEndianReadByte(j);
 
@@ -568,7 +613,7 @@ public ref struct LittleEndianByteIndexer
    /// Creates a string of the data formatted as hex for the bytes in big endian notation
    /// </summary>
    /// <returns>a string of the data formatted as hex bytes</returns>
-   public override string ToString()
+   public readonly override string ToString()
    {
       // ReSharper disable once HeapView.ObjectAllocation.Evident
       var sb = new StringBuilder(ByteSize * 3);

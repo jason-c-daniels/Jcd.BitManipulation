@@ -1,8 +1,23 @@
 #!/bin/bash
+
+argument=("$@")
+if [ -n "${argument[0]}" ]; then
+   iterationTime=${argument[0]}
+else
+   iterationTime=500
+fi
+
+if [ -n "${argument[1]}" ]; then
+   filter=${argument[1]}
+else
+   filter=""
+fi
+
+
 pushd "$(git rev-parse --show-toplevel)/Jcd.BitManipulation.Benchmark" || exit
 if [ -d "./benchmarks/" ]; then rm -Rf ./benchmarks/; fi
 mkdir -p ./benchmarks/out
-dotnet run -c Release -f net8.0 -- -a ./benchmarks/out --iterationTime 500 --warmupCount 10 --minIterationCount 10 --maxIterationCount 15 --runtimes net8.0 net462 --filter "*$1*"
+dotnet run -c Release -f net8.0 -- -a ./benchmarks/out --iterationTime $iterationTime --warmupCount 10 --minIterationCount 10 --maxIterationCount 15 --runtimes net8.0 net462 --filter "*$filter*"
 rm ./benchmarks/out/results/*.csv
 rm ./benchmarks/out/results/*.html
 rm ./benchmarks/out/*.log

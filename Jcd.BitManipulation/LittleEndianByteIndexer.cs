@@ -553,9 +553,50 @@ public ref struct LittleEndianByteIndexer
       var len = size + offset > ByteSize
                    ? ByteSize - offset
                    : size;
+      var cnt = Math.Min(len, bytes.Length);
 
-      for (int i = 0, j = offset; i < len; i++, j++)
-         Data = Data.InternalLittleEndianStoreByte(bytes[i], j);
+      //      for (int i = 0, j = offset; i < len; i++, j++)
+      //         this[j] = bytes[i];
+
+      if (cnt == 0)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[0], offset + 0);
+
+      if (cnt == 1)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[1], offset + 1);
+
+      if (cnt == 2)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[2], offset + 2);
+
+      if (cnt == 3)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[3], offset + 3);
+
+      if (cnt == 4)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[4], offset + 4);
+
+      if (cnt == 5)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[5], offset + 5);
+
+      if (cnt == 6)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[6], offset + 6);
+
+      if (cnt == 7)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[7], offset + 7);
 
       return this;
    }
@@ -577,9 +618,48 @@ public ref struct LittleEndianByteIndexer
                    ? ByteSize - offset
                    : size;
 
-      for (int i = 0, j = offset; i < len; i++, j++)
-         Data = Data.InternalLittleEndianStoreByte(bytes[i], j);
+      var cnt = Math.Min(len, bytes.Length);
 
+      if (cnt == 0)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[0], offset + 0);
+
+      if (cnt == 1)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[1], offset + 1);
+
+      if (cnt == 2)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[2], offset + 2);
+
+      if (cnt == 3)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[3], offset + 3);
+
+      if (cnt == 4)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[4], offset + 4);
+
+      if (cnt == 5)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[5], offset + 5);
+
+      if (cnt == 6)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[6], offset + 6);
+
+      if (cnt == 7)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[7], offset + 7);
+      
       return this;
    }
 
@@ -614,5 +694,92 @@ public ref struct LittleEndianByteIndexer
       }
 
       return sb.ToString();
+   }
+}
+
+internal static class UncheckedStoreBytes
+{
+   public static ulong StoreEightLE(this ulong data, byte[] bytes, int offset)
+   {
+      data = data.InternalLittleEndianStoreByte(bytes[0], offset + 0);
+      data = data.InternalLittleEndianStoreByte(bytes[1], offset + 1);
+      data = data.InternalLittleEndianStoreByte(bytes[2], offset + 2);
+      data = data.InternalLittleEndianStoreByte(bytes[3], offset + 3);
+      data = data.InternalLittleEndianStoreByte(bytes[4], offset + 4);
+      data = data.InternalLittleEndianStoreByte(bytes[5], offset + 5);
+      data = data.InternalLittleEndianStoreByte(bytes[6], offset + 6);
+      data = data.InternalLittleEndianStoreByte(bytes[7], offset + 7);
+
+      return data;
+   }
+
+   public static ulong StoreSevenLE(this ulong data, byte[] bytes, int offset)
+   {
+      data = data.InternalLittleEndianStoreByte(bytes[0], offset + 0);
+      data = data.InternalLittleEndianStoreByte(bytes[1], offset + 1);
+      data = data.InternalLittleEndianStoreByte(bytes[2], offset + 2);
+      data = data.InternalLittleEndianStoreByte(bytes[3], offset + 3);
+      data = data.InternalLittleEndianStoreByte(bytes[4], offset + 4);
+      data = data.InternalLittleEndianStoreByte(bytes[5], offset + 5);
+      data = data.InternalLittleEndianStoreByte(bytes[6], offset + 6);
+
+      return data;
+   }
+
+   public static ulong StoreSixLE(this ulong data, byte[] bytes, int offset)
+   {
+      data = data.InternalLittleEndianStoreByte(bytes[0], offset + 0);
+      data = data.InternalLittleEndianStoreByte(bytes[1], offset + 1);
+      data = data.InternalLittleEndianStoreByte(bytes[2], offset + 2);
+      data = data.InternalLittleEndianStoreByte(bytes[3], offset + 3);
+      data = data.InternalLittleEndianStoreByte(bytes[4], offset + 4);
+      data = data.InternalLittleEndianStoreByte(bytes[5], offset + 5);
+
+      return data;
+   }
+
+   public static ulong StoreFiveLE(this ulong data, byte[] bytes, int offset)
+   {
+      data = data.InternalLittleEndianStoreByte(bytes[0], offset + 0);
+      data = data.InternalLittleEndianStoreByte(bytes[1], offset + 1);
+      data = data.InternalLittleEndianStoreByte(bytes[2], offset + 2);
+      data = data.InternalLittleEndianStoreByte(bytes[3], offset + 3);
+      data = data.InternalLittleEndianStoreByte(bytes[4], offset + 4);
+
+      return data;
+   }
+
+   public static ulong StoreFourLE(this ulong data, byte[] bytes, int offset)
+   {
+      data = data.InternalLittleEndianStoreByte(bytes[0], offset + 0);
+      data = data.InternalLittleEndianStoreByte(bytes[1], offset + 1);
+      data = data.InternalLittleEndianStoreByte(bytes[2], offset + 2);
+      data = data.InternalLittleEndianStoreByte(bytes[3], offset + 3);
+
+      return data;
+   }
+
+   public static ulong StoreThreeLE(this ulong data, byte[] bytes, int offset)
+   {
+      data = data.InternalLittleEndianStoreByte(bytes[0], offset + 0);
+      data = data.InternalLittleEndianStoreByte(bytes[1], offset + 1);
+      data = data.InternalLittleEndianStoreByte(bytes[2], offset + 2);
+
+      return data;
+   }
+
+   public static ulong StoreTwoLE(this ulong data, byte[] bytes, int offset)
+   {
+      data = data.InternalLittleEndianStoreByte(bytes[0], offset + 0);
+      data = data.InternalLittleEndianStoreByte(bytes[1], offset + 1);
+
+      return data;
+   }
+
+   public static ulong StoreOne(this ulong data, byte[] bytes, int offset)
+   {
+      data = data.InternalLittleEndianStoreByte(bytes[0], offset + 0);
+
+      return data;
    }
 }

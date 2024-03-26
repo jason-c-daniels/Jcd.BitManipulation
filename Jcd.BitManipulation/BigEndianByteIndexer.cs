@@ -237,31 +237,18 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private readonly byte[] GetAllBytes()
    {
-      #if NETSTANDARD2_1_OR_GREATER
-      var result = ByteSize switch
-                   {
-                      8 => BitConverter.GetBytes(Data)
-                    , 4 => BitConverter.GetBytes((uint) Data)
-
-                      //, 2 => BitConverter.GetBytes((ushort)Data)
-                    , 1 => [(byte) Data]
-                    , _ => null
-                   };
-
-      if (result != null)
-      {
-         if (BitConverter.IsLittleEndian && ByteSize > 1)
-            Array.Reverse(result);
-
-         return result;
-      }
-      #endif
-
-      var slice = new byte[ByteSize];
-      for (int i = 0, j = dataOffset; i < ByteSize; i++, j++)
-         slice[i] = Data.InternalBigEndianReadByte(j);
-
-      return slice;
+      return ByteSize switch
+             {
+                8 => [this[0], this[1], this[2], this[3], this[4], this[5], this[6], this[7]]
+              , 7 => [this[0], this[1], this[2], this[3], this[4], this[5], this[6]]
+              , 6 => [this[0], this[1], this[2], this[3], this[4], this[5]]
+              , 5 => [this[0], this[1], this[2], this[3], this[4]]
+              , 4 => [this[0], this[1], this[2], this[3]]
+              , 3 => [this[0], this[1], this[2]]
+              , 2 => [this[0], this[1]]
+              , 1 => [(byte) Data]
+              , _ => []
+             };
    }
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]

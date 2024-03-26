@@ -28,5 +28,6 @@ The bit value to set
 the offset of the bit to write
 
 #### Returns
+
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 The modified value.

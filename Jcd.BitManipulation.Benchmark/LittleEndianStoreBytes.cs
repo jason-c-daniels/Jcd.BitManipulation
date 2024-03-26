@@ -57,7 +57,7 @@ public class LittleEndianStoreBytes
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public long BitConverter_ToInt64()
    {
-      return BitConverter.ToInt64(Ui64Bytes, 0);
+      return BitConverter.ToInt64(I64Bytes, 0);
    }
 
    [Benchmark]

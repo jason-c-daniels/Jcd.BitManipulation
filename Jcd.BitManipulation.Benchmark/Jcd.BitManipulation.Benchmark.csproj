@@ -6,6 +6,8 @@
       <ImplicitUsings>enable</ImplicitUsings>
       <Nullable>enable</Nullable>
       <LangVersion>latest</LangVersion>
+      <Configurations>Debug;Release;Release - Net462;Debug - Net462</Configurations>
+      <Platforms>AnyCPU</Platforms>
    </PropertyGroup>
 
    <ItemGroup>

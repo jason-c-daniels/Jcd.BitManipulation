@@ -121,7 +121,7 @@ public static class Int32Extensions
    {
       return value.ClearBits(BitMask.FromSingleBit(offset));
    }
-
+   
    /// <summary>
    /// Sets all bits from a provided mask to "off" and returns the modified value.
    /// </summary>
@@ -133,7 +133,7 @@ public static class Int32Extensions
    {
       return value & (int) ~mask.Bits;
    }
-
+   
    /// <summary>
    /// For a given value return the specified bits from within it, right shifted pos bits.
    /// </summary>
@@ -148,19 +148,34 @@ public static class Int32Extensions
    }
 
    /// <summary>
-   /// Extract a subset of bits specified by a bitmask and right align the bits by the offset.
+   /// Extract a subset of bits specified by a bitmask.
    /// </summary>
    /// <param name="value">the source of bits to read</param>
-   /// <param name="offset">the bit offset to read from</param>
    /// <param name="mask">
    /// the bitmask of which bits to read.
    /// Zeroed bits in the mask will always extract 0 from the source.
    /// </param>
-   /// <returns>The right shifted value extracted from the value</returns>
+   /// <returns>The unshifted extracted bits</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static int ReadBits(this int value, BitMask mask)
+   {
+      return (int) ((uint) value & mask);
+   }
+
+   /// <summary>
+   /// Extract a subset of bits specified by a bitmask and right align the bits by the offset.
+   /// </summary>
+   /// <param name="value">the source of bits to read</param>
+   /// <param name="offset">the amount to right shift the result by</param>
+   /// <param name="mask">
+   /// the bitmask of which bits to read.
+   /// Zeroed bits in the mask will always extract 0 from the source.
+   /// </param>
+   /// <returns>The right shifted extracted bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int ReadBits(this int value, int offset, BitMask mask)
    {
-      return (int) (((uint) value & mask) >> offset); // coerce to unsigned first to prevent issues with sign bit.
+      return (int) ((uint) value.ReadBits(mask) >> offset); // coerce to unsigned first to prevent issues with sign bit.
    }
 
    /// <summary>

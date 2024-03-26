@@ -5,6 +5,8 @@
       <TargetFramework>net6.0</TargetFramework>
       <LangVersion>default</LangVersion>
       <Nullable>enable</Nullable>
+      <Configurations>Debug;Release;Release - Net462;Debug - Net462</Configurations>
+      <Platforms>AnyCPU</Platforms>
    </PropertyGroup>
 
    <ItemGroup>

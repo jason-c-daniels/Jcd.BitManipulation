@@ -132,16 +132,31 @@ public static class ByteExtensions
    /// Extract a subset of bits specified by a bitmask and right align the bits by the offset.
    /// </summary>
    /// <param name="value">the source of bits to read</param>
-   /// <param name="offset">the bit offset to read from</param>
    /// <param name="mask">
    /// the bitmask of which bits to read.
    /// Zeroed bits in the mask will always extract 0 from the source.
    /// </param>
-   /// <returns>The right shifted value extracted from the value</returns>
+   /// <returns>The unshifted extracted bits</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static byte ReadBits(this byte value, BitMask mask)
+   {
+      return (byte) (value & mask);
+   }
+
+   /// <summary>
+   /// Extract a subset of bits specified by a bitmask and right align the bits by the offset.
+   /// </summary>
+   /// <param name="value">the source of bits to read</param>
+   /// <param name="offset">the amount to right shift the result by</param>
+   /// <param name="mask">
+   /// the bitmask of which bits to read.
+   /// Zeroed bits in the mask will always extract 0 from the source.
+   /// </param>
+   /// <returns>The right shifted extracted bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte ReadBits(this byte value, int offset, BitMask mask)
    {
-      return (byte) ((value & mask) >> offset);
+      return (byte) (value.ReadBits(mask) >> offset);
    }
 
    /// <summary>

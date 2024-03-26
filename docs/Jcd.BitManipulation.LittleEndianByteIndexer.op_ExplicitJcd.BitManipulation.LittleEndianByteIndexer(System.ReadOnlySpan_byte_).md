@@ -16,5 +16,6 @@ public static Jcd.BitManipulation.LittleEndianByteIndexer explicit operator Litt
 The underlying data type.
 
 #### Returns
+
 [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
 A indexer type.

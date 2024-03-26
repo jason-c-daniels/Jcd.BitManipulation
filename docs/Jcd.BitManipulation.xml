@@ -992,17 +992,28 @@
             <param name="size">The total number of bits to extract</param>
             <returns>The numeric value stored at that bit location</returns>
         </member>
+        <member name="M:Jcd.BitManipulation.ByteExtensions.ReadBits(System.Byte,Jcd.BitManipulation.BitMask)">
+            <summary>
+                Extract a subset of bits specified by a bitmask and right align the bits by the offset.
+            </summary>
+            <param name="value">the source of bits to read</param>
+            <param name="mask">
+                the bitmask of which bits to read.
+                Zeroed bits in the mask will always extract 0 from the source.
+            </param>
+            <returns>The unshifted extracted bits</returns>
+        </member>
         <member name="M:Jcd.BitManipulation.ByteExtensions.ReadBits(System.Byte,System.Int32,Jcd.BitManipulation.BitMask)">
             <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
             </summary>
             <param name="value">the source of bits to read</param>
-            <param name="offset">the bit offset to read from</param>
+            <param name="offset">the amount to right shift the result by</param>
             <param name="mask">
             the bitmask of which bits to read.
             Zeroed bits in the mask will always extract 0 from the source.
             </param>
-            <returns>The right shifted value extracted from the value</returns>
+            <returns>The right shifted extracted bits</returns>
         </member>
         <member name="M:Jcd.BitManipulation.ByteExtensions.ReadBit(System.Byte,System.Int32)">
             <summary>
@@ -1185,17 +1196,28 @@
             <param name="size">The total number of bits to extract</param>
             <returns>The numeric value stored at that bit location</returns>
         </member>
+        <member name="M:Jcd.BitManipulation.DoubleExtensions.ReadBits(System.Double,Jcd.BitManipulation.BitMask)">
+            <summary>
+                Extract a subset of bits specified by a bitmask and right align the bits by the offset.
+            </summary>
+            <param name="value">the source of bits to read</param>
+            <param name="mask">
+                the bitmask of which bits to read.
+                Zeroed bits in the mask will always extract 0 from the source.
+            </param>
+            <returns>The right shifted extracted bits</returns>
+        </member>
         <member name="M:Jcd.BitManipulation.DoubleExtensions.ReadBits(System.Double,System.Int32,Jcd.BitManipulation.BitMask)">
             <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
             </summary>
             <param name="value">the source of bits to read</param>
-            <param name="offset">the bit offset to read from</param>
+            <param name="offset">the amount to right shift the result by</param>
             <param name="mask">
             the bitmask of which bits to read.
             Zeroed bits in the mask will always extract 0 from the source.
             </param>
-            <returns>The right shifted value extracted from the value</returns>
+            <returns>The right shifted extracted bits</returns>
         </member>
         <member name="M:Jcd.BitManipulation.DoubleExtensions.ReadBit(System.Double,System.Int32)">
             <summary>
@@ -1439,17 +1461,28 @@
             <param name="size">The total number of bits to extract</param>
             <returns>The numeric value stored at that bit location</returns>
         </member>
+        <member name="M:Jcd.BitManipulation.Int16Extensions.ReadBits(System.Int16,Jcd.BitManipulation.BitMask)">
+            <summary>
+                Extract a subset of bits specified by a bitmask.
+            </summary>
+            <param name="value">the source of bits to read</param>
+            <param name="mask">
+                the bitmask of which bits to read.
+                Zeroed bits in the mask will always extract 0 from the source.
+            </param>
+            <returns>The unshifted extracted bits</returns>
+        </member>
         <member name="M:Jcd.BitManipulation.Int16Extensions.ReadBits(System.Int16,System.Int32,Jcd.BitManipulation.BitMask)">
             <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
             </summary>
             <param name="value">the source of bits to read</param>
-            <param name="offset">the bit offset to read from</param>
+            <param name="offset">the amount to right shift the result by</param>
             <param name="mask">
             the bitmask of which bits to read.
             Zeroed bits in the mask will always extract 0 from the source.
             </param>
-            <returns>The right shifted value extracted from the value</returns>
+            <returns>The right shifted extracted bits</returns>
         </member>
         <member name="M:Jcd.BitManipulation.Int16Extensions.ReadBit(System.Int16,System.Int32)">
             <summary>
@@ -1685,17 +1718,28 @@
             <param name="size">The total number of bits to extract</param>
             <returns>The numeric value stored at that bit location</returns>
         </member>
+        <member name="M:Jcd.BitManipulation.Int32Extensions.ReadBits(System.Int32,Jcd.BitManipulation.BitMask)">
+            <summary>
+                Extract a subset of bits specified by a bitmask.
+            </summary>
+            <param name="value">the source of bits to read</param>
+            <param name="mask">
+                the bitmask of which bits to read.
+                Zeroed bits in the mask will always extract 0 from the source.
+            </param>
+            <returns>The unshifted extracted bits</returns>
+        </member>
         <member name="M:Jcd.BitManipulation.Int32Extensions.ReadBits(System.Int32,System.Int32,Jcd.BitManipulation.BitMask)">
             <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
             </summary>
             <param name="value">the source of bits to read</param>
-            <param name="offset">the bit offset to read from</param>
+            <param name="offset">the amount to right shift the result by</param>
             <param name="mask">
             the bitmask of which bits to read.
             Zeroed bits in the mask will always extract 0 from the source.
             </param>
-            <returns>The right shifted value extracted from the value</returns>
+            <returns>The right shifted extracted bits</returns>
         </member>
         <member name="M:Jcd.BitManipulation.Int32Extensions.ReadBit(System.Int32,System.Int32)">
             <summary>
@@ -1922,6 +1966,17 @@
             <param name="size">The total number of bits to extract</param>
             <returns>The numeric value stored at that bit location</returns>
         </member>
+        <member name="M:Jcd.BitManipulation.Int64Extensions.ReadBits(System.Int64,Jcd.BitManipulation.BitMask)">
+            <summary>
+                Extract a subset of bits specified by a bitmask.
+            </summary>
+            <param name="value">the source of bits to read</param>
+            <param name="mask">
+                the bitmask of which bits to read.
+                Zeroed bits in the mask will always extract 0 from the source.
+            </param>
+            <returns>The unshifted extracted bits</returns>
+        </member>
         <member name="M:Jcd.BitManipulation.Int64Extensions.ReadBits(System.Int64,System.Int32,Jcd.BitManipulation.BitMask)">
             <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
@@ -1932,7 +1987,7 @@
             the bitmask of which bits to read.
             Zeroed bits in the mask will always extract 0 from the source.
             </param>
-            <returns>The right shifted value extracted from the value</returns>
+            <returns>The right shifted extracted bits</returns>
         </member>
         <member name="M:Jcd.BitManipulation.Int64Extensions.ReadBit(System.Int64,System.Int32)">
             <summary>
@@ -2608,17 +2663,28 @@
             <param name="size">The total number of bits to extract</param>
             <returns>The numeric value stored at that bit location</returns>
         </member>
+        <member name="M:Jcd.BitManipulation.SByteExtensions.ReadBits(System.SByte,Jcd.BitManipulation.BitMask)">
+            <summary>
+                Extract a subset of bits specified by a bitmask and right align the bits by the offset.
+            </summary>
+            <param name="value">the source of bits to read</param>
+            <param name="mask">
+                the bitmask of which bits to read.
+                Zeroed bits in the mask will always extract 0 from the source.
+            </param>
+            <returns>The unshifted extracted bits</returns>
+        </member>
         <member name="M:Jcd.BitManipulation.SByteExtensions.ReadBits(System.SByte,System.Int32,Jcd.BitManipulation.BitMask)">
             <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
             </summary>
             <param name="value">the source of bits to read</param>
-            <param name="offset">the bit offset to read from</param>
+            <param name="offset">the amount to right shift the result by</param>
             <param name="mask">
             the bitmask of which bits to read.
             Zeroed bits in the mask will always extract 0 from the source.
             </param>
-            <returns>The right shifted value extracted from the value</returns>
+            <returns>The right shifted extracted bits</returns>
         </member>
         <member name="M:Jcd.BitManipulation.SByteExtensions.ReadBit(System.SByte,System.Int32)">
             <summary>
@@ -2810,6 +2876,17 @@
             <param name="size">The total number of bits to extract</param>
             <returns>The numeric value stored at that bit location</returns>
         </member>
+        <member name="M:Jcd.BitManipulation.SingleExtensions.ReadBits(System.Single,Jcd.BitManipulation.BitMask)">
+            <summary>
+                Extract a subset of bits specified by a bitmask.
+            </summary>
+            <param name="value">the source of bits to read</param>
+            <param name="mask">
+                the bitmask of which bits to read.
+                Zeroed bits in the mask will always extract 0 from the source.
+            </param>
+            <returns>The ushifted extracted bits</returns>
+        </member>
         <member name="M:Jcd.BitManipulation.SingleExtensions.ReadBits(System.Single,System.Int32,Jcd.BitManipulation.BitMask)">
             <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
@@ -2820,7 +2897,7 @@
             the bitmask of which bits to read.
             Zeroed bits in the mask will always extract 0 from the source.
             </param>
-            <returns>The right shifted value extracted from the value</returns>
+            <returns>The right shifted extracted bits</returns>
         </member>
         <member name="M:Jcd.BitManipulation.SingleExtensions.ReadBit(System.Single,System.Int32)">
             <summary>
@@ -3040,6 +3117,17 @@
             <param name="size">The total number of bits to extract</param>
             <returns>The numeric value stored at that bit location</returns>
         </member>
+        <member name="M:Jcd.BitManipulation.UInt16Extensions.ReadBits(System.UInt16,Jcd.BitManipulation.BitMask)">
+            <summary>
+                Extract a subset of bits specified by a bitmask.
+            </summary>
+            <param name="value">the source of bits to read</param>
+            <param name="mask">
+                the bitmask of which bits to read.
+                Zeroed bits in the mask will always extract 0 from the source.
+            </param>
+            <returns>The unshifted extracted bits</returns>
+        </member>
         <member name="M:Jcd.BitManipulation.UInt16Extensions.ReadBits(System.UInt16,System.Int32,Jcd.BitManipulation.BitMask)">
             <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
@@ -3050,7 +3138,7 @@
             the bitmask of which bits to read.
             Zeroed bits in the mask will always extract 0 from the source.
             </param>
-            <returns>The right shifted value extracted from the value</returns>
+            <returns>The right shifted extracted bits</returns>
         </member>
         <member name="M:Jcd.BitManipulation.UInt16Extensions.ReadBit(System.UInt16,System.Int32)">
             <summary>
@@ -3286,6 +3374,17 @@
             <param name="size">The total number of bits to extract</param>
             <returns>The numeric value stored at that bit location</returns>
         </member>
+        <member name="M:Jcd.BitManipulation.UInt32Extensions.ReadBits(System.UInt32,Jcd.BitManipulation.BitMask)">
+            <summary>
+                Extract a subset of bits specified by a bitmask.
+            </summary>
+            <param name="value">the source of bits to read</param>
+            <param name="mask">
+                the bitmask of which bits to read.
+                Zeroed bits in the mask will always extract 0 from the source.
+            </param>
+            <returns>The unshifted extracted bits</returns>
+        </member>
         <member name="M:Jcd.BitManipulation.UInt32Extensions.ReadBits(System.UInt32,System.Int32,Jcd.BitManipulation.BitMask)">
             <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
@@ -3296,7 +3395,7 @@
             the bitmask of which bits to read.
             Zeroed bits in the mask will always extract 0 from the source.
             </param>
-            <returns>The right shifted value extracted from the value</returns>
+            <returns>The right shifted extracted bits</returns>
         </member>
         <member name="M:Jcd.BitManipulation.UInt32Extensions.ReadBit(System.UInt32,System.Int32)">
             <summary>
@@ -3532,6 +3631,17 @@
             <param name="size">The total number of bits to extract</param>
             <returns>The numeric value stored at that bit location</returns>
         </member>
+        <member name="M:Jcd.BitManipulation.UInt64Extensions.ReadBits(System.UInt64,Jcd.BitManipulation.BitMask)">
+            <summary>
+                Extract a subset of bits specified by a bitmask.
+            </summary>
+            <param name="value">the source of bits to read</param>
+            <param name="mask">
+                the bitmask of which bits to read.
+                Zeroed bits in the mask will always extract 0 from the source.
+            </param>
+            <returns>The unshifted extracted bits</returns>
+        </member>
         <member name="M:Jcd.BitManipulation.UInt64Extensions.ReadBits(System.UInt64,System.Int32,Jcd.BitManipulation.BitMask)">
             <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
@@ -3542,7 +3652,7 @@
             the bitmask of which bits to read.
             Zeroed bits in the mask will always extract 0 from the source.
             </param>
-            <returns>The right shifted value extracted from the value</returns>
+            <returns>The right shifted extracted bits</returns>
         </member>
         <member name="M:Jcd.BitManipulation.UInt64Extensions.ReadBit(System.UInt64,System.Int32)">
             <summary>

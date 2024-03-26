@@ -35,5 +35,6 @@ the destination offset of where to store the bits
 the mask of which bits to store
 
 #### Returns
+
 [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 The modified value.

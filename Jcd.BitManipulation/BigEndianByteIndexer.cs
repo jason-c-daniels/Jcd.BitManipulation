@@ -558,9 +558,29 @@ public ref struct BigEndianByteIndexer
                    ? ByteSize - offset
                    : size;
 
+      #if NETSTANDARD2_1_OR_GREATER
+      var cnt = Math.Min(len, bytes.Length);
+      if (cnt == 0) return this;
+      var o = sizeof(ulong) - 1 - offset - dataOffset;
+      Data = Data.InternalLittleEndianStoreByte(bytes[0], o);
+      if (cnt == 1) return this;
+      Data = Data.InternalLittleEndianStoreByte(bytes[1], o - 1);
+      if (cnt == 2) return this;
+      Data = Data.InternalLittleEndianStoreByte(bytes[2], o - 2);
+      if (cnt == 3) return this;
+      Data = Data.InternalLittleEndianStoreByte(bytes[3], o - 3);
+      if (cnt == 4) return this;
+      Data = Data.InternalLittleEndianStoreByte(bytes[4], o - 4);
+      if (cnt == 5) return this;
+      Data = Data.InternalLittleEndianStoreByte(bytes[5], o - 5);
+      if (cnt == 6) return this;
+      Data = Data.InternalLittleEndianStoreByte(bytes[6], o - 6);
+      if (cnt == 7) return this;
+      Data = Data.InternalLittleEndianStoreByte(bytes[7], o - 7);
+      #else
       for (int i = 0, j = offset + dataOffset; i < len; i++, j++)
          Data = Data.InternalBigEndianStoreByte(bytes[i], j);
-
+      #endif
       return this;
    }
 
@@ -581,9 +601,31 @@ public ref struct BigEndianByteIndexer
                    ? ByteSize - offset
                    : size;
 
+      #if NETSTANDARD2_1_OR_GREATER
+      var cnt = Math.Min(len, bytes.Length);
+      if (cnt == 0) return this;
+      var o = sizeof(ulong) - 1 - offset - dataOffset;
+      Data = Data.InternalLittleEndianStoreByte(bytes[0], o);
+      if (cnt == 1) return this;
+      Data = Data.InternalLittleEndianStoreByte(bytes[1], o - 1);
+      if (cnt == 2) return this;
+      Data = Data.InternalLittleEndianStoreByte(bytes[2], o - 2);
+      if (cnt == 3) return this;
+      Data = Data.InternalLittleEndianStoreByte(bytes[3], o - 3);
+      if (cnt == 4) return this;
+      Data = Data.InternalLittleEndianStoreByte(bytes[4], o - 4);
+      if (cnt == 5) return this;
+      Data = Data.InternalLittleEndianStoreByte(bytes[5], o - 5);
+      if (cnt == 6) return this;
+      Data = Data.InternalLittleEndianStoreByte(bytes[6], o - 6);
+      if (cnt == 7) return this;
+      Data = Data.InternalLittleEndianStoreByte(bytes[7], o - 7);
+      #else
       for (int i = 0, j = offset + dataOffset; i < len; i++, j++)
          Data = Data.InternalBigEndianStoreByte(bytes[i], j);
+      #endif
 
+      
       return this;
    }
 

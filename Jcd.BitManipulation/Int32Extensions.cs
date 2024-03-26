@@ -121,7 +121,7 @@ public static class Int32Extensions
    {
       return value.ClearBits(BitMask.FromSingleBit(offset));
    }
-   
+
    /// <summary>
    /// Sets all bits from a provided mask to "off" and returns the modified value.
    /// </summary>
@@ -133,7 +133,7 @@ public static class Int32Extensions
    {
       return value & (int) ~mask.Bits;
    }
-   
+
    /// <summary>
    /// For a given value return the specified bits from within it, right shifted pos bits.
    /// </summary>

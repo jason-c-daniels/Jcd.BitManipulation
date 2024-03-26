@@ -146,7 +146,7 @@ public static class Int16Extensions
    {
       return (short) ((ushort) value & mask);
    }
-   
+
    /// <summary>
    /// Extract a subset of bits specified by a bitmask and right align the bits by the offset.
    /// </summary>

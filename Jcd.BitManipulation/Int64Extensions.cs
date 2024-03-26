@@ -148,7 +148,7 @@ public static class Int64Extensions
    {
       return (long) ((ulong) value & mask);
    }
-   
+
    /// <summary>
    /// Extract a subset of bits specified by a bitmask and right align the bits by the offset.
    /// </summary>
@@ -164,7 +164,7 @@ public static class Int64Extensions
    {
       return (long) ((ulong) value.ReadBits(mask) >> offset); // coerce to unsigned first to prevent issues with sign bit.
    }
-   
+
    /// <summary>
    /// Read a single bit from the specified offset.
    /// </summary>

@@ -246,7 +246,6 @@ public ref struct LittleEndianByteIndexer
              };
    }
 
-   
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private readonly byte[] GetSubset(int start, int length)
    {
@@ -659,7 +658,7 @@ public ref struct LittleEndianByteIndexer
          return this;
 
       Data = Data.InternalLittleEndianStoreByte(bytes[7], offset + 7);
-      
+
       return this;
    }
 

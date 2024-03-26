@@ -7,7 +7,6 @@ Extract a subset of bits specified by a bitmask.
 ```csharp
 public static long ReadBits(this long value, Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int64Extensions.ReadBits(thislong,Jcd.BitManipulation.BitMask).value'></a>

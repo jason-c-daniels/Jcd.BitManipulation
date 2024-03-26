@@ -6,6 +6,8 @@
       <PackageTags>c# csharp bit manipulation</PackageTags>
       <DefineConstants Condition="'$(TargetFramework)' == 'netstandard2.0'">$(DefineConstants);SUPPRESS_SINGLE_CONVERSIONS</DefineConstants>
       <TargetFrameworks>netstandard2.0;netstandard2.1</TargetFrameworks>
+      <Configurations>Debug;Release;Release - Net462;Debug - Net462</Configurations>
+      <Platforms>AnyCPU</Platforms>
    </PropertyGroup>
 
    <ItemGroup>

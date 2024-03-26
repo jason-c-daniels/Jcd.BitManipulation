@@ -34,5 +34,6 @@ The bit location to store the value.
 The bit size of the value.
 
 #### Returns
+
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 The modified value.

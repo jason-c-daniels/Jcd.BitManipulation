@@ -16,5 +16,6 @@ public static Jcd.BitManipulation.BitIndexer implicit operator BitIndexer(bool[]
 the indexer to convert from
 
 #### Returns
+
 [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')
 the lower 8 bits converted to a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')

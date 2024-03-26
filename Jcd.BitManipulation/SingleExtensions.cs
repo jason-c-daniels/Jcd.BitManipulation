@@ -159,6 +159,21 @@ public static class SingleExtensions
    }
 
    /// <summary>
+   /// Extract a subset of bits specified by a bitmask.
+   /// </summary>
+   /// <param name="value">the source of bits to read</param>
+   /// <param name="mask">
+   /// the bitmask of which bits to read.
+   /// Zeroed bits in the mask will always extract 0 from the source.
+   /// </param>
+   /// <returns>The ushifted extracted bits</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static uint ReadBits(this float value, BitMask mask)
+   {
+      return value.BitwiseToUInt32().ReadBits(mask);
+   }
+   
+   /// <summary>
    /// Extract a subset of bits specified by a bitmask and right align the bits by the offset.
    /// </summary>
    /// <param name="value">the source of bits to read</param>
@@ -167,13 +182,13 @@ public static class SingleExtensions
    /// the bitmask of which bits to read.
    /// Zeroed bits in the mask will always extract 0 from the source.
    /// </param>
-   /// <returns>The right shifted value extracted from the value</returns>
+   /// <returns>The right shifted extracted bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static uint ReadBits(this float value, int offset, BitMask mask)
    {
-      return value.BitwiseToUInt32().ReadBits(offset, mask);
+      return value.ReadBits(mask) >> offset;
    }
-
+   
    /// <summary>
    /// Read a single bit from the specified offset.
    /// </summary>

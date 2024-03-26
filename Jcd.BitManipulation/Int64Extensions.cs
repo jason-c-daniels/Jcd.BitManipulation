@@ -135,6 +135,22 @@ public static class Int64Extensions
    }
 
    /// <summary>
+   /// Extract a subset of bits specified by a bitmask.
+   /// </summary>
+   /// <param name="value">the source of bits to read</param>
+   /// <param name="mask">
+   /// the bitmask of which bits to read.
+   /// Zeroed bits in the mask will always extract 0 from the source.
+   /// </param>
+   /// <returns>The unshifted extracted bits</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static long ReadBits(this long value, BitMask mask)
+   {
+      return (long) ((ulong) value & mask);
+   }
+
+   
+   /// <summary>
    /// Extract a subset of bits specified by a bitmask and right align the bits by the offset.
    /// </summary>
    /// <param name="value">the source of bits to read</param>
@@ -143,13 +159,13 @@ public static class Int64Extensions
    /// the bitmask of which bits to read.
    /// Zeroed bits in the mask will always extract 0 from the source.
    /// </param>
-   /// <returns>The right shifted value extracted from the value</returns>
+   /// <returns>The right shifted extracted bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static long ReadBits(this long value, int offset, BitMask mask)
    {
-      return (long) (((ulong) value & mask) >> offset);
+      return (long) ((ulong) value.ReadBits(mask) >> offset); // coerce to unsigned first to prevent issues with sign bit.
    }
-
+   
    /// <summary>
    /// Read a single bit from the specified offset.
    /// </summary>

@@ -148,6 +148,21 @@ public static class UInt64Extensions
    }
 
    /// <summary>
+   /// Extract a subset of bits specified by a bitmask.
+   /// </summary>
+   /// <param name="value">the source of bits to read</param>
+   /// <param name="mask">
+   /// the bitmask of which bits to read.
+   /// Zeroed bits in the mask will always extract 0 from the source.
+   /// </param>
+   /// <returns>The unshifted extracted bits</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static ulong ReadBits(this ulong value, BitMask mask)
+   {
+      return (value & mask);
+   }
+   
+   /// <summary>
    /// Extract a subset of bits specified by a bitmask and right align the bits by the offset.
    /// </summary>
    /// <param name="value">the source of bits to read</param>
@@ -156,11 +171,11 @@ public static class UInt64Extensions
    /// the bitmask of which bits to read.
    /// Zeroed bits in the mask will always extract 0 from the source.
    /// </param>
-   /// <returns>The right shifted value extracted from the value</returns>
+   /// <returns>The right shifted extracted bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ulong ReadBits(this ulong value, int offset, BitMask mask)
    {
-      return (value & mask) >> offset;
+      return value.ReadBits(mask) >> offset;
    }
 
    /// <summary>

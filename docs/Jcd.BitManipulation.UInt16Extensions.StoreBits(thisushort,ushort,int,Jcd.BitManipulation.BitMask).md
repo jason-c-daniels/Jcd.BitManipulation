@@ -35,5 +35,6 @@ the destination offset of where to store the bits
 the mask of which bits to store
 
 #### Returns
+
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 The modified value.

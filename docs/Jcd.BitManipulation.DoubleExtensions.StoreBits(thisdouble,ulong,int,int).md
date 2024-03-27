@@ -7,7 +7,6 @@ Stores a value at the specified bit location within the variable.
 ```csharp
 public static double StoreBits(this double value, ulong source, int offset, int size);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.StoreBits(thisdouble,ulong,int,int).value'></a>
@@ -35,6 +34,5 @@ The bit location to store the value.
 The bit size of the value.
 
 #### Returns
-
 [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 The modified value.

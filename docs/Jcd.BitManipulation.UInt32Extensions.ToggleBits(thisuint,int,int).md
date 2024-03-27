@@ -8,7 +8,6 @@ The default values result in toggling all bits.
 ```csharp
 public static uint ToggleBits(this uint value, int offset=0, int size=32);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt32Extensions.ToggleBits(thisuint,int,int).value'></a>
@@ -30,6 +29,5 @@ The offset of the bits to toggle.
 The number of bits to toggle.
 
 #### Returns
-
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 The modified value.

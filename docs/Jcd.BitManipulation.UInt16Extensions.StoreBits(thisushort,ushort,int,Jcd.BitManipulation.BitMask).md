@@ -8,7 +8,6 @@ The mask must apply to the destination bits.
 ```csharp
 public static ushort StoreBits(this ushort value, ushort source, int offset, Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt16Extensions.StoreBits(thisushort,ushort,int,Jcd.BitManipulation.BitMask).value'></a>
@@ -36,6 +35,5 @@ the destination offset of where to store the bits
 the mask of which bits to store
 
 #### Returns
-
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 The modified value.

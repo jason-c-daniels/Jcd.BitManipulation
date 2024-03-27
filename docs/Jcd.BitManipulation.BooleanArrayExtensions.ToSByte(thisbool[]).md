@@ -8,7 +8,6 @@ an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'Syst
 ```csharp
 public static sbyte ToSByte(this bool[] bits);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BooleanArrayExtensions.ToSByte(thisbool[]).bits'></a>
@@ -18,6 +17,5 @@ public static sbyte ToSByte(this bool[] bits);
 the array of bools to convert, Least Significant Bit at index 0
 
 #### Returns
-
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 The converted [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')

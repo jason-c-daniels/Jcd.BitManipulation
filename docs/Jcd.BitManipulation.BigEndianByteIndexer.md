@@ -2,27 +2,14 @@
 
 ## BigEndianByteIndexer Struct
 
-Provides byte level indexing operations (set, get) on
-a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64'). Zero is the most
-significant byte.
+Provides byte level indexing operations (set, get) on a
+[System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64'). Allows for indexer syntax
+when accessing
+the stored bytes. Zero is the most significant byte.
 
 ```csharp
 public ref struct BigEndianByteIndexer
 ```
-
-| Constructors                                                                                                                                                                                |                                                                                                                                                                                                                                 |
-|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [BigEndianByteIndexer(byte)](Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(byte).md 'Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(byte)')                  | Constructs a [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') from a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte').        |
-| [BigEndianByteIndexer(double)](Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(double).md 'Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(double)')            | Constructs a [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') from an [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double'). |
-| [BigEndianByteIndexer(float)](Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(float).md 'Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(float)')               | Constructs a [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') from an [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single'). |
-| [BigEndianByteIndexer(int)](Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(int).md 'Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(int)')                     | Constructs a [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') from an [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32').    |
-| [BigEndianByteIndexer(long)](Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(long).md 'Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(long)')                  | Constructs a [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') from an [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64').    |
-| [BigEndianByteIndexer(sbyte)](Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(sbyte).md 'Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(sbyte)')               | Constructs a [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') from an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte').    |
-| [BigEndianByteIndexer(short)](Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(short).md 'Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(short)')               | Constructs a [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') from an [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16').    |
-| [BigEndianByteIndexer(uint)](Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(uint).md 'Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(uint)')                  | Constructs a [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') from a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32').  |
-| [BigEndianByteIndexer(ulong, int)](Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(ulong,int).md 'Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(ulong, int)') | Constructs a [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') from a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64').  |
-| [BigEndianByteIndexer(ulong)](Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(ulong).md 'Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(ulong)')               | Constructs a [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') from a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64').  |
-| [BigEndianByteIndexer(ushort)](Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(ushort).md 'Jcd.BitManipulation.BigEndianByteIndexer.BigEndianByteIndexer(ushort)')            | Constructs a [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') from a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16').  |
 
 | Properties                                                                                                              |                                                |
 |:------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------|

@@ -7,7 +7,6 @@ Extract a subset of bits specified by a bitmask.
 ```csharp
 public static ushort ReadBits(this ushort value, Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt16Extensions.ReadBits(thisushort,Jcd.BitManipulation.BitMask).value'></a>
@@ -24,6 +23,5 @@ the bitmask of which bits to read.
 Zeroed bits in the mask will always extract 0 from the source.
 
 #### Returns
-
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 The unshifted extracted bits

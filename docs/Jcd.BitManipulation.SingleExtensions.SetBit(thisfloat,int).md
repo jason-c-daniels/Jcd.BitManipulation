@@ -7,7 +7,6 @@ Sets specified bit to "on"
 ```csharp
 public static float SetBit(this float value, int offset);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.SingleExtensions.SetBit(thisfloat,int).value'></a>
@@ -23,6 +22,5 @@ The value to be modified.
 The offset of the bit to set.
 
 #### Returns
-
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 The modified value.

@@ -7,7 +7,6 @@ Toggle all the bits according to the provided mask
 ```csharp
 public static double ToggleBits(this double value, Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.ToggleBits(thisdouble,Jcd.BitManipulation.BitMask).value'></a>
@@ -23,6 +22,5 @@ The value to be modified.
 bits to set.
 
 #### Returns
-
 [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 The modified value.

@@ -8,7 +8,6 @@ a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'Sys
 ```csharp
 public BitMask(ushort bits);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.BitMask(ushort).bits'></a>

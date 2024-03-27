@@ -8,7 +8,6 @@ The mask must apply to the destination bits.
 ```csharp
 public static double StoreBits(this double value, ulong source, int offset, Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.StoreBits(thisdouble,ulong,int,Jcd.BitManipulation.BitMask).value'></a>
@@ -36,6 +35,5 @@ the destination offset of where to store the bits
 the mask of which bits to store
 
 #### Returns
-
 [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 The modified value.

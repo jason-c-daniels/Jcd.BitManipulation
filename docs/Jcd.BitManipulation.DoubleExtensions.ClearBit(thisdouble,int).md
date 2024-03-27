@@ -7,7 +7,6 @@ Sets bit to "off" and returns the modified value.
 ```csharp
 public static double ClearBit(this double value, int offset);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.ClearBit(thisdouble,int).value'></a>
@@ -23,6 +22,5 @@ The value to be modified.
 The offset of the bit to clear.
 
 #### Returns
-
 [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 The modified value.

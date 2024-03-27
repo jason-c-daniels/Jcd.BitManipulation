@@ -8,7 +8,6 @@ The mask must apply to the destination bits.
 ```csharp
 public static short StoreBits(this short value, short source, int offset, Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int16Extensions.StoreBits(thisshort,short,int,Jcd.BitManipulation.BitMask).value'></a>
@@ -36,6 +35,5 @@ the destination offset of where to store the bits
 the mask of which bits to store
 
 #### Returns
-
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 The modified value.

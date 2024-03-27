@@ -116,6 +116,7 @@ public ref struct BitIndexer
    /// <summary>
    /// The backing store
    /// </summary>
+   /// <exclude />
    internal ulong Bits { get; private set; } = 0UL;
 
    /// <summary>

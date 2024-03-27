@@ -8,7 +8,6 @@ a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'Sys
 ```csharp
 public static bool AreAnyBitsSet(this ushort data, Jcd.BitManipulation.BitMask bitmask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt16Extensions.AreAnyBitsSet(thisushort,Jcd.BitManipulation.BitMask).data'></a>
@@ -24,10 +23,8 @@ The data to inspect.
 the bits to test.
 
 #### Returns
-
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 True if any of the bits from the bitmask were set.
 
 ### Remarks
-
 NB: Only the lowest 16 bits of the bitmask will be used.

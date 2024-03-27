@@ -8,7 +8,6 @@ a [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitMan
 ```csharp
 public static Jcd.BitManipulation.BigEndianByteIndexer implicit operator BigEndianByteIndexer(uint data);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BigEndianByteIndexer.op_ImplicitJcd.BitManipulation.BigEndianByteIndexer(uint).data'></a>
@@ -18,6 +17,19 @@ public static Jcd.BitManipulation.BigEndianByteIndexer implicit operator BigEndi
 The underlying data type.
 
 #### Returns
-
 [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer')
-A indexer type.
+The newly
+created [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer').
+
+### Remarks
+
+Example:
+
+```csharp
+ulong number = 0xDEADBEEF;
+BigEndianByteIndexer indexer = number; // implicit cast.
+
+var b0 = indexer[0]; // b0 is 0xDE
+indexer[1] = 0xFF;
+ulong result = indexer; // result is 0xDEFFBEEF
+```

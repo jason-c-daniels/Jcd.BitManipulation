@@ -7,7 +7,6 @@ Stores a set of bytes starting at the specified byte location within the value.
 ```csharp
 public static double StoreBytes(this double value, byte[] bytes, int offset, int size=-1, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.StoreBytes(thisdouble,byte[],int,int,Jcd.BitManipulation.Endian).value'></a>
@@ -41,6 +40,5 @@ The number of bytes from the source, to store. -1 means all bytes.
 The endianness of the byte indexing within the value.
 
 #### Returns
-
 [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 The modified value.

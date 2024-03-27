@@ -6,8 +6,9 @@
    <members>
       <member name="T:Jcd.BitManipulation.BigEndianByteIndexer">
          <summary>
-            Provides byte level indexing operations (set, get) on a<see cref="T:System.UInt64"/>. Zero is the most
-            significant byte.
+            Provides byte level indexing operations (set, get) on a
+            <see cref="T:System.UInt64"/>. Allows for indexer syntax when accessing
+            the stored bytes. Zero is the most significant byte.
          </summary>
       </member>
       <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.UInt64)">
@@ -16,7 +17,8 @@
             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
             from a<see cref="T:System.UInt64"/>.
          </summary>
-         <param name="data">The initial value of the underlying data.</param>
+         <param name="data">The initial value for the underlying data.</param>
+         <exclude/>
       </member>
       <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.Int64)">
          <summary>
@@ -24,7 +26,8 @@
             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
             from an<see cref="T:System.Int64"/>.
          </summary>
-         <param name="data">The initial value of the underlying data.</param>
+         <param name="data">The initial value for the underlying data.</param>
+         <exclude/>
       </member>
       <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.UInt32)">
          <summary>
@@ -32,7 +35,8 @@
             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
             from a<see cref="T:System.UInt32"/>.
          </summary>
-         <param name="data">The initial value of the underlying data.</param>
+         <param name="data">The initial value for the underlying data.</param>
+         <exclude/>
       </member>
       <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.Int32)">
          <summary>
@@ -40,7 +44,8 @@
             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
             from an<see cref="T:System.Int32"/>.
          </summary>
-         <param name="data">The initial value of the underlying data.</param>
+         <param name="data">The initial value for the underlying data.</param>
+         <exclude/>
       </member>
       <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.UInt16)">
          <summary>
@@ -48,7 +53,8 @@
             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
             from a<see cref="T:System.UInt16"/>.
          </summary>
-         <param name="data">The initial value of the underlying data.</param>
+         <param name="data">The initial value for the underlying data.</param>
+         <exclude/>
       </member>
       <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.Int16)">
          <summary>
@@ -56,7 +62,8 @@
             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
             from an<see cref="T:System.Int16"/>.
          </summary>
-         <param name="data">The initial value of the underlying data.</param>
+         <param name="data">The initial value for the underlying data.</param>
+         <exclude/>
       </member>
       <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.Byte)">
          <summary>
@@ -64,7 +71,8 @@
             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
             from a<see cref="T:System.Byte"/>.
          </summary>
-         <param name="data">The initial value of the underlying data.</param>
+         <param name="data">The initial value for the underlying data.</param>
+         <exclude/>
       </member>
       <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.SByte)">
          <summary>
@@ -72,7 +80,8 @@
             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
             from an<see cref="T:System.SByte"/>.
          </summary>
-         <param name="data">The initial value of the underlying data.</param>
+         <param name="data">The initial value for the underlying data.</param>
+         <exclude/>
       </member>
       <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.Single)">
          <summary>
@@ -80,7 +89,8 @@
             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
             from an<see cref="T:System.Single"/>.
          </summary>
-         <param name="data">The initial value of the underlying data.</param>
+         <param name="data">The initial value for the underlying data.</param>
+         <exclude/>
       </member>
       <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.Double)">
          <summary>
@@ -88,7 +98,8 @@
             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
             from an<see cref="T:System.Double"/>.
          </summary>
-         <param name="data">The initial value of the underlying data.</param>
+         <param name="data">The initial value for the underlying data.</param>
+         <exclude/>
       </member>
       <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.UInt64,System.Int32)">
          <summary>
@@ -96,8 +107,9 @@
             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
             from a<see cref="T:System.UInt64"/>.
          </summary>
-         <param name="data">The initial value of the underlying data.</param>
+         <param name="data">The initial value for the underlying data.</param>
          <param name="byteSize">The number of bytes to index</param>
+         <exclude/>
       </member>
       <member name="P:Jcd.BitManipulation.BigEndianByteIndexer.ByteSize">
          <summary>
@@ -255,8 +267,22 @@
             <see cref="T:System.UInt64"/>
             to a<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
          </summary>
-         <param name="data">The underlying data type.</param>
-         <returns>A indexer type.</returns>
+         <param name="data">The initial data for the indexer.</param>
+         <returns>The newly created<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
+         </returns>
+         <remarks>
+            <para>
+               Example:
+            </para>
+            <code>
+               ulong number = 0xDEADBEEFFA17C0DE;
+               BigEndianByteIndexer indexer = number; // implicit cast.
+
+               var b0 = indexer[0]; // b0 is 0xDE
+               indexer[1] = 0xFF;
+               var result = indexer.ToString(); // result is "DE FF BE EF FA 17 C0 DE"
+            </code>
+         </remarks>
       </member>
       <member
          name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.Int64)~Jcd.BitManipulation.BigEndianByteIndexer">
@@ -266,7 +292,21 @@
             to a<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
          </summary>
          <param name="data">The underlying data type.</param>
-         <returns>A indexer type.</returns>
+         <returns>The newly created<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
+         </returns>
+         <remarks>
+            <para>
+               Example:
+            </para>
+            <code>
+               long number = 0x7EADBEEFFA17C0DE;
+               BigEndianByteIndexer indexer = number; // implicit cast.
+
+               var b0 = indexer[0]; // b0 is 0x7E
+               indexer[1] = 0xFF;
+               var result = indexer.ToString(); // result is "7E FF BE EF FA 17 C0 DE"
+            </code>
+         </remarks>
       </member>
       <member
          name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.UInt32)~Jcd.BitManipulation.BigEndianByteIndexer">
@@ -276,7 +316,21 @@
             to a<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
          </summary>
          <param name="data">The underlying data type.</param>
-         <returns>A indexer type.</returns>
+         <returns>The newly created<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
+         </returns>
+         <remarks>
+            <para>
+               Example:
+            </para>
+            <code>
+               ulong number = 0xDEADBEEF;
+               BigEndianByteIndexer indexer = number; // implicit cast.
+
+               var b0 = indexer[0]; // b0 is 0xDE
+               indexer[1] = 0xFF;
+               ulong result = indexer; // result is 0xDEFFBEEF
+            </code>
+         </remarks>
       </member>
       <member
          name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.Int32)~Jcd.BitManipulation.BigEndianByteIndexer">
@@ -411,6 +465,7 @@
          <summary>
             The backing store
          </summary>
+         <exclude/>
       </member>
       <member name="P:Jcd.BitManipulation.BitIndexer.Length">
          <summary>
@@ -699,41 +754,49 @@
          <summary>
             A bitmask for the first byte in a number.
          </summary>
+         <exclude/>
       </member>
       <member name="F:Jcd.BitManipulation.BitMask.Byte1">
          <summary>
             A bitmask for the second byte in a number.
          </summary>
+         <exclude/>
       </member>
       <member name="F:Jcd.BitManipulation.BitMask.Byte2">
          <summary>
             A bitmask for the third byte in a number.
          </summary>
+         <exclude/>
       </member>
       <member name="F:Jcd.BitManipulation.BitMask.Byte3">
          <summary>
             A bitmask for the fourth byte in a number.
          </summary>
+         <exclude/>
       </member>
       <member name="F:Jcd.BitManipulation.BitMask.Byte4">
          <summary>
             A bitmask for the fifth byte in a number.
          </summary>
+         <exclude/>
       </member>
       <member name="F:Jcd.BitManipulation.BitMask.Byte5">
          <summary>
             A bitmask for the sixth byte in a number.
          </summary>
+         <exclude/>
       </member>
       <member name="F:Jcd.BitManipulation.BitMask.Byte6">
          <summary>
             A bitmask for the seventh byte in a number.
          </summary>
+         <exclude/>
       </member>
       <member name="F:Jcd.BitManipulation.BitMask.Byte7">
          <summary>
             A bitmask for the seventh byte in a number.
          </summary>
+         <exclude/>
       </member>
       <member name="F:Jcd.BitManipulation.BitMask.Bits">
          <summary>
@@ -2623,8 +2686,9 @@
       </member>
       <member name="T:Jcd.BitManipulation.LittleEndianByteIndexer">
          <summary>
-            Provides byte level indexing operations (set, get) on a<see cref="T:System.UInt64"/>. Zero is the most
-            significant byte.
+            Provides byte level indexing operations (set, get) on a
+            <see cref="T:System.UInt64"/>. Allows for indexer syntax when accessing
+            the stored bytes. Zero is the least significant byte.
          </summary>
       </member>
       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.#ctor(System.UInt64)">
@@ -2633,7 +2697,8 @@
             <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>
             from a<see cref="T:System.UInt64"/>.
          </summary>
-         <param name="data">The initial value of the underlying data.</param>
+         <param name="data">The initial value for the underlying data.</param>
+         <exclude/>
       </member>
       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.#ctor(System.Int64)">
          <summary>
@@ -2641,7 +2706,8 @@
             <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>
             from an<see cref="T:System.Int64"/>.
          </summary>
-         <param name="data">The initial value of the underlying data.</param>
+         <param name="data">The initial value for the underlying data.</param>
+         <exclude/>
       </member>
       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.#ctor(System.UInt32)">
          <summary>
@@ -2649,7 +2715,8 @@
             <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>
             from a<see cref="T:System.UInt32"/>.
          </summary>
-         <param name="data">The initial value of the underlying data.</param>
+         <param name="data">The initial value for the underlying data.</param>
+         <exclude/>
       </member>
       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.#ctor(System.Int32)">
          <summary>
@@ -2657,7 +2724,8 @@
             <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>
             from an<see cref="T:System.Int32"/>.
          </summary>
-         <param name="data">The initial value of the underlying data.</param>
+         <param name="data">The initial value for the underlying data.</param>
+         <exclude/>
       </member>
       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.#ctor(System.UInt16)">
          <summary>
@@ -2665,7 +2733,8 @@
             <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>
             from a<see cref="T:System.UInt16"/>.
          </summary>
-         <param name="data">The initial value of the underlying data.</param>
+         <param name="data">The initial value for the underlying data.</param>
+         <exclude/>
       </member>
       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.#ctor(System.Int16)">
          <summary>
@@ -2673,7 +2742,8 @@
             <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>
             from an<see cref="T:System.Int16"/>.
          </summary>
-         <param name="data">The initial value of the underlying data.</param>
+         <param name="data">The initial value for the underlying data.</param>
+         <exclude/>
       </member>
       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.#ctor(System.Byte)">
          <summary>
@@ -2681,7 +2751,8 @@
             <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>
             from a<see cref="T:System.Byte"/>.
          </summary>
-         <param name="data">The initial value of the underlying data.</param>
+         <param name="data">The initial value for the underlying data.</param>
+         <exclude/>
       </member>
       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.#ctor(System.SByte)">
          <summary>
@@ -2689,7 +2760,8 @@
             <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>
             from an<see cref="T:System.SByte"/>.
          </summary>
-         <param name="data">The initial value of the underlying data.</param>
+         <param name="data">The initial value for the underlying data.</param>
+         <exclude/>
       </member>
       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.#ctor(System.Single)">
          <summary>
@@ -2697,7 +2769,8 @@
             <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>
             from an<see cref="T:System.Single"/>.
          </summary>
-         <param name="data">The initial value of the underlying data.</param>
+         <param name="data">The initial value for the underlying data.</param>
+         <exclude/>
       </member>
       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.#ctor(System.Double)">
          <summary>
@@ -2705,7 +2778,8 @@
             <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>
             from an<see cref="T:System.Double"/>.
          </summary>
-         <param name="data">The initial value of the underlying data.</param>
+         <param name="data">The initial value for the underlying data.</param>
+         <exclude/>
       </member>
       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.#ctor(System.UInt64,System.Int32)">
          <summary>
@@ -2713,8 +2787,9 @@
             <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>
             from a<see cref="T:System.UInt64"/>.
          </summary>
-         <param name="data">The initial value of the underlying data.</param>
+         <param name="data">The initial value for the underlying data.</param>
          <param name="byteSize">The number of bytes to index</param>
+         <exclude/>
       </member>
       <member name="P:Jcd.BitManipulation.LittleEndianByteIndexer.ByteSize">
          <summary>
@@ -2730,6 +2805,7 @@
          <summary>
             The backing store.
          </summary>
+         <exclude/>
       </member>
       <member name="P:Jcd.BitManipulation.LittleEndianByteIndexer.Item(System.Int32)">
          <summary>

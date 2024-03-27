@@ -7,7 +7,6 @@ Store a single byte to the value at the specified byte offset.
 ```csharp
 public Jcd.BitManipulation.BigEndianByteIndexer StoreByte(byte @byte, int offset);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BigEndianByteIndexer.StoreByte(byte,int).byte'></a>
@@ -23,6 +22,5 @@ The byte value to set
 the offset of the byte to write
 
 #### Returns
-
 [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer')
 The modified value.

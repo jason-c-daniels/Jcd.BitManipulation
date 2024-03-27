@@ -2,32 +2,18 @@
 
 ## LittleEndianByteIndexer Struct
 
-Provides byte level indexing operations (set, get) on
-a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64'). Zero is the most
-significant byte.
+Provides byte level indexing operations (set, get) on a
+[System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64'). Allows for indexer syntax
+when accessing
+the stored bytes. Zero is the least significant byte.
 
 ```csharp
 public ref struct LittleEndianByteIndexer
 ```
 
-| Constructors                                                                                                                                                                                               |                                                                                                                                                                                                                                          |
-|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [LittleEndianByteIndexer(byte)](Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(byte).md 'Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(byte)')                  | Constructs a [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') from a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte').        |
-| [LittleEndianByteIndexer(double)](Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(double).md 'Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(double)')            | Constructs a [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') from an [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double'). |
-| [LittleEndianByteIndexer(float)](Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(float).md 'Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(float)')               | Constructs a [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') from an [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single'). |
-| [LittleEndianByteIndexer(int)](Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(int).md 'Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(int)')                     | Constructs a [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') from an [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32').    |
-| [LittleEndianByteIndexer(long)](Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(long).md 'Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(long)')                  | Constructs a [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') from an [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64').    |
-| [LittleEndianByteIndexer(sbyte)](Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(sbyte).md 'Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(sbyte)')               | Constructs a [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') from an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte').    |
-| [LittleEndianByteIndexer(short)](Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(short).md 'Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(short)')               | Constructs a [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') from an [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16').    |
-| [LittleEndianByteIndexer(uint)](Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(uint).md 'Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(uint)')                  | Constructs a [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') from a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32').  |
-| [LittleEndianByteIndexer(ulong, int)](Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(ulong,int).md 'Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(ulong, int)') | Constructs a [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') from a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64').  |
-| [LittleEndianByteIndexer(ulong)](Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(ulong).md 'Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(ulong)')               | Constructs a [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') from a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64').  |
-| [LittleEndianByteIndexer(ushort)](Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(ushort).md 'Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(ushort)')            | Constructs a [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') from a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16').  |
-
 | Properties                                                                                                                    |                                                |
 |:------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------|
 | [ByteSize](Jcd.BitManipulation.LittleEndianByteIndexer.ByteSize.md 'Jcd.BitManipulation.LittleEndianByteIndexer.ByteSize')    | The number of bytes this type will index       |
-| [Data](Jcd.BitManipulation.LittleEndianByteIndexer.Data.md 'Jcd.BitManipulation.LittleEndianByteIndexer.Data')                | The backing store.                             |
 | [Length](Jcd.BitManipulation.LittleEndianByteIndexer.Length.md 'Jcd.BitManipulation.LittleEndianByteIndexer.Length')          | The number of bytes indexable by this indexer. |
 | [this[int]](Jcd.BitManipulation.LittleEndianByteIndexer.this[int].md 'Jcd.BitManipulation.LittleEndianByteIndexer.this[int]') | Access bytes from the underlying data.         |
 

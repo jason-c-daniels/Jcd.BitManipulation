@@ -23,41 +23,49 @@ public readonly struct BitMask
    /// <summary>
    /// A bitmask for the first byte in a number.
    /// </summary>
-   internal static readonly BitMask Byte = 0xFF;
+   /// <exclude />
+   private static readonly BitMask Byte = 0xFF;
 
    /// <summary>
    /// A bitmask for the second byte in a number.
    /// </summary>
+   /// <exclude />
    private static readonly BitMask Byte1 = (ulong) Byte << 8;
 
    /// <summary>
    /// A bitmask for the third byte in a number.
    /// </summary>
+   /// <exclude />
    private static readonly BitMask Byte2 = (ulong) Byte1 << 8;
 
    /// <summary>
    /// A bitmask for the fourth byte in a number.
    /// </summary>
+   /// <exclude />
    private static readonly BitMask Byte3 = (ulong) Byte2 << 8;
 
    /// <summary>
    /// A bitmask for the fifth byte in a number.
    /// </summary>
+   /// <exclude />
    private static readonly BitMask Byte4 = (ulong) Byte3 << 8;
 
    /// <summary>
    /// A bitmask for the sixth byte in a number.
    /// </summary>
+   /// <exclude />
    private static readonly BitMask Byte5 = (ulong) Byte4 << 8;
 
    /// <summary>
    /// A bitmask for the seventh byte in a number.
    /// </summary>
+   /// <exclude />
    private static readonly BitMask Byte6 = (ulong) Byte5 << 8;
 
    /// <summary>
    /// A bitmask for the seventh byte in a number.
    /// </summary>
+   /// <exclude />
    private static readonly BitMask Byte7 = (ulong) Byte6 << 8;
 
    internal static readonly BitMask[] BigEndianByteMasks = [Byte7, Byte6, Byte5, Byte4, Byte3, Byte2, Byte1, Byte];

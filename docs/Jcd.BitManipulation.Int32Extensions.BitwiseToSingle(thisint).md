@@ -8,7 +8,6 @@ identical [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Sin
 ```csharp
 public static float BitwiseToSingle(this int value);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int32Extensions.BitwiseToSingle(thisint).value'></a>
@@ -18,7 +17,6 @@ public static float BitwiseToSingle(this int value);
 The value to convert
 
 #### Returns
-
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 the [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single') representation of the
 bits

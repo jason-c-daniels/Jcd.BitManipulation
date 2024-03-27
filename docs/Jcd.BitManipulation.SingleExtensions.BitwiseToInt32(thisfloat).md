@@ -8,7 +8,6 @@ identical [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int3
 ```csharp
 public static int BitwiseToInt32(this float value);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.SingleExtensions.BitwiseToInt32(thisfloat).value'></a>
@@ -18,7 +17,6 @@ public static int BitwiseToInt32(this float value);
 The value to convert
 
 #### Returns
-
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 the [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32') representation of the
 underlying bits

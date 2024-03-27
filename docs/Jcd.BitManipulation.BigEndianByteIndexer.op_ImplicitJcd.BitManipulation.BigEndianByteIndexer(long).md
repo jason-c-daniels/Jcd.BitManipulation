@@ -8,7 +8,6 @@ a [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitMan
 ```csharp
 public static Jcd.BitManipulation.BigEndianByteIndexer implicit operator BigEndianByteIndexer(long data);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BigEndianByteIndexer.op_ImplicitJcd.BitManipulation.BigEndianByteIndexer(long).data'></a>
@@ -18,6 +17,19 @@ public static Jcd.BitManipulation.BigEndianByteIndexer implicit operator BigEndi
 The underlying data type.
 
 #### Returns
-
 [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer')
-A indexer type.
+The newly
+created [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer').
+
+### Remarks
+
+Example:
+
+```csharp
+long number = 0x7EADBEEFFA17C0DE;
+BigEndianByteIndexer indexer = number; // implicit cast.
+
+var b0 = indexer[0]; // b0 is 0x7E
+indexer[1] = 0xFF;
+var result = indexer.ToString(); // result is "7E FF BE EF FA 17 C0 DE"
+```

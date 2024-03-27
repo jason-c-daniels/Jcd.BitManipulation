@@ -8,7 +8,6 @@ a [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer
 ```csharp
 public static Jcd.BitManipulation.BitIndexer implicit operator BitIndexer(short bits);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexer.op_ImplicitJcd.BitManipulation.BitIndexer(short).bits'></a>
@@ -18,6 +17,5 @@ public static Jcd.BitManipulation.BitIndexer implicit operator BitIndexer(short 
 the initial value for the indexer's backing store
 
 #### Returns
-
 [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')
 A new [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')

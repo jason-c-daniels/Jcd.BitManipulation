@@ -11,7 +11,6 @@ public ref struct BitIndexer
 
 | Properties                                                                                          |                                                        |
 |:----------------------------------------------------------------------------------------------------|:-------------------------------------------------------|
-| [Bits](Jcd.BitManipulation.BitIndexer.Bits.md 'Jcd.BitManipulation.BitIndexer.Bits')                | The backing store                                      |
 | [BitSize](Jcd.BitManipulation.BitIndexer.BitSize.md 'Jcd.BitManipulation.BitIndexer.BitSize')       | The number of bits this type will index                |
 | [Length](Jcd.BitManipulation.BitIndexer.Length.md 'Jcd.BitManipulation.BitIndexer.Length')          | The number of bits indexable by this indexer.          |
 | [this[int]](Jcd.BitManipulation.BitIndexer.this[int].md 'Jcd.BitManipulation.BitIndexer.this[int]') | Gets or sets individual bits within the backing store. |

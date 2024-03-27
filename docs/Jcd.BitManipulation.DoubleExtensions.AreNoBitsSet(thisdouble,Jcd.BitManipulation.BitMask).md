@@ -8,7 +8,6 @@ an [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'Sy
 ```csharp
 public static bool AreNoBitsSet(this double data, Jcd.BitManipulation.BitMask bitmask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.AreNoBitsSet(thisdouble,Jcd.BitManipulation.BitMask).data'></a>
@@ -24,6 +23,5 @@ The data to inspect.
 the bits to test.
 
 #### Returns
-
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 True if all of the bits from the bitmask were set.

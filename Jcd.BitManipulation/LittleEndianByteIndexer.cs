@@ -554,9 +554,6 @@ public ref struct LittleEndianByteIndexer
                    : size;
       var cnt = Math.Min(len, bytes.Length);
 
-      //      for (int i = 0, j = offset; i < len; i++, j++)
-      //         this[j] = bytes[i];
-
       if (cnt == 0)
          return this;
 

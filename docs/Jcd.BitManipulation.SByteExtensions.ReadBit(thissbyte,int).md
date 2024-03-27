@@ -7,6 +7,7 @@ Read a single bit from the specified offset.
 ```csharp
 public static bool ReadBit(this sbyte value, int offset);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SByteExtensions.ReadBit(thissbyte,int).value'></a>

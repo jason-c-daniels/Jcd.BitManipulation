@@ -7,6 +7,7 @@ Store a single bit at the specified offset.
 ```csharp
 public static long StoreBit(this long value, bool bit, int offset);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int64Extensions.StoreBit(thislong,bool,int).value'></a>

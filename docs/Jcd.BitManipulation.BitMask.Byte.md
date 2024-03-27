@@ -9,4 +9,5 @@ internal static readonly BitMask Byte;
 ```
 
 #### Field Value
+
 [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')

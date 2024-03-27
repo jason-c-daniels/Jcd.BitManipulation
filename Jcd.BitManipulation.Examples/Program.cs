@@ -26,16 +26,16 @@ internal static class Program
 {
    public static void Main()
    {
+      ReadMe_BitManipulation_Example();
       BigEndianByteIndexer bebiFlt = float.MaxValue / 2;
       var bebifltbytes = bebiFlt.Slice(0, sizeof(long));
-      ReadMe_BitManipulation_Example();
 
       // chaining operations, the same steps and end results
 
       #if DEBUG
-      const int iterations = 1_000_000;
+      const long iterations = 1_000_000;
       #else
-      const int iterations = 100_000_000;
+      const long iterations = 30_000_000;
       #endif
       var f = 1.33f;
       var bits = f.BitwiseToUInt32().ReadBits(0, 4);
@@ -112,7 +112,7 @@ internal static class Program
       Console.WriteLine("Tests:");
    }
 
-   private static void TimeBitManipulations(int iterations, bool report = true)
+   private static void TimeBitManipulations(long iterations, bool report = true)
    {
       if (report)
          SystemInfo.Instance.RefreshInfo();
@@ -146,7 +146,7 @@ internal static class Program
          Console.WriteLine($"{upperByte} {data}");
    }
 
-   private static void TimeStoreByteAndReadByteCalls(int iterations, bool report = true)
+   private static void TimeStoreByteAndReadByteCalls(long iterations, bool report = true)
    {
       if (report)
          SystemInfo.Instance.RefreshInfo();
@@ -177,7 +177,7 @@ internal static class Program
          Console.WriteLine($"{upperByte} {data}");
    }
 
-   private static void TimeStoreByteAndReadByteFromIndexerCalls(int iterations, bool report = true)
+   private static void TimeStoreByteAndReadByteFromIndexerCalls(long iterations, bool report = true)
    {
       if (report)
          SystemInfo.Instance.RefreshInfo();
@@ -208,7 +208,7 @@ internal static class Program
          Console.WriteLine($"{upperByte} {data}");
    }
 
-   private static void TimeStore8BytesToLongCalls(int iterations, bool report = true)
+   private static void TimeStore8BytesToLongCalls(long iterations, bool report = true)
    {
       if (report)
          SystemInfo.Instance.RefreshInfo();
@@ -234,7 +234,7 @@ internal static class Program
          Console.WriteLine($"{upperByte} {data}");
    }
 
-   private static void TimeStore4BytesToLongCalls(int iterations, bool report = true)
+   private static void TimeStore4BytesToLongCalls(long iterations, bool report = true)
    {
       if (report)
          SystemInfo.Instance.RefreshInfo();
@@ -260,7 +260,7 @@ internal static class Program
          Console.WriteLine($"{upperByte} {data}");
    }
 
-   private static void TimeStore2BytesToLongCalls(int iterations, bool report = true)
+   private static void TimeStore2BytesToLongCalls(long iterations, bool report = true)
    {
       if (report)
          SystemInfo.Instance.RefreshInfo();
@@ -286,7 +286,7 @@ internal static class Program
          Console.WriteLine($"{upperByte} {data}");
    }
 
-   private static void TimeStore8BytesToIndexerCalls(int iterations, bool report = true)
+   private static void TimeStore8BytesToIndexerCalls(long iterations, bool report = true)
    {
       if (report)
          SystemInfo.Instance.RefreshInfo();
@@ -312,7 +312,7 @@ internal static class Program
          Console.WriteLine($"{upperByte} {data}");
    }
 
-   private static void TimeStore4BytesToIndexerCalls(int iterations, bool report = true)
+   private static void TimeStore4BytesToIndexerCalls(long iterations, bool report = true)
    {
       if (report)
          SystemInfo.Instance.RefreshInfo();
@@ -338,7 +338,7 @@ internal static class Program
          Console.WriteLine($"{upperByte} {data}");
    }
 
-   private static void TimeStore2BytesToIndexerCalls(int iterations, bool report = true)
+   private static void TimeStore2BytesToIndexerCalls(long iterations, bool report = true)
    {
       if (report)
          SystemInfo.Instance.RefreshInfo();
@@ -364,7 +364,7 @@ internal static class Program
          Console.WriteLine($"{upperByte} {data}");
    }
 
-   private static void TimeByteArrayToUInt64LittleEndian(int iterations, bool report = true)
+   private static void TimeByteArrayToUInt64LittleEndian(long iterations, bool report = true)
    {
       if (report)
          SystemInfo.Instance.RefreshInfo();
@@ -394,7 +394,7 @@ internal static class Program
          Console.WriteLine($"{upperByte} {data}");
    }
 
-   private static void TimeByteArrayToUInt64BigEndian(int iterations, bool report = true)
+   private static void TimeByteArrayToUInt64BigEndian(long iterations, bool report = true)
    {
       if (report)
          SystemInfo.Instance.RefreshInfo();
@@ -424,7 +424,7 @@ internal static class Program
          Console.WriteLine($"{upperByte} {data}");
    }
 
-   private static void TimeCastOperations(int iterations, bool report = true)
+   private static void TimeCastOperations(long iterations, bool report = true)
    {
       if (report)
          SystemInfo.Instance.RefreshInfo();
@@ -453,7 +453,7 @@ internal static class Program
          Console.WriteLine($"{convertedBack}");
    }
 
-   private static void TimeReadOnlySpanOfByteToUInt64LittleEndian(int iterations, bool report = true)
+   private static void TimeReadOnlySpanOfByteToUInt64LittleEndian(long iterations, bool report = true)
    {
       if (report)
          SystemInfo.Instance.RefreshInfo();
@@ -484,7 +484,7 @@ internal static class Program
          Console.WriteLine($"{upperByte} {data}");
    }
 
-   private static void TimeReadOnlySpanOfByteToUInt64BigEndian(int iterations, bool report = true)
+   private static void TimeReadOnlySpanOfByteToUInt64BigEndian(long iterations, bool report = true)
    {
       if (report)
          SystemInfo.Instance.RefreshInfo();
@@ -515,7 +515,7 @@ internal static class Program
          Console.WriteLine($"{upperByte} {data}");
    }
 
-   private static void ReportStats(RunStats stats, int operationCount, int iterations)
+   private static void ReportStats(RunStats stats, long operationCount, long iterations)
    {
       Console.WriteLine($"    Average CPU Frequency: {stats.AverageCpuFrequency:n3}");
       Console.WriteLine($"    Iteration Count: {iterations:n0}");
@@ -533,7 +533,7 @@ internal static class Program
       Console.WriteLine();
    }
 
-   private static RunStats CalculateStats(Stopwatch stopwatch, int operationCount, int iterations)
+   private static RunStats CalculateStats(Stopwatch stopwatch, long operationCount, long iterations)
    {
       var cpuF1 = SystemInfo.Instance.CurrentCPUFrequency;
       SystemInfo.Instance.RefreshInfo();

@@ -7,6 +7,7 @@ Convert a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int6
 ```csharp
 public static byte[] ToByteArray(this long data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int64Extensions.ToByteArray(thislong,Jcd.BitManipulation.Endian).data'></a>

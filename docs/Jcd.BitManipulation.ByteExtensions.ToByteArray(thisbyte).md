@@ -7,6 +7,7 @@ Convert a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 
 ```csharp
 public static byte[] ToByteArray(this byte data);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteExtensions.ToByteArray(thisbyte).data'></a>

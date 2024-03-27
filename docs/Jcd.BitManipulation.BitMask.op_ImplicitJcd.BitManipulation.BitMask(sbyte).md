@@ -2,11 +2,13 @@
 
 ## BitMask.implicit operator BitMask(sbyte) Operator
 
-Automatically convert to [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') from an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
+Automatically convert to [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') from
+an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 
 ```csharp
 public static Jcd.BitManipulation.BitMask implicit operator BitMask(sbyte bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.op_ImplicitJcd.BitManipulation.BitMask(sbyte).bits'></a>

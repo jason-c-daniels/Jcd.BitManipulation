@@ -7,6 +7,7 @@ Store a single bit at the specified offset.
 ```csharp
 public static double StoreBit(this double value, bool bit, int offset);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.StoreBit(thisdouble,bool,int).value'></a>

@@ -7,6 +7,7 @@ Convert a long into an array of bools
 ```csharp
 public static bool[] ToBooleanArray(this double bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.ToBooleanArray(thisdouble).bits'></a>

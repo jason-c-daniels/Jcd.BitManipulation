@@ -7,6 +7,7 @@ Read a single byte from the value at the specified byte offset.
 ```csharp
 public static byte ReadByte(this long value, int offset, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int64Extensions.ReadByte(thislong,int,Jcd.BitManipulation.Endian).value'></a>

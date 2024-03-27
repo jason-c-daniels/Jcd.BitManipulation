@@ -2,13 +2,15 @@
 
 ## Int16Extensions Class
 
-Provides methods to perform easy to read bit and byte manipulations on an [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
+Provides methods to perform easy to read bit and byte manipulations on
+an [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 
 ```csharp
 public static class Int16Extensions
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; Int16Extensions
+Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106;
+Int16Extensions
 
 | Methods                                                                                                                                                                                                                                                                                                                       |                                                                                                                                                  |
 |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|

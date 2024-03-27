@@ -2,11 +2,13 @@
 
 ## UInt64Extensions.ToBooleanArray(this ulong) Method
 
-Convert a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') into an array of bools
+Convert a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') into an array of
+bools
 
 ```csharp
 public static bool[] ToBooleanArray(this ulong bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ToBooleanArray(thisulong).bits'></a>

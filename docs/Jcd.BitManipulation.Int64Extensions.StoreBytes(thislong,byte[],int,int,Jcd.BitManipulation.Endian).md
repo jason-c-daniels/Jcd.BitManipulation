@@ -7,6 +7,7 @@ Stores a set of bytes starting at the specified byte location within the value.
 ```csharp
 public static long StoreBytes(this long value, byte[] bytes, int offset, int size=-1, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int64Extensions.StoreBytes(thislong,byte[],int,int,Jcd.BitManipulation.Endian).value'></a>

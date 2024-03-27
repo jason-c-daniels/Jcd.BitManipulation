@@ -7,6 +7,7 @@ Toggles a bit.
 ```csharp
 public static float ToggleBit(this float value, int offset);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SingleExtensions.ToggleBit(thisfloat,int).value'></a>

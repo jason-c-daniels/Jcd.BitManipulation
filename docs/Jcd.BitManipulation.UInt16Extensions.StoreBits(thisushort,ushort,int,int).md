@@ -7,6 +7,7 @@ Stores a value at the specified bit location within the variable.
 ```csharp
 public static ushort StoreBits(this ushort value, ushort source, int offset, int size);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt16Extensions.StoreBits(thisushort,ushort,int,int).value'></a>

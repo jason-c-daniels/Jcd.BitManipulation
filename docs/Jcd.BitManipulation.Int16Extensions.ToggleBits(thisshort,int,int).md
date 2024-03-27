@@ -8,6 +8,7 @@ The default values result in toggling all bits.
 ```csharp
 public static short ToggleBits(this short value, int offset=0, int size=16);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int16Extensions.ToggleBits(thisshort,int,int).value'></a>

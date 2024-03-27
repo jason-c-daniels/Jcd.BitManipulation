@@ -7,6 +7,7 @@ Sets specified bit to "on"
 ```csharp
 public static uint SetBit(this uint value, int offset);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt32Extensions.SetBit(thisuint,int).value'></a>

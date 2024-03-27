@@ -2,11 +2,13 @@
 
 ## BooleanArrayExtensions.ToByte(this bool[]) Method
 
-Converts an array of bools into a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte'), discarding any excess bits.
+Converts an array of bools into a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte'),
+discarding any excess bits.
 
 ```csharp
 public static byte ToByte(this bool[] bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BooleanArrayExtensions.ToByte(thisbool[]).bits'></a>

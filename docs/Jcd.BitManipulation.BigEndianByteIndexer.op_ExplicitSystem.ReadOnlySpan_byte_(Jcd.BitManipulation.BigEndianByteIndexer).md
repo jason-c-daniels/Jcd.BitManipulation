@@ -2,11 +2,14 @@
 
 ## BigEndianByteIndexer.explicit operator ReadOnlySpan<byte>(BigEndianByteIndexer) Operator
 
-Explicitly converts the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') to an array of bytes.
+Explicitly converts
+the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') to an
+array of bytes.
 
 ```csharp
 public static System.ReadOnlySpan<byte> explicit operator ReadOnlySpan<byte>(Jcd.BitManipulation.BigEndianByteIndexer indexer);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BigEndianByteIndexer.op_ExplicitSystem.ReadOnlySpan_byte_(Jcd.BitManipulation.BigEndianByteIndexer).indexer'></a>

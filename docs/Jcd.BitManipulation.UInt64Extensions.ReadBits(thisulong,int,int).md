@@ -7,6 +7,7 @@ For a given value return the specified bits from within it, right shifted pos bi
 ```csharp
 public static ulong ReadBits(this ulong value, int offset, int size);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ReadBits(thisulong,int,int).value'></a>

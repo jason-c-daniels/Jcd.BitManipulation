@@ -7,6 +7,7 @@ Extract a subset of bits specified by a bitmask and right align the bits by the 
 ```csharp
 public static sbyte ReadBits(this sbyte value, int offset, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SByteExtensions.ReadBits(thissbyte,int,Jcd.BitManipulation.BitMask).value'></a>

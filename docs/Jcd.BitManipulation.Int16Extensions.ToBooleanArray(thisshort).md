@@ -7,6 +7,7 @@ Convert a [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int1
 ```csharp
 public static bool[] ToBooleanArray(this short bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int16Extensions.ToBooleanArray(thisshort).bits'></a>

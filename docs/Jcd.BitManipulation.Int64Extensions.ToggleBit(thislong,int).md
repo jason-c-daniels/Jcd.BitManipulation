@@ -7,6 +7,7 @@ Toggles a bit.
 ```csharp
 public static long ToggleBit(this long value, int offset);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int64Extensions.ToggleBit(thislong,int).value'></a>

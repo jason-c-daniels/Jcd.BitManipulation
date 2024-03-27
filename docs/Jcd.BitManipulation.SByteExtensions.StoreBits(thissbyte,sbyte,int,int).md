@@ -7,6 +7,7 @@ Stores a value at the specified bit location within the variable.
 ```csharp
 public static sbyte StoreBits(this sbyte value, sbyte source, int offset, int size);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SByteExtensions.StoreBits(thissbyte,sbyte,int,int).value'></a>

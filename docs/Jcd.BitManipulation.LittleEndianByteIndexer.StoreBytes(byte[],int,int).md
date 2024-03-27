@@ -7,6 +7,7 @@ Stores a set of bytes starting at the specified byte location within the indexer
 ```csharp
 public Jcd.BitManipulation.LittleEndianByteIndexer StoreBytes(byte[] bytes, int offset, int size=-1);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexer.StoreBytes(byte[],int,int).bytes'></a>

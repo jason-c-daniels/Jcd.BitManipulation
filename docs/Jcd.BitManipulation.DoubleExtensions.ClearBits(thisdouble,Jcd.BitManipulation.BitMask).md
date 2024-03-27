@@ -7,6 +7,7 @@ Sets all bits from a provided mask to "off" and returns the modified value.
 ```csharp
 public static double ClearBits(this double value, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.ClearBits(thisdouble,Jcd.BitManipulation.BitMask).value'></a>

@@ -7,6 +7,7 @@ Toggle all the bits according to the provided mask
 ```csharp
 public static int ToggleBits(this int value, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int32Extensions.ToggleBits(thisint,Jcd.BitManipulation.BitMask).value'></a>

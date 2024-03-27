@@ -7,6 +7,7 @@ Converts bytes into a double, discarding any excess data.
 ```csharp
 public static double ToDouble(this byte[] data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteArrayExtensions.ToDouble(thisbyte[],Jcd.BitManipulation.Endian).data'></a>

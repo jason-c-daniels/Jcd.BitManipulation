@@ -7,6 +7,7 @@ Extract a subset of bits specified by a bitmask.
 ```csharp
 public static ushort ReadBits(this ushort value, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt16Extensions.ReadBits(thisushort,Jcd.BitManipulation.BitMask).value'></a>

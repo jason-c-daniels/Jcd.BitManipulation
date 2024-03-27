@@ -2,11 +2,14 @@
 
 ## LittleEndianByteIndexer(double) Constructor
 
-Constructs a [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') from an [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double').
+Constructs
+a [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
+from an [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double').
 
 ```csharp
 private LittleEndianByteIndexer(double data);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexer.LittleEndianByteIndexer(double).data'></a>

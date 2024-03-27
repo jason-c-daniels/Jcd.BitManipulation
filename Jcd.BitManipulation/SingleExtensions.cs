@@ -172,7 +172,7 @@ public static class SingleExtensions
    {
       return value.BitwiseToUInt32().ReadBits(mask);
    }
-   
+
    /// <summary>
    /// Extract a subset of bits specified by a bitmask and right align the bits by the offset.
    /// </summary>
@@ -188,7 +188,7 @@ public static class SingleExtensions
    {
       return value.ReadBits(mask) >> offset;
    }
-   
+
    /// <summary>
    /// Read a single bit from the specified offset.
    /// </summary>

@@ -232,31 +232,18 @@ public ref struct LittleEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private readonly byte[] GetAllBytes()
    {
-      #if NETSTANDARD2_1_OR_GREATER
-      var result = ByteSize switch
-                   {
-                      8 => BitConverter.GetBytes(Data)
-                    , 4 => BitConverter.GetBytes((uint) Data)
-
-                      //, 2 => BitConverter.GetBytes((ushort)Data)
-                    , 1 => [(byte) Data]
-                    , _ => null
-                   };
-
-      if (result != null)
-      {
-         if (!BitConverter.IsLittleEndian && ByteSize > 1)
-            Array.Reverse(result);
-
-         return result;
-      }
-      #endif
-
-      var slice = new byte[ByteSize];
-      for (var i = 0; i < ByteSize; i++)
-         slice[i] = Data.InternalLittleEndianReadByte(i);
-
-      return slice;
+      return ByteSize switch
+             {
+                8 => [this[0], this[1], this[2], this[3], this[4], this[5], this[6], this[7]]
+              , 7 => [this[0], this[1], this[2], this[3], this[4], this[5], this[6]]
+              , 6 => [this[0], this[1], this[2], this[3], this[4], this[5]]
+              , 5 => [this[0], this[1], this[2], this[3], this[4]]
+              , 4 => [this[0], this[1], this[2], this[3]]
+              , 3 => [this[0], this[1], this[2]]
+              , 2 => [this[0], this[1]]
+              , 1 => [(byte) Data]
+              , _ => []
+             };
    }
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -565,9 +552,47 @@ public ref struct LittleEndianByteIndexer
       var len = size + offset > ByteSize
                    ? ByteSize - offset
                    : size;
+      var cnt = Math.Min(len, bytes.Length);
 
-      for (int i = 0, j = offset; i < len; i++, j++)
-         Data = Data.InternalLittleEndianStoreByte(bytes[i], j);
+      if (cnt == 0)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[0], offset + 0);
+
+      if (cnt == 1)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[1], offset + 1);
+
+      if (cnt == 2)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[2], offset + 2);
+
+      if (cnt == 3)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[3], offset + 3);
+
+      if (cnt == 4)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[4], offset + 4);
+
+      if (cnt == 5)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[5], offset + 5);
+
+      if (cnt == 6)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[6], offset + 6);
+
+      if (cnt == 7)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[7], offset + 7);
 
       return this;
    }
@@ -589,8 +614,47 @@ public ref struct LittleEndianByteIndexer
                    ? ByteSize - offset
                    : size;
 
-      for (int i = 0, j = offset; i < len; i++, j++)
-         Data = Data.InternalLittleEndianStoreByte(bytes[i], j);
+      var cnt = Math.Min(len, bytes.Length);
+
+      if (cnt == 0)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[0], offset + 0);
+
+      if (cnt == 1)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[1], offset + 1);
+
+      if (cnt == 2)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[2], offset + 2);
+
+      if (cnt == 3)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[3], offset + 3);
+
+      if (cnt == 4)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[4], offset + 4);
+
+      if (cnt == 5)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[5], offset + 5);
+
+      if (cnt == 6)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[6], offset + 6);
+
+      if (cnt == 7)
+         return this;
+
+      Data = Data.InternalLittleEndianStoreByte(bytes[7], offset + 7);
 
       return this;
    }

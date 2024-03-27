@@ -273,7 +273,7 @@ public static class UInt16Extensions
                 ? ((BigEndianByteIndexer) value).StoreBytes(bytes, offset, size)
                 : ((LittleEndianByteIndexer) value).StoreBytes(bytes, offset, size);
    }
-   
+
    /// <summary>
    /// Sets all specified bits to "on"
    /// </summary>

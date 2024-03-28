@@ -131,7 +131,7 @@ public static class UInt64Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ulong ClearBits(this ulong value, BitMask mask)
    {
-      return value & ~mask.Bits;
+      return value & ~(ulong) mask;
    }
 
    /// <summary>
@@ -256,7 +256,7 @@ public static class UInt64Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ulong SetBits(this ulong value, BitMask mask)
    {
-      return value | mask.Bits;
+      return value | mask;
    }
 
    /// <summary>
@@ -395,7 +395,7 @@ public static class UInt64Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ulong ToggleBits(this ulong value, BitMask mask)
    {
-      return value ^ mask.Bits;
+      return value ^ mask;
    }
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]

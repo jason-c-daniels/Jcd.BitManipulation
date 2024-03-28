@@ -4,7 +4,7 @@
 
 Implicitly converts
 the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') to
-a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64').
+a [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16').
 
 ```csharp
 public static short implicit operator short(Jcd.BitManipulation.BigEndianByteIndexer indexer);
@@ -18,5 +18,6 @@ public static short implicit operator short(Jcd.BitManipulation.BigEndianByteInd
 The indexer to convert.
 
 #### Returns
+
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 The raw data.

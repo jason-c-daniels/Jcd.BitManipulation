@@ -7,7 +7,6 @@ Stores a value at the specified bit location within the variable.
 ```csharp
 public static ulong StoreBits(this ulong value, ulong source, int offset, int size);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt64Extensions.StoreBits(thisulong,ulong,int,int).value'></a>

@@ -17,6 +17,7 @@ public static ushort implicit operator ushort(Jcd.BitManipulation.BitIndexer ind
 the indexer to convert from
 
 #### Returns
+
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 the lower 16 bits converted to
 a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')

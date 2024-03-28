@@ -17,5 +17,19 @@ public static Jcd.BitManipulation.BigEndianByteIndexer implicit operator BigEndi
 The underlying data type.
 
 #### Returns
+
 [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer')
 A indexer type.
+
+### Remarks
+
+Example:
+
+```csharp
+var number = -1.1885959909993540014504278736E148; // 0xDEADBEEFFA17C0DE
+BigEndianByteIndexer indexer = number;    // implicit cast.
+
+var b0_1 = indexer[0]; // b0 is 0xDE
+indexer[1] = 0xFF;
+var result = indexer.ToString(); // result is "DE FF BE EF FA 17 C0 DE"
+```

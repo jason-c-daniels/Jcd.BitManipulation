@@ -127,7 +127,7 @@ public static class UInt32Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static uint ClearBits(this uint value, BitMask mask)
    {
-      return value & (uint) ~mask.Bits;
+      return value & (uint) ~mask;
    }
 
    /// <summary>
@@ -254,7 +254,7 @@ public static class UInt32Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static uint SetBits(this uint value, BitMask mask)
    {
-      return value | (uint) mask.Bits;
+      return value | mask;
    }
 
    /// <summary>
@@ -284,7 +284,7 @@ public static class UInt32Extensions
    public static uint StoreBits(this uint value, uint source, int offset, BitMask mask)
    {
       value = value.ClearBits(mask);
-      value |= (source << offset) & (uint) mask.Bits;
+      value |= (source << offset) & mask;
 
       return value;
    }
@@ -395,6 +395,6 @@ public static class UInt32Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static uint ToggleBits(this uint value, BitMask mask)
    {
-      return value ^ (uint) mask.Bits;
+      return value ^ mask;
    }
 }

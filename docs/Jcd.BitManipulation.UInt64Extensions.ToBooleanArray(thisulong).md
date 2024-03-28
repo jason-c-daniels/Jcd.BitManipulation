@@ -8,7 +8,6 @@ bools
 ```csharp
 public static bool[] ToBooleanArray(this ulong bits);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ToBooleanArray(thisulong).bits'></a>

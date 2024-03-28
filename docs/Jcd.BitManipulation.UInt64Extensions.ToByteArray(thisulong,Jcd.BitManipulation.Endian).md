@@ -8,7 +8,6 @@ bytes
 ```csharp
 public static byte[] ToByteArray(this ulong data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ToByteArray(thisulong,Jcd.BitManipulation.Endian).data'></a>

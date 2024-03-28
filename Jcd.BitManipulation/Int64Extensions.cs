@@ -118,7 +118,7 @@ public static class Int64Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static long ClearBits(this long value, BitMask mask)
    {
-      return value & (long) ~mask.Bits;
+      return (long) ((ulong) value).ClearBits(mask);
    }
 
    /// <summary>
@@ -146,7 +146,7 @@ public static class Int64Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static long ReadBits(this long value, BitMask mask)
    {
-      return (long) ((ulong) value & mask);
+      return (long) ((ulong) value).ReadBits(mask);
    }
 
    /// <summary>
@@ -162,7 +162,7 @@ public static class Int64Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static long ReadBits(this long value, int offset, BitMask mask)
    {
-      return (long) ((ulong) value.ReadBits(mask) >> offset); // coerce to unsigned first to prevent issues with sign bit.
+      return (long) ((ulong) value).ReadBits(offset, mask);
    }
 
    /// <summary>
@@ -245,7 +245,7 @@ public static class Int64Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static long SetBits(this long value, BitMask mask)
    {
-      return value | (long) mask.Bits;
+      return (long) ((ulong) value).SetBits(mask);
    }
 
    /// <summary>
@@ -274,10 +274,7 @@ public static class Int64Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static long StoreBits(this long value, long source, int offset, BitMask mask)
    {
-      value = value.ClearBits(mask);
-      value |= (source << offset) & (long) mask.Bits;
-
-      return value;
+      return (long) ((ulong) value).StoreBits((ulong) source, offset, mask);
    }
 
    /// <summary>
@@ -386,6 +383,6 @@ public static class Int64Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static long ToggleBits(this long value, BitMask mask)
    {
-      return value ^ (long) mask.Bits;
+      return (long) ((ulong) value).ToggleBits(mask);
    }
 }

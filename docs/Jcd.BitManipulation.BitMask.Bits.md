@@ -5,7 +5,7 @@
 The backing store for the actual bits of the [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask').
 
 ```csharp
-public readonly ulong Bits;
+private readonly ulong Bits;
 ```
 
 #### Field Value

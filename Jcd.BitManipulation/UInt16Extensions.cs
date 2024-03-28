@@ -103,7 +103,7 @@ public static class UInt16Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ushort ClearBits(this ushort value, BitMask mask)
    {
-      return (ushort) (value & (ushort) ~mask.Bits);
+      return (ushort) (value & (ushort) ~mask);
    }
 
    /// <summary>
@@ -283,7 +283,7 @@ public static class UInt16Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ushort SetBits(this ushort value, BitMask mask)
    {
-      return (ushort) (value | (ushort) mask.Bits);
+      return (ushort) (value | (ushort) mask);
    }
 
    /// <summary>
@@ -313,7 +313,7 @@ public static class UInt16Extensions
    public static ushort StoreBits(this ushort value, ushort source, int offset, BitMask mask)
    {
       value = value.ClearBits(mask);
-      value |= (ushort) ((source << offset) & (ushort) mask.Bits);
+      value |= (ushort) ((source << offset) & (ushort) mask);
 
       return value;
    }
@@ -371,6 +371,6 @@ public static class UInt16Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ushort ToggleBits(this ushort value, BitMask mask)
    {
-      return (ushort) (value ^ (ushort) mask.Bits);
+      return (ushort) (value ^ (ushort) mask);
    }
 }

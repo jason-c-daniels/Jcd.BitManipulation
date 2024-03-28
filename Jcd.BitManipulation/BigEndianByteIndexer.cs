@@ -141,11 +141,22 @@ public ref struct BigEndianByteIndexer
       Data = data;
    }
 
+   /// <summary>
+   /// Constructs a <see cref="BigEndianByteIndexer" /> from a <see cref="ReadOnlySpan{T}" /> of bytes.
+   /// </summary>
+   /// <param name="data"> The span to populate the underlying data from.</param>
+   /// <exclude />
    private BigEndianByteIndexer(ReadOnlySpan<byte> data)
       : this(data, data.Length)
    {
    }
 
+   /// <summary>
+   /// Constructs a <see cref="BigEndianByteIndexer" /> from a <see cref="ReadOnlySpan{T}" /> of bytes.
+   /// </summary>
+   /// <param name="data"> The span to populate the underlying data from.</param>
+   /// <param name="byteSize">The number of bytes to store from the <see cref="ReadOnlySpan{T}" /> </param>
+   /// <exclude />
    private BigEndianByteIndexer(ReadOnlySpan<byte> data, int byteSize)
    {
       ByteSize = GetIntegerByteSize(byteSize);
@@ -153,11 +164,22 @@ public ref struct BigEndianByteIndexer
       StoreBytes(data, 0, byteSize);
    }
 
+   /// <summary>
+   /// Constructs a <see cref="BigEndianByteIndexer" /> from an <see cref="Array" /> of bytes.
+   /// </summary>
+   /// <param name="data"> The span to populate the underlying data from.</param>
+   /// <exclude />
    private BigEndianByteIndexer(byte[] data)
       : this(data, data.Length)
    {
    }
 
+   /// <summary>
+   /// Constructs a <see cref="BigEndianByteIndexer" /> from an <see cref="Array" /> of bytes.
+   /// </summary>
+   /// <param name="data"> The span to populate the underlying data from.</param>
+   /// <param name="byteSize">The number of bytes to store from the <see cref="Array" /> </param>
+   /// <exclude />
    private BigEndianByteIndexer(byte[] data, int byteSize)
    {
       ByteSize = GetIntegerByteSize(byteSize);
@@ -293,7 +315,7 @@ public ref struct BigEndianByteIndexer
    }
 
    /// <summary>
-   /// Implicitly converts the <see cref="BigEndianByteIndexer" /> to a <see cref="UInt64" />.
+   /// Implicitly converts the <see cref="BigEndianByteIndexer" /> to an <see cref="Int64" />.
    /// </summary>
    /// <param name="indexer">The indexer to convert.</param>
    /// <returns>The raw data.</returns>
@@ -304,7 +326,7 @@ public ref struct BigEndianByteIndexer
    }
 
    /// <summary>
-   /// Implicitly converts the <see cref="BigEndianByteIndexer" /> to a <see cref="UInt64" />.
+   /// Implicitly converts the <see cref="BigEndianByteIndexer" /> to a <see cref="UInt32" />.
    /// </summary>
    /// <param name="indexer">The indexer to convert.</param>
    /// <returns>The raw data.</returns>
@@ -315,7 +337,7 @@ public ref struct BigEndianByteIndexer
    }
 
    /// <summary>
-   /// Implicitly converts the <see cref="BigEndianByteIndexer" /> to a <see cref="UInt64" />.
+   /// Implicitly converts the <see cref="BigEndianByteIndexer" /> to a <see cref="Int32" />.
    /// </summary>
    /// <param name="indexer">The indexer to convert.</param>
    /// <returns>The raw data.</returns>
@@ -326,7 +348,7 @@ public ref struct BigEndianByteIndexer
    }
 
    /// <summary>
-   /// Implicitly converts the <see cref="BigEndianByteIndexer" /> to a <see cref="UInt64" />.
+   /// Implicitly converts the <see cref="BigEndianByteIndexer" /> to a <see cref="UInt16" />.
    /// </summary>
    /// <param name="indexer">The indexer to convert.</param>
    /// <returns>The raw data.</returns>
@@ -337,7 +359,7 @@ public ref struct BigEndianByteIndexer
    }
 
    /// <summary>
-   /// Implicitly converts the <see cref="BigEndianByteIndexer" /> to a <see cref="UInt64" />.
+   /// Implicitly converts the <see cref="BigEndianByteIndexer" /> to a <see cref="Int16" />.
    /// </summary>
    /// <param name="indexer">The indexer to convert.</param>
    /// <returns>The raw data.</returns>
@@ -348,7 +370,7 @@ public ref struct BigEndianByteIndexer
    }
 
    /// <summary>
-   /// Implicitly converts the <see cref="BigEndianByteIndexer" /> to a <see cref="UInt64" />.
+   /// Implicitly converts the <see cref="BigEndianByteIndexer" /> to a <see cref="Byte" />.
    /// </summary>
    /// <param name="indexer">The indexer to convert.</param>
    /// <returns>The raw data.</returns>
@@ -359,7 +381,7 @@ public ref struct BigEndianByteIndexer
    }
 
    /// <summary>
-   /// Implicitly converts the <see cref="BigEndianByteIndexer" /> to a <see cref="UInt64" />.
+   /// Implicitly converts the <see cref="BigEndianByteIndexer" /> to an <see cref="SByte" />.
    /// </summary>
    /// <param name="indexer">The indexer to convert.</param>
    /// <returns>The raw data.</returns>
@@ -381,7 +403,7 @@ public ref struct BigEndianByteIndexer
    }
 
    /// <summary>
-   /// Implicitly converts the byte indexer to its underlying data type.
+   /// Implicitly converts the <see cref="BigEndianByteIndexer" /> to a <see cref="Double" />.
    /// </summary>
    /// <param name="indexer">The indexer to convert.</param>
    /// <returns>The raw data.</returns>
@@ -406,7 +428,7 @@ public ref struct BigEndianByteIndexer
    }
 
    /// <summary>
-   /// Explicitly converts the <see cref="BigEndianByteIndexer" /> to an array of bytes.
+   /// Explicitly converts the <see cref="BigEndianByteIndexer" /> to a <see cref="ReadOnlySpan{T}"/> of bytes.
    /// </summary>
    /// <param name="indexer">The indexer to convert.</param>
    /// <returns>The raw data converted to an array, serialized as big endian.</returns>
@@ -478,12 +500,12 @@ public ref struct BigEndianByteIndexer
    /// Example:
    /// </para>
    /// <code>
-   /// ulong number = 0xDEADBEEF;
+   /// uint number = 0xDEADBEEF;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
    ///
    /// var b0 = indexer[0]; // b0 is 0xDE
    /// indexer[1] = 0xFF;
-   /// ulong result = indexer; // result is 0xDEFFBEEF
+   /// var result = indexer.ToString(); // result is "DE FF BE EF"
    /// </code>
    /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -497,6 +519,19 @@ public ref struct BigEndianByteIndexer
    /// </summary>
    /// <param name="data">The underlying data type.</param>
    /// <returns>A indexer type.</returns>
+   /// <remarks>
+   /// <para>
+   /// Example:
+   /// </para>
+   /// <code>
+   /// int number = 0x7EADBEEF;
+   /// BigEndianByteIndexer indexer = number; // implicit cast.
+   ///
+   /// var b0 = indexer[0]; // b0 is 0xDE
+   /// indexer[1] = 0xFF;
+   /// var result = indexer.ToString(); // result is "7E FF BE EF"
+   /// </code>
+   /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BigEndianByteIndexer(int data)
    {
@@ -508,6 +543,19 @@ public ref struct BigEndianByteIndexer
    /// </summary>
    /// <param name="data">The underlying data type.</param>
    /// <returns>A indexer type.</returns>
+   /// <remarks>
+   /// <para>
+   /// Example:
+   /// </para>
+   /// <code>
+   /// ushort number = 0xDEAD;
+   /// BigEndianByteIndexer indexer = number; // implicit cast.
+   ///
+   /// var b0 = indexer[0]; // b0 is 0xDE
+   /// indexer[1] = 0xFF;
+   /// var result = indexer.ToString(); // result is "DE FF"
+   /// </code>
+   /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BigEndianByteIndexer(ushort data)
    {
@@ -519,6 +567,19 @@ public ref struct BigEndianByteIndexer
    /// </summary>
    /// <param name="data">The underlying data type.</param>
    /// <returns>A indexer type.</returns>
+   /// <remarks>
+   /// <para>
+   /// Example:
+   /// </para>
+   /// <code>
+   /// short number = 0x7EAD;
+   /// BigEndianByteIndexer indexer = number; // implicit cast.
+   ///
+   /// var b0 = indexer[0]; // b0 is 0xDE
+   /// indexer[1] = 0xFF;
+   /// var result = indexer.ToString(); // result is "7E FF"
+   /// </code>
+   /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BigEndianByteIndexer(short data)
    {
@@ -530,6 +591,19 @@ public ref struct BigEndianByteIndexer
    /// </summary>
    /// <param name="data">The underlying data type.</param>
    /// <returns>A indexer type.</returns>
+   /// <remarks>
+   /// <para>
+   /// Example:
+   /// </para>
+   /// <code>
+   /// byte number = 0xDE;
+   /// BigEndianByteIndexer indexer = number; // implicit cast.
+   ///
+   /// var b0 = indexer[0]; // b0 is 0xDE
+   /// indexer[0] = 0xFF;
+   /// var result = indexer.ToString(); // result is "FF"
+   /// </code>
+   /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BigEndianByteIndexer(byte data)
    {
@@ -541,6 +615,19 @@ public ref struct BigEndianByteIndexer
    /// </summary>
    /// <param name="data">The underlying data type.</param>
    /// <returns>A indexer type.</returns>
+   /// <remarks>
+   /// <para>
+   /// Example:
+   /// </para>
+   /// <code>
+   /// sbyte number = 0xDE;
+   /// BigEndianByteIndexer indexer = number; // implicit cast.
+   ///
+   /// var b0 = indexer[0]; // b0 is 0xDE
+   /// indexer[0] = 0xFF;
+   /// var result = indexer.ToString(); // result is "FF"
+   /// </code>
+   /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BigEndianByteIndexer(sbyte data)
    {
@@ -552,6 +639,19 @@ public ref struct BigEndianByteIndexer
    /// </summary>
    /// <param name="data">The underlying data type.</param>
    /// <returns>A indexer type.</returns>
+   /// <remarks>
+   /// <para>
+   /// Example:
+   /// </para>
+   /// <code>
+   /// float number = -6.259853398707798016E18f; // 0xDEADBEEF
+   /// BigEndianByteIndexer indexer = number; // implicit cast.
+   ///
+   /// var b0 = indexer[0]; // b0 is 0xDE
+   /// indexer[1] = 0xFF;
+   /// var result = indexer.ToString(); // result is "DE FF BE EF"
+   /// </code>
+   /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BigEndianByteIndexer(float data)
    {
@@ -563,6 +663,19 @@ public ref struct BigEndianByteIndexer
    /// </summary>
    /// <param name="data">The underlying data type.</param>
    /// <returns>A indexer type.</returns>
+   /// <remarks>
+   /// <para>
+   /// Example:
+   /// </para>
+   /// <code>
+   /// var number = -1.1885959909993540014504278736E148; // 0xDEADBEEFFA17C0DE
+   /// BigEndianByteIndexer indexer = number;    // implicit cast.
+   /// 
+   /// var b0_1 = indexer[0]; // b0 is 0xDE
+   /// indexer[1] = 0xFF;
+   /// var result = indexer.ToString(); // result is "DE FF BE EF FA 17 C0 DE"
+   /// </code>
+   /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BigEndianByteIndexer(double data)
    {

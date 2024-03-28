@@ -7,7 +7,6 @@ Sets all specified bits to "off" and returns the modified value.
 ```csharp
 public static ulong ClearBits(this ulong value, int offset=0, int size=64);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ClearBits(thisulong,int,int).value'></a>

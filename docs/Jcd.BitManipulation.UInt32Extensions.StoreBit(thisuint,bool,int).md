@@ -28,5 +28,6 @@ The bit value to set
 the offset of the bit to write
 
 #### Returns
+
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 The modified value.

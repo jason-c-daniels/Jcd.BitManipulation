@@ -8,7 +8,6 @@ a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'Sys
 ```csharp
 public static bool AreNoBitsSet(this ulong data, Jcd.BitManipulation.BitMask bitmask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt64Extensions.AreNoBitsSet(thisulong,Jcd.BitManipulation.BitMask).data'></a>

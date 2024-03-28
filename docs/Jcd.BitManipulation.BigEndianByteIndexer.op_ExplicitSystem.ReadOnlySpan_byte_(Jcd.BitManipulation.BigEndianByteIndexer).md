@@ -3,8 +3,9 @@
 ## BigEndianByteIndexer.explicit operator ReadOnlySpan<byte>(BigEndianByteIndexer) Operator
 
 Explicitly converts
-the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') to an
-array of bytes.
+the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') to
+a [System.ReadOnlySpan&lt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.ReadOnlySpan-1 'System.ReadOnlySpan`1')
+of bytes.
 
 ```csharp
 public static System.ReadOnlySpan<byte> explicit operator ReadOnlySpan<byte>(Jcd.BitManipulation.BigEndianByteIndexer indexer);
@@ -18,5 +19,6 @@ public static System.ReadOnlySpan<byte> explicit operator ReadOnlySpan<byte>(Jcd
 The indexer to convert.
 
 #### Returns
+
 [System.ReadOnlySpan&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.ReadOnlySpan-1 'System.ReadOnlySpan`1')[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.ReadOnlySpan-1 'System.ReadOnlySpan`1')
 The raw data converted to an array, serialized as big endian.

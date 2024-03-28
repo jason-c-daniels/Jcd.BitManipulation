@@ -116,7 +116,7 @@ public static class Int16Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static short ClearBits(this short value, BitMask mask)
    {
-      return (short) (value & (short) ~mask.Bits);
+      return (short) ((ushort) value).ClearBits(mask);
    }
 
    /// <summary>
@@ -144,7 +144,7 @@ public static class Int16Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static short ReadBits(this short value, BitMask mask)
    {
-      return (short) ((ushort) value & mask);
+      return (short) ((ushort) value).ClearBits(mask);
    }
 
    /// <summary>
@@ -160,7 +160,7 @@ public static class Int16Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static short ReadBits(this short value, int offset, BitMask mask)
    {
-      return (short) ((ushort) value.ReadBits(mask) >> offset); // coerce to unsigned first to prevent issues with sign bit.
+      return (short) ((ushort) value).ReadBits(offset, mask);
    }
 
    /// <summary>
@@ -243,7 +243,7 @@ public static class Int16Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static short SetBits(this short value, BitMask mask)
    {
-      return (short) (value | (short) mask.Bits);
+      return (short) ((ushort) value).SetBits(mask);
    }
 
    /// <summary>
@@ -272,10 +272,7 @@ public static class Int16Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static short StoreBits(this short value, short source, int offset, BitMask mask)
    {
-      value = value.ClearBits(mask);
-      value |= (short) ((source << offset) & (short) mask.Bits);
-
-      return value;
+      return (short) ((ushort) value).StoreBits((ushort) source, offset, mask);
    }
 
    /// <summary>
@@ -384,6 +381,6 @@ public static class Int16Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static short ToggleBits(this short value, BitMask mask)
    {
-      return (short) (value ^ (short) mask.Bits);
+      return (short) ((ushort) value).ToggleBits(mask);
    }
 }

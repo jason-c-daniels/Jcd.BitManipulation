@@ -131,7 +131,7 @@ public static class Int32Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int ClearBits(this int value, BitMask mask)
    {
-      return value & (int) ~mask.Bits;
+      return (int) ((uint) value).ClearBits(mask);
    }
 
    /// <summary>
@@ -159,7 +159,7 @@ public static class Int32Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int ReadBits(this int value, BitMask mask)
    {
-      return (int) ((uint) value & mask);
+      return (int) ((uint) value).ReadBits(mask);
    }
 
    /// <summary>
@@ -175,7 +175,7 @@ public static class Int32Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int ReadBits(this int value, int offset, BitMask mask)
    {
-      return (int) ((uint) value.ReadBits(mask) >> offset); // coerce to unsigned first to prevent issues with sign bit.
+      return (int) ((uint) value).ReadBits(offset, mask);
    }
 
    /// <summary>
@@ -187,7 +187,7 @@ public static class Int32Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool ReadBit(this int value, int offset)
    {
-      return value.ReadBits(offset, 1) > 0;
+      return value.ReadBits(offset, 1) != 0;
    }
 
    /// <summary>
@@ -258,7 +258,7 @@ public static class Int32Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int SetBits(this int value, BitMask mask)
    {
-      return value | (int) mask.Bits;
+      return (int) ((uint) value).SetBits(mask);
    }
 
    /// <summary>
@@ -287,10 +287,7 @@ public static class Int32Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int StoreBits(this int value, int source, int offset, BitMask mask)
    {
-      value = value.ClearBits(mask);
-      value |= (source << offset) & (int) mask.Bits;
-
-      return value;
+      return (int) ((uint) value).StoreBits((uint) source, offset, mask);
    }
 
    /// <summary>
@@ -399,6 +396,6 @@ public static class Int32Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int ToggleBits(this int value, BitMask mask)
    {
-      return value ^ (int) mask.Bits;
+      return (int) ((uint) value).ToggleBits(mask);
    }
 }

@@ -215,16 +215,16 @@ public class ReadBitsExtensionsTests
    }
 
    [Theory]
-   [InlineData(0b11100111,              0,  true)]
-   [InlineData(0b11100111,              3,  false)]
-   [InlineData(0b11100111,              7,  true)]
-   [InlineData(0b11100111        << 8,  11, false)]
-   [InlineData(0b11100111        << 8,  15, true)]
-   [InlineData((uint) 0b11100111 << 24, 27, false)]
-   [InlineData((uint) 0b11100111 << 24, 31, true)]
+   [InlineData(0b11100111,       0,  true)]
+   [InlineData(0b11100111,       3,  false)]
+   [InlineData(0b11100111,       7,  true)]
+   [InlineData(0b11100111 << 8,  11, false)]
+   [InlineData(0b11100111 << 8,  15, true)]
+   [InlineData(0b11100111 << 24, 27, false)]
+   [InlineData(0b11100111 << 24, 31, true)]
    public void ReadBit_For_Int32_Reads_The_Correct_Value(uint bits, int offset, bool expected)
    {
-      Assert.Equal(expected, ((int) bits).ReadBit((byte) offset));
+      Assert.Equal(expected, ((int) bits).ReadBit(offset));
    }
 
    [Theory]

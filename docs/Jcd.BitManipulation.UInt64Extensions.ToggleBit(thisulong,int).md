@@ -7,7 +7,6 @@ Toggles a bit.
 ```csharp
 public static ulong ToggleBit(this ulong value, int offset);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ToggleBit(thisulong,int).value'></a>

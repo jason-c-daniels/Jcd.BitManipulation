@@ -112,7 +112,7 @@ public static class SByteExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static sbyte ClearBits(this sbyte value, BitMask mask)
    {
-      return (sbyte) (value & (sbyte) ~mask.Bits);
+      return (sbyte) ((byte) value).ClearBits(mask);
    }
 
    /// <summary>
@@ -156,7 +156,7 @@ public static class SByteExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static sbyte ReadBits(this sbyte value, int offset, BitMask mask)
    {
-      return (sbyte) ((byte) value.ReadBits(mask) >> offset);
+      return (sbyte) ((byte) value).ReadBits(offset, mask);
    }
 
    /// <summary>
@@ -205,7 +205,7 @@ public static class SByteExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static sbyte SetBits(this sbyte value, BitMask mask)
    {
-      return (sbyte) (value | (sbyte) mask.Bits);
+      return (sbyte) ((byte) value).SetBits(mask);
    }
 
    /// <summary>
@@ -234,10 +234,7 @@ public static class SByteExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static sbyte StoreBits(this sbyte value, sbyte source, int offset, BitMask mask)
    {
-      value = value.ClearBits(mask);
-      value |= (sbyte) ((source << offset) & (sbyte) mask.Bits);
-
-      return value;
+      return (sbyte) ((byte) value).StoreBits((byte) source, offset, mask);
    }
 
    /// <summary>
@@ -293,6 +290,6 @@ public static class SByteExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static sbyte ToggleBits(this sbyte value, BitMask mask)
    {
-      return (sbyte) (value ^ (sbyte) mask.Bits);
+      return (sbyte) (value ^ (sbyte) mask);
    }
 }

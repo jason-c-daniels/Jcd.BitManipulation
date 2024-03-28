@@ -17,6 +17,7 @@ public static Jcd.BitManipulation.BigEndianByteIndexer implicit operator BigEndi
 The underlying data type.
 
 #### Returns
+
 [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer')
 The newly
 created [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer').

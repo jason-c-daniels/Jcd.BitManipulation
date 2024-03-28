@@ -111,6 +111,56 @@
          <param name="byteSize">The number of bytes to index</param>
          <exclude/>
       </member>
+      <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.ReadOnlySpan{System.Byte})">
+         <summary>
+            Constructs a
+            <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
+            from a
+            <see cref="T:System.ReadOnlySpan`1"/>
+            of bytes.
+         </summary>
+         <param name="data">The span to populate the underlying data from.</param>
+         <exclude/>
+      </member>
+      <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.ReadOnlySpan{System.Byte},System.Int32)">
+         <summary>
+            Constructs a
+            <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
+            from a
+            <see cref="T:System.ReadOnlySpan`1"/>
+            of bytes.
+         </summary>
+         <param name="data">The span to populate the underlying data from.</param>
+         <param name="byteSize">The number of bytes to store from the
+            <see cref="T:System.ReadOnlySpan`1"/>
+         </param>
+         <exclude/>
+      </member>
+      <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.Byte[])">
+         <summary>
+            Constructs a
+            <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
+            from an
+            <see cref="T:System.Array"/>
+            of bytes.
+         </summary>
+         <param name="data">The span to populate the underlying data from.</param>
+         <exclude/>
+      </member>
+      <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.Byte[],System.Int32)">
+         <summary>
+            Constructs a
+            <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
+            from an
+            <see cref="T:System.Array"/>
+            of bytes.
+         </summary>
+         <param name="data">The span to populate the underlying data from.</param>
+         <param name="byteSize">The number of bytes to store from the
+            <see cref="T:System.Array"/>
+         </param>
+         <exclude/>
+      </member>
       <member name="P:Jcd.BitManipulation.BigEndianByteIndexer.ByteSize">
          <summary>
             The number of bytes this type will index
@@ -157,7 +207,7 @@
          <summary>
             Implicitly converts the
             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
-            to a<see cref="T:System.UInt64"/>.
+            to an<see cref="T:System.Int64"/>.
          </summary>
          <param name="indexer">The indexer to convert.</param>
          <returns>The raw data.</returns>
@@ -167,7 +217,7 @@
          <summary>
             Implicitly converts the
             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
-            to a<see cref="T:System.UInt64"/>.
+            to a<see cref="T:System.UInt32"/>.
          </summary>
          <param name="indexer">The indexer to convert.</param>
          <returns>The raw data.</returns>
@@ -177,7 +227,7 @@
          <summary>
             Implicitly converts the
             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
-            to a<see cref="T:System.UInt64"/>.
+            to a<see cref="T:System.Int32"/>.
          </summary>
          <param name="indexer">The indexer to convert.</param>
          <returns>The raw data.</returns>
@@ -187,7 +237,7 @@
          <summary>
             Implicitly converts the
             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
-            to a<see cref="T:System.UInt64"/>.
+            to a<see cref="T:System.UInt16"/>.
          </summary>
          <param name="indexer">The indexer to convert.</param>
          <returns>The raw data.</returns>
@@ -197,7 +247,7 @@
          <summary>
             Implicitly converts the
             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
-            to a<see cref="T:System.UInt64"/>.
+            to a<see cref="T:System.Int16"/>.
          </summary>
          <param name="indexer">The indexer to convert.</param>
          <returns>The raw data.</returns>
@@ -207,7 +257,7 @@
          <summary>
             Implicitly converts the
             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
-            to a<see cref="T:System.UInt64"/>.
+            to a<see cref="T:System.Byte"/>.
          </summary>
          <param name="indexer">The indexer to convert.</param>
          <returns>The raw data.</returns>
@@ -217,7 +267,7 @@
          <summary>
             Implicitly converts the
             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
-            to a<see cref="T:System.UInt64"/>.
+            to an<see cref="T:System.SByte"/>.
          </summary>
          <param name="indexer">The indexer to convert.</param>
          <returns>The raw data.</returns>
@@ -235,7 +285,9 @@
       <member
          name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(Jcd.BitManipulation.BigEndianByteIndexer)~System.Double">
          <summary>
-            Implicitly converts the byte indexer to its underlying data type.
+            Implicitly converts the
+            <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
+            to a<see cref="T:System.Double"/>.
          </summary>
          <param name="indexer">The indexer to convert.</param>
          <returns>The raw data.</returns>
@@ -255,7 +307,9 @@
          <summary>
             Explicitly converts the
             <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
-            to an array of bytes.
+            to a
+            <see cref="T:System.ReadOnlySpan`1"/>
+            of bytes.
          </summary>
          <param name="indexer">The indexer to convert.</param>
          <returns>The raw data converted to an array, serialized as big endian.</returns>
@@ -323,12 +377,12 @@
                Example:
             </para>
             <code>
-               ulong number = 0xDEADBEEF;
+               uint number = 0xDEADBEEF;
                BigEndianByteIndexer indexer = number; // implicit cast.
 
                var b0 = indexer[0]; // b0 is 0xDE
                indexer[1] = 0xFF;
-               ulong result = indexer; // result is 0xDEFFBEEF
+               var result = indexer.ToString(); // result is "DE FF BE EF"
             </code>
          </remarks>
       </member>
@@ -341,6 +395,19 @@
          </summary>
          <param name="data">The underlying data type.</param>
          <returns>A indexer type.</returns>
+         <remarks>
+            <para>
+               Example:
+            </para>
+            <code>
+               int number = 0x7EADBEEF;
+               BigEndianByteIndexer indexer = number; // implicit cast.
+
+               var b0 = indexer[0]; // b0 is 0xDE
+               indexer[1] = 0xFF;
+               var result = indexer.ToString(); // result is "7E FF BE EF"
+            </code>
+         </remarks>
       </member>
       <member
          name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.UInt16)~Jcd.BitManipulation.BigEndianByteIndexer">
@@ -351,6 +418,19 @@
          </summary>
          <param name="data">The underlying data type.</param>
          <returns>A indexer type.</returns>
+         <remarks>
+            <para>
+               Example:
+            </para>
+            <code>
+               ushort number = 0xDEAD;
+               BigEndianByteIndexer indexer = number; // implicit cast.
+
+               var b0 = indexer[0]; // b0 is 0xDE
+               indexer[1] = 0xFF;
+               var result = indexer.ToString(); // result is "DE FF"
+            </code>
+         </remarks>
       </member>
       <member
          name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.Int16)~Jcd.BitManipulation.BigEndianByteIndexer">
@@ -361,6 +441,19 @@
          </summary>
          <param name="data">The underlying data type.</param>
          <returns>A indexer type.</returns>
+         <remarks>
+            <para>
+               Example:
+            </para>
+            <code>
+               short number = 0x7EAD;
+               BigEndianByteIndexer indexer = number; // implicit cast.
+
+               var b0 = indexer[0]; // b0 is 0xDE
+               indexer[1] = 0xFF;
+               var result = indexer.ToString(); // result is "7E FF"
+            </code>
+         </remarks>
       </member>
       <member
          name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.Byte)~Jcd.BitManipulation.BigEndianByteIndexer">
@@ -371,6 +464,19 @@
          </summary>
          <param name="data">The underlying data type.</param>
          <returns>A indexer type.</returns>
+         <remarks>
+            <para>
+               Example:
+            </para>
+            <code>
+               byte number = 0xDE;
+               BigEndianByteIndexer indexer = number; // implicit cast.
+
+               var b0 = indexer[0]; // b0 is 0xDE
+               indexer[0] = 0xFF;
+               var result = indexer.ToString(); // result is "FF"
+            </code>
+         </remarks>
       </member>
       <member
          name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.SByte)~Jcd.BitManipulation.BigEndianByteIndexer">
@@ -381,6 +487,19 @@
          </summary>
          <param name="data">The underlying data type.</param>
          <returns>A indexer type.</returns>
+         <remarks>
+            <para>
+               Example:
+            </para>
+            <code>
+               sbyte number = 0xDE;
+               BigEndianByteIndexer indexer = number; // implicit cast.
+
+               var b0 = indexer[0]; // b0 is 0xDE
+               indexer[0] = 0xFF;
+               var result = indexer.ToString(); // result is "FF"
+            </code>
+         </remarks>
       </member>
       <member
          name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.Single)~Jcd.BitManipulation.BigEndianByteIndexer">
@@ -391,6 +510,19 @@
          </summary>
          <param name="data">The underlying data type.</param>
          <returns>A indexer type.</returns>
+         <remarks>
+            <para>
+               Example:
+            </para>
+            <code>
+               float number = -6.259853398707798016E18f; // 0xDEADBEEF
+               BigEndianByteIndexer indexer = number; // implicit cast.
+
+               var b0 = indexer[0]; // b0 is 0xDE
+               indexer[1] = 0xFF;
+               var result = indexer.ToString(); // result is "DE FF BE EF"
+            </code>
+         </remarks>
       </member>
       <member
          name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.Double)~Jcd.BitManipulation.BigEndianByteIndexer">
@@ -401,6 +533,19 @@
          </summary>
          <param name="data">The underlying data type.</param>
          <returns>A indexer type.</returns>
+         <remarks>
+            <para>
+               Example:
+            </para>
+            <code>
+               var number = -1.1885959909993540014504278736E148; // 0xDEADBEEFFA17C0DE
+               BigEndianByteIndexer indexer = number; // implicit cast.
+
+               var b0_1 = indexer[0]; // b0 is 0xDE
+               indexer[1] = 0xFF;
+               var result = indexer.ToString(); // result is "DE FF BE EF FA 17 C0 DE"
+            </code>
+         </remarks>
       </member>
       <member
          name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Explicit(System.Byte[])~Jcd.BitManipulation.BigEndianByteIndexer">
@@ -747,7 +892,7 @@
       </member>
       <member name="F:Jcd.BitManipulation.BitMask.AllBits">
          <summary>
-            A default bitmask signifying all bits have been set.
+            A bitmask with all bits set in the mask.
          </summary>
       </member>
       <member name="F:Jcd.BitManipulation.BitMask.Byte">

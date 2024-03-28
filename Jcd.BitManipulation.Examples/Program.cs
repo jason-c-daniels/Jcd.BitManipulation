@@ -35,7 +35,7 @@ internal static class Program
       #if DEBUG
       const long iterations = 1_000_000;
       #else
-      const long iterations = 30_000_000;
+      const long iterations = 15_000_000;
       #endif
       var f = 1.33f;
       var bits = f.BitwiseToUInt32().ReadBits(0, 4);

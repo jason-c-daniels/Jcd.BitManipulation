@@ -16,7 +16,7 @@ namespace Jcd.BitManipulation;
 public readonly struct BitMask
 {
    /// <summary>
-   /// A default bitmask signifying all bits have been set.
+   /// A bitmask with all bits set in the mask.
    /// </summary>
    public static readonly BitMask AllBits = ulong.MaxValue;
 
@@ -75,7 +75,7 @@ public readonly struct BitMask
    /// <summary>
    /// The backing store for the actual bits of the <see cref="BitMask" />.
    /// </summary>
-   public readonly ulong Bits;
+   private readonly ulong Bits;
 
    #region Helpers
 

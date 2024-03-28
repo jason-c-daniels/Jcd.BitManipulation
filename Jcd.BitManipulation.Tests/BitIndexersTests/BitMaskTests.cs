@@ -26,7 +26,7 @@ public class BitMaskTests
    public void Constructor_UInt64_SetsBitsCorrectly(ulong bits)
    {
       var mask = new BitMask(bits);
-      Assert.Equal(bits, mask.Bits);
+      Assert.Equal(bits, (ulong) mask);
    }
 
    [Theory]
@@ -38,7 +38,7 @@ public class BitMaskTests
    {
       var initialMask = new BitMask(bits);
       var mask = new BitMask(initialMask);
-      Assert.Equal(bits, mask.Bits);
+      Assert.Equal(bits, (ulong) mask);
    }
 
    #endregion
@@ -55,7 +55,7 @@ public class BitMaskTests
    public void CreateRange_Creates_Correct_BitMask(int offset, int size, ulong expected)
    {
       var mask = BitMask.FromRange(offset, size);
-      Assert.Equal(expected, mask.Bits);
+      Assert.Equal(expected, (ulong) mask);
    }
 
    [Theory]
@@ -71,7 +71,7 @@ public class BitMaskTests
    public void CreateSingleBit_Creates_Correct_BitMask(int offset)
    {
       var mask = BitMask.FromSingleBit(offset);
-      Assert.Equal((ulong) 1 << offset, mask.Bits);
+      Assert.Equal(1ul << offset, (ulong) mask);
    }
 
    #endregion
@@ -86,7 +86,7 @@ public class BitMaskTests
    public void Implicit_Conversion_From_UInt64_CopiesBitsCorrectly(ulong bits)
    {
       BitMask mask = bits;
-      Assert.Equal(bits, mask.Bits);
+      Assert.Equal(bits, (ulong) mask);
    }
 
    [Theory]
@@ -97,7 +97,7 @@ public class BitMaskTests
    public void Implicit_Conversion_From_Int64_CopiesBitsCorrectly(long bits)
    {
       BitMask mask = bits;
-      Assert.Equal((ulong) bits, mask.Bits);
+      Assert.Equal(bits, (long) mask);
    }
 
    [Theory]
@@ -107,7 +107,7 @@ public class BitMaskTests
    public void Implicit_Conversion_From_UInt32_CopiesBitsCorrectly(uint bits)
    {
       BitMask mask = bits;
-      Assert.Equal(bits, mask.Bits);
+      Assert.Equal(bits, (uint) mask);
    }
 
    [Theory]
@@ -120,7 +120,7 @@ public class BitMaskTests
    public void Implicit_Conversion_From_Int32_CopiesBitsCorrectly(int bits)
    {
       BitMask mask = bits;
-      Assert.Equal((uint) bits, mask.Bits);
+      Assert.Equal(bits, (int) mask);
    }
 
    [Theory]
@@ -129,16 +129,16 @@ public class BitMaskTests
    public void Implicit_Conversion_From_UInt16_CopiesBitsCorrectly(ushort bits)
    {
       BitMask mask = bits;
-      Assert.Equal(bits, mask.Bits);
+      Assert.Equal(bits, (ulong) mask);
    }
 
    [Theory]
    [InlineData(sbyte.MaxValue)]
    [InlineData(short.MaxValue)]
-   public void Implicit_Conversion_From_Int16_CopiesBitsCorrectly(short bits)
+   public void Implicit_Conversion_From_Int16_CopiesBitsCorrectly(ushort bits)
    {
       BitMask mask = bits;
-      Assert.Equal((ushort) bits, mask.Bits);
+      Assert.Equal(bits, (ushort) mask);
    }
 
    [Theory]
@@ -147,7 +147,7 @@ public class BitMaskTests
    public void Implicit_Conversion_From_Byte_CopiesBitsCorrectly(byte bits)
    {
       BitMask mask = bits;
-      Assert.Equal(bits, mask.Bits);
+      Assert.Equal(bits, (byte) mask);
    }
 
    [Theory]
@@ -156,7 +156,7 @@ public class BitMaskTests
    public void Implicit_Conversion_From_SByte_CopiesBitsCorrectly(sbyte bits)
    {
       BitMask mask = bits;
-      Assert.Equal((byte) bits, mask.Bits);
+      Assert.Equal(bits, (sbyte) mask);
    }
 
    #endregion
@@ -171,8 +171,7 @@ public class BitMaskTests
    public void Implicit_Conversion_To_UInt64_CopiesBitsCorrectly(ulong bits)
    {
       var mask = new BitMask(bits);
-      ulong newBits = mask;
-      Assert.Equal(bits, newBits);
+      Assert.Equal(bits, (ulong) mask);
    }
 
    [Theory]
@@ -187,8 +186,7 @@ public class BitMaskTests
    public void Implicit_Conversion_To_Int64_CopiesBitsCorrectly(long bits)
    {
       var mask = new BitMask(bits);
-      long newBits = mask;
-      Assert.Equal(bits, newBits);
+      Assert.Equal(bits, (long) mask);
    }
 
    [Theory]
@@ -198,8 +196,7 @@ public class BitMaskTests
    public void Implicit_Conversion_To_UInt32_CopiesBitsCorrectly(uint bits)
    {
       var mask = new BitMask(bits);
-      uint newBits = mask;
-      Assert.Equal(bits, newBits);
+      Assert.Equal(bits, (uint) mask);
    }
 
    [Theory]
@@ -209,8 +206,7 @@ public class BitMaskTests
    public void Implicit_Conversion_To_Int32_CopiesBitsCorrectly(int bits)
    {
       var mask = new BitMask(bits);
-      int newBits = mask;
-      Assert.Equal(bits, newBits);
+      Assert.Equal(bits, (int) mask);
    }
 
    [Theory]
@@ -219,8 +215,7 @@ public class BitMaskTests
    public void Implicit_Conversion_To_UInt16_CopiesBitsCorrectly(ushort bits)
    {
       var mask = new BitMask(bits);
-      ushort newBits = mask;
-      Assert.Equal(bits, newBits);
+      Assert.Equal(bits, (ushort) mask);
    }
 
    [Theory]
@@ -229,8 +224,7 @@ public class BitMaskTests
    public void Implicit_Conversion_To_Int16_CopiesBitsCorrectly(short bits)
    {
       var mask = new BitMask(bits);
-      short newBits = mask;
-      Assert.Equal(bits, newBits);
+      Assert.Equal(bits, (short) mask);
    }
 
    [Theory]

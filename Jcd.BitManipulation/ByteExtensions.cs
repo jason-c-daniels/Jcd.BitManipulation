@@ -112,7 +112,7 @@ public static class ByteExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte ClearBits(this byte value, BitMask mask)
    {
-      return (byte) (value & (byte) ~mask.Bits);
+      return (byte) (value & (byte) ~(byte) mask);
    }
 
    /// <summary>
@@ -205,7 +205,7 @@ public static class ByteExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte SetBits(this byte value, BitMask mask)
    {
-      return (byte) (value | (byte) mask.Bits);
+      return (byte) (value | (byte) mask);
    }
 
    /// <summary>
@@ -235,7 +235,7 @@ public static class ByteExtensions
    public static byte StoreBits(this byte value, byte source, int offset, BitMask mask)
    {
       value = value.ClearBits(mask);
-      value |= (byte) ((source << offset) & (byte) mask.Bits);
+      value |= (byte) ((source << offset) & (byte) mask);
 
       return value;
    }
@@ -293,6 +293,6 @@ public static class ByteExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte ToggleBits(this byte value, BitMask mask)
    {
-      return (byte) (value ^ (byte) mask.Bits);
+      return (byte) (value ^ (byte) mask);
    }
 }

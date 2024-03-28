@@ -29,5 +29,6 @@ The offset of the bits to toggle.
 The number of bits to toggle.
 
 #### Returns
+
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 The modified value.

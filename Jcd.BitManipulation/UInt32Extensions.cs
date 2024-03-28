@@ -155,7 +155,7 @@ public static class UInt32Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static uint ReadBits(this uint value, BitMask mask)
    {
-      return (value & mask);
+      return value & mask;
    }
 
    /// <summary>

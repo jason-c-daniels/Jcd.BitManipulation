@@ -159,7 +159,7 @@ public static class UInt64Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ulong ReadBits(this ulong value, BitMask mask)
    {
-      return (value & mask);
+      return value & mask;
    }
 
    /// <summary>
@@ -216,10 +216,9 @@ public static class UInt64Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte ReadByte(this ulong value, int offset, Endian endian = Endian.Little)
    {
-      if (endian == Endian.Little)
-         return value.InternalLittleEndianReadByte(offset);
-
-      return value.InternalBigEndianReadByte(offset);
+      return endian == Endian.Little
+                ? value.InternalLittleEndianReadByte(offset)
+                : value.InternalBigEndianReadByte(offset);
    }
 
    /// <summary>
@@ -354,10 +353,9 @@ public static class UInt64Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ulong StoreByte(this ulong value, byte @byte, int offset, Endian endian = Endian.Little)
    {
-      if (endian == Endian.Little)
-         return value.InternalLittleEndianStoreByte(@byte, offset);
-
-      return value.InternalBigEndianStoreByte(@byte, offset);
+      return endian == Endian.Little
+                ? value.InternalLittleEndianStoreByte(@byte, offset)
+                : value.InternalBigEndianStoreByte(@byte, offset);
    }
 
    /// <summary>

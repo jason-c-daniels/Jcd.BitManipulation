@@ -196,7 +196,7 @@ public ref struct LittleEndianByteIndexer
    internal ulong Data
    {
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
-      readonly get;
+      get;
 
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       private set;

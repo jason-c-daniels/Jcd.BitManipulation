@@ -14,8 +14,11 @@ using System.Text;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// Provides enumeration and indexed access to the bits on a stored <see cref="ulong" />.
+/// Provides indexed access to the bits on a stored integer type, up to 64 bits.
 /// </summary>
+/// <remarks>
+/// 
+/// </remarks>
 public ref struct BitIndexer
 {
    #region Constructors
@@ -109,7 +112,7 @@ public ref struct BitIndexer
    #endregion
 
    /// <summary>
-   /// The number of bits this type will index
+   /// The number of bits indexed by this instance of the <see cref="BitIndexer"/>
    /// </summary>
    public int BitSize { get; } = 64;
 
@@ -150,10 +153,9 @@ public ref struct BitIndexer
    /// <param name="length">The number of bits to extract</param>
    /// <returns>an array of bools for the subset of bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public readonly
 
-      // ReSharper disable once ReturnTypeCanBeEnumerable.Global
-      bool[] Slice(int start, int length)
+   // ReSharper disable once ReturnTypeCanBeEnumerable.Global
+   public readonly bool[] Slice(int start, int length)
    {
       var len = length + start > BitSize
                    ? BitSize - start

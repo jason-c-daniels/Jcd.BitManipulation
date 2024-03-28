@@ -75,7 +75,7 @@ public readonly struct BitMask
    /// <summary>
    /// The backing store for the actual bits of the <see cref="BitMask" />.
    /// </summary>
-   private readonly ulong Bits;
+   private readonly ulong bits;
 
    #region Helpers
 
@@ -115,7 +115,7 @@ public readonly struct BitMask
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public BitMask(BitMask mask)
    {
-      Bits = mask.Bits;
+      bits = mask.bits;
    }
 
    /// <summary>
@@ -125,7 +125,7 @@ public readonly struct BitMask
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public BitMask(ulong bits)
    {
-      Bits = bits;
+      this.bits = bits;
    }
 
    /// <summary>
@@ -209,7 +209,7 @@ public readonly struct BitMask
    {
       const ulong highBit = (ulong) 1 << 63;
       var sb = new StringBuilder();
-      var tmp = Bits;
+      var tmp = bits;
       sb.Append("0b");
 
       for (var i = 0; i < 64; i++)
@@ -234,7 +234,7 @@ public readonly struct BitMask
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator sbyte(BitMask mask)
    {
-      return (sbyte) (mask.Bits & byte.MaxValue);
+      return (sbyte) (mask.bits & byte.MaxValue);
    }
 
    /// <summary>
@@ -245,7 +245,7 @@ public readonly struct BitMask
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator byte(BitMask mask)
    {
-      return (byte) (mask.Bits & byte.MaxValue);
+      return (byte) (mask.bits & byte.MaxValue);
    }
 
    /// <summary>
@@ -256,7 +256,7 @@ public readonly struct BitMask
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator short(BitMask mask)
    {
-      return (short) (mask.Bits & ushort.MaxValue);
+      return (short) (mask.bits & ushort.MaxValue);
    }
 
    /// <summary>
@@ -267,7 +267,7 @@ public readonly struct BitMask
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator ushort(BitMask mask)
    {
-      return (ushort) (mask.Bits & ushort.MaxValue);
+      return (ushort) (mask.bits & ushort.MaxValue);
    }
 
    /// <summary>
@@ -278,7 +278,7 @@ public readonly struct BitMask
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator int(BitMask mask)
    {
-      return (int) (mask.Bits & uint.MaxValue);
+      return (int) (mask.bits & uint.MaxValue);
    }
 
    /// <summary>
@@ -289,7 +289,7 @@ public readonly struct BitMask
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator uint(BitMask mask)
    {
-      return (uint) (mask.Bits & uint.MaxValue);
+      return (uint) (mask.bits & uint.MaxValue);
    }
 
    /// <summary>
@@ -300,7 +300,7 @@ public readonly struct BitMask
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator long(BitMask mask)
    {
-      return (long) mask.Bits;
+      return (long) mask.bits;
    }
 
    /// <summary>
@@ -311,7 +311,7 @@ public readonly struct BitMask
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator ulong(BitMask mask)
    {
-      return mask.Bits;
+      return mask.bits;
    }
 
    /// <summary>

@@ -131,7 +131,7 @@ public static class UInt16Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ushort ReadBits(this ushort value, BitMask mask)
    {
-      return (ushort) (value & mask);
+      return (ushort) (value & (ushort) mask);
    }
 
    /// <summary>

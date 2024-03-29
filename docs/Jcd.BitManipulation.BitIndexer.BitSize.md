@@ -2,7 +2,8 @@
 
 ## BitIndexer.BitSize Property
 
-The number of bits this type will index
+The number of bits indexed by this instance of
+the [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')
 
 ```csharp
 public readonly int BitSize { get; }

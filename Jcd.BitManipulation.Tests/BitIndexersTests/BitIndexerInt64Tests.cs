@@ -40,7 +40,7 @@ public class BitIndexerInt64Tests
       BitIndexer indexer = data;
       long bits = indexer;
 
-      Assert.Equal((long) indexer, bits);
+      Assert.Equal(data, bits);
    }
 
    [Theory]
@@ -77,13 +77,6 @@ public class BitIndexerInt64Tests
       Assert.True(indexer[index]);
       indexer[index] = false;
       Assert.False(indexer[index]);
-   }
-
-   [Fact]
-   public void Enumerator_Enumerates_Correct_Number_Of_Bits()
-   {
-      BitIndexer indexer = 0x7Eul;
-      Assert.Equal(64, indexer.Length);
    }
 
    [Theory]

@@ -222,9 +222,9 @@ public class ReadBitsExtensionsTests
    [InlineData(0b11100111 << 8,  15, true)]
    [InlineData(0b11100111 << 24, 27, false)]
    [InlineData(0b11100111 << 24, 31, true)]
-   public void ReadBit_For_Int32_Reads_The_Correct_Value(uint bits, int offset, bool expected)
+   public void ReadBit_For_Int32_Reads_The_Correct_Value(int bits, int offset, bool expected)
    {
-      Assert.Equal(expected, ((int) bits).ReadBit(offset));
+      Assert.Equal(expected, bits.ReadBit(offset));
    }
 
    [Theory]

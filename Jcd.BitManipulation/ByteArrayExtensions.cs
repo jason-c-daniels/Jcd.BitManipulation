@@ -160,7 +160,7 @@ public static class ByteArrayExtensions
    }
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   private static uint GetBigEndianUInt32(byte[] data, int len)
+   internal static uint GetBigEndianUInt32(byte[] data, int len)
    {
       uint result = 0;
       var i = 0;
@@ -191,7 +191,7 @@ public static class ByteArrayExtensions
    }
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   private static uint GetLittleEndianUInt32(byte[] data, int len)
+   internal static uint GetLittleEndianUInt32(byte[] data, int len)
    {
       uint result = 0;
       var i = 0;
@@ -270,7 +270,7 @@ public static class ByteArrayExtensions
    }
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   private static ulong GetBigEndianUInt64(byte[] data, int len)
+   internal static ulong GetBigEndianUInt64(byte[] data, int len)
    {
       ulong result = 0;
       var i = 0;
@@ -329,7 +329,7 @@ public static class ByteArrayExtensions
    }
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   private static ulong GetLittleEndianUInt64(byte[] data, int len)
+   internal static ulong GetLittleEndianUInt64(byte[] data, int len)
    {
       ulong result = 0;
       var i = 0;

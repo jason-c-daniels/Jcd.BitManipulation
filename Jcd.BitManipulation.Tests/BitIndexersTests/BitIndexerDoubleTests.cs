@@ -75,13 +75,6 @@ public class BitIndexerDoubleTests
       Assert.False(indexer[index]);
    }
 
-   [Fact]
-   public void Enumerator_Enumerates_Correct_Number_Of_Bits()
-   {
-      BitIndexer indexer = 0x7Eul.BitwiseToDouble();
-      Assert.Equal(64, indexer.Length);
-   }
-
    [Theory]
    [InlineData(0b0000000000000000000000000000000000000000000000000000000000000100, "0b0000000000000000000000000000000000000000000000000000000000000100")]
    [InlineData(0b0010000000011100000000000000000000000000000000000000000000000000, "0b0010000000011100000000000000000000000000000000000000000000000000")]

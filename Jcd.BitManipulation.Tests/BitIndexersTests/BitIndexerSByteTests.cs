@@ -38,7 +38,6 @@ public class BitIndexerSByteTests
    [InlineData(0b00011000)]
    public void Implicit_Operator_From_BitIndexerSByte_To_Byte_Sets_All_Bits_Correctly(sbyte data)
    {
-      // HACK: Type binder for xUnit hates bytes as params. Coerce the value here.
       BitIndexer indexer = data;
       sbyte bits = indexer;
 

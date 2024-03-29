@@ -2,7 +2,7 @@
 
 ## BitMask.implicit operator short(BitMask) Operator
 
-Automatically convert to [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16') from
+Automatically convert to a [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16') from
 a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
 ```csharp

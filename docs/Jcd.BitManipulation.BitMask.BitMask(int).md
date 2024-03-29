@@ -14,4 +14,4 @@ public BitMask(int bits);
 
 `bits` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') to use
+The bits to use for the [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')

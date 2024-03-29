@@ -14,4 +14,4 @@ public BitMask(long bits);
 
 `bits` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 
-The [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') to use
+The bits to use for the [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')

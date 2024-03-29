@@ -2,18 +2,19 @@
 
 ## BitIndexer Struct
 
-Provides enumeration and indexed access to the bits on a
-stored [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64').
+Provides indexed access to the bits on a stored integer type, up to 64 bits.
 
 ```csharp
 public ref struct BitIndexer
 ```
 
-| Properties                                                                                          |                                                        |
-|:----------------------------------------------------------------------------------------------------|:-------------------------------------------------------|
-| [BitSize](Jcd.BitManipulation.BitIndexer.BitSize.md 'Jcd.BitManipulation.BitIndexer.BitSize')       | The number of bits this type will index                |
-| [Length](Jcd.BitManipulation.BitIndexer.Length.md 'Jcd.BitManipulation.BitIndexer.Length')          | The number of bits indexable by this indexer.          |
-| [this[int]](Jcd.BitManipulation.BitIndexer.this[int].md 'Jcd.BitManipulation.BitIndexer.this[int]') | Gets or sets individual bits within the backing store. |
+### Remarks
+
+| Properties                                                                                          |                                                                                                                                     |
+|:----------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------|
+| [BitSize](Jcd.BitManipulation.BitIndexer.BitSize.md 'Jcd.BitManipulation.BitIndexer.BitSize')       | The number of bits indexed by this instance of the [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer') |
+| [Length](Jcd.BitManipulation.BitIndexer.Length.md 'Jcd.BitManipulation.BitIndexer.Length')          | The number of bits indexable by this indexer.                                                                                       |
+| [this[int]](Jcd.BitManipulation.BitIndexer.this[int].md 'Jcd.BitManipulation.BitIndexer.this[int]') | Gets or sets individual bits within the backing store.                                                                              |
 
 | Methods                                                                                                              |                                                          |
 |:---------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------|

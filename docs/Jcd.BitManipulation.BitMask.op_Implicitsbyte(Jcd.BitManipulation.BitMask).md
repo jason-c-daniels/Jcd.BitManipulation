@@ -2,7 +2,7 @@
 
 ## BitMask.implicit operator sbyte(BitMask) Operator
 
-Automatically convert to [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte') from
+Automatically convert to an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte') from
 a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
 ```csharp

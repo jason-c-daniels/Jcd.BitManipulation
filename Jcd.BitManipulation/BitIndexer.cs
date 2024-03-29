@@ -27,7 +27,7 @@ public ref struct BitIndexer
    private BitIndexer(ulong bits, int bitSize = 64)
    {
       BitSize = bitSize;
-      Bits = bits;
+      this.bits = bits;
    }
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -92,7 +92,7 @@ public ref struct BitIndexer
    private BitIndexer(IReadOnlyList<bool> array, int bitSize)
    {
       BitSize = bitSize;
-      Bits = 0;
+      bits = 0;
 
       for (var i = 0; i < array.Count && i < BitSize; i++)
          this[i] = array[i];
@@ -120,7 +120,7 @@ public ref struct BitIndexer
    /// The backing store
    /// </summary>
    /// <exclude />
-   internal ulong Bits { get; private set; } = 0UL;
+   private ulong bits;
 
    /// <summary>
    /// The number of bits indexable by this indexer.
@@ -134,7 +134,7 @@ public ref struct BitIndexer
    public bool this[int index]
    {
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
-      readonly get => index < BitSize && Bits.ReadBit(index);
+      readonly get => index < BitSize && bits.ReadBit(index);
 
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       set
@@ -142,7 +142,7 @@ public ref struct BitIndexer
          if (index >= BitSize)
             return;
 
-         Bits = Bits.StoreBit(value, index);
+         bits = bits.StoreBit(value, index);
       }
    }
 
@@ -163,7 +163,7 @@ public ref struct BitIndexer
       var slice = new bool[len];
       var j = start;
       for (var i = 0; i < len; i++, j++)
-         slice[i] = Bits.ReadBit(j);
+         slice[i] = bits.ReadBit(j);
 
       return slice;
    }
@@ -189,7 +189,7 @@ public ref struct BitIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator double(BitIndexer indexer)
    {
-      return indexer.Bits.BitwiseToDouble();
+      return indexer.bits.BitwiseToDouble();
    }
 
    /// <summary>
@@ -233,7 +233,7 @@ public ref struct BitIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator ulong(BitIndexer indexer)
    {
-      return indexer.Bits;
+      return indexer.bits;
    }
 
    /// <summary>
@@ -255,7 +255,7 @@ public ref struct BitIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator long(BitIndexer indexer)
    {
-      return (long) indexer.Bits;
+      return (long) indexer.bits;
    }
 
    /// <summary>
@@ -277,7 +277,7 @@ public ref struct BitIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator uint(BitIndexer indexer)
    {
-      return (uint) indexer.Bits;
+      return (uint) indexer.bits;
    }
 
    /// <summary>
@@ -299,7 +299,7 @@ public ref struct BitIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator int(BitIndexer indexer)
    {
-      return (int) (uint) indexer.Bits;
+      return (int) (uint) indexer.bits;
    }
 
    /// <summary>
@@ -321,7 +321,7 @@ public ref struct BitIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator ushort(BitIndexer indexer)
    {
-      return (ushort) indexer.Bits;
+      return (ushort) indexer.bits;
    }
 
    /// <summary>
@@ -343,7 +343,7 @@ public ref struct BitIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator short(BitIndexer indexer)
    {
-      return (short) (ushort) indexer.Bits;
+      return (short) (ushort) indexer.bits;
    }
 
    /// <summary>
@@ -365,7 +365,7 @@ public ref struct BitIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator sbyte(BitIndexer indexer)
    {
-      return (sbyte) indexer.Bits;
+      return (sbyte) indexer.bits;
    }
 
    /// <summary>
@@ -387,7 +387,7 @@ public ref struct BitIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator byte(BitIndexer indexer)
    {
-      return (byte) (sbyte) indexer.Bits;
+      return (byte) (sbyte) indexer.bits;
    }
 
    /// <summary>
@@ -428,7 +428,7 @@ public ref struct BitIndexer
       sb.Append("0b");
 
       for (var i = BitSize - 1; i >= 0; i--)
-         sb.Append(Bits.ReadBits(i, 1));
+         sb.Append(bits.ReadBits(i, 1));
 
       return sb.ToString();
    }

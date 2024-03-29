@@ -598,15 +598,19 @@
       </member>
       <member name="T:Jcd.BitManipulation.BitIndexer">
          <summary>
-            Provides enumeration and indexed access to the bits on a stored<see cref="T:System.UInt64"/>.
+            Provides indexed access to the bits on a stored integer type, up to 64 bits.
          </summary>
+         <remarks>
+
+         </remarks>
       </member>
       <member name="P:Jcd.BitManipulation.BitIndexer.BitSize">
          <summary>
-            The number of bits this type will index
+            The number of bits indexed by this instance of the
+            <see cref="T:Jcd.BitManipulation.BitIndexer"/>
          </summary>
       </member>
-      <member name="P:Jcd.BitManipulation.BitIndexer.Bits">
+      <member name="F:Jcd.BitManipulation.BitIndexer.bits">
          <summary>
             The backing store
          </summary>
@@ -943,10 +947,11 @@
          </summary>
          <exclude/>
       </member>
-      <member name="F:Jcd.BitManipulation.BitMask.Bits">
+      <member name="F:Jcd.BitManipulation.BitMask.bits">
          <summary>
             The backing store for the actual bits of the<see cref="T:Jcd.BitManipulation.BitMask"/>.
          </summary>
+         <exclude/>
       </member>
       <member name="M:Jcd.BitManipulation.BitMask.FromRange(System.Int32,System.Int32)">
          <summary>
@@ -987,9 +992,8 @@
             from a
             <see cref="T:System.UInt64"/>
          </summary>
-         <param name="bits">The
+         <param name="bits">The bits to use for the
             <see cref="T:Jcd.BitManipulation.BitMask"/>
-            to use
          </param>
       </member>
       <member name="M:Jcd.BitManipulation.BitMask.#ctor(System.Int64)">
@@ -999,9 +1003,8 @@
             from a
             <see cref="T:System.Int64"/>
          </summary>
-         <param name="bits">The
+         <param name="bits">The bits to use for the
             <see cref="T:Jcd.BitManipulation.BitMask"/>
-            to use
          </param>
       </member>
       <member name="M:Jcd.BitManipulation.BitMask.#ctor(System.UInt32)">
@@ -1011,9 +1014,8 @@
             from a
             <see cref="T:System.UInt32"/>
          </summary>
-         <param name="bits">The
+         <param name="bits">The bits to use for the
             <see cref="T:Jcd.BitManipulation.BitMask"/>
-            to use
          </param>
       </member>
       <member name="M:Jcd.BitManipulation.BitMask.#ctor(System.Int32)">
@@ -1023,9 +1025,8 @@
             from an
             <see cref="T:System.Int32"/>
          </summary>
-         <param name="bits">The
+         <param name="bits">The bits to use for the
             <see cref="T:Jcd.BitManipulation.BitMask"/>
-            to use
          </param>
       </member>
       <member name="M:Jcd.BitManipulation.BitMask.#ctor(System.UInt16)">
@@ -1035,9 +1036,8 @@
             from a
             <see cref="T:System.UInt16"/>
          </summary>
-         <param name="bits">The
+         <param name="bits">The bits to use for the
             <see cref="T:Jcd.BitManipulation.BitMask"/>
-            to use
          </param>
       </member>
       <member name="M:Jcd.BitManipulation.BitMask.#ctor(System.Int16)">
@@ -1047,9 +1047,8 @@
             from a
             <see cref="T:System.Int16"/>
          </summary>
-         <param name="bits">The
+         <param name="bits">The bits to use for the
             <see cref="T:Jcd.BitManipulation.BitMask"/>
-            to use
          </param>
       </member>
       <member name="M:Jcd.BitManipulation.BitMask.#ctor(System.Byte)">
@@ -1059,9 +1058,8 @@
             from a
             <see cref="T:System.Byte"/>
          </summary>
-         <param name="bits">The
+         <param name="bits">The bits to use for the
             <see cref="T:Jcd.BitManipulation.BitMask"/>
-            to use
          </param>
       </member>
       <member name="M:Jcd.BitManipulation.BitMask.#ctor(System.SByte)">
@@ -1071,9 +1069,8 @@
             from an
             <see cref="T:System.SByte"/>
          </summary>
-         <param name="bits">The
+         <param name="bits">The bits to use for the
             <see cref="T:Jcd.BitManipulation.BitMask"/>
-            to use
          </param>
       </member>
       <member name="M:Jcd.BitManipulation.BitMask.ToString">
@@ -1086,7 +1083,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.BitMask.op_Implicit(Jcd.BitManipulation.BitMask)~System.SByte">
          <summary>
-            Automatically convert to
+            Automatically convert to an
             <see cref="T:System.SByte"/>
             from a
             <see cref="T:Jcd.BitManipulation.BitMask"/>
@@ -1101,7 +1098,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.BitMask.op_Implicit(Jcd.BitManipulation.BitMask)~System.Byte">
          <summary>
-            Automatically convert to
+            Automatically convert to a
             <see cref="T:System.Byte"/>
             from a
             <see cref="T:Jcd.BitManipulation.BitMask"/>
@@ -1116,7 +1113,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.BitMask.op_Implicit(Jcd.BitManipulation.BitMask)~System.Int16">
          <summary>
-            Automatically convert to
+            Automatically convert to a
             <see cref="T:System.Int16"/>
             from a
             <see cref="T:Jcd.BitManipulation.BitMask"/>
@@ -1207,9 +1204,9 @@
          <param name="bits">the value to convert to a
             <see cref="T:Jcd.BitManipulation.BitMask"/>
          </param>
-         <returns>the
+         <returns>The
             <see cref="T:Jcd.BitManipulation.BitMask"/>
-            object constructed from the bits
+            constructed from the provided bits
          </returns>
       </member>
       <member name="M:Jcd.BitManipulation.BitMask.op_Implicit(System.Int16)~Jcd.BitManipulation.BitMask">
@@ -1220,9 +1217,9 @@
             <see cref="T:System.Byte"/>
          </summary>
          <param name="bits">the value to convert to a BitMask</param>
-         <returns>the
+         <returns>The
             <see cref="T:Jcd.BitManipulation.BitMask"/>
-            object constructed from the bits
+            constructed from the provided bits
          </returns>
       </member>
       <member name="M:Jcd.BitManipulation.BitMask.op_Implicit(System.Int32)~Jcd.BitManipulation.BitMask">
@@ -1235,9 +1232,9 @@
          <param name="bits">the value to convert to a
             <see cref="T:Jcd.BitManipulation.BitMask"/>
          </param>
-         <returns>the
+         <returns>The
             <see cref="T:Jcd.BitManipulation.BitMask"/>
-            object constructed from the bits
+            constructed from the provided bits
          </returns>
       </member>
       <member name="M:Jcd.BitManipulation.BitMask.op_Implicit(System.Int64)~Jcd.BitManipulation.BitMask">
@@ -1250,9 +1247,9 @@
          <param name="bits">the value to convert to a
             <see cref="T:Jcd.BitManipulation.BitMask"/>
          </param>
-         <returns>the
+         <returns>The
             <see cref="T:Jcd.BitManipulation.BitMask"/>
-            object constructed from the bits
+            constructed from the provided bits
          </returns>
       </member>
       <member name="M:Jcd.BitManipulation.BitMask.op_Implicit(System.Byte)~Jcd.BitManipulation.BitMask">
@@ -1265,9 +1262,9 @@
          <param name="bits">the value to convert to a
             <see cref="T:Jcd.BitManipulation.BitMask"/>
          </param>
-         <returns>the
+         <returns>The
             <see cref="T:Jcd.BitManipulation.BitMask"/>
-            object constructed from the bits
+            constructed from the provided bits
          </returns>
       </member>
       <member name="M:Jcd.BitManipulation.BitMask.op_Implicit(System.UInt16)~Jcd.BitManipulation.BitMask">
@@ -1280,9 +1277,9 @@
          <param name="bits">the value to convert to a
             <see cref="T:Jcd.BitManipulation.BitMask"/>
          </param>
-         <returns>the
+         <returns>The
             <see cref="T:Jcd.BitManipulation.BitMask"/>
-            object constructed from the bits
+            constructed from the provided bits
          </returns>
       </member>
       <member name="M:Jcd.BitManipulation.BitMask.op_Implicit(System.UInt32)~Jcd.BitManipulation.BitMask">
@@ -1295,9 +1292,9 @@
          <param name="bits">the value to convert to a
             <see cref="T:Jcd.BitManipulation.BitMask"/>
          </param>
-         <returns>the
+         <returns>The
             <see cref="T:Jcd.BitManipulation.BitMask"/>
-            object constructed from the bits
+            constructed from the provided bits
          </returns>
       </member>
       <member name="M:Jcd.BitManipulation.BitMask.op_Implicit(System.UInt64)~Jcd.BitManipulation.BitMask">
@@ -1310,9 +1307,9 @@
          <param name="bits">the value to convert to a
             <see cref="T:Jcd.BitManipulation.BitMask"/>
          </param>
-         <returns>the
+         <returns>The
             <see cref="T:Jcd.BitManipulation.BitMask"/>
-            object constructed from the bits
+            constructed from the provided bits
          </returns>
       </member>
       <member name="T:Jcd.BitManipulation.BooleanArrayExtensions">
@@ -1324,7 +1321,7 @@
          <summary>
             Converts an array of bools into a<see cref="T:System.Byte"/>, discarding any excess bits.
          </summary>
-         <param name="bits">the array of bools to convert, Least Significant Bit at index 0</param>
+         <param name="bits">the array of bools to convert. Least Significant Bit at index 0</param>
          <returns>The converted
             <see cref="T:System.Byte"/>
          </returns>
@@ -1333,7 +1330,7 @@
          <summary>
             Converts an array of bools into an<see cref="T:System.SByte"/>, discarding any excess bits.
          </summary>
-         <param name="bits">the array of bools to convert, Least Significant Bit at index 0</param>
+         <param name="bits">the array of bools to convert. Least Significant Bit at index 0</param>
          <returns>The converted
             <see cref="T:System.SByte"/>
          </returns>
@@ -1342,7 +1339,7 @@
          <summary>
             Converts an array of bools into a<see cref="T:System.UInt16"/>, discarding any excess bits.
          </summary>
-         <param name="bits">the array of bools to convert, Least Significant Bit at index 0</param>
+         <param name="bits">the array of bools to convert. Least Significant Bit at index 0</param>
          <returns>The converted
             <see cref="T:System.UInt16"/>
          </returns>
@@ -1351,7 +1348,7 @@
          <summary>
             Converts an array of bools into a<see cref="T:System.Int16"/>, discarding any excess bits.
          </summary>
-         <param name="bits">the array of bools to convert, Least Significant Bit at index 0</param>
+         <param name="bits">the array of bools to convert. Least Significant Bit at index 0</param>
          <returns>The converted
             <see cref="T:System.Int16"/>
          </returns>
@@ -1360,7 +1357,7 @@
          <summary>
             Converts an array of bools into a<see cref="T:System.UInt32"/>, discarding any excess bits.
          </summary>
-         <param name="bits">the array of bools to convert, Least Significant Bit at index 0</param>
+         <param name="bits">the array of bools to convert. Least Significant Bit at index 0</param>
          <returns>The converted
             <see cref="T:System.UInt32"/>
          </returns>
@@ -1369,7 +1366,7 @@
          <summary>
             Converts an array of bools into an<see cref="T:System.Int32"/>, discarding any excess bits.
          </summary>
-         <param name="bits">the array of bools to convert, Least Significant Bit at index 0</param>
+         <param name="bits">the array of bools to convert. Least Significant Bit at index 0</param>
          <returns>The converted
             <see cref="T:System.Int32"/>
          </returns>
@@ -1378,7 +1375,7 @@
          <summary>
             Converts an array of bools into a<see cref="T:System.UInt64"/>, discarding any excess bits.
          </summary>
-         <param name="bits">the array of bools to convert, Least Significant Bit at index 0</param>
+         <param name="bits">the array of bools to convert. Least Significant Bit at index 0</param>
          <returns>The converted
             <see cref="T:System.UInt64"/>
          </returns>
@@ -1387,7 +1384,7 @@
          <summary>
             Converts an array of bools into a<see cref="T:System.Int64"/>, discarding any excess bits.
          </summary>
-         <param name="bits">the array of bools to convert, Least Significant Bit at index 0</param>
+         <param name="bits">the array of bools to convert. Least Significant Bit at index 0</param>
          <returns>The converted
             <see cref="T:System.Int64"/>
          </returns>
@@ -1396,14 +1393,14 @@
          <summary>
             Converts an array of bools into a double, discarding any excess bits.
          </summary>
-         <param name="bits">the array of bools to convert, LSB at index 0</param>
+         <param name="bits">the array of bools to convert. Least Significant Bit at index 0</param>
          <returns>The converted double</returns>
       </member>
       <member name="M:Jcd.BitManipulation.BooleanArrayExtensions.ToSingle(System.Boolean[])">
          <summary>
             Converts an array of bools into a float, discarding any excess bits.
          </summary>
-         <param name="bits">the array of bools to convert, LSB at index 0</param>
+         <param name="bits">the array of bools to convert. Least Significant Bit at index 0</param>
          <returns>The converted float</returns>
       </member>
       <member name="T:Jcd.BitManipulation.ByteArrayExtensions">

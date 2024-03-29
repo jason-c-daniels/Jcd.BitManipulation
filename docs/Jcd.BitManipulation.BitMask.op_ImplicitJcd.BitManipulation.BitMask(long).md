@@ -19,4 +19,4 @@ the value to convert to a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManip
 #### Returns
 
 [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
-the [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') object constructed from the bits
+The [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') constructed from the provided bits

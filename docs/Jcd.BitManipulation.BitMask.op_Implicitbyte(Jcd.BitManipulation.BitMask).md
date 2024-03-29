@@ -2,7 +2,7 @@
 
 ## BitMask.implicit operator byte(BitMask) Operator
 
-Automatically convert to [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') from
+Automatically convert to a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') from
 a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
 ```csharp

@@ -37,11 +37,10 @@ public class BitIndexerUInt16Tests
    [InlineData(0b00011000)]
    public void Implicit_Operator_From_BitIndexerUInt16_To_UInt16_Sets_All_Bits_Correctly(ushort data)
    {
-      // HACK: Type binder for xUnit hates bytes as params. Coerce the value here.
       BitIndexer indexer = data;
       ushort bits = indexer;
 
-      Assert.Equal(indexer.Bits, bits);
+      Assert.Equal(data, bits);
    }
 
    [Theory]

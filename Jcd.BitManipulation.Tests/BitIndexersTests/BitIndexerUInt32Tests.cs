@@ -27,7 +27,7 @@ public class BitIndexerUInt32Tests
    public void Implicit_Operator_To_BitIndexerUInt32_From_UInt32_Sets_All_Bits_Correctly(uint data)
    {
       BitIndexer indexer = data;
-      Assert.Equal(data, indexer.Bits);
+      Assert.Equal(data, (uint) indexer);
    }
 
    [Theory]
@@ -40,7 +40,7 @@ public class BitIndexerUInt32Tests
       BitIndexer indexer = data;
       uint bits = indexer;
 
-      Assert.Equal(indexer.Bits, bits);
+      Assert.Equal(data, bits);
    }
 
    [Theory]

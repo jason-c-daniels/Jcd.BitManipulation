@@ -10,10 +10,6 @@ the stored bytes. Index zero is the most significant byte.
 public ref struct BigEndianByteIndexer
 ```
 
-| Fields | |
-| :--- | :--- |
-| [data](Jcd.BitManipulation.BigEndianByteIndexer.data.md 'Jcd.BitManipulation.BigEndianByteIndexer.data') | The backing store. |
-
 | Properties | |
 | :--- | :--- |
 | [Length](Jcd.BitManipulation.BigEndianByteIndexer.Length.md 'Jcd.BitManipulation.BigEndianByteIndexer.Length') | The number of indexable bytes. |

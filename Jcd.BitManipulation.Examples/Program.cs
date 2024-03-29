@@ -38,7 +38,7 @@ internal static class Program
       #endif
       var f = 1.33f;
       var bits = f.BitwiseToUInt32().ReadBits(0, 4);
-      var ul = 0xFFFEFDFEFCFBFAF9;
+      var ul = 0xDECAFFC0FFEEC0DE;
       var ulbi = (BigEndianByteIndexer) ul;
       var b0 = ulbi[0];
       var b1 = ulbi[1];

@@ -128,6 +128,7 @@
             <summary>
             The backing store.
             </summary>
+           <exclude/>
         </member>
         <member name="P:Jcd.BitManipulation.BigEndianByteIndexer.Item(System.Int32)">
             <summary>
@@ -223,190 +224,215 @@
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Explicit(Jcd.BitManipulation.BigEndianByteIndexer)~System.ReadOnlySpan{System.Byte}">
             <summary>
-            Explicitly converts the <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> to a <see cref="T:System.ReadOnlySpan`1"/> of bytes.
+               Explicitly converts the
+               <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
+               to a
+               <see cref="T:System.ReadOnlySpan`1"/>
+               of bytes.
             </summary>
             <param name="indexer">The indexer to convert.</param>
             <returns>The raw data converted to an array, serialized as big endian.</returns>
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.UInt64)~Jcd.BitManipulation.BigEndianByteIndexer">
-             <summary>
-             Implicitly converts a <see cref="T:System.UInt64" /> to a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.
-             </summary>
-             <param name="data">The initial data for the indexer.</param>
-             <returns>The newly created <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.</returns>
-             <remarks>
-             <para>
-             Example:
-             </para>
-             <code>
-             ulong number = 0xDEADBEEFFA17C0DE;
-             BigEndianByteIndexer indexer = number; // implicit cast.
-            
-             var b0 = indexer[0]; // b0 is 0xDE
-             indexer[1] = 0xFF;
-             var result = indexer.ToString(); // result is "DE FF BE EF FA 17 C0 DE"
-             </code>
-             </remarks>
+           <summary>
+              Implicitly converts a
+              <see cref="T:System.UInt64"/>
+              to a<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
+           </summary>
+           <param name="data">The initial data for the indexer.</param>
+           <returns>The newly created<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
+           </returns>
+           <remarks>
+              <para>
+                 Example:
+              </para>
+              <code>
+                 ulong number = 0xDEADBEEFFA17C0DE;
+                 BigEndianByteIndexer indexer = number; // implicit cast.
+
+                 var b0 = indexer[0]; // b0 is 0xDE
+                 indexer[1] = 0xFF;
+                 var result = indexer.ToString(); // result is "DE FF BE EF FA 17 C0 DE"
+              </code>
+           </remarks>
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.Int64)~Jcd.BitManipulation.BigEndianByteIndexer">
-             <summary>
-             Implicitly converts an <see cref="T:System.Int64" /> to a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.
-             </summary>
-             <param name="data">The underlying data type.</param>
-             <returns>The newly created <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.</returns>
-             <remarks>
-             <para>
-             Example:
-             </para>
-             <code>
-             long number = 0x7EADBEEFFA17C0DE;
-             BigEndianByteIndexer indexer = number; // implicit cast.
-            
-             var b0 = indexer[0]; // b0 is 0x7E
-             indexer[1] = 0xFF;
-             var result = indexer.ToString(); // result is "7E FF BE EF FA 17 C0 DE"
-             </code>
-             </remarks>
+           <summary>
+              Implicitly converts an
+              <see cref="T:System.Int64"/>
+              to a<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
+           </summary>
+           <param name="data">The underlying data type.</param>
+           <returns>The newly created<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
+           </returns>
+           <remarks>
+              <para>
+                 Example:
+              </para>
+              <code>
+                 long number = 0x7EADBEEFFA17C0DE;
+                 BigEndianByteIndexer indexer = number; // implicit cast.
+
+                 var b0 = indexer[0]; // b0 is 0x7E
+                 indexer[1] = 0xFF;
+                 var result = indexer.ToString(); // result is "7E FF BE EF FA 17 C0 DE"
+              </code>
+           </remarks>
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.UInt32)~Jcd.BitManipulation.BigEndianByteIndexer">
-             <summary>
-             Implicitly converts a <see cref="T:System.UInt32" /> to a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.
-             </summary>
-             <param name="data">The underlying data type.</param>
-             <returns>The newly created <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.</returns>
-             <remarks>
-             <para>
-             Example:
-             </para>
-             <code>
-             uint number = 0xDEADBEEF;
-             BigEndianByteIndexer indexer = number; // implicit cast.
-            
-             var b0 = indexer[0]; // b0 is 0xDE
-             indexer[1] = 0xFF;
-             var result = indexer.ToString(); // result is "DE FF BE EF"
-             </code>
-             </remarks>
+           <summary>
+              Implicitly converts a
+              <see cref="T:System.UInt32"/>
+              to a<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
+           </summary>
+           <param name="data">The underlying data type.</param>
+           <returns>The newly created<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
+           </returns>
+           <remarks>
+              <para>
+                 Example:
+              </para>
+              <code>
+                 uint number = 0xDEADBEEF;
+                 BigEndianByteIndexer indexer = number; // implicit cast.
+
+                 var b0 = indexer[0]; // b0 is 0xDE
+                 indexer[1] = 0xFF;
+                 var result = indexer.ToString(); // result is "DE FF BE EF"
+              </code>
+           </remarks>
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.Int32)~Jcd.BitManipulation.BigEndianByteIndexer">
-             <summary>
-             Implicitly converts a <see cref="T:System.Int32" /> to a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.
-             </summary>
-             <param name="data">The underlying data type.</param>
-             <returns>A indexer type.</returns>
-             <remarks>
-             <para>
-             Example:
-             </para>
-             <code>
-             int number = 0x7EADBEEF;
-             BigEndianByteIndexer indexer = number; // implicit cast.
-            
-             var b0 = indexer[0]; // b0 is 0xDE
-             indexer[1] = 0xFF;
-             var result = indexer.ToString(); // result is "7E FF BE EF"
-             </code>
-             </remarks>
+           <summary>
+              Implicitly converts a
+              <see cref="T:System.Int32"/>
+              to a<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
+           </summary>
+           <param name="data">The underlying data type.</param>
+           <returns>A indexer type.</returns>
+           <remarks>
+              <para>
+                 Example:
+              </para>
+              <code>
+                 int number = 0x7EADBEEF;
+                 BigEndianByteIndexer indexer = number; // implicit cast.
+
+                 var b0 = indexer[0]; // b0 is 0xDE
+                 indexer[1] = 0xFF;
+                 var result = indexer.ToString(); // result is "7E FF BE EF"
+              </code>
+           </remarks>
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.UInt16)~Jcd.BitManipulation.BigEndianByteIndexer">
-             <summary>
-             Implicitly converts a <see cref="T:System.UInt16" /> to a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.
-             </summary>
-             <param name="data">The underlying data type.</param>
-             <returns>A indexer type.</returns>
-             <remarks>
-             <para>
-             Example:
-             </para>
-             <code>
-             ushort number = 0xDEAD;
-             BigEndianByteIndexer indexer = number; // implicit cast.
-            
-             var b0 = indexer[0]; // b0 is 0xDE
-             indexer[1] = 0xFF;
-             var result = indexer.ToString(); // result is "DE FF"
-             </code>
-             </remarks>
+           <summary>
+              Implicitly converts a
+              <see cref="T:System.UInt16"/>
+              to a<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
+           </summary>
+           <param name="data">The underlying data type.</param>
+           <returns>A indexer type.</returns>
+           <remarks>
+              <para>
+                 Example:
+              </para>
+              <code>
+                 ushort number = 0xDEAD;
+                 BigEndianByteIndexer indexer = number; // implicit cast.
+
+                 var b0 = indexer[0]; // b0 is 0xDE
+                 indexer[1] = 0xFF;
+                 var result = indexer.ToString(); // result is "DE FF"
+              </code>
+           </remarks>
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.Int16)~Jcd.BitManipulation.BigEndianByteIndexer">
-             <summary>
-             Implicitly converts a <see cref="T:System.Int16" /> to a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.
-             </summary>
-             <param name="data">The underlying data type.</param>
-             <returns>A indexer type.</returns>
-             <remarks>
-             <para>
-             Example:
-             </para>
-             <code>
-             short number = 0x7EAD;
-             BigEndianByteIndexer indexer = number; // implicit cast.
-            
-             var b0 = indexer[0]; // b0 is 0xDE
-             indexer[1] = 0xFF;
-             var result = indexer.ToString(); // result is "7E FF"
-             </code>
-             </remarks>
+           <summary>
+              Implicitly converts a
+              <see cref="T:System.Int16"/>
+              to a<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
+           </summary>
+           <param name="data">The underlying data type.</param>
+           <returns>A indexer type.</returns>
+           <remarks>
+              <para>
+                 Example:
+              </para>
+              <code>
+                 short number = 0x7EAD;
+                 BigEndianByteIndexer indexer = number; // implicit cast.
+
+                 var b0 = indexer[0]; // b0 is 0xDE
+                 indexer[1] = 0xFF;
+                 var result = indexer.ToString(); // result is "7E FF"
+              </code>
+           </remarks>
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.Byte)~Jcd.BitManipulation.BigEndianByteIndexer">
-             <summary>
-             Implicitly converts a <see cref="T:System.Byte" /> to a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.
-             </summary>
-             <param name="data">The underlying data type.</param>
-             <returns>A indexer type.</returns>
-             <remarks>
-             <para>
-             Example:
-             </para>
-             <code>
-             byte number = 0xDE;
-             BigEndianByteIndexer indexer = number; // implicit cast.
-            
-             var b0 = indexer[0]; // b0 is 0xDE
-             indexer[0] = 0xFF;
-             var result = indexer.ToString(); // result is "FF"
-             </code>
-             </remarks>
+           <summary>
+              Implicitly converts a
+              <see cref="T:System.Byte"/>
+              to a<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
+           </summary>
+           <param name="data">The underlying data type.</param>
+           <returns>A indexer type.</returns>
+           <remarks>
+              <para>
+                 Example:
+              </para>
+              <code>
+                 byte number = 0xDE;
+                 BigEndianByteIndexer indexer = number; // implicit cast.
+
+                 var b0 = indexer[0]; // b0 is 0xDE
+                 indexer[0] = 0xFF;
+                 var result = indexer.ToString(); // result is "FF"
+              </code>
+           </remarks>
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.SByte)~Jcd.BitManipulation.BigEndianByteIndexer">
-             <summary>
-             Implicitly converts an <see cref="T:System.SByte" /> to a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.
-             </summary>
-             <param name="data">The underlying data type.</param>
-             <returns>A indexer type.</returns>
-             <remarks>
-             <para>
-             Example:
-             </para>
-             <code>
-             sbyte number = 0xDE;
-             BigEndianByteIndexer indexer = number; // implicit cast.
-            
-             var b0 = indexer[0]; // b0 is 0xDE
-             indexer[0] = 0xFF;
-             var result = indexer.ToString(); // result is "FF"
-             </code>
-             </remarks>
+           <summary>
+              Implicitly converts an
+              <see cref="T:System.SByte"/>
+              to a<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
+           </summary>
+           <param name="data">The underlying data type.</param>
+           <returns>A indexer type.</returns>
+           <remarks>
+              <para>
+                 Example:
+              </para>
+              <code>
+                 sbyte number = 0xDE;
+                 BigEndianByteIndexer indexer = number; // implicit cast.
+
+                 var b0 = indexer[0]; // b0 is 0xDE
+                 indexer[0] = 0xFF;
+                 var result = indexer.ToString(); // result is "FF"
+              </code>
+           </remarks>
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.Single)~Jcd.BitManipulation.BigEndianByteIndexer">
-             <summary>
-             Implicitly converts a <see cref="T:System.Single" /> to a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.
-             </summary>
-             <param name="data">The underlying data type.</param>
-             <returns>A indexer type.</returns>
-             <remarks>
-             <para>
-             Example:
-             </para>
-             <code>
-             float number = -6.259853398707798016E18f; // 0xDEADBEEF
-             BigEndianByteIndexer indexer = number; // implicit cast.
-            
-             var b0 = indexer[0]; // b0 is 0xDE
-             indexer[1] = 0xFF;
-             var result = indexer.ToString(); // result is "DE FF BE EF"
-             </code>
-             </remarks>
+           <summary>
+              Implicitly converts a
+              <see cref="T:System.Single"/>
+              to a<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
+           </summary>
+           <param name="data">The underlying data type.</param>
+           <returns>A indexer type.</returns>
+           <remarks>
+              <para>
+                 Example:
+              </para>
+              <code>
+                 float number = -6.259853398707798016E18f; // 0xDEADBEEF
+                 BigEndianByteIndexer indexer = number; // implicit cast.
+
+                 var b0 = indexer[0]; // b0 is 0xDE
+                 indexer[1] = 0xFF;
+                 var result = indexer.ToString(); // result is "DE FF BE EF"
+              </code>
+           </remarks>
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.Double)~Jcd.BitManipulation.BigEndianByteIndexer">
             <summary>
@@ -479,12 +505,13 @@
             Provides indexed access to the bits on a stored integer type, up to 64 bits.
             </summary>
             <remarks>
-            
             </remarks>
         </member>
         <member name="P:Jcd.BitManipulation.BitIndexer.Length">
             <summary>
-            The number of bits indexable by this <see cref="T:Jcd.BitManipulation.BitIndexer"/> instance. 
+               The number of bits indexable by this
+               <see cref="T:Jcd.BitManipulation.BitIndexer"/>
+               instance.
             </summary>
         </member>
         <member name="F:Jcd.BitManipulation.BitIndexer.bits">
@@ -729,7 +756,7 @@
             <summary>
             The backing store for the actual bits of the <see cref="T:Jcd.BitManipulation.BitMask" />.
             </summary>
-            <exclude/>
+           <exclude/>
         </member>
         <member name="M:Jcd.BitManipulation.BitMask.FromRange(System.Int32,System.Int32)">
             <summary>
@@ -1191,7 +1218,8 @@
             </summary>
             <param name="value">the bits to read from</param>
             <param name="offset">the offset of the bit to read</param>
-            <returns>The bit at the specified position returned as a <see cref="T:System.Boolean"/>. </returns>
+           <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.ByteExtensions.SetBits(System.Byte,System.Int32,System.Int32)">
             <summary>
@@ -1317,14 +1345,18 @@
         </member>
         <member name="M:Jcd.BitManipulation.DoubleExtensions.ToBooleanArray(System.Double)">
             <summary>
-            Converts a <see cref="T:System.Double"/> into an array of bools.
+               Converts a
+               <see cref="T:System.Double"/>
+               into an array of bools.
             </summary>
             <param name="bits">the long to convert.</param>
             <returns>the array. LSB at index 0</returns>
         </member>
         <member name="M:Jcd.BitManipulation.DoubleExtensions.ToByteArray(System.Double,Jcd.BitManipulation.Endian)">
             <summary>
-            Converts a <see cref="T:System.Double"/> into an array of bytes
+               Converts a
+               <see cref="T:System.Double"/>
+               into an array of bytes
             </summary>
             <param name="data">the long to convert.</param>
             <param name="endian">The order in which to store the bytes</param>
@@ -1387,7 +1419,8 @@
             </summary>
             <param name="value">the bits to read from</param>
             <param name="offset">the offset of the bit to read</param>
-            <returns>The bit at the specified position returned as a <see cref="T:System.Boolean"/>. </returns>
+           <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.DoubleExtensions.ReadBytes(System.Double,System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
             <summary>
@@ -1576,7 +1609,10 @@
             <summary>
             Converts a <see cref="T:System.Int16" /> into an array of bools
             </summary>
-            <param name= "bits">The <see cref="T:System.Int16" /> to convert.</param>
+           <param name="bits">The
+              <see cref="T:System.Int16"/>
+              to convert.
+           </param>
             <returns>An array with the Least Significant Bit at index 0</returns>
         </member>
         <member name="M:Jcd.BitManipulation.Int16Extensions.ToByteArray(System.Int16,Jcd.BitManipulation.Endian)">
@@ -1644,7 +1680,8 @@
             </summary>
             <param name="value">the bits to read from</param>
             <param name="offset">the offset of the bit to read</param>
-            <returns>The bit at the specified position returned as a <see cref="T:System.Boolean"/>. </returns>
+           <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.Int16Extensions.ReadBytes(System.Int16,System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
             <summary>
@@ -1752,8 +1789,8 @@
             <returns>The modified value.</returns>
         </member>
         <member name="M:Jcd.BitManipulation.Int16Extensions.ToggleBits(System.Int16,System.Int32,System.Int32)">
-            <summary
-            >Toggles the specified range of bits and returns the modified value.
+           <summary>
+              Toggles the specified range of bits and returns the modified value.
             </summary>
             <param name="value">The value to modify.</param>
             <param name="offset">The offset of the bits to toggle.</param>
@@ -1823,14 +1860,21 @@
         </member>
         <member name="M:Jcd.BitManipulation.Int32Extensions.ToBooleanArray(System.Int32)">
             <summary>
-            Converts an <see cref="T:System.Int32"/> into an array of bools
+               Converts an
+               <see cref="T:System.Int32"/>
+               into an array of bools
             </summary>
-            <param name= "bits">The <see cref="T:System.UInt32" /> to convert.</param>
+           <param name="bits">The
+              <see cref="T:System.UInt32"/>
+              to convert.
+           </param>
             <returns>An array with the Least Significant Bit at index 0</returns>
         </member>
         <member name="M:Jcd.BitManipulation.Int32Extensions.ToByteArray(System.Int32,Jcd.BitManipulation.Endian)">
             <summary>
-            Converts an <see cref="T:System.Int32"/> into an array of bytes
+               Converts an
+               <see cref="T:System.Int32"/>
+               into an array of bytes
             </summary>
             <param name="data">the <see cref="T:System.Int32" /> to convert.</param>
             <param name="endian">The order in which to store the bytes</param>
@@ -1893,7 +1937,8 @@
             </summary>
             <param name="value">the bits to read from</param>
             <param name="offset">the offset of the bit to read</param>
-            <returns>The bit at the specified position returned as a <see cref="T:System.Boolean"/>. </returns>
+           <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.Int32Extensions.ReadBytes(System.Int32,System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
             <summary>
@@ -2065,7 +2110,10 @@
             <summary>
             Converts a <see cref="T:System.Int64" /> into an array of bools
             </summary>
-            <param name= "bits">The <see cref="T:System.Int64" /> to convert.</param>
+           <param name="bits">The
+              <see cref="T:System.Int64"/>
+              to convert.
+           </param>
             <returns>An array with the Least Significant Bit at index 0</returns>
         </member>
         <member name="M:Jcd.BitManipulation.Int64Extensions.ToByteArray(System.Int64,Jcd.BitManipulation.Endian)">
@@ -2133,7 +2181,8 @@
             </summary>
             <param name="value">the bits to read from</param>
             <param name="offset">the offset of the bit to read</param>
-            <returns>The bit at the specified position returned as a <see cref="T:System.Boolean"/>. </returns>
+           <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.Int64Extensions.ReadBytes(System.Int64,System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
             <summary>
@@ -2577,61 +2626,62 @@
             <returns>a string of the data formatted as hex bytes</returns>
         </member>
         <member name="T:Jcd.BitManipulation.NamespaceDoc">
-             <summary>
-             Provides a set of extension methods and types to assist with
-             making bit manipulation code easier to read.
-             </summary>
-             <example>
-             <code>
-             ushort data = 0b0000000000000000;
-            
-             // turn on all the bits
-             data = data.SetBits(0, 16); // value is now 0b1111111111111111
-            
-             // this is the equivalent as above
-             data = data.SetBits();
-            
-             // Clear the middle 4 bits.
-             data = data.ClearBits(4, 8); // value is now 0b1111000000001111
-            
-             // Toggle all the bits.
-             data = data.ToggleBits(); // value is now 0b0000111111110000
-            
-             var finalData = data;
-             // read the upper byte
-             var upperByte = (byte) data.ReadBits(8, 8); // upperByte is now 0b00001111
-            
-             // write 0b1011 into the upper nybble
-             upperByte = upperByte.StoreBits(0b1011, 4, 4); // upperByte is now 0b10111111
-            
-             // chaining operations, the same steps and end results
-             data.ClearBits();
-             data = data.SetBits(0, 16)  // value is now 0b1111111111111111
-             ///      .SetBits()///  // this is the equivalent as above
-             ///      .ClearBits(4, 8) // value is now 0b1111000000001111
-             ///      .ToggleBits();   // value is now 0b0000111111110000
-            
-             upperByte = ((byte) data.ReadBits(8, 8)) // extract the upper byte (0b00001111)
-               .StoreBits(0b1011, 4, 4);/// ///   // store the value in the upper 4 bits, now upperByte is now 0b10111111
-            
-             // finalData 0b0000111111110000
-             var beByte0     = finalData.ReadByte(0, Endian.Big);/// ///   // 00001111
-             var leByte0     = finalData.ReadByte(0, Endian.Little);///      // 11110000
-            
-             var mutatedData = finalData
-             /// ///      .StoreByte(0b10111111, 0, Endian.Big)
-             /// ///      .StoreByte(0b01010101, 0, Endian.Little ); // lower byte is now 0b01010101
-             ;/// /// /// /// /// /// /// /// /// ///     // mutatedData is now 0b1011111101010101
-            
-             var beBa = mutatedData.ToByteArray(Endian.Big); // beBa=[0b10111111, 0b01010101]
-            
-             var leBa = mutatedData.ToByteArray(Endian.Little); // leBa=[0b01010101, 0b10111111]
-            
-             var leBaToUInt16Le = leBa.ToUInt16(Endian.Little); // leBaToUInt16Le = 0b1011111101010101
-            
-             var leBaToUInt16Be = leBa.ToUInt16(Endian.Big); // leBaToUInt16Le = 0b0101010110111111
-             </code>
-             </example>
+           <summary>
+              Provides a set of extension methods and types to assist with
+              making bit manipulation code easier to read.
+           </summary>
+           <example>
+              <code>
+                 ushort data = 0b0000000000000000;
+
+                 // turn on all the bits
+                 data = data.SetBits(0, 16); // value is now 0b1111111111111111
+
+                 // this is the equivalent as above
+                 data = data.SetBits();
+
+                 // Clear the middle 4 bits.
+                 data = data.ClearBits(4, 8); // value is now 0b1111000000001111
+
+                 // Toggle all the bits.
+                 data = data.ToggleBits(); // value is now 0b0000111111110000
+
+                 var finalData = data;
+                 // read the upper byte
+                 var upperByte = (byte) data.ReadBits(8, 8); // upperByte is now 0b00001111
+
+                 // write 0b1011 into the upper nybble
+                 upperByte = upperByte.StoreBits(0b1011, 4, 4); // upperByte is now 0b10111111
+
+                 // chaining operations, the same steps and end results
+                 data.ClearBits();
+                 data = data.SetBits(0, 16) // value is now 0b1111111111111111
+                 /// .SetBits()/// // this is the equivalent as above
+                 /// .ClearBits(4, 8) // value is now 0b1111000000001111
+                 /// .ToggleBits(); // value is now 0b0000111111110000
+
+                 upperByte = ((byte) data.ReadBits(8, 8)) // extract the upper byte (0b00001111)
+                 .StoreBits(0b1011, 4, 4);/// /// // store the value in the upper 4 bits, now upperByte is now
+                 0b10111111
+
+                 // finalData 0b0000111111110000
+                 var beByte0 = finalData.ReadByte(0, Endian.Big);/// /// // 00001111
+                 var leByte0 = finalData.ReadByte(0, Endian.Little);/// // 11110000
+
+                 var mutatedData = finalData
+                 /// /// .StoreByte(0b10111111, 0, Endian.Big)
+                 /// /// .StoreByte(0b01010101, 0, Endian.Little ); // lower byte is now 0b01010101
+                 ;/// /// /// /// /// /// /// /// /// /// // mutatedData is now 0b1011111101010101
+
+                 var beBa = mutatedData.ToByteArray(Endian.Big); // beBa=[0b10111111, 0b01010101]
+
+                 var leBa = mutatedData.ToByteArray(Endian.Little); // leBa=[0b01010101, 0b10111111]
+
+                 var leBaToUInt16Le = leBa.ToUInt16(Endian.Little); // leBaToUInt16Le = 0b1011111101010101
+
+                 var leBaToUInt16Be = leBa.ToUInt16(Endian.Big); // leBaToUInt16Le = 0b0101010110111111
+              </code>
+           </example>
         </member>
         <member name="T:Jcd.BitManipulation.ReadOnlySpanOfByteExtensions">
             <summary>
@@ -2764,7 +2814,10 @@
             <summary>
             Converts an <see cref="T:System.SByte" /> into an array of bools
             </summary>
-            <param name= "bits">The <see cref="T:System.SByte" /> to convert.</param>
+           <param name="bits">The
+              <see cref="T:System.SByte"/>
+              to convert.
+           </param>
             <returns>An array with the Least Significant Bit at index 0</returns>
         </member>
         <member name="M:Jcd.BitManipulation.SByteExtensions.ToByteArray(System.SByte)">
@@ -2831,7 +2884,8 @@
             </summary>
             <param name="value">the bits to read from</param>
             <param name="offset">the offset of the bit to read</param>
-            <returns>The bit at the specified position returned as a <see cref="T:System.Boolean"/>. </returns>
+           <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.SByteExtensions.SetBits(System.SByte,System.Int32,System.Int32)">
             <summary>
@@ -2966,14 +3020,18 @@
         </member>
         <member name="M:Jcd.BitManipulation.SingleExtensions.ToBooleanArray(System.Single)">
             <summary>
-            Converts a <see cref="T:System.Single"/> into an array of bools
+               Converts a
+               <see cref="T:System.Single"/>
+               into an array of bools
             </summary>
             <param name="bits">the long to convert.</param>
             <returns>the array. LSB at index 0</returns>
         </member>
         <member name="M:Jcd.BitManipulation.SingleExtensions.ToByteArray(System.Single,Jcd.BitManipulation.Endian)">
             <summary>
-            Converts a <see cref="T:System.Single"/> into an array of bytes
+               Converts a
+               <see cref="T:System.Single"/>
+               into an array of bytes
             </summary>
             <param name="data">the long to convert.</param>
             <param name="endian">The order in which to store the bytes</param>
@@ -3036,7 +3094,8 @@
             </summary>
             <param name="value">the bits to read from</param>
             <param name="offset">the offset of the bit to read</param>
-            <returns>The bit at the specified position returned as a <see cref="T:System.Boolean"/>. </returns>
+           <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.SingleExtensions.ReadBytes(System.Single,System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
             <summary>
@@ -3269,7 +3328,8 @@
             </summary>
             <param name="value">the bits to read from</param>
             <param name="offset">the offset of the bit to read</param>
-            <returns>The bit at the specified position returned as a <see cref="T:System.Boolean"/>. </returns>
+           <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.UInt16Extensions.ReadBytes(System.UInt16,System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
             <summary>
@@ -3448,14 +3508,21 @@
         </member>
         <member name="M:Jcd.BitManipulation.UInt32Extensions.ToBooleanArray(System.UInt32)">
             <summary>
-            Converts a <see cref="T:System.UInt32"/> into an array of bools
+               Converts a
+               <see cref="T:System.UInt32"/>
+               into an array of bools
             </summary>
-            <param name= "bits">The <see cref="T:System.UInt32" /> to convert.</param>
+           <param name="bits">The
+              <see cref="T:System.UInt32"/>
+              to convert.
+           </param>
             <returns>An array with the Least Significant Bit at index 0</returns>
         </member>
         <member name="M:Jcd.BitManipulation.UInt32Extensions.ToByteArray(System.UInt32,Jcd.BitManipulation.Endian)">
             <summary>
-            Converts a <see cref="T:System.UInt32"/> into an array of bytes
+               Converts a
+               <see cref="T:System.UInt32"/>
+               into an array of bytes
             </summary>
             <param name="data">the <see cref="T:System.UInt32" /> to convert.</param>
             <param name="endian">The order in which to store the bytes</param>
@@ -3518,7 +3585,8 @@
             </summary>
             <param name="value">the bits to read from</param>
             <param name="offset">the offset of the bit to read</param>
-            <returns>The bit at the specified position returned as a <see cref="T:System.Boolean"/>. </returns>
+           <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.UInt32Extensions.ReadBytes(System.UInt32,System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
             <summary>
@@ -3767,7 +3835,8 @@
             </summary>
             <param name="value">the bits to read from</param>
             <param name="offset">the offset of the bit to read</param>
-            <returns>The bit at the specified position returned as a <see cref="T:System.Boolean"/>. </returns>
+           <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
+           </returns>
         </member>
         <member name="M:Jcd.BitManipulation.UInt64Extensions.ReadBytes(System.UInt64,System.Int32,System.Int32,Jcd.BitManipulation.Endian)">
             <summary>

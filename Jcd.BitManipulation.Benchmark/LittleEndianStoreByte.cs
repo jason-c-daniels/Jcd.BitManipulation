@@ -22,15 +22,6 @@ public class LittleEndianStoreByte
    private const double Dbl = double.MaxValue  / 2;
    private const float Flt = float.MaxValue    / 2;
 
-   private static readonly byte[] DblBytes = [0, 1, 2, 3, 4, 5, 6, 7];
-   private static readonly byte[] FltBytes = [4, 5, 6, 7];
-   private static readonly byte[] Ui64Bytes = [0, 1, 2, 3, 4, 5, 6, 7];
-   private static readonly byte[] Ui32Bytes = [0, 1, 2, 3];
-   private static readonly byte[] Ui16Bytes = [0, 1];
-   private static readonly byte[] I64Bytes = [0, 1, 2, 3, 4, 5, 6, 7];
-   private static readonly byte[] I32Bytes = [4, 5, 6, 7];
-   private static readonly byte[] I16Bytes = [6, 7];
-
    #region ByteIndexer
 
    [Benchmark]

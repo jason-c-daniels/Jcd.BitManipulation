@@ -87,6 +87,66 @@ public class LittleEndianStoreBytes
 
    #endregion
 
+   #region ByteIndexer
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public double ByteIndexer_Double()
+   {
+      return ((LittleEndianByteIndexer) Dbl).StoreBytes(DblBytes, 0, sizeof(double));
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public float ByteIndexer_Float()
+   {
+      return ((LittleEndianByteIndexer) Flt).StoreBytes(FltBytes, 0, sizeof(float));
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public ulong ByteIndexer_UInt64()
+   {
+      return ((LittleEndianByteIndexer) Ui64).StoreBytes(Ui64Bytes, 0, sizeof(ulong));
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public long ByteIndexer_Int64()
+   {
+      return ((LittleEndianByteIndexer) I64).StoreBytes(I64Bytes, 0, sizeof(long));
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public uint ByteIndexer_UInt32()
+   {
+      return ((LittleEndianByteIndexer) Ui32).StoreBytes(Ui32Bytes, 0, sizeof(uint));
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public int ByteIndexer_Int32()
+   {
+      return ((LittleEndianByteIndexer) I32).StoreBytes(I32Bytes, 0, sizeof(int));
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public ushort ByteIndexer_UInt16()
+   {
+      return ((LittleEndianByteIndexer) Ui16).StoreBytes(Ui16Bytes, 0, sizeof(ushort));
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public short ByteIndexer_Int16()
+   {
+      return ((LittleEndianByteIndexer) I16).StoreBytes(I16Bytes, 0, sizeof(short));
+   }
+
+   #endregion
+
    #region Extension Methods
 
    [Benchmark]
@@ -147,62 +207,62 @@ public class LittleEndianStoreBytes
 
    #endregion
 
-   #region ByteIndexer
+   #region ToXYZ Extension Methods
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public double ByteIndexer_Double()
+   public double ExtensionMethod_ToDouble()
    {
-      return ((LittleEndianByteIndexer) Dbl).StoreBytes(DblBytes, 0, sizeof(double));
+      return DblBytes.ToDouble(Endian.Big);
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public float ByteIndexer_Float()
+   public float ExtensionMethod_ToFloat()
    {
-      return ((LittleEndianByteIndexer) Flt).StoreBytes(FltBytes, 0, sizeof(float));
+      return FltBytes.ToSingle(Endian.Big);
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public ulong ByteIndexer_UInt64()
+   public ulong ExtensionMethod_ToUInt64()
    {
-      return ((LittleEndianByteIndexer) Ui64).StoreBytes(Ui64Bytes, 0, sizeof(ulong));
+      return Ui64Bytes.ToUInt64(Endian.Big);
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public long ByteIndexer_Int64()
+   public long ExtensionMethod_ToInt64()
    {
-      return ((LittleEndianByteIndexer) I64).StoreBytes(I64Bytes, 0, sizeof(long));
+      return I64Bytes.ToInt64(Endian.Big);
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public uint ByteIndexer_UInt32()
+   public uint ExtensionMethod_ToUInt32()
    {
-      return ((LittleEndianByteIndexer) Ui32).StoreBytes(Ui32Bytes, 0, sizeof(uint));
+      return Ui32Bytes.ToUInt32(Endian.Big);
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public int ByteIndexer_Int32()
+   public int ExtensionMethod_ToInt32()
    {
-      return ((LittleEndianByteIndexer) I32).StoreBytes(I32Bytes, 0, sizeof(int));
+      return I32Bytes.ToInt32(Endian.Big);
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public ushort ByteIndexer_UInt16()
+   public ushort ExtensionMethod_ToUInt16()
    {
-      return ((LittleEndianByteIndexer) Ui16).StoreBytes(Ui16Bytes, 0, sizeof(ushort));
+      return Ui16Bytes.ToUInt16(Endian.Big);
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public short ByteIndexer_Int16()
+   public short ExtensionMethod_ToInt16()
    {
-      return ((LittleEndianByteIndexer) I16).StoreBytes(I16Bytes, 0, sizeof(short));
+      return I16Bytes.ToInt16(Endian.Big);
    }
 
    #endregion

@@ -112,66 +112,6 @@ public class BigEndianStoreBytes
 
    #endregion
 
-   #region Extension Methods
-
-   [Benchmark]
-   [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public double ExtensionMethod_Double()
-   {
-      return Dbl.StoreBytes(DblBytes, 0, sizeof(double), Endian.Big);
-   }
-
-   [Benchmark]
-   [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public float ExtensionMethod_Float()
-   {
-      return Flt.StoreBytes(FltBytes, 0, sizeof(float), Endian.Big);
-   }
-
-   [Benchmark]
-   [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public ulong ExtensionMethod_UInt64()
-   {
-      return Ui64.StoreBytes(Ui64Bytes, 0, sizeof(ulong), Endian.Big);
-   }
-
-   [Benchmark]
-   [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public long ExtensionMethod_Int64()
-   {
-      return I64.StoreBytes(I64Bytes, 0, sizeof(long), Endian.Big);
-   }
-
-   [Benchmark]
-   [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public uint ExtensionMethod_UInt32()
-   {
-      return Ui32.StoreBytes(Ui32Bytes, 0, sizeof(uint), Endian.Big);
-   }
-
-   [Benchmark]
-   [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public int ExtensionMethod_Int32()
-   {
-      return I32.StoreBytes(I32Bytes, 0, sizeof(int), Endian.Big);
-   }
-
-   [Benchmark]
-   [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public ushort ExtensionMethod_UInt16()
-   {
-      return Ui16.StoreBytes(Ui16Bytes, 0, sizeof(ushort), Endian.Big);
-   }
-
-   [Benchmark]
-   [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public short ExtensionMethod_Int16()
-   {
-      return I16.StoreBytes(I16Bytes, 0, sizeof(short), Endian.Big);
-   }
-
-   #endregion
-   
    #region ByteIndexer
 
    [Benchmark]
@@ -231,4 +171,125 @@ public class BigEndianStoreBytes
    }
 
    #endregion
+
+   #region Extension Methods
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public double ExtensionMethod_Double()
+   {
+      return Dbl.StoreBytes(DblBytes, 0, sizeof(double), Endian.Big);
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public float ExtensionMethod_Float()
+   {
+      return Flt.StoreBytes(FltBytes, 0, sizeof(float), Endian.Big);
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public ulong ExtensionMethod_UInt64()
+   {
+      return Ui64.StoreBytes(Ui64Bytes, 0, sizeof(ulong), Endian.Big);
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public long ExtensionMethod_Int64()
+   {
+      return I64.StoreBytes(I64Bytes, 0, sizeof(long), Endian.Big);
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public uint ExtensionMethod_UInt32()
+   {
+      return Ui32.StoreBytes(Ui32Bytes, 0, sizeof(uint), Endian.Big);
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public int ExtensionMethod_Int32()
+   {
+      return I32.StoreBytes(I32Bytes, 0, sizeof(int), Endian.Big);
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public ushort ExtensionMethod_UInt16()
+   {
+      return Ui16.StoreBytes(Ui16Bytes, 0, sizeof(ushort), Endian.Big);
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public short ExtensionMethod_Int16()
+   {
+      return I16.StoreBytes(I16Bytes, 0, sizeof(short), Endian.Big);
+   }
+
+   #endregion
+
+   #region ToXYZ Extension Methods
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public double ExtensionMethod_ToDouble()
+   {
+      return DblBytes.ToDouble(Endian.Big);
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public float ExtensionMethod_ToFloat()
+   {
+      return FltBytes.ToSingle(Endian.Big);
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public ulong ExtensionMethod_ToUInt64()
+   {
+      return Ui64Bytes.ToUInt64(Endian.Big);
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public long ExtensionMethod_ToInt64()
+   {
+      return I64Bytes.ToInt64(Endian.Big);
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public uint ExtensionMethod_ToUInt32()
+   {
+      return Ui32Bytes.ToUInt32(Endian.Big);
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public int ExtensionMethod_ToInt32()
+   {
+      return I32Bytes.ToInt32(Endian.Big);
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public ushort ExtensionMethod_ToUInt16()
+   {
+      return Ui16Bytes.ToUInt16(Endian.Big);
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public short ExtensionMethod_ToInt16()
+   {
+      return I16Bytes.ToInt16(Endian.Big);
+   }
+
+   #endregion
+
 }

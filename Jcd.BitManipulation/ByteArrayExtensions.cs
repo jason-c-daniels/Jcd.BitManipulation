@@ -191,7 +191,7 @@ public static class ByteArrayExtensions
    #region internal helpers
    
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   private static ulong GetBigEndianUInt64(byte[] data, int offset = 0, int size = -1)
+   private static ulong GetBigEndianUInt64(byte[] data)
    {
       ulong result = 0;
       var i = 0;
@@ -251,7 +251,7 @@ public static class ByteArrayExtensions
    }
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   internal static ulong GetLittleEndianUInt64(byte[] data, int offset = 0, int size = -1)
+   internal static ulong GetLittleEndianUInt64(byte[] data)
    {
       ulong result = 0;
       var i = 0;

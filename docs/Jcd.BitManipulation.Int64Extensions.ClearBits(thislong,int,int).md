@@ -28,6 +28,5 @@ The offset of where to begin clearing bits.
 The number of bits to clear.
 
 #### Returns
-
 [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 The modified value.

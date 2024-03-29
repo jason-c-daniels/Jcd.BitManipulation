@@ -40,6 +40,5 @@ The number of bytes from the source, to store. -1 means all bytes.
 The endianness of the byte indexing within the value.
 
 #### Returns
-
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 The modified value.

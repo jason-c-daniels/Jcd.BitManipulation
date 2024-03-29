@@ -2,8 +2,7 @@
 
 ## LittleEndianByteIndexer.implicit operator LittleEndianByteIndexer(ulong) Operator
 
-Implicitly converts a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') to
-a [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer').
+Implicitly converts a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') to a [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer').
 
 ```csharp
 public static Jcd.BitManipulation.LittleEndianByteIndexer implicit operator LittleEndianByteIndexer(ulong data);
@@ -17,6 +16,5 @@ public static Jcd.BitManipulation.LittleEndianByteIndexer implicit operator Litt
 The underlying data type.
 
 #### Returns
-
 [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
 A indexer type.

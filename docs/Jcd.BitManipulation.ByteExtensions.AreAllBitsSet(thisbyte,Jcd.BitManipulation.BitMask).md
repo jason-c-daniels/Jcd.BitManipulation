@@ -2,8 +2,7 @@
 
 ## ByteExtensions.AreAllBitsSet(this byte, BitMask) Method
 
-Tests if all of the bits from the bitmask are set on
-a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte').
+Tests if all of the bits from the bitmask are set on a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte').
 
 ```csharp
 public static bool AreAllBitsSet(this byte data, Jcd.BitManipulation.BitMask bitmask);
@@ -23,7 +22,6 @@ The data to inspect.
 the bits to test.
 
 #### Returns
-
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 True if all of the bits from the bitmask were set.
 

@@ -22,6 +22,5 @@ The value to be modified.
 the bit mask of the bits to clear.
 
 #### Returns
-
 [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 The modified value.

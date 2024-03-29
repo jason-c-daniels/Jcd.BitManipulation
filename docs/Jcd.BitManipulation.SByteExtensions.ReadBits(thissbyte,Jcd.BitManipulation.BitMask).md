@@ -23,6 +23,5 @@ the bitmask of which bits to read.
 Zeroed bits in the mask will always extract 0 from the source.
 
 #### Returns
-
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 The unshifted extracted bits

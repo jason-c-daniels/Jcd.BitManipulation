@@ -2,8 +2,7 @@
 
 ## BitIndexer.implicit operator BitIndexer(bool[]) Operator
 
-Automatically convert from a [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer') to an
-array of [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
+Automatically convert from a [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer') to an array of [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 
 ```csharp
 public static Jcd.BitManipulation.BitIndexer implicit operator BitIndexer(bool[] array);
@@ -17,6 +16,5 @@ public static Jcd.BitManipulation.BitIndexer implicit operator BitIndexer(bool[]
 the indexer to convert from
 
 #### Returns
-
 [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')
 the lower 8 bits converted to a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')

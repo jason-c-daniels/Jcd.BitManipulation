@@ -2,8 +2,7 @@
 
 ## BigEndianByteIndexer.explicit operator BigEndianByteIndexer(ReadOnlySpan<byte>) Operator
 
-Explicitly converts an array of bytes to
-a [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer').
+Explicitly converts an array of  bytes to a [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer').
 
 ```csharp
 public static Jcd.BitManipulation.BigEndianByteIndexer explicit operator BigEndianByteIndexer(System.ReadOnlySpan<byte> data);
@@ -17,6 +16,5 @@ public static Jcd.BitManipulation.BigEndianByteIndexer explicit operator BigEndi
 The underlying data type.
 
 #### Returns
-
 [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer')
 A indexer type.

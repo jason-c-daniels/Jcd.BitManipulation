@@ -2,8 +2,7 @@
 
 ## UInt32Extensions.AreAllBitsSet(this uint, BitMask) Method
 
-Tests if all of the bits from the bitmask are set on
-a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32').
+Tests if all of the bits from the bitmask are set on a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32').
 
 ```csharp
 public static bool AreAllBitsSet(this uint data, Jcd.BitManipulation.BitMask bitmask);
@@ -23,7 +22,6 @@ The data to inspect.
 the bits to test.
 
 #### Returns
-
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 True if all of the bits from the bitmask were set.
 

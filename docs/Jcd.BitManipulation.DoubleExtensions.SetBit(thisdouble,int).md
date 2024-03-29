@@ -22,6 +22,5 @@ The value to be modified.
 The offset of the bit to set.
 
 #### Returns
-
 [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 The modified value.

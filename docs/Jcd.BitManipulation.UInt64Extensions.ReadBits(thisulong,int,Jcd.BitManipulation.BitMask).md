@@ -13,21 +13,20 @@ public static ulong ReadBits(this ulong value, int offset, Jcd.BitManipulation.B
 
 `value` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
-the source of bits to read
+The source of bits to read.
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ReadBits(thisulong,int,Jcd.BitManipulation.BitMask).offset'></a>
 
 `offset` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-the bit offset to read from
+The bit offset to start reading from.
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ReadBits(thisulong,int,Jcd.BitManipulation.BitMask).mask'></a>
 
 `mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
-the bitmask of which bits to read.
-Zeroed bits in the mask will always extract 0 from the source.
+The bitmask specifying which bits to read.
 
 #### Returns
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
-The right shifted extracted bits
+The extracted bits right shifted by the specified amount.

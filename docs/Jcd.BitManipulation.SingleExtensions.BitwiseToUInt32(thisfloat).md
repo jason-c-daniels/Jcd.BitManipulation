@@ -13,7 +13,7 @@ public static uint BitwiseToUInt32(this float value);
 
 `value` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
-The value to convert
+The value to convert.
 
 #### Returns
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')

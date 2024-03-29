@@ -2,7 +2,7 @@
 
 ## SByteExtensions.ClearBit(this sbyte, int) Method
 
-Sets bit to "off" and returns the modified value.
+Sets the specified bit to "off" and returns the modified value.
 
 ```csharp
 public static sbyte ClearBit(this sbyte value, int offset);
@@ -13,13 +13,13 @@ public static sbyte ClearBit(this sbyte value, int offset);
 
 `value` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.SByteExtensions.ClearBit(thissbyte,int).offset'></a>
 
 `offset` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The offset of the bit to clear.
+The bit position to set to false/0.
 
 #### Returns
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')

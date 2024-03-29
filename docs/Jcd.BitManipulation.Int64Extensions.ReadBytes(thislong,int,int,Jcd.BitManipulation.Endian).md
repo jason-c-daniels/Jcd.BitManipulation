@@ -13,7 +13,7 @@ public static byte[] ReadBytes(this long value, int offset, int size, Jcd.BitMan
 
 `value` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 
-The value to be read.
+The value to read the byte from.
 
 <a name='Jcd.BitManipulation.Int64Extensions.ReadBytes(thislong,int,int,Jcd.BitManipulation.Endian).offset'></a>
 
@@ -35,4 +35,4 @@ The endianness of the byte indexing within the value.
 
 #### Returns
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
-A little endian byte array of the value.
+A byte array of the value in the specified endian.

@@ -2,7 +2,7 @@
 
 ## UInt32Extensions.SetBits(this uint, BitMask) Method
 
-Sets all specified bits to "on"
+Sets all specified bits to "on" and returns the modified value.
 
 ```csharp
 public static uint SetBits(this uint value, Jcd.BitManipulation.BitMask mask);
@@ -13,13 +13,13 @@ public static uint SetBits(this uint value, Jcd.BitManipulation.BitMask mask);
 
 `value` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.UInt32Extensions.SetBits(thisuint,Jcd.BitManipulation.BitMask).mask'></a>
 
 `mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
-bits to set.
+The bits to set.
 
 #### Returns
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')

@@ -13,7 +13,7 @@ public static byte ToByte(this byte[] data, Jcd.BitManipulation.Endian endian=Jc
 
 `data` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 
-the bytes to convert
+the bytes to convert.
 
 <a name='Jcd.BitManipulation.ByteArrayExtensions.ToByte(thisbyte[],Jcd.BitManipulation.Endian).endian'></a>
 
@@ -24,5 +24,3 @@ The endian for the bytes.
 #### Returns
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 The converted [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
-
-### Remarks

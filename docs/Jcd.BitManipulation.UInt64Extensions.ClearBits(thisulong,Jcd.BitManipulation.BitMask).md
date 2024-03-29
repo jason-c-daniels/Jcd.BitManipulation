@@ -2,7 +2,7 @@
 
 ## UInt64Extensions.ClearBits(this ulong, BitMask) Method
 
-Sets all bits from a provided mask to "off" and returns the modified value.
+Sets all bits from the provided mask to "off" and returns the modified value.
 
 ```csharp
 public static ulong ClearBits(this ulong value, Jcd.BitManipulation.BitMask mask);
@@ -13,13 +13,13 @@ public static ulong ClearBits(this ulong value, Jcd.BitManipulation.BitMask mask
 
 `value` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ClearBits(thisulong,Jcd.BitManipulation.BitMask).mask'></a>
 
 `mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
-the bit mask of the bits to clear.
+The bit mask of the bits to clear.
 
 #### Returns
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')

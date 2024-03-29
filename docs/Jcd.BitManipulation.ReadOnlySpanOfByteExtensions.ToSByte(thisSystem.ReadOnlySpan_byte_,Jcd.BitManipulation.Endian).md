@@ -13,7 +13,7 @@ public static sbyte ToSByte(this System.ReadOnlySpan<byte> data, Jcd.BitManipula
 
 `data` [System.ReadOnlySpan&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.ReadOnlySpan-1 'System.ReadOnlySpan`1')[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.ReadOnlySpan-1 'System.ReadOnlySpan`1')
 
-the bytes to convert
+the bytes to convert.
 
 <a name='Jcd.BitManipulation.ReadOnlySpanOfByteExtensions.ToSByte(thisSystem.ReadOnlySpan_byte_,Jcd.BitManipulation.Endian).endian'></a>
 

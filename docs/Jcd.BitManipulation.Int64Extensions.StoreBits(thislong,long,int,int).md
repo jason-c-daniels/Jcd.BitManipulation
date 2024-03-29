@@ -2,7 +2,7 @@
 
 ## Int64Extensions.StoreBits(this long, long, int, int) Method
 
-Stores a value at the specified bit location within the variable.
+Stores a range of bits to the value, from a source value, and returns the modified value.
 
 ```csharp
 public static long StoreBits(this long value, long source, int offset, int size);
@@ -13,7 +13,7 @@ public static long StoreBits(this long value, long source, int offset, int size)
 
 `value` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.Int64Extensions.StoreBits(thislong,long,int,int).source'></a>
 

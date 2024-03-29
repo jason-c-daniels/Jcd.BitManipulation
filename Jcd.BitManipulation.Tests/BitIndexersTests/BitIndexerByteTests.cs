@@ -16,7 +16,7 @@ public class BitIndexerByteTests
    public void Length_Is_Correct_Bit_Size()
    {
       BitIndexer sut = (byte) 0;
-      Assert.Equal(sizeof(byte) << 3, sut.BitSize);
+      Assert.Equal(sizeof(byte) << 3, sut.Length);
    }
 
    [Theory]

@@ -13,8 +13,8 @@ public static Jcd.BitManipulation.BitIndexer implicit operator BitIndexer(uint b
 
 `bits` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
-the initial value for the indexer's backing store
+The initial value for the indexed bits.
 
 #### Returns
 [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')
-A new [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')
+A new [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer').

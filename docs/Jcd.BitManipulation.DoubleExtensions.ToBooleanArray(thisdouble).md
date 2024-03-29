@@ -2,7 +2,7 @@
 
 ## DoubleExtensions.ToBooleanArray(this double) Method
 
-Convert a long into an array of bools
+Converts a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double') into an array of bools.
 
 ```csharp
 public static bool[] ToBooleanArray(this double bits);
@@ -13,7 +13,7 @@ public static bool[] ToBooleanArray(this double bits);
 
 `bits` [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 
-the long to convert
+the long to convert.
 
 #### Returns
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')

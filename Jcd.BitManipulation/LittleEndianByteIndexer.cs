@@ -10,8 +10,8 @@ namespace Jcd.BitManipulation;
 
 /// <summary>
 /// Provides byte level indexing operations (set, get) on a
-/// <see cref="ulong" />. Allows for indexer syntax when accessing
-/// the stored bytes. Zero is the least significant byte.
+/// stored number. Allows for indexer syntax when accessing
+/// the stored bytes. Index zero is the least significant byte.
 /// </summary>
 public ref struct LittleEndianByteIndexer
 {
@@ -20,7 +20,7 @@ public ref struct LittleEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="LittleEndianByteIndexer" /> from a <see cref="ulong" />.
    /// </summary>
-   /// <param name="data"> The initial value for the underlying data.</param>
+   /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private LittleEndianByteIndexer(ulong data = 0)
@@ -31,7 +31,7 @@ public ref struct LittleEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="LittleEndianByteIndexer" /> from an <see cref="long" />.
    /// </summary>
-   /// <param name="data"> The initial value for the underlying data.</param>
+   /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private LittleEndianByteIndexer(long data)
@@ -42,7 +42,7 @@ public ref struct LittleEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="LittleEndianByteIndexer" /> from a <see cref="uint" />.
    /// </summary>
-   /// <param name="data"> The initial value for the underlying data.</param>
+   /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private LittleEndianByteIndexer(uint data)
@@ -53,7 +53,7 @@ public ref struct LittleEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="LittleEndianByteIndexer" /> from an <see cref="int" />.
    /// </summary>
-   /// <param name="data"> The initial value for the underlying data.</param>
+   /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private LittleEndianByteIndexer(int data)
@@ -64,7 +64,7 @@ public ref struct LittleEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="LittleEndianByteIndexer" /> from a <see cref="ushort" />.
    /// </summary>
-   /// <param name="data"> The initial value for the underlying data.</param>
+   /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private LittleEndianByteIndexer(ushort data)
@@ -75,7 +75,7 @@ public ref struct LittleEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="LittleEndianByteIndexer" /> from an <see cref="short" />.
    /// </summary>
-   /// <param name="data"> The initial value for the underlying data.</param>
+   /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private LittleEndianByteIndexer(short data)
@@ -86,7 +86,7 @@ public ref struct LittleEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="LittleEndianByteIndexer" /> from a <see cref="byte" />.
    /// </summary>
-   /// <param name="data"> The initial value for the underlying data.</param>
+   /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private LittleEndianByteIndexer(byte data)
@@ -97,7 +97,7 @@ public ref struct LittleEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="LittleEndianByteIndexer" /> from an <see cref="sbyte" />.
    /// </summary>
-   /// <param name="data"> The initial value for the underlying data.</param>
+   /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private LittleEndianByteIndexer(sbyte data)
@@ -108,7 +108,7 @@ public ref struct LittleEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="LittleEndianByteIndexer" /> from an <see cref="float" />.
    /// </summary>
-   /// <param name="data"> The initial value for the underlying data.</param>
+   /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private LittleEndianByteIndexer(float data)
@@ -119,7 +119,7 @@ public ref struct LittleEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="LittleEndianByteIndexer" /> from an <see cref="double" />.
    /// </summary>
-   /// <param name="data"> The initial value for the underlying data.</param>
+   /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private LittleEndianByteIndexer(double data)
@@ -134,7 +134,7 @@ public ref struct LittleEndianByteIndexer
 
    private LittleEndianByteIndexer(byte[] data, int byteSize)
    {
-      ByteSize = GetIntegerByteSize(byteSize);
+      Length = GetIntegerByteSize(byteSize);
       StoreBytes(data, 0, byteSize);
    }
 
@@ -145,7 +145,7 @@ public ref struct LittleEndianByteIndexer
 
    private LittleEndianByteIndexer(ReadOnlySpan<byte> data, int byteSize)
    {
-      ByteSize = GetIntegerByteSize(byteSize);
+      Length = GetIntegerByteSize(byteSize);
       StoreBytes(data, 0, byteSize);
    }
 
@@ -163,14 +163,14 @@ public ref struct LittleEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="LittleEndianByteIndexer" /> from a <see cref="ulong" />.
    /// </summary>
-   /// <param name="data"> The initial value for the underlying data.</param>
+   /// <param name="data">The initial value for the underlying data.</param>
    /// <param name="byteSize">The number of bytes to index</param>
    /// <exclude />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private LittleEndianByteIndexer(ulong data, int byteSize)
    {
-      ByteSize = byteSize;
-      Data = data;
+      Length = byteSize;
+      this.data = data;
    }
 
    #endregion
@@ -178,29 +178,17 @@ public ref struct LittleEndianByteIndexer
    /// <summary>
    /// The number of bytes this type will index
    /// </summary>
-   public int ByteSize
+   public int Length
    {
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       get;
    } = sizeof(ulong);
 
    /// <summary>
-   /// The number of bytes indexable by this indexer.
-   /// </summary>
-   public int Length => ByteSize;
-
-   /// <summary>
    /// The backing store.
    /// </summary>
    /// <exclude />
-   internal ulong Data
-   {
-      [MethodImpl(MethodImplOptions.AggressiveInlining)]
-      get;
-
-      [MethodImpl(MethodImplOptions.AggressiveInlining)]
-      private set;
-   }
+   private ulong data;
 
    /// <summary>
    /// Access bytes from the underlying data.
@@ -212,19 +200,19 @@ public ref struct LittleEndianByteIndexer
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       readonly get
       {
-         if (index < 0 || index >= ByteSize)
+         if (index < 0 || index >= Length)
             throw new ArgumentOutOfRangeException(nameof(index));
 
-         return Data.ReadByte(index);
+         return data.ReadByte(index);
       }
 
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       set
       {
-         if (index < 0 || index >= ByteSize)
+         if (index < 0 || index >= Length)
             throw new ArgumentOutOfRangeException(nameof(index));
 
-         Data = Data.InternalLittleEndianStoreByte(value, index);
+         data = data.InternalLittleEndianStoreByte(value, index);
       }
    }
 
@@ -232,12 +220,12 @@ public ref struct LittleEndianByteIndexer
    /// Get a subset of bytes given a starting offset and length.
    /// </summary>
    /// <param name="start">The starting bit offset</param>
-   /// <param name="length">The number of bits to extract</param>
-   /// <returns>an array of bytes for the specified subset</returns>
+   /// <param name="length">The number of bytes to extract</param>
+   /// <returns>An array of bytes for the specified subset.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public readonly byte[] Slice(int start, int length)
    {
-      if (start == 0 && length >= ByteSize)
+      if (start == 0 && length >= Length)
          return GetAllBytes();
 
       return GetSubset(start, length);
@@ -246,7 +234,7 @@ public ref struct LittleEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private readonly byte[] GetAllBytes()
    {
-      return ByteSize switch
+      return Length switch
              {
                 8 => [this[0], this[1], this[2], this[3], this[4], this[5], this[6], this[7]]
               , 7 => [this[0], this[1], this[2], this[3], this[4], this[5], this[6]]
@@ -255,7 +243,7 @@ public ref struct LittleEndianByteIndexer
               , 4 => [this[0], this[1], this[2], this[3]]
               , 3 => [this[0], this[1], this[2]]
               , 2 => [this[0], this[1]]
-              , 1 => [(byte) Data]
+              , 1 => [(byte) data]
               , _ => []
              };
    }
@@ -263,14 +251,14 @@ public ref struct LittleEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private readonly byte[] GetSubset(int start, int length)
    {
-      var len = length + start > ByteSize
-                   ? ByteSize - start
+      var len = length + start > Length
+                   ? Length - start
                    : length;
 
       // ReSharper disable once HeapView.ObjectAllocation.Evident
       var slice = new byte[len];
       for (int i = 0, j = start; i < len; i++, j++)
-         slice[i] = Data.InternalLittleEndianReadByte(j);
+         slice[i] = data.InternalLittleEndianReadByte(j);
 
       return slice;
    }
@@ -285,7 +273,7 @@ public ref struct LittleEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator ulong(LittleEndianByteIndexer indexer)
    {
-      return indexer.Data;
+      return indexer.data;
    }
 
    /// <summary>
@@ -296,7 +284,7 @@ public ref struct LittleEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator long(LittleEndianByteIndexer indexer)
    {
-      return (long) indexer.Data;
+      return (long) indexer.data;
    }
 
    /// <summary>
@@ -307,7 +295,7 @@ public ref struct LittleEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator uint(LittleEndianByteIndexer indexer)
    {
-      return (uint) indexer.Data;
+      return (uint) indexer.data;
    }
 
    /// <summary>
@@ -318,7 +306,7 @@ public ref struct LittleEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator int(LittleEndianByteIndexer indexer)
    {
-      return (int) (uint) indexer.Data;
+      return (int) (uint) indexer.data;
    }
 
    /// <summary>
@@ -329,7 +317,7 @@ public ref struct LittleEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator ushort(LittleEndianByteIndexer indexer)
    {
-      return (ushort) indexer.Data;
+      return (ushort) indexer.data;
    }
 
    /// <summary>
@@ -340,7 +328,7 @@ public ref struct LittleEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator short(LittleEndianByteIndexer indexer)
    {
-      return (short) (ushort) indexer.Data;
+      return (short) (ushort) indexer.data;
    }
 
    /// <summary>
@@ -351,7 +339,7 @@ public ref struct LittleEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator byte(LittleEndianByteIndexer indexer)
    {
-      return (byte) indexer.Data;
+      return (byte) indexer.data;
    }
 
    /// <summary>
@@ -362,7 +350,7 @@ public ref struct LittleEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator sbyte(LittleEndianByteIndexer indexer)
    {
-      return (sbyte) (byte) indexer.Data;
+      return (sbyte) (byte) indexer.data;
    }
 
    /// <summary>
@@ -373,7 +361,7 @@ public ref struct LittleEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator float(LittleEndianByteIndexer indexer)
    {
-      return ((uint) indexer.Data).BitwiseToSingle();
+      return ((uint) indexer.data).BitwiseToSingle();
    }
 
    /// <summary>
@@ -384,7 +372,7 @@ public ref struct LittleEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator double(LittleEndianByteIndexer indexer)
    {
-      return indexer.Data.BitwiseToDouble();
+      return indexer.data.BitwiseToDouble();
    }
 
    /// <summary>
@@ -561,52 +549,52 @@ public ref struct LittleEndianByteIndexer
    public LittleEndianByteIndexer StoreBytes(byte[] bytes, int offset, int size = -1)
    {
       if (size == -1)
-         size = ByteSize - offset;
+         size = Length - offset;
 
-      var len = size + offset > ByteSize
-                   ? ByteSize - offset
+      var len = size + offset > Length
+                   ? Length - offset
                    : size;
       var cnt = Math.Min(len, bytes.Length);
 
       if (cnt == 0)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[0], offset + 0);
+      data = data.InternalLittleEndianStoreByte(bytes[0], offset + 0);
 
       if (cnt == 1)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[1], offset + 1);
+      data = data.InternalLittleEndianStoreByte(bytes[1], offset + 1);
 
       if (cnt == 2)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[2], offset + 2);
+      data = data.InternalLittleEndianStoreByte(bytes[2], offset + 2);
 
       if (cnt == 3)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[3], offset + 3);
+      data = data.InternalLittleEndianStoreByte(bytes[3], offset + 3);
 
       if (cnt == 4)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[4], offset + 4);
+      data = data.InternalLittleEndianStoreByte(bytes[4], offset + 4);
 
       if (cnt == 5)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[5], offset + 5);
+      data = data.InternalLittleEndianStoreByte(bytes[5], offset + 5);
 
       if (cnt == 6)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[6], offset + 6);
+      data = data.InternalLittleEndianStoreByte(bytes[6], offset + 6);
 
       if (cnt == 7)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[7], offset + 7);
+      data = data.InternalLittleEndianStoreByte(bytes[7], offset + 7);
 
       return this;
    }
@@ -622,10 +610,10 @@ public ref struct LittleEndianByteIndexer
    public LittleEndianByteIndexer StoreBytes(ReadOnlySpan<byte> bytes, int offset, int size = -1)
    {
       if (size == -1)
-         size = ByteSize - offset;
+         size = Length - offset;
 
-      var len = size + offset > ByteSize
-                   ? ByteSize - offset
+      var len = size + offset > Length
+                   ? Length - offset
                    : size;
 
       var cnt = Math.Min(len, bytes.Length);
@@ -633,48 +621,48 @@ public ref struct LittleEndianByteIndexer
       if (cnt == 0)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[0], offset + 0);
+      data = data.InternalLittleEndianStoreByte(bytes[0], offset + 0);
 
       if (cnt == 1)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[1], offset + 1);
+      data = data.InternalLittleEndianStoreByte(bytes[1], offset + 1);
 
       if (cnt == 2)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[2], offset + 2);
+      data = data.InternalLittleEndianStoreByte(bytes[2], offset + 2);
 
       if (cnt == 3)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[3], offset + 3);
+      data = data.InternalLittleEndianStoreByte(bytes[3], offset + 3);
 
       if (cnt == 4)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[4], offset + 4);
+      data = data.InternalLittleEndianStoreByte(bytes[4], offset + 4);
 
       if (cnt == 5)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[5], offset + 5);
+      data = data.InternalLittleEndianStoreByte(bytes[5], offset + 5);
 
       if (cnt == 6)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[6], offset + 6);
+      data = data.InternalLittleEndianStoreByte(bytes[6], offset + 6);
 
       if (cnt == 7)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[7], offset + 7);
+      data = data.InternalLittleEndianStoreByte(bytes[7], offset + 7);
 
       return this;
    }
 
    /// <summary>
-   /// Store a single byte to the value at the specified byte offset.
+   /// Stores a single byte to the value at the specified byte offset and returns the modified value.
    /// </summary>
    /// <param name="byte">The byte value to set</param>
    /// <param name="offset">the offset of the byte to write</param>
@@ -694,9 +682,9 @@ public ref struct LittleEndianByteIndexer
    public readonly override string ToString()
    {
       // ReSharper disable once HeapView.ObjectAllocation.Evident
-      var sb = new StringBuilder(ByteSize * 3);
+      var sb = new StringBuilder(Length * 3);
 
-      for (var i = 0; i < ByteSize; i++)
+      for (var i = 0; i < Length; i++)
       {
          if (i != 0)
             sb.Append(" ");

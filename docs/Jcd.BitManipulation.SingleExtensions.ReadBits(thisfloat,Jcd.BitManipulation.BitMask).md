@@ -13,14 +13,13 @@ public static uint ReadBits(this float value, Jcd.BitManipulation.BitMask mask);
 
 `value` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
-the source of bits to read
+The source of bits to read.
 
 <a name='Jcd.BitManipulation.SingleExtensions.ReadBits(thisfloat,Jcd.BitManipulation.BitMask).mask'></a>
 
 `mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
-the bitmask of which bits to read.
-Zeroed bits in the mask will always extract 0 from the source.
+The bitmask specifying which bits to read.
 
 #### Returns
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')

@@ -19,7 +19,6 @@ public class BigEndianStoreBytes
    private const double Dbl = double.MaxValue  / 2;
    private const float Flt = float.MaxValue    / 2;
 
-
    private static readonly byte[] DblBytes = [0, 1, 2, 3, 4, 5, 6, 7];
    private static readonly byte[] FltBytes = [4, 5, 6, 7];
    private static readonly byte[] Ui64Bytes = [0, 1, 2, 3, 4, 5, 6, 7];
@@ -172,6 +171,66 @@ public class BigEndianStoreBytes
 
    #endregion
 
+   #region ByteIndexer on ReadOnlySpan
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public double ByteIndexer_On_ReadOnlySpanOf_Double()
+   {
+      return ((BigEndianByteIndexer) Dbl).StoreBytes((ReadOnlySpan<byte>) DblBytes, 0, sizeof(double));
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public float ByteIndexer_On_ReadOnlySpanOf_Float()
+   {
+      return ((BigEndianByteIndexer) Flt).StoreBytes((ReadOnlySpan<byte>) FltBytes, 0, sizeof(float));
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public ulong ByteIndexer_On_ReadOnlySpanOf_UInt64()
+   {
+      return ((BigEndianByteIndexer) Ui64).StoreBytes((ReadOnlySpan<byte>) Ui64Bytes, 0, sizeof(ulong));
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public long ByteIndexer_On_ReadOnlySpanOf_Int64()
+   {
+      return ((BigEndianByteIndexer) I64).StoreBytes((ReadOnlySpan<byte>) I64Bytes, 0, sizeof(long));
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public uint ByteIndexer_On_ReadOnlySpanOf_UInt32()
+   {
+      return ((BigEndianByteIndexer) Ui32).StoreBytes((ReadOnlySpan<byte>) Ui32Bytes, 0, sizeof(uint));
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public int ByteIndexer_On_ReadOnlySpanOf_Int32()
+   {
+      return ((BigEndianByteIndexer) I32).StoreBytes((ReadOnlySpan<byte>) I32Bytes, 0, sizeof(int));
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public ushort ByteIndexer_On_ReadOnlySpanOf_UInt16()
+   {
+      return ((BigEndianByteIndexer) Ui16).StoreBytes((ReadOnlySpan<byte>) Ui16Bytes, 0, sizeof(ushort));
+   }
+
+   [Benchmark]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public short ByteIndexer_On_ReadOnlySpanOf_Int16()
+   {
+      return ((BigEndianByteIndexer) I16).StoreBytes((ReadOnlySpan<byte>) I16Bytes, 0, sizeof(short));
+   }
+
+   #endregion
+
    #region Extension Methods
 
    [Benchmark]
@@ -291,5 +350,4 @@ public class BigEndianStoreBytes
    }
 
    #endregion
-
 }

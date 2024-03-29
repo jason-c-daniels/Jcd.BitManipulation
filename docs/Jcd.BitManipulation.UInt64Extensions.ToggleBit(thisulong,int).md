@@ -2,7 +2,7 @@
 
 ## UInt64Extensions.ToggleBit(this ulong, int) Method
 
-Toggles a bit.
+Toggles a bit at the specified offset and returns the modified value.
 
 ```csharp
 public static ulong ToggleBit(this ulong value, int offset);
@@ -13,7 +13,7 @@ public static ulong ToggleBit(this ulong value, int offset);
 
 `value` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ToggleBit(thisulong,int).offset'></a>
 

@@ -13,7 +13,7 @@ public static sbyte ClearBits(this sbyte value, int offset=0, int size=8);
 
 `value` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.SByteExtensions.ClearBits(thissbyte,int,int).offset'></a>
 

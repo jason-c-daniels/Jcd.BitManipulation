@@ -13,7 +13,7 @@ public static long BitwiseToInt64(this double value);
 
 `value` [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 
-The value to convert
+The value to convert.
 
 #### Returns
 [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')

@@ -2,10 +2,10 @@
 
 ## BigEndianByteIndexer.Length Property
 
-The number of bytes indexable by this indexer.
+The number of indexable bytes.
 
 ```csharp
-public int Length { get; }
+public readonly int Length { get; }
 ```
 
 #### Property Value

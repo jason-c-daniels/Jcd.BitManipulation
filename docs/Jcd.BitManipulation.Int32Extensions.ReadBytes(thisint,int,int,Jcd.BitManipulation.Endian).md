@@ -13,7 +13,7 @@ public static byte[] ReadBytes(this int value, int offset, int size, Jcd.BitMani
 
 `value` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The value to be read.
+The value to read the byte from.
 
 <a name='Jcd.BitManipulation.Int32Extensions.ReadBytes(thisint,int,int,Jcd.BitManipulation.Endian).offset'></a>
 

@@ -2,7 +2,7 @@
 
 ## UInt16Extensions.StoreByte(this ushort, byte, int, Endian) Method
 
-Store a single byte to the value at the specified byte offset.
+Stores a single byte to the value at the specified byte offset and returns the modified value.
 
 ```csharp
 public static ushort StoreByte(this ushort value, byte @byte, int offset, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
@@ -13,7 +13,7 @@ public static ushort StoreByte(this ushort value, byte @byte, int offset, Jcd.Bi
 
 `value` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.UInt16Extensions.StoreByte(thisushort,byte,int,Jcd.BitManipulation.Endian).byte'></a>
 

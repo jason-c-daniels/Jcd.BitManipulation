@@ -2,7 +2,7 @@
 
 ## SByteExtensions.SetBits(this sbyte, BitMask) Method
 
-Sets all specified bits to "on"
+Sets all specified bits to "on" and returns the modified value.
 
 ```csharp
 public static sbyte SetBits(this sbyte value, Jcd.BitManipulation.BitMask mask);
@@ -13,13 +13,13 @@ public static sbyte SetBits(this sbyte value, Jcd.BitManipulation.BitMask mask);
 
 `value` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.SByteExtensions.SetBits(thissbyte,Jcd.BitManipulation.BitMask).mask'></a>
 
 `mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
-bits to set.
+The bits to set.
 
 #### Returns
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')

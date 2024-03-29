@@ -2,7 +2,7 @@
 
 ## DoubleExtensions.StoreBytes(this double, byte[], int, int, Endian) Method
 
-Stores a set of bytes starting at the specified byte location within the value.
+Stores a set of bytes starting at the specified byte offset and returns the modified value.
 
 ```csharp
 public static double StoreBytes(this double value, byte[] bytes, int offset, int size=-1, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
@@ -13,7 +13,7 @@ public static double StoreBytes(this double value, byte[] bytes, int offset, int
 
 `value` [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.DoubleExtensions.StoreBytes(thisdouble,byte[],int,int,Jcd.BitManipulation.Endian).bytes'></a>
 

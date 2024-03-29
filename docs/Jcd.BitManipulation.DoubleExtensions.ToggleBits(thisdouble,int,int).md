@@ -2,8 +2,7 @@
 
 ## DoubleExtensions.ToggleBits(this double, int, int) Method
 
-Toggles bits and size.
-The default values result in toggling all bits.
+Toggles the specified range of bits and returns the modified value.
 
 ```csharp
 public static double ToggleBits(this double value, int offset=0, int size=64);
@@ -14,7 +13,7 @@ public static double ToggleBits(this double value, int offset=0, int size=64);
 
 `value` [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.DoubleExtensions.ToggleBits(thisdouble,int,int).offset'></a>
 

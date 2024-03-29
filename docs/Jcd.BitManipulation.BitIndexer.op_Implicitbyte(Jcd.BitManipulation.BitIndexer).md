@@ -13,8 +13,8 @@ public static byte implicit operator byte(Jcd.BitManipulation.BitIndexer indexer
 
 `indexer` [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')
 
-the indexer to convert from
+The indexer to convert from.
 
 #### Returns
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
-the lower 8 bits converted to a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
+The lower 8 bits converted to a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte').

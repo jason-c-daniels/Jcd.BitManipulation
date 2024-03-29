@@ -2,7 +2,7 @@
 
 ## ByteArrayExtensions.ToSingle(this byte[], Endian) Method
 
-Converts bytes into a double, discarding any excess data.
+Converts an array of bytes into a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single'), discarding any excess data.
 
 ```csharp
 public static float ToSingle(this byte[] data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
@@ -13,7 +13,7 @@ public static float ToSingle(this byte[] data, Jcd.BitManipulation.Endian endian
 
 `data` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 
-the bytes to convert
+the bytes to convert.
 
 <a name='Jcd.BitManipulation.ByteArrayExtensions.ToSingle(thisbyte[],Jcd.BitManipulation.Endian).endian'></a>
 

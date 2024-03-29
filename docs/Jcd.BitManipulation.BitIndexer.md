@@ -12,20 +12,19 @@ public ref struct BitIndexer
 
 | Properties | |
 | :--- | :--- |
-| [BitSize](Jcd.BitManipulation.BitIndexer.BitSize.md 'Jcd.BitManipulation.BitIndexer.BitSize') | The number of bits indexed by this instance of the [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer') |
-| [Length](Jcd.BitManipulation.BitIndexer.Length.md 'Jcd.BitManipulation.BitIndexer.Length') | The number of bits indexable by this indexer. |
+| [Length](Jcd.BitManipulation.BitIndexer.Length.md 'Jcd.BitManipulation.BitIndexer.Length') | The number of bits indexable by this [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer') instance. |
 | [this[int]](Jcd.BitManipulation.BitIndexer.this[int].md 'Jcd.BitManipulation.BitIndexer.this[int]') | Gets or sets individual bits within the backing store. |
 
 | Methods | |
 | :--- | :--- |
-| [Slice(int, int)](Jcd.BitManipulation.BitIndexer.Slice(int,int).md 'Jcd.BitManipulation.BitIndexer.Slice(int, int)') | Get a subset of bits given a starting offset and length. |
+| [Slice(int, int)](Jcd.BitManipulation.BitIndexer.Slice(int,int).md 'Jcd.BitManipulation.BitIndexer.Slice(int, int)') | Gets a subset of bits given a starting offset and length. |
 | [ToString()](Jcd.BitManipulation.BitIndexer.ToString().md 'Jcd.BitManipulation.BitIndexer.ToString()') | Format as a bit representation |
 
 | Operators | |
 | :--- | :--- |
 | [implicit operator bool[](BitIndexer)](Jcd.BitManipulation.BitIndexer.op_Implicitbool[](Jcd.BitManipulation.BitIndexer).md 'Jcd.BitManipulation.BitIndexer.op_Implicit bool[](Jcd.BitManipulation.BitIndexer)') | Automatically convert from a [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer') to an array of [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean') |
 | [implicit operator byte(BitIndexer)](Jcd.BitManipulation.BitIndexer.op_Implicitbyte(Jcd.BitManipulation.BitIndexer).md 'Jcd.BitManipulation.BitIndexer.op_Implicit byte(Jcd.BitManipulation.BitIndexer)') | Automatically convert from a [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer') to a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') |
-| [implicit operator double(BitIndexer)](Jcd.BitManipulation.BitIndexer.op_Implicitdouble(Jcd.BitManipulation.BitIndexer).md 'Jcd.BitManipulation.BitIndexer.op_Implicit double(Jcd.BitManipulation.BitIndexer)') | Automatically convert from a BitIndexer to a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') |
+| [implicit operator double(BitIndexer)](Jcd.BitManipulation.BitIndexer.op_Implicitdouble(Jcd.BitManipulation.BitIndexer).md 'Jcd.BitManipulation.BitIndexer.op_Implicit double(Jcd.BitManipulation.BitIndexer)') | Automatically convert from a [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer') to a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') |
 | [implicit operator float(BitIndexer)](Jcd.BitManipulation.BitIndexer.op_Implicitfloat(Jcd.BitManipulation.BitIndexer).md 'Jcd.BitManipulation.BitIndexer.op_Implicit float(Jcd.BitManipulation.BitIndexer)') | Automatically convert from a BitIndexer to a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') |
 | [implicit operator int(BitIndexer)](Jcd.BitManipulation.BitIndexer.op_Implicitint(Jcd.BitManipulation.BitIndexer).md 'Jcd.BitManipulation.BitIndexer.op_Implicit int(Jcd.BitManipulation.BitIndexer)') | Automatically convert from a BitIndexer to a [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32') |
 | [implicit operator BitIndexer(bool[])](Jcd.BitManipulation.BitIndexer.op_ImplicitJcd.BitManipulation.BitIndexer(bool[]).md 'Jcd.BitManipulation.BitIndexer.op_Implicit Jcd.BitManipulation.BitIndexer(bool[])') | Automatically convert from a [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer') to an array of [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean') |

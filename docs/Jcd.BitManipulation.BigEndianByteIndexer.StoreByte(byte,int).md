@@ -2,7 +2,7 @@
 
 ## BigEndianByteIndexer.StoreByte(byte, int) Method
 
-Store a single byte to the value at the specified byte offset.
+Stores a single byte to the value at the specified byte offset and returns the modified value.
 
 ```csharp
 public Jcd.BitManipulation.BigEndianByteIndexer StoreByte(byte @byte, int offset);

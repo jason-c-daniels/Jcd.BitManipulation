@@ -2,7 +2,7 @@
 
 ## SingleExtensions.ReadByte(this float, int, Endian) Method
 
-Read a single byte from the value at the specified byte offset.
+Reads a single byte from the value at the specified byte offset.
 
 ```csharp
 public static byte ReadByte(this float value, int offset, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
@@ -13,7 +13,7 @@ public static byte ReadByte(this float value, int offset, Jcd.BitManipulation.En
 
 `value` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
-The value to be read.
+The value to read the byte from.
 
 <a name='Jcd.BitManipulation.SingleExtensions.ReadByte(thisfloat,int,Jcd.BitManipulation.Endian).offset'></a>
 

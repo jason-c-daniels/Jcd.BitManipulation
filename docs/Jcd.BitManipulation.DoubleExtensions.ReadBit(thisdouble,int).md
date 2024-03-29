@@ -2,7 +2,7 @@
 
 ## DoubleExtensions.ReadBit(this double, int) Method
 
-Read a single bit from the specified offset.
+Reads a single bit from the specified position.
 
 ```csharp
 public static bool ReadBit(this double value, int offset);
@@ -23,4 +23,4 @@ the offset of the bit to read
 
 #### Returns
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
-the bit (a bool) at the specified offset
+The bit at the specified position returned as a [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean').

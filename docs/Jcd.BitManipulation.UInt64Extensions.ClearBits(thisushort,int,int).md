@@ -13,7 +13,7 @@ public static ushort ClearBits(this ushort value, int offset=0, int size=16);
 
 `value` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ClearBits(thisushort,int,int).offset'></a>
 

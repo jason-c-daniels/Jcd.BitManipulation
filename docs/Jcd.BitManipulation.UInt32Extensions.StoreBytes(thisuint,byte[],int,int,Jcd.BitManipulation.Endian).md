@@ -2,7 +2,7 @@
 
 ## UInt32Extensions.StoreBytes(this uint, byte[], int, int, Endian) Method
 
-Stores a set of bytes starting at the specified byte location within the value.
+Stores a set of bytes starting at the specified byte offset and returns the modified value.
 
 ```csharp
 public static uint StoreBytes(this uint value, byte[] bytes, int offset, int size=-1, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
@@ -13,7 +13,7 @@ public static uint StoreBytes(this uint value, byte[] bytes, int offset, int siz
 
 `value` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.UInt32Extensions.StoreBytes(thisuint,byte[],int,int,Jcd.BitManipulation.Endian).bytes'></a>
 

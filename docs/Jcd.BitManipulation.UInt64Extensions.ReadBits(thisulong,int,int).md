@@ -2,7 +2,7 @@
 
 ## UInt64Extensions.ReadBits(this ulong, int, int) Method
 
-For a given value return the specified bits from within it, right shifted pos bits.
+Reads the bits specified and returns the result shifted to the right by the offset.
 
 ```csharp
 public static ulong ReadBits(this ulong value, int offset, int size);
@@ -13,20 +13,20 @@ public static ulong ReadBits(this ulong value, int offset, int size);
 
 `value` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
-the source of bits to read
+The source of bits to read.
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ReadBits(thisulong,int,int).offset'></a>
 
 `offset` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-the bit offset to read from
+The bit offset to start reading from.
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ReadBits(thisulong,int,int).size'></a>
 
 `size` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The total number of bits to extract
+The total number of bits to extract.
 
 #### Returns
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
-The numeric value stored at that bit location
+The value stored in the range of bits specified, right shifted by the offset..

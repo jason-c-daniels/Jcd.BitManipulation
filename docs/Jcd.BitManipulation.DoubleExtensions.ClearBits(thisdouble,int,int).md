@@ -13,7 +13,7 @@ public static double ClearBits(this double value, int offset=0, int size=64);
 
 `value` [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.DoubleExtensions.ClearBits(thisdouble,int,int).offset'></a>
 

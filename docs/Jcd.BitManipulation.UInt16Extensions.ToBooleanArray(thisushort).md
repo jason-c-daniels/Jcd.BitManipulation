@@ -2,7 +2,7 @@
 
 ## UInt16Extensions.ToBooleanArray(this ushort) Method
 
-Convert a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16') into an array of bools
+Converts a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16') into an array of bools
 
 ```csharp
 public static bool[] ToBooleanArray(this ushort bits);
@@ -13,8 +13,8 @@ public static bool[] ToBooleanArray(this ushort bits);
 
 `bits` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 
-the bits of the [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16') to convert
+the bits of the [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16') to convert.
 
 #### Returns
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
-the array. Least Significant Bit at index 0
+An array with the Least Significant Bit at index 0

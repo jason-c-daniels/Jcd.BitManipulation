@@ -3,8 +3,8 @@
 ## LittleEndianByteIndexer Struct
 
 Provides byte level indexing operations (set, get) on a
-[System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64'). Allows for indexer syntax when accessing
-the stored bytes. Zero is the least significant byte.
+stored number. Allows for indexer syntax when accessing
+the stored bytes. Index zero is the least significant byte.
 
 ```csharp
 public ref struct LittleEndianByteIndexer
@@ -12,14 +12,13 @@ public ref struct LittleEndianByteIndexer
 
 | Properties | |
 | :--- | :--- |
-| [ByteSize](Jcd.BitManipulation.LittleEndianByteIndexer.ByteSize.md 'Jcd.BitManipulation.LittleEndianByteIndexer.ByteSize') | The number of bytes this type will index |
-| [Length](Jcd.BitManipulation.LittleEndianByteIndexer.Length.md 'Jcd.BitManipulation.LittleEndianByteIndexer.Length') | The number of bytes indexable by this indexer. |
+| [Length](Jcd.BitManipulation.LittleEndianByteIndexer.Length.md 'Jcd.BitManipulation.LittleEndianByteIndexer.Length') | The number of bytes this type will index |
 | [this[int]](Jcd.BitManipulation.LittleEndianByteIndexer.this[int].md 'Jcd.BitManipulation.LittleEndianByteIndexer.this[int]') | Access bytes from the underlying data. |
 
 | Methods | |
 | :--- | :--- |
 | [Slice(int, int)](Jcd.BitManipulation.LittleEndianByteIndexer.Slice(int,int).md 'Jcd.BitManipulation.LittleEndianByteIndexer.Slice(int, int)') | Get a subset of bytes given a starting offset and length. |
-| [StoreByte(byte, int)](Jcd.BitManipulation.LittleEndianByteIndexer.StoreByte(byte,int).md 'Jcd.BitManipulation.LittleEndianByteIndexer.StoreByte(byte, int)') | Store a single byte to the value at the specified byte offset. |
+| [StoreByte(byte, int)](Jcd.BitManipulation.LittleEndianByteIndexer.StoreByte(byte,int).md 'Jcd.BitManipulation.LittleEndianByteIndexer.StoreByte(byte, int)') | Stores a single byte to the value at the specified byte offset and returns the modified value. |
 | [StoreBytes(byte[], int, int)](Jcd.BitManipulation.LittleEndianByteIndexer.StoreBytes(byte[],int,int).md 'Jcd.BitManipulation.LittleEndianByteIndexer.StoreBytes(byte[], int, int)') | Stores a set of bytes starting at the specified byte location within the indexer. |
 | [StoreBytes(ReadOnlySpan&lt;byte&gt;, int, int)](Jcd.BitManipulation.LittleEndianByteIndexer.StoreBytes(System.ReadOnlySpan_byte_,int,int).md 'Jcd.BitManipulation.LittleEndianByteIndexer.StoreBytes(System.ReadOnlySpan<byte>, int, int)') | Stores a set of bytes starting at the specified byte location within the indexer. |
 | [ToString()](Jcd.BitManipulation.LittleEndianByteIndexer.ToString().md 'Jcd.BitManipulation.LittleEndianByteIndexer.ToString()') | Creates a string of the data formatted as hex for the bytes in big endian notation |

@@ -13,7 +13,7 @@ public static float BitwiseToSingle(this int value);
 
 `value` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The value to convert
+The value to convert.
 
 #### Returns
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')

@@ -19,8 +19,8 @@ The starting bit offset
 
 `length` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The number of bits to extract
+The number of bytes to extract
 
 #### Returns
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
-an array of bytes for the specified subset
+An array of bytes for the specified subset.

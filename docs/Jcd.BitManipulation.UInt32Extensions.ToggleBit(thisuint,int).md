@@ -2,7 +2,7 @@
 
 ## UInt32Extensions.ToggleBit(this uint, int) Method
 
-Toggles a bit.
+Toggles a bit at the specified offset and returns the modified value.
 
 ```csharp
 public static uint ToggleBit(this uint value, int offset);
@@ -13,7 +13,7 @@ public static uint ToggleBit(this uint value, int offset);
 
 `value` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.UInt32Extensions.ToggleBit(thisuint,int).offset'></a>
 

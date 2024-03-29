@@ -13,7 +13,7 @@ public static long ClearBits(this long value, int offset=0, int size=64);
 
 `value` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.Int64Extensions.ClearBits(thislong,int,int).offset'></a>
 

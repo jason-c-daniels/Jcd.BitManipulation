@@ -2,7 +2,7 @@
 
 ## SByteExtensions.SetBit(this sbyte, int) Method
 
-Sets specified bit to "on"
+Sets the bit at the specified to "on" and returns the modified value.
 
 ```csharp
 public static sbyte SetBit(this sbyte value, int offset);
@@ -13,7 +13,7 @@ public static sbyte SetBit(this sbyte value, int offset);
 
 `value` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.SByteExtensions.SetBit(thissbyte,int).offset'></a>
 

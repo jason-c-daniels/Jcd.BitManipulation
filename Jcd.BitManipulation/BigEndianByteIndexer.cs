@@ -10,8 +10,8 @@ namespace Jcd.BitManipulation;
 
 /// <summary>
 /// Provides byte level indexing operations (set, get) on a
-/// <see cref="ulong" />. Allows for indexer syntax when accessing
-/// the stored bytes. Zero is the most significant byte.
+/// stored number. Allows for indexer syntax when accessing
+/// the stored bytes. Index zero is the most significant byte.
 /// </summary>
 public ref struct BigEndianByteIndexer
 {
@@ -20,7 +20,7 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="BigEndianByteIndexer" /> from a <see cref="ulong" />.
    /// </summary>
-   /// <param name="data"> The initial value for the underlying data.</param>
+   /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private BigEndianByteIndexer(ulong data = 0)
@@ -31,7 +31,7 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="BigEndianByteIndexer" /> from an <see cref="long" />.
    /// </summary>
-   /// <param name="data"> The initial value for the underlying data.</param>
+   /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private BigEndianByteIndexer(long data)
@@ -42,7 +42,7 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="BigEndianByteIndexer" /> from a <see cref="uint" />.
    /// </summary>
-   /// <param name="data"> The initial value for the underlying data.</param>
+   /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private BigEndianByteIndexer(uint data)
@@ -53,7 +53,7 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="BigEndianByteIndexer" /> from an <see cref="int" />.
    /// </summary>
-   /// <param name="data"> The initial value for the underlying data.</param>
+   /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private BigEndianByteIndexer(int data)
@@ -64,7 +64,7 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="BigEndianByteIndexer" /> from a <see cref="ushort" />.
    /// </summary>
-   /// <param name="data"> The initial value for the underlying data.</param>
+   /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private BigEndianByteIndexer(ushort data)
@@ -75,7 +75,7 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="BigEndianByteIndexer" /> from an <see cref="short" />.
    /// </summary>
-   /// <param name="data"> The initial value for the underlying data.</param>
+   /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private BigEndianByteIndexer(short data)
@@ -86,7 +86,7 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="BigEndianByteIndexer" /> from a <see cref="byte" />.
    /// </summary>
-   /// <param name="data"> The initial value for the underlying data.</param>
+   /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private BigEndianByteIndexer(byte data)
@@ -97,7 +97,7 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="BigEndianByteIndexer" /> from an <see cref="sbyte" />.
    /// </summary>
-   /// <param name="data"> The initial value for the underlying data.</param>
+   /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private BigEndianByteIndexer(sbyte data)
@@ -108,7 +108,7 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="BigEndianByteIndexer" /> from an <see cref="float" />.
    /// </summary>
-   /// <param name="data"> The initial value for the underlying data.</param>
+   /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private BigEndianByteIndexer(float data)
@@ -119,7 +119,7 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="BigEndianByteIndexer" /> from an <see cref="double" />.
    /// </summary>
-   /// <param name="data"> The initial value for the underlying data.</param>
+   /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private BigEndianByteIndexer(double data)
@@ -130,21 +130,21 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="BigEndianByteIndexer" /> from a <see cref="ulong" />.
    /// </summary>
-   /// <param name="data"> The initial value for the underlying data.</param>
+   /// <param name="data">The initial value for the underlying data.</param>
    /// <param name="byteSize">The number of bytes to index</param>
    /// <exclude />
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private BigEndianByteIndexer(ulong data, int byteSize)
    {
-      ByteSize = byteSize;
-      dataOffset = sizeof(ulong) - ByteSize;
-      Data = data;
+      Length = byteSize;
+      dataOffset = sizeof(ulong) - Length;
+      this.data = data;
    }
 
    /// <summary>
    /// Constructs a <see cref="BigEndianByteIndexer" /> from a <see cref="ReadOnlySpan{T}" /> of bytes.
    /// </summary>
-   /// <param name="data"> The span to populate the underlying data from.</param>
+   /// <param name="data">The span to populate the underlying data from.</param>
    /// <exclude />
    private BigEndianByteIndexer(ReadOnlySpan<byte> data)
       : this(data, data.Length)
@@ -154,12 +154,12 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="BigEndianByteIndexer" /> from a <see cref="ReadOnlySpan{T}" /> of bytes.
    /// </summary>
-   /// <param name="data"> The span to populate the underlying data from.</param>
-   /// <param name="byteSize">The number of bytes to store from the <see cref="ReadOnlySpan{T}" /> </param>
+   /// <param name="data">The span to populate the underlying data from.</param>
+   /// <param name="byteSize">The number of bytes to store from the <see cref="ReadOnlySpan{T}" /></param>
    /// <exclude />
    private BigEndianByteIndexer(ReadOnlySpan<byte> data, int byteSize)
    {
-      ByteSize = GetIntegerByteSize(byteSize);
+      Length = GetIntegerByteSize(byteSize);
 
       StoreBytes(data, 0, byteSize);
    }
@@ -167,7 +167,7 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="BigEndianByteIndexer" /> from an <see cref="Array" /> of bytes.
    /// </summary>
-   /// <param name="data"> The span to populate the underlying data from.</param>
+   /// <param name="data">The span to populate the underlying data from.</param>
    /// <exclude />
    private BigEndianByteIndexer(byte[] data)
       : this(data, data.Length)
@@ -177,12 +177,12 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Constructs a <see cref="BigEndianByteIndexer" /> from an <see cref="Array" /> of bytes.
    /// </summary>
-   /// <param name="data"> The span to populate the underlying data from.</param>
-   /// <param name="byteSize">The number of bytes to store from the <see cref="Array" /> </param>
+   /// <param name="data">The span to populate the underlying data from.</param>
+   /// <param name="byteSize">The number of bytes to store from the <see cref="Array" /></param>
    /// <exclude />
    private BigEndianByteIndexer(byte[] data, int byteSize)
    {
-      ByteSize = GetIntegerByteSize(byteSize);
+      Length = GetIntegerByteSize(byteSize);
 
       StoreBytes(data, 0, byteSize);
    }
@@ -203,30 +203,19 @@ public ref struct BigEndianByteIndexer
    private readonly int dataOffset;
 
    /// <summary>
-   /// The number of bytes this type will index
+   /// The number of indexable bytes.
    /// </summary>
-   public int ByteSize
+   public int Length
    {
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       get;
    } = sizeof(ulong);
 
    /// <summary>
-   /// The number of bytes indexable by this indexer.
-   /// </summary>
-   public int Length => ByteSize;
-
-   /// <summary>
    /// The backing store.
    /// </summary>
-   internal ulong Data
-   {
-      [MethodImpl(MethodImplOptions.AggressiveInlining)]
-      readonly get;
-
-      [MethodImpl(MethodImplOptions.AggressiveInlining)]
-      private set;
-   }
+   /// <exclude />
+   private ulong data;
 
    /// <summary>
    /// Access bytes from the underlying data.
@@ -238,19 +227,19 @@ public ref struct BigEndianByteIndexer
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       readonly get
       {
-         if (index < 0 || index >= ByteSize)
+         if (index < 0 || index >= Length)
             throw new ArgumentOutOfRangeException(nameof(index));
 
-         return Data.ReadByte(index + dataOffset, Endian.Big);
+         return data.ReadByte(index + dataOffset, Endian.Big);
       }
 
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       set
       {
-         if (index < 0 || index >= ByteSize)
+         if (index < 0 || index >= Length)
             throw new ArgumentOutOfRangeException(nameof(index));
 
-         Data = Data.InternalBigEndianStoreByte(value, index + dataOffset);
+         data = data.InternalBigEndianStoreByte(value, index + dataOffset);
       }
    }
 
@@ -258,12 +247,12 @@ public ref struct BigEndianByteIndexer
    /// Get a subset of bytes given a starting offset and length.
    /// </summary>
    /// <param name="start">The starting bit offset</param>
-   /// <param name="length">The number of bits to extract</param>
-   /// <returns>an array of bytes for the specified subset</returns>
+   /// <param name="length">The number of bytes to extract</param>
+   /// <returns>An array of bytes for the specified subset.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public readonly byte[] Slice(int start, int length)
    {
-      if (start == 0 && length >= ByteSize)
+      if (start == 0 && length >= Length)
          return GetAllBytes();
 
       return GetSubset(start, length);
@@ -272,7 +261,7 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private readonly byte[] GetAllBytes()
    {
-      return ByteSize switch
+      return Length switch
              {
                 8 => [this[0], this[1], this[2], this[3], this[4], this[5], this[6], this[7]]
               , 7 => [this[0], this[1], this[2], this[3], this[4], this[5], this[6]]
@@ -281,7 +270,7 @@ public ref struct BigEndianByteIndexer
               , 4 => [this[0], this[1], this[2], this[3]]
               , 3 => [this[0], this[1], this[2]]
               , 2 => [this[0], this[1]]
-              , 1 => [(byte) Data]
+              , 1 => [(byte) data]
               , _ => []
              };
    }
@@ -289,14 +278,14 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private readonly byte[] GetSubset(int start, int length)
    {
-      var len = length + start > ByteSize
-                   ? ByteSize - start
+      var len = length + start > Length
+                   ? Length - start
                    : length;
 
       // ReSharper disable once HeapView.ObjectAllocation.Evident
       var slice = new byte[len];
       for (int i = 0, j = dataOffset + start; i < len; i++, j++)
-         slice[i] = Data.InternalBigEndianReadByte(j);
+         slice[i] = data.InternalBigEndianReadByte(j);
 
       return slice;
    }
@@ -311,7 +300,7 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator ulong(BigEndianByteIndexer indexer)
    {
-      return indexer.Data;
+      return indexer.data;
    }
 
    /// <summary>
@@ -322,7 +311,7 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator long(BigEndianByteIndexer indexer)
    {
-      return (long) indexer.Data;
+      return (long) indexer.data;
    }
 
    /// <summary>
@@ -333,7 +322,7 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator uint(BigEndianByteIndexer indexer)
    {
-      return (uint) indexer.Data;
+      return (uint) indexer.data;
    }
 
    /// <summary>
@@ -344,7 +333,7 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator int(BigEndianByteIndexer indexer)
    {
-      return (int) (uint) indexer.Data;
+      return (int) (uint) indexer.data;
    }
 
    /// <summary>
@@ -355,7 +344,7 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator ushort(BigEndianByteIndexer indexer)
    {
-      return (ushort) indexer.Data;
+      return (ushort) indexer.data;
    }
 
    /// <summary>
@@ -366,7 +355,7 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator short(BigEndianByteIndexer indexer)
    {
-      return (short) (ushort) indexer.Data;
+      return (short) (ushort) indexer.data;
    }
 
    /// <summary>
@@ -377,7 +366,7 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator byte(BigEndianByteIndexer indexer)
    {
-      return (byte) indexer.Data;
+      return (byte) indexer.data;
    }
 
    /// <summary>
@@ -388,7 +377,7 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator sbyte(BigEndianByteIndexer indexer)
    {
-      return (sbyte) (byte) indexer.Data;
+      return (sbyte) (byte) indexer.data;
    }
 
    /// <summary>
@@ -399,7 +388,7 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator float(BigEndianByteIndexer indexer)
    {
-      return ((uint) indexer.Data).BitwiseToSingle();
+      return ((uint) indexer.data).BitwiseToSingle();
    }
 
    /// <summary>
@@ -410,7 +399,7 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator double(BigEndianByteIndexer indexer)
    {
-      return indexer.Data.BitwiseToDouble();
+      return indexer.data.BitwiseToDouble();
    }
 
    /// <summary>
@@ -428,7 +417,7 @@ public ref struct BigEndianByteIndexer
    }
 
    /// <summary>
-   /// Explicitly converts the <see cref="BigEndianByteIndexer" /> to a <see cref="ReadOnlySpan{T}"/> of bytes.
+   /// Explicitly converts the <see cref="BigEndianByteIndexer" /> to a <see cref="ReadOnlySpan{T}" /> of bytes.
    /// </summary>
    /// <param name="indexer">The indexer to convert.</param>
    /// <returns>The raw data converted to an array, serialized as big endian.</returns>
@@ -454,7 +443,7 @@ public ref struct BigEndianByteIndexer
    /// <code>
    /// ulong number = 0xDEADBEEFFA17C0DE;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
-   ///
+   /// 
    /// var b0 = indexer[0]; // b0 is 0xDE
    /// indexer[1] = 0xFF;
    /// var result = indexer.ToString(); // result is "DE FF BE EF FA 17 C0 DE"
@@ -478,7 +467,7 @@ public ref struct BigEndianByteIndexer
    /// <code>
    /// long number = 0x7EADBEEFFA17C0DE;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
-   ///
+   /// 
    /// var b0 = indexer[0]; // b0 is 0x7E
    /// indexer[1] = 0xFF;
    /// var result = indexer.ToString(); // result is "7E FF BE EF FA 17 C0 DE"
@@ -502,7 +491,7 @@ public ref struct BigEndianByteIndexer
    /// <code>
    /// uint number = 0xDEADBEEF;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
-   ///
+   /// 
    /// var b0 = indexer[0]; // b0 is 0xDE
    /// indexer[1] = 0xFF;
    /// var result = indexer.ToString(); // result is "DE FF BE EF"
@@ -526,7 +515,7 @@ public ref struct BigEndianByteIndexer
    /// <code>
    /// int number = 0x7EADBEEF;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
-   ///
+   /// 
    /// var b0 = indexer[0]; // b0 is 0xDE
    /// indexer[1] = 0xFF;
    /// var result = indexer.ToString(); // result is "7E FF BE EF"
@@ -550,7 +539,7 @@ public ref struct BigEndianByteIndexer
    /// <code>
    /// ushort number = 0xDEAD;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
-   ///
+   /// 
    /// var b0 = indexer[0]; // b0 is 0xDE
    /// indexer[1] = 0xFF;
    /// var result = indexer.ToString(); // result is "DE FF"
@@ -574,7 +563,7 @@ public ref struct BigEndianByteIndexer
    /// <code>
    /// short number = 0x7EAD;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
-   ///
+   /// 
    /// var b0 = indexer[0]; // b0 is 0xDE
    /// indexer[1] = 0xFF;
    /// var result = indexer.ToString(); // result is "7E FF"
@@ -598,7 +587,7 @@ public ref struct BigEndianByteIndexer
    /// <code>
    /// byte number = 0xDE;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
-   ///
+   /// 
    /// var b0 = indexer[0]; // b0 is 0xDE
    /// indexer[0] = 0xFF;
    /// var result = indexer.ToString(); // result is "FF"
@@ -622,7 +611,7 @@ public ref struct BigEndianByteIndexer
    /// <code>
    /// sbyte number = 0xDE;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
-   ///
+   /// 
    /// var b0 = indexer[0]; // b0 is 0xDE
    /// indexer[0] = 0xFF;
    /// var result = indexer.ToString(); // result is "FF"
@@ -646,7 +635,7 @@ public ref struct BigEndianByteIndexer
    /// <code>
    /// float number = -6.259853398707798016E18f; // 0xDEADBEEF
    /// BigEndianByteIndexer indexer = number; // implicit cast.
-   ///
+   /// 
    /// var b0 = indexer[0]; // b0 is 0xDE
    /// indexer[1] = 0xFF;
    /// var result = indexer.ToString(); // result is "DE FF BE EF"
@@ -717,10 +706,10 @@ public ref struct BigEndianByteIndexer
    public BigEndianByteIndexer StoreBytes(byte[] bytes, int offset, int size = -1)
    {
       if (size == -1)
-         size = ByteSize - offset;
+         size = Length - offset;
 
-      var len = size + offset > ByteSize
-                   ? ByteSize - offset
+      var len = size + offset > Length
+                   ? Length - offset
                    : size;
 
       #if NETSTANDARD2_1_OR_GREATER
@@ -730,45 +719,45 @@ public ref struct BigEndianByteIndexer
          return this;
 
       var o = sizeof(ulong) - 1 - offset - dataOffset;
-      Data = Data.InternalLittleEndianStoreByte(bytes[0], o);
+      data = data.InternalLittleEndianStoreByte(bytes[0], o);
 
       if (cnt == 1)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[1], o - 1);
+      data = data.InternalLittleEndianStoreByte(bytes[1], o - 1);
 
       if (cnt == 2)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[2], o - 2);
+      data = data.InternalLittleEndianStoreByte(bytes[2], o - 2);
 
       if (cnt == 3)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[3], o - 3);
+      data = data.InternalLittleEndianStoreByte(bytes[3], o - 3);
 
       if (cnt == 4)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[4], o - 4);
+      data = data.InternalLittleEndianStoreByte(bytes[4], o - 4);
 
       if (cnt == 5)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[5], o - 5);
+      data = data.InternalLittleEndianStoreByte(bytes[5], o - 5);
 
       if (cnt == 6)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[6], o - 6);
+      data = data.InternalLittleEndianStoreByte(bytes[6], o - 6);
 
       if (cnt == 7)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[7], o - 7);
+      data = data.InternalLittleEndianStoreByte(bytes[7], o - 7);
       #else
       for (int i = 0, j = offset + dataOffset; i < len; i++, j++)
-         Data = Data.InternalBigEndianStoreByte(bytes[i], j);
+         data = data.InternalBigEndianStoreByte(bytes[i], j);
       #endif
       return this;
    }
@@ -784,10 +773,10 @@ public ref struct BigEndianByteIndexer
    public BigEndianByteIndexer StoreBytes(ReadOnlySpan<byte> bytes, int offset, int size = -1)
    {
       if (size == -1)
-         size = ByteSize - offset;
+         size = Length - offset;
 
-      var len = size + offset > ByteSize
-                   ? ByteSize - offset
+      var len = size + offset > Length
+                   ? Length - offset
                    : size;
 
       #if NETSTANDARD2_1_OR_GREATER
@@ -797,52 +786,52 @@ public ref struct BigEndianByteIndexer
          return this;
 
       var o = sizeof(ulong) - 1 - offset - dataOffset;
-      Data = Data.InternalLittleEndianStoreByte(bytes[0], o);
+      data = data.InternalLittleEndianStoreByte(bytes[0], o);
 
       if (cnt == 1)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[1], o - 1);
+      data = data.InternalLittleEndianStoreByte(bytes[1], o - 1);
 
       if (cnt == 2)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[2], o - 2);
+      data = data.InternalLittleEndianStoreByte(bytes[2], o - 2);
 
       if (cnt == 3)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[3], o - 3);
+      data = data.InternalLittleEndianStoreByte(bytes[3], o - 3);
 
       if (cnt == 4)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[4], o - 4);
+      data = data.InternalLittleEndianStoreByte(bytes[4], o - 4);
 
       if (cnt == 5)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[5], o - 5);
+      data = data.InternalLittleEndianStoreByte(bytes[5], o - 5);
 
       if (cnt == 6)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[6], o - 6);
+      data = data.InternalLittleEndianStoreByte(bytes[6], o - 6);
 
       if (cnt == 7)
          return this;
 
-      Data = Data.InternalLittleEndianStoreByte(bytes[7], o - 7);
+      data = data.InternalLittleEndianStoreByte(bytes[7], o - 7);
       #else
       for (int i = 0, j = offset + dataOffset; i < len; i++, j++)
-         Data = Data.InternalBigEndianStoreByte(bytes[i], j);
+         data = data.InternalBigEndianStoreByte(bytes[i], j);
       #endif
 
       return this;
    }
 
    /// <summary>
-   /// Store a single byte to the value at the specified byte offset.
+   /// Stores a single byte to the value at the specified byte offset and returns the modified value.
    /// </summary>
    /// <param name="byte">The byte value to set</param>
    /// <param name="offset">the offset of the byte to write</param>
@@ -862,9 +851,9 @@ public ref struct BigEndianByteIndexer
    public readonly override string ToString()
    {
       // ReSharper disable once HeapView.ObjectAllocation.Evident
-      var sb = new StringBuilder(ByteSize * 3);
+      var sb = new StringBuilder(Length * 3);
 
-      for (var i = 0; i < ByteSize; i++)
+      for (var i = 0; i < Length; i++)
       {
          if (i != 0)
             sb.Append(" ");

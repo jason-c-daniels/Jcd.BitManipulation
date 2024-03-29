@@ -13,21 +13,20 @@ public static short ReadBits(this short value, int offset, Jcd.BitManipulation.B
 
 `value` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 
-the source of bits to read
+The source of bits to read.
 
 <a name='Jcd.BitManipulation.Int16Extensions.ReadBits(thisshort,int,Jcd.BitManipulation.BitMask).offset'></a>
 
 `offset` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-the amount to right shift the result by
+The amount to right shift the result by.
 
 <a name='Jcd.BitManipulation.Int16Extensions.ReadBits(thisshort,int,Jcd.BitManipulation.BitMask).mask'></a>
 
 `mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
-the bitmask of which bits to read.
-Zeroed bits in the mask will always extract 0 from the source.
+The bitmask specifying which bits to read.
 
 #### Returns
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
-The right shifted extracted bits
+The extracted bits right shifted by the specified amount.

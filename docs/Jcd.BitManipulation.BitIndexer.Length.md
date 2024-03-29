@@ -2,10 +2,10 @@
 
 ## BitIndexer.Length Property
 
-The number of bits indexable by this indexer.
+The number of bits indexable by this [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer') instance.
 
 ```csharp
-public int Length { get; }
+public readonly int Length { get; }
 ```
 
 #### Property Value

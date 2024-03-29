@@ -2,7 +2,7 @@
 
 ## ByteExtensions.SetBits(this byte, int, int) Method
 
-Sets all specified bits to "on"
+Sets all specified bits to "on" and returns the modified value.
 
 ```csharp
 public static byte SetBits(this byte value, int offset=0, int size=8);
@@ -13,7 +13,7 @@ public static byte SetBits(this byte value, int offset=0, int size=8);
 
 `value` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.ByteExtensions.SetBits(thisbyte,int,int).offset'></a>
 

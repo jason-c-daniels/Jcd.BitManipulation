@@ -2,7 +2,7 @@
 
 ## ByteArrayExtensions.ToUInt64(this byte[], Endian) Method
 
-Converts bytes into a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64'), discarding any excess data.
+Converts an array of bytes into a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64'), discarding any excess data.
 
 ```csharp
 public static ulong ToUInt64(this byte[] data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
@@ -13,7 +13,7 @@ public static ulong ToUInt64(this byte[] data, Jcd.BitManipulation.Endian endian
 
 `data` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 
-the bytes to convert
+the bytes to convert.
 
 <a name='Jcd.BitManipulation.ByteArrayExtensions.ToUInt64(thisbyte[],Jcd.BitManipulation.Endian).endian'></a>
 

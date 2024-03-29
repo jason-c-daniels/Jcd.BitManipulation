@@ -15,7 +15,7 @@ public static class ReadOnlySpanOfByteExtensions
    /// <summary>
    /// Converts bytes into a <see cref="byte" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert</param>
+   /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="byte" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -32,7 +32,7 @@ public static class ReadOnlySpanOfByteExtensions
    /// <summary>
    /// Converts bytes into an <see cref="sbyte" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert</param>
+   /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="sbyte" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -49,7 +49,7 @@ public static class ReadOnlySpanOfByteExtensions
    /// <summary>
    /// Converts bytes into a <see cref="ushort" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert</param>
+   /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="ushort" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -82,7 +82,7 @@ public static class ReadOnlySpanOfByteExtensions
    /// <summary>
    /// Converts bytes into a <see cref="short" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert</param>
+   /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="short" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -115,7 +115,7 @@ public static class ReadOnlySpanOfByteExtensions
    /// <summary>
    /// Converts bytes into a <see cref="uint" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert</param>
+   /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="uint" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -148,7 +148,7 @@ public static class ReadOnlySpanOfByteExtensions
    /// <summary>
    /// Converts bytes into an <see cref="int" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert</param>
+   /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="int" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -181,7 +181,7 @@ public static class ReadOnlySpanOfByteExtensions
    /// <summary>
    /// Converts bytes into a <see cref="ulong" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert</param>
+   /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="ulong" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -214,7 +214,7 @@ public static class ReadOnlySpanOfByteExtensions
    /// <summary>
    /// Converts bytes into a <see cref="long" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert</param>
+   /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="long" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -247,7 +247,7 @@ public static class ReadOnlySpanOfByteExtensions
    /// <summary>
    /// Converts bytes into a double, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert</param>
+   /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">
    /// A setting indicating the endianness of the source data. The default is Endian.Little.
    /// </param>
@@ -261,7 +261,7 @@ public static class ReadOnlySpanOfByteExtensions
    /// <summary>
    /// Converts bytes into a double, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert</param>
+   /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">
    /// A setting indicating the endianness of the source data. The default is Endian.Little.
    /// </param>

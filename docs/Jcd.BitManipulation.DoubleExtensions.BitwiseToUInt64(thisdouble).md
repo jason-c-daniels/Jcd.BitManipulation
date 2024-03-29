@@ -13,7 +13,7 @@ public static ulong BitwiseToUInt64(this double value);
 
 `value` [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 
-The value to convert
+The value to convert.
 
 #### Returns
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')

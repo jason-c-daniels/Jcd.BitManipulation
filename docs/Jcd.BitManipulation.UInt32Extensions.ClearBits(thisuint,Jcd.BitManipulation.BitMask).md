@@ -2,7 +2,7 @@
 
 ## UInt32Extensions.ClearBits(this uint, BitMask) Method
 
-Sets all bits from a provided mask to "off" and returns the modified value.
+Sets all bits from the provided mask to "off" and returns the modified value.
 
 ```csharp
 public static uint ClearBits(this uint value, Jcd.BitManipulation.BitMask mask);
@@ -13,13 +13,13 @@ public static uint ClearBits(this uint value, Jcd.BitManipulation.BitMask mask);
 
 `value` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.UInt32Extensions.ClearBits(thisuint,Jcd.BitManipulation.BitMask).mask'></a>
 
 `mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
-the bit mask of the bits to clear.
+The bit mask of the bits to clear.
 
 #### Returns
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')

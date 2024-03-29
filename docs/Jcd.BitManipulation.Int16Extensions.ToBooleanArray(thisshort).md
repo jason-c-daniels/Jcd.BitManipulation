@@ -2,7 +2,7 @@
 
 ## Int16Extensions.ToBooleanArray(this short) Method
 
-Convert a [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16') into an array of bools
+Converts a [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16') into an array of bools
 
 ```csharp
 public static bool[] ToBooleanArray(this short bits);
@@ -13,8 +13,8 @@ public static bool[] ToBooleanArray(this short bits);
 
 `bits` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 
-the [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16') to convert
+The [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16') to convert.
 
 #### Returns
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
-the array. Least Significant Bit at index 0
+An array with the Least Significant Bit at index 0

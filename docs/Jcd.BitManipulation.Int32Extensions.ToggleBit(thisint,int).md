@@ -2,7 +2,7 @@
 
 ## Int32Extensions.ToggleBit(this int, int) Method
 
-Toggles a bit.
+Toggles a bit at the specified offset and returns the modified value.
 
 ```csharp
 public static int ToggleBit(this int value, int offset);
@@ -13,7 +13,7 @@ public static int ToggleBit(this int value, int offset);
 
 `value` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.Int32Extensions.ToggleBit(thisint,int).offset'></a>
 

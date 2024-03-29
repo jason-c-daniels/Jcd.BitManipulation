@@ -2,7 +2,7 @@
 
 ## SingleExtensions.SetBits(this float, int, int) Method
 
-Sets all specified bits to "on"
+Sets all specified bits to "on" and returns the modified value.
 
 ```csharp
 public static float SetBits(this float value, int offset=0, int size=32);
@@ -13,7 +13,7 @@ public static float SetBits(this float value, int offset=0, int size=32);
 
 `value` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.SingleExtensions.SetBits(thisfloat,int,int).offset'></a>
 

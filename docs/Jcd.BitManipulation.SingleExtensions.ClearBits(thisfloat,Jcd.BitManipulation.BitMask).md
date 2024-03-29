@@ -2,7 +2,7 @@
 
 ## SingleExtensions.ClearBits(this float, BitMask) Method
 
-Sets all bits from a provided mask to "off" and returns the modified value.
+Sets all bits from the provided mask to "off" and returns the modified value.
 
 ```csharp
 public static float ClearBits(this float value, Jcd.BitManipulation.BitMask mask);
@@ -13,13 +13,13 @@ public static float ClearBits(this float value, Jcd.BitManipulation.BitMask mask
 
 `value` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.SingleExtensions.ClearBits(thisfloat,Jcd.BitManipulation.BitMask).mask'></a>
 
 `mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
-the bit mask of the bits to clear.
+The bit mask of the bits to clear.
 
 #### Returns
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')

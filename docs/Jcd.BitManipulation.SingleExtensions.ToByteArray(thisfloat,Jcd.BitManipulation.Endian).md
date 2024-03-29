@@ -2,7 +2,7 @@
 
 ## SingleExtensions.ToByteArray(this float, Endian) Method
 
-Convert a float into an array of bytes
+Converts a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single') into an array of bytes
 
 ```csharp
 public static byte[] ToByteArray(this float data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
@@ -13,7 +13,7 @@ public static byte[] ToByteArray(this float data, Jcd.BitManipulation.Endian end
 
 `data` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
-the long to convert
+the long to convert.
 
 <a name='Jcd.BitManipulation.SingleExtensions.ToByteArray(thisfloat,Jcd.BitManipulation.Endian).endian'></a>
 

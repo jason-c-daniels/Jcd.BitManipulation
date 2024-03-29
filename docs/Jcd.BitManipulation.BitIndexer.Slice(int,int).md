@@ -2,7 +2,7 @@
 
 ## BitIndexer.Slice(int, int) Method
 
-Get a subset of bits given a starting offset and length.
+Gets a subset of bits given a starting offset and length.
 
 ```csharp
 public readonly bool[] Slice(int start, int length);

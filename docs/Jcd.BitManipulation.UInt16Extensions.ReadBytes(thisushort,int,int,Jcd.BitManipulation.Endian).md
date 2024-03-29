@@ -13,7 +13,7 @@ public static byte[] ReadBytes(this ushort value, int offset, int size, Jcd.BitM
 
 `value` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 
-The value to be read.
+The value to read the byte from.
 
 <a name='Jcd.BitManipulation.UInt16Extensions.ReadBytes(thisushort,int,int,Jcd.BitManipulation.Endian).offset'></a>
 
@@ -35,4 +35,4 @@ The endianness of the byte indexing within the value.
 
 #### Returns
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
-A little endian byte array of the value.
+A byte array of the value in the specified endian.

@@ -2,7 +2,7 @@
 
 ## DoubleExtensions.StoreByte(this double, byte, int, Endian) Method
 
-Store a single byte to the value at the specified byte offset.
+Stores a single byte to the value at the specified byte offset and returns the modified value.
 
 ```csharp
 public static double StoreByte(this double value, byte @byte, int offset, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
@@ -13,7 +13,7 @@ public static double StoreByte(this double value, byte @byte, int offset, Jcd.Bi
 
 `value` [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.DoubleExtensions.StoreByte(thisdouble,byte,int,Jcd.BitManipulation.Endian).byte'></a>
 

@@ -2,7 +2,7 @@
 
 ## SByteExtensions.ToggleBit(this sbyte, int) Method
 
-Toggles a bit.
+Toggles a bit at the specified offset and returns the modified value.
 
 ```csharp
 public static sbyte ToggleBit(this sbyte value, int offset);
@@ -13,7 +13,7 @@ public static sbyte ToggleBit(this sbyte value, int offset);
 
 `value` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.SByteExtensions.ToggleBit(thissbyte,int).offset'></a>
 

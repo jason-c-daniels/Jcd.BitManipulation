@@ -2,7 +2,7 @@
 
 ## ByteArrayExtensions.ToDouble(this byte[], Endian) Method
 
-Converts bytes into a double, discarding any excess data.
+Converts an array of bytes into a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double'), discarding any excess data.
 
 ```csharp
 public static double ToDouble(this byte[] data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
@@ -13,7 +13,7 @@ public static double ToDouble(this byte[] data, Jcd.BitManipulation.Endian endia
 
 `data` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 
-the bytes to convert
+the bytes to convert.
 
 <a name='Jcd.BitManipulation.ByteArrayExtensions.ToDouble(thisbyte[],Jcd.BitManipulation.Endian).endian'></a>
 

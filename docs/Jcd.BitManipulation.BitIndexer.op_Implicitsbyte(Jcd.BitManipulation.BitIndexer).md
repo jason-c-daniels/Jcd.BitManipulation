@@ -13,8 +13,8 @@ public static sbyte implicit operator sbyte(Jcd.BitManipulation.BitIndexer index
 
 `indexer` [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')
 
-the indexer to convert from
+The indexer to convert from.
 
 #### Returns
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
-the lower 8 bits converted to an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
+The lower 8 bits converted to an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte').

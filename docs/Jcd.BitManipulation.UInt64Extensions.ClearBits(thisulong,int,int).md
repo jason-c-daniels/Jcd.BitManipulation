@@ -13,7 +13,7 @@ public static ulong ClearBits(this ulong value, int offset=0, int size=64);
 
 `value` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ClearBits(thisulong,int,int).offset'></a>
 

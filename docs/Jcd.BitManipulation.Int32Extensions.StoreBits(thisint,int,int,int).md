@@ -2,7 +2,7 @@
 
 ## Int32Extensions.StoreBits(this int, int, int, int) Method
 
-Stores a value at the specified bit location within the variable.
+Stores a range of bits to the value, from a source value, and returns the modified value.
 
 ```csharp
 public static int StoreBits(this int value, int source, int offset, int size);
@@ -13,7 +13,7 @@ public static int StoreBits(this int value, int source, int offset, int size);
 
 `value` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.Int32Extensions.StoreBits(thisint,int,int,int).source'></a>
 

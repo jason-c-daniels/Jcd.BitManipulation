@@ -75,7 +75,7 @@ public readonly struct BitMask
    /// <summary>
    /// The backing store for the actual bits of the <see cref="BitMask" />.
    /// </summary>
-   /// <exclude/>
+   /// <exclude />
    private readonly ulong bits;
 
    #region Helpers

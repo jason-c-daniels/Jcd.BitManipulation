@@ -2,7 +2,7 @@
 
 ## SingleExtensions.StoreBits(this float, uint, int, int) Method
 
-Stores a value at the specified bit location within the variable.
+Stores a range of bits to the value, from a source value, and returns the modified value.
 
 ```csharp
 public static float StoreBits(this float value, uint source, int offset, int size);
@@ -13,7 +13,7 @@ public static float StoreBits(this float value, uint source, int offset, int siz
 
 `value` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.SingleExtensions.StoreBits(thisfloat,uint,int,int).source'></a>
 

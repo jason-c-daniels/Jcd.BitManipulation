@@ -2,7 +2,7 @@
 
 ## DoubleExtensions.ToggleBits(this double, BitMask) Method
 
-Toggle all the bits according to the provided mask
+Toggle all the bits specified in the provided bit mask and returns the modified value.
 
 ```csharp
 public static double ToggleBits(this double value, Jcd.BitManipulation.BitMask mask);
@@ -13,13 +13,13 @@ public static double ToggleBits(this double value, Jcd.BitManipulation.BitMask m
 
 `value` [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.DoubleExtensions.ToggleBits(thisdouble,Jcd.BitManipulation.BitMask).mask'></a>
 
 `mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
-bits to set.
+The bits to set.
 
 #### Returns
 [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')

@@ -7,8 +7,8 @@ BenchmarkDotNet v0.13.12, Windows 11 (10.0.22631.3296/23H2/2023Update/SunValley3
   Job-JSKQEV : .NET 8.0.3 (8.0.324.11423), X64 RyuJIT AVX2
   Job-FYSSQN : .NET Framework 4.8.1 (4.8.9181.0), X64 RyuJIT VectorSize=256
 
-IterationTime=120.0000 ms  MaxIterationCount=15  MinIterationCount=10  
-WarmupCount=10  
+IterationTime=120.0000 ms  MaxIterationCount=15  MinIterationCount=10
+WarmupCount=10
 
 ```
 

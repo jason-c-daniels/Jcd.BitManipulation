@@ -13,7 +13,7 @@ public static float ClearBits(this float value, int offset=0, int size=32);
 
 `value` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.SingleExtensions.ClearBits(thisfloat,int,int).offset'></a>
 

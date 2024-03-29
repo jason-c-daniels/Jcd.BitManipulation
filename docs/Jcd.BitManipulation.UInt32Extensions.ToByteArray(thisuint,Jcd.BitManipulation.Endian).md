@@ -2,7 +2,7 @@
 
 ## UInt32Extensions.ToByteArray(this uint, Endian) Method
 
-Convert a uint into an array of bytes
+Converts a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32') into an array of bytes
 
 ```csharp
 public static byte[] ToByteArray(this uint data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
@@ -13,7 +13,7 @@ public static byte[] ToByteArray(this uint data, Jcd.BitManipulation.Endian endi
 
 `data` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
-the [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32') to convert
+the [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32') to convert.
 
 <a name='Jcd.BitManipulation.UInt32Extensions.ToByteArray(thisuint,Jcd.BitManipulation.Endian).endian'></a>
 

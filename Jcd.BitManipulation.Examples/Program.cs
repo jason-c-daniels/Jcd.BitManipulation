@@ -1,5 +1,3 @@
-// ReSharper disable RedundantArgumentDefaultValue
-
 #region
 
 using System;
@@ -10,6 +8,7 @@ using Jcd.Units.UnitsOfMeasure;
 using Jcd.Units.UnitsOfMeasure.Data;
 using Jcd.Units.UnitsOfMeasure.SI;
 
+// ReSharper disable RedundantArgumentDefaultValue
 // ReSharper disable HeapView.ObjectAllocation
 // ReSharper disable RedundantAssignment
 // ReSharper disable HeapView.BoxingAllocation
@@ -35,7 +34,7 @@ internal static class Program
       #if DEBUG
       const long iterations = 1_000_000;
       #else
-      const long iterations = 15_000_000;
+      const long iterations = 75_000_000;
       #endif
       var f = 1.33f;
       var bits = f.BitwiseToUInt32().ReadBits(0, 4);
@@ -54,35 +53,43 @@ internal static class Program
       var ba2 = ul2.ToByteArray();
 
       // warm things up
-      TimeBitManipulations(iterations                       / 10, false);
-      TimeStoreByteAndReadByteCalls(iterations              / 10, false);
-      TimeStoreByteAndReadByteFromIndexerCalls(iterations   / 10, false);
-      TimeCastOperations(iterations                         / 10, false);
-      TimeStore8BytesToLongCalls(iterations                 / 10, false);
-      TimeStore4BytesToLongCalls(iterations                 / 10, false);
-      TimeStore2BytesToLongCalls(iterations                 / 10, false);
-      TimeStore8BytesToIndexerCalls(iterations              / 10, false);
-      TimeStore4BytesToIndexerCalls(iterations              / 10, false);
-      TimeStore2BytesToIndexerCalls(iterations              / 10, false);
-      TimeByteArrayToUInt64LittleEndian(iterations          / 10, false);
-      TimeByteArrayToUInt64BigEndian(iterations             / 10, false);
-      TimeReadOnlySpanOfByteToUInt64LittleEndian(iterations / 10, false);
-      TimeReadOnlySpanOfByteToUInt64BigEndian(iterations    / 10, false);
+      TimeBitManipulations(iterations                                        / 10, false);
+      TimeStoreByteAndReadByteCalls(iterations                               / 10, false);
+      TimeStoreByteAndReadByteFromIndexerCalls(iterations                    / 10, false);
+      TimeLittleEndianByteIndexerCastOperations(iterations                   / 10, false);
+      TimeBigEndianByteIndexerCastOperations(iterations                      / 10, false);
+      TimeByteArrayModificationInALoopSubtractFromOtherResults(iterations    / 10, false);
+      TimeStore8BytesToLongCalls(iterations                                  / 10, false);
+      TimeStore4BytesToLongCalls(iterations                                  / 10, false);
+      TimeStore2BytesToLongCalls(iterations                                  / 10, false);
+      TimeStore8BytesToIndexerCalls(iterations                               / 10, false);
+      TimeStore4BytesToIndexerCalls(iterations                               / 10, false);
+      TimeStore2BytesToIndexerCalls(iterations                               / 10, false);
+      TimeByteArrayToUInt64_BitConverter_NativeEndian(iterations             / 10, false);
+      TimeByteArrayToUInt64_BitConverter_ReversedFromNativeEndian(iterations / 10, false);
+      TimeByteArrayToUInt64LittleEndianByteIndexer(iterations                / 10, false);
+      TimeByteArrayToUInt64BigEndianByteIndexer(iterations                   / 10, false);
+      TimeReadOnlySpanOfByteToUInt64LittleEndian(iterations                  / 10, false);
+      TimeReadOnlySpanOfByteToUInt64BigEndian(iterations                     / 10, false);
 
       // now run and report.
       ReportSystemInfo();
       TimeBitManipulations(iterations);
       TimeStoreByteAndReadByteCalls(iterations);
       TimeStoreByteAndReadByteFromIndexerCalls(iterations);
-      TimeCastOperations(iterations);
+      TimeLittleEndianByteIndexerCastOperations(iterations);
+      TimeBigEndianByteIndexerCastOperations(iterations);
+      TimeByteArrayModificationInALoopSubtractFromOtherResults(iterations / 10);
       TimeStore8BytesToLongCalls(iterations);
       TimeStore4BytesToLongCalls(iterations);
       TimeStore2BytesToLongCalls(iterations);
       TimeStore8BytesToIndexerCalls(iterations);
       TimeStore4BytesToIndexerCalls(iterations);
       TimeStore2BytesToIndexerCalls(iterations);
-      TimeByteArrayToUInt64LittleEndian(iterations);
-      TimeByteArrayToUInt64BigEndian(iterations);
+      TimeByteArrayToUInt64_BitConverter_NativeEndian(iterations             / 10);
+      TimeByteArrayToUInt64_BitConverter_ReversedFromNativeEndian(iterations / 10);
+      TimeByteArrayToUInt64LittleEndianByteIndexer(iterations);
+      TimeByteArrayToUInt64BigEndianByteIndexer(iterations);
       TimeReadOnlySpanOfByteToUInt64LittleEndian(iterations);
       TimeReadOnlySpanOfByteToUInt64BigEndian(iterations);
    }
@@ -364,12 +371,12 @@ internal static class Program
          Console.WriteLine($"{upperByte} {data}");
    }
 
-   private static void TimeByteArrayToUInt64LittleEndian(long iterations, bool report = true)
+   private static void TimeByteArrayToUInt64LittleEndianByteIndexer(long iterations, bool report = true)
    {
       if (report)
          SystemInfo.Instance.RefreshInfo();
       if (report)
-         Console.WriteLine($"  - Name: {nameof(TimeByteArrayToUInt64LittleEndian)}");
+         Console.WriteLine($"  - Name: {nameof(TimeByteArrayToUInt64LittleEndianByteIndexer)}");
       const int opsPerIteration = 1;
       ulong data = 0;
       byte upperByte = 0;
@@ -394,12 +401,39 @@ internal static class Program
          Console.WriteLine($"{upperByte} {data}");
    }
 
-   private static void TimeByteArrayToUInt64BigEndian(long iterations, bool report = true)
+   private static void TimeByteArrayModificationInALoopSubtractFromOtherResults(long iterations, bool report = true)
    {
       if (report)
          SystemInfo.Instance.RefreshInfo();
       if (report)
-         Console.WriteLine($"  - Name: {nameof(TimeByteArrayToUInt64BigEndian)}");
+         Console.WriteLine($"  - Name: {nameof(TimeByteArrayModificationInALoopSubtractFromOtherResults)}");
+      const int opsPerIteration = 1;
+      ulong data = 0;
+      byte upperByte = 0;
+      var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      var sw = Stopwatch.StartNew();
+
+      for (var i = 0; i < iterations; i++)
+         bytes[0] = (byte) (i % 256);
+
+      sw.Stop();
+
+      if (!report)
+         return;
+
+      var operationCount = iterations * opsPerIteration;
+      var stats = CalculateStats(sw, operationCount, iterations);
+      ReportStats(stats, operationCount, iterations);
+      if (bytes[0].ToString() == "super happy fun time")
+         Console.WriteLine($"{upperByte} {data}");
+   }
+
+   private static void TimeByteArrayToUInt64BigEndianByteIndexer(long iterations, bool report = true)
+   {
+      if (report)
+         SystemInfo.Instance.RefreshInfo();
+      if (report)
+         Console.WriteLine($"  - Name: {nameof(TimeByteArrayToUInt64BigEndianByteIndexer)}");
       const int opsPerIteration = 1;
       ulong data = 0;
       byte upperByte = 0;
@@ -424,14 +458,43 @@ internal static class Program
          Console.WriteLine($"{upperByte} {data}");
    }
 
-   private static void TimeCastOperations(long iterations, bool report = true)
+   private static void TimeLittleEndianByteIndexerCastOperations(long iterations, bool report = true)
    {
       if (report)
          SystemInfo.Instance.RefreshInfo();
       if (report)
-         Console.WriteLine($"  - Name: {nameof(TimeCastOperations)}");
+         Console.WriteLine($"  - Name: {nameof(TimeLittleEndianByteIndexerCastOperations)}");
       const int opsPerIteration = 2;
       LittleEndianByteIndexer idx = 0L;
+      long convertedBack = 0;
+      var sw = Stopwatch.StartNew();
+
+      for (var i = 0; i < iterations; i++)
+      {
+         idx = i;
+         convertedBack = idx;
+      }
+
+      sw.Stop();
+
+      if (!report)
+         return;
+
+      var operationCount = iterations * opsPerIteration;
+      var stats = CalculateStats(sw, operationCount, iterations);
+      ReportStats(stats, operationCount, iterations);
+      if (((long) idx).ToString() == "super happy fun time")
+         Console.WriteLine($"{convertedBack}");
+   }
+
+   private static void TimeBigEndianByteIndexerCastOperations(long iterations, bool report = true)
+   {
+      if (report)
+         SystemInfo.Instance.RefreshInfo();
+      if (report)
+         Console.WriteLine($"  - Name: {nameof(TimeBigEndianByteIndexerCastOperations)}");
+      const int opsPerIteration = 2;
+      BigEndianByteIndexer idx = 0L;
       long convertedBack = 0;
       var sw = Stopwatch.StartNew();
 
@@ -500,6 +563,67 @@ internal static class Program
       for (var i = 0; i < iterations; i++)
       {
          actualBytes[0] = (byte) (i % 256);
+         data = bytes.ToUInt64(Endian.Big);
+      }
+
+      sw.Stop();
+
+      if (!report)
+         return;
+
+      var operationCount = iterations * opsPerIteration;
+      var stats = CalculateStats(sw, operationCount, iterations);
+      ReportStats(stats, operationCount, iterations);
+      if (data.ToString() == "super happy fun time")
+         Console.WriteLine($"{upperByte} {data}");
+   }
+
+   private static void TimeByteArrayToUInt64_BitConverter_NativeEndian(long iterations, bool report = true)
+   {
+      if (report)
+         SystemInfo.Instance.RefreshInfo();
+      if (report)
+         Console.WriteLine($"  - Name: {nameof(TimeByteArrayToUInt64_BitConverter_NativeEndian)}");
+      const int opsPerIteration = 1;
+      ulong data = 0;
+      byte upperByte = 0;
+      var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      var sw = Stopwatch.StartNew();
+
+      for (var i = 0; i < iterations; i++)
+      {
+         bytes[0] = (byte) (i % 256);
+         data = BitConverter.ToUInt64(bytes);
+      }
+
+      sw.Stop();
+
+      if (!report)
+         return;
+
+      var operationCount = iterations * opsPerIteration;
+      var stats = CalculateStats(sw, operationCount, iterations);
+      ReportStats(stats, operationCount, iterations);
+      if (data.ToString() == "super happy fun time")
+         Console.WriteLine($"{upperByte} {data}");
+   }
+
+   private static void TimeByteArrayToUInt64_BitConverter_ReversedFromNativeEndian(long iterations, bool report = true)
+   {
+      if (report)
+         SystemInfo.Instance.RefreshInfo();
+      if (report)
+         Console.WriteLine($"  - Name: {nameof(TimeByteArrayToUInt64_BitConverter_ReversedFromNativeEndian)}");
+      const int opsPerIteration = 1;
+      ulong data = 0;
+      byte upperByte = 0;
+      var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
+      var sw = Stopwatch.StartNew();
+
+      for (var i = 0; i < iterations; i++)
+      {
+         bytes[0] = (byte) (i % 256);
+         Array.Reverse(bytes);
          data = bytes.ToUInt64(Endian.Big);
       }
 

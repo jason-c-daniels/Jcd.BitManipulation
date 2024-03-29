@@ -2,7 +2,7 @@
 
 ## ByteExtensions.StoreBit(this byte, bool, int) Method
 
-Store a single bit at the specified offset.
+Store a single bit at the specified offset and returns the modified value.
 
 ```csharp
 public static byte StoreBit(this byte value, bool bit, int offset);
@@ -13,7 +13,7 @@ public static byte StoreBit(this byte value, bool bit, int offset);
 
 `value` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.ByteExtensions.StoreBit(thisbyte,bool,int).bit'></a>
 
@@ -25,7 +25,7 @@ The bit value to set
 
 `offset` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-the offset of the bit to write
+The offset of the bit to store.
 
 #### Returns
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')

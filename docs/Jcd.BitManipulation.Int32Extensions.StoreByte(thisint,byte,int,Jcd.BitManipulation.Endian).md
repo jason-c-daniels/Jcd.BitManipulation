@@ -2,7 +2,7 @@
 
 ## Int32Extensions.StoreByte(this int, byte, int, Endian) Method
 
-Store a single byte to the value at the specified byte offset.
+Stores a single byte to the value at the specified byte offset and returns the modified value.
 
 ```csharp
 public static int StoreByte(this int value, byte @byte, int offset, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
@@ -13,7 +13,7 @@ public static int StoreByte(this int value, byte @byte, int offset, Jcd.BitManip
 
 `value` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.Int32Extensions.StoreByte(thisint,byte,int,Jcd.BitManipulation.Endian).byte'></a>
 

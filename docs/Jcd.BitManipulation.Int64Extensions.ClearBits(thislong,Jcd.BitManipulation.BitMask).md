@@ -2,7 +2,7 @@
 
 ## Int64Extensions.ClearBits(this long, BitMask) Method
 
-Sets all bits from a provided mask to "off" and returns the modified value.
+Sets all bits from the provided mask to "off" and returns the modified value.
 
 ```csharp
 public static long ClearBits(this long value, Jcd.BitManipulation.BitMask mask);
@@ -13,13 +13,13 @@ public static long ClearBits(this long value, Jcd.BitManipulation.BitMask mask);
 
 `value` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.Int64Extensions.ClearBits(thislong,Jcd.BitManipulation.BitMask).mask'></a>
 
 `mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
-the bit mask of the bits to clear.
+The bit mask of the bits to clear.
 
 #### Returns
 [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')

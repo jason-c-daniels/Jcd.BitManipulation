@@ -13,14 +13,13 @@ public static short ReadBits(this short value, Jcd.BitManipulation.BitMask mask)
 
 `value` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 
-the source of bits to read
+The source of bits to read.
 
 <a name='Jcd.BitManipulation.Int16Extensions.ReadBits(thisshort,Jcd.BitManipulation.BitMask).mask'></a>
 
 `mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
-the bitmask of which bits to read.
-Zeroed bits in the mask will always extract 0 from the source.
+The bitmask specifying which bits to read.
 
 #### Returns
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')

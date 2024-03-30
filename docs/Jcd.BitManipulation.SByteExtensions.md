@@ -2,7 +2,7 @@
 
 ## SByteExtensions Class
 
-Provides methods to perform easy to read bit manipulations on an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
+Provides easy to read methods for bit manipulation operations on an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 
 ```csharp
 public static class SByteExtensions

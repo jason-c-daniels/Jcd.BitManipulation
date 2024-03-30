@@ -2,7 +2,7 @@
 
 ## DoubleExtensions Class
 
-Provides methods to perform easy to read bit and byte manipulations on a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
+Provides easy to read methods for bit manipulation operations on a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 
 ```csharp
 public static class DoubleExtensions

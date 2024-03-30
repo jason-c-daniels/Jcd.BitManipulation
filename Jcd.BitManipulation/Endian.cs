@@ -1,19 +1,19 @@
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// A type indicating which endian is in use.
+/// The order of the bytes in memory.
 /// </summary>
 public enum Endian
 {
    /// <summary>
-   /// Indicates that Little Endian is in use.
+   /// Indicates that the least significant byte is at index 0.
    /// </summary>
    Little = 0
 
   ,
 
    /// <summary>
-   /// Indicates that Big Endian is in use.
+   /// Indicates that the most significant byte is at index 0.
    /// </summary>
    Big = 1
 }

@@ -2,7 +2,7 @@
 
 ## Int32Extensions Class
 
-Provides methods to perform easy to read bit and byte manipulations on an [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+Provides easy to read methods for bit manipulation operations on an [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
 ```csharp
 public static class Int32Extensions

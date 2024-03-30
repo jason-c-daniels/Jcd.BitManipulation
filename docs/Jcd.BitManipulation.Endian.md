@@ -2,7 +2,7 @@
 
 ## Endian Enum
 
-A type indicating which endian is in use.
+The order of the bytes in memory.
 
 ```csharp
 public enum Endian
@@ -13,10 +13,10 @@ public enum Endian
 
 `Big` 1
 
-Indicates that Big Endian is in use.
+Indicates that the most significant byte is at index 0.
 
 <a name='Jcd.BitManipulation.Endian.Little'></a>
 
 `Little` 0
 
-Indicates that Little Endian is in use.
+Indicates that the least significant byte is at index 0.

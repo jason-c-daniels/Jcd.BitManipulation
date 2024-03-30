@@ -2,7 +2,8 @@
 
 ## BitMask Struct
 
-An conceptual abstraction for a bit mask.
+Provides an integer size independent representation of a bit mask
+and helper methods to simplify creating bit masks.
 
 ```csharp
 public readonly struct BitMask

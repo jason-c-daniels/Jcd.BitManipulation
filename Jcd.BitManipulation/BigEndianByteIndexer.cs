@@ -9,9 +9,9 @@ using System.Text;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// Provides byte level indexing operations (set, get) on a
-/// stored number. Allows for indexer syntax when accessing
-/// the stored bytes. Index zero is the most significant byte.
+/// Provides byte level indexing operations (set, get) on the bytes of
+/// a copied value. It provides indexer-style access to the bytes of
+/// the value. Index zero is the most significant byte.
 /// </summary>
 public ref struct BigEndianByteIndexer
 {

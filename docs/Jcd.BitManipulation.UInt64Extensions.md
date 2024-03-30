@@ -2,7 +2,7 @@
 
 ## UInt64Extensions Class
 
-Provides methods to perform easy to read bit and byte manipulations on a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
+Provides easy to read methods for bit manipulation operations on a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
 ```csharp
 public static class UInt64Extensions

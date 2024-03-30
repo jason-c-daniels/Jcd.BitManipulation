@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// Provides methods to perform easy to read bit manipulations on a single <see cref="byte" />
+/// Provides easy to read methods for bit manipulation operations on a <see cref="byte" />
 /// </summary>
 public static class ByteExtensions
 {

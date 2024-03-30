@@ -2,7 +2,7 @@
 
 ## Int64Extensions Class
 
-Provides methods to perform easy to read bit and byte manipulations on an [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
+Provides easy to read methods for bit manipulation operations on an [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 
 ```csharp
 public static class Int64Extensions

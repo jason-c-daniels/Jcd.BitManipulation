@@ -11,7 +11,8 @@ using System.Text;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// An conceptual abstraction for a bit mask.
+/// Provides an integer size independent representation of a bit mask
+/// and helper methods to simplify creating bit masks.
 /// </summary>
 public readonly struct BitMask
 {

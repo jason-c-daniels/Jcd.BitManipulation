@@ -20,7 +20,7 @@ using System.Runtime.CompilerServices;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// Extension methods to aid in converting numbers to and from arrays of bools
+/// Provides facilities to convert an array of bytes to other data types.
 /// </summary>
 public static class ByteArrayExtensions
 {

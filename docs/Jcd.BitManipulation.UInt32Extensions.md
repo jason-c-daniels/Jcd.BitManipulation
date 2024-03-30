@@ -2,7 +2,7 @@
 
 ## UInt32Extensions Class
 
-Provides methods to perform easy to read bit and byte manipulations on a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
+Provides easy to read methods for bit manipulation operations on a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
 ```csharp
 public static class UInt32Extensions

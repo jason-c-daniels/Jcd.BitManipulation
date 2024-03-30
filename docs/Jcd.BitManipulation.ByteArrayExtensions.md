@@ -2,7 +2,7 @@
 
 ## ByteArrayExtensions Class
 
-Extension methods to aid in converting numbers to and from arrays of bools
+Provides facilities to convert an array of bytes to other data types.
 
 ```csharp
 public static class ByteArrayExtensions

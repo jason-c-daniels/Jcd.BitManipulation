@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// Provides methods to perform easy to read bit manipulations on an <see cref="sbyte" />
+/// Provides easy to read methods for bit manipulation operations on an <see cref="sbyte" />
 /// </summary>
 public static class SByteExtensions
 {

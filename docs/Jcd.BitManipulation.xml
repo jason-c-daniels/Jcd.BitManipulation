@@ -6,9 +6,9 @@
     <members>
         <member name="T:Jcd.BitManipulation.BigEndianByteIndexer">
             <summary>
-            Provides byte level indexing operations (set, get) on a
-            stored number. Allows for indexer syntax when accessing
-            the stored bytes. Index zero is the most significant byte.
+            Provides byte level indexing operations (set, get) on the bytes of
+            a copied value. It provides indexer-style access to the bytes of
+            the value. Index zero is the most significant byte.
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.UInt64)">
@@ -478,9 +478,39 @@
         </member>
         <member name="T:Jcd.BitManipulation.BitIndexer">
             <summary>
-            Provides indexed access to the bits on a stored integer type, up to 64 bits.
+            Provides indexer style access to the bits on a copied value.
             </summary>
             <remarks>
+            <para>
+            Examples:
+            <code>
+            ushort ui16 = 0b1011110001010101;
+            BitIndexer bi = ui16;
+            Console.WriteLine(bi.ToString()); // outputs: 0b1011110001010101
+            
+            if (bi[0])
+               Console.WriteLine("Index 0 is set/true!"); // this will write to the output.
+            
+            if (bi[1])
+               Console.WriteLine("Index 1 is set/true!"); // this will not write to the output.
+            
+            if (bi[10])
+               Console.WriteLine("Index 10 is set/true!");
+            
+            bi[1] = true; // bi is now 0b1011110001010111
+            if (bi[1])
+               Console.WriteLine("Index 1 is set/true!"); // this will write to the output.
+            
+            Console.WriteLine(bi.ToString()); // outputs: 0b1011110001010111
+            
+            var flags = bi[0..^0]; // flags = [true, true, true, false, true, false, true, false, false, false, true, true, true, true, false, true];
+            Array.Reverse(flags);
+            var ui16Reversed=flags.ToUInt16(); // ui16Reversed = 0b1110101000111101;
+            BitIndexer biReversed = ui16Reversed;
+            
+            Console.WriteLine(biReversed.ToString()); // outputs: 0b1110101000111101
+            </code>
+            </para>
             </remarks>
         </member>
         <member name="P:Jcd.BitManipulation.BitIndexer.Length">
@@ -670,7 +700,8 @@
         </member>
         <member name="T:Jcd.BitManipulation.BitMask">
             <summary>
-            An conceptual abstraction for a bit mask.
+            Provides an integer size independent representation of a bit mask
+            and helper methods to simplify creating bit masks.
             </summary>
         </member>
         <member name="F:Jcd.BitManipulation.BitMask.AllBits">
@@ -921,7 +952,7 @@
         </member>
         <member name="T:Jcd.BitManipulation.BooleanArrayExtensions">
             <summary>
-            Extension methods to aid in converting to numbers from arrays of <see cref="T:System.Boolean" /> values.
+            Provides facilities to convert to numbers from arrays of <see cref="T:System.Boolean" /> values.
             At their respective bit positions, <see langword="true" />  is translated to 1
             and <see langword="false" /> is translated to 0.
             </summary>
@@ -984,21 +1015,21 @@
         </member>
         <member name="M:Jcd.BitManipulation.BooleanArrayExtensions.ToDouble(System.Boolean[])">
             <summary>
-            Converts an array of bools into a double, discarding any excess bits.
+            Converts an array of bools into a <see cref="T:System.Double" />, discarding any excess bits.
             </summary>
             <param name="bits">The array of <see cref="T:System.Boolean" /> values to convert. The Least Significant Bit is at index 0</param>
             <returns>The converted double</returns>
         </member>
         <member name="M:Jcd.BitManipulation.BooleanArrayExtensions.ToSingle(System.Boolean[])">
             <summary>
-            Converts an array of bools into a float, discarding any excess bits.
+            Converts an array of bools into a <see cref="T:System.Single" />, discarding any excess bits.
             </summary>
             <param name="bits">The array of <see cref="T:System.Boolean" /> values to convert. The Least Significant Bit is at index 0</param>
             <returns>The converted float</returns>
         </member>
         <member name="T:Jcd.BitManipulation.ByteArrayExtensions">
             <summary>
-            Extension methods to aid in converting numbers to and from arrays of bools
+            Provides facilities to convert an array of bytes to other data types.
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.ByteArrayExtensions.ToByte(System.Byte[],Jcd.BitManipulation.Endian)">
@@ -1169,7 +1200,7 @@
         </member>
         <member name="T:Jcd.BitManipulation.ByteExtensions">
             <summary>
-            Provides methods to perform easy to read bit manipulations on a single <see cref="T:System.Byte" />
+            Provides easy to read methods for bit manipulation operations on a <see cref="T:System.Byte" />
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.ByteExtensions.AreAllBitsSet(System.Byte,Jcd.BitManipulation.BitMask)">
@@ -1360,7 +1391,7 @@
         </member>
         <member name="T:Jcd.BitManipulation.DoubleExtensions">
             <summary>
-            Provides methods to perform easy to read bit and byte manipulations on a <see cref="T:System.Double" />
+            Provides easy to read methods for bit manipulation operations on a <see cref="T:System.Double" />
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.DoubleExtensions.AreAllBitsSet(System.Double,Jcd.BitManipulation.BitMask)">
@@ -1608,22 +1639,22 @@
         </member>
         <member name="T:Jcd.BitManipulation.Endian">
             <summary>
-            A type indicating which endian is in use.
+            The order of the bytes in memory.
             </summary>
         </member>
         <member name="F:Jcd.BitManipulation.Endian.Little">
             <summary>
-            Indicates that Little Endian is in use.
+            Indicates that the least significant byte is at index 0.
             </summary>
         </member>
         <member name="F:Jcd.BitManipulation.Endian.Big">
             <summary>
-            Indicates that Big Endian is in use.
+            Indicates that the most significant byte is at index 0.
             </summary>
         </member>
         <member name="T:Jcd.BitManipulation.Int16Extensions">
             <summary>
-            Provides methods to perform easy to read bit and byte manipulations on an <see cref="T:System.Int16" />
+            Provides easy to read methods for bit manipulation operations on an <see cref="T:System.Int16" />
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.Int16Extensions.AreAllBitsSet(System.Int16,Jcd.BitManipulation.BitMask)">
@@ -1866,7 +1897,7 @@
         </member>
         <member name="T:Jcd.BitManipulation.Int32Extensions">
             <summary>
-            Provides methods to perform easy to read bit and byte manipulations on an <see cref="T:System.Int32" />
+            Provides easy to read methods for bit manipulation operations on an <see cref="T:System.Int32" />
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.Int32Extensions.AreAllBitsSet(System.Int32,Jcd.BitManipulation.BitMask)">
@@ -2116,7 +2147,7 @@
         </member>
         <member name="T:Jcd.BitManipulation.Int64Extensions">
             <summary>
-            Provides methods to perform easy to read bit and byte manipulations on an <see cref="T:System.Int64" />
+            Provides easy to read methods for bit manipulation operations on an <see cref="T:System.Int64" />
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.Int64Extensions.AreAllBitsSet(System.Int64,Jcd.BitManipulation.BitMask)">
@@ -2357,9 +2388,9 @@
         </member>
         <member name="T:Jcd.BitManipulation.LittleEndianByteIndexer">
             <summary>
-            Provides byte level indexing operations (set, get) on a
-            stored number. Allows for indexer syntax when accessing
-            the stored bytes. Index zero is the least significant byte.
+            Provides byte level indexing operations (set, get) on the bytes of
+            a copied value. It provides indexer-style access to the bytes of
+            the value. Index zero is the least significant byte.
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.#ctor(System.UInt64)">
@@ -2669,8 +2700,8 @@
         </member>
         <member name="T:Jcd.BitManipulation.NamespaceDoc">
             <summary>
-            Provides a set of extension methods and types to assist with
-            making bit manipulation code easier to read.
+            Provides extension methods and types that makes code for bit and byte manipulation
+            on intrinsic data types easier to read vs the standard operators: `&amp;, |, ^, and ~`.
             </summary>
             <example>
             <code>
@@ -2848,7 +2879,7 @@
         </member>
         <member name="T:Jcd.BitManipulation.SByteExtensions">
             <summary>
-            Provides methods to perform easy to read bit manipulations on an <see cref="T:System.SByte" />
+            Provides easy to read methods for bit manipulation operations on an <see cref="T:System.SByte" />
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.SByteExtensions.AreAllBitsSet(System.SByte,Jcd.BitManipulation.BitMask)">
@@ -3039,7 +3070,7 @@
         </member>
         <member name="T:Jcd.BitManipulation.SingleExtensions">
             <summary>
-            Provides methods to perform easy to read bit and byte manipulations on a <see cref="T:System.Single" />
+            Provides easy to read methods for bit manipulation operations on a <see cref="T:System.Single" />
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.SingleExtensions.AreAllBitsSet(System.Single,Jcd.BitManipulation.BitMask)">
@@ -3296,7 +3327,7 @@
         </member>
         <member name="T:Jcd.BitManipulation.UInt16Extensions">
             <summary>
-            Provides methods to perform easy to read bit and byte manipulations on a <see cref="T:System.UInt16" />
+            Provides easy to read methods for bit manipulation operations on a <see cref="T:System.UInt16" />
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.UInt16Extensions.AreAllBitsSet(System.UInt16,Jcd.BitManipulation.BitMask)">
@@ -3530,7 +3561,7 @@
         </member>
         <member name="T:Jcd.BitManipulation.UInt32Extensions">
             <summary>
-            Provides methods to perform easy to read bit and byte manipulations on a <see cref="T:System.UInt32" />
+            Provides easy to read methods for bit manipulation operations on a <see cref="T:System.UInt32" />
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.UInt32Extensions.AreAllBitsSet(System.UInt32,Jcd.BitManipulation.BitMask)">
@@ -3780,7 +3811,7 @@
         </member>
         <member name="T:Jcd.BitManipulation.UInt64Extensions">
             <summary>
-            Provides methods to perform easy to read bit and byte manipulations on a <see cref="T:System.UInt64" />
+            Provides easy to read methods for bit manipulation operations on a <see cref="T:System.UInt64" />
             </summary>
         </member>
         <member name="M:Jcd.BitManipulation.UInt64Extensions.AreAllBitsSet(System.UInt64,Jcd.BitManipulation.BitMask)">

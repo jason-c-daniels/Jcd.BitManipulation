@@ -1,7 +1,7 @@
 ## Jcd.BitManipulation Namespace
 
-Provides a set of extension methods and types to assist with
-making bit manipulation code easier to read.
+Provides extension methods and types that makes code for bit and byte manipulation
+on intrinsic data types easier to read vs the standard operators: `&, |, ^, and ~`.
 
 ### Example
 
@@ -90,27 +90,27 @@ Console.WriteLine(lebi.ToString()); // outputs: "0B C0 0D 60"
 
 | Classes | |
 | :--- | :--- |
-| [BooleanArrayExtensions](Jcd.BitManipulation.BooleanArrayExtensions.md 'Jcd.BitManipulation.BooleanArrayExtensions') | Extension methods to aid in converting to numbers from arrays of [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean') values. At their respective bit positions, [true](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool 'https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool')  is translated to 1 and [false](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool 'https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool') is translated to 0. |
-| [ByteArrayExtensions](Jcd.BitManipulation.ByteArrayExtensions.md 'Jcd.BitManipulation.ByteArrayExtensions') | Extension methods to aid in converting numbers to and from arrays of bools |
-| [ByteExtensions](Jcd.BitManipulation.ByteExtensions.md 'Jcd.BitManipulation.ByteExtensions') | Provides methods to perform easy to read bit manipulations on a single [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') |
-| [DoubleExtensions](Jcd.BitManipulation.DoubleExtensions.md 'Jcd.BitManipulation.DoubleExtensions') | Provides methods to perform easy to read bit and byte manipulations on a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double') |
-| [Int16Extensions](Jcd.BitManipulation.Int16Extensions.md 'Jcd.BitManipulation.Int16Extensions') | Provides methods to perform easy to read bit and byte manipulations on an [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16') |
-| [Int32Extensions](Jcd.BitManipulation.Int32Extensions.md 'Jcd.BitManipulation.Int32Extensions') | Provides methods to perform easy to read bit and byte manipulations on an [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32') |
-| [Int64Extensions](Jcd.BitManipulation.Int64Extensions.md 'Jcd.BitManipulation.Int64Extensions') | Provides methods to perform easy to read bit and byte manipulations on an [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64') |
+| [BooleanArrayExtensions](Jcd.BitManipulation.BooleanArrayExtensions.md 'Jcd.BitManipulation.BooleanArrayExtensions') | Provides facilities to convert to numbers from arrays of [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean') values. At their respective bit positions, [true](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool 'https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool')  is translated to 1 and [false](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool 'https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool') is translated to 0. |
+| [ByteArrayExtensions](Jcd.BitManipulation.ByteArrayExtensions.md 'Jcd.BitManipulation.ByteArrayExtensions') | Provides facilities to convert an array of bytes to other data types. |
+| [ByteExtensions](Jcd.BitManipulation.ByteExtensions.md 'Jcd.BitManipulation.ByteExtensions') | Provides easy to read methods for bit manipulation operations on a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') |
+| [DoubleExtensions](Jcd.BitManipulation.DoubleExtensions.md 'Jcd.BitManipulation.DoubleExtensions') | Provides easy to read methods for bit manipulation operations on a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double') |
+| [Int16Extensions](Jcd.BitManipulation.Int16Extensions.md 'Jcd.BitManipulation.Int16Extensions') | Provides easy to read methods for bit manipulation operations on an [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16') |
+| [Int32Extensions](Jcd.BitManipulation.Int32Extensions.md 'Jcd.BitManipulation.Int32Extensions') | Provides easy to read methods for bit manipulation operations on an [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32') |
+| [Int64Extensions](Jcd.BitManipulation.Int64Extensions.md 'Jcd.BitManipulation.Int64Extensions') | Provides easy to read methods for bit manipulation operations on an [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64') |
 | [ReadOnlySpanOfByteExtensions](Jcd.BitManipulation.ReadOnlySpanOfByteExtensions.md 'Jcd.BitManipulation.ReadOnlySpanOfByteExtensions') | Provides facilities to convert [System.ReadOnlySpan&lt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.ReadOnlySpan-1 'System.ReadOnlySpan`1') of bytes to other data types. |
-| [SByteExtensions](Jcd.BitManipulation.SByteExtensions.md 'Jcd.BitManipulation.SByteExtensions') | Provides methods to perform easy to read bit manipulations on an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte') |
-| [SingleExtensions](Jcd.BitManipulation.SingleExtensions.md 'Jcd.BitManipulation.SingleExtensions') | Provides methods to perform easy to read bit and byte manipulations on a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single') |
-| [UInt16Extensions](Jcd.BitManipulation.UInt16Extensions.md 'Jcd.BitManipulation.UInt16Extensions') | Provides methods to perform easy to read bit and byte manipulations on a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16') |
-| [UInt32Extensions](Jcd.BitManipulation.UInt32Extensions.md 'Jcd.BitManipulation.UInt32Extensions') | Provides methods to perform easy to read bit and byte manipulations on a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32') |
-| [UInt64Extensions](Jcd.BitManipulation.UInt64Extensions.md 'Jcd.BitManipulation.UInt64Extensions') | Provides methods to perform easy to read bit and byte manipulations on a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') |
+| [SByteExtensions](Jcd.BitManipulation.SByteExtensions.md 'Jcd.BitManipulation.SByteExtensions') | Provides easy to read methods for bit manipulation operations on an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte') |
+| [SingleExtensions](Jcd.BitManipulation.SingleExtensions.md 'Jcd.BitManipulation.SingleExtensions') | Provides easy to read methods for bit manipulation operations on a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single') |
+| [UInt16Extensions](Jcd.BitManipulation.UInt16Extensions.md 'Jcd.BitManipulation.UInt16Extensions') | Provides easy to read methods for bit manipulation operations on a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16') |
+| [UInt32Extensions](Jcd.BitManipulation.UInt32Extensions.md 'Jcd.BitManipulation.UInt32Extensions') | Provides easy to read methods for bit manipulation operations on a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32') |
+| [UInt64Extensions](Jcd.BitManipulation.UInt64Extensions.md 'Jcd.BitManipulation.UInt64Extensions') | Provides easy to read methods for bit manipulation operations on a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') |
 
 | Structs | |
 | :--- | :--- |
-| [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') | Provides byte level indexing operations (set, get) on a stored number. Allows for indexer syntax when accessing the stored bytes. Index zero is the most significant byte. |
-| [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer') | Provides indexed access to the bits on a stored integer type, up to 64 bits. |
-| [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') | An conceptual abstraction for a bit mask. |
-| [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') | Provides byte level indexing operations (set, get) on a stored number. Allows for indexer syntax when accessing the stored bytes. Index zero is the least significant byte. |
+| [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') | Provides byte level indexing operations (set, get) on the bytes of a copied value. It provides indexer-style access to the bytes of the value. Index zero is the most significant byte. |
+| [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer') | Provides indexer style access to the bits on a copied value. |
+| [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') | Provides an integer size independent representation of a bit mask and helper methods to simplify creating bit masks. |
+| [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') | Provides byte level indexing operations (set, get) on the bytes of a copied value. It provides indexer-style access to the bytes of the value. Index zero is the least significant byte. |
 
 | Enums | |
 | :--- | :--- |
-| [Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian') | A type indicating which endian is in use. |
+| [Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian') | The order of the bytes in memory. |

@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// Provides methods to perform easy to read bit and byte manipulations on a <see cref="float" />
+/// Provides easy to read methods for bit manipulation operations on a <see cref="float" />
 /// </summary>
 public static class SingleExtensions
 {

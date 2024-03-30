@@ -28,6 +28,7 @@ internal static class Program
 {
    public static void Main()
    {
+      BitIndexer_Example();
       ReadMe_BitManipulation_Example();
       BigEndianByteIndexer bebiFlt = float.MaxValue / 2;
       var bebifltbytes = bebiFlt.Slice(0, sizeof(long));
@@ -758,5 +759,34 @@ internal static class Program
 
       Console.WriteLine(bebi.ToString()); // outputs: "0A 0D C0 DE"
       Console.WriteLine(lebi.ToString()); // outputs: "0B C0 0D 60"
+   }
+
+   private static void BitIndexer_Example()
+   {
+      ushort ui16 = 0b1011110001010101;
+      BitIndexer bi = ui16;
+      Console.WriteLine(bi.ToString()); // outputs: 0b1011110001010101
+
+      if (bi[0])
+         Console.WriteLine("Index 0 is set/true!"); // this will write to the output.
+
+      if (bi[1])
+         Console.WriteLine("Index 1 is set/true!"); // this will not write to the output.
+
+      if (bi[10])
+         Console.WriteLine("Index 10 is set/true!");
+
+      bi[1] = true; // bi is now 0b1011110001010111
+      if (bi[1])
+         Console.WriteLine("Index 1 is set/true!"); // this will write to the output.
+
+      Console.WriteLine(bi.ToString()); // outputs: 0b1011110001010111
+
+      var flags = bi[..]; // flags = [true, true, true, false, true, false, true, false, false, false, true, true, true, true, false, true];
+      Array.Reverse(flags);
+      var ui16Reversed = flags.ToUInt16(); // ui16Reversed = 0b1110101000111101;
+      BitIndexer biReversed = ui16Reversed;
+
+      Console.WriteLine(biReversed.ToString()); // outputs: 0b1110101000111101
    }
 }

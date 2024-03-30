@@ -2,7 +2,7 @@
 
 ## BooleanArrayExtensions.ToSingle(this bool[]) Method
 
-Converts an array of bools into a float, discarding any excess bits.
+Converts an array of bools into a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single'), discarding any excess bits.
 
 ```csharp
 public static float ToSingle(this bool[] bits);

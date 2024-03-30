@@ -2,7 +2,7 @@
 
 ## ByteExtensions Class
 
-Provides methods to perform easy to read bit manipulations on a single [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
+Provides easy to read methods for bit manipulation operations on a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
 ```csharp
 public static class ByteExtensions

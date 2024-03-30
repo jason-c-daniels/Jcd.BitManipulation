@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// Extension methods to aid in converting to numbers from arrays of <see cref="bool" /> values.
+/// Provides facilities to convert to numbers from arrays of <see cref="bool" /> values.
 /// At their respective bit positions, <see langword="true" />  is translated to 1
 /// and <see langword="false" /> is translated to 0.
 /// </summary>
@@ -102,7 +102,7 @@ public static class BooleanArrayExtensions
    }
 
    /// <summary>
-   /// Converts an array of bools into a double, discarding any excess bits.
+   /// Converts an array of bools into a <see cref="double" />, discarding any excess bits.
    /// </summary>
    /// <param name="bits">The array of <see cref="bool" /> values to convert. The Least Significant Bit is at index 0</param>
    /// <returns>The converted double</returns>
@@ -113,7 +113,7 @@ public static class BooleanArrayExtensions
    }
 
    /// <summary>
-   /// Converts an array of bools into a float, discarding any excess bits.
+   /// Converts an array of bools into a <see cref="float" />, discarding any excess bits.
    /// </summary>
    /// <param name="bits">The array of <see cref="bool" /> values to convert. The Least Significant Bit is at index 0</param>
    /// <returns>The converted float</returns>

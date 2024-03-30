@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// Provides methods to perform easy to read bit and byte manipulations on a <see cref="ushort" />
+/// Provides easy to read methods for bit manipulation operations on a <see cref="ushort" />
 /// </summary>
 public static class UInt16Extensions
 {

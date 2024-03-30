@@ -302,23 +302,22 @@ public static class ByteArrayExtensions
       StoreAndShift(ref result, data, 7, 8, len, size);
 
       return result;
-      
-      [MethodImpl(MethodImplOptions.AggressiveInlining)]
-      static bool StoreAndShift(ref ulong result, byte[] data, int idx, int sizeComp, int len, int size)
-      {
-         if (idx < len)
-            result = result.StoreBits(data[idx], 0, 8);
-
-         if (size == sizeComp)
-            return true;
-
-         result <<= 8;
-
-         return false;
-      }
    }
 
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   static bool StoreAndShift(ref ulong result, byte[] data, int idx, int sizeComp, int len, int size)
+   {
+      if (idx < len)
+         result = result.StoreBits(data[idx], 0, 8);
 
+      if (size == sizeComp)
+         return true;
+
+      result <<= 8;
+
+      return false;
+   }
+   
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    internal static ulong GetLittleEndianUInt64(byte[] data)
    {

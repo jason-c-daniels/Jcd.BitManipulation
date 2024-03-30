@@ -14,13 +14,14 @@ public static ulong ReadBits(this double value, int shift, Jcd.BitManipulation.B
 
 `value` [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 
-The source of bits to read.
+The source of the bits to read.
 
 <a name='Jcd.BitManipulation.DoubleExtensions.ReadBits(thisdouble,int,Jcd.BitManipulation.BitMask).shift'></a>
 
 `shift` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The amount to right shift the result by.
+The number of bits to right shift the result of applying
+the [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask').
 
 <a name='Jcd.BitManipulation.DoubleExtensions.ReadBits(thisdouble,int,Jcd.BitManipulation.BitMask).mask'></a>
 

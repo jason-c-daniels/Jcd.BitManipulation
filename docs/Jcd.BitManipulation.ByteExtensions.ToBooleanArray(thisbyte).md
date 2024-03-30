@@ -2,7 +2,8 @@
 
 ## ByteExtensions.ToBooleanArray(this byte) Method
 
-Converts a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') into an array of bools
+Converts a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') into an array of values
+with the lease significant bit at index 0.
 
 ```csharp
 public static bool[] ToBooleanArray(this byte bits);
@@ -14,7 +15,8 @@ public static bool[] ToBooleanArray(this byte bits);
 
 `bits` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
-the byte to convert.
+The value to convert to an array
+of [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean') values.
 
 #### Returns
 

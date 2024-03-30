@@ -20,7 +20,7 @@ The value to read the byte from.
 
 `offset` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-the offset of the byte to write
+The offset of where to store the byte.
 
 <a name='Jcd.BitManipulation.UInt32Extensions.ReadByte(thisuint,int,Jcd.BitManipulation.Endian).endian'></a>
 

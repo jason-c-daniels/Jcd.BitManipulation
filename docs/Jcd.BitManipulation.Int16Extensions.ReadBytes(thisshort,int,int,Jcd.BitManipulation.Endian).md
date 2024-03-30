@@ -14,25 +14,25 @@ public static byte[] ReadBytes(this short value, int offset, int size, Jcd.BitMa
 
 `value` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 
-The value to read the byte from.
+The value to read the bytes from.
 
 <a name='Jcd.BitManipulation.Int16Extensions.ReadBytes(thisshort,int,int,Jcd.BitManipulation.Endian).offset'></a>
 
 `offset` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The offset to read the bytes from.
+The byte offset to starting reading from.
 
 <a name='Jcd.BitManipulation.Int16Extensions.ReadBytes(thisshort,int,int,Jcd.BitManipulation.Endian).size'></a>
 
 `size` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The size of the value in bytes.
+The requested number of bytes to read.
 
 <a name='Jcd.BitManipulation.Int16Extensions.ReadBytes(thisshort,int,int,Jcd.BitManipulation.Endian).endian'></a>
 
 `endian` [Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian')
 
-The endianness of the indexing within the value.
+The endianness of the indexing for the byte read.
 
 #### Returns
 

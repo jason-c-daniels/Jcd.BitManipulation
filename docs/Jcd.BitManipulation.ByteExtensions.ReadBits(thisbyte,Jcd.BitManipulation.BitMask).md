@@ -14,7 +14,7 @@ public static byte ReadBits(this byte value, Jcd.BitManipulation.BitMask mask);
 
 `value` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
-The source of bits to read.
+The source of the bits to read.
 
 <a name='Jcd.BitManipulation.ByteExtensions.ReadBits(thisbyte,Jcd.BitManipulation.BitMask).mask'></a>
 

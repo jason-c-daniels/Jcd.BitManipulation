@@ -3,7 +3,7 @@
 ## DoubleExtensions.ToByteArray(this double, Endian) Method
 
 Converts a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double') into an array of
-bytes
+bytes in the specified [Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian').
 
 ```csharp
 public static byte[] ToByteArray(this double data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
@@ -15,7 +15,7 @@ public static byte[] ToByteArray(this double data, Jcd.BitManipulation.Endian en
 
 `data` [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 
-the long to convert.
+The value to convert to a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') array.
 
 <a name='Jcd.BitManipulation.DoubleExtensions.ToByteArray(thisdouble,Jcd.BitManipulation.Endian).endian'></a>
 

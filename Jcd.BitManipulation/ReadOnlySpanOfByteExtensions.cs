@@ -207,9 +207,9 @@ public static class ReadOnlySpanOfByteExtensions
 
       return result;
    }
-   
+
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   static bool StoreAndShift(ref ulong result, ReadOnlySpan<byte> data, int idx, int sizeComp, int len, int size)
+   private static bool StoreAndShift(ref ulong result, ReadOnlySpan<byte> data, int idx, int sizeComp, int len, int size)
    {
       if (idx < len)
          result = result.StoreBits(data[idx], 0, 8);
@@ -221,6 +221,7 @@ public static class ReadOnlySpanOfByteExtensions
 
       return false;
    }
+
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    internal static ulong GetLittleEndianUInt64(ReadOnlySpan<byte> data)
    {

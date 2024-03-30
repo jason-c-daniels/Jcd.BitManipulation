@@ -3,7 +3,7 @@
 ## Int16Extensions.ToByteArray(this short, Endian) Method
 
 Converts a [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16') into an array of
-bytes
+bytes in the specified [Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian').
 
 ```csharp
 public static byte[] ToByteArray(this short data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
@@ -15,7 +15,7 @@ public static byte[] ToByteArray(this short data, Jcd.BitManipulation.Endian end
 
 `data` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 
-the [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16') to convert.
+The value to convert to a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') array.
 
 <a name='Jcd.BitManipulation.Int16Extensions.ToByteArray(thisshort,Jcd.BitManipulation.Endian).endian'></a>
 

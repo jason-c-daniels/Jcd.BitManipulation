@@ -20,7 +20,7 @@ The value to modify.
 
 `bit` [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 
-The bit value to set
+The value to store at the specified bit offset.
 
 <a name='Jcd.BitManipulation.SByteExtensions.StoreBit(thissbyte,bool,int).offset'></a>
 

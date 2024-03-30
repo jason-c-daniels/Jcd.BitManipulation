@@ -8,6 +8,9 @@ using Jcd.Units.UnitsOfMeasure;
 using Jcd.Units.UnitsOfMeasure.Data;
 using Jcd.Units.UnitsOfMeasure.SI;
 
+// ReSharper disable NotAccessedVariable
+// ReSharper disable IdentifierTypo
+// ReSharper disable CommentTypo
 // ReSharper disable RedundantArgumentDefaultValue
 // ReSharper disable HeapView.ObjectAllocation
 // ReSharper disable RedundantAssignment
@@ -722,6 +725,38 @@ internal static class Program
 
       var leBaToUInt16Le = leBa.ToUInt16(Endian.Little); // leBaToUInt16Le = 0b1011111101010101
 
-      var leBaToUInt16Be = leBa.ToUInt16(Endian.Big); // leBaToUInt16Le = 0b0101010110111111
+      var leBaToUInt16Be = leBa.ToUInt16(Endian.Big); // leBaToUInt16Le  = 0b0101010110111111
+
+      // ByteIndexers on 64 bit values
+      BigEndianByteIndexer bebi = 0xDECAFFC0FFEEC0DE;
+      LittleEndianByteIndexer lebi = 0xDECAFFC0FFEEC0DE;
+
+      Console.WriteLine(bebi.ToString()); // outputs: "DE CA FF C0 FF EE C0 DE"
+      Console.WriteLine(lebi.ToString()); // outputs: "DE C0 EE FF C0 FF CA DE"
+
+      var bebib1 = bebi[1]; // bebib1 = 0xCA 
+      var lebib1 = lebi[1]; // lebib1 = 0xC0
+
+      bebi[0] = 0x0A;
+      lebi[0] = 0x0B;
+
+      Console.WriteLine(bebi.ToString()); // outputs: "0A CA FF C0 FF EE C0 DE"
+      Console.WriteLine(lebi.ToString()); // outputs: "0B C0 EE FF C0 FF CA DE"
+
+      // ByteIndexers on 32 bit values
+      bebi = 0x600DC0DE;
+      lebi = 0x600DC0DE;
+
+      Console.WriteLine(bebi.ToString()); // outputs: "60 0D C0 DE"
+      Console.WriteLine(lebi.ToString()); // outputs: "DE C0 0D 60"
+
+      bebib1 = bebi[1]; // bebib1 = 0x0D
+      lebib1 = lebi[1]; // lebib1 = 0xC0
+
+      bebi[0] = 0x0A;
+      lebi[0] = 0x0B;
+
+      Console.WriteLine(bebi.ToString()); // outputs: "0A 0D C0 DE"
+      Console.WriteLine(lebi.ToString()); // outputs: "0B C0 0D 60"
    }
 }

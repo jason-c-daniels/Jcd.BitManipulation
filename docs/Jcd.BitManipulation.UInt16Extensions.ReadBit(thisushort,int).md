@@ -14,13 +14,13 @@ public static bool ReadBit(this ushort value, int offset);
 
 `value` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 
-the bits to read from
+The source of the bits to read.
 
 <a name='Jcd.BitManipulation.UInt16Extensions.ReadBit(thisushort,int).offset'></a>
 
 `offset` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-the offset of the bit to read
+The offset of the bit to read.
 
 #### Returns
 

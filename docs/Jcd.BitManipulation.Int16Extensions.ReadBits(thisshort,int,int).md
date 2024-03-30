@@ -14,7 +14,7 @@ public static short ReadBits(this short value, int offset, int size);
 
 `value` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 
-The source of bits to read.
+The source of the bits to read.
 
 <a name='Jcd.BitManipulation.Int16Extensions.ReadBits(thisshort,int,int).offset'></a>
 

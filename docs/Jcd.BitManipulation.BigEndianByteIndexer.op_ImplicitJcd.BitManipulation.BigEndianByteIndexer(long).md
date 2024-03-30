@@ -15,7 +15,7 @@ public static Jcd.BitManipulation.BigEndianByteIndexer implicit operator BigEndi
 
 `data` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 
-The underlying data type.
+The initial value for the bytes of data.
 
 #### Returns
 

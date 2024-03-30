@@ -15,9 +15,10 @@ public static Jcd.BitManipulation.LittleEndianByteIndexer implicit operator Litt
 
 `data` [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 
-The underlying data type.
+The initial value for the bytes of data.
 
 #### Returns
 
 [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
-A indexer type.
+The [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
+instance.

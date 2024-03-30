@@ -14,7 +14,7 @@ public static ulong ReadBits(this ulong value, Jcd.BitManipulation.BitMask mask)
 
 `value` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
-The source of bits to read.
+The source of the bits to read.
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ReadBits(thisulong,Jcd.BitManipulation.BitMask).mask'></a>
 

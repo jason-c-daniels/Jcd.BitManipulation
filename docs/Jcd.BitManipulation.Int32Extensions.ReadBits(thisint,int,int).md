@@ -14,7 +14,7 @@ public static int ReadBits(this int value, int offset, int size);
 
 `value` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The source of bits to read.
+The source of the bits to read.
 
 <a name='Jcd.BitManipulation.Int32Extensions.ReadBits(thisint,int,int).offset'></a>
 

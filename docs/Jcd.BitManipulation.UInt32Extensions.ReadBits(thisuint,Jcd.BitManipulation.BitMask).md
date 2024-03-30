@@ -14,7 +14,7 @@ public static uint ReadBits(this uint value, Jcd.BitManipulation.BitMask mask);
 
 `value` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
-The source of bits to read.
+The source of the bits to read.
 
 <a name='Jcd.BitManipulation.UInt32Extensions.ReadBits(thisuint,Jcd.BitManipulation.BitMask).mask'></a>
 

@@ -14,7 +14,7 @@ public static ushort ReadBits(this ushort value, Jcd.BitManipulation.BitMask mas
 
 `value` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 
-The source of bits to read.
+The source of the bits to read.
 
 <a name='Jcd.BitManipulation.UInt16Extensions.ReadBits(thisushort,Jcd.BitManipulation.BitMask).mask'></a>
 

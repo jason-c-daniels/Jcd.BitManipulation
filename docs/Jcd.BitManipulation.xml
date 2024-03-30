@@ -341,7 +341,7 @@
             <see cref="T:System.Int64"/>
             to a<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
          </summary>
-         <param name="data">The underlying data type.</param>
+         <param name="data">The initial value for the bytes of data.</param>
          <returns>The newly created<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
          </returns>
          <remarks>
@@ -365,7 +365,7 @@
             <see cref="T:System.UInt32"/>
             to a<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
          </summary>
-         <param name="data">The underlying data type.</param>
+         <param name="data">The initial value for the bytes of data.</param>
          <returns>The newly created<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
          </returns>
          <remarks>
@@ -389,8 +389,11 @@
             <see cref="T:System.Int32"/>
             to a<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
          </summary>
-         <param name="data">The underlying data type.</param>
-         <returns>A indexer type.</returns>
+         <param name="data">The initial value for the bytes of data.</param>
+         <returns>The
+            <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
+            instance.
+         </returns>
          <remarks>
             <para>
                Example:
@@ -412,8 +415,11 @@
             <see cref="T:System.UInt16"/>
             to a<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
          </summary>
-         <param name="data">The underlying data type.</param>
-         <returns>A indexer type.</returns>
+         <param name="data">The initial value for the bytes of data.</param>
+         <returns>The
+            <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
+            instance.
+         </returns>
          <remarks>
             <para>
                Example:
@@ -435,8 +441,11 @@
             <see cref="T:System.Int16"/>
             to a<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
          </summary>
-         <param name="data">The underlying data type.</param>
-         <returns>A indexer type.</returns>
+         <param name="data">The initial value for the bytes of data.</param>
+         <returns>The
+            <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
+            instance.
+         </returns>
          <remarks>
             <para>
                Example:
@@ -458,8 +467,11 @@
             <see cref="T:System.Byte"/>
             to a<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
          </summary>
-         <param name="data">The underlying data type.</param>
-         <returns>A indexer type.</returns>
+         <param name="data">The initial value for the bytes of data.</param>
+         <returns>The
+            <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
+            instance.
+         </returns>
          <remarks>
             <para>
                Example:
@@ -481,8 +493,11 @@
             <see cref="T:System.SByte"/>
             to a<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
          </summary>
-         <param name="data">The underlying data type.</param>
-         <returns>A indexer type.</returns>
+         <param name="data">The initial value for the bytes of data.</param>
+         <returns>The
+            <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
+            instance.
+         </returns>
          <remarks>
             <para>
                Example:
@@ -504,8 +519,11 @@
             <see cref="T:System.Single"/>
             to a<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
          </summary>
-         <param name="data">The underlying data type.</param>
-         <returns>A indexer type.</returns>
+         <param name="data">The initial value for the bytes of data.</param>
+         <returns>The
+            <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
+            instance.
+         </returns>
          <remarks>
             <para>
                Example:
@@ -527,8 +545,11 @@
             <see cref="T:System.Double"/>
             to a<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
          </summary>
-         <param name="data">The underlying data type.</param>
-         <returns>A indexer type.</returns>
+         <param name="data">The initial value for the bytes of data.</param>
+         <returns>The
+            <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
+            instance.
+         </returns>
          <remarks>
             <para>
                Example:
@@ -548,16 +569,22 @@
          <summary>
             Explicitly converts an array of bytes to a<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
          </summary>
-         <param name="data">The underlying data type.</param>
-         <returns>A indexer type.</returns>
+         <param name="data">The initial value for the bytes of data.</param>
+         <returns>The
+            <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
+            instance.
+         </returns>
       </member>
       <member
          name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Explicit(System.ReadOnlySpan{System.Byte})~Jcd.BitManipulation.BigEndianByteIndexer">
          <summary>
             Explicitly converts an array of bytes to a<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>.
          </summary>
-         <param name="data">The underlying data type.</param>
-         <returns>A indexer type.</returns>
+         <param name="data">The initial value for the bytes of data.</param>
+         <returns>The
+            <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>
+            instance.
+         </returns>
       </member>
       <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.StoreBytes(System.Byte[],System.Int32,System.Int32)">
          <summary>
@@ -582,13 +609,18 @@
          <summary>
             Stores a single byte to the value at the specified byte offset and returns the modified value.
          </summary>
-         <param name="byte">The byte value to set</param>
-         <param name="offset">the offset of the byte to write</param>
+         <param name="byte">The
+            <see cref="T:System.Byte"/>
+            value to store.
+         </param>
+         <param name="offset">The offset of where to store the byte.</param>
          <returns>The modified value.</returns>
       </member>
       <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.ToString">
          <summary>
-            Creates a string of the data formatted as hex for the bytes in big endian notation
+            Formats the<see cref="T:Jcd.BitManipulation.BigEndianByteIndexer"/>> as a hexadecimal string in big endian
+            notation.
+            For example: `60 0D C0 DE`
          </summary>
          <returns>a string of the data formatted as hex bytes</returns>
       </member>
@@ -1177,8 +1209,7 @@
             from an
             <see cref="T:System.SByte"/>
          </summary>
-         <param name="bits">the value to convert to a
-            <see cref="T:Jcd.BitManipulation.BitMask"/>
+         <param name="bits">The value to convert to a<see cref="T:Jcd.BitManipulation.BitMask"/>.
          </param>
          <returns>The
             <see cref="T:Jcd.BitManipulation.BitMask"/>
@@ -1205,8 +1236,7 @@
             from an
             <see cref="T:System.Int32"/>
          </summary>
-         <param name="bits">the value to convert to a
-            <see cref="T:Jcd.BitManipulation.BitMask"/>
+         <param name="bits">The value to convert to a<see cref="T:Jcd.BitManipulation.BitMask"/>.
          </param>
          <returns>The
             <see cref="T:Jcd.BitManipulation.BitMask"/>
@@ -1220,8 +1250,7 @@
             from a
             <see cref="T:System.Int64"/>
          </summary>
-         <param name="bits">the value to convert to a
-            <see cref="T:Jcd.BitManipulation.BitMask"/>
+         <param name="bits">The value to convert to a<see cref="T:Jcd.BitManipulation.BitMask"/>.
          </param>
          <returns>The
             <see cref="T:Jcd.BitManipulation.BitMask"/>
@@ -1235,8 +1264,7 @@
             from a
             <see cref="T:System.Byte"/>
          </summary>
-         <param name="bits">the value to convert to a
-            <see cref="T:Jcd.BitManipulation.BitMask"/>
+         <param name="bits">The value to convert to a<see cref="T:Jcd.BitManipulation.BitMask"/>.
          </param>
          <returns>The
             <see cref="T:Jcd.BitManipulation.BitMask"/>
@@ -1250,8 +1278,7 @@
             from a
             <see cref="T:System.UInt16"/>
          </summary>
-         <param name="bits">the value to convert to a
-            <see cref="T:Jcd.BitManipulation.BitMask"/>
+         <param name="bits">The value to convert to a<see cref="T:Jcd.BitManipulation.BitMask"/>.
          </param>
          <returns>The
             <see cref="T:Jcd.BitManipulation.BitMask"/>
@@ -1265,8 +1292,7 @@
             from a
             <see cref="T:System.UInt32"/>
          </summary>
-         <param name="bits">the value to convert to a
-            <see cref="T:Jcd.BitManipulation.BitMask"/>
+         <param name="bits">The value to convert to a<see cref="T:Jcd.BitManipulation.BitMask"/>.
          </param>
          <returns>The
             <see cref="T:Jcd.BitManipulation.BitMask"/>
@@ -1280,8 +1306,7 @@
             from a
             <see cref="T:System.UInt64"/>
          </summary>
-         <param name="bits">the value to convert to a
-            <see cref="T:Jcd.BitManipulation.BitMask"/>
+         <param name="bits">The value to convert to a<see cref="T:Jcd.BitManipulation.BitMask"/>.
          </param>
          <returns>The
             <see cref="T:Jcd.BitManipulation.BitMask"/>
@@ -1290,14 +1315,25 @@
       </member>
       <member name="T:Jcd.BitManipulation.BooleanArrayExtensions">
          <summary>
-            Extension methods to aid in converting to numbers from arrays of bools
+            Extension methods to aid in converting to numbers from arrays of
+            <see cref="T:System.Boolean"/>
+            values.
+            At their respective bit positions,
+            <see langword="true"/>
+            is translated to 1
+            and
+            <see langword="false"/>
+            is translated to 0.
          </summary>
       </member>
       <member name="M:Jcd.BitManipulation.BooleanArrayExtensions.ToByte(System.Boolean[])">
          <summary>
             Converts an array of bools into a<see cref="T:System.Byte"/>, discarding any excess bits.
          </summary>
-         <param name="bits">the array of bools to convert. The Least Significant Bit is at index 0</param>
+         <param name="bits">The array of
+            <see cref="T:System.Boolean"/>
+            values to convert. The Least Significant Bit is at index 0
+         </param>
          <returns>The converted
             <see cref="T:System.Byte"/>
          </returns>
@@ -1306,7 +1342,10 @@
          <summary>
             Converts an array of bools into an<see cref="T:System.SByte"/>, discarding any excess bits.
          </summary>
-         <param name="bits">the array of bools to convert. The Least Significant Bit is at index 0</param>
+         <param name="bits">The array of
+            <see cref="T:System.Boolean"/>
+            values to convert. The Least Significant Bit is at index 0
+         </param>
          <returns>The converted
             <see cref="T:System.SByte"/>
          </returns>
@@ -1315,7 +1354,10 @@
          <summary>
             Converts an array of bools into a<see cref="T:System.UInt16"/>, discarding any excess bits.
          </summary>
-         <param name="bits">the array of bools to convert. The Least Significant Bit is at index 0</param>
+         <param name="bits">The array of
+            <see cref="T:System.Boolean"/>
+            values to convert. The Least Significant Bit is at index 0
+         </param>
          <returns>The converted
             <see cref="T:System.UInt16"/>
          </returns>
@@ -1324,7 +1366,10 @@
          <summary>
             Converts an array of bools into a<see cref="T:System.Int16"/>, discarding any excess bits.
          </summary>
-         <param name="bits">the array of bools to convert. The Least Significant Bit is at index 0</param>
+         <param name="bits">The array of
+            <see cref="T:System.Boolean"/>
+            values to convert. The Least Significant Bit is at index 0
+         </param>
          <returns>The converted
             <see cref="T:System.Int16"/>
          </returns>
@@ -1333,7 +1378,10 @@
          <summary>
             Converts an array of bools into a<see cref="T:System.UInt32"/>, discarding any excess bits.
          </summary>
-         <param name="bits">the array of bools to convert. The Least Significant Bit is at index 0</param>
+         <param name="bits">The array of
+            <see cref="T:System.Boolean"/>
+            values to convert. The Least Significant Bit is at index 0
+         </param>
          <returns>The converted
             <see cref="T:System.UInt32"/>
          </returns>
@@ -1342,7 +1390,10 @@
          <summary>
             Converts an array of bools into an<see cref="T:System.Int32"/>, discarding any excess bits.
          </summary>
-         <param name="bits">the array of bools to convert. The Least Significant Bit is at index 0</param>
+         <param name="bits">The array of
+            <see cref="T:System.Boolean"/>
+            values to convert. The Least Significant Bit is at index 0
+         </param>
          <returns>The converted
             <see cref="T:System.Int32"/>
          </returns>
@@ -1351,7 +1402,10 @@
          <summary>
             Converts an array of bools into a<see cref="T:System.UInt64"/>, discarding any excess bits.
          </summary>
-         <param name="bits">the array of bools to convert. The Least Significant Bit is at index 0</param>
+         <param name="bits">The array of
+            <see cref="T:System.Boolean"/>
+            values to convert. The Least Significant Bit is at index 0
+         </param>
          <returns>The converted
             <see cref="T:System.UInt64"/>
          </returns>
@@ -1360,7 +1414,10 @@
          <summary>
             Converts an array of bools into a<see cref="T:System.Int64"/>, discarding any excess bits.
          </summary>
-         <param name="bits">the array of bools to convert. The Least Significant Bit is at index 0</param>
+         <param name="bits">The array of
+            <see cref="T:System.Boolean"/>
+            values to convert. The Least Significant Bit is at index 0
+         </param>
          <returns>The converted
             <see cref="T:System.Int64"/>
          </returns>
@@ -1369,14 +1426,20 @@
          <summary>
             Converts an array of bools into a double, discarding any excess bits.
          </summary>
-         <param name="bits">the array of bools to convert. The Least Significant Bit is at index 0</param>
+         <param name="bits">The array of
+            <see cref="T:System.Boolean"/>
+            values to convert. The Least Significant Bit is at index 0
+         </param>
          <returns>The converted double</returns>
       </member>
       <member name="M:Jcd.BitManipulation.BooleanArrayExtensions.ToSingle(System.Boolean[])">
          <summary>
             Converts an array of bools into a float, discarding any excess bits.
          </summary>
-         <param name="bits">the array of bools to convert. The Least Significant Bit is at index 0</param>
+         <param name="bits">The array of
+            <see cref="T:System.Boolean"/>
+            values to convert. The Least Significant Bit is at index 0
+         </param>
          <returns>The converted float</returns>
       </member>
       <member name="T:Jcd.BitManipulation.ByteArrayExtensions">
@@ -1611,16 +1674,21 @@
          <summary>
             Converts a
             <see cref="T:System.Byte"/>
-            into an array of bools
+            into an array of
+            <see cre="bool"/>
+            values with the lease significant bit at index 0.
          </summary>
-         <param name="bits">the byte to convert.</param>
+         <param name="bits">The value to convert to an array of
+            <see cref="T:System.Boolean"/>
+            values.
+         </param>
          <returns>An array with the Least Significant Bit at index 0</returns>
       </member>
       <member name="M:Jcd.BitManipulation.ByteExtensions.ToByteArray(System.Byte)">
          <summary>
             Converts a
             <see cref="T:System.Byte"/>
-            into an array of bytes
+            into an array of bytes in the specified<see cref="T:Jcd.BitManipulation.Endian"/>.
          </summary>
          <param name="data">the
             <see cref="T:System.Byte"/>
@@ -1658,8 +1726,8 @@
          <summary>
             Reads the bits specified and returns the result shifted to the right by the offset.
          </summary>
-         <param name="value">The source of bits to read.</param>
-         <param name="shift">The bit offset to start reading from.</param>
+         <param name="value">The source of the bits to read.</param>
+         <param name="offset">The bit offset to start reading from.</param>
          <param name="size">The total number of bits to extract.</param>
          <returns>The value stored in the range of bits specified, right shifted by the offset..</returns>
       </member>
@@ -1667,7 +1735,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
          </summary>
-         <param name="value">The source of bits to read.</param>
+         <param name="value">The source of the bits to read.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The unshifted extracted bits</returns>
       </member>
@@ -1676,8 +1744,10 @@
          <summary>
             Reads the bits specified by a mask and right shifts it .
          </summary>
-         <param name="value">The source of bits to read.</param>
-         <param name="shift">The amount to right shift the result by.</param>
+         <param name="value">The source of the bits to read.</param>
+         <param name="shift">The number of bits to right shift the result of applying the<see
+            cref="T:Jcd.BitManipulation.BitMask"/>.
+         </param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The extracted bits right shifted by the specified amount.</returns>
       </member>
@@ -1685,8 +1755,8 @@
          <summary>
             Reads a single bit from the specified position.
          </summary>
-         <param name="value">the bits to read from</param>
-         <param name="offset">the offset of the bit to read</param>
+         <param name="value">The source of the bits to read.</param>
+         <param name="offset">The offset of the bit to read.</param>
          <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
          </returns>
       </member>
@@ -1728,7 +1798,10 @@
       <member
          name="M:Jcd.BitManipulation.ByteExtensions.StoreBits(System.Byte,System.Byte,System.Int32,Jcd.BitManipulation.BitMask)">
          <summary>
-            Stores a masked set of bits from a value to an offset in the destination and returns the modified value.
+            Stores a set of bits specified by a
+            <see cref="T:Jcd.BitManipulation.BitMask"/>
+            from a source value to a bit offset and returns the modified
+            value.
          </summary>
          <param name="value">the destination for the stored bits</param>
          <param name="source">The source of the bits to store.</param>
@@ -1741,7 +1814,7 @@
             Store a single bit at the specified offset and returns the modified value.
          </summary>
          <param name="value">The value to modify.</param>
-         <param name="bit">The bit value to set</param>
+         <param name="bit">The value to store at the specified bit offset.</param>
          <param name="offset">The offset of the bit to store.</param>
          <returns>The modified value.</returns>
       </member>
@@ -1830,18 +1903,26 @@
          <summary>
             Converts a
             <see cref="T:System.Double"/>
-            into an array of bools.
+            into an array of
+            <see cre="bool"/>
+            values with the lease significant bit at index 0..
          </summary>
-         <param name="bits">the long to convert.</param>
+         <param name="bits">The value to convert to an array of
+            <see cref="T:System.Boolean"/>
+            values.
+         </param>
          <returns>the array. LSB at index 0</returns>
       </member>
       <member name="M:Jcd.BitManipulation.DoubleExtensions.ToByteArray(System.Double,Jcd.BitManipulation.Endian)">
          <summary>
             Converts a
             <see cref="T:System.Double"/>
-            into an array of bytes
+            into an array of bytes in the specified<see cref="T:Jcd.BitManipulation.Endian"/>.
          </summary>
-         <param name="data">the long to convert.</param>
+         <param name="data">The value to convert to a
+            <see cref="T:System.Byte"/>
+            array.
+         </param>
          <param name="endian">The order in which to store the bytes</param>
          <returns>The value as an array in the requested byte order</returns>
       </member>
@@ -1874,8 +1955,8 @@
          <summary>
             Reads the bits specified and returns the result shifted to the right by the offset.
          </summary>
-         <param name="value">The source of bits to read.</param>
-         <param name="shift">The bit offset to start reading from.</param>
+         <param name="value">The source of the bits to read.</param>
+         <param name="offset">The bit offset to start reading from.</param>
          <param name="size">The total number of bits to extract.</param>
          <returns>The value stored in the range of bits specified, right shifted by the offset..</returns>
       </member>
@@ -1883,7 +1964,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
          </summary>
-         <param name="value">The source of bits to read.</param>
+         <param name="value">The source of the bits to read.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The extracted bits right shifted by the specified amount.</returns>
       </member>
@@ -1892,8 +1973,10 @@
          <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
          </summary>
-         <param name="value">The source of bits to read.</param>
-         <param name="shift">The amount to right shift the result by.</param>
+         <param name="value">The source of the bits to read.</param>
+         <param name="shift">The number of bits to right shift the result of applying the<see
+            cref="T:Jcd.BitManipulation.BitMask"/>.
+         </param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The extracted bits right shifted by the specified amount.</returns>
       </member>
@@ -1901,8 +1984,8 @@
          <summary>
             Reads a single bit from the specified position.
          </summary>
-         <param name="value">the bits to read from</param>
-         <param name="offset">the offset of the bit to read</param>
+         <param name="value">The source of the bits to read.</param>
+         <param name="offset">The offset of the bit to read.</param>
          <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
          </returns>
       </member>
@@ -1911,10 +1994,10 @@
          <summary>
             Reads a set of bytes starting at the specified byte location within the value.
          </summary>
-         <param name="value">The value to read the byte from.</param>
-         <param name="offset">The byte location to store the value.</param>
-         <param name="size">The byte size of the value.</param>
-         <param name="endian">The endianness of the byte indexing within the value.</param>
+         <param name="value">The value to read the bytes from.</param>
+         <param name="offset">The byte offset to starting reading from.</param>
+         <param name="size">The requested number of bytes to read.</param>
+         <param name="endian">The endianness of the indexing for the byte read.</param>
          <returns>A byte array of the value in the specified endian.</returns>
       </member>
       <member
@@ -1923,7 +2006,7 @@
             Reads a single byte from the value at the specified byte offset.
          </summary>
          <param name="value">The value to read the byte from.</param>
-         <param name="offset">the offset of the byte to write</param>
+         <param name="offset">The offset of where to store the byte.</param>
          <param name="endian">The endianness of the byte indexing within the value.</param>
          <returns>The specified byte.</returns>
       </member>
@@ -1966,7 +2049,10 @@
       <member
          name="M:Jcd.BitManipulation.DoubleExtensions.StoreBits(System.Double,System.UInt64,System.Int32,Jcd.BitManipulation.BitMask)">
          <summary>
-            Stores a masked set of bits from a value to an offset in the destination and returns the modified value.
+            Stores a set of bits specified by a
+            <see cref="T:Jcd.BitManipulation.BitMask"/>
+            from a source value to a bit offset and returns the modified
+            value.
          </summary>
          <param name="value">the destination for the stored bits</param>
          <param name="source">The source of the bits to store.</param>
@@ -1979,7 +2065,7 @@
             Store a single bit at the specified offset and returns the modified value.
          </summary>
          <param name="value">The value to modify.</param>
-         <param name="bit">The bit value to set</param>
+         <param name="bit">The value to store at the specified bit offset.</param>
          <param name="offset">The offset of the bit to store.</param>
          <returns>The modified value.</returns>
       </member>
@@ -2013,8 +2099,11 @@
             Stores a single byte to the value at the specified byte offset and returns the modified value.
          </summary>
          <param name="value">The value to modify.</param>
-         <param name="byte">The byte value to set</param>
-         <param name="offset">the offset of the byte to write</param>
+         <param name="byte">The
+            <see cref="T:System.Byte"/>
+            value to store.
+         </param>
+         <param name="offset">The offset of where to store the byte.</param>
          <param name="endian">The endianness of the indexing within the value.</param>
          <returns>The modified value.</returns>
       </member>
@@ -2101,7 +2190,9 @@
          <summary>
             Converts a
             <see cref="T:System.Int16"/>
-            into an array of bools
+            into an array of
+            <see cre="bool"/>
+            values with the lease significant bit at index 0.
          </summary>
          <param name="bits">The
             <see cref="T:System.Int16"/>
@@ -2113,11 +2204,11 @@
          <summary>
             Converts a
             <see cref="T:System.Int16"/>
-            into an array of bytes
+            into an array of bytes in the specified<see cref="T:Jcd.BitManipulation.Endian"/>.
          </summary>
-         <param name="data">the
-            <see cref="T:System.Int16"/>
-            to convert.
+         <param name="data">The value to convert to a
+            <see cref="T:System.Byte"/>
+            array.
          </param>
          <param name="endian">The order in which to store the bytes</param>
          <returns>The value as an array in the requested byte order</returns>
@@ -2151,7 +2242,7 @@
          <summary>
             Reads the bits specified and returns the result shifted to the right by the offset.
          </summary>
-         <param name="value">The source of bits to read.</param>
+         <param name="value">The source of the bits to read.</param>
          <param name="offset">The bit offset to start reading from.</param>
          <param name="size">The total number of bits to extract.</param>
          <returns>The value stored in the range of bits specified, right shifted by the offset..</returns>
@@ -2160,7 +2251,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask.
          </summary>
-         <param name="value">The source of bits to read.</param>
+         <param name="value">The source of the bits to read.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The unshifted extracted bits</returns>
       </member>
@@ -2169,8 +2260,10 @@
          <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
          </summary>
-         <param name="value">The source of bits to read.</param>
-         <param name="offset">The amount to right shift the result by.</param>
+         <param name="value">The source of the bits to read.</param>
+         <param name="shift">The number of bits to right shift the result of applying the<see
+            cref="T:Jcd.BitManipulation.BitMask"/>.
+         </param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The extracted bits right shifted by the specified amount.</returns>
       </member>
@@ -2178,8 +2271,8 @@
          <summary>
             Reads a single bit from the specified position.
          </summary>
-         <param name="value">the bits to read from</param>
-         <param name="offset">the offset of the bit to read</param>
+         <param name="value">The source of the bits to read.</param>
+         <param name="offset">The offset of the bit to read.</param>
          <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
          </returns>
       </member>
@@ -2188,10 +2281,10 @@
          <summary>
             Reads a set of bytes starting at the specified offset within the value.
          </summary>
-         <param name="value">The value to read the byte from.</param>
-         <param name="offset">The offset to read the bytes from.</param>
-         <param name="size">The size of the value in bytes.</param>
-         <param name="endian">The endianness of the indexing within the value.</param>
+         <param name="value">The value to read the bytes from.</param>
+         <param name="offset">The byte offset to starting reading from.</param>
+         <param name="size">The requested number of bytes to read.</param>
+         <param name="endian">The endianness of the indexing for the byte read.</param>
          <returns>A byte array of the value in the specified endian.</returns>
       </member>
       <member
@@ -2200,7 +2293,7 @@
             Reads a single byte from the value at the specified byte offset.
          </summary>
          <param name="value">The value to read the byte from.</param>
-         <param name="offset">the offset of the byte to write</param>
+         <param name="offset">The offset of where to store the byte.</param>
          <param name="endian">The endianness of the byte indexing within the value.</param>
          <returns>The specified byte.</returns>
       </member>
@@ -2243,7 +2336,10 @@
       <member
          name="M:Jcd.BitManipulation.Int16Extensions.StoreBits(System.Int16,System.Int16,System.Int32,Jcd.BitManipulation.BitMask)">
          <summary>
-            Stores a masked set of bits from a value to an offset in the destination and returns the modified value.
+            Stores a set of bits specified by a
+            <see cref="T:Jcd.BitManipulation.BitMask"/>
+            from a source value to a bit offset and returns the modified
+            value.
          </summary>
          <param name="value">the destination for the stored bits</param>
          <param name="source">The source of the bits to store.</param>
@@ -2256,7 +2352,7 @@
             Store a single bit at the specified offset and returns the modified value.
          </summary>
          <param name="value">The value to modify.</param>
-         <param name="bit">The bit value to set</param>
+         <param name="bit">The value to store at the specified bit offset.</param>
          <param name="offset">The offset of the bit to store.</param>
          <returns>The modified value.</returns>
       </member>
@@ -2290,8 +2386,11 @@
             Stores a single byte to the value at the specified byte offset and returns the modified value.
          </summary>
          <param name="value">The value to modify.</param>
-         <param name="byte">The byte value to set</param>
-         <param name="offset">the offset of the byte to write</param>
+         <param name="byte">The
+            <see cref="T:System.Byte"/>
+            value to store.
+         </param>
+         <param name="offset">The offset of where to store the byte.</param>
          <param name="endian">The endianness for indexing into the bytes.</param>
          <returns>The modified value.</returns>
       </member>
@@ -2376,7 +2475,9 @@
          <summary>
             Converts an
             <see cref="T:System.Int32"/>
-            into an array of bools
+            into an array of
+            <see cre="bool"/>
+            values with the lease significant bit at index 0.
          </summary>
          <param name="bits">The
             <see cref="T:System.UInt32"/>
@@ -2388,11 +2489,11 @@
          <summary>
             Converts an
             <see cref="T:System.Int32"/>
-            into an array of bytes
+            into an array of bytes in the specified<see cref="T:Jcd.BitManipulation.Endian"/>.
          </summary>
-         <param name="data">the
-            <see cref="T:System.Int32"/>
-            to convert.
+         <param name="data">The value to convert to a
+            <see cref="T:System.Byte"/>
+            array.
          </param>
          <param name="endian">The order in which to store the bytes</param>
          <returns>The value as an array in the requested byte order</returns>
@@ -2426,7 +2527,7 @@
          <summary>
             Reads the bits specified and returns the result shifted to the right by the offset.
          </summary>
-         <param name="value">The source of bits to read.</param>
+         <param name="value">The source of the bits to read.</param>
          <param name="offset">The bit offset to start reading from.</param>
          <param name="size">The total number of bits to extract.</param>
          <returns>The value stored in the range of bits specified, right shifted by the offset..</returns>
@@ -2435,7 +2536,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask.
          </summary>
-         <param name="value">The source of bits to read.</param>
+         <param name="value">The source of the bits to read.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The unshifted extracted bits</returns>
       </member>
@@ -2444,8 +2545,10 @@
          <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
          </summary>
-         <param name="value">The source of bits to read.</param>
-         <param name="offset">The amount to right shift the result by.</param>
+         <param name="value">The source of the bits to read.</param>
+         <param name="shift">The number of bits to right shift the result of applying the<see
+            cref="T:Jcd.BitManipulation.BitMask"/>.
+         </param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The extracted bits right shifted by the specified amount.</returns>
       </member>
@@ -2453,8 +2556,8 @@
          <summary>
             Reads a single bit from the specified position.
          </summary>
-         <param name="value">the bits to read from</param>
-         <param name="offset">the offset of the bit to read</param>
+         <param name="value">The source of the bits to read.</param>
+         <param name="offset">The offset of the bit to read.</param>
          <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
          </returns>
       </member>
@@ -2463,10 +2566,10 @@
          <summary>
             Reads a set of bytes starting at the specified byte location within the value.
          </summary>
-         <param name="value">The value to read the byte from.</param>
-         <param name="offset">The offset to read the bytes from.</param>
-         <param name="size">The byte size of the value.</param>
-         <param name="endian">The endianness of the indexing.</param>
+         <param name="value">The value to read the bytes from.</param>
+         <param name="offset">The byte offset to starting reading from.</param>
+         <param name="size">The requested number of bytes to read.</param>
+         <param name="endian">The endianness of the indexing for the byte read.</param>
          <returns>A byte array of the value in the specified endian.</returns>
       </member>
       <member
@@ -2475,7 +2578,7 @@
             Reads a single byte from the value at the specified byte offset.
          </summary>
          <param name="value">The value to read the byte from.</param>
-         <param name="offset">the offset of the byte to write</param>
+         <param name="offset">The offset of where to store the byte.</param>
          <param name="endian">The endianness of the byte indexing within the value.</param>
          <returns>The specified byte.</returns>
       </member>
@@ -2518,7 +2621,10 @@
       <member
          name="M:Jcd.BitManipulation.Int32Extensions.StoreBits(System.Int32,System.Int32,System.Int32,Jcd.BitManipulation.BitMask)">
          <summary>
-            Stores a masked set of bits from a value to an offset in the destination and returns the modified value.
+            Stores a set of bits specified by a
+            <see cref="T:Jcd.BitManipulation.BitMask"/>
+            from a source value to a bit offset and returns the modified
+            value.
          </summary>
          <param name="value">the destination for the stored bits</param>
          <param name="source">The source of the bits to store.</param>
@@ -2531,7 +2637,7 @@
             Store a single bit at the specified offset and returns the modified value.
          </summary>
          <param name="value">The value to modify.</param>
-         <param name="bit">The bit value to set</param>
+         <param name="bit">The value to store at the specified bit offset.</param>
          <param name="offset">The offset of the bit to store.</param>
          <returns>The modified value.</returns>
       </member>
@@ -2565,8 +2671,11 @@
             Stores a single byte to the value at the specified byte offset and returns the modified value.
          </summary>
          <param name="value">The value to modify.</param>
-         <param name="byte">The byte value to set</param>
-         <param name="offset">the offset of the byte to write</param>
+         <param name="byte">The
+            <see cref="T:System.Byte"/>
+            value to store.
+         </param>
+         <param name="offset">The offset of where to store the byte.</param>
          <param name="endian">The endianness for indexing into the bytes.</param>
          <returns>The modified value.</returns>
       </member>
@@ -2642,7 +2751,9 @@
          <summary>
             Converts a
             <see cref="T:System.Int64"/>
-            into an array of bools
+            into an array of
+            <see cre="bool"/>
+            values with the lease significant bit at index 0.
          </summary>
          <param name="bits">The
             <see cref="T:System.Int64"/>
@@ -2654,11 +2765,11 @@
          <summary>
             Converts a
             <see cref="T:System.Int64"/>
-            into an array of bytes
+            into an array of bytes in the specified<see cref="T:Jcd.BitManipulation.Endian"/>.
          </summary>
-         <param name="data">the
-            <see cref="T:System.Int64"/>
-            to convert.
+         <param name="data">The value to convert to a
+            <see cref="T:System.Byte"/>
+            array.
          </param>
          <param name="endian">The order in which to store the bytes</param>
          <returns>The value as an array in the requested byte order</returns>
@@ -2692,7 +2803,7 @@
          <summary>
             Reads the bits specified and returns the result shifted to the right by the offset.
          </summary>
-         <param name="value">The source of bits to read.</param>
+         <param name="value">The source of the bits to read.</param>
          <param name="offset">The bit offset to start reading from.</param>
          <param name="size">The total number of bits to extract.</param>
          <returns>The value stored in the range of bits specified, right shifted by the offset..</returns>
@@ -2701,7 +2812,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask.
          </summary>
-         <param name="value">The source of bits to read.</param>
+         <param name="value">The source of the bits to read.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The unshifted extracted bits</returns>
       </member>
@@ -2710,8 +2821,8 @@
          <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
          </summary>
-         <param name="value">The source of bits to read.</param>
-         <param name="offset">The bit offset to start reading from.</param>
+         <param name="value">The source of the bits to read.</param>
+         <param name="shift">The bit offset to start reading from.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The extracted bits right shifted by the specified amount.</returns>
       </member>
@@ -2719,8 +2830,8 @@
          <summary>
             Reads a single bit from the specified position.
          </summary>
-         <param name="value">the bits to read from</param>
-         <param name="offset">the offset of the bit to read</param>
+         <param name="value">The source of the bits to read.</param>
+         <param name="offset">The offset of the bit to read.</param>
          <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
          </returns>
       </member>
@@ -2729,10 +2840,10 @@
          <summary>
             Reads a set of bytes starting at the specified byte location within the value.
          </summary>
-         <param name="value">The value to read the byte from.</param>
-         <param name="offset">The offset to read the bytes from.</param>
-         <param name="size">The byte size of the value.</param>
-         <param name="endian">The endianness of the byte indexing within the value.</param>
+         <param name="value">The value to read the bytes from.</param>
+         <param name="offset">The byte offset to starting reading from.</param>
+         <param name="size">The requested number of bytes to read.</param>
+         <param name="endian">The endianness of the indexing for the byte read.</param>
          <returns>A byte array of the value in the specified endian.</returns>
       </member>
       <member
@@ -2741,7 +2852,7 @@
             Reads a single byte from the value at the specified byte offset.
          </summary>
          <param name="value">The value to read the byte from.</param>
-         <param name="offset">the offset of the byte to write</param>
+         <param name="offset">The offset of where to store the byte.</param>
          <param name="endian">The endianness of the byte indexing within the value.</param>
          <returns>The specified byte.</returns>
       </member>
@@ -2784,7 +2895,10 @@
       <member
          name="M:Jcd.BitManipulation.Int64Extensions.StoreBits(System.Int64,System.Int64,System.Int32,Jcd.BitManipulation.BitMask)">
          <summary>
-            Stores a masked set of bits from a value to an offset in the destination and returns the modified value.
+            Stores a set of bits specified by a
+            <see cref="T:Jcd.BitManipulation.BitMask"/>
+            from a source value to a bit offset and returns the modified
+            value.
          </summary>
          <param name="value">the destination for the stored bits</param>
          <param name="source">The source of the bits to store.</param>
@@ -2797,7 +2911,7 @@
             Store a single bit at the specified offset and returns the modified value.
          </summary>
          <param name="value">The value to modify.</param>
-         <param name="bit">The bit value to set</param>
+         <param name="bit">The value to store at the specified bit offset.</param>
          <param name="offset">The offset of the bit to store.</param>
          <returns>The modified value.</returns>
       </member>
@@ -2831,8 +2945,11 @@
             Stores a single byte to the value at the specified byte offset and returns the modified value.
          </summary>
          <param name="value">The value to modify.</param>
-         <param name="byte">The byte value to set</param>
-         <param name="offset">the offset of the byte to write</param>
+         <param name="byte">The
+            <see cref="T:System.Byte"/>
+            value to store.
+         </param>
+         <param name="offset">The offset of where to store the byte.</param>
          <param name="endian">The endianness for indexing into the bytes.</param>
          <returns>The modified value.</returns>
       </member>
@@ -3120,8 +3237,11 @@
             <see cref="T:System.UInt64"/>
             to a<see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>.
          </summary>
-         <param name="data">The underlying data type.</param>
-         <returns>A indexer type.</returns>
+         <param name="data">The initial value for the bytes of data.</param>
+         <returns>The
+            <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>
+            instance.
+         </returns>
       </member>
       <member
          name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(System.Int64)~Jcd.BitManipulation.LittleEndianByteIndexer">
@@ -3130,8 +3250,11 @@
             <see cref="T:System.Int64"/>
             to a<see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>.
          </summary>
-         <param name="data">The underlying data type.</param>
-         <returns>A indexer type.</returns>
+         <param name="data">The initial value for the bytes of data.</param>
+         <returns>The
+            <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>
+            instance.
+         </returns>
       </member>
       <member
          name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(System.UInt32)~Jcd.BitManipulation.LittleEndianByteIndexer">
@@ -3140,8 +3263,11 @@
             <see cref="T:System.UInt32"/>
             to a<see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>.
          </summary>
-         <param name="data">The underlying data type.</param>
-         <returns>A indexer type.</returns>
+         <param name="data">The initial value for the bytes of data.</param>
+         <returns>The
+            <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>
+            instance.
+         </returns>
       </member>
       <member
          name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(System.Int32)~Jcd.BitManipulation.LittleEndianByteIndexer">
@@ -3150,8 +3276,11 @@
             <see cref="T:System.Int32"/>
             to a<see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>.
          </summary>
-         <param name="data">The underlying data type.</param>
-         <returns>A indexer type.</returns>
+         <param name="data">The initial value for the bytes of data.</param>
+         <returns>The
+            <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>
+            instance.
+         </returns>
       </member>
       <member
          name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(System.UInt16)~Jcd.BitManipulation.LittleEndianByteIndexer">
@@ -3160,8 +3289,11 @@
             <see cref="T:System.UInt16"/>
             to a<see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>.
          </summary>
-         <param name="data">The underlying data type.</param>
-         <returns>A indexer type.</returns>
+         <param name="data">The initial value for the bytes of data.</param>
+         <returns>The
+            <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>
+            instance.
+         </returns>
       </member>
       <member
          name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(System.Int16)~Jcd.BitManipulation.LittleEndianByteIndexer">
@@ -3170,8 +3302,11 @@
             <see cref="T:System.Int16"/>
             to a<see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>.
          </summary>
-         <param name="data">The underlying data type.</param>
-         <returns>A indexer type.</returns>
+         <param name="data">The initial value for the bytes of data.</param>
+         <returns>The
+            <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>
+            instance.
+         </returns>
       </member>
       <member
          name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(System.Byte)~Jcd.BitManipulation.LittleEndianByteIndexer">
@@ -3180,8 +3315,11 @@
             <see cref="T:System.Byte"/>
             to a<see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>.
          </summary>
-         <param name="data">The underlying data type.</param>
-         <returns>A indexer type.</returns>
+         <param name="data">The initial value for the bytes of data.</param>
+         <returns>The
+            <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>
+            instance.
+         </returns>
       </member>
       <member
          name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(System.SByte)~Jcd.BitManipulation.LittleEndianByteIndexer">
@@ -3190,8 +3328,11 @@
             <see cref="T:System.SByte"/>
             to a<see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>.
          </summary>
-         <param name="data">The underlying data type.</param>
-         <returns>A indexer type.</returns>
+         <param name="data">The initial value for the bytes of data.</param>
+         <returns>The
+            <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>
+            instance.
+         </returns>
       </member>
       <member
          name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(System.Single)~Jcd.BitManipulation.LittleEndianByteIndexer">
@@ -3200,8 +3341,11 @@
             <see cref="T:System.Single"/>
             to a<see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>.
          </summary>
-         <param name="data">The underlying data type.</param>
-         <returns>A indexer type.</returns>
+         <param name="data">The initial value for the bytes of data.</param>
+         <returns>The
+            <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>
+            instance.
+         </returns>
       </member>
       <member
          name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(System.Double)~Jcd.BitManipulation.LittleEndianByteIndexer">
@@ -3210,24 +3354,33 @@
             <see cref="T:System.Double"/>
             to a<see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>.
          </summary>
-         <param name="data">The underlying data type.</param>
-         <returns>A indexer type.</returns>
+         <param name="data">The initial value for the bytes of data.</param>
+         <returns>The
+            <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>
+            instance.
+         </returns>
       </member>
       <member
          name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Explicit(System.Byte[])~Jcd.BitManipulation.LittleEndianByteIndexer">
          <summary>
             Explicitly converts an array of bytes to a<see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>.
          </summary>
-         <param name="data">The underlying data type.</param>
-         <returns>A indexer type.</returns>
+         <param name="data">The initial value for the bytes of data.</param>
+         <returns>The
+            <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>
+            instance.
+         </returns>
       </member>
       <member
          name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Explicit(System.ReadOnlySpan{System.Byte})~Jcd.BitManipulation.LittleEndianByteIndexer">
          <summary>
             Explicitly converts an array of bytes to a<see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>.
          </summary>
-         <param name="data">The underlying data type.</param>
-         <returns>A indexer type.</returns>
+         <param name="data">The initial value for the bytes of data.</param>
+         <returns>The
+            <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>
+            instance.
+         </returns>
       </member>
       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.StoreBytes(System.Byte[],System.Int32,System.Int32)">
          <summary>
@@ -3252,13 +3405,18 @@
          <summary>
             Stores a single byte to the value at the specified byte offset and returns the modified value.
          </summary>
-         <param name="byte">The byte value to set</param>
-         <param name="offset">the offset of the byte to write</param>
+         <param name="byte">The
+            <see cref="T:System.Byte"/>
+            value to store.
+         </param>
+         <param name="offset">The offset of where to store the byte.</param>
          <returns>The modified value.</returns>
       </member>
       <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.ToString">
          <summary>
-            Creates a string of the data formatted as hex for the bytes in big endian notation
+            Formats the<see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer"/>> as a hexadecimal string in big
+            endian notation.
+            For example: `DE C0 0D 60`
          </summary>
          <returns>a string of the data formatted as hex bytes</returns>
       </member>
@@ -3284,6 +3442,7 @@
                data = data.ToggleBits(); // value is now 0b0000111111110000
 
                var finalData = data;
+
                // read the upper byte
                var upperByte = (byte) data.ReadBits(8, 8); // upperByte is now 0b00001111
 
@@ -3293,29 +3452,61 @@
                // chaining operations, the same steps and end results
                data.ClearBits();
                data = data.SetBits(0, 16) // value is now 0b1111111111111111
-               /// .SetBits()/// // this is the equivalent as above
-               /// .ClearBits(4, 8) // value is now 0b1111000000001111
-               /// .ToggleBits(); // value is now 0b0000111111110000
+               .SetBits() // this is the equivalent as above
+               .ClearBits(4, 8) // value is now 0b1111000000001111
+               .ToggleBits(); // value is now 0b0000111111110000
 
                upperByte = ((byte) data.ReadBits(8, 8)) // extract the upper byte (0b00001111)
-               .StoreBits(0b1011, 4, 4);/// /// // store the value in the upper 4 bits, now upperByte is now 0b10111111
+               .StoreBits(0b1011, 4, 4); // store the value in the upper 4 bits, now upperByte is now 0b10111111
 
                // finalData 0b0000111111110000
-               var beByte0 = finalData.ReadByte(0, Endian.Big);/// /// // 00001111
-               var leByte0 = finalData.ReadByte(0, Endian.Little);/// // 11110000
+               var beByte0 = finalData.ReadByte(0, Endian.Big); // 00001111
+               var leByte0 = finalData.ReadByte(0, Endian.Little); // 11110000
 
-               var mutatedData = finalData
-               /// /// .StoreByte(0b10111111, 0, Endian.Big)
-               /// /// .StoreByte(0b01010101, 0, Endian.Little ); // lower byte is now 0b01010101
-               ;/// /// /// /// /// /// /// /// /// /// // mutatedData is now 0b1011111101010101
+               var mutatedData = finalData.StoreByte(0b10111111, 0, Endian.Big) // Upper byte is now 0b10111111
+               .StoreByte(0b01010101, 0, Endian.Little); // lower byte is now 0b01010101
+
+               // mutatedData is now 0b1011111101010101
 
                var beBa = mutatedData.ToByteArray(Endian.Big); // beBa=[0b10111111, 0b01010101]
 
                var leBa = mutatedData.ToByteArray(Endian.Little); // leBa=[0b01010101, 0b10111111]
 
-               var leBaToUInt16Le = leBa.ToUInt16(Endian.Little); // leBaToUInt16Le = 0b1011111101010101
+               var leBaToUInt16Le = (BitMask) leBa.ToUInt16(Endian.Little); // leBaToUInt16Le = 0b1011111101010101
 
-               var leBaToUInt16Be = leBa.ToUInt16(Endian.Big); // leBaToUInt16Le = 0b0101010110111111
+               var leBaToUInt16Be = (BitMask) leBa.ToUInt16(Endian.Big); // leBaToUInt16Le = 0b0101010110111111
+
+               // ByteIndexers on 64 bit values
+               BigEndianByteIndexer bebi = 0xDECAFFC0FFEEC0DE;
+               LittleEndianByteIndexer lebi = 0xDECAFFC0FFEEC0DE;
+
+               Console.WriteLine(bebi.ToString()); // outputs: "DE CA FF C0 FF EE C0 DE"
+               Console.WriteLine(lebi.ToString()); // outputs: "DE C0 EE FF C0 FF CA DE"
+
+               var bebib1 = bebi[1]; // bebib1 = 0xCA
+               var lebib1 = lebi[1]; // lebib1 = 0xC0
+
+               bebi[0] = 0x0A;
+               lebi[0] = 0x0B;
+
+               Console.WriteLine(bebi.ToString()); // outputs: "0A CA FF C0 FF EE C0 DE"
+               Console.WriteLine(lebi.ToString()); // outputs: "0B C0 EE FF C0 FF CA DE"
+
+               // ByteIndexers on 32 bit values
+               bebi = 0x600DC0DE;
+               lebi = 0x600DC0DE;
+
+               Console.WriteLine(bebi.ToString()); // outputs: "60 0D C0 DE"
+               Console.WriteLine(lebi.ToString()); // outputs: "DE C0 0D 60"
+
+               bebib1 = bebi[1]; // bebib1 = 0x0D
+               lebib1 = lebi[1]; // lebib1 = 0xC0
+
+               bebi[0] = 0x0A;
+               lebi[0] = 0x0B;
+
+               Console.WriteLine(bebi.ToString()); // outputs: "0A 0D C0 DE"
+               Console.WriteLine(lebi.ToString()); // outputs: "0B C0 0D 60"
             </code>
          </example>
       </member>
@@ -3479,7 +3670,9 @@
          <summary>
             Converts an
             <see cref="T:System.SByte"/>
-            into an array of bools
+            into an array of
+            <see cre="bool"/>
+            values with the lease significant bit at index 0.
          </summary>
          <param name="bits">The
             <see cref="T:System.SByte"/>
@@ -3491,14 +3684,13 @@
          <summary>
             Converts an
             <see cref="T:System.SByte"/>
-            into an array of bytes
+            into an array of bytes in the specified<see cref="T:Jcd.BitManipulation.Endian"/>.
          </summary>
-         <param name="data">the
-            <see cref="T:System.SByte"/>
-            to convert.
+         <param name="data">The value to convert to a
+            <see cref="T:System.Byte"/>
+            array.
          </param>
-         <returns>an array containing the<see cref="T:System.SByte"/>.
-         </returns>
+         <returns>The value as an array in the requested byte order</returns>
       </member>
       <member name="M:Jcd.BitManipulation.SByteExtensions.ClearBits(System.SByte,System.Int32,System.Int32)">
          <summary>
@@ -3529,7 +3721,7 @@
          <summary>
             Reads the bits specified and returns the result shifted to the right by the offset.
          </summary>
-         <param name="value">The source of bits to read.</param>
+         <param name="value">The source of the bits to read.</param>
          <param name="offset">The bit offset to start reading from.</param>
          <param name="size">The total number of bits to extract.</param>
          <returns>The value stored in the range of bits specified, right shifted by the offset..</returns>
@@ -3538,7 +3730,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
          </summary>
-         <param name="value">The source of bits to read.</param>
+         <param name="value">The source of the bits to read.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The unshifted extracted bits</returns>
       </member>
@@ -3547,8 +3739,10 @@
          <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
          </summary>
-         <param name="value">The source of bits to read.</param>
-         <param name="offset">The amount to right shift the result by.</param>
+         <param name="value">The source of the bits to read.</param>
+         <param name="shift">The number of bits to right shift the result of applying the<see
+            cref="T:Jcd.BitManipulation.BitMask"/>.
+         </param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The extracted bits right shifted by the specified amount.</returns>
       </member>
@@ -3556,8 +3750,8 @@
          <summary>
             Reads a single bit from the specified position.
          </summary>
-         <param name="value">the bits to read from</param>
-         <param name="offset">the offset of the bit to read</param>
+         <param name="value">The source of the bits to read.</param>
+         <param name="offset">The offset of the bit to read.</param>
          <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
          </returns>
       </member>
@@ -3600,7 +3794,10 @@
       <member
          name="M:Jcd.BitManipulation.SByteExtensions.StoreBits(System.SByte,System.SByte,System.Int32,Jcd.BitManipulation.BitMask)">
          <summary>
-            Stores a masked set of bits from a value to an offset in the destination and returns the modified value.
+            Stores a set of bits specified by a
+            <see cref="T:Jcd.BitManipulation.BitMask"/>
+            from a source value to a bit offset and returns the modified
+            value.
          </summary>
          <param name="value">the destination for the stored bits</param>
          <param name="source">The source of the bits to store.</param>
@@ -3613,7 +3810,7 @@
             Store a single bit at the specified offset and returns the modified value.
          </summary>
          <param name="value">The value to modify.</param>
-         <param name="bit">The bit value to set</param>
+         <param name="bit">The value to store at the specified bit offset.</param>
          <param name="offset">The offset of the bit to store.</param>
          <returns>The modified value.</returns>
       </member>
@@ -3711,18 +3908,26 @@
          <summary>
             Converts a
             <see cref="T:System.Single"/>
-            into an array of bools
+            into an array of
+            <see cre="bool"/>
+            values with the lease significant bit at index 0.
          </summary>
-         <param name="bits">the long to convert.</param>
+         <param name="bits">The value to convert to an array of
+            <see cref="T:System.Boolean"/>
+            values.
+         </param>
          <returns>the array. LSB at index 0</returns>
       </member>
       <member name="M:Jcd.BitManipulation.SingleExtensions.ToByteArray(System.Single,Jcd.BitManipulation.Endian)">
          <summary>
             Converts a
             <see cref="T:System.Single"/>
-            into an array of bytes
+            into an array of bytes in the specified<see cref="T:Jcd.BitManipulation.Endian"/>.
          </summary>
-         <param name="data">the long to convert.</param>
+         <param name="data">The value to convert to a
+            <see cref="T:System.Byte"/>
+            array.
+         </param>
          <param name="endian">The order in which to store the bytes</param>
          <returns>The value as an array in the requested byte order</returns>
       </member>
@@ -3755,7 +3960,7 @@
          <summary>
             Reads the bits specified and returns the result shifted to the right by the offset.
          </summary>
-         <param name="value">The source of bits to read.</param>
+         <param name="value">The source of the bits to read.</param>
          <param name="offset">The bit offset to start reading from.</param>
          <param name="size">The total number of bits to extract.</param>
          <returns>The value stored in the range of bits specified, right shifted by the offset..</returns>
@@ -3764,7 +3969,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask.
          </summary>
-         <param name="value">The source of bits to read.</param>
+         <param name="value">The source of the bits to read.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The ushifted extracted bits</returns>
       </member>
@@ -3773,8 +3978,8 @@
          <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
          </summary>
-         <param name="value">The source of bits to read.</param>
-         <param name="offset">The bit offset to start reading from.</param>
+         <param name="value">The source of the bits to read.</param>
+         <param name="shift">The bit offset to start reading from.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The extracted bits right shifted by the specified amount.</returns>
       </member>
@@ -3782,8 +3987,8 @@
          <summary>
             Reads a single bit from the specified position.
          </summary>
-         <param name="value">the bits to read from</param>
-         <param name="offset">the offset of the bit to read</param>
+         <param name="value">The source of the bits to read.</param>
+         <param name="offset">The offset of the bit to read.</param>
          <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
          </returns>
       </member>
@@ -3792,10 +3997,10 @@
          <summary>
             Reads a set of bytes starting at the specified byte location within the value.
          </summary>
-         <param name="value">The value to read the byte from.</param>
-         <param name="offset">The byte location to store the value.</param>
-         <param name="size">The byte size of the value.</param>
-         <param name="endian">The endianness of the byte indexing within the value.</param>
+         <param name="value">The value to read the bytes from.</param>
+         <param name="offset">The byte offset to starting reading from.</param>
+         <param name="size">The requested number of bytes to read.</param>
+         <param name="endian">The endianness of the indexing for the byte read.</param>
          <returns>A byte array of the value in the specified endian.</returns>
       </member>
       <member
@@ -3804,7 +4009,7 @@
             Reads a single byte from the value at the specified byte offset.
          </summary>
          <param name="value">The value to read the byte from.</param>
-         <param name="offset">the offset of the byte to write</param>
+         <param name="offset">The offset of where to store the byte.</param>
          <param name="endian">The endianness of the byte indexing within the value.</param>
          <returns>The specified byte.</returns>
       </member>
@@ -3847,7 +4052,10 @@
       <member
          name="M:Jcd.BitManipulation.SingleExtensions.StoreBits(System.Single,System.UInt32,System.Int32,Jcd.BitManipulation.BitMask)">
          <summary>
-            Stores a masked set of bits from a value to an offset in the destination and returns the modified value.
+            Stores a set of bits specified by a
+            <see cref="T:Jcd.BitManipulation.BitMask"/>
+            from a source value to a bit offset and returns the modified
+            value.
          </summary>
          <param name="value">the destination for the stored bits</param>
          <param name="source">The source of the bits to store.</param>
@@ -3860,7 +4068,7 @@
             Store a single bit at the specified offset and returns the modified value.
          </summary>
          <param name="value">The value to modify.</param>
-         <param name="bit">The bit value to set</param>
+         <param name="bit">The value to store at the specified bit offset.</param>
          <param name="offset">The offset of the bit to store.</param>
          <returns>The modified value.</returns>
       </member>
@@ -3894,8 +4102,11 @@
             Stores a single byte to the value at the specified byte offset and returns the modified value.
          </summary>
          <param name="value">The value to modify.</param>
-         <param name="byte">The byte value to set</param>
-         <param name="offset">the offset of the byte to write</param>
+         <param name="byte">The
+            <see cref="T:System.Byte"/>
+            value to store.
+         </param>
+         <param name="offset">The offset of where to store the byte.</param>
          <param name="endian">The endianness of the indexing within the value.</param>
          <returns>The modified value.</returns>
       </member>
@@ -3967,7 +4178,9 @@
          <summary>
             Converts a
             <see cref="T:System.UInt16"/>
-            into an array of bools
+            into an array of
+            <see cre="bool"/>
+            values with the lease significant bit at index 0.
          </summary>
          <param name="bits">the bits of the
             <see cref="T:System.UInt16"/>
@@ -3979,11 +4192,11 @@
          <summary>
             Converts a
             <see cref="T:System.UInt16"/>
-            into an array of bytes
+            into an array of bytes in the specified<see cref="T:Jcd.BitManipulation.Endian"/>.
          </summary>
-         <param name="data">the data of the
-            <see cref="T:System.UInt16"/>
-            to convert.
+         <param name="data">The value to convert to a
+            <see cref="T:System.Byte"/>
+            array.
          </param>
          <param name="endian">The order in which to store the bytes</param>
          <returns>The value as an array in the requested byte order</returns>
@@ -4008,7 +4221,7 @@
          <summary>
             Reads the bits specified and returns the result shifted to the right by the offset.
          </summary>
-         <param name="value">The source of bits to read.</param>
+         <param name="value">The source of the bits to read.</param>
          <param name="offset">The bit offset to start reading from.</param>
          <param name="size">The total number of bits to extract.</param>
          <returns>The value stored in the range of bits specified, right shifted by the offset..</returns>
@@ -4017,7 +4230,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask.
          </summary>
-         <param name="value">The source of bits to read.</param>
+         <param name="value">The source of the bits to read.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The unshifted extracted bits</returns>
       </member>
@@ -4026,8 +4239,8 @@
          <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
          </summary>
-         <param name="value">The source of bits to read.</param>
-         <param name="offset">The bit offset to start reading from.</param>
+         <param name="value">The source of the bits to read.</param>
+         <param name="shift">The bit offset to start reading from.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The extracted bits right shifted by the specified amount.</returns>
       </member>
@@ -4035,8 +4248,8 @@
          <summary>
             Reads a single bit from the specified position.
          </summary>
-         <param name="value">the bits to read from</param>
-         <param name="offset">the offset of the bit to read</param>
+         <param name="value">The source of the bits to read.</param>
+         <param name="offset">The offset of the bit to read.</param>
          <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
          </returns>
       </member>
@@ -4045,10 +4258,10 @@
          <summary>
             Reads a set of bytes starting at the specified byte location within the value.
          </summary>
-         <param name="value">The value to read the byte from.</param>
-         <param name="offset">The byte location to store the value.</param>
-         <param name="size">The byte size of the value.</param>
-         <param name="endian">The endianness of the byte indexing within the value.</param>
+         <param name="value">The value to read the bytes from.</param>
+         <param name="offset">The byte offset to starting reading from.</param>
+         <param name="size">The requested number of bytes to read.</param>
+         <param name="endian">The endianness of the indexing for the byte read.</param>
          <returns>A byte array of the value in the specified endian.</returns>
       </member>
       <member
@@ -4057,7 +4270,7 @@
             Reads a single byte from the value at the specified byte offset.
          </summary>
          <param name="value">The value to read the byte from.</param>
-         <param name="offset">the offset of the byte to write</param>
+         <param name="offset">The offset of where to store the byte.</param>
          <param name="endian">The endianness of the byte indexing within the value.</param>
          <returns>The specified byte.</returns>
       </member>
@@ -4084,8 +4297,11 @@
             Stores a single byte to the value at the specified byte offset and returns the modified value.
          </summary>
          <param name="value">The value to modify.</param>
-         <param name="byte">The byte value to set</param>
-         <param name="offset">the offset of the byte to write</param>
+         <param name="byte">The
+            <see cref="T:System.Byte"/>
+            value to store.
+         </param>
+         <param name="offset">The offset of where to store the byte.</param>
          <param name="endian">The endianness for indexing into the bytes.</param>
          <returns>The modified value.</returns>
       </member>
@@ -4135,7 +4351,10 @@
       <member
          name="M:Jcd.BitManipulation.UInt16Extensions.StoreBits(System.UInt16,System.UInt16,System.Int32,Jcd.BitManipulation.BitMask)">
          <summary>
-            Stores a masked set of bits from a value to an offset in the destination and returns the modified value.
+            Stores a set of bits specified by a
+            <see cref="T:Jcd.BitManipulation.BitMask"/>
+            from a source value to a bit offset and returns the modified
+            value.
          </summary>
          <param name="value">the destination for the stored bits</param>
          <param name="source">The source of the bits to store.</param>
@@ -4148,7 +4367,7 @@
             Store a single bit at the specified offset and returns the modified value.
          </summary>
          <param name="value">The value to modify.</param>
-         <param name="bit">The bit value to set</param>
+         <param name="bit">The value to store at the specified bit offset.</param>
          <param name="offset">The offset of the bit to store.</param>
          <returns>The modified value.</returns>
       </member>
@@ -4233,7 +4452,9 @@
          <summary>
             Converts a
             <see cref="T:System.UInt32"/>
-            into an array of bools
+            into an array of
+            <see cre="bool"/>
+            values with the lease significant bit at index 0.
          </summary>
          <param name="bits">The
             <see cref="T:System.UInt32"/>
@@ -4245,11 +4466,11 @@
          <summary>
             Converts a
             <see cref="T:System.UInt32"/>
-            into an array of bytes
+            into an array of bytes in the specified<see cref="T:Jcd.BitManipulation.Endian"/>.
          </summary>
-         <param name="data">the
-            <see cref="T:System.UInt32"/>
-            to convert.
+         <param name="data">The value to convert to a
+            <see cref="T:System.Byte"/>
+            array.
          </param>
          <param name="endian">The order in which to store the bytes</param>
          <returns>The value as an array in the requested byte order</returns>
@@ -4283,7 +4504,7 @@
          <summary>
             Reads the bits specified and returns the result shifted to the right by the offset.
          </summary>
-         <param name="value">The source of bits to read.</param>
+         <param name="value">The source of the bits to read.</param>
          <param name="offset">The bit offset to start reading from.</param>
          <param name="size">The total number of bits to extract.</param>
          <returns>The value stored in the range of bits specified, right shifted by the offset..</returns>
@@ -4292,7 +4513,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask.
          </summary>
-         <param name="value">The source of bits to read.</param>
+         <param name="value">The source of the bits to read.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The unshifted extracted bits</returns>
       </member>
@@ -4301,8 +4522,8 @@
          <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
          </summary>
-         <param name="value">The source of bits to read.</param>
-         <param name="offset">The bit offset to start reading from.</param>
+         <param name="value">The source of the bits to read.</param>
+         <param name="shift">The bit offset to start reading from.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The extracted bits right shifted by the specified amount.</returns>
       </member>
@@ -4310,8 +4531,8 @@
          <summary>
             Reads a single bit from the specified position.
          </summary>
-         <param name="value">the bits to read from</param>
-         <param name="offset">the offset of the bit to read</param>
+         <param name="value">The source of the bits to read.</param>
+         <param name="offset">The offset of the bit to read.</param>
          <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
          </returns>
       </member>
@@ -4320,10 +4541,10 @@
          <summary>
             Reads a set of bytes starting at the specified byte location within the value.
          </summary>
-         <param name="value">The value to read the byte from.</param>
-         <param name="offset">The byte location to store the value.</param>
-         <param name="size">The byte size of the value.</param>
-         <param name="endian">The endianness of the byte indexing within the value.</param>
+         <param name="value">The value to read the bytes from.</param>
+         <param name="offset">The byte offset to starting reading from.</param>
+         <param name="size">The requested number of bytes to read.</param>
+         <param name="endian">The endianness of the indexing for the byte read.</param>
          <returns>A byte array of the value in the specified endian.</returns>
       </member>
       <member
@@ -4332,7 +4553,7 @@
             Reads a single byte from the value at the specified byte offset.
          </summary>
          <param name="value">The value to read the byte from.</param>
-         <param name="offset">the offset of the byte to write</param>
+         <param name="offset">The offset of where to store the byte.</param>
          <param name="endian">The endianness of the byte indexing within the value.</param>
          <returns>The specified byte.</returns>
       </member>
@@ -4375,7 +4596,10 @@
       <member
          name="M:Jcd.BitManipulation.UInt32Extensions.StoreBits(System.UInt32,System.UInt32,System.Int32,Jcd.BitManipulation.BitMask)">
          <summary>
-            Stores a masked set of bits from a value to an offset in the destination and returns the modified value.
+            Stores a set of bits specified by a
+            <see cref="T:Jcd.BitManipulation.BitMask"/>
+            from a source value to a bit offset and returns the modified
+            value.
          </summary>
          <param name="value">the destination for the stored bits</param>
          <param name="source">The source of the bits to store.</param>
@@ -4388,7 +4612,7 @@
             Store a single bit at the specified offset and returns the modified value.
          </summary>
          <param name="value">The value to modify.</param>
-         <param name="bit">The bit value to set</param>
+         <param name="bit">The value to store at the specified bit offset.</param>
          <param name="offset">The offset of the bit to store.</param>
          <returns>The modified value.</returns>
       </member>
@@ -4422,8 +4646,11 @@
             Stores a single byte to the value at the specified byte offset and returns the modified value.
          </summary>
          <param name="value">The value to modify.</param>
-         <param name="byte">The byte value to set</param>
-         <param name="offset">the offset of the byte to write</param>
+         <param name="byte">The
+            <see cref="T:System.Byte"/>
+            value to store.
+         </param>
+         <param name="offset">The offset of where to store the byte.</param>
          <param name="endian">The endianness for indexing into the bytes.</param>
          <returns>The modified value.</returns>
       </member>
@@ -4499,20 +4726,25 @@
          <summary>
             Converts a
             <see cref="T:System.UInt64"/>
-            into an array of bools
+            into an array of
+            <see cre="bool"/>
+            values with the lease significant bit at index 0.
          </summary>
-         <param name="bits">the ulong to convert.</param>
+         <param name="bits">The value to convert to an array of
+            <see cref="T:System.Boolean"/>
+            values.
+         </param>
          <returns>An array with the Least Significant Bit at index 0</returns>
       </member>
       <member name="M:Jcd.BitManipulation.UInt64Extensions.ToByteArray(System.UInt64,Jcd.BitManipulation.Endian)">
          <summary>
             Converts a
             <see cref="T:System.UInt64"/>
-            into an array of bytes
+            into an array of bytes in the specified<see cref="T:Jcd.BitManipulation.Endian"/>.
          </summary>
-         <param name="data">the
-            <see cref="T:System.UInt64"/>
-            to convert.
+         <param name="data">The value to convert to a
+            <see cref="T:System.Byte"/>
+            array.
          </param>
          <param name="endian">The order in which to store the bytes</param>
          <returns>The value as an array in the requested byte order</returns>
@@ -4555,7 +4787,7 @@
          <summary>
             Reads the bits specified and returns the result shifted to the right by the offset.
          </summary>
-         <param name="value">The source of bits to read.</param>
+         <param name="value">The source of the bits to read.</param>
          <param name="offset">The bit offset to start reading from.</param>
          <param name="size">The total number of bits to extract.</param>
          <returns>The value stored in the range of bits specified, right shifted by the offset..</returns>
@@ -4564,7 +4796,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask.
          </summary>
-         <param name="value">The source of bits to read.</param>
+         <param name="value">The source of the bits to read.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The unshifted extracted bits</returns>
       </member>
@@ -4573,8 +4805,8 @@
          <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
          </summary>
-         <param name="value">The source of bits to read.</param>
-         <param name="offset">The bit offset to start reading from.</param>
+         <param name="value">The source of the bits to read.</param>
+         <param name="shift">The bit offset to start reading from.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The extracted bits right shifted by the specified amount.</returns>
       </member>
@@ -4582,8 +4814,8 @@
          <summary>
             Reads a single bit from the specified position.
          </summary>
-         <param name="value">the bits to read from</param>
-         <param name="offset">the offset of the bit to read</param>
+         <param name="value">The source of the bits to read.</param>
+         <param name="offset">The offset of the bit to read.</param>
          <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
          </returns>
       </member>
@@ -4592,10 +4824,10 @@
          <summary>
             Reads a set of bytes starting at the specified byte location within the value.
          </summary>
-         <param name="value">The value to read the byte from.</param>
-         <param name="offset">The byte location to store the value.</param>
-         <param name="size">The byte size of the value.</param>
-         <param name="endian">The endianness of the byte indexing within the value.</param>
+         <param name="value">The value to read the bytes from.</param>
+         <param name="offset">The byte offset to starting reading from.</param>
+         <param name="size">The requested number of bytes to read.</param>
+         <param name="endian">The endianness of the indexing for the byte read.</param>
          <returns>A byte array of the value in the specified endian.</returns>
       </member>
       <member
@@ -4604,7 +4836,7 @@
             Reads a single byte from the value at the specified byte offset.
          </summary>
          <param name="value">The value to read the byte from.</param>
-         <param name="offset">the offset of the byte to write</param>
+         <param name="offset">The offset of where to store the byte.</param>
          <param name="endian">The endianness of the byte indexing within the value.</param>
          <returns>The specified byte.</returns>
       </member>
@@ -4647,7 +4879,10 @@
       <member
          name="M:Jcd.BitManipulation.UInt64Extensions.StoreBits(System.UInt64,System.UInt64,System.Int32,Jcd.BitManipulation.BitMask)">
          <summary>
-            Stores a masked set of bits from a value to an offset in the destination and returns the modified value.
+            Stores a set of bits specified by a
+            <see cref="T:Jcd.BitManipulation.BitMask"/>
+            from a source value to a bit offset and returns the modified
+            value.
          </summary>
          <param name="value">the destination for the stored bits</param>
          <param name="source">The source of the bits to store.</param>
@@ -4660,7 +4895,7 @@
             Store a single bit at the specified offset and returns the modified value.
          </summary>
          <param name="value">The value to modify.</param>
-         <param name="bit">The bit value to set</param>
+         <param name="bit">The value to store at the specified bit offset.</param>
          <param name="offset">The offset of the bit to store.</param>
          <returns>The modified value.</returns>
       </member>
@@ -4694,8 +4929,11 @@
             Stores a single byte to the value at the specified byte offset and returns the modified value.
          </summary>
          <param name="value">The value to modify.</param>
-         <param name="byte">The byte value to set</param>
-         <param name="offset">the offset of the byte to write</param>
+         <param name="byte">The
+            <see cref="T:System.Byte"/>
+            value to store.
+         </param>
+         <param name="offset">The offset of where to store the byte.</param>
          <param name="endian">The endianness for indexing into the bytes.</param>
          <returns>The modified value.</returns>
       </member>

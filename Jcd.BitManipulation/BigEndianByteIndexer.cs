@@ -456,7 +456,7 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Implicitly converts an <see cref="Int64" /> to a <see cref="BigEndianByteIndexer" />.
    /// </summary>
-   /// <param name="data">The underlying data type.</param>
+   /// <param name="data">The initial value for the bytes of data.</param>
    /// <returns>The newly created <see cref="BigEndianByteIndexer" />.</returns>
    /// <remarks>
    /// <para>
@@ -480,7 +480,7 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Implicitly converts a <see cref="UInt32" /> to a <see cref="BigEndianByteIndexer" />.
    /// </summary>
-   /// <param name="data">The underlying data type.</param>
+   /// <param name="data">The initial value for the bytes of data.</param>
    /// <returns>The newly created <see cref="BigEndianByteIndexer" />.</returns>
    /// <remarks>
    /// <para>
@@ -504,8 +504,8 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Implicitly converts a <see cref="Int32" /> to a <see cref="BigEndianByteIndexer" />.
    /// </summary>
-   /// <param name="data">The underlying data type.</param>
-   /// <returns>A indexer type.</returns>
+   /// <param name="data">The initial value for the bytes of data.</param>
+   /// <returns>The <see cref="BigEndianByteIndexer" /> instance.</returns>
    /// <remarks>
    /// <para>
    /// Example:
@@ -528,8 +528,8 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Implicitly converts a <see cref="UInt16" /> to a <see cref="BigEndianByteIndexer" />.
    /// </summary>
-   /// <param name="data">The underlying data type.</param>
-   /// <returns>A indexer type.</returns>
+   /// <param name="data">The initial value for the bytes of data.</param>
+   /// <returns>The <see cref="BigEndianByteIndexer" /> instance.</returns>
    /// <remarks>
    /// <para>
    /// Example:
@@ -552,8 +552,8 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Implicitly converts a <see cref="Int16" /> to a <see cref="BigEndianByteIndexer" />.
    /// </summary>
-   /// <param name="data">The underlying data type.</param>
-   /// <returns>A indexer type.</returns>
+   /// <param name="data">The initial value for the bytes of data.</param>
+   /// <returns>The <see cref="BigEndianByteIndexer" /> instance.</returns>
    /// <remarks>
    /// <para>
    /// Example:
@@ -576,8 +576,8 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Implicitly converts a <see cref="Byte" /> to a <see cref="BigEndianByteIndexer" />.
    /// </summary>
-   /// <param name="data">The underlying data type.</param>
-   /// <returns>A indexer type.</returns>
+   /// <param name="data">The initial value for the bytes of data.</param>
+   /// <returns>The <see cref="BigEndianByteIndexer" /> instance.</returns>
    /// <remarks>
    /// <para>
    /// Example:
@@ -600,8 +600,8 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Implicitly converts an <see cref="SByte" /> to a <see cref="BigEndianByteIndexer" />.
    /// </summary>
-   /// <param name="data">The underlying data type.</param>
-   /// <returns>A indexer type.</returns>
+   /// <param name="data">The initial value for the bytes of data.</param>
+   /// <returns>The <see cref="BigEndianByteIndexer" /> instance.</returns>
    /// <remarks>
    /// <para>
    /// Example:
@@ -624,8 +624,8 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Implicitly converts a <see cref="Single" /> to a <see cref="BigEndianByteIndexer" />.
    /// </summary>
-   /// <param name="data">The underlying data type.</param>
-   /// <returns>A indexer type.</returns>
+   /// <param name="data">The initial value for the bytes of data.</param>
+   /// <returns>The <see cref="BigEndianByteIndexer" /> instance.</returns>
    /// <remarks>
    /// <para>
    /// Example:
@@ -648,8 +648,8 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Implicitly converts a <see cref="Double" /> to a <see cref="BigEndianByteIndexer" />.
    /// </summary>
-   /// <param name="data">The underlying data type.</param>
-   /// <returns>A indexer type.</returns>
+   /// <param name="data">The initial value for the bytes of data.</param>
+   /// <returns>The <see cref="BigEndianByteIndexer" /> instance.</returns>
    /// <remarks>
    /// <para>
    /// Example:
@@ -672,8 +672,8 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Explicitly converts an array of  bytes to a <see cref="BigEndianByteIndexer" />.
    /// </summary>
-   /// <param name="data">The underlying data type.</param>
-   /// <returns>A indexer type.</returns>
+   /// <param name="data">The initial value for the bytes of data.</param>
+   /// <returns>The <see cref="BigEndianByteIndexer" /> instance.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static explicit operator BigEndianByteIndexer(byte[] data)
    {
@@ -683,8 +683,8 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Explicitly converts an array of  bytes to a <see cref="BigEndianByteIndexer" />.
    /// </summary>
-   /// <param name="data">The underlying data type.</param>
-   /// <returns>A indexer type.</returns>
+   /// <param name="data">The initial value for the bytes of data.</param>
+   /// <returns>The <see cref="BigEndianByteIndexer" /> instance.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static explicit operator BigEndianByteIndexer(ReadOnlySpan<byte> data)
    {
@@ -822,8 +822,8 @@ public ref struct BigEndianByteIndexer
    /// <summary>
    /// Stores a single byte to the value at the specified byte offset and returns the modified value.
    /// </summary>
-   /// <param name="byte">The byte value to set</param>
-   /// <param name="offset">the offset of the byte to write</param>
+   /// <param name="byte">The <see cref="byte" /> value to store.</param>
+   /// <param name="offset">The offset of where to store the byte.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public BigEndianByteIndexer StoreByte(byte @byte, int offset)
@@ -834,7 +834,8 @@ public ref struct BigEndianByteIndexer
    }
 
    /// <summary>
-   /// Creates a string of the data formatted as hex for the bytes in big endian notation
+   /// Formats the <see cref="BigEndianByteIndexer" />> as a hexadecimal string in big endian notation.
+   /// For example: `60 0D C0 DE`
    /// </summary>
    /// <returns>a string of the data formatted as hex bytes</returns>
    public readonly override string ToString()

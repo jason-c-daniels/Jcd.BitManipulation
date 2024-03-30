@@ -14,7 +14,7 @@ public static sbyte ReadBits(this sbyte value, int offset, int size);
 
 `value` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 
-The source of bits to read.
+The source of the bits to read.
 
 <a name='Jcd.BitManipulation.SByteExtensions.ReadBits(thissbyte,int,int).offset'></a>
 

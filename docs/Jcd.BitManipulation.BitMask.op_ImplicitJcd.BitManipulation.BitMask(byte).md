@@ -15,7 +15,7 @@ public static Jcd.BitManipulation.BitMask implicit operator BitMask(byte bits);
 
 `bits` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
-the value to convert to a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+The value to convert to a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask').
 
 #### Returns
 

@@ -15,7 +15,7 @@ public static Jcd.BitManipulation.BitMask implicit operator BitMask(ulong bits);
 
 `bits` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
-the value to convert to a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+The value to convert to a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask').
 
 #### Returns
 

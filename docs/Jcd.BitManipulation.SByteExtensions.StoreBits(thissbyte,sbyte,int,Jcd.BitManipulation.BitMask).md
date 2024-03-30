@@ -2,7 +2,9 @@
 
 ## SByteExtensions.StoreBits(this sbyte, sbyte, int, BitMask) Method
 
-Stores a masked set of bits from a value to an offset in the destination and returns the modified value.
+Stores a set of bits specified by a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') from a
+source value to a bit offset and returns the modified
+value.
 
 ```csharp
 public static sbyte StoreBits(this sbyte value, sbyte source, int offset, Jcd.BitManipulation.BitMask mask);

@@ -43,11 +43,7 @@
       <None Include="..\LICENSE" Pack="false" PackagePath="\"/>
    </ItemGroup>
 
-   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-      <DocumentationFile>..\docs\Jcd.BitManipulation.xml</DocumentationFile>
-   </PropertyGroup>
-
-   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+   <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
       <DocumentationFile>..\docs\Jcd.BitManipulation.xml</DocumentationFile>
    </PropertyGroup>
 
@@ -57,16 +53,5 @@
          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
    </ItemGroup>
-
-   <ItemGroup>
-      <Compile Remove="IBitIndexer.cs"/>
-      <Compile Remove="BigEndianByteIndexerUInt64.cs"/>
-      <Compile Remove="LittleEndianByteIndexerInt32.cs"/>
-      <Compile Remove="LittleEndianByteIndexerUInt32.cs"/>
-      <Compile Remove="ReadBitsExtensions.Int64AndUInt64.cs"/>
-      <Compile Remove="ReadBitsExtensions.Int32AndUInt32.cs"/>
-      <Compile Remove="ReadBitsExtensions.Int16AndUInt16.cs"/>
-   </ItemGroup>
-
 </Project>
   

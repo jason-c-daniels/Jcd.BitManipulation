@@ -84,9 +84,9 @@ public static class SingleExtensions
    }
 
    /// <summary>
-   /// Converts a <see cref="float" /> into an array of bools
+   /// Converts a <see cref="float" /> into an array of <see cre="bool" /> values with the lease significant bit at index 0.
    /// </summary>
-   /// <param name="bits">the long to convert.</param>
+   /// <param name="bits">The value to convert to an array of <see cref="bool" /> values.</param>
    /// <returns>the array. LSB at index 0</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool[] ToBooleanArray(this float bits)
@@ -95,9 +95,9 @@ public static class SingleExtensions
    }
 
    /// <summary>
-   /// Converts a <see cref="float" /> into an array of bytes
+   /// Converts a <see cref="float" /> into an array of bytes in the specified <see cref="Endian" />.
    /// </summary>
-   /// <param name="data">the long to convert.</param>
+   /// <param name="data">The value to convert to a <see cref="byte" /> array.</param>
    /// <param name="endian">The order in which to store the bytes</param>
    /// <returns>The value as an array in the requested byte order</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -146,7 +146,7 @@ public static class SingleExtensions
    /// <summary>
    /// Reads the bits specified and returns the result shifted to the right by the offset.
    /// </summary>
-   /// <param name="value">The source of bits to read.</param>
+   /// <param name="value">The source of the bits to read.</param>
    /// <param name="offset">The bit offset to start reading from.</param>
    /// <param name="size">The total number of bits to extract.</param>
    /// <returns>The value stored in the range of bits specified, right shifted by the offset..</returns>
@@ -159,7 +159,7 @@ public static class SingleExtensions
    /// <summary>
    /// Extract a subset of bits specified by a bitmask.
    /// </summary>
-   /// <param name="value">The source of bits to read.</param>
+   /// <param name="value">The source of the bits to read.</param>
    /// <param name="mask">The bitmask specifying which bits to read.</param>
    /// <returns>The ushifted extracted bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -171,21 +171,21 @@ public static class SingleExtensions
    /// <summary>
    /// Extract a subset of bits specified by a bitmask and right align the bits by the offset.
    /// </summary>
-   /// <param name="value">The source of bits to read.</param>
-   /// <param name="offset">The bit offset to start reading from.</param>
+   /// <param name="value">The source of the bits to read.</param>
+   /// <param name="shift">The bit offset to start reading from.</param>
    /// <param name="mask">The bitmask specifying which bits to read.</param>
    /// <returns>The extracted bits right shifted by the specified amount.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static uint ReadBits(this float value, int offset, BitMask mask)
+   public static uint ReadBits(this float value, int shift, BitMask mask)
    {
-      return value.ReadBits(mask) >> offset;
+      return value.ReadBits(mask) >> shift;
    }
 
    /// <summary>
    /// Reads a single bit from the specified position.
    /// </summary>
-   /// <param name="value">the bits to read from</param>
-   /// <param name="offset">the offset of the bit to read</param>
+   /// <param name="value">The source of the bits to read.</param>
+   /// <param name="offset">The offset of the bit to read.</param>
    /// <returns>The bit at the specified position returned as a <see cref="bool" />. </returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool ReadBit(this float value, int offset)
@@ -196,10 +196,10 @@ public static class SingleExtensions
    /// <summary>
    /// Reads a set of bytes starting at the specified byte location within the value.
    /// </summary>
-   /// <param name="value">The value to read the byte from.</param>
-   /// <param name="offset">The byte location to store the value.</param>
-   /// <param name="size">The byte size of the value.</param>
-   /// <param name="endian">The endianness of the byte indexing within the value.</param>
+   /// <param name="value">The value to read the bytes from.</param>
+   /// <param name="offset">The byte offset to starting reading from.</param>
+   /// <param name="size">The requested number of bytes to read.</param>
+   /// <param name="endian">The endianness of the indexing for the byte read.</param>
    /// <returns>A byte array of the value in the specified endian.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ReadBytes(this float value, int offset, int size, Endian endian = Endian.Little)
@@ -211,7 +211,7 @@ public static class SingleExtensions
    /// Reads a single byte from the value at the specified byte offset.
    /// </summary>
    /// <param name="value">The value to read the byte from.</param>
-   /// <param name="offset">the offset of the byte to write</param>
+   /// <param name="offset">The offset of where to store the byte.</param>
    /// <param name="endian">The endianness of the byte indexing within the value.</param>
    /// <returns>The specified byte.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -272,7 +272,8 @@ public static class SingleExtensions
    }
 
    /// <summary>
-   /// Stores a masked set of bits from a value to an offset in the destination and returns the modified value.
+   /// Stores a set of bits specified by a <see cref="BitMask" /> from a source value to a bit offset and returns the modified
+   /// value.
    /// </summary>
    /// <param name="value">the destination for the stored bits</param>
    /// <param name="source">The source of the bits to store.</param>
@@ -289,7 +290,7 @@ public static class SingleExtensions
    /// Store a single bit at the specified offset and returns the modified value.
    /// </summary>
    /// <param name="value">The value to modify.</param>
-   /// <param name="bit">The bit value to set</param>
+   /// <param name="bit">The value to store at the specified bit offset.</param>
    /// <param name="offset">The offset of the bit to store.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -332,8 +333,8 @@ public static class SingleExtensions
    /// Stores a single byte to the value at the specified byte offset and returns the modified value.
    /// </summary>
    /// <param name="value">The value to modify.</param>
-   /// <param name="byte">The byte value to set</param>
-   /// <param name="offset">the offset of the byte to write</param>
+   /// <param name="byte">The <see cref="byte" /> value to store.</param>
+   /// <param name="offset">The offset of where to store the byte.</param>
    /// <param name="endian">The endianness of the indexing within the value.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]

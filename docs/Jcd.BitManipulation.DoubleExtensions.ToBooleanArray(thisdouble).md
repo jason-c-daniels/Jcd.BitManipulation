@@ -3,7 +3,7 @@
 ## DoubleExtensions.ToBooleanArray(this double) Method
 
 Converts a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double') into an array of
-bools.
+values with the lease significant bit at index 0..
 
 ```csharp
 public static bool[] ToBooleanArray(this double bits);
@@ -15,7 +15,8 @@ public static bool[] ToBooleanArray(this double bits);
 
 `bits` [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 
-the long to convert.
+The value to convert to an array
+of [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean') values.
 
 #### Returns
 

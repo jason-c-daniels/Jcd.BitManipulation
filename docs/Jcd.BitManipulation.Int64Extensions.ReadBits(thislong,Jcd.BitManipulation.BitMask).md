@@ -14,7 +14,7 @@ public static long ReadBits(this long value, Jcd.BitManipulation.BitMask mask);
 
 `value` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 
-The source of bits to read.
+The source of the bits to read.
 
 <a name='Jcd.BitManipulation.Int64Extensions.ReadBits(thislong,Jcd.BitManipulation.BitMask).mask'></a>
 

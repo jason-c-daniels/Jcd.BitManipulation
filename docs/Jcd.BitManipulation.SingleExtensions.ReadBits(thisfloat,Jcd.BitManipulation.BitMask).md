@@ -14,7 +14,7 @@ public static uint ReadBits(this float value, Jcd.BitManipulation.BitMask mask);
 
 `value` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
-The source of bits to read.
+The source of the bits to read.
 
 <a name='Jcd.BitManipulation.SingleExtensions.ReadBits(thisfloat,Jcd.BitManipulation.BitMask).mask'></a>
 

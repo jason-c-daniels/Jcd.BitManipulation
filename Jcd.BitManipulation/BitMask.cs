@@ -206,7 +206,7 @@ public readonly struct BitMask
    /// </summary>
    /// <returns>the bits of the mask formatted as 0b0101...1111</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public override string ToString()
+   public readonly override string ToString()
    {
       const ulong highBit = (ulong) 1 << 63;
       var sb = new StringBuilder();
@@ -318,7 +318,7 @@ public readonly struct BitMask
    /// <summary>
    /// Automatically convert to <see cref="BitMask" /> from an <see cref="sbyte" />
    /// </summary>
-   /// <param name="bits">the value to convert to a <see cref="BitMask" /></param>
+   /// <param name="bits">The value to convert to a <see cref="BitMask" />.</param>
    /// <returns>The <see cref="BitMask" /> constructed from the provided bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitMask(sbyte bits)
@@ -340,7 +340,7 @@ public readonly struct BitMask
    /// <summary>
    /// Automatically convert to <see cref="BitMask" /> from an <see cref="int" />
    /// </summary>
-   /// <param name="bits">the value to convert to a <see cref="BitMask" /></param>
+   /// <param name="bits">The value to convert to a <see cref="BitMask" />.</param>
    /// <returns>The <see cref="BitMask" /> constructed from the provided bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitMask(int bits)
@@ -351,7 +351,7 @@ public readonly struct BitMask
    /// <summary>
    /// Automatically convert to <see cref="BitMask" /> from a <see cref="long" />
    /// </summary>
-   /// <param name="bits">the value to convert to a <see cref="BitMask" /></param>
+   /// <param name="bits">The value to convert to a <see cref="BitMask" />.</param>
    /// <returns>The <see cref="BitMask" /> constructed from the provided bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitMask(long bits)
@@ -362,7 +362,7 @@ public readonly struct BitMask
    /// <summary>
    /// Automatically convert to <see cref="BitMask" /> from a <see cref="byte" />
    /// </summary>
-   /// <param name="bits">the value to convert to a <see cref="BitMask" /></param>
+   /// <param name="bits">The value to convert to a <see cref="BitMask" />.</param>
    /// <returns>The <see cref="BitMask" /> constructed from the provided bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitMask(byte bits)
@@ -373,7 +373,7 @@ public readonly struct BitMask
    /// <summary>
    /// Automatically convert to <see cref="BitMask" /> from a <see cref="ushort" />
    /// </summary>
-   /// <param name="bits">the value to convert to a <see cref="BitMask" /></param>
+   /// <param name="bits">The value to convert to a <see cref="BitMask" />.</param>
    /// <returns>The <see cref="BitMask" /> constructed from the provided bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitMask(ushort bits)
@@ -384,7 +384,7 @@ public readonly struct BitMask
    /// <summary>
    /// Automatically convert to <see cref="BitMask" /> from a <see cref="uint" />
    /// </summary>
-   /// <param name="bits">the value to convert to a <see cref="BitMask" /></param>
+   /// <param name="bits">The value to convert to a <see cref="BitMask" />.</param>
    /// <returns>The <see cref="BitMask" /> constructed from the provided bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitMask(uint bits)
@@ -395,7 +395,7 @@ public readonly struct BitMask
    /// <summary>
    /// Automatically convert to <see cref="BitMask" /> from a <see cref="ulong" />
    /// </summary>
-   /// <param name="bits">the value to convert to a <see cref="BitMask" /></param>
+   /// <param name="bits">The value to convert to a <see cref="BitMask" />.</param>
    /// <returns>The <see cref="BitMask" /> constructed from the provided bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitMask(ulong bits)

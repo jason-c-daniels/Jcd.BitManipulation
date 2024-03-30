@@ -14,25 +14,25 @@ public static byte[] ReadBytes(this double value, int offset, int size, Jcd.BitM
 
 `value` [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 
-The value to read the byte from.
+The value to read the bytes from.
 
 <a name='Jcd.BitManipulation.DoubleExtensions.ReadBytes(thisdouble,int,int,Jcd.BitManipulation.Endian).offset'></a>
 
 `offset` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The byte location to store the value.
+The byte offset to starting reading from.
 
 <a name='Jcd.BitManipulation.DoubleExtensions.ReadBytes(thisdouble,int,int,Jcd.BitManipulation.Endian).size'></a>
 
 `size` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The byte size of the value.
+The requested number of bytes to read.
 
 <a name='Jcd.BitManipulation.DoubleExtensions.ReadBytes(thisdouble,int,int,Jcd.BitManipulation.Endian).endian'></a>
 
 `endian` [Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian')
 
-The endianness of the byte indexing within the value.
+The endianness of the indexing for the byte read.
 
 #### Returns
 

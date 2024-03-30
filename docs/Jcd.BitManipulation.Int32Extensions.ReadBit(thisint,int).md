@@ -14,13 +14,13 @@ public static bool ReadBit(this int value, int offset);
 
 `value` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-the bits to read from
+The source of the bits to read.
 
 <a name='Jcd.BitManipulation.Int32Extensions.ReadBit(thisint,int).offset'></a>
 
 `offset` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-the offset of the bit to read
+The offset of the bit to read.
 
 #### Returns
 

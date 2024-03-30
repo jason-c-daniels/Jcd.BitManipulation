@@ -14,13 +14,13 @@ public Jcd.BitManipulation.LittleEndianByteIndexer StoreByte(byte @byte, int off
 
 `byte` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
-The byte value to set
+The [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') value to store.
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexer.StoreByte(byte,int).offset'></a>
 
 `offset` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-the offset of the byte to write
+The offset of where to store the byte.
 
 #### Returns
 

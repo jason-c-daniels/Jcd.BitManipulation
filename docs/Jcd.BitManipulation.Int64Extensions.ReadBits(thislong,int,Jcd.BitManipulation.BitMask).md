@@ -5,7 +5,7 @@
 Extract a subset of bits specified by a bitmask and right align the bits by the offset.
 
 ```csharp
-public static long ReadBits(this long value, int offset, Jcd.BitManipulation.BitMask mask);
+public static long ReadBits(this long value, int shift, Jcd.BitManipulation.BitMask mask);
 ```
 
 #### Parameters
@@ -14,11 +14,11 @@ public static long ReadBits(this long value, int offset, Jcd.BitManipulation.Bit
 
 `value` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 
-The source of bits to read.
+The source of the bits to read.
 
-<a name='Jcd.BitManipulation.Int64Extensions.ReadBits(thislong,int,Jcd.BitManipulation.BitMask).offset'></a>
+<a name='Jcd.BitManipulation.Int64Extensions.ReadBits(thislong,int,Jcd.BitManipulation.BitMask).shift'></a>
 
-`offset` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+`shift` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
 The bit offset to start reading from.
 

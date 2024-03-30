@@ -3,7 +3,7 @@
 ## Int32Extensions.ToBooleanArray(this int) Method
 
 Converts an [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32') into an array of
-bools
+values with the lease significant bit at index 0.
 
 ```csharp
 public static bool[] ToBooleanArray(this int bits);

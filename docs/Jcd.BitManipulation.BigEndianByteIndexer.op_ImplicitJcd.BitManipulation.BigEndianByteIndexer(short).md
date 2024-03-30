@@ -15,12 +15,13 @@ public static Jcd.BitManipulation.BigEndianByteIndexer implicit operator BigEndi
 
 `data` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 
-The underlying data type.
+The initial value for the bytes of data.
 
 #### Returns
 
 [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer')
-A indexer type.
+The [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer')
+instance.
 
 ### Remarks
 

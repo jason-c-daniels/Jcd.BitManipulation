@@ -2,7 +2,13 @@
 
 ## BooleanArrayExtensions Class
 
-Extension methods to aid in converting to numbers from arrays of bools
+Extension methods to aid in converting to numbers from arrays
+of [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean') values.
+At their respective bit
+positions, [true](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool 'https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool')
+is translated to 1
+and [false](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool 'https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool')
+is translated to 0.
 
 ```csharp
 public static class BooleanArrayExtensions

@@ -14,7 +14,7 @@ public static ulong ReadBits(this double value, Jcd.BitManipulation.BitMask mask
 
 `value` [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 
-The source of bits to read.
+The source of the bits to read.
 
 <a name='Jcd.BitManipulation.DoubleExtensions.ReadBits(thisdouble,Jcd.BitManipulation.BitMask).mask'></a>
 

@@ -278,69 +278,46 @@ public static class ByteArrayExtensions
       ulong result = 0;
       var len = data.Length;
 
-      if (len == 0)
+      if (StoreAndShift(ref result, data, 0, 1, len, size))
          return result;
 
-      result = result.StoreBits(data[0], 0, 8);
-
-      if (size == 1)
+      if (StoreAndShift(ref result, data, 1, 2, len, size))
          return result;
 
-      result <<= 8;
-
-      if (1 < len)
-         result = result.StoreBits(data[1], 0, 8);
-
-      if (size == 2)
+      if (StoreAndShift(ref result, data, 2, 3, len, size))
          return result;
 
-      result <<= 8;
-
-      if (2 < len)
-         result = result.StoreBits(data[2], 0, 8);
-
-      if (size == 3)
+      if (StoreAndShift(ref result, data, 3, 4, len, size))
          return result;
 
-      result <<= 8;
-
-      if (3 < len)
-         result = result.StoreBits(data[3], 0, 8);
-
-      if (size == 4)
+      if (StoreAndShift(ref result, data, 4, 5, len, size))
          return result;
 
-      result <<= 8;
-
-      if (4 < len)
-         result = result.StoreBits(data[4], 0, 8);
-
-      if (size == 5)
+      if (StoreAndShift(ref result, data, 5, 6, len, size))
          return result;
 
-      result <<= 8;
-
-      if (5 < len)
-         result = result.StoreBits(data[5], 0, 8);
-
-      if (size == 6)
+      if (StoreAndShift(ref result, data, 6, 7, len, size))
          return result;
 
-      result <<= 8;
-
-      if (6 < len)
-         result = result.StoreBits(data[6], 0, 8);
-
-      if (size == 7)
-         return result;
-
-      result <<= 8;
-
-      if (7 < len)
-         result = result.StoreBits(data[7], 0, 8);
+      StoreAndShift(ref result, data, 7, 8, len, size);
 
       return result;
+      
+      [MethodImpl(MethodImplOptions.AggressiveInlining)]
+      static bool StoreAndShift(ref ulong result, byte[] data, int idx, int sizeComp, int len, int size)
+      {
+         if (idx < len)
+            result = result.StoreBits(data[idx], 0, 8);
+
+         if (size == sizeComp)
+            return true;
+
+         result <<= 8;
+
+         return false;
+      }
    }
+
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    internal static ulong GetLittleEndianUInt64(byte[] data)

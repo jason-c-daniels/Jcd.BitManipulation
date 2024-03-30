@@ -7,7 +7,6 @@ Stores a set of bytes starting at the specified byte location within the indexer
 ```csharp
 public Jcd.BitManipulation.LittleEndianByteIndexer StoreBytes(System.ReadOnlySpan<byte> bytes, int offset, int size=-1);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexer.StoreBytes(System.ReadOnlySpan_byte_,int,int).bytes'></a>
@@ -29,6 +28,5 @@ The byte location to store the value.
 The number of bytes from the source to store. -1 means all bytes.
 
 #### Returns
-
 [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
 The modified value.

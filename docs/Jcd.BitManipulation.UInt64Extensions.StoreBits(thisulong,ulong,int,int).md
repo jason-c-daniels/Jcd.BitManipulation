@@ -7,7 +7,6 @@ Stores a range of bits to the value, from a source value, and returns the modifi
 ```csharp
 public static ulong StoreBits(this ulong value, ulong source, int offset, int size);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt64Extensions.StoreBits(thisulong,ulong,int,int).value'></a>
@@ -35,6 +34,5 @@ The bit location to store the value.
 The bit size of the value.
 
 #### Returns
-
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 The modified value.

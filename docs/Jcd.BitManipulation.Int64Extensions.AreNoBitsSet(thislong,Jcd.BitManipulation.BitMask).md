@@ -2,13 +2,11 @@
 
 ## Int64Extensions.AreNoBitsSet(this long, BitMask) Method
 
-Tests if none of the bits from the bitmask are set on
-a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64').
+Tests if none of the bits from the bitmask are set on a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64').
 
 ```csharp
 public static bool AreNoBitsSet(this long data, Jcd.BitManipulation.BitMask bitmask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int64Extensions.AreNoBitsSet(thislong,Jcd.BitManipulation.BitMask).data'></a>
@@ -24,6 +22,5 @@ The data to inspect.
 The bits to test.
 
 #### Returns
-
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 True if all of the bits from the bitmask were set.

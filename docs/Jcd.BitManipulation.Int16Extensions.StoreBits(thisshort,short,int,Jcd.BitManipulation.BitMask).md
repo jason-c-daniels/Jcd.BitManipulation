@@ -2,14 +2,12 @@
 
 ## Int16Extensions.StoreBits(this short, short, int, BitMask) Method
 
-Stores a set of bits specified by a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') from a
-source value to a bit offset and returns the modified
+Stores a set of bits specified by a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') from a source value to a bit offset and returns the modified
 value.
 
 ```csharp
 public static short StoreBits(this short value, short source, int offset, Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int16Extensions.StoreBits(thisshort,short,int,Jcd.BitManipulation.BitMask).value'></a>
@@ -37,6 +35,5 @@ The destination offset of where to store the bits.
 The mask specifying the bits to store
 
 #### Returns
-
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 The modified value.

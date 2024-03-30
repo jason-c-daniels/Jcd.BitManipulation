@@ -7,7 +7,6 @@ Reads the bits specified and returns the result shifted to the right by the offs
 ```csharp
 public static byte ReadBits(this byte value, int offset, int size);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteExtensions.ReadBits(thisbyte,int,int).value'></a>
@@ -29,6 +28,5 @@ The bit offset to start reading from.
 The total number of bits to extract.
 
 #### Returns
-
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 The value stored in the range of bits specified, right shifted by the offset..

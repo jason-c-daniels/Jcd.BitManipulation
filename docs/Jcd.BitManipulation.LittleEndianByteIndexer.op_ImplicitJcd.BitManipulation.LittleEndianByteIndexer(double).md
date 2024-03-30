@@ -2,13 +2,11 @@
 
 ## LittleEndianByteIndexer.implicit operator LittleEndianByteIndexer(double) Operator
 
-Implicitly converts a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double') to
-a [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer').
+Implicitly converts a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double') to a [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer').
 
 ```csharp
 public static Jcd.BitManipulation.LittleEndianByteIndexer implicit operator LittleEndianByteIndexer(double data);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexer.op_ImplicitJcd.BitManipulation.LittleEndianByteIndexer(double).data'></a>
@@ -18,7 +16,5 @@ public static Jcd.BitManipulation.LittleEndianByteIndexer implicit operator Litt
 The initial value for the bytes of data.
 
 #### Returns
-
 [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
-The [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
-instance.
+The [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') instance.

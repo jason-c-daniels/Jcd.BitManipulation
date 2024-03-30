@@ -7,7 +7,6 @@ Reads a single bit from the specified position.
 ```csharp
 public static bool ReadBit(this byte value, int offset);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteExtensions.ReadBit(thisbyte,int).value'></a>
@@ -23,7 +22,5 @@ The source of the bits to read.
 The offset of the bit to read.
 
 #### Returns
-
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
-The bit at the specified position returned as
-a [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean').
+The bit at the specified position returned as a [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean').

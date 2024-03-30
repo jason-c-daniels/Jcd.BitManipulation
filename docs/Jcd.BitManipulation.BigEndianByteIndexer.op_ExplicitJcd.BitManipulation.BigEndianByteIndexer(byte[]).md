@@ -2,11 +2,13 @@
 
 ## BigEndianByteIndexer.explicit operator BigEndianByteIndexer(byte[]) Operator
 
-Explicitly converts an array of  bytes to a [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer').
+Explicitly converts an array of bytes to
+a [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer').
 
 ```csharp
 public static Jcd.BitManipulation.BigEndianByteIndexer explicit operator BigEndianByteIndexer(byte[] data);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BigEndianByteIndexer.op_ExplicitJcd.BitManipulation.BigEndianByteIndexer(byte[]).data'></a>
@@ -16,5 +18,6 @@ public static Jcd.BitManipulation.BigEndianByteIndexer explicit operator BigEndi
 The underlying data type.
 
 #### Returns
+
 [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer')
 A indexer type.

@@ -7,6 +7,7 @@ Stores a range of bits to the value, from a source value, and returns the modifi
 ```csharp
 public static ushort StoreBits(this ushort value, ushort source, int offset, int size);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt16Extensions.StoreBits(thisushort,ushort,int,int).value'></a>
@@ -34,5 +35,6 @@ The bit location to store the value.
 The bit size of the value.
 
 #### Returns
+
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 The modified value.

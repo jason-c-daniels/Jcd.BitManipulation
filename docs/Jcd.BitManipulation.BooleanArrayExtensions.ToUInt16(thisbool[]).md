@@ -2,11 +2,14 @@
 
 ## BooleanArrayExtensions.ToUInt16(this bool[]) Method
 
-Converts an array of bools into a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16'), discarding any excess bits.
+Converts an array of bools into
+a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16'), discarding any excess
+bits.
 
 ```csharp
 public static ushort ToUInt16(this bool[] bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BooleanArrayExtensions.ToUInt16(thisbool[]).bits'></a>
@@ -16,5 +19,6 @@ public static ushort ToUInt16(this bool[] bits);
 the array of bools to convert. The Least Significant Bit is at index 0
 
 #### Returns
+
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 The converted [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')

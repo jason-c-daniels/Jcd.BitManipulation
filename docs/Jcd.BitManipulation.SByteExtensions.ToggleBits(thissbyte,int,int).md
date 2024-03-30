@@ -7,6 +7,7 @@ Toggles the specified range of bits and returns the modified value.
 ```csharp
 public static sbyte ToggleBits(this sbyte value, int offset=0, int size=8);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SByteExtensions.ToggleBits(thissbyte,int,int).value'></a>
@@ -28,5 +29,6 @@ The offset of the bits to toggle.
 The number of bits to toggle.
 
 #### Returns
+
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 The modified value.

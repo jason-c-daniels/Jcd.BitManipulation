@@ -58,25 +58,9 @@ public static class ReadOnlySpanOfByteExtensions
       if (data == null || data.Length == 0)
          return 0;
 
-      if (endian == Endian.Big)
-      {
-         BigEndianByteIndexer result = (ushort) 0;
-         var o = data.Length >= result.Length
-                    ? 0
-                    : result.Length - data.Length;
-         for (var i = 0; i < data.Length && i < result.Length; i++)
-            result[o + i] = data[i];
-
-         return result;
-      }
-      else
-      {
-         LittleEndianByteIndexer result = (ushort) 0;
-         for (var i = 0; i < data.Length && i < result.Length; i++)
-            result[i] = data[i];
-
-         return result;
-      }
+      return endian == Endian.Little
+                ? (ushort) GetLittleEndianUInt64(data)
+                : (ushort) GetBigEndianUInt64(data, sizeof(ushort));
    }
 
    /// <summary>
@@ -91,25 +75,9 @@ public static class ReadOnlySpanOfByteExtensions
       if (data == null || data.Length == 0)
          return 0;
 
-      if (endian == Endian.Big)
-      {
-         BigEndianByteIndexer result = (short) 0;
-         var o = data.Length >= result.Length
-                    ? 0
-                    : result.Length - data.Length;
-         for (var i = 0; i < data.Length && i < result.Length; i++)
-            result[o + i] = data[i];
-
-         return result;
-      }
-      else
-      {
-         LittleEndianByteIndexer result = (short) 0;
-         for (var i = 0; i < data.Length && i < result.Length; i++)
-            result[i] = data[i];
-
-         return result;
-      }
+      return endian == Endian.Little
+                ? (short) GetLittleEndianUInt64(data)
+                : (short) GetBigEndianUInt64(data, sizeof(short));
    }
 
    /// <summary>
@@ -124,25 +92,9 @@ public static class ReadOnlySpanOfByteExtensions
       if (data == null || data.Length == 0)
          return 0;
 
-      if (endian == Endian.Big)
-      {
-         BigEndianByteIndexer result = (uint) 0;
-         var o = data.Length >= result.Length
-                    ? 0
-                    : result.Length - data.Length;
-         for (var i = 0; i < data.Length && i < result.Length; i++)
-            result[o + i] = data[i];
-
-         return result;
-      }
-      else
-      {
-         LittleEndianByteIndexer result = (uint) 0;
-         for (var i = 0; i < data.Length && i < result.Length; i++)
-            result[i] = data[i];
-
-         return result;
-      }
+      return endian == Endian.Little
+                ? (uint) GetLittleEndianUInt64(data)
+                : (uint) GetBigEndianUInt64(data, sizeof(uint));
    }
 
    /// <summary>
@@ -157,25 +109,9 @@ public static class ReadOnlySpanOfByteExtensions
       if (data == null || data.Length == 0)
          return 0;
 
-      if (endian == Endian.Big)
-      {
-         BigEndianByteIndexer result = 0;
-         var o = data.Length >= result.Length
-                    ? 0
-                    : result.Length - data.Length;
-         for (var i = 0; i < data.Length && i < result.Length; i++)
-            result[o + i] = data[i];
-
-         return result;
-      }
-      else
-      {
-         LittleEndianByteIndexer result = 0;
-         for (var i = 0; i < data.Length && i < result.Length; i++)
-            result[i] = data[i];
-
-         return result;
-      }
+      return endian == Endian.Little
+                ? (int) GetLittleEndianUInt64(data)
+                : (int) GetBigEndianUInt64(data, sizeof(int));
    }
 
    /// <summary>
@@ -190,25 +126,9 @@ public static class ReadOnlySpanOfByteExtensions
       if (data == null || data.Length == 0)
          return 0;
 
-      if (endian == Endian.Big)
-      {
-         BigEndianByteIndexer result = (ulong) 0;
-         var o = data.Length >= result.Length
-                    ? 0
-                    : result.Length - data.Length;
-         for (var i = 0; i < data.Length && i < result.Length; i++)
-            result[o + i] = data[i];
-
-         return result;
-      }
-      else
-      {
-         LittleEndianByteIndexer result = (ulong) 0;
-         for (var i = 0; i < data.Length && i < result.Length; i++)
-            result[i] = data[i];
-
-         return result;
-      }
+      return endian == Endian.Little
+                ? GetLittleEndianUInt64(data)
+                : GetBigEndianUInt64(data, sizeof(ulong));
    }
 
    /// <summary>
@@ -223,25 +143,9 @@ public static class ReadOnlySpanOfByteExtensions
       if (data == null || data.Length == 0)
          return 0;
 
-      if (endian == Endian.Big)
-      {
-         BigEndianByteIndexer result = (long) 0;
-         var o = data.Length >= result.Length
-                    ? 0
-                    : result.Length - data.Length;
-         for (var i = 0; i < data.Length && i < result.Length; i++)
-            result[o + i] = data[i];
-
-         return result;
-      }
-      else
-      {
-         LittleEndianByteIndexer result = (long) 0;
-         for (var i = 0; i < data.Length && i < result.Length; i++)
-            result[i] = data[i];
-
-         return result;
-      }
+      return endian == Endian.Little
+                ? (long) GetLittleEndianUInt64(data)
+                : (long) GetBigEndianUInt64(data, sizeof(long));
    }
 
    /// <summary>
@@ -270,5 +174,137 @@ public static class ReadOnlySpanOfByteExtensions
    public static float ToSingle(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
       return data.ToUInt32(endian).BitwiseToSingle();
+   }
+
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   private static ulong GetBigEndianUInt64(ReadOnlySpan<byte> data, int size)
+   {
+      ulong result = 0;
+      var i = 0;
+      var len = data.Length;
+      result = result.StoreBits(data[i], 0, 8);
+      i++;
+
+      if (size == 1)
+         return result;
+
+      result <<= 8;
+
+      if (i < len)
+         result = result.StoreBits(data[i], 0, 8);
+      i++;
+
+      if (size == 2)
+         return result;
+
+      result <<= 8;
+
+      if (i < len)
+         result = result.StoreBits(data[i], 0, 8);
+
+      i++;
+
+      if (size == 3)
+         return result;
+
+      result <<= 8;
+
+      if (i < len)
+         result = result.StoreBits(data[i], 0, 8);
+
+      i++;
+
+      if (size == 4)
+         return result;
+
+      result <<= 8;
+
+      if (i < len)
+         result = result.StoreBits(data[i], 0, 8);
+
+      i++;
+
+      if (size == 5)
+         return result;
+
+      result <<= 8;
+
+      if (i < len)
+         result = result.StoreBits(data[i], 0, 8);
+
+      i++;
+
+      if (size == 6)
+         return result;
+
+      result <<= 8;
+
+      if (i < len)
+         result = result.StoreBits(data[i], 0, 8);
+
+      i++;
+
+      if (size == 7)
+         return result;
+
+      result <<= 8;
+
+      if (i < len)
+         result = result.StoreBits(data[i], 0, 8);
+
+      return result;
+   }
+
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   internal static ulong GetLittleEndianUInt64(ReadOnlySpan<byte> data)
+   {
+      ulong result = 0;
+      var i = 0;
+      var len = data.Length;
+      result = result.StoreBits(data[i], i << 3, 8);
+      i++;
+
+      if (i >= len)
+         return result;
+
+      result = result.StoreBits(data[i], i << 3, 8);
+      i++;
+
+      if (i >= len)
+         return result;
+
+      result = result.StoreBits(data[i], i << 3, 8);
+      i++;
+
+      if (i >= len)
+         return result;
+
+      result = result.StoreBits(data[i], i << 3, 8);
+      i++;
+
+      if (i >= len)
+         return result;
+
+      result = result.StoreBits(data[i], i << 3, 8);
+      i++;
+
+      if (i >= len)
+         return result;
+
+      result = result.StoreBits(data[i], i << 3, 8);
+      i++;
+
+      if (i >= len)
+         return result;
+
+      result = result.StoreBits(data[i], i << 3, 8);
+      i++;
+
+      if (i >= len)
+         return result;
+
+      result = result.StoreBits(data[i], i << 3, 8);
+
+      return result;
    }
 }

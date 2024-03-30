@@ -160,8 +160,7 @@ public ref struct BigEndianByteIndexer
    private BigEndianByteIndexer(ReadOnlySpan<byte> data, int byteSize)
    {
       Length = GetIntegerByteSize(byteSize);
-
-      StoreBytes(data, 0, byteSize);
+      this.data = data.ToUInt64(Endian.Big);
    }
 
    /// <summary>
@@ -183,8 +182,7 @@ public ref struct BigEndianByteIndexer
    private BigEndianByteIndexer(byte[] data, int byteSize)
    {
       Length = GetIntegerByteSize(byteSize);
-
-      StoreBytes(data, 0, byteSize);
+      this.data = data.ToUInt64(Endian.Big);
    }
 
    private static int GetIntegerByteSize(int count)

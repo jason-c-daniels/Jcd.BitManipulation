@@ -7,6 +7,7 @@ Stores a masked set of bits from a value to an offset in the destination and ret
 ```csharp
 public static byte StoreBits(this byte value, byte source, int offset, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteExtensions.StoreBits(thisbyte,byte,int,Jcd.BitManipulation.BitMask).value'></a>
@@ -34,5 +35,6 @@ The destination offset of where to store the bits.
 The mask specifying the bits to store
 
 #### Returns
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 The modified value.

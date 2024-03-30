@@ -98,11 +98,7 @@ public static class DoubleExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte[] ToByteArray(this double data, Endian endian = Endian.Little)
    {
-      var bits = data.BitwiseToUInt64();
-
-      return endian == Endian.Big
-                ? (byte[]) (BigEndianByteIndexer) data
-                : (byte[]) (LittleEndianByteIndexer) data;
+      return data.BitwiseToUInt64().ToByteArray(endian);
    }
 
    /// <summary>

@@ -7,6 +7,7 @@ Converts a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte
 ```csharp
 public static bool[] ToBooleanArray(this byte bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteExtensions.ToBooleanArray(thisbyte).bits'></a>
@@ -16,5 +17,6 @@ public static bool[] ToBooleanArray(this byte bits);
 the byte to convert.
 
 #### Returns
+
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 An array with the Least Significant Bit at index 0

@@ -7,6 +7,7 @@ Stores a masked set of bits from a value to an offset in the destination and ret
 ```csharp
 public static long StoreBits(this long value, long source, int offset, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int64Extensions.StoreBits(thislong,long,int,Jcd.BitManipulation.BitMask).value'></a>
@@ -34,5 +35,6 @@ The destination offset of where to store the bits.
 The mask specifying the bits to store
 
 #### Returns
+
 [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 The modified value.

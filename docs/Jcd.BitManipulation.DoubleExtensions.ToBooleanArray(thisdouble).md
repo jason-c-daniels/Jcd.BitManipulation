@@ -2,11 +2,13 @@
 
 ## DoubleExtensions.ToBooleanArray(this double) Method
 
-Converts a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double') into an array of bools.
+Converts a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double') into an array of
+bools.
 
 ```csharp
 public static bool[] ToBooleanArray(this double bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.ToBooleanArray(thisdouble).bits'></a>
@@ -16,5 +18,6 @@ public static bool[] ToBooleanArray(this double bits);
 the long to convert.
 
 #### Returns
+
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 the array. LSB at index 0

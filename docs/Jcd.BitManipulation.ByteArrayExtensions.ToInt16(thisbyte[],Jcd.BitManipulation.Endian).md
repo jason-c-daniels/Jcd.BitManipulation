@@ -2,11 +2,13 @@
 
 ## ByteArrayExtensions.ToInt16(this byte[], Endian) Method
 
-Converts an array of bytes into a [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16'), discarding any excess data.
+Converts an array of bytes into
+a [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16'), discarding any excess data.
 
 ```csharp
 public static short ToInt16(this byte[] data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteArrayExtensions.ToInt16(thisbyte[],Jcd.BitManipulation.Endian).data'></a>
@@ -22,5 +24,14 @@ the bytes to convert.
 The endian for the bytes.
 
 #### Returns
+
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 The converted [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
+
+### Remarks
+
+<b>WARNING:</b>
+
+Index 0 in the array is index 0 in the destination value. For Big Endian this is the
+most significant byte. If you're passing in a smaller array and need the result
+right shifted, you'll need to shift it after calling this.

@@ -64,6 +64,16 @@ public static class ByteArrayExtensions
    /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="ushort" /></returns>
+   /// <remarks>
+   /// <para>
+   /// <b>WARNING:</b>
+   /// </para>
+   /// <para>
+   /// Index 0 in the array is index 0 in the destination value. For Big Endian this is the
+   /// most significant byte. If you're passing in a smaller array and need the result
+   /// right shifted, you'll need to shift it after calling this.
+   /// </para>
+   /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ushort ToUInt16(this byte[] data, Endian endian = Endian.Little)
    {
@@ -72,7 +82,7 @@ public static class ByteArrayExtensions
 
       return endian == Endian.Little
                 ? (ushort) GetLittleEndianUInt64(data)
-                : (ushort) GetBigEndianUInt64(data);
+                : (ushort) GetBigEndianUInt64(data, sizeof(short));
    }
 
    /// <summary>
@@ -81,6 +91,16 @@ public static class ByteArrayExtensions
    /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="short" /></returns>
+   /// <remarks>
+   /// <para>
+   /// <b>WARNING:</b>
+   /// </para>
+   /// <para>
+   /// Index 0 in the array is index 0 in the destination value. For Big Endian this is the
+   /// most significant byte. If you're passing in a smaller array and need the result
+   /// right shifted, you'll need to shift it after calling this.
+   /// </para>
+   /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static short ToInt16(this byte[] data, Endian endian = Endian.Little)
    {
@@ -89,7 +109,7 @@ public static class ByteArrayExtensions
 
       return endian == Endian.Little
                 ? (short) GetLittleEndianUInt64(data)
-                : (short) GetBigEndianUInt64(data);
+                : (short) GetBigEndianUInt64(data, sizeof(short));
    }
 
    /// <summary>
@@ -98,6 +118,16 @@ public static class ByteArrayExtensions
    /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="uint" /></returns>
+   /// <remarks>
+   /// <para>
+   /// <b>WARNING:</b>
+   /// </para>
+   /// <para>
+   /// Index 0 in the array is index 0 in the destination value. For Big Endian this is the
+   /// most significant byte. If you're passing in a smaller array and need the result
+   /// right shifted, you'll need to shift it after calling this.
+   /// </para>
+   /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static uint ToUInt32(this byte[] data, Endian endian = Endian.Little)
    {
@@ -106,7 +136,7 @@ public static class ByteArrayExtensions
 
       return endian == Endian.Little
                 ? (uint) GetLittleEndianUInt64(data)
-                : (uint) GetBigEndianUInt64(data);
+                : (uint) GetBigEndianUInt64(data, sizeof(uint));
    }
 
    /// <summary>
@@ -115,6 +145,16 @@ public static class ByteArrayExtensions
    /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="uint" /></returns>
+   /// <remarks>
+   /// <para>
+   /// <b>WARNING:</b>
+   /// </para>
+   /// <para>
+   /// Index 0 in the array is index 0 in the destination value. For Big Endian this is the
+   /// most significant byte. If you're passing in a smaller array and need the result
+   /// right shifted, you'll need to shift it after calling this.
+   /// </para>
+   /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int ToInt32(this byte[] data, Endian endian = Endian.Little)
    {
@@ -123,7 +163,7 @@ public static class ByteArrayExtensions
 
       return endian == Endian.Little
                 ? (int) GetLittleEndianUInt64(data)
-                : (int) GetBigEndianUInt64(data);
+                : (int) GetBigEndianUInt64(data, sizeof(int));
    }
 
    /// <summary>
@@ -132,6 +172,16 @@ public static class ByteArrayExtensions
    /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="ulong" /></returns>
+   /// <remarks>
+   /// <para>
+   /// <b>WARNING:</b>
+   /// </para>
+   /// <para>
+   /// Index 0 in the array is index 0 in the destination value. For Big Endian this is the
+   /// most significant byte. If you're passing in a smaller array and need the result
+   /// right shifted, you'll need to shift it after calling this.
+   /// </para>
+   /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ulong ToUInt64(this byte[] data, Endian endian = Endian.Little)
    {
@@ -140,7 +190,7 @@ public static class ByteArrayExtensions
 
       return endian == Endian.Little
                 ? GetLittleEndianUInt64(data)
-                : GetBigEndianUInt64(data);
+                : GetBigEndianUInt64(data, sizeof(ulong));
    }
 
    /// <summary>
@@ -149,6 +199,16 @@ public static class ByteArrayExtensions
    /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="long" /></returns>
+   /// <remarks>
+   /// <para>
+   /// <b>WARNING:</b>
+   /// </para>
+   /// <para>
+   /// Index 0 in the array is index 0 in the destination value. For Big Endian this is the
+   /// most significant byte. If you're passing in a smaller array and need the result
+   /// right shifted, you'll need to shift it after calling this.
+   /// </para>
+   /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static long ToInt64(this byte[] data, Endian endian = Endian.Little)
    {
@@ -157,7 +217,7 @@ public static class ByteArrayExtensions
 
       return endian == Endian.Little
                 ? (long) GetLittleEndianUInt64(data)
-                : (long) GetBigEndianUInt64(data);
+                : (long) GetBigEndianUInt64(data, sizeof(long));
    }
 
    /// <summary>
@@ -167,7 +227,18 @@ public static class ByteArrayExtensions
    /// <param name="endian">
    /// A setting indicating the endianness of the source data. The default is Endian.Little.
    /// </param>
-   /// <returns>The converted ulong</returns>
+   /// <returns>The converted <see cref="double" /></returns>
+   /// <remarks>
+   /// <para>
+   /// <b>WARNING:</b>
+   /// </para>
+   /// <para>
+   /// Index 0 in the array is index 0 in the destination value. For Big Endian this is the
+   /// most significant byte. If you're passing in a smaller array and need the result
+   /// right shifted, after calling this, you'll need to convert to a <see cref="ulong" />
+   /// shift it, then convert back to a <see cref="double" />.
+   /// </para>
+   /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static double ToDouble(this byte[] data, Endian endian = Endian.Little)
    {
@@ -182,6 +253,17 @@ public static class ByteArrayExtensions
    /// A setting indicating the endianness of the source data. The default is Endian.Little.
    /// </param>
    /// <returns>The converted ulong</returns>
+   /// <remarks>
+   /// <para>
+   /// <b>WARNING:</b>
+   /// </para>
+   /// <para>
+   /// Index 0 in the array is index 0 in the destination value. For Big Endian this is the
+   /// most significant byte. If you're passing in a smaller array and need the result
+   /// right shifted, after calling this, you'll need to convert to a <see cref="uint" />
+   /// shift it, then convert back to a <see cref="float" />.
+   /// </para>
+   /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static float ToSingle(this byte[] data, Endian endian = Endian.Little)
    {
@@ -191,61 +273,71 @@ public static class ByteArrayExtensions
    #region internal helpers
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   private static ulong GetBigEndianUInt64(byte[] data)
+   private static ulong GetBigEndianUInt64(byte[] data, int size)
    {
       ulong result = 0;
-      var i = 0;
       var len = data.Length;
-      result = result.StoreBits(data[i], 0, 8);
-      i++;
 
-      if (i >= len)
+      if (len == 0)
+         return result;
+
+      result = result.StoreBits(data[0], 0, 8);
+
+      if (size == 1)
          return result;
 
       result <<= 8;
-      result = result.StoreBits(data[i], 0, 8);
-      i++;
 
-      if (i >= len)
+      if (1 < len)
+         result = result.StoreBits(data[1], 0, 8);
+
+      if (size == 2)
          return result;
 
       result <<= 8;
-      result = result.StoreBits(data[i], 0, 8);
-      i++;
 
-      if (i >= len)
+      if (2 < len)
+         result = result.StoreBits(data[2], 0, 8);
+
+      if (size == 3)
          return result;
 
       result <<= 8;
-      result = result.StoreBits(data[i], 0, 8);
-      i++;
 
-      if (i >= len)
+      if (3 < len)
+         result = result.StoreBits(data[3], 0, 8);
+
+      if (size == 4)
          return result;
 
       result <<= 8;
-      result = result.StoreBits(data[i], 0, 8);
-      i++;
 
-      if (i >= len)
+      if (4 < len)
+         result = result.StoreBits(data[4], 0, 8);
+
+      if (size == 5)
          return result;
 
       result <<= 8;
-      result = result.StoreBits(data[i], 0, 8);
-      i++;
 
-      if (i >= len)
+      if (5 < len)
+         result = result.StoreBits(data[5], 0, 8);
+
+      if (size == 6)
          return result;
 
       result <<= 8;
-      result = result.StoreBits(data[i], 0, 8);
-      i++;
 
-      if (i >= len)
+      if (6 < len)
+         result = result.StoreBits(data[6], 0, 8);
+
+      if (size == 7)
          return result;
 
       result <<= 8;
-      result = result.StoreBits(data[i], 0, 8);
+
+      if (7 < len)
+         result = result.StoreBits(data[7], 0, 8);
 
       return result;
    }
@@ -254,51 +346,47 @@ public static class ByteArrayExtensions
    internal static ulong GetLittleEndianUInt64(byte[] data)
    {
       ulong result = 0;
-      var i = 0;
       var len = data.Length;
-      result = result.StoreBits(data[i], i << 3, 8);
-      i++;
 
-      if (i >= len)
+      if (len == 0)
          return result;
 
-      result = result.StoreBits(data[i], i << 3, 8);
-      i++;
+      result = result.StoreBits(data[0], 0, 8);
 
-      if (i >= len)
+      if (len == 1)
          return result;
 
-      result = result.StoreBits(data[i], i << 3, 8);
-      i++;
+      result = result.StoreBits(data[1], 1 << 3, 8);
 
-      if (i >= len)
+      if (len == 2)
          return result;
 
-      result = result.StoreBits(data[i], i << 3, 8);
-      i++;
+      result = result.StoreBits(data[2], 2 << 3, 8);
 
-      if (i >= len)
+      if (len == 3)
          return result;
 
-      result = result.StoreBits(data[i], i << 3, 8);
-      i++;
+      result = result.StoreBits(data[3], 3 << 3, 8);
 
-      if (i >= len)
+      if (len == 4)
          return result;
 
-      result = result.StoreBits(data[i], i << 3, 8);
-      i++;
+      result = result.StoreBits(data[4], 4 << 3, 8);
 
-      if (i >= len)
+      if (len == 5)
          return result;
 
-      result = result.StoreBits(data[i], i << 3, 8);
-      i++;
+      result = result.StoreBits(data[5], 5 << 3, 8);
 
-      if (i >= len)
+      if (len == 6)
          return result;
 
-      result = result.StoreBits(data[i], i << 3, 8);
+      result = result.StoreBits(data[6], 6 << 3, 8);
+
+      if (len == 7)
+         return result;
+
+      result = result.StoreBits(data[7], 7 << 3, 8);
 
       return result;
    }

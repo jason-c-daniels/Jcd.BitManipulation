@@ -7,6 +7,7 @@ A type indicating which endian is in use.
 ```csharp
 public enum Endian
 ```
+
 ### Fields
 
 <a name='Jcd.BitManipulation.Endian.Big'></a>

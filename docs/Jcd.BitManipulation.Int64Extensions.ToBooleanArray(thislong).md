@@ -2,11 +2,13 @@
 
 ## Int64Extensions.ToBooleanArray(this long) Method
 
-Converts a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64') into an array of bools
+Converts a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64') into an array of
+bools
 
 ```csharp
 public static bool[] ToBooleanArray(this long bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int64Extensions.ToBooleanArray(thislong).bits'></a>
@@ -16,5 +18,6 @@ public static bool[] ToBooleanArray(this long bits);
 The [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64') to convert.
 
 #### Returns
+
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 An array with the Least Significant Bit at index 0

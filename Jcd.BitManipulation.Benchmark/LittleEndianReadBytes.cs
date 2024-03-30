@@ -98,7 +98,7 @@ public class LittleEndianReadBytes
       return bytes;
    }
 
-   [Benchmark(Baseline = true)]
+   [Benchmark]
    public byte[] BitConverter_GetBytes_Int16()
    {
       var bytes = BitConverter.GetBytes(I16);
@@ -126,7 +126,7 @@ public class LittleEndianReadBytes
       return ((LittleEndianByteIndexer) Flt).Slice(0, sizeof(float));
    }
 
-   [Benchmark]
+   [Benchmark(Baseline = true)]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] LittleEndianByteIndexer_Slice_UInt64()
    {
@@ -174,56 +174,56 @@ public class LittleEndianReadBytes
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public byte[] ExtensionMethod_ReadBytes_Double()
+   public byte[] ExtensionMethod_ReadBytes_On_A_Double()
    {
       return Dbl.ReadBytes(0, sizeof(ulong));
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public byte[] ExtensionMethod_ReadBytes_Float()
+   public byte[] ExtensionMethod_ReadBytes_On_A_Float()
    {
       return Flt.ReadBytes(0, sizeof(float));
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public byte[] ExtensionMethod_ReadBytes_UInt64()
+   public byte[] ExtensionMethod_ReadBytes_On_A_UInt64()
    {
       return Ui64.ReadBytes(0, sizeof(ulong));
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public byte[] ExtensionMethod_ReadBytes_Int64()
+   public byte[] ExtensionMethod_ReadBytes_On_A_Int64()
    {
       return I64.ReadBytes(0, sizeof(long) / 2);
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public byte[] ExtensionMethod_ReadBytes_UInt32()
+   public byte[] ExtensionMethod_ReadBytes_On_A_UInt32()
    {
       return Ui32.ReadBytes(0, sizeof(uint));
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public byte[] ExtensionMethod_ReadBytes_Int32()
+   public byte[] ExtensionMethod_ReadBytes_On_A_Int32()
    {
       return I32.ReadBytes(0, sizeof(int) / 2);
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public byte[] ExtensionMethod_ReadBytes_UInt16()
+   public byte[] ExtensionMethod_ReadBytes_On_A_UInt16()
    {
       return Ui16.ReadBytes(0, sizeof(ushort));
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public byte[] ExtensionMethod_ReadBytes_Int16()
+   public byte[] ExtensionMethod_ReadBytes_On_A_Int16()
    {
       return I16.ReadBytes(0, sizeof(short) / 2);
    }

@@ -7,6 +7,7 @@ Store a single bit at the specified offset and returns the modified value.
 ```csharp
 public static sbyte StoreBit(this sbyte value, bool bit, int offset);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SByteExtensions.StoreBit(thissbyte,bool,int).value'></a>
@@ -28,5 +29,6 @@ The bit value to set
 The offset of the bit to store.
 
 #### Returns
+
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 The modified value.

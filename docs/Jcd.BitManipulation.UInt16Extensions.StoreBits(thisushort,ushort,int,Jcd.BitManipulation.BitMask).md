@@ -7,6 +7,7 @@ Stores a masked set of bits from a value to an offset in the destination and ret
 ```csharp
 public static ushort StoreBits(this ushort value, ushort source, int offset, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt16Extensions.StoreBits(thisushort,ushort,int,Jcd.BitManipulation.BitMask).value'></a>
@@ -34,5 +35,6 @@ The destination offset of where to store the bits.
 The mask specifying the bits to store
 
 #### Returns
+
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 The modified value.

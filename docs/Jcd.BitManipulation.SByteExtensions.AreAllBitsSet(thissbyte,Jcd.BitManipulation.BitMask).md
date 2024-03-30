@@ -2,11 +2,13 @@
 
 ## SByteExtensions.AreAllBitsSet(this sbyte, BitMask) Method
 
-Tests if all of the bits from the bitmask are set on an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte').
+Tests if all of the bits from the bitmask are set on
+an [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte').
 
 ```csharp
 public static bool AreAllBitsSet(this sbyte data, Jcd.BitManipulation.BitMask bitmask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SByteExtensions.AreAllBitsSet(thissbyte,Jcd.BitManipulation.BitMask).data'></a>
@@ -22,8 +24,10 @@ The data to inspect.
 The bits to test.
 
 #### Returns
+
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 True if all of the bits from the bitmask were set.
 
 ### Remarks
+
 NB: Only the lowest 8 bits of the bitmask will be used.

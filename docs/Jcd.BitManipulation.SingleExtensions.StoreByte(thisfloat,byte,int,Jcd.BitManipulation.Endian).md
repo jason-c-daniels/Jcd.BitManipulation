@@ -7,6 +7,7 @@ Stores a single byte to the value at the specified byte offset and returns the m
 ```csharp
 public static float StoreByte(this float value, byte @byte, int offset, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SingleExtensions.StoreByte(thisfloat,byte,int,Jcd.BitManipulation.Endian).value'></a>
@@ -34,5 +35,6 @@ the offset of the byte to write
 The endianness of the indexing within the value.
 
 #### Returns
+
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 The modified value.

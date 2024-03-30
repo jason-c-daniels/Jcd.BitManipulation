@@ -7,6 +7,7 @@ Stores a masked set of bits from a value to an offset in the destination and ret
 ```csharp
 public static double StoreBits(this double value, ulong source, int offset, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.StoreBits(thisdouble,ulong,int,Jcd.BitManipulation.BitMask).value'></a>
@@ -34,5 +35,6 @@ The destination offset of where to store the bits.
 The mask specifying the bits to store
 
 #### Returns
+
 [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 The modified value.

@@ -26,56 +26,56 @@ public class LittleEndianStoreByte
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public double ByteIndexer_Double()
+   public double ByteIndexer_From_A_Double()
    {
       return ((LittleEndianByteIndexer) Dbl).StoreByte(0xDD, 0);
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public float ByteIndexer_Float()
+   public float ByteIndexer_From_A_Float()
    {
       return ((LittleEndianByteIndexer) Flt).StoreByte(0xDD, 0);
    }
 
-   [Benchmark]
+   [Benchmark(Baseline = true)]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public ulong ByteIndexer_UInt64()
+   public ulong ByteIndexer_From_A_UInt64()
    {
       return ((LittleEndianByteIndexer) Ui64).StoreByte(0xDD, 0);
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public long ByteIndexer_Int64()
+   public long ByteIndexer_From_A_Int64()
    {
       return ((LittleEndianByteIndexer) I64).StoreByte(0xDD, 0);
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public uint ByteIndexer_UInt32()
+   public uint ByteIndexer_From_A_UInt32()
    {
       return ((LittleEndianByteIndexer) Ui32).StoreByte(0xDD, 0);
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public int ByteIndexer_Int32()
+   public int ByteIndexer_From_A_Int32()
    {
       return ((LittleEndianByteIndexer) I32).StoreByte(0xDD, 0);
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public ushort ByteIndexer_UInt16()
+   public ushort ByteIndexer_From_A_UInt16()
    {
       return ((LittleEndianByteIndexer) Ui16).StoreByte(0xDD, 0);
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public short ByteIndexer_Int16()
+   public short ByteIndexer_From_A_Int16()
    {
       return ((LittleEndianByteIndexer) I16).StoreByte(0xDD, 0);
    }
@@ -86,56 +86,56 @@ public class LittleEndianStoreByte
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public double ExtensionMethod_Double()
+   public double ExtensionMethod_On_A_Double()
    {
       return Dbl.StoreByte(0xDD, 0);
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public float ExtensionMethod_Float()
+   public float ExtensionMethod_On_A_Float()
    {
       return Flt.StoreByte(0xDD, 0);
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public ulong ExtensionMethod_UInt64()
+   public ulong ExtensionMethod_On_A_UInt64()
    {
       return Ui64.StoreByte(0xDD, 0);
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public long ExtensionMethod_Int64()
+   public long ExtensionMethod_On_A_Int64()
    {
       return I64.StoreByte(0xDD, 0);
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public uint ExtensionMethod_UInt32()
+   public uint ExtensionMethod_On_A_UInt32()
    {
       return Ui32.StoreByte(0xDD, 0);
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public int ExtensionMethod_Int32()
+   public int ExtensionMethod_On_A_Int32()
    {
       return I32.StoreByte(0xDD, 0);
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public ushort ExtensionMethod_UInt16()
+   public ushort ExtensionMethod_On_A_UInt16()
    {
       return Ui16.StoreByte(0xDD, 0);
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public short ExtensionMethod_Int16()
+   public short ExtensionMethod_On_A_Int16()
    {
       return I16.StoreByte(0xDD, 0);
    }

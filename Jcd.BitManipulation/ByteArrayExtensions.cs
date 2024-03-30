@@ -319,7 +319,7 @@ public static class ByteArrayExtensions
    }
    
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   internal static ulong GetLittleEndianUInt64(byte[] data)
+   private static ulong GetLittleEndianUInt64(byte[] data)
    {
       ulong result = 0;
       var len = data.Length;

@@ -710,7 +710,6 @@ public ref struct BigEndianByteIndexer
                    ? Length - offset
                    : size;
 
-      #if NETSTANDARD2_1_OR_GREATER
       var cnt = Math.Min(len, bytes.Length);
 
       if (cnt == 0)
@@ -753,10 +752,7 @@ public ref struct BigEndianByteIndexer
          return this;
 
       data = data.InternalLittleEndianStoreByte(bytes[7], o - 7);
-      #else
-      for (int i = 0, j = offset + dataOffset; i < len; i++, j++)
-         data = data.InternalBigEndianStoreByte(bytes[i], j);
-      #endif
+
       return this;
    }
 
@@ -777,7 +773,6 @@ public ref struct BigEndianByteIndexer
                    ? Length - offset
                    : size;
 
-      #if NETSTANDARD2_1_OR_GREATER
       var cnt = Math.Min(len, bytes.Length);
 
       if (cnt == 0)
@@ -820,10 +815,6 @@ public ref struct BigEndianByteIndexer
          return this;
 
       data = data.InternalLittleEndianStoreByte(bytes[7], o - 7);
-      #else
-      for (int i = 0, j = offset + dataOffset; i < len; i++, j++)
-         data = data.InternalBigEndianStoreByte(bytes[i], j);
-      #endif
 
       return this;
    }

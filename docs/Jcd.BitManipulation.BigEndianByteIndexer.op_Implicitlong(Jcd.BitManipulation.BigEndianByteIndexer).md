@@ -2,11 +2,14 @@
 
 ## BigEndianByteIndexer.implicit operator long(BigEndianByteIndexer) Operator
 
-Implicitly converts the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') to an [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64').
+Implicitly converts
+the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') to
+a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64').
 
 ```csharp
 public static long implicit operator long(Jcd.BitManipulation.BigEndianByteIndexer indexer);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BigEndianByteIndexer.op_Implicitlong(Jcd.BitManipulation.BigEndianByteIndexer).indexer'></a>
@@ -16,5 +19,6 @@ public static long implicit operator long(Jcd.BitManipulation.BigEndianByteIndex
 The indexer to convert.
 
 #### Returns
+
 [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 The raw data.

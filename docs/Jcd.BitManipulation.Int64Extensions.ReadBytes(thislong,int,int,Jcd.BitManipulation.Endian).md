@@ -7,6 +7,7 @@ Reads a set of bytes starting at the specified byte location within the value.
 ```csharp
 public static byte[] ReadBytes(this long value, int offset, int size, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int64Extensions.ReadBytes(thislong,int,int,Jcd.BitManipulation.Endian).value'></a>
@@ -34,5 +35,6 @@ The requested number of bytes to read.
 The endianness of the indexing for the byte read.
 
 #### Returns
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 A byte array of the value in the specified endian.

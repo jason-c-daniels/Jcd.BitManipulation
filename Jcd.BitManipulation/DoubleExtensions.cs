@@ -33,7 +33,7 @@ public static class DoubleExtensions
    }
 
    /// <summary>
-   /// Tests if any bits from the bitmask are set on an <see cref="double" />.
+   /// Tests if any bits from the bitmask are set on a <see cref="double" />.
    /// </summary>
    /// <param name="data">The data to inspect.</param>
    /// <param name="bitmask">The bits to test.</param>
@@ -45,7 +45,7 @@ public static class DoubleExtensions
    }
 
    /// <summary>
-   /// Tests if none of the bits from the bitmask are set on an <see cref="double" />.
+   /// Tests if none of the bits from the bitmask are set on a <see cref="double" />.
    /// </summary>
    /// <param name="data">The data to inspect.</param>
    /// <param name="bitmask">The bits to test.</param>

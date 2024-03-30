@@ -7,6 +7,7 @@ Stores a single byte to the value at the specified byte offset and returns the m
 ```csharp
 public Jcd.BitManipulation.LittleEndianByteIndexer StoreByte(byte @byte, int offset);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexer.StoreByte(byte,int).byte'></a>
@@ -22,5 +23,6 @@ The [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'Syste
 The offset of where to store the byte.
 
 #### Returns
+
 [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
 The modified value.

@@ -8,12 +8,12 @@ using System.Runtime.CompilerServices;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// Provides easy to read methods for bit manipulation operations on an <see cref="int" />
+/// Provides easy to read methods for bit manipulation operations on a <see cref="int" />
 /// </summary>
 public static class Int32Extensions
 {
    /// <summary>
-   /// Tests if all of the bits from the bitmask are set on an <see cref="int" />.
+   /// Tests if all of the bits from the bitmask are set on a <see cref="int" />.
    /// </summary>
    /// <param name="data">The data to inspect.</param>
    /// <param name="bitmask">The bits to test.</param>
@@ -28,7 +28,7 @@ public static class Int32Extensions
    }
 
    /// <summary>
-   /// Tests if any bits from the bitmask are set on an <see cref="int" />.
+   /// Tests if any bits from the bitmask are set on a <see cref="int" />.
    /// </summary>
    /// <param name="data">The data to inspect.</param>
    /// <param name="bitmask">The bits to test.</param>
@@ -43,7 +43,7 @@ public static class Int32Extensions
    }
 
    /// <summary>
-   /// Tests if none of the bits from the bitmask are set on an <see cref="int" />.
+   /// Tests if none of the bits from the bitmask are set on a <see cref="int" />.
    /// </summary>
    /// <param name="data">The data to inspect.</param>
    /// <param name="bitmask">The bits to test.</param>
@@ -73,7 +73,7 @@ public static class Int32Extensions
    }
 
    /// <summary>
-   /// Converts an <see cref="int" /> into an array of <see cre="bool" /> values with the lease significant bit at index 0.
+   /// Converts a <see cref="int" /> into an array of <see cre="bool" /> values with the lease significant bit at index 0.
    /// </summary>
    /// <param name="bits">The <see cref="uint" /> to convert.</param>
    /// <returns>An array with the Least Significant Bit at index 0</returns>
@@ -84,7 +84,7 @@ public static class Int32Extensions
    }
 
    /// <summary>
-   /// Converts an <see cref="int" /> into an array of bytes in the specified <see cref="Endian" />.
+   /// Converts a <see cref="int" /> into an array of bytes in the specified <see cref="Endian" />.
    /// </summary>
    /// <param name="data">The value to convert to a <see cref="byte" /> array.</param>
    /// <param name="endian">The order in which to store the bytes</param>

@@ -42,7 +42,7 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts an array of bytes into an <see cref="sbyte" />, discarding any excess data.
+   /// Converts an array of bytes into a <see cref="sbyte" />, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
@@ -140,7 +140,7 @@ public static class ByteArrayExtensions
    }
 
    /// <summary>
-   /// Converts an array of bytes into an <see cref="uint" />, discarding any excess data.
+   /// Converts an array of bytes into a <see cref="uint" />, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>

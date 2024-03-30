@@ -7,6 +7,7 @@ Sets the specified bit to "off" and returns the modified value.
 ```csharp
 public static uint ClearBit(this uint value, int offset);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt32Extensions.ClearBit(thisuint,int).value'></a>
@@ -22,5 +23,6 @@ The value to modify.
 The bit position to set to false/0.
 
 #### Returns
+
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 The modified value.

@@ -7,6 +7,7 @@ Converts bytes into a double, discarding any excess data.
 ```csharp
 public static float ToSingle(this System.ReadOnlySpan<byte> data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.ReadOnlySpanOfByteExtensions.ToSingle(thisSystem.ReadOnlySpan_byte_,Jcd.BitManipulation.Endian).data'></a>
@@ -22,5 +23,6 @@ the bytes to convert.
 A setting indicating the endianness of the source data. The default is Endian.Little.
 
 #### Returns
+
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 The converted ulong

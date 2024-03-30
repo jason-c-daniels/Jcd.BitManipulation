@@ -25,7 +25,7 @@ public static class BooleanArrayExtensions
    }
 
    /// <summary>
-   /// Converts an array of bools into an <see cref="sbyte" />, discarding any excess bits.
+   /// Converts an array of bools into a <see cref="sbyte" />, discarding any excess bits.
    /// </summary>
    /// <param name="bits">The array of <see cref="bool" /> values to convert. The Least Significant Bit is at index 0</param>
    /// <returns>The converted <see cref="sbyte" /></returns>
@@ -69,7 +69,7 @@ public static class BooleanArrayExtensions
    }
 
    /// <summary>
-   /// Converts an array of bools into an <see cref="int" />, discarding any excess bits.
+   /// Converts an array of bools into a <see cref="int" />, discarding any excess bits.
    /// </summary>
    /// <param name="bits">The array of <see cref="bool" /> values to convert. The Least Significant Bit is at index 0</param>
    /// <returns>The converted <see cref="int" /></returns>

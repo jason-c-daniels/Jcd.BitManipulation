@@ -28,7 +28,7 @@ public static class SingleExtensions
    }
 
    /// <summary>
-   /// Tests if any bits from the bitmask are set on an <see cref="float" />.
+   /// Tests if any bits from the bitmask are set on a <see cref="float" />.
    /// </summary>
    /// <param name="data">The data to inspect.</param>
    /// <param name="bitmask">The bits to test.</param>
@@ -43,7 +43,7 @@ public static class SingleExtensions
    }
 
    /// <summary>
-   /// Tests if none of the bits from the bitmask are set on an <see cref="float" />.
+   /// Tests if none of the bits from the bitmask are set on a <see cref="float" />.
    /// </summary>
    /// <param name="data">The data to inspect.</param>
    /// <param name="bitmask">The bits to test.</param>

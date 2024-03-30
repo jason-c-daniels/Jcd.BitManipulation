@@ -2,11 +2,12 @@
 
 ## BitMask(BitMask) Constructor
 
-Copies an existing [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+Copies a existing [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
 ```csharp
 public BitMask(Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.BitMask(Jcd.BitManipulation.BitMask).mask'></a>

@@ -29,7 +29,7 @@ public ref struct LittleEndianByteIndexer
    }
 
    /// <summary>
-   /// Constructs a <see cref="LittleEndianByteIndexer" /> from an <see cref="long" />.
+   /// Constructs a <see cref="LittleEndianByteIndexer" /> from a <see cref="long" />.
    /// </summary>
    /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
@@ -51,7 +51,7 @@ public ref struct LittleEndianByteIndexer
    }
 
    /// <summary>
-   /// Constructs a <see cref="LittleEndianByteIndexer" /> from an <see cref="int" />.
+   /// Constructs a <see cref="LittleEndianByteIndexer" /> from a <see cref="int" />.
    /// </summary>
    /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
@@ -73,7 +73,7 @@ public ref struct LittleEndianByteIndexer
    }
 
    /// <summary>
-   /// Constructs a <see cref="LittleEndianByteIndexer" /> from an <see cref="short" />.
+   /// Constructs a <see cref="LittleEndianByteIndexer" /> from a <see cref="short" />.
    /// </summary>
    /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
@@ -95,7 +95,7 @@ public ref struct LittleEndianByteIndexer
    }
 
    /// <summary>
-   /// Constructs a <see cref="LittleEndianByteIndexer" /> from an <see cref="sbyte" />.
+   /// Constructs a <see cref="LittleEndianByteIndexer" /> from a <see cref="sbyte" />.
    /// </summary>
    /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
@@ -106,7 +106,7 @@ public ref struct LittleEndianByteIndexer
    }
 
    /// <summary>
-   /// Constructs a <see cref="LittleEndianByteIndexer" /> from an <see cref="float" />.
+   /// Constructs a <see cref="LittleEndianByteIndexer" /> from a <see cref="float" />.
    /// </summary>
    /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
@@ -117,7 +117,7 @@ public ref struct LittleEndianByteIndexer
    }
 
    /// <summary>
-   /// Constructs a <see cref="LittleEndianByteIndexer" /> from an <see cref="double" />.
+   /// Constructs a <see cref="LittleEndianByteIndexer" /> from a <see cref="double" />.
    /// </summary>
    /// <param name="data">The initial value for the underlying data.</param>
    /// <exclude />
@@ -416,7 +416,7 @@ public ref struct LittleEndianByteIndexer
    }
 
    /// <summary>
-   /// Implicitly converts an <see cref="Int64" /> to a <see cref="LittleEndianByteIndexer" />.
+   /// Implicitly converts a <see cref="long" /> to a <see cref="LittleEndianByteIndexer" />.
    /// </summary>
    /// <param name="data">The initial value for the bytes of data.</param>
    /// <returns>The <see cref="LittleEndianByteIndexer" /> instance.</returns>
@@ -482,7 +482,7 @@ public ref struct LittleEndianByteIndexer
    }
 
    /// <summary>
-   /// Implicitly converts an <see cref="SByte" /> to a <see cref="LittleEndianByteIndexer" />.
+   /// Implicitly converts a <see cref="sbyte" /> to a <see cref="LittleEndianByteIndexer" />.
    /// </summary>
    /// <param name="data">The initial value for the bytes of data.</param>
    /// <returns>The <see cref="LittleEndianByteIndexer" /> instance.</returns>

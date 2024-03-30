@@ -16,7 +16,7 @@ namespace Jcd.BitManipulation;
 /// <summary>
 /// Provides indexer style access to the bits on a copied value.
 /// </summary>
-/// <remarks>
+/// <example>
 /// <para>
 /// Examples:
 /// <code>
@@ -47,7 +47,7 @@ namespace Jcd.BitManipulation;
 /// Console.WriteLine(biReversed.ToString()); // outputs: 0b1110101000111101
 /// </code>
 /// </para>
-/// </remarks>
+/// </example>
 public ref struct BitIndexer
 {
    #region Constructors
@@ -175,7 +175,7 @@ public ref struct BitIndexer
    /// </summary>
    /// <param name="start">The starting bit offset</param>
    /// <param name="length">The number of bits to extract</param>
-   /// <returns>an array of bools for the subset of bits</returns>
+   /// <returns>a array of bools for the subset of bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
 
    // ReSharper disable once ReturnTypeCanBeEnumerable.Global
@@ -382,10 +382,10 @@ public ref struct BitIndexer
    }
 
    /// <summary>
-   /// Automatically convert from a <see cref="BitIndexer" /> to an <see cref="sbyte" />
+   /// Automatically convert from a <see cref="BitIndexer" /> to a <see cref="sbyte" />
    /// </summary>
    /// <param name="indexer">The indexer to convert from.</param>
-   /// <returns>The lower 8 bits converted to an <see cref="sbyte" />.</returns>
+   /// <returns>The lower 8 bits converted to a <see cref="sbyte" />.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator sbyte(BitIndexer indexer)
    {
@@ -415,7 +415,7 @@ public ref struct BitIndexer
    }
 
    /// <summary>
-   /// Automatically convert from a <see cref="BitIndexer" /> to an array of <see cref="bool" />
+   /// Automatically convert from a <see cref="BitIndexer" /> to a array of <see cref="bool" />
    /// </summary>
    /// <param name="indexer">The indexer to convert from.</param>
    /// <returns>An array of bools for each bit with The Least Significant Bit is at index 0.</returns>
@@ -429,7 +429,7 @@ public ref struct BitIndexer
    }
 
    /// <summary>
-   /// Automatically convert from a <see cref="BitIndexer" /> to an array of <see cref="bool" />
+   /// Automatically convert from a <see cref="BitIndexer" /> to a array of <see cref="bool" />
    /// </summary>
    /// <param name="array">The indexer to convert from.</param>
    /// <returns>The lower 8 bits converted to a <see cref="byte" />.</returns>

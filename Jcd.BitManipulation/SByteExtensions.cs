@@ -7,12 +7,12 @@ using System.Runtime.CompilerServices;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// Provides easy to read methods for bit manipulation operations on an <see cref="sbyte" />
+/// Provides easy to read methods for bit manipulation operations on a <see cref="sbyte" />
 /// </summary>
 public static class SByteExtensions
 {
    /// <summary>
-   /// Tests if all of the bits from the bitmask are set on an <see cref="sbyte" />.
+   /// Tests if all of the bits from the bitmask are set on a <see cref="sbyte" />.
    /// </summary>
    /// <param name="data">The data to inspect.</param>
    /// <param name="bitmask">The bits to test.</param>
@@ -27,7 +27,7 @@ public static class SByteExtensions
    }
 
    /// <summary>
-   /// Tests if any bits from the bitmask are set on an <see cref="sbyte" />.
+   /// Tests if any bits from the bitmask are set on a <see cref="sbyte" />.
    /// </summary>
    /// <param name="data">The data to inspect.</param>
    /// <param name="bitmask">The bits to test.</param>
@@ -42,7 +42,7 @@ public static class SByteExtensions
    }
 
    /// <summary>
-   /// Tests if none of the bits from the bitmask are set on an <see cref="sbyte" />.
+   /// Tests if none of the bits from the bitmask are set on a <see cref="sbyte" />.
    /// </summary>
    /// <param name="data">The data to inspect.</param>
    /// <param name="bitmask">The bits to test.</param>
@@ -57,7 +57,7 @@ public static class SByteExtensions
    }
 
    /// <summary>
-   /// Converts an <see cref="sbyte" /> into an array of <see cre="bool" /> values with the lease significant bit at index 0.
+   /// Converts a <see cref="sbyte" /> into an array of <see cre="bool" /> values with the lease significant bit at index 0.
    /// </summary>
    /// <param name="bits">The <see cref="sbyte" /> to convert.</param>
    /// <returns>An array with the Least Significant Bit at index 0</returns>
@@ -68,7 +68,7 @@ public static class SByteExtensions
    }
 
    /// <summary>
-   /// Converts an <see cref="sbyte" /> into an array of bytes in the specified <see cref="Endian" />.
+   /// Converts a <see cref="sbyte" /> into an array of bytes in the specified <see cref="Endian" />.
    /// </summary>
    /// <param name="data">The value to convert to a <see cref="byte" /> array.</param>
    /// <returns>The value as an array in the requested byte order</returns>

@@ -7,6 +7,7 @@ Sets the bit at the specified to "on" and returns the modified value.
 ```csharp
 public static byte SetBit(this byte value, int offset);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteExtensions.SetBit(thisbyte,int).value'></a>
@@ -22,5 +23,6 @@ The value to modify.
 The offset of the bit to set.
 
 #### Returns
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 The modified value.

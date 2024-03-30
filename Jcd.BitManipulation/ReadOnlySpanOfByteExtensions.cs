@@ -30,7 +30,7 @@ public static class ReadOnlySpanOfByteExtensions
    }
 
    /// <summary>
-   /// Converts bytes into an <see cref="sbyte" />, discarding any excess data.
+   /// Converts bytes into a <see cref="sbyte" />, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
@@ -98,7 +98,7 @@ public static class ReadOnlySpanOfByteExtensions
    }
 
    /// <summary>
-   /// Converts bytes into an <see cref="int" />, discarding any excess data.
+   /// Converts bytes into a <see cref="int" />, discarding any excess data.
    /// </summary>
    /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>

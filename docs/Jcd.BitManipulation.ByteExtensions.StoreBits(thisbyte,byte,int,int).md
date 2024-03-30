@@ -7,6 +7,7 @@ Stores a range of bits to the value, from a source value, and returns the modifi
 ```csharp
 public static byte StoreBits(this byte value, byte source, int offset, int size);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteExtensions.StoreBits(thisbyte,byte,int,int).value'></a>
@@ -34,5 +35,6 @@ The bit location to store the value.
 The bit size of the value.
 
 #### Returns
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 The modified value.

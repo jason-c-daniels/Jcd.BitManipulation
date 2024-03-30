@@ -10,6 +10,7 @@ namespace Jcd.BitManipulation;
 /// <summary>
 /// Provides easy to read methods for bit manipulation operations on a <see cref="long" />
 /// </summary>
+/// <include file='XmlDocs/examples.xml' path='/doc/examples/item[@name="Int64Extensions"]/example' />
 public static class Int64Extensions
 {
    /// <summary>

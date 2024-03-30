@@ -25,8 +25,6 @@ instance.
 
 ### Example
 
-Example:
-
 ```csharp
 ushort number = 0xDEAD;
 BigEndianByteIndexer indexer = number; // implicit cast.

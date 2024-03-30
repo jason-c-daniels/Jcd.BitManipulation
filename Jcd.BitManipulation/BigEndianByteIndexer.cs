@@ -13,6 +13,7 @@ namespace Jcd.BitManipulation;
 /// a copied value. It provides indexer-style access to the bytes of
 /// the value. Index zero is the most significant byte.
 /// </summary>
+/// <include file='XmlDocs/examples.xml' path='/doc/examples/item[@name="ByteIndexerExample"]/example' />
 public ref struct BigEndianByteIndexer
 {
    #region Constructors
@@ -183,6 +184,17 @@ public ref struct BigEndianByteIndexer
    {
       Length = GetIntegerByteSize(byteSize);
       this.data = data.ToUInt64(Endian.Big);
+   }
+
+   /// <summary>
+   /// Explicitly converts a <see cref="LittleEndianByteIndexer" /> to a <see cref="BigEndianByteIndexer" />.
+   /// </summary>
+   /// <param name="indexer">The <see cref="LittleEndianByteIndexer" /> to copy the data from.</param>
+   /// <returns>A new <see cref="BigEndianByteIndexer" /> instance.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static explicit operator BigEndianByteIndexer(LittleEndianByteIndexer indexer)
+   {
+      return new BigEndianByteIndexer(indexer, indexer.Length);
    }
 
    private static int GetIntegerByteSize(int count)
@@ -435,9 +447,6 @@ public ref struct BigEndianByteIndexer
    /// <param name="data">The initial data for the indexer.</param>
    /// <returns>The newly created <see cref="BigEndianByteIndexer" />.</returns>
    /// <example>
-   /// <para>
-   /// Example:
-   /// </para>
    /// <code>
    /// ulong number = 0xDEADBEEFFA17C0DE;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
@@ -459,9 +468,6 @@ public ref struct BigEndianByteIndexer
    /// <param name="data">The initial value for the bytes of data.</param>
    /// <returns>The newly created <see cref="BigEndianByteIndexer" />.</returns>
    /// <example>
-   /// <para>
-   /// Example:
-   /// </para>
    /// <code>
    /// long number = 0x7EADBEEFFA17C0DE;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
@@ -483,9 +489,6 @@ public ref struct BigEndianByteIndexer
    /// <param name="data">The initial value for the bytes of data.</param>
    /// <returns>The newly created <see cref="BigEndianByteIndexer" />.</returns>
    /// <example>
-   /// <para>
-   /// Example:
-   /// </para>
    /// <code>
    /// uint number = 0xDEADBEEF;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
@@ -507,9 +510,6 @@ public ref struct BigEndianByteIndexer
    /// <param name="data">The initial value for the bytes of data.</param>
    /// <returns>The <see cref="BigEndianByteIndexer" /> instance.</returns>
    /// <example>
-   /// <para>
-   /// Example:
-   /// </para>
    /// <code>
    /// int number = 0x7EADBEEF;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
@@ -531,9 +531,6 @@ public ref struct BigEndianByteIndexer
    /// <param name="data">The initial value for the bytes of data.</param>
    /// <returns>The <see cref="BigEndianByteIndexer" /> instance.</returns>
    /// <example>
-   /// <para>
-   /// Example:
-   /// </para>
    /// <code>
    /// ushort number = 0xDEAD;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
@@ -555,9 +552,6 @@ public ref struct BigEndianByteIndexer
    /// <param name="data">The initial value for the bytes of data.</param>
    /// <returns>The <see cref="BigEndianByteIndexer" /> instance.</returns>
    /// <example>
-   /// <para>
-   /// Example:
-   /// </para>
    /// <code>
    /// short number = 0x7EAD;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
@@ -579,9 +573,6 @@ public ref struct BigEndianByteIndexer
    /// <param name="data">The initial value for the bytes of data.</param>
    /// <returns>The <see cref="BigEndianByteIndexer" /> instance.</returns>
    /// <example>
-   /// <para>
-   /// Example:
-   /// </para>
    /// <code>
    /// byte number = 0xDE;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
@@ -603,9 +594,6 @@ public ref struct BigEndianByteIndexer
    /// <param name="data">The initial value for the bytes of data.</param>
    /// <returns>The <see cref="BigEndianByteIndexer" /> instance.</returns>
    /// <example>
-   /// <para>
-   /// Example:
-   /// </para>
    /// <code>
    /// sbyte number = 0xDE;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
@@ -627,9 +615,6 @@ public ref struct BigEndianByteIndexer
    /// <param name="data">The initial value for the bytes of data.</param>
    /// <returns>The <see cref="BigEndianByteIndexer" /> instance.</returns>
    /// <example>
-   /// <para>
-   /// Example:
-   /// </para>
    /// <code>
    /// float number = -6.259853398707798016E18f; // 0xDEADBEEF
    /// BigEndianByteIndexer indexer = number; // implicit cast.
@@ -651,9 +636,6 @@ public ref struct BigEndianByteIndexer
    /// <param name="data">The initial value for the bytes of data.</param>
    /// <returns>The <see cref="BigEndianByteIndexer" /> instance.</returns>
    /// <example>
-   /// <para>
-   /// Example:
-   /// </para>
    /// <code>
    /// var number = -1.1885959909993540014504278736E148; // 0xDEADBEEFFA17C0DE
    /// BigEndianByteIndexer indexer = number;    // implicit cast.
@@ -834,7 +816,7 @@ public ref struct BigEndianByteIndexer
    }
 
    /// <summary>
-   /// Formats the <see cref="BigEndianByteIndexer" />> as a hexadecimal string in big endian notation.
+   /// Formats the <see cref="BigEndianByteIndexer" /> as a hexadecimal string in big endian notation.
    /// For example: `60 0D C0 DE`
    /// </summary>
    /// <returns>a string of the data formatted as hex bytes</returns>

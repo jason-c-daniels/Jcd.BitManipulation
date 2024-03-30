@@ -13,6 +13,7 @@ namespace Jcd.BitManipulation;
 /// a copied value. It provides indexer-style access to the bytes of
 /// the value. Index zero is the least significant byte.
 /// </summary>
+/// <include file='XmlDocs/examples.xml' path='/doc/examples/item[@name="ByteIndexerExample"]/example' />
 public ref struct LittleEndianByteIndexer
 {
    #region Constructors
@@ -408,7 +409,8 @@ public ref struct LittleEndianByteIndexer
    /// Implicitly converts a <see cref="UInt64" /> to a <see cref="LittleEndianByteIndexer" />.
    /// </summary>
    /// <param name="data">The initial value for the bytes of data.</param>
-   /// <returns>The <see cref="LittleEndianByteIndexer" /> instance.</returns>
+   /// />
+   /// <returns>A new <see cref="LittleEndianByteIndexer" /> instance.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator LittleEndianByteIndexer(ulong data)
    {
@@ -419,7 +421,8 @@ public ref struct LittleEndianByteIndexer
    /// Implicitly converts a <see cref="long" /> to a <see cref="LittleEndianByteIndexer" />.
    /// </summary>
    /// <param name="data">The initial value for the bytes of data.</param>
-   /// <returns>The <see cref="LittleEndianByteIndexer" /> instance.</returns>
+   /// />
+   /// <returns>A new <see cref="LittleEndianByteIndexer" /> instance.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator LittleEndianByteIndexer(long data)
    {
@@ -430,7 +433,8 @@ public ref struct LittleEndianByteIndexer
    /// Implicitly converts a <see cref="UInt32" /> to a <see cref="LittleEndianByteIndexer" />.
    /// </summary>
    /// <param name="data">The initial value for the bytes of data.</param>
-   /// <returns>The <see cref="LittleEndianByteIndexer" /> instance.</returns>
+   /// />
+   /// <returns>A new <see cref="LittleEndianByteIndexer" /> instance.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator LittleEndianByteIndexer(uint data)
    {
@@ -441,7 +445,8 @@ public ref struct LittleEndianByteIndexer
    /// Implicitly converts a <see cref="Int32" /> to a <see cref="LittleEndianByteIndexer" />.
    /// </summary>
    /// <param name="data">The initial value for the bytes of data.</param>
-   /// <returns>The <see cref="LittleEndianByteIndexer" /> instance.</returns>
+   /// />
+   /// <returns>A new <see cref="LittleEndianByteIndexer" /> instance.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator LittleEndianByteIndexer(int data)
    {
@@ -452,7 +457,8 @@ public ref struct LittleEndianByteIndexer
    /// Implicitly converts a <see cref="UInt16" /> to a <see cref="LittleEndianByteIndexer" />.
    /// </summary>
    /// <param name="data">The initial value for the bytes of data.</param>
-   /// <returns>The <see cref="LittleEndianByteIndexer" /> instance.</returns>
+   /// />
+   /// <returns>A new <see cref="LittleEndianByteIndexer" /> instance.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator LittleEndianByteIndexer(ushort data)
    {
@@ -463,7 +469,8 @@ public ref struct LittleEndianByteIndexer
    /// Implicitly converts a <see cref="Int16" /> to a <see cref="LittleEndianByteIndexer" />.
    /// </summary>
    /// <param name="data">The initial value for the bytes of data.</param>
-   /// <returns>The <see cref="LittleEndianByteIndexer" /> instance.</returns>
+   /// />
+   /// <returns>A new <see cref="LittleEndianByteIndexer" /> instance.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator LittleEndianByteIndexer(short data)
    {
@@ -474,7 +481,8 @@ public ref struct LittleEndianByteIndexer
    /// Implicitly converts a <see cref="Byte" /> to a <see cref="LittleEndianByteIndexer" />.
    /// </summary>
    /// <param name="data">The initial value for the bytes of data.</param>
-   /// <returns>The <see cref="LittleEndianByteIndexer" /> instance.</returns>
+   /// />
+   /// <returns>A new <see cref="LittleEndianByteIndexer" /> instance.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator LittleEndianByteIndexer(byte data)
    {
@@ -485,7 +493,8 @@ public ref struct LittleEndianByteIndexer
    /// Implicitly converts a <see cref="sbyte" /> to a <see cref="LittleEndianByteIndexer" />.
    /// </summary>
    /// <param name="data">The initial value for the bytes of data.</param>
-   /// <returns>The <see cref="LittleEndianByteIndexer" /> instance.</returns>
+   /// />
+   /// <returns>A new <see cref="LittleEndianByteIndexer" /> instance.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator LittleEndianByteIndexer(sbyte data)
    {
@@ -496,7 +505,8 @@ public ref struct LittleEndianByteIndexer
    /// Implicitly converts a <see cref="Single" /> to a <see cref="LittleEndianByteIndexer" />.
    /// </summary>
    /// <param name="data">The initial value for the bytes of data.</param>
-   /// <returns>The <see cref="LittleEndianByteIndexer" /> instance.</returns>
+   /// />
+   /// <returns>A new <see cref="LittleEndianByteIndexer" /> instance.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator LittleEndianByteIndexer(float data)
    {
@@ -507,7 +517,8 @@ public ref struct LittleEndianByteIndexer
    /// Implicitly converts a <see cref="Double" /> to a <see cref="LittleEndianByteIndexer" />.
    /// </summary>
    /// <param name="data">The initial value for the bytes of data.</param>
-   /// <returns>The <see cref="LittleEndianByteIndexer" /> instance.</returns>
+   /// />
+   /// <returns>A new <see cref="LittleEndianByteIndexer" /> instance.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator LittleEndianByteIndexer(double data)
    {
@@ -518,7 +529,8 @@ public ref struct LittleEndianByteIndexer
    /// Explicitly converts an array of  bytes to a <see cref="LittleEndianByteIndexer" />.
    /// </summary>
    /// <param name="data">The initial value for the bytes of data.</param>
-   /// <returns>The <see cref="LittleEndianByteIndexer" /> instance.</returns>
+   /// />
+   /// <returns>A new <see cref="LittleEndianByteIndexer" /> instance.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static explicit operator LittleEndianByteIndexer(byte[] data)
    {
@@ -529,11 +541,23 @@ public ref struct LittleEndianByteIndexer
    /// Explicitly converts an array of  bytes to a <see cref="LittleEndianByteIndexer" />.
    /// </summary>
    /// <param name="data">The initial value for the bytes of data.</param>
-   /// <returns>The <see cref="LittleEndianByteIndexer" /> instance.</returns>
+   /// />
+   /// <returns>A new <see cref="LittleEndianByteIndexer" /> instance.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static explicit operator LittleEndianByteIndexer(ReadOnlySpan<byte> data)
    {
       return new LittleEndianByteIndexer(data);
+   }
+
+   /// <summary>
+   /// Explicitly converts a <see cref="BigEndianByteIndexer" /> to a <see cref="LittleEndianByteIndexer" />.
+   /// </summary>
+   /// <param name="indexer">The <see cref="BigEndianByteIndexer" /> to copy the data from.</param>
+   /// <returns>A new <see cref="LittleEndianByteIndexer" /> instance.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static explicit operator LittleEndianByteIndexer(BigEndianByteIndexer indexer)
+   {
+      return new LittleEndianByteIndexer(indexer, indexer.Length);
    }
 
    #endregion
@@ -676,7 +700,7 @@ public ref struct LittleEndianByteIndexer
    }
 
    /// <summary>
-   /// Formats the <see cref="LittleEndianByteIndexer" />> as a hexadecimal string in big endian notation.
+   /// Formats the <see cref="LittleEndianByteIndexer" /> as a hexadecimal string in big endian notation.
    /// For example: `DE C0 0D 60`
    /// </summary>
    /// <returns>a string of the data formatted as hex bytes</returns>

@@ -25,8 +25,6 @@ created [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.
 
 ### Example
 
-Example:
-
 ```csharp
 long number = 0x7EADBEEFFA17C0DE;
 BigEndianByteIndexer indexer = number; // implicit cast.

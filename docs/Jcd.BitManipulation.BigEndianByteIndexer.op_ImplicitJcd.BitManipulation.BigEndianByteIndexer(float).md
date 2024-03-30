@@ -25,8 +25,6 @@ instance.
 
 ### Example
 
-Example:
-
 ```csharp
 float number = -6.259853398707798016E18f; // 0xDEADBEEF
 BigEndianByteIndexer indexer = number; // implicit cast.

@@ -25,8 +25,6 @@ instance.
 
 ### Example
 
-Example:
-
 ```csharp
 var number = -1.1885959909993540014504278736E148; // 0xDEADBEEFFA17C0DE
 BigEndianByteIndexer indexer = number;    // implicit cast.

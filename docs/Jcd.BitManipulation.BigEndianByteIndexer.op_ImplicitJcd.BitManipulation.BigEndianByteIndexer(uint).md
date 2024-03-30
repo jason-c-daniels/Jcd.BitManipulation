@@ -25,8 +25,6 @@ created [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.
 
 ### Example
 
-Example:
-
 ```csharp
 uint number = 0xDEADBEEF;
 BigEndianByteIndexer indexer = number; // implicit cast.

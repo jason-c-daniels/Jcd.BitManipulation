@@ -1,6 +1,7 @@
 ﻿# Upcoming Changes
 
 ## 2.x Summary
+- Strategic backports from 3.0.
 
 - In the rush to get 2.x out the door I missed including Endianness with some of the extension methods
   and related unit tests. I've found a number of these in my work on 3.0. Many of these fixes and improvements
@@ -17,10 +18,12 @@ any wants from this library please add an issue with your request.
 The biggest changes are focused on completeness, simplifying the API surface/reducing volume of code, and
 and keeping acceptable performance<sup>1</sup>.
 
-### Breaking Changes
+### Breaking Changes from 2.x
 
 - I've found myself strongly disliking the proliferation of types. All of the type specific `ByteIndexer` types will be
   replaced by `BigEndianByteIndexer` and `LittleEndianByteIndexer`.
+- The same is true of the type specific `BitIndexer` types (e.g. `BitIndexerUInt64`). These will all be replaced with
+  the `BitIndexer` struct.
 - The old indexer types will be deprecated in an upcoming release of 2.x, shortly before 3.0 is released. If you're
   using them keep in mind that you will need to change over. Consider scoping out the changes in the prerelease versions
   currently available on NuGet.

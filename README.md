@@ -56,19 +56,22 @@ var leBaToUInt16Be = leBa.ToUInt16(Endian.Big); // leBaToUInt16Le = 0b0101010110
 
 ### Performance Notes
 
-If you read the code you'll notice a fair number of abstractions at play. These don't have a
-significant impact on release mode performance. In fact running on at roughly 3.5GHz to 4.0Ghz
-(my CPU auto-scales performance based on load.) doing the 6 chained operations at the end of
-the example below, but on the loop index instead of just zero, 10+e9 times completes in roughly
-830-890ms in Release mode.
+If you read the code you'll notice a fair number of abstractions and helper structs in use.
+These don't have a significant impact on release mode performance.
 
-To see how it performs on your system run the code in the Main function of the examples app.
+To see how it performs on your system run the code in the Main function of the examples app or
+run the performance benchmarks using the bash script `run-benchmarks`. By default it'll try to
+run .Net Framework 4.6.2 in addition to .Net 8.0. Just edit the script to exclude .Net Framework
+if your system doesn't have it installed.
 
-```text
-1,000,000,000 iterations with 6 operations per iteration took 868.58 ms for an average of 14.5 ns per operation.
-```
+The latest performance benchmarks from my machine are available at the links below:
 
-Even more extensive performance testing is underway with version 3.0. Read below for details.
+* [BigEndianReadBytes](./Jcd.BitManipulation.Benchmark/benchmarks/out/results/Jcd.BitManipulation.Benchmark.BigEndianReadBytes-report-github.md) -- Extracts bytes from various integer and floating point types as a big endian array.
+* [LittleEndianReadBytes](./Jcd.BitManipulation.Benchmark/benchmarks/out/results/Jcd.BitManipulation.Benchmark.LittleEndianReadBytes-report-github.md) -- Extracts bytes from various integer and floating point types as a little endian array.
+* [BigEndianStoreByte](./Jcd.BitManipulation.Benchmark/benchmarks/out/results/Jcd.BitManipulation.Benchmark.BigEndianStoreByte-report-github.md) -- Stores a single byte in various numeric types at an index using big endian indexing.
+* [LittleEndianStoreByte](./Jcd.BitManipulation.Benchmark/benchmarks/out/results/Jcd.BitManipulation.Benchmark.LittleEndianStoreByte-report-github.md) -- Stores a single byte in various numeric type at an index using little endian indexing.
+* [BigEndianStoreBytes](./Jcd.BitManipulation.Benchmark/benchmarks/out/results/Jcd.BitManipulation.Benchmark.BigEndianStoreBytes-report-github.md) -- Stores a collection of bytes in various numeric types, indexing into the numeric type's location as if the memory layout were big endian. (i.e. index 0 in the collection is the most significant byte)
+* [LittleEndianStoreBytes](./Jcd.BitManipulation.Benchmark/benchmarks/out/results/Jcd.BitManipulation.Benchmark.LittleEndianStoreBytes-report-github.md) -- Stores a collection of bytes in various numeric types, indexing into the numeric type's location as if the memory layout were little endian. (i.e. index 0 in the collection is the least significant byte)
 
 ## Version History
 

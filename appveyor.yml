@@ -1,11 +1,11 @@
 ﻿version: 3.0.{build}
+image: Ubuntu2204
+configuration: Release
 branches:
    only:
       - main
       - /release[/].*/
 skip_tags: true
-image: Ubuntu2204
-configuration: Release
 
 assembly_info:
    patch: true
@@ -23,17 +23,42 @@ dotnet_csproj:
    assembly_version: '{version}'
    file_version: '{version}'
    informational_version: '{version}-alpha'
+   
+environment:
+   SONAR_TOKEN:
+      secure: PHKmq/QK5apQjJA12j8uvP6FY9o2qAcGw7IzeyCsIdvVyamAHQos4fISdKQYOQvf
+      
 install:
    - sh: >-
-        #!/bin/bash
-        
+        #!/bin/bash        
         sudo apt-get update && sudo apt-get install -y dotnet-sdk-8.0
+        dotnet tool install --global dotnet-sonarscanner
+        
 build:
    publish_nuget: true
    publish_nuget_symbols: true
    use_snupkg_format: true
    verbosity: minimal
+test_script:
+   - sh: >-
+        if [[ -z "${APPVEYOR_PULL_REQUEST_NUMBER}" ]]; then
+            # no PR, safe to do sonar cloud integration.
+        	# sonar begin
+        	dotnet build-server shutdown
 
+        	dotnet sonarscanner begin /d:sonar.host.url="https://sonarcloud.io" /o:"jason-c-daniels" /k:"jason-c-daniels_Jcd.BitManipulation" /d:sonar.login="$SONAR_TOKEN" /d:sonar.cs.opencover.reportsPaths=**/coverage.opencover.xml /d:sonar.coverage.exclusions="**/**Test*.cs, **/*Example*/*, **/*Benchmark*/*" 
+
+        	dotnet build --no-incremental -c Release
+
+        	# test
+        	dotnet test --collect:"XPlat Code Coverage;Format=opencover" --no-build  -c Release
+
+        	# sonar end
+        	dotnet sonarscanner end /d:sonar.token="$SONAR_TOKEN"
+        else
+            # No sonar cloud integration
+        	dotnet test --collect:"XPlat Code Coverage;Format=opencover" --no-build  -c Release
+        fi
 deploy:
    - provider: NuGet
      server: https://www.myget.org/F/jason-c-daniels/api/v2/package

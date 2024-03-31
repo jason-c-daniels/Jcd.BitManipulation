@@ -33,7 +33,9 @@ public static class ReadOnlySpanOfByteExtensions
    public static byte ToByte(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
+      {
          return 0;
+      }
 
       return endian == Endian.Big
                 ? data[^1]
@@ -50,7 +52,9 @@ public static class ReadOnlySpanOfByteExtensions
    public static sbyte ToSByte(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
+      {
          return 0;
+      }
 
       return endian == Endian.Big
                 ? (sbyte) data[^1]
@@ -67,7 +71,9 @@ public static class ReadOnlySpanOfByteExtensions
    public static ushort ToUInt16(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
+      {
          return 0;
+      }
 
       return endian == Endian.Little
                 ? (ushort) GetLittleEndianUInt64(data)
@@ -84,7 +90,9 @@ public static class ReadOnlySpanOfByteExtensions
    public static short ToInt16(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
+      {
          return 0;
+      }
 
       return endian == Endian.Little
                 ? (short) GetLittleEndianUInt64(data)
@@ -101,7 +109,9 @@ public static class ReadOnlySpanOfByteExtensions
    public static uint ToUInt32(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
+      {
          return 0;
+      }
 
       return endian == Endian.Little
                 ? (uint) GetLittleEndianUInt64(data)
@@ -118,7 +128,9 @@ public static class ReadOnlySpanOfByteExtensions
    public static int ToInt32(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
+      {
          return 0;
+      }
 
       return endian == Endian.Little
                 ? (int) GetLittleEndianUInt64(data)
@@ -135,7 +147,9 @@ public static class ReadOnlySpanOfByteExtensions
    public static ulong ToUInt64(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
+      {
          return 0;
+      }
 
       return endian == Endian.Little
                 ? GetLittleEndianUInt64(data)
@@ -152,7 +166,9 @@ public static class ReadOnlySpanOfByteExtensions
    public static long ToInt64(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
+      {
          return 0;
+      }
 
       return endian == Endian.Little
                 ? (long) GetLittleEndianUInt64(data)
@@ -194,25 +210,39 @@ public static class ReadOnlySpanOfByteExtensions
       var len = data.Length;
 
       if (StoreAndShift(ref result, data, 0, 1, len, size))
+      {
          return result;
+      }
 
       if (StoreAndShift(ref result, data, 1, 2, len, size))
+      {
          return result;
+      }
 
       if (StoreAndShift(ref result, data, 2, 3, len, size))
+      {
          return result;
+      }
 
       if (StoreAndShift(ref result, data, 3, 4, len, size))
+      {
          return result;
+      }
 
       if (StoreAndShift(ref result, data, 4, 5, len, size))
+      {
          return result;
+      }
 
       if (StoreAndShift(ref result, data, 5, 6, len, size))
+      {
          return result;
+      }
 
       if (StoreAndShift(ref result, data, 6, 7, len, size))
+      {
          return result;
+      }
 
       StoreAndShift(ref result, data, 7, 8, len, size);
 
@@ -223,10 +253,14 @@ public static class ReadOnlySpanOfByteExtensions
    private static bool StoreAndShift(ref ulong result, ReadOnlySpan<byte> data, int idx, int sizeComp, int len, int size)
    {
       if (idx < len)
+      {
          result = result.StoreBits(data[idx], 0, 8);
+      }
 
       if (size == sizeComp)
+      {
          return true;
+      }
 
       result <<= 8;
 
@@ -243,43 +277,57 @@ public static class ReadOnlySpanOfByteExtensions
       i++;
 
       if (i >= len)
+      {
          return result;
+      }
 
       result = result.StoreBits(data[i], i << 3, 8);
       i++;
 
       if (i >= len)
+      {
          return result;
+      }
 
       result = result.StoreBits(data[i], i << 3, 8);
       i++;
 
       if (i >= len)
+      {
          return result;
+      }
 
       result = result.StoreBits(data[i], i << 3, 8);
       i++;
 
       if (i >= len)
+      {
          return result;
+      }
 
       result = result.StoreBits(data[i], i << 3, 8);
       i++;
 
       if (i >= len)
+      {
          return result;
+      }
 
       result = result.StoreBits(data[i], i << 3, 8);
       i++;
 
       if (i >= len)
+      {
          return result;
+      }
 
       result = result.StoreBits(data[i], i << 3, 8);
       i++;
 
       if (i >= len)
+      {
          return result;
+      }
 
       result = result.StoreBits(data[i], i << 3, 8);
 

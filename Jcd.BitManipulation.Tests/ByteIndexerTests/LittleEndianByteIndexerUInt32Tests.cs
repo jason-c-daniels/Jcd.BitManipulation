@@ -121,12 +121,21 @@ public class LittleEndianByteIndexerUInt32Tests
    private static List<byte> CreateExpectedArray(int expectedSize, byte e0, byte e1, byte e2, byte e3)
    {
       var expected = new List<byte>(new[] { e0 });
+
       if (expectedSize >= 2)
+      {
          expected.Add(e1);
+      }
+
       if (expectedSize >= 3)
+      {
          expected.Add(e2);
+      }
+
       if (expectedSize >= 4)
+      {
          expected.Add(e3);
+      }
 
       return expected;
    }

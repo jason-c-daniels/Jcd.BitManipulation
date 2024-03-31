@@ -208,7 +208,9 @@ public static class Int16Extensions
    public static byte ReadByte(this short value, int offset, Endian endian = Endian.Little)
    {
       if (endian == Endian.Little)
+      {
          return (byte) value.ReadBits(offset << 3, 8);
+      }
 
       var beOffset = sizeof(short) - offset - 1;
 
@@ -345,7 +347,9 @@ public static class Int16Extensions
    public static short StoreByte(this short value, byte @byte, int offset, Endian endian = Endian.Little)
    {
       if (endian == Endian.Little)
+      {
          return value.StoreBits(@byte, offset << 3, 8);
+      }
 
       var beOffset = sizeof(short) - offset - 1;
 

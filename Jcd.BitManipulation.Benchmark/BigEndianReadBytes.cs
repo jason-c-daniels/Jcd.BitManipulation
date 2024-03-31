@@ -24,7 +24,7 @@ public class BigEndianReadBytes
    private const ushort Ui16 = ushort.MaxValue / 2;
    private const short I16 = short.MaxValue    / 2;
    private const double Dbl = double.MaxValue  / 2;
-   private const float Flt = float.MaxValue   / 2;
+   private const float Flt = float.MaxValue    / 2;
 
    #region BitConverter
 
@@ -33,8 +33,11 @@ public class BigEndianReadBytes
    public byte[] BitConverter_GetBytes_Double()
    {
       var bytes = BitConverter.GetBytes(Dbl);
+
       if (BitConverter.IsLittleEndian)
+      {
          Array.Reverse(bytes);
+      }
 
       return bytes;
    }
@@ -44,8 +47,11 @@ public class BigEndianReadBytes
    public byte[] BitConverter_GetBytes_Float()
    {
       var bytes = BitConverter.GetBytes(Flt);
+
       if (BitConverter.IsLittleEndian)
+      {
          Array.Reverse(bytes);
+      }
 
       return bytes;
    }
@@ -55,8 +61,11 @@ public class BigEndianReadBytes
    public byte[] BitConverter_GetBytes_UInt64()
    {
       var bytes = BitConverter.GetBytes(Ui64);
+
       if (BitConverter.IsLittleEndian)
+      {
          Array.Reverse(bytes);
+      }
 
       return bytes;
    }
@@ -66,8 +75,11 @@ public class BigEndianReadBytes
    public byte[] BitConverter_GetBytes_Int64()
    {
       var bytes = BitConverter.GetBytes(I64);
+
       if (BitConverter.IsLittleEndian)
+      {
          Array.Reverse(bytes);
+      }
 
       return bytes;
    }
@@ -77,8 +89,11 @@ public class BigEndianReadBytes
    public byte[] BitConverter_GetBytes_UInt32()
    {
       var bytes = BitConverter.GetBytes(Ui32);
+
       if (BitConverter.IsLittleEndian)
+      {
          Array.Reverse(bytes);
+      }
 
       return bytes;
    }
@@ -88,8 +103,12 @@ public class BigEndianReadBytes
    public byte[] BitConverter_GetBytes_Int32()
    {
       var bytes = BitConverter.GetBytes(I32);
+
       if (BitConverter.IsLittleEndian)
+      {
          Array.Reverse(bytes);
+      }
+
       // change no change.
       return bytes;
    }
@@ -99,8 +118,11 @@ public class BigEndianReadBytes
    public byte[] BitConverter_GetBytes_UInt16()
    {
       var bytes = BitConverter.GetBytes(Ui16);
+
       if (BitConverter.IsLittleEndian)
+      {
          Array.Reverse(bytes);
+      }
 
       return bytes;
    }
@@ -109,8 +131,11 @@ public class BigEndianReadBytes
    public byte[] BitConverter_GetBytes_Int16()
    {
       var bytes = BitConverter.GetBytes(I16);
+
       if (BitConverter.IsLittleEndian)
+      {
          Array.Reverse(bytes);
+      }
 
       return bytes;
    }

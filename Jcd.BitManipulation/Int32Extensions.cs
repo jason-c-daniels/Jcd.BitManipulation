@@ -223,7 +223,9 @@ public static class Int32Extensions
    public static byte ReadByte(this int value, int offset, Endian endian = Endian.Little)
    {
       if (endian == Endian.Little)
+      {
          return (byte) value.ReadBits(offset << 3, 8);
+      }
 
       var beOffset = sizeof(int) - offset - 1;
 
@@ -360,7 +362,9 @@ public static class Int32Extensions
    public static int StoreByte(this int value, byte @byte, int offset, Endian endian = Endian.Little)
    {
       if (endian == Endian.Little)
+      {
          return value.StoreBits(@byte, offset << 3, 8);
+      }
 
       var beOffset = sizeof(int) - offset - 1;
 

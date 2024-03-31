@@ -166,7 +166,9 @@ public ref struct BitIndexer
       set
       {
          if (index >= Length)
+         {
             return;
+         }
 
          bits = bits.StoreBit(value, index);
       }

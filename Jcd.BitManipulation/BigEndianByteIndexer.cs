@@ -250,7 +250,9 @@ public ref struct BigEndianByteIndexer
       readonly get
       {
          if (index < 0 || index >= Length)
+         {
             throw new ArgumentOutOfRangeException(nameof(index));
+         }
 
          return data.ReadByte(index + dataOffset, Endian.Big);
       }
@@ -259,7 +261,9 @@ public ref struct BigEndianByteIndexer
       set
       {
          if (index < 0 || index >= Length)
+         {
             throw new ArgumentOutOfRangeException(nameof(index));
+         }
 
          data = data.InternalBigEndianStoreByte(value, index + dataOffset);
       }
@@ -275,7 +279,9 @@ public ref struct BigEndianByteIndexer
    public readonly byte[] Slice(int start, int length)
    {
       if (start == 0 && length >= Length)
+      {
          return GetAllBytes();
+      }
 
       return GetSubset(start, length);
    }
@@ -701,10 +707,14 @@ public ref struct BigEndianByteIndexer
    public BigEndianByteIndexer StoreBytes(byte[] bytes, int offset, int size = -1)
    {
       if (bytes is null)
+      {
          throw new ArgumentNullException(nameof(bytes));
+      }
 
       if (size == -1)
+      {
          size = Length - offset;
+      }
 
       var len = size + offset > Length
                    ? Length - offset
@@ -713,43 +723,59 @@ public ref struct BigEndianByteIndexer
       var cnt = Math.Min(len, bytes.Length);
 
       if (cnt == 0)
+      {
          return this;
+      }
 
       var o = sizeof(ulong) - 1 - offset - dataOffset;
       data = data.InternalLittleEndianStoreByte(bytes[0], o);
 
       if (cnt == 1)
+      {
          return this;
+      }
 
       data = data.InternalLittleEndianStoreByte(bytes[1], o - 1);
 
       if (cnt == 2)
+      {
          return this;
+      }
 
       data = data.InternalLittleEndianStoreByte(bytes[2], o - 2);
 
       if (cnt == 3)
+      {
          return this;
+      }
 
       data = data.InternalLittleEndianStoreByte(bytes[3], o - 3);
 
       if (cnt == 4)
+      {
          return this;
+      }
 
       data = data.InternalLittleEndianStoreByte(bytes[4], o - 4);
 
       if (cnt == 5)
+      {
          return this;
+      }
 
       data = data.InternalLittleEndianStoreByte(bytes[5], o - 5);
 
       if (cnt == 6)
+      {
          return this;
+      }
 
       data = data.InternalLittleEndianStoreByte(bytes[6], o - 6);
 
       if (cnt == 7)
+      {
          return this;
+      }
 
       data = data.InternalLittleEndianStoreByte(bytes[7], o - 7);
 
@@ -767,7 +793,9 @@ public ref struct BigEndianByteIndexer
    public BigEndianByteIndexer StoreBytes(ReadOnlySpan<byte> bytes, int offset, int size = -1)
    {
       if (size == -1)
+      {
          size = Length - offset;
+      }
 
       var len = size + offset > Length
                    ? Length - offset
@@ -776,43 +804,59 @@ public ref struct BigEndianByteIndexer
       var cnt = Math.Min(len, bytes.Length);
 
       if (cnt == 0)
+      {
          return this;
+      }
 
       var o = sizeof(ulong) - 1 - offset - dataOffset;
       data = data.InternalLittleEndianStoreByte(bytes[0], o);
 
       if (cnt == 1)
+      {
          return this;
+      }
 
       data = data.InternalLittleEndianStoreByte(bytes[1], o - 1);
 
       if (cnt == 2)
+      {
          return this;
+      }
 
       data = data.InternalLittleEndianStoreByte(bytes[2], o - 2);
 
       if (cnt == 3)
+      {
          return this;
+      }
 
       data = data.InternalLittleEndianStoreByte(bytes[3], o - 3);
 
       if (cnt == 4)
+      {
          return this;
+      }
 
       data = data.InternalLittleEndianStoreByte(bytes[4], o - 4);
 
       if (cnt == 5)
+      {
          return this;
+      }
 
       data = data.InternalLittleEndianStoreByte(bytes[5], o - 5);
 
       if (cnt == 6)
+      {
          return this;
+      }
 
       data = data.InternalLittleEndianStoreByte(bytes[6], o - 6);
 
       if (cnt == 7)
+      {
          return this;
+      }
 
       data = data.InternalLittleEndianStoreByte(bytes[7], o - 7);
 
@@ -846,7 +890,10 @@ public ref struct BigEndianByteIndexer
       for (var i = 0; i < Length; i++)
       {
          if (i != 0)
+         {
             sb.Append(" ");
+         }
+
          sb.AppendFormat(this[i].ToString("X2"));
       }
 

@@ -48,7 +48,9 @@ public class BigEndianStoreBytes
    public double BitConverter_ToDouble()
    {
       if (BitConverter.IsLittleEndian)
+      {
          Array.Reverse(DblBytes);
+      }
 
       return BitConverter.ToDouble(DblBytes, 0);
    }
@@ -58,7 +60,9 @@ public class BigEndianStoreBytes
    public float BitConverter_ToFloat()
    {
       if (BitConverter.IsLittleEndian)
+      {
          Array.Reverse(FltBytes);
+      }
 
       return BitConverter.ToSingle(FltBytes, 0);
    }
@@ -68,7 +72,9 @@ public class BigEndianStoreBytes
    public ulong BitConverter_ToUInt64()
    {
       if (BitConverter.IsLittleEndian)
+      {
          Array.Reverse(Ui64Bytes);
+      }
 
       return BitConverter.ToUInt64(Ui64Bytes, 0);
    }
@@ -78,7 +84,9 @@ public class BigEndianStoreBytes
    public long BitConverter_ToInt64()
    {
       if (BitConverter.IsLittleEndian)
+      {
          Array.Reverse(I64Bytes);
+      }
 
       return BitConverter.ToInt64(Ui64Bytes, 0);
    }
@@ -88,7 +96,9 @@ public class BigEndianStoreBytes
    public uint BitConverter_ToUInt32()
    {
       if (BitConverter.IsLittleEndian)
+      {
          Array.Reverse(Ui32Bytes);
+      }
 
       return BitConverter.ToUInt32(Ui32Bytes, 0);
    }
@@ -98,7 +108,9 @@ public class BigEndianStoreBytes
    public int BitConverter_ToInt32()
    {
       if (BitConverter.IsLittleEndian)
+      {
          Array.Reverse(Ui32Bytes);
+      }
 
       return BitConverter.ToInt32(I32Bytes, 0);
    }
@@ -108,7 +120,9 @@ public class BigEndianStoreBytes
    public ushort BitConverter_ToUInt16()
    {
       if (BitConverter.IsLittleEndian)
+      {
          Array.Reverse(Ui16Bytes);
+      }
 
       return BitConverter.ToUInt16(Ui16Bytes, 0);
    }
@@ -117,7 +131,9 @@ public class BigEndianStoreBytes
    public short BitConverter_ToInt16()
    {
       if (BitConverter.IsLittleEndian)
+      {
          Array.Reverse(I16Bytes);
+      }
 
       return BitConverter.ToInt16(I16Bytes, 0);
    }

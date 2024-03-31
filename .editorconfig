@@ -8,6 +8,7 @@ indent_size = 3
 
 # Microsoft .NET properties
 csharp_preferred_modifier_order = public, private, protected, internal, file, new, static, abstract, virtual, sealed, readonly, override, extern, unsafe, volatile, async, required:suggestion
+csharp_prefer_braces = true:none
 csharp_space_after_cast = true
 csharp_style_prefer_utf8_string_literals = true:suggestion
 csharp_style_var_elsewhere = true:suggestion
@@ -85,6 +86,7 @@ resharper_braces_for_foreach = required
 resharper_braces_for_lock = required
 resharper_braces_for_using = required
 resharper_braces_for_while = required
+resharper_braces_redundant = true
 resharper_cpp_allow_far_alignment = true
 resharper_csharp_align_first_arg_by_paren = true
 resharper_csharp_allow_far_alignment = true

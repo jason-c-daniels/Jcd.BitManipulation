@@ -130,20 +130,41 @@ public class BigEndianByteIndexerInt64Tests
    private static List<byte> CreateExpectedArray(int expectedSize, byte e0, byte e1, byte e2, byte e3, byte e4, byte e5, byte e6, byte e7)
    {
       var expected = new List<byte>(new[] { e0 });
+
       if (expectedSize >= 2)
+      {
          expected.Add(e1);
+      }
+
       if (expectedSize >= 3)
+      {
          expected.Add(e2);
+      }
+
       if (expectedSize >= 4)
+      {
          expected.Add(e3);
+      }
+
       if (expectedSize >= 5)
+      {
          expected.Add(e4);
+      }
+
       if (expectedSize >= 6)
+      {
          expected.Add(e5);
+      }
+
       if (expectedSize >= 7)
+      {
          expected.Add(e6);
+      }
+
       if (expectedSize == 8)
+      {
          expected.Add(e7);
+      }
 
       return expected;
    }

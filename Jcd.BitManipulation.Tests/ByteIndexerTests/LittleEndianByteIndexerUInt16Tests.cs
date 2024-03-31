@@ -123,8 +123,11 @@ public class LittleEndianByteIndexerUInt16Tests
    private static List<byte> CreateExpectedArray(int expectedSize, byte e0, byte e1)
    {
       var expected = new List<byte>(new[] { e0 });
+
       if (expectedSize >= 2)
+      {
          expected.Add(e1);
+      }
 
       return expected;
    }

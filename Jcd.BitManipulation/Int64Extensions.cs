@@ -210,7 +210,9 @@ public static class Int64Extensions
    public static byte ReadByte(this long value, int offset, Endian endian = Endian.Little)
    {
       if (endian == Endian.Little)
+      {
          return (byte) value.ReadBits(offset << 3, 8);
+      }
 
       var beOffset = sizeof(long) - offset - 1;
 
@@ -347,7 +349,9 @@ public static class Int64Extensions
    public static long StoreByte(this long value, byte @byte, int offset, Endian endian = Endian.Little)
    {
       if (endian == Endian.Little)
+      {
          return value.StoreBits(@byte, offset << 3, 8);
+      }
 
       var beOffset = sizeof(long) - offset - 1;
 

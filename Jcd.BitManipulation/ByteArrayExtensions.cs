@@ -35,7 +35,9 @@ public static class ByteArrayExtensions
    public static byte ToByte(this byte[] data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
+      {
          return 0;
+      }
 
       return endian == Endian.Little
                 ? data[0]
@@ -52,7 +54,9 @@ public static class ByteArrayExtensions
    public static sbyte ToSByte(this byte[] data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
+      {
          return 0;
+      }
 
       return endian == Endian.Little
                 ? (sbyte) data[0]
@@ -79,7 +83,9 @@ public static class ByteArrayExtensions
    public static ushort ToUInt16(this byte[] data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
+      {
          return 0;
+      }
 
       return endian == Endian.Little
                 ? (ushort) GetLittleEndianUInt64(data)
@@ -106,7 +112,9 @@ public static class ByteArrayExtensions
    public static short ToInt16(this byte[] data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
+      {
          return 0;
+      }
 
       return endian == Endian.Little
                 ? (short) GetLittleEndianUInt64(data)
@@ -133,7 +141,9 @@ public static class ByteArrayExtensions
    public static uint ToUInt32(this byte[] data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
+      {
          return 0;
+      }
 
       return endian == Endian.Little
                 ? (uint) GetLittleEndianUInt64(data)
@@ -160,7 +170,9 @@ public static class ByteArrayExtensions
    public static int ToInt32(this byte[] data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
+      {
          return 0;
+      }
 
       return endian == Endian.Little
                 ? (int) GetLittleEndianUInt64(data)
@@ -187,7 +199,9 @@ public static class ByteArrayExtensions
    public static ulong ToUInt64(this byte[] data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
+      {
          return 0;
+      }
 
       return endian == Endian.Little
                 ? GetLittleEndianUInt64(data)
@@ -214,7 +228,9 @@ public static class ByteArrayExtensions
    public static long ToInt64(this byte[] data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
+      {
          return 0;
+      }
 
       return endian == Endian.Little
                 ? (long) GetLittleEndianUInt64(data)
@@ -280,25 +296,39 @@ public static class ByteArrayExtensions
       var len = data.Length;
 
       if (StoreAndShift(ref result, data, 0, 1, len, size))
+      {
          return result;
+      }
 
       if (StoreAndShift(ref result, data, 1, 2, len, size))
+      {
          return result;
+      }
 
       if (StoreAndShift(ref result, data, 2, 3, len, size))
+      {
          return result;
+      }
 
       if (StoreAndShift(ref result, data, 3, 4, len, size))
+      {
          return result;
+      }
 
       if (StoreAndShift(ref result, data, 4, 5, len, size))
+      {
          return result;
+      }
 
       if (StoreAndShift(ref result, data, 5, 6, len, size))
+      {
          return result;
+      }
 
       if (StoreAndShift(ref result, data, 6, 7, len, size))
+      {
          return result;
+      }
 
       StoreAndShift(ref result, data, 7, 8, len, size);
 
@@ -309,10 +339,14 @@ public static class ByteArrayExtensions
    private static bool StoreAndShift(ref ulong result, byte[] data, int idx, int sizeComp, int len, int size)
    {
       if (idx < len)
+      {
          result = result.StoreBits(data[idx], 0, 8);
+      }
 
       if (size == sizeComp)
+      {
          return true;
+      }
 
       result <<= 8;
 
@@ -326,42 +360,58 @@ public static class ByteArrayExtensions
       var len = data.Length;
 
       if (len == 0)
+      {
          return result;
+      }
 
       result = result.StoreBits(data[0], 0, 8);
 
       if (len == 1)
+      {
          return result;
+      }
 
       result = result.StoreBits(data[1], 1 << 3, 8);
 
       if (len == 2)
+      {
          return result;
+      }
 
       result = result.StoreBits(data[2], 2 << 3, 8);
 
       if (len == 3)
+      {
          return result;
+      }
 
       result = result.StoreBits(data[3], 3 << 3, 8);
 
       if (len == 4)
+      {
          return result;
+      }
 
       result = result.StoreBits(data[4], 4 << 3, 8);
 
       if (len == 5)
+      {
          return result;
+      }
 
       result = result.StoreBits(data[5], 5 << 3, 8);
 
       if (len == 6)
+      {
          return result;
+      }
 
       result = result.StoreBits(data[6], 6 << 3, 8);
 
       if (len == 7)
+      {
          return result;
+      }
 
       result = result.StoreBits(data[7], 7 << 3, 8);
 

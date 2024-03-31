@@ -337,7 +337,9 @@ public static class DoubleExtensions
    public static double StoreByte(this double value, byte @byte, int offset, Endian endian = Endian.Little)
    {
       if (endian == Endian.Little)
+      {
          return value.StoreBits(@byte, offset << 3, 8);
+      }
 
       var beOffset = sizeof(double) - offset - 1;
 

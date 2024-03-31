@@ -141,9 +141,15 @@ internal static class Program
    private static void TimeBitManipulations(long iterations, bool report = true)
    {
       if (report)
+      {
          SystemInfo.Instance.RefreshInfo();
+      }
+
       if (report)
+      {
          Console.WriteLine($"  - Name: {nameof(TimeBitManipulations)}");
+      }
+
       const int opsPerIteration = 6;
       var data = 0;
       byte upperByte = 0;
@@ -163,21 +169,32 @@ internal static class Program
       sw.Stop();
 
       if (!report)
+      {
          return;
+      }
 
       var operationCount = iterations * opsPerIteration;
       var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
+
       if (data.ToString() == "super happy fun time")
+      {
          Console.WriteLine($"{upperByte} {data}");
+      }
    }
 
    private static void TimeStoreByteAndReadByteCalls(long iterations, bool report = true)
    {
       if (report)
+      {
          SystemInfo.Instance.RefreshInfo();
+      }
+
       if (report)
+      {
          Console.WriteLine($"  - Name: {nameof(TimeStoreByteAndReadByteCalls)}");
+      }
+
       const int opsPerIteration = 2;
       long data = 0;
       byte upperByte = 0;
@@ -194,21 +211,32 @@ internal static class Program
       sw.Stop();
 
       if (!report)
+      {
          return;
+      }
 
       var operationCount = iterations * opsPerIteration;
       var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
+
       if (data.ToString() == "super happy fun time")
+      {
          Console.WriteLine($"{upperByte} {data}");
+      }
    }
 
    private static void TimeStoreByteAndReadByteFromIndexerCalls(long iterations, bool report = true)
    {
       if (report)
+      {
          SystemInfo.Instance.RefreshInfo();
+      }
+
       if (report)
+      {
          Console.WriteLine($"  - Name: {nameof(TimeStoreByteAndReadByteFromIndexerCalls)}");
+      }
+
       const int opsPerIteration = 2;
       long data = 0;
       byte upperByte = 0;
@@ -225,21 +253,32 @@ internal static class Program
       sw.Stop();
 
       if (!report)
+      {
          return;
+      }
 
       var operationCount = iterations * opsPerIteration;
       var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
+
       if (data.ToString() == "super happy fun time")
+      {
          Console.WriteLine($"{upperByte} {data}");
+      }
    }
 
    private static void TimeStore8BytesToLongCalls(long iterations, bool report = true)
    {
       if (report)
+      {
          SystemInfo.Instance.RefreshInfo();
+      }
+
       if (report)
+      {
          Console.WriteLine($"  - Name: {nameof(TimeStore8BytesToLongCalls)}");
+      }
+
       const int opsPerIteration = 1;
       long data = 0;
       byte upperByte = 0;
@@ -254,21 +293,32 @@ internal static class Program
       sw.Stop();
 
       if (!report)
+      {
          return;
+      }
 
       var operationCount = iterations * opsPerIteration;
       var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
+
       if (data.ToString() == "super happy fun time")
+      {
          Console.WriteLine($"{upperByte} {data}");
+      }
    }
 
    private static void TimeStore4BytesToLongCalls(long iterations, bool report = true)
    {
       if (report)
+      {
          SystemInfo.Instance.RefreshInfo();
+      }
+
       if (report)
+      {
          Console.WriteLine($"  - Name: {nameof(TimeStore4BytesToLongCalls)}");
+      }
+
       const int opsPerIteration = 1;
       long data = 0;
       byte upperByte = 0;
@@ -283,21 +333,32 @@ internal static class Program
       sw.Stop();
 
       if (!report)
+      {
          return;
+      }
 
       var operationCount = iterations * opsPerIteration;
       var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
+
       if (data.ToString() == "super happy fun time")
+      {
          Console.WriteLine($"{upperByte} {data}");
+      }
    }
 
    private static void TimeStore2BytesToLongCalls(long iterations, bool report = true)
    {
       if (report)
+      {
          SystemInfo.Instance.RefreshInfo();
+      }
+
       if (report)
+      {
          Console.WriteLine($"  - Name: {nameof(TimeStore2BytesToLongCalls)}");
+      }
+
       const int opsPerIteration = 1;
       long data = 0;
       byte upperByte = 0;
@@ -312,21 +373,32 @@ internal static class Program
       sw.Stop();
 
       if (!report)
+      {
          return;
+      }
 
       var operationCount = iterations * opsPerIteration;
       var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
+
       if (data.ToString() == "super happy fun time")
+      {
          Console.WriteLine($"{upperByte} {data}");
+      }
    }
 
    private static void TimeStore8BytesToIndexerCalls(long iterations, bool report = true)
    {
       if (report)
+      {
          SystemInfo.Instance.RefreshInfo();
+      }
+
       if (report)
+      {
          Console.WriteLine($"  - Name: {nameof(TimeStore8BytesToIndexerCalls)}");
+      }
+
       const int opsPerIteration = 1;
       byte upperByte = 0;
       var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
@@ -341,21 +413,32 @@ internal static class Program
       sw.Stop();
 
       if (!report)
+      {
          return;
+      }
 
       var operationCount = iterations * opsPerIteration;
       var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
+
       if (data.ToString() == "super happy fun time")
+      {
          Console.WriteLine($"{upperByte} {data}");
+      }
    }
 
    private static void TimeStore4BytesToIndexerCalls(long iterations, bool report = true)
    {
       if (report)
+      {
          SystemInfo.Instance.RefreshInfo();
+      }
+
       if (report)
+      {
          Console.WriteLine($"  - Name: {nameof(TimeStore4BytesToIndexerCalls)}");
+      }
+
       const int opsPerIteration = 1;
       LittleEndianByteIndexer data = 0;
       byte upperByte = 0;
@@ -370,21 +453,32 @@ internal static class Program
       sw.Stop();
 
       if (!report)
+      {
          return;
+      }
 
       var operationCount = iterations * opsPerIteration;
       var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
+
       if (data.ToString() == "super happy fun time")
+      {
          Console.WriteLine($"{upperByte} {data}");
+      }
    }
 
    private static void TimeStore2BytesToIndexerCalls(long iterations, bool report = true)
    {
       if (report)
+      {
          SystemInfo.Instance.RefreshInfo();
+      }
+
       if (report)
+      {
          Console.WriteLine($"  - Name: {nameof(TimeStore2BytesToIndexerCalls)}");
+      }
+
       const int opsPerIteration = 1;
       LittleEndianByteIndexer data = 0;
       byte upperByte = 0;
@@ -399,21 +493,32 @@ internal static class Program
       sw.Stop();
 
       if (!report)
+      {
          return;
+      }
 
       var operationCount = iterations * opsPerIteration;
       var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
+
       if (data.ToString() == "super happy fun time")
+      {
          Console.WriteLine($"{upperByte} {data}");
+      }
    }
 
    private static void TimeByteArrayToUInt64LittleEndianByteIndexer(long iterations, bool report = true)
    {
       if (report)
+      {
          SystemInfo.Instance.RefreshInfo();
+      }
+
       if (report)
+      {
          Console.WriteLine($"  - Name: {nameof(TimeByteArrayToUInt64LittleEndianByteIndexer)}");
+      }
+
       const int opsPerIteration = 1;
       ulong data = 0;
       byte upperByte = 0;
@@ -429,21 +534,32 @@ internal static class Program
       sw.Stop();
 
       if (!report)
+      {
          return;
+      }
 
       var operationCount = iterations * opsPerIteration;
       var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
+
       if (data.ToString() == "super happy fun time")
+      {
          Console.WriteLine($"{upperByte} {data}");
+      }
    }
 
    private static void TimeByteArrayModificationInALoopSubtractFromOtherResults(long iterations, bool report = true)
    {
       if (report)
+      {
          SystemInfo.Instance.RefreshInfo();
+      }
+
       if (report)
+      {
          Console.WriteLine($"  - Name: {nameof(TimeByteArrayModificationInALoopSubtractFromOtherResults)}");
+      }
+
       const int opsPerIteration = 1;
       ulong data = 0;
       byte upperByte = 0;
@@ -458,21 +574,32 @@ internal static class Program
       sw.Stop();
 
       if (!report)
+      {
          return;
+      }
 
       var operationCount = iterations * opsPerIteration;
       var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
+
       if (bytes[0].ToString() == "super happy fun time")
+      {
          Console.WriteLine($"{upperByte} {data}");
+      }
    }
 
    private static void TimeByteArrayToUInt64BigEndianByteIndexer(long iterations, bool report = true)
    {
       if (report)
+      {
          SystemInfo.Instance.RefreshInfo();
+      }
+
       if (report)
+      {
          Console.WriteLine($"  - Name: {nameof(TimeByteArrayToUInt64BigEndianByteIndexer)}");
+      }
+
       const int opsPerIteration = 1;
       ulong data = 0;
       byte upperByte = 0;
@@ -488,21 +615,32 @@ internal static class Program
       sw.Stop();
 
       if (!report)
+      {
          return;
+      }
 
       var operationCount = iterations * opsPerIteration;
       var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
+
       if (data.ToString() == "super happy fun time")
+      {
          Console.WriteLine($"{upperByte} {data}");
+      }
    }
 
    private static void TimeLittleEndianByteIndexerCastOperations(long iterations, bool report = true)
    {
       if (report)
+      {
          SystemInfo.Instance.RefreshInfo();
+      }
+
       if (report)
+      {
          Console.WriteLine($"  - Name: {nameof(TimeLittleEndianByteIndexerCastOperations)}");
+      }
+
       const int opsPerIteration = 2;
       LittleEndianByteIndexer idx = 0L;
       long convertedBack = 0;
@@ -517,21 +655,32 @@ internal static class Program
       sw.Stop();
 
       if (!report)
+      {
          return;
+      }
 
       var operationCount = iterations * opsPerIteration;
       var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
+
       if (((long) idx).ToString() == "super happy fun time")
+      {
          Console.WriteLine($"{convertedBack}");
+      }
    }
 
    private static void TimeBigEndianByteIndexerCastOperations(long iterations, bool report = true)
    {
       if (report)
+      {
          SystemInfo.Instance.RefreshInfo();
+      }
+
       if (report)
+      {
          Console.WriteLine($"  - Name: {nameof(TimeBigEndianByteIndexerCastOperations)}");
+      }
+
       const int opsPerIteration = 2;
       BigEndianByteIndexer idx = 0L;
       long convertedBack = 0;
@@ -546,21 +695,32 @@ internal static class Program
       sw.Stop();
 
       if (!report)
+      {
          return;
+      }
 
       var operationCount = iterations * opsPerIteration;
       var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
+
       if (((long) idx).ToString() == "super happy fun time")
+      {
          Console.WriteLine($"{convertedBack}");
+      }
    }
 
    private static void TimeReadOnlySpanOfByteToUInt64LittleEndian(long iterations, bool report = true)
    {
       if (report)
+      {
          SystemInfo.Instance.RefreshInfo();
+      }
+
       if (report)
+      {
          Console.WriteLine($"  - Name: {nameof(TimeReadOnlySpanOfByteToUInt64LittleEndian)}");
+      }
+
       const int opsPerIteration = 1;
       ulong data = 0;
       byte upperByte = 0;
@@ -577,21 +737,32 @@ internal static class Program
       sw.Stop();
 
       if (!report)
+      {
          return;
+      }
 
       var operationCount = iterations * opsPerIteration;
       var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
+
       if (data.ToString() == "super happy fun time")
+      {
          Console.WriteLine($"{upperByte} {data}");
+      }
    }
 
    private static void TimeReadOnlySpanOfByteToUInt64BigEndian(long iterations, bool report = true)
    {
       if (report)
+      {
          SystemInfo.Instance.RefreshInfo();
+      }
+
       if (report)
+      {
          Console.WriteLine($"  - Name: {nameof(TimeReadOnlySpanOfByteToUInt64BigEndian)}");
+      }
+
       const int opsPerIteration = 1;
       ulong data = 0;
       byte upperByte = 0;
@@ -608,21 +779,32 @@ internal static class Program
       sw.Stop();
 
       if (!report)
+      {
          return;
+      }
 
       var operationCount = iterations * opsPerIteration;
       var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
+
       if (data.ToString() == "super happy fun time")
+      {
          Console.WriteLine($"{upperByte} {data}");
+      }
    }
 
    private static void TimeByteArrayToUInt64_BitConverter_NativeEndian(long iterations, bool report = true)
    {
       if (report)
+      {
          SystemInfo.Instance.RefreshInfo();
+      }
+
       if (report)
+      {
          Console.WriteLine($"  - Name: {nameof(TimeByteArrayToUInt64_BitConverter_NativeEndian)}");
+      }
+
       const int opsPerIteration = 1;
       ulong data = 0;
       byte upperByte = 0;
@@ -638,21 +820,32 @@ internal static class Program
       sw.Stop();
 
       if (!report)
+      {
          return;
+      }
 
       var operationCount = iterations * opsPerIteration;
       var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
+
       if (data.ToString() == "super happy fun time")
+      {
          Console.WriteLine($"{upperByte} {data}");
+      }
    }
 
    private static void TimeByteArrayToUInt64_BitConverter_ReversedFromNativeEndian(long iterations, bool report = true)
    {
       if (report)
+      {
          SystemInfo.Instance.RefreshInfo();
+      }
+
       if (report)
+      {
          Console.WriteLine($"  - Name: {nameof(TimeByteArrayToUInt64_BitConverter_ReversedFromNativeEndian)}");
+      }
+
       const int opsPerIteration = 1;
       ulong data = 0;
       byte upperByte = 0;
@@ -669,13 +862,18 @@ internal static class Program
       sw.Stop();
 
       if (!report)
+      {
          return;
+      }
 
       var operationCount = iterations * opsPerIteration;
       var stats = CalculateStats(sw, operationCount, iterations);
       ReportStats(stats, operationCount, iterations);
+
       if (data.ToString() == "super happy fun time")
+      {
          Console.WriteLine($"{upperByte} {data}");
+      }
    }
 
    private static void ReportStats(RunStats stats, long operationCount, long iterations)
@@ -702,8 +900,12 @@ internal static class Program
       SystemInfo.Instance.RefreshInfo();
       var cpuF2 = SystemInfo.Instance.CurrentCpuFrequency;
       var freq = (cpuF1 + cpuF2) / 2;
+
       if (freq < 1.As(Frequencies.Gigahertz))
+      {
          freq = freq.To(Frequencies.Megahertz);
+      }
+
       var duration = stopwatch.Elapsed.As(Durations.Microsecond);
       var durationPer = (duration / operationCount).To(Durations.Nanosecond);
 
@@ -1095,17 +1297,26 @@ internal static class Program
       Console.WriteLine(bi.ToString()); // outputs: 0b1011110001010101
 
       if (bi[0])
+      {
          Console.WriteLine("Index 0 is set/true!"); // this will write to the output.
+      }
 
       if (bi[1])
+      {
          Console.WriteLine("Index 1 is set/true!"); // this will not write to the output.
+      }
 
       if (bi[10])
+      {
          Console.WriteLine("Index 10 is set/true!");
+      }
 
       bi[1] = true; // bi is now 0b1011110001010111
+
       if (bi[1])
+      {
          Console.WriteLine("Index 1 is set/true!"); // this will write to the output.
+      }
 
       Console.WriteLine(bi.ToString()); // outputs: 0b1011110001010111
 

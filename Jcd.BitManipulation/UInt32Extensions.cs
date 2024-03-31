@@ -210,7 +210,9 @@ public static class UInt32Extensions
    public static byte ReadByte(this uint value, int offset, Endian endian = Endian.Little)
    {
       if (endian == Endian.Little)
+      {
          return (byte) value.ReadBits(offset << 3, 8);
+      }
 
       var beOffset = sizeof(uint) - offset - 1;
 
@@ -350,7 +352,9 @@ public static class UInt32Extensions
    public static uint StoreByte(this uint value, byte @byte, int offset, Endian endian = Endian.Little)
    {
       if (endian == Endian.Little)
+      {
          return value.StoreBits(@byte, offset << 3, 8);
+      }
 
       var beOffset = sizeof(uint) - offset - 1;
 

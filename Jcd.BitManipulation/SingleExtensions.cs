@@ -352,7 +352,9 @@ public static class SingleExtensions
    public static float StoreByte(this float value, byte @byte, int offset, Endian endian = Endian.Little)
    {
       if (endian == Endian.Little)
+      {
          return value.StoreBits(@byte, offset << 3, 8);
+      }
 
       var beOffset = sizeof(float) - offset - 1;
 

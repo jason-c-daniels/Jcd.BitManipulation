@@ -700,6 +700,9 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public BigEndianByteIndexer StoreBytes(byte[] bytes, int offset, int size = -1)
    {
+      if (bytes is null)
+         throw new ArgumentNullException(nameof(bytes));
+
       if (size == -1)
          size = Length - offset;
 

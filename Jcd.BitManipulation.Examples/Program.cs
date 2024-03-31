@@ -22,6 +22,9 @@ using Jcd.Units.UnitsOfMeasure.SI;
 #pragma warning disable S1481
 #pragma warning disable S1854
 #pragma warning disable S125
+#pragma warning disable S3254
+#pragma warning disable S4055
+#pragma warning disable S4056
 
 #endregion
 
@@ -114,11 +117,11 @@ internal static class Program
    {
       var sysInfo = SystemInfo.Instance;
 
-      var cpu = sysInfo.CPU;
-      Console.WriteLine($"Run Date and Time: {DateTime.UtcNow:yyyy'-'MM'-'dd' 'HH':'mm':'ss} UTC");
+      var cpu = sysInfo.Cpu;
+      Console.WriteLine($"Run Date and Time: {DateTimeOffset.UtcNow:yyyy'-'MM'-'dd' 'HH':'mm':'ss} UTC");
       Console.WriteLine("CPU Info:");
       Console.WriteLine($"  Name: {cpu.Name}");
-      Console.WriteLine($"  Maximum CPU Frequency: {sysInfo.MaximumCPUFrequency:n2}");
+      Console.WriteLine($"  Maximum CPU Frequency: {sysInfo.MaximumCpuFrequency:n2}");
       Console.WriteLine($"  Manufacturer: {cpu.Manufacturer}");
       Console.WriteLine($"  Description: {cpu.Description}");
       Console.WriteLine($"  ProcId: {cpu.ProcessorId}");
@@ -695,9 +698,9 @@ internal static class Program
 
    private static RunStats CalculateStats(Stopwatch stopwatch, long operationCount, long iterations)
    {
-      var cpuF1 = SystemInfo.Instance.CurrentCPUFrequency;
+      var cpuF1 = SystemInfo.Instance.CurrentCpuFrequency;
       SystemInfo.Instance.RefreshInfo();
-      var cpuF2 = SystemInfo.Instance.CurrentCPUFrequency;
+      var cpuF2 = SystemInfo.Instance.CurrentCpuFrequency;
       var freq = (cpuF1 + cpuF2) / 2;
       if (freq < 1.As(Frequencies.Gigahertz))
          freq = freq.To(Frequencies.Megahertz);

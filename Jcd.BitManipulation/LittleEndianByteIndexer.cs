@@ -586,12 +586,16 @@ public ref struct LittleEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public LittleEndianByteIndexer StoreBytes(byte[] bytes, int offset, int size = -1)
    {
+      if (bytes is null)
+         throw new ArgumentNullException(nameof(bytes));
+
       if (size == -1)
          size = Length - offset;
 
       var len = size + offset > Length
                    ? Length - offset
                    : size;
+
       var cnt = Math.Min(len, bytes.Length);
 
       if (cnt == 0)

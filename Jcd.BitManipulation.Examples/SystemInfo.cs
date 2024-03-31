@@ -26,9 +26,9 @@ public class SystemInfo
    {
       hardwareInfo = new HardwareInfo(false);
       hardwareInfo.RefreshCPUList(false);
-      CPU = hardwareInfo.CpuList[0];
+      Cpu = hardwareInfo.CpuList[0];
 
-      MaximumCPUFrequency = CPU.MaxClockSpeed.As(MHz).To(GHz);
+      MaximumCpuFrequency = Cpu.MaxClockSpeed.As(MHz).To(GHz);
 
       RefreshInfo();
    }
@@ -36,19 +36,19 @@ public class SystemInfo
    public static SystemInfo Instance { get; } = new();
 
    // ReSharper disable once InconsistentNaming
-   public CPU CPU { get; private set; }
+   public CPU Cpu { get; private set; }
 
    // ReSharper disable once InconsistentNaming
-   public Quantity<Frequency> MaximumCPUFrequency { get; }
+   public Quantity<Frequency> MaximumCpuFrequency { get; }
 
    // ReSharper disable once InconsistentNaming
-   public Quantity<Frequency> CurrentCPUFrequency { get; private set; }
+   public Quantity<Frequency> CurrentCpuFrequency { get; private set; }
 
    public void RefreshInfo()
    {
       hardwareInfo.RefreshCPUList(false);
-      CPU = hardwareInfo.CpuList[0];
-      CurrentCPUFrequency = GetCurrentClockSpeed(CPU);
+      Cpu = hardwareInfo.CpuList[0];
+      CurrentCpuFrequency = GetCurrentClockSpeed(Cpu);
    }
 
    private static Quantity<Frequency> GetCurrentClockSpeed(CPU cpu)

@@ -7,6 +7,7 @@ Tests if none of the bits from the bitmask are set on a [System.Int64](https://d
 ```csharp
 public static bool AreNoBitsSet(this long data, Jcd.BitManipulation.BitMask bitmask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int64Extensions.AreNoBitsSet(thislong,Jcd.BitManipulation.BitMask).data'></a>
@@ -19,7 +20,7 @@ The data to inspect.
 
 `bitmask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
-the bits to test.
+The bits to test.
 
 #### Returns
 

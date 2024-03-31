@@ -7,10 +7,11 @@ Constructs a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMa
 ```csharp
 public BitMask(byte bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.BitMask(byte).bits'></a>
 
 `bits` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
-The [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') to use
+The bits to use for the [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')

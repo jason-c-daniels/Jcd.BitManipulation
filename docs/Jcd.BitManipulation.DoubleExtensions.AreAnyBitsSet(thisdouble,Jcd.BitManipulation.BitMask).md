@@ -2,11 +2,12 @@
 
 ## DoubleExtensions.AreAnyBitsSet(this double, BitMask) Method
 
-Tests if any bits from the bitmask are set on an [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double').
+Tests if any bits from the bitmask are set on a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double').
 
 ```csharp
 public static bool AreAnyBitsSet(this double data, Jcd.BitManipulation.BitMask bitmask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.AreAnyBitsSet(thisdouble,Jcd.BitManipulation.BitMask).data'></a>
@@ -19,7 +20,7 @@ The data to inspect.
 
 `bitmask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
-the bits to test.
+The bits to test.
 
 #### Returns
 

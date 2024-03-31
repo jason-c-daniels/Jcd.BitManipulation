@@ -7,6 +7,7 @@ Tests if any bits from the bitmask are set on a [System.UInt64](https://docs.mic
 ```csharp
 public static bool AreAnyBitsSet(this ulong data, Jcd.BitManipulation.BitMask bitmask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt64Extensions.AreAnyBitsSet(thisulong,Jcd.BitManipulation.BitMask).data'></a>
@@ -19,7 +20,7 @@ The data to inspect.
 
 `bitmask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
-the bits to test.
+The bits to test.
 
 #### Returns
 

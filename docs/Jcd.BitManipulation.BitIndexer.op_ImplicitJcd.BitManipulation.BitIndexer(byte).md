@@ -7,15 +7,16 @@ Automatically Convert from a [System.Byte](https://docs.microsoft.com/en-us/dotn
 ```csharp
 public static Jcd.BitManipulation.BitIndexer implicit operator BitIndexer(byte bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexer.op_ImplicitJcd.BitManipulation.BitIndexer(byte).bits'></a>
 
 `bits` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
-the initial value for the indexer's backing store
+The initial value for the indexed bits.
 
 #### Returns
 
 [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')
-A new [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')
+A new [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer').

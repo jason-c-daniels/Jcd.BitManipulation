@@ -3,7 +3,14 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="\Jcd.BitManipulation.Benchmark\benchmarks\out\results\Jcd.BitManipulation.Benchmark.BigEndianReadBytes-report.csv">
+        <entry key="\Jcd.BitManipulation.Benchmark\benchmarks\out\results\Jcd.BitManipulation.Benchmark.BigEndianStoreByte-report.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\Jcd.BitManipulation.Benchmark\benchmarks\out\results\Jcd.BitManipulation.Benchmark.LittleEndianStoreByte-report.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

@@ -2,18 +2,19 @@
 
 ## SingleExtensions.ToBooleanArray(this float) Method
 
-Convert a float into an array of bools
+Converts a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single') into an array of values with the lease significant bit at index 0.
 
 ```csharp
 public static bool[] ToBooleanArray(this float bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SingleExtensions.ToBooleanArray(thisfloat).bits'></a>
 
 `bits` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
-the long to convert
+The value to convert to an array of [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean') values.
 
 #### Returns
 

@@ -7,6 +7,7 @@ Automatically convert to [System.Int64](https://docs.microsoft.com/en-us/dotnet/
 ```csharp
 public static long implicit operator long(Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.op_Implicitlong(Jcd.BitManipulation.BitMask).mask'></a>

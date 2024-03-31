@@ -7,6 +7,7 @@ Automatically convert to [System.UInt16](https://docs.microsoft.com/en-us/dotnet
 ```csharp
 public static ushort implicit operator ushort(Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.op_Implicitushort(Jcd.BitManipulation.BitMask).mask'></a>

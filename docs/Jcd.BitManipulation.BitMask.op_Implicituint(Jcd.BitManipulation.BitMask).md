@@ -7,6 +7,7 @@ Automatically convert to [System.UInt32](https://docs.microsoft.com/en-us/dotnet
 ```csharp
 public static uint implicit operator uint(Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.op_Implicituint(Jcd.BitManipulation.BitMask).mask'></a>

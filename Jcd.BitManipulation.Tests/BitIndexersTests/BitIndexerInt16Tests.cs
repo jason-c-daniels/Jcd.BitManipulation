@@ -48,11 +48,10 @@ public class BitIndexerTests
    [InlineData(0b1010101001000001)]
    [InlineData(0b1011111001000001)]
    [InlineData(0b0100000101000001)]
-   public void Indexer_Returns_Correct_Bit_Value(uint data)
+   public void Indexer_Returns_Correct_Bit_Value(ushort value)
    {
-      var value = (short) data;
       BitIndexer indexer = value;
-      short mask = 0;
+      ushort mask = 0;
 
       for (var i = 0; i < indexer.Length; i++)
       {
@@ -71,10 +70,10 @@ public class BitIndexerTests
    public void Indexer_Sets_Correct_Bit_Value(int index)
    {
       BitIndexer indexer = 0;
-      short expected = 0;
+      ushort expected = 0;
       expected = expected.SetBit(index);
       indexer[index] = true;
-      Assert.Equal(expected, (short) indexer);
+      Assert.Equal(expected, (ushort) indexer);
       Assert.True(indexer[index]);
       indexer[index] = false;
       Assert.False(indexer[index]);

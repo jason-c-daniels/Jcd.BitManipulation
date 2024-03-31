@@ -5,30 +5,30 @@
 Extract a subset of bits specified by a bitmask and right align the bits by the offset.
 
 ```csharp
-public static uint ReadBits(this uint value, int offset, Jcd.BitManipulation.BitMask mask);
+public static uint ReadBits(this uint value, int shift, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt32Extensions.ReadBits(thisuint,int,Jcd.BitManipulation.BitMask).value'></a>
 
 `value` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
-the source of bits to read
+The source of the bits to read.
 
-<a name='Jcd.BitManipulation.UInt32Extensions.ReadBits(thisuint,int,Jcd.BitManipulation.BitMask).offset'></a>
+<a name='Jcd.BitManipulation.UInt32Extensions.ReadBits(thisuint,int,Jcd.BitManipulation.BitMask).shift'></a>
 
-`offset` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+`shift` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-the bit offset to read from
+The bit offset to start reading from.
 
 <a name='Jcd.BitManipulation.UInt32Extensions.ReadBits(thisuint,int,Jcd.BitManipulation.BitMask).mask'></a>
 
 `mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
-the bitmask of which bits to read.
-Zeroed bits in the mask will always extract 0 from the source.
+The bitmask specifying which bits to read.
 
 #### Returns
 
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
-The right shifted extracted bits
+The extracted bits right shifted by the specified amount.

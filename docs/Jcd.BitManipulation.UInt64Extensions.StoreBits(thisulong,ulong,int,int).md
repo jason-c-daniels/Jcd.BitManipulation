@@ -2,18 +2,19 @@
 
 ## UInt64Extensions.StoreBits(this ulong, ulong, int, int) Method
 
-Stores a value at the specified bit location within the variable.
+Stores a range of bits to the value, from a source value, and returns the modified value.
 
 ```csharp
 public static ulong StoreBits(this ulong value, ulong source, int offset, int size);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt64Extensions.StoreBits(thisulong,ulong,int,int).value'></a>
 
 `value` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.UInt64Extensions.StoreBits(thisulong,ulong,int,int).source'></a>
 

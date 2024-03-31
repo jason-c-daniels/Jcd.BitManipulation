@@ -2,11 +2,12 @@
 
 ## LittleEndianByteIndexer.Length Property
 
-The number of bytes indexable by this indexer.
+The number of bytes this type will index
 
 ```csharp
-public int Length { get; }
+public readonly int Length { get; }
 ```
 
 #### Property Value
+
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')

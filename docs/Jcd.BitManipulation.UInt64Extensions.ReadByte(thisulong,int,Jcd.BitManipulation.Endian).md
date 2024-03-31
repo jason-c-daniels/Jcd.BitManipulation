@@ -2,24 +2,25 @@
 
 ## UInt64Extensions.ReadByte(this ulong, int, Endian) Method
 
-Read a single byte from the value at the specified byte offset.
+Reads a single byte from the value at the specified byte offset.
 
 ```csharp
 public static byte ReadByte(this ulong value, int offset, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ReadByte(thisulong,int,Jcd.BitManipulation.Endian).value'></a>
 
 `value` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
-The value to be read.
+The value to read the byte from.
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ReadByte(thisulong,int,Jcd.BitManipulation.Endian).offset'></a>
 
 `offset` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-the offset of the byte to write
+The offset of where to store the byte.
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ReadByte(thisulong,int,Jcd.BitManipulation.Endian).endian'></a>
 

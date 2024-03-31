@@ -7,6 +7,7 @@ Implicitly converts the [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndi
 ```csharp
 public static ushort implicit operator ushort(Jcd.BitManipulation.LittleEndianByteIndexer indexer);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicitushort(Jcd.BitManipulation.LittleEndianByteIndexer).indexer'></a>

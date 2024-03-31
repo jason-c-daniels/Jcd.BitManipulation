@@ -27,7 +27,7 @@ public class BitIndexerUInt64Tests
    public void Implicit_Operator_To_BitIndexerUInt64_From_UInt64_Sets_All_Bits_Correctly(ulong data)
    {
       BitIndexer indexer = data;
-      Assert.Equal(data, indexer.Bits);
+      Assert.Equal(data, (ulong) indexer);
    }
 
    [Theory]

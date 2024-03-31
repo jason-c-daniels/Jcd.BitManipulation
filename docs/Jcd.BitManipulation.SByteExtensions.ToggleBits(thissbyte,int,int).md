@@ -2,19 +2,19 @@
 
 ## SByteExtensions.ToggleBits(this sbyte, int, int) Method
 
-Toggles bits and size.
-The default values result in toggling all bits.
+Toggles the specified range of bits and returns the modified value.
 
 ```csharp
 public static sbyte ToggleBits(this sbyte value, int offset=0, int size=8);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SByteExtensions.ToggleBits(thissbyte,int,int).value'></a>
 
 `value` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.SByteExtensions.ToggleBits(thissbyte,int,int).offset'></a>
 

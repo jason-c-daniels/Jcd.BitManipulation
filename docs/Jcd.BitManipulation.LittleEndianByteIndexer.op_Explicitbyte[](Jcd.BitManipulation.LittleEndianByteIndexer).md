@@ -7,6 +7,7 @@ Explicitly converts the [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndi
 ```csharp
 public static byte[] explicit operator byte[](Jcd.BitManipulation.LittleEndianByteIndexer indexer);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexer.op_Explicitbyte[](Jcd.BitManipulation.LittleEndianByteIndexer).indexer'></a>

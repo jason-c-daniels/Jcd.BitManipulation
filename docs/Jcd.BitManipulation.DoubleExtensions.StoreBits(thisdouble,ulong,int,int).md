@@ -2,18 +2,19 @@
 
 ## DoubleExtensions.StoreBits(this double, ulong, int, int) Method
 
-Stores a value at the specified bit location within the variable.
+Stores a range of bits to the value, from a source value, and returns the modified value.
 
 ```csharp
 public static double StoreBits(this double value, ulong source, int offset, int size);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.StoreBits(thisdouble,ulong,int,int).value'></a>
 
 `value` [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.DoubleExtensions.StoreBits(thisdouble,ulong,int,int).source'></a>
 

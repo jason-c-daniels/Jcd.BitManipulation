@@ -7,13 +7,14 @@ Converts a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Do
 ```csharp
 public static long BitwiseToInt64(this double value);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.BitwiseToInt64(thisdouble).value'></a>
 
 `value` [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 
-The value to convert
+The value to convert.
 
 #### Returns
 

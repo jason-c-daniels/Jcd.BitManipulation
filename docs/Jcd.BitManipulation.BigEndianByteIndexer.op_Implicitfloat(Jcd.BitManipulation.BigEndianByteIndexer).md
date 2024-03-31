@@ -7,6 +7,7 @@ Implicitly converts the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByte
 ```csharp
 public static float implicit operator float(Jcd.BitManipulation.BigEndianByteIndexer indexer);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BigEndianByteIndexer.op_Implicitfloat(Jcd.BitManipulation.BigEndianByteIndexer).indexer'></a>

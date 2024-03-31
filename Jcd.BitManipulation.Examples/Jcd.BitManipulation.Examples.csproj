@@ -2,11 +2,11 @@
 
    <PropertyGroup>
       <OutputType>Exe</OutputType>
-      <TargetFramework>net6.0</TargetFramework>
       <LangVersion>default</LangVersion>
       <Nullable>enable</Nullable>
       <Configurations>Debug;Release;Release - Net462;Debug - Net462</Configurations>
       <Platforms>AnyCPU</Platforms>
+      <TargetFramework>net8.0</TargetFramework>
    </PropertyGroup>
 
    <ItemGroup>

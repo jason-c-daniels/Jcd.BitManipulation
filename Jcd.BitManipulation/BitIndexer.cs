@@ -14,8 +14,40 @@ using System.Text;
 namespace Jcd.BitManipulation;
 
 /// <summary>
-/// Provides enumeration and indexed access to the bits on a stored <see cref="ulong" />.
+/// Provides indexer style access to the bits on a copied value.
 /// </summary>
+/// <example>
+/// <para>
+/// Examples:
+/// <code>
+/// ushort ui16 = 0b1011110001010101;
+/// BitIndexer bi = ui16;
+/// Console.WriteLine(bi.ToString()); // outputs: 0b1011110001010101
+/// 
+/// if (bi[0])
+///    Console.WriteLine("Index 0 is set/true!"); // this will write to the output.
+/// 
+/// if (bi[1])
+///    Console.WriteLine("Index 1 is set/true!"); // this will not write to the output.
+/// 
+/// if (bi[10])
+///    Console.WriteLine("Index 10 is set/true!");
+/// 
+/// bi[1] = true; // bi is now 0b1011110001010111
+/// if (bi[1])
+///    Console.WriteLine("Index 1 is set/true!"); // this will write to the output.
+/// 
+/// Console.WriteLine(bi.ToString()); // outputs: 0b1011110001010111
+/// 
+/// var flags = bi[0..^0]; // flags = [true, true, true, false, true, false, true, false, false, false, true, true, true, true, false, true];
+/// Array.Reverse(flags);
+/// var ui16Reversed=flags.ToUInt16(); // ui16Reversed = 0b1110101000111101;
+/// BitIndexer biReversed = ui16Reversed;
+/// 
+/// Console.WriteLine(biReversed.ToString()); // outputs: 0b1110101000111101
+/// </code>
+/// </para>
+/// </example>
 public ref struct BitIndexer
 {
    #region Constructors
@@ -23,8 +55,8 @@ public ref struct BitIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private BitIndexer(ulong bits, int bitSize = 64)
    {
-      BitSize = bitSize;
-      Bits = bits;
+      Length = bitSize;
+      this.bits = bits;
    }
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -88,10 +120,10 @@ public ref struct BitIndexer
 
    private BitIndexer(IReadOnlyList<bool> array, int bitSize)
    {
-      BitSize = bitSize;
-      Bits = 0;
+      Length = bitSize;
+      bits = 0;
 
-      for (var i = 0; i < array.Count && i < BitSize; i++)
+      for (var i = 0; i < array.Count && i < Length; i++)
          this[i] = array[i];
    }
 
@@ -109,19 +141,15 @@ public ref struct BitIndexer
    #endregion
 
    /// <summary>
-   /// The number of bits this type will index
+   /// The number of bits indexable by this <see cref="BitIndexer" /> instance.
    /// </summary>
-   public int BitSize { get; } = 64;
+   public int Length { get; } = 64;
 
    /// <summary>
    /// The backing store
    /// </summary>
-   internal ulong Bits { get; private set; } = 0UL;
-
-   /// <summary>
-   /// The number of bits indexable by this indexer.
-   /// </summary>
-   public int Length => BitSize;
+   /// <exclude />
+   private ulong bits;
 
    /// <summary>
    /// Gets or sets individual bits within the backing store.
@@ -130,37 +158,36 @@ public ref struct BitIndexer
    public bool this[int index]
    {
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
-      readonly get => index < BitSize && Bits.ReadBit(index);
+      readonly get => index < Length && bits.ReadBit(index);
 
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       set
       {
-         if (index >= BitSize)
+         if (index >= Length)
             return;
 
-         Bits = Bits.StoreBit(value, index);
+         bits = bits.StoreBit(value, index);
       }
    }
 
    /// <summary>
-   /// Get a subset of bits given a starting offset and length.
+   /// Gets a subset of bits given a starting offset and length.
    /// </summary>
    /// <param name="start">The starting bit offset</param>
    /// <param name="length">The number of bits to extract</param>
-   /// <returns>an array of bools for the subset of bits</returns>
+   /// <returns>a array of bools for the subset of bits</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public readonly
 
-      // ReSharper disable once ReturnTypeCanBeEnumerable.Global
-      bool[] Slice(int start, int length)
+   // ReSharper disable once ReturnTypeCanBeEnumerable.Global
+   public readonly bool[] Slice(int start, int length)
    {
-      var len = length + start > BitSize
-                   ? BitSize - start
+      var len = length + start > Length
+                   ? Length - start
                    : length;
       var slice = new bool[len];
       var j = start;
       for (var i = 0; i < len; i++, j++)
-         slice[i] = Bits.ReadBit(j);
+         slice[i] = bits.ReadBit(j);
 
       return slice;
    }
@@ -170,8 +197,8 @@ public ref struct BitIndexer
    /// <summary>
    /// Automatically Convert from a <see cref="ulong" /> to a <see cref="BitIndexer" />
    /// </summary>
-   /// <param name="bits">the initial value for the indexer's backing store</param>
-   /// <returns>A new <see cref="BitIndexer" /></returns>
+   /// <param name="bits">The initial value for the indexed bits.</param>
+   /// <returns>A new <see cref="BitIndexer" />.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitIndexer(double bits)
    {
@@ -179,21 +206,21 @@ public ref struct BitIndexer
    }
 
    /// <summary>
-   /// Automatically convert from a BitIndexer to a <see cref="ulong" />
+   /// Automatically convert from a <see cref="BitIndexer" /> to a <see cref="ulong" />
    /// </summary>
-   /// <param name="indexer">the indexer to convert from</param>
-   /// <returns>the bits converted to a <see cref="ulong" /> </returns>
+   /// <param name="indexer">The indexer to convert from.</param>
+   /// <returns>The bits converted to a <see cref="ulong" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator double(BitIndexer indexer)
    {
-      return indexer.Bits.BitwiseToDouble();
+      return indexer.bits.BitwiseToDouble();
    }
 
    /// <summary>
    /// Automatically Convert from a <see cref="ulong" /> to a <see cref="BitIndexer" />
    /// </summary>
-   /// <param name="bits">the initial value for the indexer's backing store</param>
-   /// <returns>A new <see cref="BitIndexer" /></returns>
+   /// <param name="bits">The initial value for the indexed bits.</param>
+   /// <returns>A new <see cref="BitIndexer" />.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitIndexer(float bits)
    {
@@ -203,8 +230,8 @@ public ref struct BitIndexer
    /// <summary>
    /// Automatically convert from a BitIndexer to a <see cref="ulong" />
    /// </summary>
-   /// <param name="indexer">the indexer to convert from</param>
-   /// <returns>the bits converted to a <see cref="ulong" /> </returns>
+   /// <param name="indexer">The indexer to convert from.</param>
+   /// <returns>The bits converted to a <see cref="ulong" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator float(BitIndexer indexer)
    {
@@ -214,8 +241,8 @@ public ref struct BitIndexer
    /// <summary>
    /// Automatically Convert from a <see cref="ulong" /> to a <see cref="BitIndexer" />
    /// </summary>
-   /// <param name="bits">the initial value for the indexer's backing store</param>
-   /// <returns>A new <see cref="BitIndexer" /></returns>
+   /// <param name="bits">The initial value for the indexed bits.</param>
+   /// <returns>A new <see cref="BitIndexer" />.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitIndexer(ulong bits)
    {
@@ -225,19 +252,19 @@ public ref struct BitIndexer
    /// <summary>
    /// Automatically convert from a BitIndexer to a <see cref="ulong" />
    /// </summary>
-   /// <param name="indexer">the indexer to convert from</param>
-   /// <returns>the bits converted to a <see cref="ulong" /> </returns>
+   /// <param name="indexer">The indexer to convert from.</param>
+   /// <returns>The bits converted to a <see cref="ulong" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator ulong(BitIndexer indexer)
    {
-      return indexer.Bits;
+      return indexer.bits;
    }
 
    /// <summary>
    /// Automatically Convert from a <see cref="long" /> to a <see cref="BitIndexer" />
    /// </summary>
-   /// <param name="bits">the initial value for the indexer's backing store</param>
-   /// <returns>A new <see cref="BitIndexer" /></returns>
+   /// <param name="bits">The initial value for the indexed bits.</param>
+   /// <returns>A new <see cref="BitIndexer" />.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitIndexer(long bits)
    {
@@ -247,19 +274,19 @@ public ref struct BitIndexer
    /// <summary>
    /// Automatically convert from a BitIndexer to a <see cref="long" />
    /// </summary>
-   /// <param name="indexer">the indexer to convert from</param>
-   /// <returns>the bits converted to a <see cref="long" /> </returns>
+   /// <param name="indexer">The indexer to convert from.</param>
+   /// <returns>The bits converted to a <see cref="long" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator long(BitIndexer indexer)
    {
-      return (long) indexer.Bits;
+      return (long) indexer.bits;
    }
 
    /// <summary>
    /// Automatically Convert from a <see cref="uint" /> to a <see cref="BitIndexer" />
    /// </summary>
-   /// <param name="bits">the initial value for the indexer's backing store</param>
-   /// <returns>A new <see cref="BitIndexer" /></returns>
+   /// <param name="bits">The initial value for the indexed bits.</param>
+   /// <returns>A new <see cref="BitIndexer" />.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitIndexer(uint bits)
    {
@@ -269,19 +296,19 @@ public ref struct BitIndexer
    /// <summary>
    /// Automatically convert from a BitIndexer to a <see cref="uint" />
    /// </summary>
-   /// <param name="indexer">the indexer to convert from</param>
-   /// <returns>the lower 32 bits converted to a <see cref="uint" /> </returns>
+   /// <param name="indexer">The indexer to convert from.</param>
+   /// <returns>The lower 32 bits converted to a <see cref="uint" />.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator uint(BitIndexer indexer)
    {
-      return (uint) indexer.Bits;
+      return (uint) indexer.bits;
    }
 
    /// <summary>
    /// Automatically Convert from a <see cref="int" /> to a <see cref="BitIndexer" />
    /// </summary>
-   /// <param name="bits">the initial value for the indexer's backing store</param>
-   /// <returns>A new <see cref="BitIndexer" /></returns>
+   /// <param name="bits">The initial value for the indexed bits.</param>
+   /// <returns>A new <see cref="BitIndexer" />.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitIndexer(int bits)
    {
@@ -291,19 +318,19 @@ public ref struct BitIndexer
    /// <summary>
    /// Automatically convert from a BitIndexer to a <see cref="int" />
    /// </summary>
-   /// <param name="indexer">the indexer to convert from</param>
-   /// <returns>the lower 32 bits converted to a <see cref="int" /> </returns>
+   /// <param name="indexer">The indexer to convert from.</param>
+   /// <returns>The lower 32 bits converted to a <see cref="int" />.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator int(BitIndexer indexer)
    {
-      return (int) (uint) indexer.Bits;
+      return (int) (uint) indexer.bits;
    }
 
    /// <summary>
    /// Automatically Convert from a <see cref="ushort" /> to a <see cref="BitIndexer" />
    /// </summary>
-   /// <param name="bits">the initial value for the indexer's backing store</param>
-   /// <returns>A new <see cref="BitIndexer" /></returns>
+   /// <param name="bits">The initial value for the indexed bits.</param>
+   /// <returns>A new <see cref="BitIndexer" />.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitIndexer(ushort bits)
    {
@@ -313,19 +340,19 @@ public ref struct BitIndexer
    /// <summary>
    /// Automatically convert from a BitIndexer to a <see cref="ushort" />
    /// </summary>
-   /// <param name="indexer">the indexer to convert from</param>
-   /// <returns>the lower 16 bits converted to a <see cref="ushort" /> </returns>
+   /// <param name="indexer">The indexer to convert from.</param>
+   /// <returns>The lower 16 bits converted to a <see cref="ushort" />.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator ushort(BitIndexer indexer)
    {
-      return (ushort) indexer.Bits;
+      return (ushort) indexer.bits;
    }
 
    /// <summary>
    /// Automatically Convert from a <see cref="short" /> to a <see cref="BitIndexer" />
    /// </summary>
-   /// <param name="bits">the initial value for the indexer's backing store</param>
-   /// <returns>A new <see cref="BitIndexer" /></returns>
+   /// <param name="bits">The initial value for the indexed bits.</param>
+   /// <returns>A new <see cref="BitIndexer" />.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitIndexer(short bits)
    {
@@ -335,19 +362,19 @@ public ref struct BitIndexer
    /// <summary>
    /// Automatically convert from a <see cref="BitIndexer" /> to a <see cref="short" />
    /// </summary>
-   /// <param name="indexer">the indexer to convert from</param>
-   /// <returns>the lower 16 bits converted to a <see cref="short" /> </returns>
+   /// <param name="indexer">The indexer to convert from.</param>
+   /// <returns>The lower 16 bits converted to a <see cref="short" />.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator short(BitIndexer indexer)
    {
-      return (short) (ushort) indexer.Bits;
+      return (short) (ushort) indexer.bits;
    }
 
    /// <summary>
    /// Automatically Convert from a <see cref="sbyte" /> to a <see cref="BitIndexer" />
    /// </summary>
-   /// <param name="bits">the initial value for the indexer's backing store</param>
-   /// <returns>A new <see cref="BitIndexer" /></returns>
+   /// <param name="bits">The initial value for the indexed bits.</param>
+   /// <returns>A new <see cref="BitIndexer" />.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitIndexer(sbyte bits)
    {
@@ -355,21 +382,21 @@ public ref struct BitIndexer
    }
 
    /// <summary>
-   /// Automatically convert from a <see cref="BitIndexer" /> to an <see cref="sbyte" />
+   /// Automatically convert from a <see cref="BitIndexer" /> to a <see cref="sbyte" />
    /// </summary>
-   /// <param name="indexer">the indexer to convert from</param>
-   /// <returns>the lower 8 bits converted to an <see cref="sbyte" /> </returns>
+   /// <param name="indexer">The indexer to convert from.</param>
+   /// <returns>The lower 8 bits converted to a <see cref="sbyte" />.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator sbyte(BitIndexer indexer)
    {
-      return (sbyte) indexer.Bits;
+      return (sbyte) indexer.bits;
    }
 
    /// <summary>
    /// Automatically Convert from a <see cref="byte" /> to a <see cref="BitIndexer" />
    /// </summary>
-   /// <param name="bits">the initial value for the indexer's backing store</param>
-   /// <returns>A new <see cref="BitIndexer" /></returns>
+   /// <param name="bits">The initial value for the indexed bits.</param>
+   /// <returns>A new <see cref="BitIndexer" />.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitIndexer(byte bits)
    {
@@ -379,19 +406,19 @@ public ref struct BitIndexer
    /// <summary>
    /// Automatically convert from a <see cref="BitIndexer" /> to a <see cref="byte" />
    /// </summary>
-   /// <param name="indexer">the indexer to convert from</param>
-   /// <returns>the lower 8 bits converted to a <see cref="byte" /> </returns>
+   /// <param name="indexer">The indexer to convert from.</param>
+   /// <returns>The lower 8 bits converted to a <see cref="byte" />.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator byte(BitIndexer indexer)
    {
-      return (byte) (sbyte) indexer.Bits;
+      return (byte) (sbyte) indexer.bits;
    }
 
    /// <summary>
-   /// Automatically convert from a <see cref="BitIndexer" /> to an array of <see cref="bool" />
+   /// Automatically convert from a <see cref="BitIndexer" /> to a array of <see cref="bool" />
    /// </summary>
-   /// <param name="indexer">the indexer to convert from</param>
-   /// <returns>An array of bools for each bit with Least Significant Bit at index 0.</returns>
+   /// <param name="indexer">The indexer to convert from.</param>
+   /// <returns>An array of bools for each bit with The Least Significant Bit is at index 0.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator bool[](BitIndexer indexer)
    {
@@ -402,10 +429,10 @@ public ref struct BitIndexer
    }
 
    /// <summary>
-   /// Automatically convert from a <see cref="BitIndexer" /> to an array of <see cref="bool" />
+   /// Automatically convert from a <see cref="BitIndexer" /> to a array of <see cref="bool" />
    /// </summary>
-   /// <param name="array">the indexer to convert from</param>
-   /// <returns>the lower 8 bits converted to a <see cref="byte" /> </returns>
+   /// <param name="array">The indexer to convert from.</param>
+   /// <returns>The lower 8 bits converted to a <see cref="byte" />.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator BitIndexer(bool[] array)
    {
@@ -424,8 +451,8 @@ public ref struct BitIndexer
       var sb = new StringBuilder();
       sb.Append("0b");
 
-      for (var i = BitSize - 1; i >= 0; i--)
-         sb.Append(Bits.ReadBits(i, 1));
+      for (var i = Length - 1; i >= 0; i--)
+         sb.Append(bits.ReadBits(i, 1));
 
       return sb.ToString();
    }

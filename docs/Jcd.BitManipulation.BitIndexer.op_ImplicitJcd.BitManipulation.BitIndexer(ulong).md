@@ -7,15 +7,16 @@ Automatically Convert from a [System.UInt64](https://docs.microsoft.com/en-us/do
 ```csharp
 public static Jcd.BitManipulation.BitIndexer implicit operator BitIndexer(ulong bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexer.op_ImplicitJcd.BitManipulation.BitIndexer(ulong).bits'></a>
 
 `bits` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
-the initial value for the indexer's backing store
+The initial value for the indexed bits.
 
 #### Returns
 
 [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')
-A new [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')
+A new [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer').

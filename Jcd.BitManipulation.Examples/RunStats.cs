@@ -19,7 +19,7 @@ internal record RunStats
  , double TotalCpuCycles
  , double CpuCyclesPerOperation
  , Quantity<Frequency> AverageCpuFrequency
- , int OperationsPerIteration
+ , long OperationsPerIteration
 )
 {
    public static readonly RunStats Empty = new(0.As(Durations.Second), 0.As(Durations.Second), 0d, 0d, 0.As(Frequencies.Hertz), 0);

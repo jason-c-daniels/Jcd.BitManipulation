@@ -7,15 +7,16 @@ Implicitly converts a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/
 ```csharp
 public static Jcd.BitManipulation.LittleEndianByteIndexer implicit operator LittleEndianByteIndexer(byte data);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexer.op_ImplicitJcd.BitManipulation.LittleEndianByteIndexer(byte).data'></a>
 
 `data` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
-The underlying data type.
+The initial value for the bytes of data.
 
 #### Returns
 
 [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
-A indexer type.
+A new [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') instance.

@@ -4,60 +4,45 @@ BenchmarkDotNet v0.13.12, Windows 11 (10.0.22631.3296/23H2/2023Update/SunValley3
 12th Gen Intel Core i7-12700H, 1 CPU, 20 logical and 14 physical cores
 .NET SDK 8.0.103
   [Host]     : .NET 8.0.3 (8.0.324.11423), X64 RyuJIT AVX2
-  Job-CYDLTE : .NET 8.0.3 (8.0.324.11423), X64 RyuJIT AVX2
-  Job-CSEHTA : .NET Framework 4.8.1 (4.8.9181.0), X64 RyuJIT VectorSize=256
+  Job-VBQYBY : .NET 8.0.3 (8.0.324.11423), X64 RyuJIT AVX2
+  Job-NFESSE : .NET Framework 4.8.1 (4.8.9181.0), X64 RyuJIT VectorSize=256
 
-IterationTime=500.0000 ms  MaxIterationCount=15  MinIterationCount=10  
-WarmupCount=10  
+IterationTime=120.0000 ms  MaxIterationCount=15  MinIterationCount=10
+WarmupCount=10
 
 ```
 
-| Method                 | Runtime              |       Mean |     Error |    StdDev |     Median | Ratio | RatioSD |
-|------------------------|----------------------|-----------:|----------:|----------:|-----------:|------:|--------:|
-| ExtensionMethod_Double | .NET 8.0             |  0.0052 ns | 0.0076 ns | 0.0045 ns |  0.0045 ns |     ? |       ? |
-| ExtensionMethod_Double | .NET Framework 4.6.2 |  0.0725 ns | 0.0236 ns | 0.0171 ns |  0.0673 ns |     ? |       ? |
-|                        |                      |            |           |           |            |       |         |
-| ExtensionMethod_Float  | .NET 8.0             |  0.0018 ns | 0.0069 ns | 0.0050 ns |  0.0000 ns |     ? |       ? |
-| ExtensionMethod_Float  | .NET Framework 4.6.2 |  9.3817 ns | 0.1535 ns | 0.0914 ns |  9.3510 ns |     ? |       ? |
-|                        |                      |            |           |           |            |       |         |
-| ExtensionMethod_UInt64 | .NET 8.0             |  0.0000 ns | 0.0000 ns | 0.0000 ns |  0.0000 ns |     ? |       ? |
-| ExtensionMethod_UInt64 | .NET Framework 4.6.2 |  0.0000 ns | 0.0000 ns | 0.0000 ns |  0.0000 ns |     ? |       ? |
-|                        |                      |            |           |           |            |       |         |
-| ExtensionMethod_Int64  | .NET 8.0             |  0.0211 ns | 0.0289 ns | 0.0271 ns |  0.0049 ns |     ? |       ? |
-| ExtensionMethod_Int64  | .NET Framework 4.6.2 |  0.0028 ns | 0.0091 ns | 0.0071 ns |  0.0000 ns |     ? |       ? |
-|                        |                      |            |           |           |            |       |         |
-| ExtensionMethod_UInt32 | .NET 8.0             |  0.0344 ns | 0.0273 ns | 0.0255 ns |  0.0257 ns |     ? |       ? |
-| ExtensionMethod_UInt32 | .NET Framework 4.6.2 |  0.0066 ns | 0.0132 ns | 0.0123 ns |  0.0000 ns |     ? |       ? |
-|                        |                      |            |           |           |            |       |         |
-| ExtensionMethod_Int32  | .NET 8.0             |  0.0000 ns | 0.0000 ns | 0.0000 ns |  0.0000 ns |     ? |       ? |
-| ExtensionMethod_Int32  | .NET Framework 4.6.2 |  0.0071 ns | 0.0160 ns | 0.0150 ns |  0.0000 ns |     ? |       ? |
-|                        |                      |            |           |           |            |       |         |
-| ExtensionMethod_UInt16 | .NET 8.0             |  0.0106 ns | 0.0238 ns | 0.0211 ns |  0.0000 ns |     ? |       ? |
-| ExtensionMethod_UInt16 | .NET Framework 4.6.2 |  0.0000 ns | 0.0000 ns | 0.0000 ns |  0.0000 ns |     ? |       ? |
-|                        |                      |            |           |           |            |       |         |
-| ExtensionMethod_Int16  | .NET 8.0             |  0.0166 ns | 0.0208 ns | 0.0184 ns |  0.0077 ns |     ? |       ? |
-| ExtensionMethod_Int16  | .NET Framework 4.6.2 |  0.0000 ns | 0.0000 ns | 0.0000 ns |  0.0000 ns |     ? |       ? |
-|                        |                      |            |           |           |            |       |         |
-| ByteIndexer_Double     | .NET 8.0             |  0.0059 ns | 0.0141 ns | 0.0074 ns |  0.0030 ns |     ? |       ? |
-| ByteIndexer_Double     | .NET Framework 4.6.2 |  1.6295 ns | 0.1644 ns | 0.1538 ns |  1.5537 ns |     ? |       ? |
-|                        |                      |            |           |           |            |       |         |
-| ByteIndexer_Float      | .NET 8.0             |  0.0001 ns | 0.0002 ns | 0.0002 ns |  0.0000 ns |     ? |       ? |
-| ByteIndexer_Float      | .NET Framework 4.6.2 | 11.2747 ns | 0.5269 ns | 0.4670 ns | 11.1710 ns |     ? |       ? |
-|                        |                      |            |           |           |            |       |         |
-| ByteIndexer_UInt64     | .NET 8.0             |  0.0000 ns | 0.0000 ns | 0.0000 ns |  0.0000 ns |     ? |       ? |
-| ByteIndexer_UInt64     | .NET Framework 4.6.2 |  1.4998 ns | 0.0755 ns | 0.0707 ns |  1.5064 ns |     ? |       ? |
-|                        |                      |            |           |           |            |       |         |
-| ByteIndexer_Int64      | .NET 8.0             |  0.0000 ns | 0.0000 ns | 0.0000 ns |  0.0000 ns |     ? |       ? |
-| ByteIndexer_Int64      | .NET Framework 4.6.2 |  1.5902 ns | 0.0987 ns | 0.0923 ns |  1.5826 ns |     ? |       ? |
-|                        |                      |            |           |           |            |       |         |
-| ByteIndexer_UInt32     | .NET 8.0             |  0.0003 ns | 0.0015 ns | 0.0010 ns |  0.0000 ns |     ? |       ? |
-| ByteIndexer_UInt32     | .NET Framework 4.6.2 |  1.2937 ns | 0.0446 ns | 0.0322 ns |  1.2922 ns |     ? |       ? |
-|                        |                      |            |           |           |            |       |         |
-| ByteIndexer_Int32      | .NET 8.0             |  0.0000 ns | 0.0000 ns | 0.0000 ns |  0.0000 ns |     ? |       ? |
-| ByteIndexer_Int32      | .NET Framework 4.6.2 |  1.3389 ns | 0.0317 ns | 0.0209 ns |  1.3367 ns |     ? |       ? |
-|                        |                      |            |           |           |            |       |         |
-| ByteIndexer_UInt16     | .NET 8.0             |  0.0153 ns | 0.0227 ns | 0.0164 ns |  0.0122 ns |     ? |       ? |
-| ByteIndexer_UInt16     | .NET Framework 4.6.2 |  1.5004 ns | 0.0710 ns | 0.0664 ns |  1.4624 ns |     ? |       ? |
-|                        |                      |            |           |           |            |       |         |
-| ByteIndexer_Int16      | .NET 8.0             |  0.0099 ns | 0.0135 ns | 0.0113 ns |  0.0103 ns |     ? |       ? |
-| ByteIndexer_Int16      | .NET Framework 4.6.2 |  1.3440 ns | 0.0470 ns | 0.0280 ns |  1.3494 ns |     ? |       ? |
+| Method                      | Runtime              |       Mean |     Error |    StdDev |     Median | Ratio | RatioSD |
+|-----------------------------|----------------------|-----------:|----------:|----------:|-----------:|------:|--------:|
+| ExtensionMethod_On_A_Double | .NET 8.0             |  0.0054 ns | 0.0091 ns | 0.0060 ns |  0.0037 ns |     ? |       ? |
+| ExtensionMethod_On_A_Float  | .NET 8.0             |  0.0148 ns | 0.0198 ns | 0.0185 ns |  0.0045 ns |     ? |       ? |
+| ExtensionMethod_On_A_UInt64 | .NET 8.0             |  0.0083 ns | 0.0140 ns | 0.0093 ns |  0.0041 ns |     ? |       ? |
+| ExtensionMethod_On_A_Int64  | .NET 8.0             |  0.0010 ns | 0.0031 ns | 0.0021 ns |  0.0000 ns |     ? |       ? |
+| ExtensionMethod_On_A_UInt32 | .NET 8.0             |  0.0003 ns | 0.0010 ns | 0.0006 ns |  0.0000 ns |     ? |       ? |
+| ExtensionMethod_On_A_Int32  | .NET 8.0             |  0.0020 ns | 0.0060 ns | 0.0047 ns |  0.0000 ns |     ? |       ? |
+| ExtensionMethod_On_A_UInt16 | .NET 8.0             |  0.0109 ns | 0.0208 ns | 0.0138 ns |  0.0070 ns |     ? |       ? |
+| ExtensionMethod_On_A_Int16  | .NET 8.0             |  0.0076 ns | 0.0143 ns | 0.0103 ns |  0.0046 ns |     ? |       ? |
+| ByteIndexer_From_A_Double   | .NET 8.0             |  0.0007 ns | 0.0021 ns | 0.0014 ns |  0.0000 ns |     ? |       ? |
+| ByteIndexer_From_A_Float    | .NET 8.0             |  0.0028 ns | 0.0091 ns | 0.0054 ns |  0.0000 ns |     ? |       ? |
+| ByteIndexer_From_A_UInt64   | .NET 8.0             |  0.0001 ns | 0.0003 ns | 0.0002 ns |  0.0000 ns |     ? |       ? |
+| ByteIndexer_From_A_Int64    | .NET 8.0             |  0.0077 ns | 0.0162 ns | 0.0107 ns |  0.0019 ns |     ? |       ? |
+| ByteIndexer_From_A_UInt32   | .NET 8.0             |  0.0126 ns | 0.0161 ns | 0.0106 ns |  0.0093 ns |     ? |       ? |
+| ByteIndexer_From_A_Int32    | .NET 8.0             |  0.0000 ns | 0.0000 ns | 0.0000 ns |  0.0000 ns |     ? |       ? |
+| ByteIndexer_From_A_UInt16   | .NET 8.0             |  0.0064 ns | 0.0114 ns | 0.0075 ns |  0.0037 ns |     ? |       ? |
+| ByteIndexer_From_A_Int16    | .NET 8.0             |  0.0038 ns | 0.0092 ns | 0.0061 ns |  0.0000 ns |     ? |       ? |
+| ExtensionMethod_On_A_Double | .NET Framework 4.6.2 |  0.1526 ns | 0.0328 ns | 0.0307 ns |  0.1575 ns |     ? |       ? |
+| ExtensionMethod_On_A_Float  | .NET Framework 4.6.2 |  9.9242 ns | 0.2186 ns | 0.1707 ns |  9.8854 ns |     ? |       ? |
+| ExtensionMethod_On_A_UInt64 | .NET Framework 4.6.2 |  0.0022 ns | 0.0052 ns | 0.0038 ns |  0.0000 ns |     ? |       ? |
+| ExtensionMethod_On_A_Int64  | .NET Framework 4.6.2 |  0.0012 ns | 0.0049 ns | 0.0046 ns |  0.0000 ns |     ? |       ? |
+| ExtensionMethod_On_A_UInt32 | .NET Framework 4.6.2 |  0.0006 ns | 0.0030 ns | 0.0018 ns |  0.0000 ns |     ? |       ? |
+| ExtensionMethod_On_A_Int32  | .NET Framework 4.6.2 |  0.0015 ns | 0.0067 ns | 0.0048 ns |  0.0000 ns |     ? |       ? |
+| ExtensionMethod_On_A_UInt16 | .NET Framework 4.6.2 |  0.0000 ns | 0.0000 ns | 0.0000 ns |  0.0000 ns |     ? |       ? |
+| ExtensionMethod_On_A_Int16  | .NET Framework 4.6.2 |  0.0000 ns | 0.0000 ns | 0.0000 ns |  0.0000 ns |     ? |       ? |
+| ByteIndexer_From_A_Double   | .NET Framework 4.6.2 |  1.7117 ns | 0.1078 ns | 0.0900 ns |  1.6981 ns |     ? |       ? |
+| ByteIndexer_From_A_Float    | .NET Framework 4.6.2 | 11.8641 ns | 0.2066 ns | 0.1081 ns | 11.8976 ns |     ? |       ? |
+| ByteIndexer_From_A_UInt64   | .NET Framework 4.6.2 |  1.5617 ns | 0.0431 ns | 0.0256 ns |  1.5677 ns |     ? |       ? |
+| ByteIndexer_From_A_Int64    | .NET Framework 4.6.2 |  1.5525 ns | 0.0538 ns | 0.0420 ns |  1.5481 ns |     ? |       ? |
+| ByteIndexer_From_A_UInt32   | .NET Framework 4.6.2 |  1.4470 ns | 0.0929 ns | 0.0824 ns |  1.4269 ns |     ? |       ? |
+| ByteIndexer_From_A_Int32    | .NET Framework 4.6.2 |  1.4315 ns | 0.0632 ns | 0.0591 ns |  1.4455 ns |     ? |       ? |
+| ByteIndexer_From_A_UInt16   | .NET Framework 4.6.2 |  1.6608 ns | 0.0744 ns | 0.0660 ns |  1.6479 ns |     ? |       ? |
+| ByteIndexer_From_A_Int16    | .NET Framework 4.6.2 |  1.5138 ns | 0.1098 ns | 0.1027 ns |  1.4987 ns |     ? |       ? |

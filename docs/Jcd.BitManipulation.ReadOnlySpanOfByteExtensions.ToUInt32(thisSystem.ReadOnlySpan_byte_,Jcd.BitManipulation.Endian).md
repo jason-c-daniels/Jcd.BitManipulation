@@ -7,13 +7,14 @@ Converts bytes into a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/ap
 ```csharp
 public static uint ToUInt32(this System.ReadOnlySpan<byte> data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.ReadOnlySpanOfByteExtensions.ToUInt32(thisSystem.ReadOnlySpan_byte_,Jcd.BitManipulation.Endian).data'></a>
 
 `data` [System.ReadOnlySpan&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.ReadOnlySpan-1 'System.ReadOnlySpan`1')[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.ReadOnlySpan-1 'System.ReadOnlySpan`1')
 
-the bytes to convert
+the bytes to convert.
 
 <a name='Jcd.BitManipulation.ReadOnlySpanOfByteExtensions.ToUInt32(thisSystem.ReadOnlySpan_byte_,Jcd.BitManipulation.Endian).endian'></a>
 

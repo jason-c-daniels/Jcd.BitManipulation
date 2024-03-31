@@ -2,18 +2,19 @@
 
 ## Int16Extensions.StoreBytes(this short, ReadOnlySpan<byte>, int, int, Endian) Method
 
-Stores a set of bytes starting at the specified byte location within the value.
+Stores a set of bytes starting at the specified byte offset and returns the modified value.
 
 ```csharp
 public static short StoreBytes(this short value, System.ReadOnlySpan<byte> bytes, int offset, int size=-1, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int16Extensions.StoreBytes(thisshort,System.ReadOnlySpan_byte_,int,int,Jcd.BitManipulation.Endian).value'></a>
 
 `value` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.Int16Extensions.StoreBytes(thisshort,System.ReadOnlySpan_byte_,int,int,Jcd.BitManipulation.Endian).bytes'></a>
 

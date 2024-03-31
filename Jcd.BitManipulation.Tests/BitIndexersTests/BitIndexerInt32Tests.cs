@@ -79,25 +79,6 @@ public class BitIndexerInt32Tests
       Assert.False(indexer[index]);
    }
 
-   [Fact]
-   public void Enumerator_Enumerates_Correct_Number_Of_Bits()
-   {
-      BitIndexer indexer = 0x7e;
-      Assert.Equal(32, indexer.Length);
-   }
-
-   [Theory]
-   [InlineData(0b10101000000000)]
-   [InlineData(0b11101100000000)]
-   public void Enumerator_Enumerates_Bits_In_Correct_Order_LSB_to_MSB(int data)
-   {
-      BitIndexer indexer = data;
-      var bitValues = data.ToBooleanArray();
-
-      for (var i = 0; i < indexer.Length; i++)
-         Assert.Equal(indexer.Bits.ReadBit(i), bitValues[i]);
-   }
-
    [Theory]
    [InlineData(0b00000000000000000000000000000000, "0b00000000000000000000000000000000")]
    [InlineData(0b00100000000111000000000000000000, "0b00100000000111000000000000000000")]

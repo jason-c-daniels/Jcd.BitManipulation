@@ -2,24 +2,25 @@
 
 ## Int32Extensions.SetBits(this int, BitMask) Method
 
-Sets all specified bits to "on"
+Sets all specified bits to "on" and returns the modified value.
 
 ```csharp
 public static int SetBits(this int value, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int32Extensions.SetBits(thisint,Jcd.BitManipulation.BitMask).value'></a>
 
 `value` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.Int32Extensions.SetBits(thisint,Jcd.BitManipulation.BitMask).mask'></a>
 
 `mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
-bits to set.
+The bits to set.
 
 #### Returns
 

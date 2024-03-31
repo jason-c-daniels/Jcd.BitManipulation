@@ -7,13 +7,14 @@ Converts a [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int
 ```csharp
 public static float BitwiseToSingle(this int value);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int32Extensions.BitwiseToSingle(thisint).value'></a>
 
 `value` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The value to convert
+The value to convert.
 
 #### Returns
 

@@ -2,11 +2,12 @@
 
 ## BigEndianByteIndexer.implicit operator double(BigEndianByteIndexer) Operator
 
-Implicitly converts the byte indexer to its underlying data type.
+Implicitly converts the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') to a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double').
 
 ```csharp
 public static double implicit operator double(Jcd.BitManipulation.BigEndianByteIndexer indexer);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BigEndianByteIndexer.op_Implicitdouble(Jcd.BitManipulation.BigEndianByteIndexer).indexer'></a>

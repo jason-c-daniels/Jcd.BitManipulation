@@ -2,18 +2,19 @@
 
 ## SingleExtensions.StoreBytes(this float, ReadOnlySpan<byte>, int, int, Endian) Method
 
-Stores a set of bytes starting at the specified byte location within the value.
+Stores a set of bytes starting at the specified byte offset and returns the modified value.
 
 ```csharp
 public static float StoreBytes(this float value, System.ReadOnlySpan<byte> bytes, int offset, int size=-1, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SingleExtensions.StoreBytes(thisfloat,System.ReadOnlySpan_byte_,int,int,Jcd.BitManipulation.Endian).value'></a>
 
 `value` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.SingleExtensions.StoreBytes(thisfloat,System.ReadOnlySpan_byte_,int,int,Jcd.BitManipulation.Endian).bytes'></a>
 

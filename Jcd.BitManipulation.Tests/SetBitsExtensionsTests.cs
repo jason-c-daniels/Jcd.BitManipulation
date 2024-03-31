@@ -183,10 +183,10 @@ public class SetBitsExtensionsTests
    [InlineData(0x00, 8,  0x0100)]
    [InlineData(0x80, 8,  0x0180)]
    [InlineData(0x00, 15, 0x8000)]
-   public void SetBit_On_Int16_Sets_Correct_Bit(ulong initial, int bitToSet, ulong expected)
+   public void SetBit_On_Int16_Sets_Correct_Bit(ushort initial, int bitToSet, ushort expected)
    {
       var value = (short) initial;
-      var result = value.SetBit((byte) bitToSet);
+      var result = value.SetBit(bitToSet);
       Assert.Equal((short) expected, result);
    }
 

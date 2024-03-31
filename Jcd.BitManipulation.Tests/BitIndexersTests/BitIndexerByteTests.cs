@@ -16,7 +16,7 @@ public class BitIndexerByteTests
    public void Length_Is_Correct_Bit_Size()
    {
       BitIndexer sut = (byte) 0;
-      Assert.Equal(sizeof(byte) << 3, sut.BitSize);
+      Assert.Equal(sizeof(byte) << 3, sut.Length);
    }
 
    [Theory]
@@ -26,8 +26,7 @@ public class BitIndexerByteTests
    [InlineData(0b00011000)]
    public void Implicit_Operator_To_BitIndexerByte_From_Byte_Sets_All_Bits_Correctly(byte data)
    {
-      var bits = data;
-      BitIndexer indexer = bits;
+      BitIndexer indexer = data;
       Assert.Equal(data, (byte) indexer);
    }
 
@@ -36,13 +35,13 @@ public class BitIndexerByteTests
    [InlineData(0xFE)]
    [InlineData(0x7F)]
    [InlineData(0b00011000)]
-   public void Implicit_Operator_From_BitIndexerByte_To_Byte_Sets_All_Bits_Correctly(uint data)
+   public void Implicit_Operator_From_BitIndexerByte_To_Byte_Sets_All_Bits_Correctly(byte data)
    {
       // HACK: Type binder for xUnit hates bytes as params. Coerce the value here.
       BitIndexer indexer = data;
       byte bits = indexer;
 
-      Assert.Equal(indexer.Bits, bits);
+      Assert.Equal(data, bits);
    }
 
    [Theory]

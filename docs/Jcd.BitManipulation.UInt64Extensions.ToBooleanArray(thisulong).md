@@ -2,20 +2,21 @@
 
 ## UInt64Extensions.ToBooleanArray(this ulong) Method
 
-Convert a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') into an array of bools
+Converts a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') into an array of values with the lease significant bit at index 0.
 
 ```csharp
 public static bool[] ToBooleanArray(this ulong bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ToBooleanArray(thisulong).bits'></a>
 
 `bits` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
-the ulong to convert
+The value to convert to an array of [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean') values.
 
 #### Returns
 
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
-the array. Least Significant Bit at index 0
+An array with the Least Significant Bit at index 0

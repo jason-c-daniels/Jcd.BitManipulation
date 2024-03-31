@@ -2,7 +2,8 @@
 
 ## BigEndianByteIndexer.ToString() Method
 
-Creates a string of the data formatted as hex for the bytes in big endian notation
+Formats the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') as a hexadecimal string in big endian notation.
+For example: `60 0D C0 DE`
 
 ```csharp
 public override readonly string ToString();

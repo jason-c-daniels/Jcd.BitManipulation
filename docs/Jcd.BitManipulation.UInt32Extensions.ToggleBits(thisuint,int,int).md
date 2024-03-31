@@ -2,19 +2,19 @@
 
 ## UInt32Extensions.ToggleBits(this uint, int, int) Method
 
-Toggles bits and size.
-The default values result in toggling all bits.
+Toggles the specified range of bits and returns the modified value.
 
 ```csharp
 public static uint ToggleBits(this uint value, int offset=0, int size=32);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt32Extensions.ToggleBits(thisuint,int,int).value'></a>
 
 `value` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.UInt32Extensions.ToggleBits(thisuint,int,int).offset'></a>
 

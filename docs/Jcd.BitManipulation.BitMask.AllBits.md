@@ -2,11 +2,12 @@
 
 ## BitMask.AllBits Field
 
-A default bitmask signifying all bits have been set.
+A bitmask with all bits set in the mask.
 
 ```csharp
 public static readonly BitMask AllBits;
 ```
 
 #### Field Value
+
 [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')

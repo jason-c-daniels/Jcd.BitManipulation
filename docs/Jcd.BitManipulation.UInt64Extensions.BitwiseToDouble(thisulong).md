@@ -7,13 +7,14 @@ Converts a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UI
 ```csharp
 public static double BitwiseToDouble(this ulong value);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt64Extensions.BitwiseToDouble(thisulong).value'></a>
 
 `value` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
-The value to convert
+The value to convert.
 
 #### Returns
 

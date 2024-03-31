@@ -2,19 +2,19 @@
 
 ## SingleExtensions.ToggleBits(this float, int, int) Method
 
-Toggles bits and size.
-The default values result in toggling all bits.
+Toggles the specified range of bits and returns the modified value.
 
 ```csharp
 public static float ToggleBits(this float value, int offset=0, int size=32);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SingleExtensions.ToggleBits(thisfloat,int,int).value'></a>
 
 `value` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.SingleExtensions.ToggleBits(thisfloat,int,int).offset'></a>
 

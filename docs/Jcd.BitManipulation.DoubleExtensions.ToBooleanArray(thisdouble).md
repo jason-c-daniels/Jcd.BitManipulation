@@ -2,18 +2,19 @@
 
 ## DoubleExtensions.ToBooleanArray(this double) Method
 
-Convert a long into an array of bools
+Converts a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double') into an array of values with the lease significant bit at index 0..
 
 ```csharp
 public static bool[] ToBooleanArray(this double bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.ToBooleanArray(thisdouble).bits'></a>
 
 `bits` [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 
-the long to convert
+The value to convert to an array of [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean') values.
 
 #### Returns
 

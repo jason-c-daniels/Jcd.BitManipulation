@@ -2,11 +2,12 @@
 
 ## BitMask.FromSingleBit(int) Method
 
-Create a 64 bit bit [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') with a single bit set.
+Create a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') with a single bit set.
 
 ```csharp
 public static Jcd.BitManipulation.BitMask FromSingleBit(int offset);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.FromSingleBit(int).offset'></a>

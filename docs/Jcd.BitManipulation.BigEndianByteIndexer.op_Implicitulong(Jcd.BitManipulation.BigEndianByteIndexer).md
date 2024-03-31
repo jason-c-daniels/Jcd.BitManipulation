@@ -7,6 +7,7 @@ Implicitly converts the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByte
 ```csharp
 public static ulong implicit operator ulong(Jcd.BitManipulation.BigEndianByteIndexer indexer);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BigEndianByteIndexer.op_Implicitulong(Jcd.BitManipulation.BigEndianByteIndexer).indexer'></a>

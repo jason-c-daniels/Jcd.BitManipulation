@@ -7,6 +7,7 @@ Automatically convert to [System.UInt64](https://docs.microsoft.com/en-us/dotnet
 ```csharp
 public static ulong implicit operator ulong(Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.op_Implicitulong(Jcd.BitManipulation.BitMask).mask'></a>

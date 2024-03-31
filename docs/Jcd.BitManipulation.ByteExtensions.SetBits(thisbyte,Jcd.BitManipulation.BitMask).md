@@ -2,24 +2,25 @@
 
 ## ByteExtensions.SetBits(this byte, BitMask) Method
 
-Sets all specified bits to "on"
+Sets all specified bits to "on" and returns the modified value.
 
 ```csharp
 public static byte SetBits(this byte value, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteExtensions.SetBits(thisbyte,Jcd.BitManipulation.BitMask).value'></a>
 
 `value` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.ByteExtensions.SetBits(thisbyte,Jcd.BitManipulation.BitMask).mask'></a>
 
 `mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
-bits to set.
+The bits to set.
 
 #### Returns
 

@@ -2,30 +2,31 @@
 
 ## UInt16Extensions.StoreByte(this ushort, byte, int, Endian) Method
 
-Store a single byte to the value at the specified byte offset.
+Stores a single byte to the value at the specified byte offset and returns the modified value.
 
 ```csharp
 public static ushort StoreByte(this ushort value, byte @byte, int offset, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt16Extensions.StoreByte(thisushort,byte,int,Jcd.BitManipulation.Endian).value'></a>
 
 `value` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.UInt16Extensions.StoreByte(thisushort,byte,int,Jcd.BitManipulation.Endian).byte'></a>
 
 `byte` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
-The byte value to set
+The [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') value to store.
 
 <a name='Jcd.BitManipulation.UInt16Extensions.StoreByte(thisushort,byte,int,Jcd.BitManipulation.Endian).offset'></a>
 
 `offset` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-the offset of the byte to write
+The offset of where to store the byte.
 
 <a name='Jcd.BitManipulation.UInt16Extensions.StoreByte(thisushort,byte,int,Jcd.BitManipulation.Endian).endian'></a>
 

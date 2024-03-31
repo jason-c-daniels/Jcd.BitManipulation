@@ -2,19 +2,19 @@
 
 ## Int64Extensions.ToggleBits(this long, int, int) Method
 
-Toggles bits and size.
-The default values result in toggling all bits.
+Toggles the specified range of bits and returns the modified value.
 
 ```csharp
 public static long ToggleBits(this long value, int offset=0, int size=64);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int64Extensions.ToggleBits(thislong,int,int).value'></a>
 
 `value` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.Int64Extensions.ToggleBits(thislong,int,int).offset'></a>
 

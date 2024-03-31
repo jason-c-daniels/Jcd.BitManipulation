@@ -7,6 +7,7 @@ Tests if all of the bits from the bitmask are set on a [System.Double](https://d
 ```csharp
 public static bool AreAllBitsSet(this double data, Jcd.BitManipulation.BitMask bitmask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.AreAllBitsSet(thisdouble,Jcd.BitManipulation.BitMask).data'></a>
@@ -19,7 +20,7 @@ The data to inspect.
 
 `bitmask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
-the bits to test.
+The bits to test.
 
 #### Returns
 

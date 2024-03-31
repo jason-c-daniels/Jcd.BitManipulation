@@ -2,18 +2,19 @@
 
 ## Int32Extensions.ToByteArray(this int, Endian) Method
 
-Convert an int into an array of bytes
+Converts a [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32') into an array of bytes in the specified [Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian').
 
 ```csharp
 public static byte[] ToByteArray(this int data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int32Extensions.ToByteArray(thisint,Jcd.BitManipulation.Endian).data'></a>
 
 `data` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-the [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32') to convert
+The value to convert to a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') array.
 
 <a name='Jcd.BitManipulation.Int32Extensions.ToByteArray(thisint,Jcd.BitManipulation.Endian).endian'></a>
 

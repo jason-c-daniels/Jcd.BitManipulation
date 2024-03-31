@@ -7,15 +7,16 @@ Automatically convert from a BitIndexer to a [System.UInt16](https://docs.micros
 ```csharp
 public static ushort implicit operator ushort(Jcd.BitManipulation.BitIndexer indexer);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexer.op_Implicitushort(Jcd.BitManipulation.BitIndexer).indexer'></a>
 
 `indexer` [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')
 
-the indexer to convert from
+The indexer to convert from.
 
 #### Returns
 
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
-the lower 16 bits converted to a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
+The lower 16 bits converted to a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16').

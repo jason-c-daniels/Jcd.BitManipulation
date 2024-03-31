@@ -2,18 +2,19 @@
 
 ## Int16Extensions.StoreBits(this short, short, int, int) Method
 
-Stores a value at the specified bit location within the variable.
+Stores a range of bits to the value, from a source value, and returns the modified value.
 
 ```csharp
 public static short StoreBits(this short value, short source, int offset, int size);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int16Extensions.StoreBits(thisshort,short,int,int).value'></a>
 
 `value` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.Int16Extensions.StoreBits(thisshort,short,int,int).source'></a>
 

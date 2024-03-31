@@ -2,18 +2,19 @@
 
 ## UInt16Extensions.ToByteArray(this ushort, Endian) Method
 
-Convert a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16') into an array of bytes
+Converts a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16') into an array of bytes in the specified [Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian').
 
 ```csharp
 public static byte[] ToByteArray(this ushort data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt16Extensions.ToByteArray(thisushort,Jcd.BitManipulation.Endian).data'></a>
 
 `data` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 
-the data of the [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16') to convert
+The value to convert to a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') array.
 
 <a name='Jcd.BitManipulation.UInt16Extensions.ToByteArray(thisushort,Jcd.BitManipulation.Endian).endian'></a>
 

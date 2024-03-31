@@ -7,20 +7,20 @@ Extract a subset of bits specified by a bitmask.
 ```csharp
 public static uint ReadBits(this float value, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SingleExtensions.ReadBits(thisfloat,Jcd.BitManipulation.BitMask).value'></a>
 
 `value` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
-the source of bits to read
+The source of the bits to read.
 
 <a name='Jcd.BitManipulation.SingleExtensions.ReadBits(thisfloat,Jcd.BitManipulation.BitMask).mask'></a>
 
 `mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
-the bitmask of which bits to read.
-Zeroed bits in the mask will always extract 0 from the source.
+The bitmask specifying which bits to read.
 
 #### Returns
 

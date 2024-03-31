@@ -2,18 +2,19 @@
 
 ## SingleExtensions.ToggleBit(this float, int) Method
 
-Toggles a bit.
+Toggles a bit at the specified offset and returns the modified value.
 
 ```csharp
 public static float ToggleBit(this float value, int offset);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SingleExtensions.ToggleBit(thisfloat,int).value'></a>
 
 `value` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.SingleExtensions.ToggleBit(thisfloat,int).offset'></a>
 

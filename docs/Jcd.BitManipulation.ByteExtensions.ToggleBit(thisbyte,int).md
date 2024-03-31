@@ -2,18 +2,19 @@
 
 ## ByteExtensions.ToggleBit(this byte, int) Method
 
-Toggles a bit.
+Toggles a bit at the specified offset and returns the modified value.
 
 ```csharp
 public static byte ToggleBit(this byte value, int offset);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteExtensions.ToggleBit(thisbyte,int).value'></a>
 
 `value` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
-The value to be modified.
+The value to modify.
 
 <a name='Jcd.BitManipulation.ByteExtensions.ToggleBit(thisbyte,int).offset'></a>
 

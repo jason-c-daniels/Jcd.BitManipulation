@@ -1,6 +1,6 @@
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
 
-## LittleEndianByteIndexer.explicit operator byte[](LittleEndianByteIndexer) Operator
+## LittleEndianByteIndexer.explicit operator byte\[\](LittleEndianByteIndexer) Operator
 
 Explicitly converts the [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') to an array of bytes.
 

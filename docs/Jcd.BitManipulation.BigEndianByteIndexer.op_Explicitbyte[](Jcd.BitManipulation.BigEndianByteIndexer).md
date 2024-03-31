@@ -1,6 +1,6 @@
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer')
 
-## BigEndianByteIndexer.explicit operator byte[](BigEndianByteIndexer) Operator
+## BigEndianByteIndexer.explicit operator byte\[\](BigEndianByteIndexer) Operator
 
 Explicitly converts the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') to a array of bytes.
 

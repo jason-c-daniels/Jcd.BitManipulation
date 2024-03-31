@@ -1,6 +1,6 @@
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')
 
-## BitIndexer.implicit operator bool[](BitIndexer) Operator
+## BitIndexer.implicit operator bool\[\](BitIndexer) Operator
 
 Automatically convert from a [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer') to a array of [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 

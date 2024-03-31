@@ -2,9 +2,7 @@
 
 ## ByteArrayExtensions.ToSingle(this byte[], Endian) Method
 
-Converts an array of bytes into
-a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single'), discarding any excess
-data.
+Converts an array of bytes into a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single'), discarding any excess data.
 
 ```csharp
 public static float ToSingle(this byte[] data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
@@ -35,7 +33,5 @@ The converted ulong
 
 Index 0 in the array is index 0 in the destination value. For Big Endian this is the
 most significant byte. If you're passing in a smaller array and need the result
-right shifted, after calling this, you'll need to convert to
-a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
-shift it, then convert back to
-a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single').
+right shifted, after calling this, you'll need to convert to a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
+shift it, then convert back to a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single').

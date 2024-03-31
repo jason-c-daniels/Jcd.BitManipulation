@@ -2,9 +2,7 @@
 
 ## BigEndianByteIndexer.implicit operator float(BigEndianByteIndexer) Operator
 
-Implicitly converts
-the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') to
-a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single').
+Implicitly converts the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') to a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single').
 
 ```csharp
 public static float implicit operator float(Jcd.BitManipulation.BigEndianByteIndexer indexer);

@@ -2,8 +2,7 @@
 
 ## DoubleExtensions.AreNoBitsSet(this double, BitMask) Method
 
-Tests if none of the bits from the bitmask are set on
-a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double').
+Tests if none of the bits from the bitmask are set on a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double').
 
 ```csharp
 public static bool AreNoBitsSet(this double data, Jcd.BitManipulation.BitMask bitmask);

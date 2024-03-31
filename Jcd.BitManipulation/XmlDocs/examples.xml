@@ -1,6 +1,77 @@
 ﻿<?xml version="1.0"?>
+<!-- @formatter:off -->
 <doc>
    <examples>
+      <item name="ByteExtensions">
+         <example>
+            <code>
+               byte data = 0b00000000;
+
+               // turn on all the bits
+               data = data.SetBits(0, 8); // value is now 0b11111111
+
+               // this is the equivalent as above
+               data = data.SetBits();
+
+               // Clear the upper 4 bits.
+               data = data.ClearBits(4, 4); // value is now 0b00001111
+
+               // Toggle all the bits.
+               data = data.ToggleBits(); // value is now 0b11110000
+
+               // read the upper nybble as a byte
+               var upperNybble = data.ReadBits(4, 4); // upperNybble is now 0b00001111
+
+               // write 0b1011 into the upper nybble of data
+               data = data.StoreBits(0b1011, 4, 4); // data is now 0b10110000
+
+               // chaining operations, the same steps and end results
+               data.ClearBits();
+               data = data.SetBits(0, 8) // value is now 0b11111111
+                          .SetBits() // this is the equivalent as above
+                          .ClearBits(4, 4) // value is now 0b00001111
+                          .ToggleBits(); // value is now 0b11110000
+
+               upperNybble = data.ReadBits(4, 4) // extract the upper nybble (0b00001111)
+                                 .StoreBits(0b1011, 4, 4); // store the value in the upper 4 bits, now upperByte is now 0b10111111
+            </code>
+         </example>
+      </item>
+      <item name="SByteExtensions">
+         <example>
+            <code>
+               sbyte data = 0b00000000;
+
+               // turn on all the bits
+               data = data.SetBits(0, 8); // value is now 0b11111111
+
+               // this is the equivalent as above
+               data = data.SetBits();
+
+               // Clear the upper 4 bits.
+               data = data.ClearBits(4, 4); // value is now 0b00001111
+
+               // Toggle all the bits.
+               data = data.ToggleBits(); // value is now 0b11110000
+
+               // read the upper nybble as a byte
+               var upperNybble = data.ReadBits(4, 4); // upperNybble is now 0b00001111
+
+               // write 0b1011 into the upper nybble of data
+               data = data.StoreBits(0b1011, 4, 4); // data is now 0b10110000
+
+               // chaining operations, the same steps and end results
+               data.ClearBits();
+               data = data.SetBits(0, 8) // value is now 0b11111111
+                          .SetBits() // this is the equivalent as above
+                          .ClearBits(4, 4) // value is now 0b00001111
+                          .ToggleBits(); // value is now 0b11110000
+
+               upperNybble = data.ReadBits(4, 4) // extract the upper nybble (0b00001111)
+                                 .StoreBits(0b1011, 4, 4); // store the value in the upper 4 bits, now upperByte is now 0b10111111
+            </code>
+         </example>
+      </item>
       <item name="UInt16Extensions">
          <example>
             <code>
@@ -29,19 +100,19 @@
                // chaining operations, the same steps and end results
                data.ClearBits();
                data = data.SetBits(0, 16) // value is now 0b1111111111111111
-               .SetBits() // this is the equivalent as above
-               .ClearBits(4, 8) // value is now 0b1111000000001111
-               .ToggleBits(); // value is now 0b0000111111110000
+                          .SetBits() // this is the equivalent as above
+                          .ClearBits(4, 8) // value is now 0b1111000000001111
+                          .ToggleBits(); // value is now 0b0000111111110000
 
                upperByte = ((byte) data.ReadBits(8, 8)) // extract the upper byte (0b00001111)
-               .StoreBits(0b1011, 4, 4); // store the value in the upper 4 bits, now upperByte is now 0b10111111
+                                       .StoreBits(0b1011, 4, 4); // store the value in the upper 4 bits, now upperByte is now 0b10111111
 
                // finalData 0b0000111111110000
                var beByte0 = finalData.ReadByte(0, Endian.Big); // 00001111
                var leByte0 = finalData.ReadByte(0, Endian.Little); // 11110000
 
                var mutatedData = finalData.StoreByte(0b10111111, 0, Endian.Big) // Upper byte is now 0b10111111
-               .StoreByte(0b01010101, 0, Endian.Little); // lower byte is now 0b01010101
+                                          .StoreByte(0b01010101, 0, Endian.Little); // lower byte is now 0b01010101
 
                // mutatedData is now 0b1011111101010101
 
@@ -83,19 +154,19 @@
                // chaining operations, the same steps and end results
                data.ClearBits();
                data = data.SetBits(0, 16) // value is now 0b1111111111111111
-               .SetBits() // this is the equivalent as above
-               .ClearBits(4, 8) // value is now 0b1111000000001111
-               .ToggleBits(); // value is now 0b0000111111110000
+                          .SetBits() // this is the equivalent as above
+                          .ClearBits(4, 8) // value is now 0b1111000000001111
+                          .ToggleBits(); // value is now 0b0000111111110000
 
                upperByte = ((byte) data.ReadBits(8, 8)) // extract the upper byte (0b00001111)
-               .StoreBits(0b1011, 4, 4); // store the value in the upper 4 bits, now upperByte is now 0b10111111
+                                       .StoreBits(0b1011, 4, 4); // store the value in the upper 4 bits, now upperByte is now 0b10111111
 
                // finalData 0b0000111111110000
                var beByte0 = finalData.ReadByte(0, Endian.Big); // 00001111
                var leByte0 = finalData.ReadByte(0, Endian.Little); // 11110000
 
                var mutatedData = finalData.StoreByte(0b10111111, 0, Endian.Big) // Upper byte is now 0b10111111
-               .StoreByte(0b01010101, 0, Endian.Little); // lower byte is now 0b01010101
+                                          .StoreByte(0b01010101, 0, Endian.Little); // lower byte is now 0b01010101
 
                // mutatedData is now 0b1011111101010101
 
@@ -138,12 +209,12 @@
                // chaining operations, the same steps and end results
                data.ClearBits();
                data = data.SetBits(0, 32) // value is now 0b11111111111111111111111111111111
-               .SetBits() // this is the equivalent as above
-               .ClearBits(4, 8) // value is now 01111111111111111b1111000000001111
-               .ToggleBits(); // value is now 0b00000000000000000000111111110000
+                          .SetBits() // this is the equivalent as above
+                          .ClearBits(4, 8) // value is now 01111111111111111b1111000000001111
+                          .ToggleBits(); // value is now 0b00000000000000000000111111110000
 
                secondByte = ((byte) data.ReadBits(8, 8)) // extract the upper byte (0b00001111)
-               .StoreBits(0b1011, 4, 4); // store the value in the upper 4 bits, now upperByte is now 0b10111111
+                                        .StoreBits(0b1011, 4, 4); // store the value in the upper 4 bits, now upperByte is now 0b10111111
 
                // finalData is 0b00000000000000000000111111110000
 
@@ -151,14 +222,14 @@
                var leByte0 = finalData.ReadByte(0, Endian.Little); // 11110000
 
                var mutatedData = finalData.StoreByte(0b10111111, 0, Endian.Big)
-               .StoreByte(0b01010101, 0, Endian.Little) // lower byte is now 0b01010101
+                                          .StoreByte(0b01010101, 0, Endian.Little) // lower byte is now 0b01010101
                ;
                // mutatedData is now 0b10111111000000000000111101010101
 
                var beBa = mutatedData.ToByteArray(Endian.Big); // beBa=[0b10111111, 0b00000000, 0b00001111, 0b01010101]
 
-               var leBa = mutatedData.ToByteArray(Endian.Little); // leBa=[0b01010101, 0b00001111, 0b00000000,
-               0b10111111]
+               var leBa = mutatedData.ToByteArray(Endian.Little); // leBa=[0b01010101, 0b00001111,
+                                                                  //       0b00000000, 0b10111111]
 
                var leBaToUInt32Le = leBa.ToUInt32(Endian.Little); // leBaToUInt32Le = 0b10111111000000000000111101010101
 
@@ -195,12 +266,12 @@
                // chaining operations, the same steps and end results
                data.ClearBits();
                data = data.SetBits(0, 32) // value is now 0b11111111111111111111111111111111
-               .SetBits() // this is the equivalent as above
-               .ClearBits(4, 8) // value is now 01111111111111111b1111000000001111
-               .ToggleBits(); // value is now 0b00000000000000000000111111110000
+                          .SetBits() // this is the equivalent as above
+                          .ClearBits(4, 8) // value is now 01111111111111111b1111000000001111
+                          .ToggleBits(); // value is now 0b00000000000000000000111111110000
 
                secondByte = ((byte) data.ReadBits(8, 8)) // extract the upper byte (0b00001111)
-               .StoreBits(0b1011, 4, 4); // store the value in the upper 4 bits, now upperByte is now 0b10111111
+                                        .StoreBits(0b1011, 4, 4); // store the value in the upper 4 bits, now upperByte is now 0b10111111
 
                // finalData is 0b00000000000000000000111111110000
 
@@ -208,14 +279,14 @@
                var leByte0 = finalData.ReadByte(0, Endian.Little); // 11110000
 
                var mutatedData = finalData.StoreByte(0b10111111, 0, Endian.Big)
-               .StoreByte(0b01010101, 0, Endian.Little) // lower byte is now 0b01010101
+                                          .StoreByte(0b01010101, 0, Endian.Little) // lower byte is now 0b01010101
                ;
                // mutatedData is now 0b10111111000000000000111101010101
 
                var beBa = mutatedData.ToByteArray(Endian.Big); // beBa=[0b10111111, 0b00000000, 0b00001111, 0b01010101]
 
-               var leBa = mutatedData.ToByteArray(Endian.Little); // leBa=[0b01010101, 0b00001111, 0b00000000,
-               0b10111111]
+               var leBa = mutatedData.ToByteArray(Endian.Little); // leBa=[0b01010101, 0b00001111,
+                                                                  //       0b00000000, 0b10111111]
 
                var leBaToInt32Le = leBa.ToInt32(Endian.Little); // leBaToInt32Le = 0b10111111000000000000111101010101
 
@@ -231,17 +302,17 @@
 
                // turn on all the bits
                data = data.SetBits(0, 64); // value is now
-               0b1111111111111111111111111111111111111111111111111111111111111111
+               // 0b1111111111111111111111111111111111111111111111111111111111111111
                // this is the equivalent as above
                data = data.SetBits();
 
                // Clear the middle 4 bits.
                data = data.ClearBits(4, 8); // value is now
-               0b1111111111111111111111111111111111111111111111111111000000001111
+               // 0b1111111111111111111111111111111111111111111111111111000000001111
 
                // Toggle all the bits.
                data = data.ToggleBits(); // value is now
-               0b0000000000000000000000000000000000000000000000000000111111110000
+               // 0b0000000000000000000000000000000000000000000000000000111111110000
 
                var finalData = data;
 
@@ -253,35 +324,33 @@
 
                // chaining operations, the same steps and end results
                data.ClearBits();
-               data = data.SetBits(0, 64) // value is now
-               0b1111111111111111111111111111111111111111111111111111111111111111
-               .SetBits() // this is the equivalent as above
-               .ClearBits(4, 8) // value is now 0b1111111111111111111111111111111111111111111111111111000000001111
-               .ToggleBits(); // value is now 0b0000000000000000000000000000000000000000000000000000111111110000
+               data = data.SetBits(0, 64) // value is now 0b1111111111111111111111111111111111111111111111111111111111111111
+                          .SetBits() // this is the equivalent as above
+                          .ClearBits(4, 8) // value is now 0b1111111111111111111111111111111111111111111111111111000000001111
+                          .ToggleBits(); // value is now 0b0000000000000000000000000000000000000000000000000000111111110000
 
                secondByte = ((byte) data.ReadBits(8, 8)) // extract the upper byte (0b00001111)
-               .StoreBits(0b1011, 4, 4); // store the value in the upper 4 bits, now upperByte is now 0b10111111
+                                        .StoreBits(0b1011, 4, 4); // store the value in the upper 4 bits, now
+               // secondByte is now 0b10111111
 
                // finalData is 0b0000000000000000000000000000000000000000000000000000111111110000
                var beByte0 = finalData.ReadByte(0, Endian.Big); // 00001111
                var leByte0 = finalData.ReadByte(0, Endian.Little); // 11110000
 
                var mutatedData = finalData.StoreByte(0b10111111, 0, Endian.Big)
-               .StoreByte(0b01010101, 0, Endian.Little)
+                                          .StoreByte(0b01010101, 0, Endian.Little)
                ;
                // mutatedData is now 0b1011111100000000000000000000000000000000000000000000111101010101
 
                var beBa = mutatedData.ToByteArray(Endian.Big); // beBa=[0b10111111, 0b00000000, 0b00000000, 0b00000000,
-               0b00000000, 0b00000000, 0b00001111, 0b01010101]
+                                                               //       0b00000000, 0b00000000, 0b00001111, 0b01010101]
 
-               var leBa = mutatedData.ToByteArray(Endian.Little); // leBa=[0b01010101, 0b00001111, 0b00000000,
-               0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b10111111]
+               var leBa = mutatedData.ToByteArray(Endian.Little); // leBa=[0b01010101, 0b00001111, 0b00000000, 0b00000000, 
+                                                                  //       0b00000000, 0b00000000, 0b00000000, 0b10111111]
 
-               var leBaToUInt64Le = leBa.ToUInt64(Endian.Little); // leBaToUInt64Le =
-               0b1011111100000000000000000000000000000000000000000000111101010101
+               var leBaToUInt64Le = leBa.ToUInt64(Endian.Little); // leBaToUInt64Le = 0b1011111100000000000000000000000000000000000000000000111101010101
 
-               var leBaToUInt64Be = leBa.ToUInt64(Endian.Big); // leBaToUInt64Be =
-               0b0101010100001111000000000000000000000000000000000000000010111111
+               var leBaToUInt64Be = leBa.ToUInt64(Endian.Big); // leBaToUInt64Be = 0b0101010100001111000000000000000000000000000000000000000010111111
 
             </code>
          </example>
@@ -293,17 +362,15 @@
 
                // turn on all the bits
                data = data.SetBits(0, 64); // value is now
-               0b1111111111111111111111111111111111111111111111111111111111111111
+               // 0b1111111111111111111111111111111111111111111111111111111111111111
                // this is the equivalent as above
                data = data.SetBits();
 
                // Clear the middle 4 bits.
-               data = data.ClearBits(4, 8); // value is now
-               0b1111111111111111111111111111111111111111111111111111000000001111
+               data = data.ClearBits(4, 8); // value is now 0b1111111111111111111111111111111111111111111111111111000000001111
 
                // Toggle all the bits.
-               data = data.ToggleBits(); // value is now
-               0b0000000000000000000000000000000000000000000000000000111111110000
+               data = data.ToggleBits(); // value is now 0b0000000000000000000000000000000000000000000000000000111111110000
 
                var finalData = data;
 
@@ -315,35 +382,32 @@
 
                // chaining operations, the same steps and end results
                data.ClearBits();
-               data = data.SetBits(0, 64) // value is now
-               0b1111111111111111111111111111111111111111111111111111111111111111
-               .SetBits() // this is the equivalent as above
-               .ClearBits(4, 8) // value is now 0b1111111111111111111111111111111111111111111111111111000000001111
-               .ToggleBits(); // value is now 0b0000000000000000000000000000000000000000000000000000111111110000
+               data = data.SetBits(0, 64) // value is now 0b1111111111111111111111111111111111111111111111111111111111111111
+                          .SetBits() // this is the equivalent as above
+                          .ClearBits(4, 8) // value is now 0b1111111111111111111111111111111111111111111111111111000000001111
+                          .ToggleBits(); // value is now 0b0000000000000000000000000000000000000000000000000000111111110000
 
                secondByte = ((byte) data.ReadBits(8, 8)) // extract the upper byte (0b00001111)
-               .StoreBits(0b1011, 4, 4); // store the value in the upper 4 bits, now upperByte is now 0b10111111
+                                        .StoreBits(0b1011, 4, 4); // store the value in the upper 4 bits, now upperByte is now 0b10111111
 
                // finalData is 0b0000000000000000000000000000000000000000000000000000111111110000
                var beByte0 = finalData.ReadByte(0, Endian.Big); // 00001111
                var leByte0 = finalData.ReadByte(0, Endian.Little); // 11110000
 
                var mutatedData = finalData.StoreByte(0b10111111, 0, Endian.Big)
-               .StoreByte(0b01010101, 0, Endian.Little)
+                                          .StoreByte(0b01010101, 0, Endian.Little)
                ;
                // mutatedData is now 0b1011111100000000000000000000000000000000000000000000111101010101
-
+               
                var beBa = mutatedData.ToByteArray(Endian.Big); // beBa=[0b10111111, 0b00000000, 0b00000000, 0b00000000,
-               0b00000000, 0b00000000, 0b00001111, 0b01010101]
+                                                               //       0b00000000, 0b00000000, 0b00001111, 0b01010101]
 
-               var leBa = mutatedData.ToByteArray(Endian.Little); // leBa=[0b01010101, 0b00001111, 0b00000000,
-               0b00000000, 0b00000000, 0b00000000, 0b00000000, 0b10111111]
+               var leBa = mutatedData.ToByteArray(Endian.Little); // leBa=[0b01010101, 0b00001111, 0b00000000, 0b00000000,
+                                                                  //       0b00000000, 0b00000000, 0b00000000, 0b10111111]
 
-               var leBaToInt64Le = leBa.ToInt64(Endian.Little); // leBaToInt64Le =
-               0b1011111100000000000000000000000000000000000000000000111101010101
+               var leBaToInt64Le = leBa.ToInt64(Endian.Little); // leBaToInt64Le = 0b1011111100000000000000000000000000000000000000000000111101010101
 
-               var leBaToInt64Be = leBa.ToInt64(Endian.Big); // leBaToInt64Be =
-               0b0101010100001111000000000000000000000000000000000000000010111111
+               var leBaToInt64Be = leBa.ToInt64(Endian.Big); // leBaToInt64Be = 0b0101010100001111000000000000000000000000000000000000000010111111
             </code>
          </example>
       </item>
@@ -386,3 +450,4 @@
       </item>
    </examples>
 </doc>
+<!-- @formatter:on -->

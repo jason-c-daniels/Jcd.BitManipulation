@@ -2,8 +2,7 @@
 
 ## BitMask.implicit operator BitMask(int) Operator
 
-Automatically convert to [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') from
-a [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+Automatically convert to [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') from a [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
 ```csharp
 public static Jcd.BitManipulation.BitMask implicit operator BitMask(int bits);

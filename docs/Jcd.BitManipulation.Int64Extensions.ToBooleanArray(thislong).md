@@ -2,8 +2,7 @@
 
 ## Int64Extensions.ToBooleanArray(this long) Method
 
-Converts a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64') into an array of
-values with the lease significant bit at index 0.
+Converts a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64') into an array of values with the lease significant bit at index 0.
 
 ```csharp
 public static bool[] ToBooleanArray(this long bits);

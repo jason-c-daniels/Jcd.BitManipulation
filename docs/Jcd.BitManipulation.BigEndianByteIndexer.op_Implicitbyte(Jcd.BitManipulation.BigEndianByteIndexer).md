@@ -2,9 +2,7 @@
 
 ## BigEndianByteIndexer.implicit operator byte(BigEndianByteIndexer) Operator
 
-Implicitly converts
-the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') to
-a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte').
+Implicitly converts the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') to a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte').
 
 ```csharp
 public static byte implicit operator byte(Jcd.BitManipulation.BigEndianByteIndexer indexer);

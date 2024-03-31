@@ -8,8 +8,7 @@ Provides facilities to convert an array of bytes to other data types.
 public static class ByteArrayExtensions
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106;
-ByteArrayExtensions
+Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; ByteArrayExtensions
 
 | Methods                                                                                                                                                                                                                 |                                                                                                                                                           |
 |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------|

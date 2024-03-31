@@ -2,9 +2,7 @@
 
 ## BigEndianByteIndexer.ToString() Method
 
-Formats
-the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') as a
-hexadecimal string in big endian notation.
+Formats the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') as a hexadecimal string in big endian notation.
 For example: `60 0D C0 DE`
 
 ```csharp

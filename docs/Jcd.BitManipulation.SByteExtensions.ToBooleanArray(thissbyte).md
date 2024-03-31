@@ -2,8 +2,7 @@
 
 ## SByteExtensions.ToBooleanArray(this sbyte) Method
 
-Converts a [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte') into an array of
-values with the lease significant bit at index 0.
+Converts a [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte') into an array of values with the lease significant bit at index 0.
 
 ```csharp
 public static bool[] ToBooleanArray(this sbyte bits);

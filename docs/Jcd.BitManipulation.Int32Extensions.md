@@ -2,15 +2,13 @@
 
 ## Int32Extensions Class
 
-Provides easy to read methods for bit manipulation operations on
-a [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+Provides easy to read methods for bit manipulation operations on a [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
 ```csharp
 public static class Int32Extensions
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106;
-Int32Extensions
+Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; Int32Extensions
 
 ### Example
 
@@ -39,31 +37,32 @@ secondByte = secondByte.StoreBits(0b1011, 4, 4); // secondByte is now 0b10111111
 
 // chaining operations, the same steps and end results
 data.ClearBits();
-data = data.SetBits(0, 32)  // value is now 0b11111111111111111111111111111111
-.SetBits()                // this is the equivalent as above
-.ClearBits(4, 8) // value is now 01111111111111111b1111000000001111
-.ToggleBits();            // value is now 0b00000000000000000000111111110000
+data = data.SetBits(0, 32) // value is now 0b11111111111111111111111111111111
+           .SetBits() // this is the equivalent as above
+           .ClearBits(4, 8) // value is now 01111111111111111b1111000000001111
+           .ToggleBits(); // value is now 0b00000000000000000000111111110000
 
-secondByte = ((byte) data.ReadBits(8, 8))                 // extract the upper byte (0b00001111)
-.StoreBits(0b1011, 4, 4);  // store the value in the upper 4 bits, now upperByte is now 0b10111111
+secondByte = ((byte) data.ReadBits(8, 8)) // extract the upper byte (0b00001111)
+                         .StoreBits(0b1011, 4, 4); // store the value in the upper 4 bits, now upperByte is now 0b10111111
 
 // finalData is 0b00000000000000000000111111110000
 
-var beByte0 = finalData.ReadByte(0, Endian.Big);    // 00001111
+var beByte0 = finalData.ReadByte(0, Endian.Big); // 00001111
 var leByte0 = finalData.ReadByte(0, Endian.Little); // 11110000
 
 var mutatedData = finalData.StoreByte(0b10111111, 0, Endian.Big)
-.StoreByte(0b01010101, 0, Endian.Little) // lower byte is now 0b01010101
+                           .StoreByte(0b01010101, 0, Endian.Little) // lower byte is now 0b01010101
 ;
 // mutatedData is now 0b10111111000000000000111101010101
 
 var beBa = mutatedData.ToByteArray(Endian.Big); // beBa=[0b10111111, 0b00000000, 0b00001111, 0b01010101]
 
-var leBa = mutatedData.ToByteArray(Endian.Little); // leBa=[0b01010101, 0b00001111, 0b00000000, 0b10111111]
+var leBa = mutatedData.ToByteArray(Endian.Little); // leBa=[0b01010101, 0b00001111,
+                                                   //       0b00000000, 0b10111111]
 
 var leBaToInt32Le = leBa.ToInt32(Endian.Little); // leBaToInt32Le = 0b10111111000000000000111101010101
 
-var leBaToInt32Be = leBa.ToInt32(Endian.Big); // leBaToInt32Be  = 0b01010101000011110000000010111111
+var leBaToInt32Be = leBa.ToInt32(Endian.Big); // leBaToInt32Be = 0b01010101000011110000000010111111
 ```
 
 | Methods                                                                                                                                                                                                                                                                                                                 |                                                                                                                                                                                                                         |

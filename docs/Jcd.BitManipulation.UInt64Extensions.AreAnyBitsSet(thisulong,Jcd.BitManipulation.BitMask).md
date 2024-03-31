@@ -2,8 +2,7 @@
 
 ## UInt64Extensions.AreAnyBitsSet(this ulong, BitMask) Method
 
-Tests if any bits from the bitmask are set on
-a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64').
+Tests if any bits from the bitmask are set on a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64').
 
 ```csharp
 public static bool AreAnyBitsSet(this ulong data, Jcd.BitManipulation.BitMask bitmask);

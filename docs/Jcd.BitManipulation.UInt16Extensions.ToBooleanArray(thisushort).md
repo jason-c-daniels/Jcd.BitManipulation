@@ -2,8 +2,7 @@
 
 ## UInt16Extensions.ToBooleanArray(this ushort) Method
 
-Converts a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16') into an array of
-values with the lease significant bit at index 0.
+Converts a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16') into an array of values with the lease significant bit at index 0.
 
 ```csharp
 public static bool[] ToBooleanArray(this ushort bits);

@@ -9,6 +9,7 @@ namespace Jcd.BitManipulation;
 /// <summary>
 /// Provides easy to read methods for bit manipulation operations on a <see cref="byte" />
 /// </summary>
+/// <include file='XmlDocs/examples.xml' path='/doc/examples/item[@name="ByteExtensions"]/example' />
 public static class ByteExtensions
 {
    /// <summary>

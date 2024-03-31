@@ -2,9 +2,7 @@
 
 ## ByteArrayExtensions.ToInt32(this byte[], Endian) Method
 
-Converts an array of bytes into
-a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32'), discarding any excess
-data.
+Converts an array of bytes into a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32'), discarding any excess data.
 
 ```csharp
 public static int ToInt32(this byte[] data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);

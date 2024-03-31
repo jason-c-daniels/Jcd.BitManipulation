@@ -2,8 +2,7 @@
 
 ## ReadOnlySpanOfByteExtensions.ToByte(this ReadOnlySpan<byte>, Endian) Method
 
-Converts bytes into a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte'), discarding
-any excess data.
+Converts bytes into a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte'), discarding any excess data.
 
 ```csharp
 public static byte ToByte(this System.ReadOnlySpan<byte> data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);

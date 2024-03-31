@@ -2,8 +2,7 @@
 
 ## Int16Extensions.ToBooleanArray(this short) Method
 
-Converts a [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16') into an array of
-values with the lease significant bit at index 0.
+Converts a [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16') into an array of values with the lease significant bit at index 0.
 
 ```csharp
 public static bool[] ToBooleanArray(this short bits);

@@ -2,9 +2,7 @@
 
 ## LittleEndianByteIndexer.ToString() Method
 
-Formats
-the [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
-as a hexadecimal string in big endian notation.
+Formats the [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') as a hexadecimal string in big endian notation.
 For example: `DE C0 0D 60`
 
 ```csharp

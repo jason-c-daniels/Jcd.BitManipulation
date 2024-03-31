@@ -2,8 +2,7 @@
 
 ## BitIndexer.implicit operator BitIndexer(int) Operator
 
-Automatically Convert from a [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32') to
-a [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')
+Automatically Convert from a [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32') to a [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')
 
 ```csharp
 public static Jcd.BitManipulation.BitIndexer implicit operator BitIndexer(int bits);

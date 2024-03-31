@@ -2,8 +2,7 @@
 
 ## UInt16Extensions.AreNoBitsSet(this ushort, BitMask) Method
 
-Tests if none of the bits from the bitmask are set on
-a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16').
+Tests if none of the bits from the bitmask are set on a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16').
 
 ```csharp
 public static bool AreNoBitsSet(this ushort data, Jcd.BitManipulation.BitMask bitmask);

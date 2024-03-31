@@ -29,6 +29,7 @@ internal static class Program
    public static void Main()
    {
       BitIndexer_Example();
+      ReadMe_BitManipulation_Byte_Example();
       ReadMe_BitManipulation_UInt16_Example();
       ReadMe_BitManipulation_Int16_Example();
       ReadMe_BitManipulation_UInt32_Example();
@@ -683,6 +684,72 @@ internal static class Program
       var cpuCyclesPer = totalCpuCycles / operationCount;
 
       return new RunStats(duration, durationPer, totalCpuCycles, cpuCyclesPer, freq, operationCount / iterations);
+   }
+
+   private static void ReadMe_BitManipulation_Byte_Example()
+   {
+      byte data = 0b00000000;
+
+      // turn on all the bits
+      data = data.SetBits(0, 8); // value is now 0b11111111
+
+      // this is the equivalent as above
+      data = data.SetBits();
+
+      // Clear the upper 4 bits.
+      data = data.ClearBits(4, 4); // value is now 0b00001111
+
+      // Toggle all the bits.
+      data = data.ToggleBits(); // value is now 0b11110000
+
+      // read the upper nybble as a byte
+      var upperNybble = data.ReadBits(4, 4); // upperNybble is now 0b00001111
+
+      // write 0b1011 into the upper nybble of data
+      data = data.StoreBits(0b1011, 4, 4); // data is now 0b10110000
+
+      // chaining operations, the same steps and end results
+      data.ClearBits();
+      data = data.SetBits(0, 8)   // value is now 0b11111111
+                 .SetBits()       // this is the equivalent as above
+                 .ClearBits(4, 4) // value is now 0b00001111
+                 .ToggleBits();   // value is now 0b11110000
+
+      upperNybble = data.ReadBits(4, 4)           // extract the upper nybble (0b00001111)
+                        .StoreBits(0b1011, 4, 4); // store the value in the upper 4 bits, now upperByte is now 0b10111111
+   }
+
+   private static void ReadMe_BitManipulation_SByte_Example()
+   {
+      sbyte data = 0b00000000;
+
+      // turn on all the bits
+      data = data.SetBits(0, 8); // value is now 0b11111111
+
+      // this is the equivalent as above
+      data = data.SetBits();
+
+      // Clear the upper 4 bits.
+      data = data.ClearBits(4, 4); // value is now 0b00001111
+
+      // Toggle all the bits.
+      data = data.ToggleBits(); // value is now 0b11110000
+
+      // read the upper nybble as a byte
+      var upperNybble = data.ReadBits(4, 4); // upperNybble is now 0b00001111
+
+      // write 0b1011 into the upper nybble of data
+      data = data.StoreBits(0b1011, 4, 4); // data is now 0b10110000
+
+      // chaining operations, the same steps and end results
+      data.ClearBits();
+      data = data.SetBits(0, 8)   // value is now 0b11111111
+                 .SetBits()       // this is the equivalent as above
+                 .ClearBits(4, 4) // value is now 0b00001111
+                 .ToggleBits();   // value is now 0b11110000
+
+      upperNybble = data.ReadBits(4, 4)           // extract the upper nybble (0b00001111)
+                        .StoreBits(0b1011, 4, 4); // store the value in the upper 4 bits, now upperByte is now 0b10111111
    }
 
    private static void ReadMe_BitManipulation_UInt16_Example()

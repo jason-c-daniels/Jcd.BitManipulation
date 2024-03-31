@@ -2,8 +2,7 @@
 
 ## SByteExtensions.AreAnyBitsSet(this sbyte, BitMask) Method
 
-Tests if any bits from the bitmask are set on
-a [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte').
+Tests if any bits from the bitmask are set on a [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte').
 
 ```csharp
 public static bool AreAnyBitsSet(this sbyte data, Jcd.BitManipulation.BitMask bitmask);

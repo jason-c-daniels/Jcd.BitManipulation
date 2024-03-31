@@ -24,7 +24,7 @@ public class BigEndianReadBytes
    private const ushort Ui16 = ushort.MaxValue / 2;
    private const short I16 = short.MaxValue    / 2;
    private const double Dbl = double.MaxValue  / 2;
-   private const float Flt = float.MaxValue    / 2;
+   private const float Flt = float.MaxValue   / 2;
 
    #region BitConverter
 
@@ -90,7 +90,7 @@ public class BigEndianReadBytes
       var bytes = BitConverter.GetBytes(I32);
       if (BitConverter.IsLittleEndian)
          Array.Reverse(bytes);
-
+      // change no change.
       return bytes;
    }
 

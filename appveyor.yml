@@ -1,11 +1,11 @@
 ﻿version: 3.0.{build}
+image: Ubuntu2204
+configuration: Release
 branches:
    only:
       - main
       - /release[/].*/
 skip_tags: true
-image: Ubuntu2204
-configuration: Release
 
 assembly_info:
    patch: true
@@ -23,15 +23,17 @@ dotnet_csproj:
    assembly_version: '{version}'
    file_version: '{version}'
    informational_version: '{version}-alpha'
+   
 environment:
    SONAR_TOKEN:
       secure: PHKmq/QK5apQjJA12j8uvP6FY9o2qAcGw7IzeyCsIdvVyamAHQos4fISdKQYOQvf
+      
 install:
    - sh: >-
-        #!/bin/bash
-        
+        #!/bin/bash        
         sudo apt-get update && sudo apt-get install -y dotnet-sdk-8.0
         dotnet tool install --global dotnet-sonarscanner
+        
 build:
    publish_nuget: true
    publish_nuget_symbols: true

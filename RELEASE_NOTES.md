@@ -1,5 +1,10 @@
 ﻿# Change Log
 
+## Version 2.4.33 Released
+
+1. Backported `BitIndexer`,`BigEndianByteIdexer` and `LittleEndianByteIndexer`
+2. Added the `ObsoleteAttribute` to impacted types, properties and methods with instructions on how to proceed.
+
 ## Version 2.4 Released
 
 1. Added `ReadByte` extension methods for `IByteIndexer` derived types.

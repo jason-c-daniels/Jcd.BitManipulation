@@ -19,6 +19,9 @@ using Jcd.Units.UnitsOfMeasure.SI;
 // ReSharper disable UnusedMember.Local
 // ReSharper disable HeapView.ObjectAllocation.Evident
 // ReSharper disable UnusedVariable
+#pragma warning disable S1481
+#pragma warning disable S1854
+#pragma warning disable S125
 
 #endregion
 
@@ -29,7 +32,9 @@ internal static class Program
    public static void Main()
    {
       BitIndexer_Example();
+      ByteIndexer_Example();
       ReadMe_BitManipulation_Byte_Example();
+      ReadMe_BitManipulation_SByte_Example();
       ReadMe_BitManipulation_UInt16_Example();
       ReadMe_BitManipulation_Int16_Example();
       ReadMe_BitManipulation_UInt32_Example();
@@ -38,7 +43,7 @@ internal static class Program
       ReadMe_BitManipulation_Int64_Example();
 
       BigEndianByteIndexer bebiFlt = float.MaxValue / 2;
-      var bebifltbytes = bebiFlt.Slice(0, sizeof(long));
+      var bebifltbytes = bebiFlt[..];
 
       // chaining operations, the same steps and end results
 
@@ -237,8 +242,11 @@ internal static class Program
       byte upperByte = 0;
       var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
       var sw = Stopwatch.StartNew();
+
       for (long i = 0; i < iterations; i++)
+      {
          data = i.StoreBytes(bytes, 0);
+      }
 
       sw.Stop();
 
@@ -263,8 +271,11 @@ internal static class Program
       byte upperByte = 0;
       var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
       var sw = Stopwatch.StartNew();
+
       for (long i = 0; i < iterations; i++)
+      {
          data = i.StoreBytes(bytes, 0, 4);
+      }
 
       sw.Stop();
 
@@ -289,8 +300,11 @@ internal static class Program
       byte upperByte = 0;
       var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
       var sw = Stopwatch.StartNew();
+
       for (long i = 0; i < iterations; i++)
+      {
          data = i.StoreBytes(bytes, 0, 2);
+      }
 
       sw.Stop();
 
@@ -315,8 +329,11 @@ internal static class Program
       var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
       LittleEndianByteIndexer data = 0;
       var sw = Stopwatch.StartNew();
+
       for (long i = 0; i < iterations; i++)
+      {
          data.StoreBytes(bytes, 0);
+      }
 
       sw.Stop();
 
@@ -341,8 +358,11 @@ internal static class Program
       byte upperByte = 0;
       var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
       var sw = Stopwatch.StartNew();
+
       for (long i = 0; i < iterations; i++)
+      {
          data.StoreBytes(bytes, 0, 4);
+      }
 
       sw.Stop();
 
@@ -367,8 +387,11 @@ internal static class Program
       byte upperByte = 0;
       var bytes = new byte[] { 0xFF, 0xFE, 0x0A, 0x0B, 0xFF, 0xFE, 0x0A, 0x0B };
       var sw = Stopwatch.StartNew();
+
       for (long i = 0; i < iterations; i++)
+      {
          data.StoreBytes(bytes, 0, 2);
+      }
 
       sw.Stop();
 
@@ -425,7 +448,9 @@ internal static class Program
       var sw = Stopwatch.StartNew();
 
       for (var i = 0; i < iterations; i++)
+      {
          bytes[0] = (byte) (i % 256);
+      }
 
       sw.Stop();
 

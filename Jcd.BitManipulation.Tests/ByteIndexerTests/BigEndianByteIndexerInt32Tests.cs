@@ -5,9 +5,9 @@ using System.Collections.Generic;
 
 using Xunit;
 
+// ReSharper disable InlineTemporaryVariable
 // ReSharper disable HeapView.DelegateAllocation
 // ReSharper disable HeapView.BoxingAllocation
-// ReSharper disable InlineTemporaryVariable
 // ReSharper disable HeapView.ObjectAllocation.Evident
 // ReSharper disable HeapView.ClosureAllocation
 

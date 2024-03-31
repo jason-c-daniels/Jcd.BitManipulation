@@ -3,6 +3,8 @@
 using System;
 using System.Runtime.CompilerServices;
 
+#pragma warning disable S4136
+
 #endregion
 
 namespace Jcd.BitManipulation;

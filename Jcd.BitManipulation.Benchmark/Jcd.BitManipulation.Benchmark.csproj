@@ -2,7 +2,7 @@
 
    <PropertyGroup>
       <OutputType>Exe</OutputType>
-      <TargetFrameworks>net8.0;net481;net462;net6.0</TargetFrameworks>
+      <TargetFrameworks>net8.0;net462</TargetFrameworks>
       <ImplicitUsings>enable</ImplicitUsings>
       <Nullable>enable</Nullable>
       <LangVersion>latest</LangVersion>
@@ -12,6 +12,10 @@
 
    <ItemGroup>
       <PackageReference Include="BenchmarkDotNet" Version="0.13.12"/>
+      <PackageReference Include="SonarAnalyzer.CSharp" Version="9.23.0.88079">
+         <PrivateAssets>all</PrivateAssets>
+         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
    </ItemGroup>
 
    <ItemGroup>

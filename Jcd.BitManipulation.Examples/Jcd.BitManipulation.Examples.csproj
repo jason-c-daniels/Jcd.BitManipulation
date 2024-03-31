@@ -16,6 +16,10 @@
    <ItemGroup>
       <PackageReference Include="Hardware.Info" Version="11.0.1"/>
       <PackageReference Include="Jcd.Units" Version="0.0.6"/>
+      <PackageReference Include="SonarAnalyzer.CSharp" Version="9.23.0.88079">
+         <PrivateAssets>all</PrivateAssets>
+         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
    </ItemGroup>
 
 </Project>

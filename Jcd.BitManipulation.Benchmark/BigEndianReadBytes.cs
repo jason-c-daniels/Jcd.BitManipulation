@@ -8,6 +8,9 @@ using BenchmarkDotNet.Attributes;
 // ReSharper disable UnusedMember.Local
 // ReSharper disable MemberCanBePrivate.Global
 
+#pragma warning disable CA1822
+#pragma warning disable S109
+
 #endregion
 
 namespace Jcd.BitManipulation.Benchmark;
@@ -120,56 +123,56 @@ public class BigEndianReadBytes
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] BigEndianByteIndexer_Slice_Double()
    {
-      return ((BigEndianByteIndexer) Dbl).Slice(0, sizeof(double));
+      return ((BigEndianByteIndexer) Dbl)[..];
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] BigEndianByteIndexer_Slice_Float()
    {
-      return ((BigEndianByteIndexer) Flt).Slice(0, sizeof(float));
+      return ((BigEndianByteIndexer) Flt)[..];
    }
 
    [Benchmark(Baseline = true)]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] BigEndianByteIndexer_Slice_UInt64()
    {
-      return ((BigEndianByteIndexer) Ui64).Slice(0, sizeof(ulong));
+      return ((BigEndianByteIndexer) Ui64)[..];
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] BigEndianByteIndexer_Slice_Int64()
    {
-      return ((BigEndianByteIndexer) I64).Slice(0, sizeof(long));
+      return ((BigEndianByteIndexer) I64)[..];
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] BigEndianByteIndexer_Slice_UInt32()
    {
-      return ((BigEndianByteIndexer) Ui32).Slice(0, sizeof(uint));
+      return ((BigEndianByteIndexer) Ui32)[..];
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] BigEndianByteIndexer_Slice_Int32()
    {
-      return ((BigEndianByteIndexer) I32).Slice(0, sizeof(int));
+      return ((BigEndianByteIndexer) I32)[..];
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] BigEndianByteIndexer_Slice_UInt16()
    {
-      return ((BigEndianByteIndexer) Ui16).Slice(0, sizeof(ushort));
+      return ((BigEndianByteIndexer) Ui16)[..];
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] BigEndianByteIndexer_Slice_Int16()
    {
-      return ((BigEndianByteIndexer) I16).Slice(0, sizeof(short));
+      return ((BigEndianByteIndexer) I16)[..];
    }
 
    #endregion

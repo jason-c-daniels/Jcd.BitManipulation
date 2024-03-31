@@ -5,6 +5,20 @@ using System.Collections.Generic;
 
 using Xunit;
 
+// ReSharper disable HeapView.DelegateAllocation
+// ReSharper disable HeapView.BoxingAllocation
+// ReSharper disable HeapView.ObjectAllocation
+// ReSharper disable HeapView.ObjectAllocation.Evident
+// ReSharper disable HeapView.ClosureAllocation
+// ReSharper disable MemberCanBePrivate.Global
+// ReSharper disable UnusedMember.Global
+// ReSharper disable UnusedMember.Local
+// ReSharper disable UnusedType.Global
+// ReSharper disable UnusedMethodReturnValue.Global
+// ReSharper disable UnusedMemberInSuper.Global
+
+#pragma warning disable S4136
+
 #endregion
 
 namespace Jcd.BitManipulation.Tests.ByteIndexerTests;
@@ -34,7 +48,7 @@ public class LittleEndianByteIndexerTests
           , new object[] { new byte[] { 0xAF, 0xEF, 0xEF, 0xEF, 0x0F, 0xFC, 0x00, 0xA0 }, "AF EF EF EF 0F FC 00 A0", true }
          };
 
-   private LittleEndianByteIndexer GetIndexer(object o, bool flag)
+   private static LittleEndianByteIndexer GetIndexer(object o, bool flag)
    {
       return o switch
              {

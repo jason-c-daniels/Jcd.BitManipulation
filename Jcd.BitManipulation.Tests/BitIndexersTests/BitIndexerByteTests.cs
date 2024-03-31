@@ -51,14 +51,13 @@ public class BitIndexerByteTests
    [InlineData(0b01000001)]
    public void Indexer_Returns_Correct_Bit_Value(byte data)
    {
-      var value = data;
-      BitIndexer indexer = value;
+      BitIndexer indexer = data;
       byte mask = 0;
 
       for (var i = 0; i < indexer.Length; i++)
       {
          mask = mask.SetBit(i);
-         var bit = (value & mask) > 0;
+         var bit = (data & mask) > 0;
          Assert.Equal(bit, indexer[i]);
          mask = mask.ClearBit(i);
       }

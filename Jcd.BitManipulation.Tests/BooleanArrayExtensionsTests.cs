@@ -100,9 +100,8 @@ public class BooleanArrayExtensionsTests
    [InlineData(1.11f)]
    public void Float_Round_Trip_Remains_Unaltered(float data)
    {
-      var expected = data;
-      var actual = expected.ToBooleanArray().ToSingle();
-      Assert.Equal(expected, actual);
+      var actual = data.ToBooleanArray().ToSingle();
+      Assert.Equal(data, actual);
    }
 
    [Theory]
@@ -111,8 +110,7 @@ public class BooleanArrayExtensionsTests
    [InlineData(1.11d)]
    public void Double_Round_Trip_Remains_Unaltered(double data)
    {
-      var expected = data;
-      var actual = expected.ToBooleanArray().ToDouble();
-      Assert.Equal(expected, actual);
+      var actual = data.ToBooleanArray().ToDouble();
+      Assert.Equal(data, actual);
    }
 }

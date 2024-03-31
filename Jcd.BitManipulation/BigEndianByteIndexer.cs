@@ -4,6 +4,18 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Text;
 
+// ReSharper disable MemberCanBePrivate.Global
+// ReSharper disable MemberCanBePrivate.Global
+// ReSharper disable UnusedMember.Global
+// ReSharper disable UnusedMember.Local
+// ReSharper disable UnusedType.Global
+// ReSharper disable UnusedMethodReturnValue.Global
+// ReSharper disable UnusedMemberInSuper.Global
+// ReSharper disable HeapView.ObjectAllocation
+// ReSharper disable HeapView.ObjectAllocation.Evident
+
+#pragma warning disable S4136
+
 #endregion
 
 namespace Jcd.BitManipulation;
@@ -294,8 +306,11 @@ public ref struct BigEndianByteIndexer
 
       // ReSharper disable once HeapView.ObjectAllocation.Evident
       var slice = new byte[len];
+
       for (int i = 0, j = dataOffset + start; i < len; i++, j++)
+      {
          slice[i] = data.InternalBigEndianReadByte(j);
+      }
 
       return slice;
    }

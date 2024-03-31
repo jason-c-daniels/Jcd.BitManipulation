@@ -5,6 +5,15 @@ using System.Text;
 
 // ReSharper disable HeapView.ObjectAllocation.Evident
 // ReSharper disable UnusedMember.Global
+// ReSharper disable HeapView.ObjectAllocation
+// ReSharper disable MemberCanBePrivate.Global
+// ReSharper disable UnusedMember.Global
+// ReSharper disable UnusedMember.Local
+// ReSharper disable UnusedType.Global
+// ReSharper disable UnusedMethodReturnValue.Global
+// ReSharper disable UnusedMemberInSuper.Global
+
+#pragma warning disable S4136
 
 #endregion
 
@@ -207,7 +216,7 @@ public readonly struct BitMask
    /// </summary>
    /// <returns>the bits of the mask formatted as 0b0101...1111</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public readonly override string ToString()
+   public override string ToString()
    {
       const ulong highBit = (ulong) 1 << 63;
       var sb = new StringBuilder();

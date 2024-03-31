@@ -4,6 +4,14 @@ using System.Runtime.CompilerServices;
 
 using BenchmarkDotNet.Attributes;
 
+// ReSharper disable UnusedType.Global
+// ReSharper disable RedundantTypeDeclarationBody
+// ReSharper disable MemberCanBeMadeStatic.Global
+// ReSharper disable MemberCanBeMadeStatic.Local
+// ReSharper disable MemberCanBeMadeStatic
+#pragma warning disable CA1822
+#pragma warning disable S109
+
 #endregion
 
 namespace Jcd.BitManipulation.Benchmark;
@@ -116,56 +124,56 @@ public class LittleEndianReadBytes
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] LittleEndianByteIndexer_Slice_Double()
    {
-      return ((LittleEndianByteIndexer) Dbl).Slice(0, sizeof(double));
+      return ((LittleEndianByteIndexer) Dbl)[..];
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] LittleEndianByteIndexer_Slice_Float()
    {
-      return ((LittleEndianByteIndexer) Flt).Slice(0, sizeof(float));
+      return ((LittleEndianByteIndexer) Flt)[..];
    }
 
    [Benchmark(Baseline = true)]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] LittleEndianByteIndexer_Slice_UInt64()
    {
-      return ((LittleEndianByteIndexer) Ui64).Slice(0, sizeof(ulong));
+      return ((LittleEndianByteIndexer) Ui64)[..];
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] LittleEndianByteIndexer_Slice_Int64()
    {
-      return ((LittleEndianByteIndexer) I64).Slice(0, sizeof(long));
+      return ((LittleEndianByteIndexer) I64)[..];
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] LittleEndianByteIndexer_Slice_UInt32()
    {
-      return ((LittleEndianByteIndexer) Ui32).Slice(0, sizeof(uint));
+      return ((LittleEndianByteIndexer) Ui32)[..];
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] LittleEndianByteIndexer_Slice_Int32()
    {
-      return ((LittleEndianByteIndexer) I32).Slice(0, sizeof(int));
+      return ((LittleEndianByteIndexer) I32)[..];
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] LittleEndianByteIndexer_Slice_UInt16()
    {
-      return ((LittleEndianByteIndexer) Ui16).Slice(0, sizeof(ushort));
+      return ((LittleEndianByteIndexer) Ui16)[..];
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] LittleEndianByteIndexer_Slice_Int16()
    {
-      return ((LittleEndianByteIndexer) I16).Slice(0, sizeof(short));
+      return ((LittleEndianByteIndexer) I16)[..];
    }
 
    #endregion

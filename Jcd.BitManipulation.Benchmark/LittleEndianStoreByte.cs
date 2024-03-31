@@ -1,11 +1,16 @@
-﻿// ReSharper disable UnusedType.Global
-// ReSharper disable RedundantTypeDeclarationBody
-
-#region
+﻿#region
 
 using System.Runtime.CompilerServices;
 
 using BenchmarkDotNet.Attributes;
+
+// ReSharper disable UnusedType.Global
+// ReSharper disable RedundantTypeDeclarationBody
+// ReSharper disable MemberCanBeMadeStatic.Global
+// ReSharper disable MemberCanBeMadeStatic.Local
+// ReSharper disable MemberCanBeMadeStatic
+#pragma warning disable CA1822
+#pragma warning disable S109
 
 #endregion
 

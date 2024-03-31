@@ -26,8 +26,7 @@ public class BitIndexerSByteTests
    [InlineData(0b00011000)]
    public void Implicit_Operator_To_BitIndexerSByte_From_Byte_Sets_All_Bits_Correctly(sbyte data)
    {
-      var bits = data;
-      BitIndexer indexer = bits;
+      BitIndexer indexer = data;
       Assert.Equal(data, (sbyte) indexer);
    }
 

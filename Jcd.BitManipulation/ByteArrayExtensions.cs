@@ -14,6 +14,7 @@ using System.Runtime.CompilerServices;
 // ReSharper disable UnusedType.Global
 // ReSharper disable UnusedMethodReturnValue.Global
 // ReSharper disable UnusedMemberInSuper.Global
+// ReSharper disable SuggestBaseTypeForParameter
 
 #endregion
 

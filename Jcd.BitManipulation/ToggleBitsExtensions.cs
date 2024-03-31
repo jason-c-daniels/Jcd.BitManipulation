@@ -1,5 +1,6 @@
 #region
 
+using System;
 using System.Runtime.CompilerServices;
 
 #endregion
@@ -9,6 +10,7 @@ namespace Jcd.BitManipulation;
 /// <summary>
 /// Extension methods to aid in toggling bits.
 /// </summary>
+[Obsolete("The extension methods in this type are being moved to type-specific classes in v3.0. Change all invocations over to standard extension method invocations!")]
 public static class ToggleBitsExtensions
 {
    #region Range of bits operations

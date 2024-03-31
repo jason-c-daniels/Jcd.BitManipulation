@@ -10,6 +10,7 @@ namespace Jcd.BitManipulation;
 /// <summary>
 /// Provides easy to read methods for bit manipulation operations on a <see cref="ulong" />
 /// </summary>
+/// <exclude />
 public static class UInt64Extensions
 {
    [MethodImpl(MethodImplOptions.AggressiveInlining)]

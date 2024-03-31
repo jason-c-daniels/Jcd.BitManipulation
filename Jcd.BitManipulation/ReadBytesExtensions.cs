@@ -105,8 +105,8 @@ public static class ReadBytesExtensions
    public static byte[] ReadBytes(this ulong value, int offset, int size, Endian endian = Endian.Little)
    {
       return endian == Endian.Big
-                ? ((BigEndianByteIndexerUInt64) value).ReadBytes(offset, size)
-                : ((LittleEndianByteIndexerUInt64) value).ReadBytes(offset, size);
+                ? ((BigEndianByteIndexer) value).Slice(offset, size)
+                : ((LittleEndianByteIndexer) value).Slice(offset, size);
    }
 
    #endregion

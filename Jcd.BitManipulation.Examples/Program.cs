@@ -36,7 +36,7 @@ internal static class Program
       const int iterations = 100_000_000;
       #endif
       var ul = 0xFFFEFDFEFCFBFAF9;
-      var ulbi = (BigEndianByteIndexerUInt64) ul;
+      var ulbi = (BigEndianByteIndexer) ul;
       var b0 = ulbi[0];
       var b1 = ulbi[1];
       var b2 = ulbi[2];

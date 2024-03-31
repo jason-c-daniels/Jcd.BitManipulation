@@ -17,6 +17,7 @@ namespace Jcd.BitManipulation;
 /// Extension methods to aid in converting numbers to and from arrays of bools
 /// </summary>
 
+[Obsolete("The extension methods in this type are being moved to type-specific classes in v3.0. Change all invocations over to standard extension method invocations! And the implementation for Big Endian usages are changing to be consistent with BigEndianByteIndexer.StoreBytes in v3.0. This will break some usages.")]
 public static class ByteArrayExtensions
 {
    /// <summary>

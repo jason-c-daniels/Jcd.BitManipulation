@@ -69,7 +69,6 @@ var leBaToUInt16Be = leBa.ToUInt16(Endian.Big); // leBaToUInt16Le = 0b0101010110
 | [StoreBitsExtensions](Jcd.BitManipulation.StoreBitsExtensions.md 'Jcd.BitManipulation.StoreBitsExtensions') | Extension methods that aid in storing values into bit offsets within an integer data type. |
 | [StoreBytesExtensions](Jcd.BitManipulation.StoreBytesExtensions.md 'Jcd.BitManipulation.StoreBytesExtensions') | Extension methods that aid in storing values into byte offsets within another integer data type. |
 | [ToggleBitsExtensions](Jcd.BitManipulation.ToggleBitsExtensions.md 'Jcd.BitManipulation.ToggleBitsExtensions') | Extension methods to aid in toggling bits. |
-| [UInt64Extensions](Jcd.BitManipulation.UInt64Extensions.md 'Jcd.BitManipulation.UInt64Extensions') | Provides easy to read methods for bit manipulation operations on a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') |
 
 | Structs | |
 | :--- | :--- |

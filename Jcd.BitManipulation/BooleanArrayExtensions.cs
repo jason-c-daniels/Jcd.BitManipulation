@@ -2,6 +2,7 @@
 
 #region
 
+using System;
 using System.Runtime.CompilerServices;
 
 #endregion
@@ -11,6 +12,7 @@ namespace Jcd.BitManipulation;
 /// <summary>
 /// Extension methods to aid in converting numbers to and from arrays of bools
 /// </summary>
+[Obsolete("Some of the extension methods in this type are being moved to type-specific classes in v3.0. Change all invocations over to standard extension method invocations!")]
 public static class BooleanArrayExtensions
 {
    /// <summary>

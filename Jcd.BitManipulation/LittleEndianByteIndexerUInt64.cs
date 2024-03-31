@@ -17,7 +17,7 @@ namespace Jcd.BitManipulation;
 /// <summary>
 /// Provides byte level indexing operations (set, get) on a <see cref="ulong" />. Zero is the least significant byte.
 /// </summary>
-[Obsolete("This type is being replaced with LittleEndianByteIndexer in 3.0")]
+[Obsolete("This type is being replaced with LittleEndianByteIndexer in v3.0")]
 public struct LittleEndianByteIndexerUInt64 : IByteIndexer
 {
    /// <summary>

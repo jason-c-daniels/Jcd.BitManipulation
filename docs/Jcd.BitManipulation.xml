@@ -4762,6 +4762,7 @@
             <summary>
             Provides easy to read methods for bit manipulation operations on a <see cref="T:System.UInt64" />
             </summary>
+            <exclude />
         </member>
     </members>
 </doc>

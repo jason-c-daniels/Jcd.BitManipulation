@@ -195,7 +195,7 @@ public ref struct LittleEndianByteIndexer
    /// Access bytes from the underlying data.
    /// </summary>
    /// <param name="index">The index of the byte to get or set.</param>
-   /// <exception cref="ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
+   /// <exception cref="ArgumentOutOfRangeException">When index &lt; 0 or &gt;= Length</exception>
    public byte this[int index]
    {
       [MethodImpl(MethodImplOptions.AggressiveInlining)]

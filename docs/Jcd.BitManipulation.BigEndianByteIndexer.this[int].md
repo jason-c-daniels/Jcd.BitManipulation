@@ -23,4 +23,4 @@ The index of the byte to get or set.
 #### Exceptions
 
 [System.ArgumentOutOfRangeException](https://docs.microsoft.com/en-us/dotnet/api/System.ArgumentOutOfRangeException 'System.ArgumentOutOfRangeException')
-When index < 0 or gt;= Length
+When index < 0 or &gt;= Length

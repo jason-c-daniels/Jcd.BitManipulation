@@ -4,6 +4,17 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Text;
 
+// ReSharper disable HeapView.ObjectAllocation
+// ReSharper disable MemberCanBePrivate.Global
+// ReSharper disable MemberCanBePrivate.Global
+// ReSharper disable UnusedMember.Global
+// ReSharper disable UnusedMember.Local
+// ReSharper disable UnusedType.Global
+// ReSharper disable UnusedMethodReturnValue.Global
+// ReSharper disable UnusedMemberInSuper.Global
+
+#pragma warning disable S4136
+
 #endregion
 
 namespace Jcd.BitManipulation;
@@ -258,8 +269,11 @@ public ref struct LittleEndianByteIndexer
 
       // ReSharper disable once HeapView.ObjectAllocation.Evident
       var slice = new byte[len];
+
       for (int i = 0, j = start; i < len; i++, j++)
+      {
          slice[i] = data.InternalLittleEndianReadByte(j);
+      }
 
       return slice;
    }

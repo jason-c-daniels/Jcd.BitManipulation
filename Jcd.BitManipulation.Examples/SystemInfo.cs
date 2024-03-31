@@ -1,14 +1,16 @@
 #region
 
-using System.Linq;
-
 using Hardware.Info;
 
 using Jcd.Units;
 using Jcd.Units.UnitsOfMeasure.SI;
 using Jcd.Units.UnitTypes;
 
+// ReSharper disable HeapView.DelegateAllocation
+// ReSharper disable HeapView.BoxingAllocation
+// ReSharper disable HeapView.ObjectAllocation
 // ReSharper disable HeapView.ObjectAllocation.Evident
+// ReSharper disable HeapView.ClosureAllocation
 
 #endregion
 
@@ -18,13 +20,13 @@ public class SystemInfo
 {
    private static readonly Frequency GHz = Frequencies.Gigahertz;
    private static readonly Frequency MHz = Frequencies.Megahertz;
-   private readonly IHardwareInfo hardwareInfo;
+   private readonly HardwareInfo hardwareInfo;
 
    private SystemInfo()
    {
       hardwareInfo = new HardwareInfo(false);
       hardwareInfo.RefreshCPUList(false);
-      CPU = hardwareInfo.CpuList.First();
+      CPU = hardwareInfo.CpuList[0];
 
       MaximumCPUFrequency = CPU.MaxClockSpeed.As(MHz).To(GHz);
 
@@ -45,7 +47,7 @@ public class SystemInfo
    public void RefreshInfo()
    {
       hardwareInfo.RefreshCPUList(false);
-      CPU = hardwareInfo.CpuList.First();
+      CPU = hardwareInfo.CpuList[0];
       CurrentCPUFrequency = GetCurrentClockSpeed(CPU);
    }
 

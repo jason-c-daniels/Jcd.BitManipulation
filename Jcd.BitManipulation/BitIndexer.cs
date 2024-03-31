@@ -124,7 +124,9 @@ public ref struct BitIndexer
       bits = 0;
 
       for (var i = 0; i < array.Count && i < Length; i++)
+      {
          this[i] = array[i];
+      }
    }
 
    private static int GetIntegerBitSize(IReadOnlyCollection<bool> array)
@@ -186,8 +188,11 @@ public ref struct BitIndexer
                    : length;
       var slice = new bool[len];
       var j = start;
+
       for (var i = 0; i < len; i++, j++)
+      {
          slice[i] = bits.ReadBit(j);
+      }
 
       return slice;
    }
@@ -452,7 +457,9 @@ public ref struct BitIndexer
       sb.Append("0b");
 
       for (var i = Length - 1; i >= 0; i--)
+      {
          sb.Append(bits.ReadBits(i, 1));
+      }
 
       return sb.ToString();
    }

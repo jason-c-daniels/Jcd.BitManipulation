@@ -2,6 +2,7 @@
 // ReSharper disable CommentTypo
 
 namespace Jcd.BitManipulation;
+#pragma warning disable S2094
 
 /// <summary>
 /// Provides extension methods and types that makes code for bit and byte manipulation

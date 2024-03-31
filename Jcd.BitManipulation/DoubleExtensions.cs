@@ -10,6 +10,7 @@ using System.Runtime.CompilerServices;
 // ReSharper disable UnusedType.Global
 // ReSharper disable UnusedMethodReturnValue.Global
 // ReSharper disable UnusedMemberInSuper.Global
+#pragma warning disable S4136
 
 #endregion
 

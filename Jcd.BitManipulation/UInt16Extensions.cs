@@ -3,6 +3,18 @@
 using System;
 using System.Runtime.CompilerServices;
 
+// ReSharper disable HeapView.ObjectAllocation
+// ReSharper disable MemberCanBePrivate.Global
+// ReSharper disable MemberCanBePrivate.Global
+// ReSharper disable UnusedMember.Global
+// ReSharper disable UnusedMember.Local
+// ReSharper disable UnusedType.Global
+// ReSharper disable UnusedMethodReturnValue.Global
+// ReSharper disable UnusedMemberInSuper.Global
+
+#pragma warning disable S4136
+#pragma warning disable S4136
+
 #endregion
 
 namespace Jcd.BitManipulation;

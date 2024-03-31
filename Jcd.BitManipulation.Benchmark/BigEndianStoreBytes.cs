@@ -4,6 +4,19 @@ using System.Runtime.CompilerServices;
 
 using BenchmarkDotNet.Attributes;
 
+// ReSharper disable UnusedType.Global
+// ReSharper disable RedundantTypeDeclarationBody
+// ReSharper disable MemberCanBeMadeStatic.Global
+// ReSharper disable MemberCanBeMadeStatic.Local
+// ReSharper disable MemberCanBeMadeStatic
+// ReSharper disable HeapView.ObjectAllocation.Evident
+// ReSharper disable HeapView.BoxingAllocation
+// ReSharper disable HeapView.ObjectAllocation
+// ReSharper disable HeapView.ObjectAllocation.Possible
+
+#pragma warning disable CA1822
+#pragma warning disable S109
+
 #endregion
 
 namespace Jcd.BitManipulation.Benchmark;

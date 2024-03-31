@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0"?>
 <!-- @formatter:off -->
+<!-- ReSharper disable IdentifierTypo -->
 <doc>
    <examples>
       <item name="ByteExtensions">

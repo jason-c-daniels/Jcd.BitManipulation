@@ -23,17 +23,6 @@ public class BitMaskTests
    [InlineData(ushort.MaxValue)]
    [InlineData(uint.MaxValue)]
    [InlineData(ulong.MaxValue)]
-   public void Constructor_UInt64_SetsBitsCorrectly(ulong bits)
-   {
-      var mask = new BitMask(bits);
-      Assert.Equal(bits, (ulong) mask);
-   }
-
-   [Theory]
-   [InlineData(byte.MaxValue)]
-   [InlineData(ushort.MaxValue)]
-   [InlineData(uint.MaxValue)]
-   [InlineData(ulong.MaxValue)]
    public void CopyConstructor_CopiesBitsCorrectly(ulong bits)
    {
       var initialMask = new BitMask(bits);

@@ -312,8 +312,12 @@ public class StoreBytesExtensionsTests
    public void StoreBytes_On_Double_Returns_Expected_Value(ulong data, int offset, int size, byte[] bytes, Endian endian)
    {
       var expected = data.BitwiseToDouble();
+
       for (var i = 0; i < size && i + offset < sizeof(ulong); i++)
+      {
          expected = expected.StoreByte(bytes[i], offset + i, endian);
+      }
+
       var actual = data.BitwiseToDouble().StoreBytes(bytes, offset, size, endian);
       Assert.Equal(expected, actual);
    }
@@ -323,8 +327,12 @@ public class StoreBytesExtensionsTests
    public void StoreBytes_On_Single_Returns_Expected_Value(uint data, int offset, int size, byte[] bytes, Endian endian)
    {
       var expected = data.BitwiseToSingle();
+
       for (var i = 0; i < size && i + offset < sizeof(uint); i++)
+      {
          expected = expected.StoreByte(bytes[i], offset + i, endian);
+      }
+
       var actual = data.BitwiseToSingle().StoreBytes(bytes, offset, size, endian);
       Assert.Equal(expected, actual);
    }
@@ -334,8 +342,12 @@ public class StoreBytesExtensionsTests
    public void StoreBytes_On_UInt64_Returns_Expected_Value(ulong data, int offset, int size, byte[] bytes, Endian endian)
    {
       var expected = data;
+
       for (var i = 0; i < size && i + offset < sizeof(ulong); i++)
+      {
          expected = expected.StoreByte(bytes[i], offset + i, endian);
+      }
+
       var actual = data.StoreBytes(bytes, offset, size, endian);
       Assert.Equal(expected, actual);
    }
@@ -345,8 +357,12 @@ public class StoreBytesExtensionsTests
    public void StoreBytes_On_Int64_Returns_Expected_Value(long data, int offset, int size, byte[] bytes, Endian endian)
    {
       var expected = data;
+
       for (var i = 0; i < size && i + offset < sizeof(long); i++)
+      {
          expected = expected.StoreByte(bytes[i], offset + i, endian);
+      }
+
       var actual = data.StoreBytes(bytes, offset, size, endian);
       Assert.Equal(expected, actual);
    }
@@ -356,8 +372,12 @@ public class StoreBytesExtensionsTests
    public void StoreBytes_On_UInt32_Returns_Expected_Value(uint data, int offset, int size, byte[] bytes, Endian endian)
    {
       var expected = data;
+
       for (var i = 0; i < size && i + offset < sizeof(uint); i++)
+      {
          expected = expected.StoreByte(bytes[i], offset + i, endian);
+      }
+
       var actual = data.StoreBytes(bytes, offset, size, endian);
       Assert.Equal(expected, actual);
    }
@@ -367,8 +387,12 @@ public class StoreBytesExtensionsTests
    public void StoreBytes_On_Int32_Returns_Expected_Value(int data, int offset, int size, byte[] bytes, Endian endian)
    {
       var expected = data;
+
       for (var i = 0; i < size && i + offset < sizeof(int); i++)
+      {
          expected = expected.StoreByte(bytes[i], offset + i, endian);
+      }
+
       var actual = data.StoreBytes(bytes, offset, size, endian);
       Assert.Equal(expected, actual);
    }
@@ -378,8 +402,12 @@ public class StoreBytesExtensionsTests
    public void StoreBytes_On_UInt16_Returns_Expected_Value(ushort data, int offset, int size, byte[] bytes, Endian endian)
    {
       var expected = data;
+
       for (var i = 0; i < size && i + offset < sizeof(ushort); i++)
+      {
          expected = expected.StoreByte(bytes[i], offset + i, endian);
+      }
+
       var actual = data.StoreBytes(bytes, offset, size, endian);
       Assert.Equal(expected, actual);
    }
@@ -389,8 +417,12 @@ public class StoreBytesExtensionsTests
    public void StoreBytes_On_Int16_Returns_Expected_Value(short data, int offset, int size, byte[] bytes, Endian endian)
    {
       var expected = data;
+
       for (var i = 0; i < size && i + offset < sizeof(short); i++)
+      {
          expected = expected.StoreByte(bytes[i], offset + i, endian);
+      }
+
       var actual = data.StoreBytes(bytes, offset, size, endian);
       Assert.Equal(expected, actual);
    }
@@ -405,8 +437,12 @@ public class StoreBytesExtensionsTests
    {
       var rawExpected = rawData;
       LittleEndianByteIndexer data = rawData;
+
       for (var i = 0; i < size && i + offset < sizeof(ulong); i++)
+      {
          rawExpected = rawExpected.StoreByte(bytes[i], offset + i);
+      }
+
       LittleEndianByteIndexer expected = rawExpected;
       var actual = data.StoreBytes(bytes, offset, size);
       Assert.Equal((ulong) expected, (ulong) actual);
@@ -418,8 +454,12 @@ public class StoreBytesExtensionsTests
    {
       var rawExpected = rawData;
       LittleEndianByteIndexer data = rawData;
+
       for (var i = 0; i < size && i + offset < sizeof(long); i++)
+      {
          rawExpected = rawExpected.StoreByte(bytes[i], offset + i);
+      }
+
       LittleEndianByteIndexer expected = rawExpected;
       var actual = data.StoreBytes(bytes, offset, size);
       Assert.Equal((long) expected, (long) actual);
@@ -431,8 +471,12 @@ public class StoreBytesExtensionsTests
    {
       var rawExpected = rawData;
       LittleEndianByteIndexer data = rawData;
+
       for (var i = 0; i < size && i + offset < sizeof(uint); i++)
+      {
          rawExpected = rawExpected.StoreByte(bytes[i], offset + i);
+      }
+
       LittleEndianByteIndexer expected = rawExpected;
       var actual = data.StoreBytes(bytes, offset, size);
       Assert.Equal((uint) expected, (uint) actual);
@@ -444,8 +488,12 @@ public class StoreBytesExtensionsTests
    {
       var rawExpected = rawData;
       LittleEndianByteIndexer data = rawData;
+
       for (var i = 0; i < size && i + offset < sizeof(int); i++)
+      {
          rawExpected = rawExpected.StoreByte(bytes[i], offset + i);
+      }
+
       LittleEndianByteIndexer expected = rawExpected;
       var actual = data.StoreBytes(bytes, offset, size);
       Assert.Equal((int) expected, (int) actual);
@@ -457,8 +505,12 @@ public class StoreBytesExtensionsTests
    {
       var rawExpected = rawData;
       LittleEndianByteIndexer data = rawData;
+
       for (var i = 0; i < size && i + offset < sizeof(ushort); i++)
+      {
          rawExpected = rawExpected.StoreByte(bytes[i], offset + i);
+      }
+
       LittleEndianByteIndexer expected = rawExpected;
       var actual = data.StoreBytes(bytes, offset, size);
       Assert.Equal((ushort) expected, (ushort) actual);
@@ -470,8 +522,12 @@ public class StoreBytesExtensionsTests
    {
       var rawExpected = rawData;
       LittleEndianByteIndexer data = rawData;
+
       for (var i = 0; i < size && i + offset < sizeof(short); i++)
+      {
          rawExpected = rawExpected.StoreByte(bytes[i], offset + i);
+      }
+
       LittleEndianByteIndexer expected = rawExpected;
       var actual = data.StoreBytes(bytes, offset, size);
       Assert.Equal((short) expected, (short) actual);
@@ -487,8 +543,12 @@ public class StoreBytesExtensionsTests
    {
       var rawExpected = rawData;
       BigEndianByteIndexer data = rawData;
+
       for (var i = 0; i < size && i + offset < sizeof(ulong); i++)
+      {
          rawExpected = rawExpected.StoreByte(bytes[i], sizeof(ulong) - (offset + i) - 1);
+      }
+
       BigEndianByteIndexer expected = rawExpected;
       var actual = data.StoreBytes(bytes, offset, size);
       Assert.Equal((ulong) expected, (ulong) actual);
@@ -500,8 +560,12 @@ public class StoreBytesExtensionsTests
    {
       var rawExpected = rawData;
       BigEndianByteIndexer data = rawData;
+
       for (var i = 0; i < size && i + offset < sizeof(long); i++)
+      {
          rawExpected = rawExpected.StoreByte(bytes[i], sizeof(long) - (offset + i) - 1);
+      }
+
       BigEndianByteIndexer expected = rawExpected;
       var actual = data.StoreBytes(bytes, offset, size);
       Assert.Equal((ulong) expected, (ulong) actual);
@@ -513,8 +577,12 @@ public class StoreBytesExtensionsTests
    {
       var rawExpected = rawData;
       BigEndianByteIndexer data = rawData;
+
       for (var i = 0; i < size && i + offset < sizeof(uint); i++)
+      {
          rawExpected = rawExpected.StoreByte(bytes[i], sizeof(uint) - (offset + i) - 1);
+      }
+
       BigEndianByteIndexer expected = rawExpected;
       var actual = data.StoreBytes(bytes, offset, size);
       Assert.Equal((uint) expected, (uint) actual);
@@ -526,8 +594,12 @@ public class StoreBytesExtensionsTests
    {
       var rawExpected = rawData;
       BigEndianByteIndexer data = rawData;
+
       for (var i = 0; i < size && i + offset < sizeof(int); i++)
+      {
          rawExpected = rawExpected.StoreByte(bytes[i], sizeof(int) - (offset + i) - 1);
+      }
+
       BigEndianByteIndexer expected = rawExpected;
       var actual = data.StoreBytes(bytes, offset, size);
       Assert.Equal((int) expected, (int) actual);
@@ -539,8 +611,12 @@ public class StoreBytesExtensionsTests
    {
       var rawExpected = rawData;
       BigEndianByteIndexer data = rawData;
+
       for (var i = 0; i < size && i + offset < sizeof(ushort); i++)
+      {
          rawExpected = rawExpected.StoreByte(bytes[i], sizeof(ushort) - (offset + i) - 1);
+      }
+
       BigEndianByteIndexer expected = rawExpected;
       var actual = data.StoreBytes(bytes, offset, size);
       Assert.Equal((ushort) expected, (ushort) actual);
@@ -552,8 +628,12 @@ public class StoreBytesExtensionsTests
    {
       var rawExpected = rawData;
       BigEndianByteIndexer data = rawData;
+
       for (var i = 0; i < size && i + offset < sizeof(short); i++)
+      {
          rawExpected = rawExpected.StoreByte(bytes[i], sizeof(short) - (offset + i) - 1);
+      }
+
       BigEndianByteIndexer expected = rawExpected;
       var actual = data.StoreBytes(bytes, offset, size);
       Assert.Equal((short) expected, (short) actual);

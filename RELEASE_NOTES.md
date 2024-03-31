@@ -1,10 +1,9 @@
 ﻿# Change Log
 
-## Version 2.5 Released
+## Version 2.4.33 Released
 
-1. Backported `BigEndianByteIdexer` and `LittleEndianByteIndexer`
+1. Backported `BitIndexer`,`BigEndianByteIdexer` and `LittleEndianByteIndexer`
 2. Added the `ObsoleteAttribute` to impacted types, properties and methods with instructions on how to proceed.
-3. Added `AggressiveInlining` hints to help boost performance.
 
 ## Version 2.4 Released
 

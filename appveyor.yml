@@ -30,9 +30,8 @@ environment:
       
 install:
    - sh: >-
-        #!/bin/bash        
-        sudo apt-get update && sudo apt-get install -y dotnet-sdk-8.0
-        dotnet tool install --global dotnet-sonarscanner
+        #!/bin/bash
+        sudo apt-get update && sudo apt-get install -y dotnet-sdk-8.0 &&  dotnet tool install --global dotnet-sonarscanner
         
 build:
    publish_nuget: true

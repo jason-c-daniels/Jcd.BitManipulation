@@ -16,6 +16,7 @@ namespace Jcd.BitManipulation;
 /// <summary>
 /// Extension methods to aid in converting numbers to and from arrays of bools
 /// </summary>
+
 public static class ByteArrayExtensions
 {
    /// <summary>
@@ -165,6 +166,7 @@ public static class ByteArrayExtensions
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="ushort" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   [Obsolete("The behavior of this this method will have a breaking change in 3.0")]
    public static ushort ToUInt16(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
@@ -198,6 +200,7 @@ public static class ByteArrayExtensions
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="short" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   [Obsolete("The behavior of this this method will have a breaking change in 3.0")]
    public static short ToInt16(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
@@ -231,6 +234,7 @@ public static class ByteArrayExtensions
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="uint" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   [Obsolete("The behavior of this this method will have a breaking change in 3.0")]
    public static uint ToUInt32(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
@@ -264,6 +268,7 @@ public static class ByteArrayExtensions
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="int" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   [Obsolete("The behavior of this this method will have a breaking change in 3.0")]
    public static int ToInt32(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
@@ -297,6 +302,7 @@ public static class ByteArrayExtensions
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="ulong" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   [Obsolete("The behavior of this this method will have a breaking change in 3.0")]
    public static ulong ToUInt64(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
@@ -330,6 +336,7 @@ public static class ByteArrayExtensions
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="long" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   [Obsolete("The behavior of this this method will have a breaking change in 3.0")]
    public static long ToInt64(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
@@ -363,6 +370,7 @@ public static class ByteArrayExtensions
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="byte" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   [Obsolete("The behavior of this this method will have a breaking change in 3.0")]
    public static byte ToByte(this byte[] data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
@@ -380,6 +388,7 @@ public static class ByteArrayExtensions
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted sbyte</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   [Obsolete("The behavior of this this method will have a breaking change in 3.0")]
    public static sbyte ToSByte(this byte[] data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
@@ -397,6 +406,7 @@ public static class ByteArrayExtensions
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="ushort" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   [Obsolete("The behavior of this this method will have a breaking change in 3.0")]
    public static ushort ToUInt16(this byte[] data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
@@ -439,6 +449,7 @@ public static class ByteArrayExtensions
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="short" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   [Obsolete("The behavior of this this method will have a breaking change in 3.0")]
    public static short ToInt16(this byte[] data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
@@ -481,6 +492,7 @@ public static class ByteArrayExtensions
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="uint" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   [Obsolete("The behavior of this this method will have a breaking change in 3.0")]
    public static uint ToUInt32(this byte[] data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
@@ -549,6 +561,7 @@ public static class ByteArrayExtensions
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="uint" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   [Obsolete("The behavior of this this method will have a breaking change in 3.0")]
    public static int ToInt32(this byte[] data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
@@ -617,6 +630,7 @@ public static class ByteArrayExtensions
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="ulong" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   [Obsolete("The behavior of this this method will have a breaking change in 3.0")]
    public static ulong ToUInt64(this byte[] data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)
@@ -737,6 +751,7 @@ public static class ByteArrayExtensions
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="long" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   [Obsolete("The behavior of this this method will have a breaking change in 3.0")]
    public static long ToInt64(this byte[] data, Endian endian = Endian.Little)
    {
       if (data == null || data.Length == 0)

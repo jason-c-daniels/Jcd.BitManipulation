@@ -265,6 +265,419 @@
             NB: Only the lowest 8 bits of the bitmask will be used.
             </remarks>
         </member>
+        <member name="T:Jcd.BitManipulation.BigEndianByteIndexer">
+            <summary>
+            Provides byte level indexing operations (set, get) on the bytes of
+            a copied value. It provides indexer-style access to the bytes of
+            the value. Index zero is the most significant byte.
+            </summary>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.UInt64)">
+            <summary>
+            Constructs a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> from a <see cref="T:System.UInt64" />.
+            </summary>
+            <param name="data">The initial value for the underlying data.</param>
+            <exclude />
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.Int64)">
+            <summary>
+            Constructs a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> from a <see cref="T:System.Int64" />.
+            </summary>
+            <param name="data">The initial value for the underlying data.</param>
+            <exclude />
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.UInt32)">
+            <summary>
+            Constructs a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> from a <see cref="T:System.UInt32" />.
+            </summary>
+            <param name="data">The initial value for the underlying data.</param>
+            <exclude />
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.Int32)">
+            <summary>
+            Constructs a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> from a <see cref="T:System.Int32" />.
+            </summary>
+            <param name="data">The initial value for the underlying data.</param>
+            <exclude />
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.UInt16)">
+            <summary>
+            Constructs a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> from a <see cref="T:System.UInt16" />.
+            </summary>
+            <param name="data">The initial value for the underlying data.</param>
+            <exclude />
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.Int16)">
+            <summary>
+            Constructs a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> from a <see cref="T:System.Int16" />.
+            </summary>
+            <param name="data">The initial value for the underlying data.</param>
+            <exclude />
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.Byte)">
+            <summary>
+            Constructs a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> from a <see cref="T:System.Byte" />.
+            </summary>
+            <param name="data">The initial value for the underlying data.</param>
+            <exclude />
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.SByte)">
+            <summary>
+            Constructs a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> from a <see cref="T:System.SByte" />.
+            </summary>
+            <param name="data">The initial value for the underlying data.</param>
+            <exclude />
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.UInt64,System.Int32)">
+            <summary>
+            Constructs a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> from a <see cref="T:System.UInt64" />.
+            </summary>
+            <param name="data">The initial value for the underlying data.</param>
+            <param name="byteSize">The number of bytes to index</param>
+            <exclude />
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.ReadOnlySpan{System.Byte})">
+            <summary>
+            Constructs a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> from a <see cref="T:System.ReadOnlySpan`1" /> of bytes.
+            </summary>
+            <param name="data">The span to populate the underlying data from.</param>
+            <exclude />
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.ReadOnlySpan{System.Byte},System.Int32)">
+            <summary>
+            Constructs a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> from a <see cref="T:System.ReadOnlySpan`1" /> of bytes.
+            </summary>
+            <param name="data">The span to populate the underlying data from.</param>
+            <param name="byteSize">The number of bytes to store from the <see cref="T:System.ReadOnlySpan`1" /></param>
+            <exclude />
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.Byte[])">
+            <summary>
+            Constructs a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> from a <see cref="T:System.Array" /> of bytes.
+            </summary>
+            <param name="data">The span to populate the underlying data from.</param>
+            <exclude />
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.#ctor(System.Byte[],System.Int32)">
+            <summary>
+            Constructs a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> from a <see cref="T:System.Array" /> of bytes.
+            </summary>
+            <param name="data">The span to populate the underlying data from.</param>
+            <param name="byteSize">The number of bytes to store from the <see cref="T:System.Array" /></param>
+            <exclude />
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Explicit(Jcd.BitManipulation.LittleEndianByteIndexer)~Jcd.BitManipulation.BigEndianByteIndexer">
+            <summary>
+            Explicitly converts a <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> to a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.
+            </summary>
+            <param name="indexer">The <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> to copy the data from.</param>
+            <returns>A new <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> instance.</returns>
+        </member>
+        <member name="P:Jcd.BitManipulation.BigEndianByteIndexer.Length">
+            <summary>
+            The number of indexable bytes.
+            </summary>
+        </member>
+        <member name="F:Jcd.BitManipulation.BigEndianByteIndexer.data">
+            <summary>
+            The backing store.
+            </summary>
+            <exclude />
+        </member>
+        <member name="P:Jcd.BitManipulation.BigEndianByteIndexer.Item(System.Int32)">
+            <summary>
+            Access bytes from the underlying data.
+            </summary>
+            <param name="index">The index of the byte to get or set.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.Slice(System.Int32,System.Int32)">
+            <summary>
+            Get a subset of bytes given a starting offset and length.
+            </summary>
+            <param name="start">The starting bit offset</param>
+            <param name="length">The number of bytes to extract</param>
+            <returns>An array of bytes for the specified subset.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(Jcd.BitManipulation.BigEndianByteIndexer)~System.UInt64">
+            <summary>
+            Implicitly converts the <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> to a <see cref="T:System.UInt64" />.
+            </summary>
+            <param name="indexer">The indexer to convert.</param>
+            <returns>The raw data as a <see cref="T:System.UInt64" />.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(Jcd.BitManipulation.BigEndianByteIndexer)~System.Int64">
+            <summary>
+            Implicitly converts the <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> to a <see cref="T:System.Int64" />.
+            </summary>
+            <param name="indexer">The indexer to convert.</param>
+            <returns>The raw data.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(Jcd.BitManipulation.BigEndianByteIndexer)~System.UInt32">
+            <summary>
+            Implicitly converts the <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> to a <see cref="T:System.UInt32" />.
+            </summary>
+            <param name="indexer">The indexer to convert.</param>
+            <returns>The raw data.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(Jcd.BitManipulation.BigEndianByteIndexer)~System.Int32">
+            <summary>
+            Implicitly converts the <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> to a <see cref="T:System.Int32" />.
+            </summary>
+            <param name="indexer">The indexer to convert.</param>
+            <returns>The raw data.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(Jcd.BitManipulation.BigEndianByteIndexer)~System.UInt16">
+            <summary>
+            Implicitly converts the <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> to a <see cref="T:System.UInt16" />.
+            </summary>
+            <param name="indexer">The indexer to convert.</param>
+            <returns>The raw data.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(Jcd.BitManipulation.BigEndianByteIndexer)~System.Int16">
+            <summary>
+            Implicitly converts the <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> to a <see cref="T:System.Int16" />.
+            </summary>
+            <param name="indexer">The indexer to convert.</param>
+            <returns>The raw data.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(Jcd.BitManipulation.BigEndianByteIndexer)~System.Byte">
+            <summary>
+            Implicitly converts the <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> to a <see cref="T:System.Byte" />.
+            </summary>
+            <param name="indexer">The indexer to convert.</param>
+            <returns>The raw data.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(Jcd.BitManipulation.BigEndianByteIndexer)~System.SByte">
+            <summary>
+            Implicitly converts the <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> to a <see cref="T:System.SByte" />.
+            </summary>
+            <param name="indexer">The indexer to convert.</param>
+            <returns>The raw data.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Explicit(Jcd.BitManipulation.BigEndianByteIndexer)~System.Byte[]">
+            <summary>
+            Explicitly converts the <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> to a array of bytes.
+            </summary>
+            <param name="indexer">The indexer to convert.</param>
+            <returns>The raw data converted to an array, serialized as big endian.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Explicit(Jcd.BitManipulation.BigEndianByteIndexer)~System.ReadOnlySpan{System.Byte}">
+            <summary>
+            Explicitly converts the <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> to a <see cref="T:System.ReadOnlySpan`1" /> of bytes.
+            </summary>
+            <param name="indexer">The indexer to convert.</param>
+            <returns>The raw data converted to an array, serialized as big endian.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.UInt64)~Jcd.BitManipulation.BigEndianByteIndexer">
+            <summary>
+            Implicitly converts a <see cref="T:System.UInt64" /> to a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.
+            </summary>
+            <param name="data">The initial data for the indexer.</param>
+            <returns>The newly created <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.</returns>
+            <example>
+            <code>
+            ulong number = 0xDEADBEEFFA17C0DE;
+            BigEndianByteIndexer indexer = number; // implicit cast.
+            
+            var b0 = indexer[0]; // b0 is 0xDE
+            indexer[1] = 0xFF;
+            var result = indexer.ToString(); // result is "DE FF BE EF FA 17 C0 DE"
+            </code>
+            </example>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.Int64)~Jcd.BitManipulation.BigEndianByteIndexer">
+            <summary>
+            Implicitly converts a <see cref="T:System.Int64" /> to a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.
+            </summary>
+            <param name="data">The initial value for the bytes of data.</param>
+            <returns>The newly created <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.</returns>
+            <example>
+            <code>
+            long number = 0x7EADBEEFFA17C0DE;
+            BigEndianByteIndexer indexer = number; // implicit cast.
+            
+            var b0 = indexer[0]; // b0 is 0x7E
+            indexer[1] = 0xFF;
+            var result = indexer.ToString(); // result is "7E FF BE EF FA 17 C0 DE"
+            </code>
+            </example>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.UInt32)~Jcd.BitManipulation.BigEndianByteIndexer">
+            <summary>
+            Implicitly converts a <see cref="T:System.UInt32" /> to a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.
+            </summary>
+            <param name="data">The initial value for the bytes of data.</param>
+            <returns>The newly created <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.</returns>
+            <example>
+            <code>
+            uint number = 0xDEADBEEF;
+            BigEndianByteIndexer indexer = number; // implicit cast.
+            
+            var b0 = indexer[0]; // b0 is 0xDE
+            indexer[1] = 0xFF;
+            var result = indexer.ToString(); // result is "DE FF BE EF"
+            </code>
+            </example>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.Int32)~Jcd.BitManipulation.BigEndianByteIndexer">
+            <summary>
+            Implicitly converts a <see cref="T:System.Int32" /> to a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.
+            </summary>
+            <param name="data">The initial value for the bytes of data.</param>
+            <returns>The <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> instance.</returns>
+            <example>
+            <code>
+            int number = 0x7EADBEEF;
+            BigEndianByteIndexer indexer = number; // implicit cast.
+            
+            var b0 = indexer[0]; // b0 is 0xDE
+            indexer[1] = 0xFF;
+            var result = indexer.ToString(); // result is "7E FF BE EF"
+            </code>
+            </example>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.UInt16)~Jcd.BitManipulation.BigEndianByteIndexer">
+            <summary>
+            Implicitly converts a <see cref="T:System.UInt16" /> to a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.
+            </summary>
+            <param name="data">The initial value for the bytes of data.</param>
+            <returns>The <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> instance.</returns>
+            <example>
+            <code>
+            ushort number = 0xDEAD;
+            BigEndianByteIndexer indexer = number; // implicit cast.
+            
+            var b0 = indexer[0]; // b0 is 0xDE
+            indexer[1] = 0xFF;
+            var result = indexer.ToString(); // result is "DE FF"
+            </code>
+            </example>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.Int16)~Jcd.BitManipulation.BigEndianByteIndexer">
+            <summary>
+            Implicitly converts a <see cref="T:System.Int16" /> to a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.
+            </summary>
+            <param name="data">The initial value for the bytes of data.</param>
+            <returns>The <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> instance.</returns>
+            <example>
+            <code>
+            short number = 0x7EAD;
+            BigEndianByteIndexer indexer = number; // implicit cast.
+            
+            var b0 = indexer[0]; // b0 is 0xDE
+            indexer[1] = 0xFF;
+            var result = indexer.ToString(); // result is "7E FF"
+            </code>
+            </example>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.Byte)~Jcd.BitManipulation.BigEndianByteIndexer">
+            <summary>
+            Implicitly converts a <see cref="T:System.Byte" /> to a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.
+            </summary>
+            <param name="data">The initial value for the bytes of data.</param>
+            <returns>The <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> instance.</returns>
+            <example>
+            <code>
+            byte number = 0xDE;
+            BigEndianByteIndexer indexer = number; // implicit cast.
+            
+            var b0 = indexer[0]; // b0 is 0xDE
+            indexer[0] = 0xFF;
+            var result = indexer.ToString(); // result is "FF"
+            </code>
+            </example>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Implicit(System.SByte)~Jcd.BitManipulation.BigEndianByteIndexer">
+            <summary>
+            Implicitly converts a <see cref="T:System.SByte" /> to a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.
+            </summary>
+            <param name="data">The initial value for the bytes of data.</param>
+            <returns>The <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> instance.</returns>
+            <example>
+            <code>
+            sbyte number = 0xDE;
+            BigEndianByteIndexer indexer = number; // implicit cast.
+            
+            var b0 = indexer[0]; // b0 is 0xDE
+            indexer[0] = 0xFF;
+            var result = indexer.ToString(); // result is "FF"
+            </code>
+            </example>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Explicit(System.Byte[])~Jcd.BitManipulation.BigEndianByteIndexer">
+            <summary>
+            Explicitly converts an array of  bytes to a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.
+            </summary>
+            <param name="data">The initial value for the bytes of data.</param>
+            <returns>The <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> instance.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.op_Explicit(System.ReadOnlySpan{System.Byte})~Jcd.BitManipulation.BigEndianByteIndexer">
+            <summary>
+            Explicitly converts an array of  bytes to a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" />.
+            </summary>
+            <param name="data">The initial value for the bytes of data.</param>
+            <returns>The <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> instance.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.StoreBytes(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Stores a set of bytes starting at the specified byte location within the indexer.
+            </summary>
+            <param name="bytes">The value to be stored at the byte location.</param>
+            <param name="offset">The byte location to store the value.</param>
+            <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
+            <returns>The modified value.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.StoreBytes(System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
+            <summary>
+            Stores a set of bytes starting at the specified byte location within the indexer.
+            </summary>
+            <param name="bytes">The value to be stored at the byte location.</param>
+            <param name="offset">The byte location to store the value.</param>
+            <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
+            <returns>The modified value.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.StoreByte(System.Byte,System.Int32)">
+            <summary>
+            Stores a single byte to the value at the specified byte offset and returns the modified value.
+            </summary>
+            <param name="byte">The <see cref="T:System.Byte" /> value to store.</param>
+            <param name="offset">The offset of where to store the byte.</param>
+            <returns>The modified value.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.ToString">
+            <summary>
+            Formats the <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> as a hexadecimal string in big endian notation.
+            For example: `60 0D C0 DE`
+            </summary>
+            <returns>a string of the data formatted as hex bytes</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.ToUInt64(System.Byte[],Jcd.BitManipulation.Endian)">
+            <summary>
+            Converts an array of bytes into a <see cref="T:System.UInt64" />, discarding any excess data.
+            </summary>
+            <param name="data">the bytes to convert.</param>
+            <param name="endian">The endian for the bytes.</param>
+            <returns>The converted <see cref="T:System.UInt64" /></returns>
+            <remarks>
+            <para>
+            <b>WARNING:</b>
+            </para>
+            <para>
+            Index 0 in the array is index 0 in the destination value. For Big Endian this is the
+            most significant byte. If you're passing in a smaller array and need the result
+            right shifted, you'll need to shift it after calling this.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:Jcd.BitManipulation.BigEndianByteIndexer.ToUInt64(System.ReadOnlySpan{System.Byte},Jcd.BitManipulation.Endian)">
+            <summary>
+            Converts bytes into a <see cref="T:System.UInt64" />, discarding any excess data.
+            </summary>
+            <param name="data">the bytes to convert.</param>
+            <param name="endian">The endian for the bytes.</param>
+            <returns>The converted <see cref="T:System.UInt64" /></returns>
+        </member>
         <member name="T:Jcd.BitManipulation.BigEndianByteIndexerInt16">
             <summary>
             Provides byte level indexing operations (set, get) on an <see cref="T:System.Int16" />. Zero is the most significant byte.
@@ -1194,8 +1607,56 @@
         </member>
         <member name="F:Jcd.BitManipulation.BitMask.AllBits">
             <summary>
-            A default bitmask signifying all bits have been set.
+            A bitmask with all bits set in the mask.
             </summary>
+        </member>
+        <member name="F:Jcd.BitManipulation.BitMask.Byte">
+            <summary>
+            A bitmask for the first byte in a number.
+            </summary>
+            <exclude />
+        </member>
+        <member name="F:Jcd.BitManipulation.BitMask.Byte1">
+            <summary>
+            A bitmask for the second byte in a number.
+            </summary>
+            <exclude />
+        </member>
+        <member name="F:Jcd.BitManipulation.BitMask.Byte2">
+            <summary>
+            A bitmask for the third byte in a number.
+            </summary>
+            <exclude />
+        </member>
+        <member name="F:Jcd.BitManipulation.BitMask.Byte3">
+            <summary>
+            A bitmask for the fourth byte in a number.
+            </summary>
+            <exclude />
+        </member>
+        <member name="F:Jcd.BitManipulation.BitMask.Byte4">
+            <summary>
+            A bitmask for the fifth byte in a number.
+            </summary>
+            <exclude />
+        </member>
+        <member name="F:Jcd.BitManipulation.BitMask.Byte5">
+            <summary>
+            A bitmask for the sixth byte in a number.
+            </summary>
+            <exclude />
+        </member>
+        <member name="F:Jcd.BitManipulation.BitMask.Byte6">
+            <summary>
+            A bitmask for the seventh byte in a number.
+            </summary>
+            <exclude />
+        </member>
+        <member name="F:Jcd.BitManipulation.BitMask.Byte7">
+            <summary>
+            A bitmask for the seventh byte in a number.
+            </summary>
+            <exclude />
         </member>
         <member name="F:Jcd.BitManipulation.BitMask.Bits">
             <summary>
@@ -1974,6 +2435,293 @@
             <param name="start">starting offset of the bits to retrieve</param>
             <param name="length">the number of bits to get</param>
             <returns>Array of bits extracted</returns>
+        </member>
+        <member name="T:Jcd.BitManipulation.LittleEndianByteIndexer">
+            <summary>
+            Provides byte level indexing operations (set, get) on the bytes of
+            a copied value. It provides indexer-style access to the bytes of
+            the value. Index zero is the least significant byte.
+            </summary>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.#ctor(System.UInt64)">
+            <summary>
+            Constructs a <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> from a <see cref="T:System.UInt64" />.
+            </summary>
+            <param name="data">The initial value for the underlying data.</param>
+            <exclude />
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.#ctor(System.Int64)">
+            <summary>
+            Constructs a <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> from a <see cref="T:System.Int64" />.
+            </summary>
+            <param name="data">The initial value for the underlying data.</param>
+            <exclude />
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.#ctor(System.UInt32)">
+            <summary>
+            Constructs a <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> from a <see cref="T:System.UInt32" />.
+            </summary>
+            <param name="data">The initial value for the underlying data.</param>
+            <exclude />
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.#ctor(System.Int32)">
+            <summary>
+            Constructs a <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> from a <see cref="T:System.Int32" />.
+            </summary>
+            <param name="data">The initial value for the underlying data.</param>
+            <exclude />
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.#ctor(System.UInt16)">
+            <summary>
+            Constructs a <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> from a <see cref="T:System.UInt16" />.
+            </summary>
+            <param name="data">The initial value for the underlying data.</param>
+            <exclude />
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.#ctor(System.Int16)">
+            <summary>
+            Constructs a <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> from a <see cref="T:System.Int16" />.
+            </summary>
+            <param name="data">The initial value for the underlying data.</param>
+            <exclude />
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.#ctor(System.Byte)">
+            <summary>
+            Constructs a <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> from a <see cref="T:System.Byte" />.
+            </summary>
+            <param name="data">The initial value for the underlying data.</param>
+            <exclude />
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.#ctor(System.SByte)">
+            <summary>
+            Constructs a <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> from a <see cref="T:System.SByte" />.
+            </summary>
+            <param name="data">The initial value for the underlying data.</param>
+            <exclude />
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.#ctor(System.UInt64,System.Int32)">
+            <summary>
+            Constructs a <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> from a <see cref="T:System.UInt64" />.
+            </summary>
+            <param name="data">The initial value for the underlying data.</param>
+            <param name="byteSize">The number of bytes to index</param>
+            <exclude />
+        </member>
+        <member name="P:Jcd.BitManipulation.LittleEndianByteIndexer.Length">
+            <summary>
+            The number of bytes this type will index
+            </summary>
+        </member>
+        <member name="F:Jcd.BitManipulation.LittleEndianByteIndexer.data">
+            <summary>
+            The backing store.
+            </summary>
+            <exclude />
+        </member>
+        <member name="P:Jcd.BitManipulation.LittleEndianByteIndexer.Item(System.Int32)">
+            <summary>
+            Access bytes from the underlying data.
+            </summary>
+            <param name="index">The index of the byte to get or set.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">When index &lt; 0 or gt;= Length</exception>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.Slice(System.Int32,System.Int32)">
+            <summary>
+            Get a subset of bytes given a starting offset and length.
+            </summary>
+            <param name="start">The starting bit offset</param>
+            <param name="length">The number of bytes to extract</param>
+            <returns>An array of bytes for the specified subset.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(Jcd.BitManipulation.LittleEndianByteIndexer)~System.UInt64">
+            <summary>
+            Implicitly converts the <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> to a <see cref="T:System.UInt64" />.
+            </summary>
+            <param name="indexer">The indexer to convert.</param>
+            <returns>The raw data as a <see cref="T:System.UInt64" />.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(Jcd.BitManipulation.LittleEndianByteIndexer)~System.Int64">
+            <summary>
+            Implicitly converts the <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> to a <see cref="T:System.UInt64" />.
+            </summary>
+            <param name="indexer">The indexer to convert.</param>
+            <returns>The raw data.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(Jcd.BitManipulation.LittleEndianByteIndexer)~System.UInt32">
+            <summary>
+            Implicitly converts the <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> to a <see cref="T:System.UInt64" />.
+            </summary>
+            <param name="indexer">The indexer to convert.</param>
+            <returns>The raw data.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(Jcd.BitManipulation.LittleEndianByteIndexer)~System.Int32">
+            <summary>
+            Implicitly converts the <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> to a <see cref="T:System.UInt64" />.
+            </summary>
+            <param name="indexer">The indexer to convert.</param>
+            <returns>The raw data.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(Jcd.BitManipulation.LittleEndianByteIndexer)~System.UInt16">
+            <summary>
+            Implicitly converts the <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> to a <see cref="T:System.UInt64" />.
+            </summary>
+            <param name="indexer">The indexer to convert.</param>
+            <returns>The raw data.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(Jcd.BitManipulation.LittleEndianByteIndexer)~System.Int16">
+            <summary>
+            Implicitly converts the <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> to a <see cref="T:System.UInt64" />.
+            </summary>
+            <param name="indexer">The indexer to convert.</param>
+            <returns>The raw data.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(Jcd.BitManipulation.LittleEndianByteIndexer)~System.Byte">
+            <summary>
+            Implicitly converts the <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> to a <see cref="T:System.UInt64" />.
+            </summary>
+            <param name="indexer">The indexer to convert.</param>
+            <returns>The raw data.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(Jcd.BitManipulation.LittleEndianByteIndexer)~System.SByte">
+            <summary>
+            Implicitly converts the <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> to a <see cref="T:System.UInt64" />.
+            </summary>
+            <param name="indexer">The indexer to convert.</param>
+            <returns>The raw data.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Explicit(Jcd.BitManipulation.LittleEndianByteIndexer)~System.Byte[]">
+            <summary>
+            Explicitly converts the <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> to an array of bytes.
+            </summary>
+            <param name="indexer">The indexer to convert.</param>
+            <returns>The raw data converted to an array, serialized as big endian.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Explicit(Jcd.BitManipulation.LittleEndianByteIndexer)~System.ReadOnlySpan{System.Byte}">
+            <summary>
+            Explicitly converts the <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> to an array of bytes.
+            </summary>
+            <param name="indexer">The indexer to convert.</param>
+            <returns>The raw data converted to an array, serialized as big endian.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(System.UInt64)~Jcd.BitManipulation.LittleEndianByteIndexer">
+            <summary>
+            Implicitly converts a <see cref="T:System.UInt64" /> to a <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" />.
+            </summary>
+            <param name="data">The initial value for the bytes of data.</param>
+            />
+            <returns>A new <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> instance.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(System.Int64)~Jcd.BitManipulation.LittleEndianByteIndexer">
+            <summary>
+            Implicitly converts a <see cref="T:System.Int64" /> to a <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" />.
+            </summary>
+            <param name="data">The initial value for the bytes of data.</param>
+            />
+            <returns>A new <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> instance.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(System.UInt32)~Jcd.BitManipulation.LittleEndianByteIndexer">
+            <summary>
+            Implicitly converts a <see cref="T:System.UInt32" /> to a <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" />.
+            </summary>
+            <param name="data">The initial value for the bytes of data.</param>
+            />
+            <returns>A new <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> instance.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(System.Int32)~Jcd.BitManipulation.LittleEndianByteIndexer">
+            <summary>
+            Implicitly converts a <see cref="T:System.Int32" /> to a <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" />.
+            </summary>
+            <param name="data">The initial value for the bytes of data.</param>
+            />
+            <returns>A new <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> instance.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(System.UInt16)~Jcd.BitManipulation.LittleEndianByteIndexer">
+            <summary>
+            Implicitly converts a <see cref="T:System.UInt16" /> to a <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" />.
+            </summary>
+            <param name="data">The initial value for the bytes of data.</param>
+            />
+            <returns>A new <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> instance.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(System.Int16)~Jcd.BitManipulation.LittleEndianByteIndexer">
+            <summary>
+            Implicitly converts a <see cref="T:System.Int16" /> to a <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" />.
+            </summary>
+            <param name="data">The initial value for the bytes of data.</param>
+            />
+            <returns>A new <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> instance.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(System.Byte)~Jcd.BitManipulation.LittleEndianByteIndexer">
+            <summary>
+            Implicitly converts a <see cref="T:System.Byte" /> to a <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" />.
+            </summary>
+            <param name="data">The initial value for the bytes of data.</param>
+            />
+            <returns>A new <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> instance.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicit(System.SByte)~Jcd.BitManipulation.LittleEndianByteIndexer">
+            <summary>
+            Implicitly converts a <see cref="T:System.SByte" /> to a <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" />.
+            </summary>
+            <param name="data">The initial value for the bytes of data.</param>
+            />
+            <returns>A new <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> instance.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Explicit(System.Byte[])~Jcd.BitManipulation.LittleEndianByteIndexer">
+            <summary>
+            Explicitly converts an array of  bytes to a <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" />.
+            </summary>
+            <param name="data">The initial value for the bytes of data.</param>
+            />
+            <returns>A new <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> instance.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Explicit(System.ReadOnlySpan{System.Byte})~Jcd.BitManipulation.LittleEndianByteIndexer">
+            <summary>
+            Explicitly converts an array of  bytes to a <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" />.
+            </summary>
+            <param name="data">The initial value for the bytes of data.</param>
+            />
+            <returns>A new <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> instance.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.op_Explicit(Jcd.BitManipulation.BigEndianByteIndexer)~Jcd.BitManipulation.LittleEndianByteIndexer">
+            <summary>
+            Explicitly converts a <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> to a <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" />.
+            </summary>
+            <param name="indexer">The <see cref="T:Jcd.BitManipulation.BigEndianByteIndexer" /> to copy the data from.</param>
+            <returns>A new <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> instance.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.StoreBytes(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Stores a set of bytes starting at the specified byte location within the indexer.
+            </summary>
+            <param name="bytes">The value to be stored at the byte location.</param>
+            <param name="offset">The byte location to store the value.</param>
+            <param name="size">The number of bytes from the source to store. -1 means all bytes.</param>
+            <returns>The modified value.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.StoreBytes(System.ReadOnlySpan{System.Byte},System.Int32,System.Int32)">
+            <summary>
+            Stores a set of bytes starting at the specified byte location within the indexer.
+            </summary>
+            <param name="bytes">The value to be stored at the byte location.</param>
+            <param name="offset">The byte location to store the value.</param>
+            <param name="size">The number of bytes from the source to store. -1 means all bytes.</param>
+            <returns>The modified value.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.StoreByte(System.Byte,System.Int32)">
+            <summary>
+            Stores a single byte to the value at the specified byte offset and returns the modified value.
+            </summary>
+            <param name="byte">The <see cref="T:System.Byte" /> value to store.</param>
+            <param name="offset">The offset of where to store the byte.</param>
+            <returns>The modified value.</returns>
+        </member>
+        <member name="M:Jcd.BitManipulation.LittleEndianByteIndexer.ToString">
+            <summary>
+            Formats the <see cref="T:Jcd.BitManipulation.LittleEndianByteIndexer" /> as a hexadecimal string in big endian notation.
+            For example: `DE C0 0D 60`
+            </summary>
+            <returns>a string of the data formatted as hex bytes</returns>
         </member>
         <member name="T:Jcd.BitManipulation.LittleEndianByteIndexerInt16">
             <summary>
@@ -4009,6 +4757,11 @@
             <param name="value">The value to be modified.</param>
             <param name="mask">bits to set.</param>
             <returns>The modified value.</returns>
+        </member>
+        <member name="T:Jcd.BitManipulation.UInt64Extensions">
+            <summary>
+            Provides easy to read methods for bit manipulation operations on a <see cref="T:System.UInt64" />
+            </summary>
         </member>
     </members>
 </doc>

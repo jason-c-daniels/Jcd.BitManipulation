@@ -1,5 +1,6 @@
 #region
 
+using System;
 using System.Collections.Generic;
 
 // ReSharper disable UnusedMemberInSuper.Global
@@ -11,6 +12,7 @@ namespace Jcd.BitManipulation;
 /// <summary>
 /// The basic interface for indexing bytes within an integral data type.
 /// </summary>
+[Obsolete("This interface will be removed in version 3")]
 public interface IByteIndexer : IEnumerable<byte>
 {
    /// <summary>

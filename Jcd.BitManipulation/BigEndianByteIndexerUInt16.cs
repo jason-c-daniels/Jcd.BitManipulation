@@ -17,6 +17,7 @@ namespace Jcd.BitManipulation;
 /// <summary>
 /// Provides byte level indexing operations (set, get) on a <see cref="ushort" />. Zero is the most significant byte.
 /// </summary>
+[Obsolete("This type is being replaced with BigEndianByteIndexer")]
 public struct BigEndianByteIndexerUInt16 : IByteIndexer
 {
    /// <summary>

@@ -1,5 +1,6 @@
 #region
 
+using System;
 using System.Collections.Generic;
 
 #endregion
@@ -11,6 +12,7 @@ namespace Jcd.BitManipulation;
 /// <summary>
 /// The basic interface for indexing bits within an integer data type.
 /// </summary>
+[Obsolete("This interface will be removed in version 3")]
 public interface IBitIndexer : IEnumerable<bool>
 {
    /// <summary>

@@ -22,7 +22,7 @@ public readonly struct BitMask
 
 | Fields | |
 | :--- | :--- |
-| [AllBits](Jcd.BitManipulation.BitMask.AllBits.md 'Jcd.BitManipulation.BitMask.AllBits') | A default bitmask signifying all bits have been set. |
+| [AllBits](Jcd.BitManipulation.BitMask.AllBits.md 'Jcd.BitManipulation.BitMask.AllBits') | A bitmask with all bits set in the mask. |
 | [Bits](Jcd.BitManipulation.BitMask.Bits.md 'Jcd.BitManipulation.BitMask.Bits') | The backing store for the actual bits of the [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask'). |
 
 | Methods | |

@@ -1,5 +1,6 @@
 #region
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace Jcd.BitManipulation;
 /// <summary>
 /// Provides enumeration and indexed access to the bits on a stored <see cref="ushort" />.
 /// </summary>
+[Obsolete("This type is being replaced with BitIndexer in v3.0")]
 public struct BitIndexerUInt16 : IBitIndexer
 {
    /// <summary>

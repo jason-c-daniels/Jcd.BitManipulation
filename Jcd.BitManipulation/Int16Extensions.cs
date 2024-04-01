@@ -153,7 +153,7 @@ public static class Int16Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static short ReadBits(this short value, BitMask mask)
    {
-      return (short) ((ushort) value).ClearBits(mask);
+      return value.ReadBits(0, mask);
    }
 
    /// <summary>

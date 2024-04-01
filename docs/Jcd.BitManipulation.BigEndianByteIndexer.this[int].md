@@ -7,6 +7,7 @@ Access bytes from the underlying data.
 ```csharp
 public byte this[int index] { get; set; }
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BigEndianByteIndexer.this[int].index'></a>
@@ -16,6 +17,7 @@ public byte this[int index] { get; set; }
 The index of the byte to get or set.
 
 #### Property Value
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
 #### Exceptions

@@ -295,13 +295,9 @@ public ref struct BigEndianByteIndexer
       return Length switch
              {
                 8 => [this[0], this[1], this[2], this[3], this[4], this[5], this[6], this[7]]
-              , 7 => [this[0], this[1], this[2], this[3], this[4], this[5], this[6]]
-              , 6 => [this[0], this[1], this[2], this[3], this[4], this[5]]
-              , 5 => [this[0], this[1], this[2], this[3], this[4]]
               , 4 => [this[0], this[1], this[2], this[3]]
-              , 3 => [this[0], this[1], this[2]]
               , 2 => [this[0], this[1]]
-              , 1 => [(byte) data]
+              , 1 => [this[0]]
               , _ => []
              };
       #pragma warning restore S109
@@ -445,10 +441,7 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static explicit operator byte[](BigEndianByteIndexer indexer)
    {
-      // ReSharper disable RedundantRangeBound -- false positive
-      return indexer[0..^0];
-
-      // ReSharper enable RedundantRangeBound -- false positive
+      return indexer.GetAllBytes();
    }
 
    /// <summary>
@@ -872,20 +865,6 @@ public ref struct BigEndianByteIndexer
       return this;
 
       #pragma warning restore S109
-   }
-
-   /// <summary>
-   /// Stores a single byte to the value at the specified byte offset and returns the modified value.
-   /// </summary>
-   /// <param name="byte">The <see cref="byte" /> value to store.</param>
-   /// <param name="offset">The offset of where to store the byte.</param>
-   /// <returns>The modified value.</returns>
-   [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public BigEndianByteIndexer StoreByte(byte @byte, int offset)
-   {
-      this[offset] = @byte;
-
-      return this;
    }
 
    /// <summary>

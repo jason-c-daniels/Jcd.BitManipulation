@@ -7,6 +7,7 @@ Converts a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UI
 ```csharp
 public static byte[] ToByteArray(this ushort data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt16Extensions.ToByteArray(thisushort,Jcd.BitManipulation.Endian).data'></a>
@@ -22,5 +23,6 @@ The value to convert to a [System.Byte](https://docs.microsoft.com/en-us/dotnet/
 The order in which to store the bytes
 
 #### Returns
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 The value as an array in the requested byte order

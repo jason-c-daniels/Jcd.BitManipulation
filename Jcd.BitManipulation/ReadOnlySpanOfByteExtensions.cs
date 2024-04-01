@@ -37,9 +37,9 @@ public static class ReadOnlySpanOfByteExtensions
          return 0;
       }
 
-      return endian == Endian.Big
-                ? data[^1]
-                : data[0];
+      return endian == Endian.Little
+                ? (byte) GetLittleEndianUInt64(data)
+                : (byte) GetBigEndianUInt64(data, sizeof(byte));
    }
 
    /// <summary>
@@ -56,9 +56,9 @@ public static class ReadOnlySpanOfByteExtensions
          return 0;
       }
 
-      return endian == Endian.Big
-                ? (sbyte) data[^1]
-                : (sbyte) data[0];
+      return endian == Endian.Little
+                ? (sbyte) GetLittleEndianUInt64(data)
+                : (sbyte) GetBigEndianUInt64(data, sizeof(sbyte));
    }
 
    /// <summary>
@@ -66,18 +66,17 @@ public static class ReadOnlySpanOfByteExtensions
    /// </summary>
    /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
+   /// <param name="align">Indicates how to align partial data</param>
    /// <returns>The converted <see cref="ushort" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ushort ToUInt16(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
+   public static ushort ToUInt16(this ReadOnlySpan<byte> data, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
    {
       if (data == null || data.Length == 0)
       {
          return 0;
       }
 
-      return endian == Endian.Little
-                ? (ushort) GetLittleEndianUInt64(data)
-                : (ushort) GetBigEndianUInt64(data, sizeof(ushort));
+      return (ushort) GetAlignedValue(data, endian, align, sizeof(ushort));
    }
 
    /// <summary>
@@ -85,18 +84,17 @@ public static class ReadOnlySpanOfByteExtensions
    /// </summary>
    /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
+   /// <param name="align">Indicates how to align partial data</param>
    /// <returns>The converted <see cref="short" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static short ToInt16(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
+   public static short ToInt16(this ReadOnlySpan<byte> data, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
    {
       if (data == null || data.Length == 0)
       {
          return 0;
       }
 
-      return endian == Endian.Little
-                ? (short) GetLittleEndianUInt64(data)
-                : (short) GetBigEndianUInt64(data, sizeof(short));
+      return (short) GetAlignedValue(data, endian, align, sizeof(short));
    }
 
    /// <summary>
@@ -104,18 +102,17 @@ public static class ReadOnlySpanOfByteExtensions
    /// </summary>
    /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
+   /// <param name="align">Indicates how to align partial data</param>
    /// <returns>The converted <see cref="uint" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static uint ToUInt32(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
+   public static uint ToUInt32(this ReadOnlySpan<byte> data, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
    {
       if (data == null || data.Length == 0)
       {
          return 0;
       }
 
-      return endian == Endian.Little
-                ? (uint) GetLittleEndianUInt64(data)
-                : (uint) GetBigEndianUInt64(data, sizeof(uint));
+      return (uint) GetAlignedValue(data, endian, align, sizeof(uint));
    }
 
    /// <summary>
@@ -123,18 +120,17 @@ public static class ReadOnlySpanOfByteExtensions
    /// </summary>
    /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
+   /// <param name="align">Indicates how to align partial data</param>
    /// <returns>The converted <see cref="int" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static int ToInt32(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
+   public static int ToInt32(this ReadOnlySpan<byte> data, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
    {
       if (data == null || data.Length == 0)
       {
          return 0;
       }
 
-      return endian == Endian.Little
-                ? (int) GetLittleEndianUInt64(data)
-                : (int) GetBigEndianUInt64(data, sizeof(int));
+      return (int) GetAlignedValue(data, endian, align, sizeof(int));
    }
 
    /// <summary>
@@ -142,18 +138,17 @@ public static class ReadOnlySpanOfByteExtensions
    /// </summary>
    /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
+   /// <param name="align">Indicates how to align partial data</param>
    /// <returns>The converted <see cref="ulong" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ulong ToUInt64(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
+   public static ulong ToUInt64(this ReadOnlySpan<byte> data, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
    {
       if (data == null || data.Length == 0)
       {
          return 0;
       }
 
-      return endian == Endian.Little
-                ? GetLittleEndianUInt64(data)
-                : GetBigEndianUInt64(data, sizeof(ulong));
+      return GetAlignedValue(data, endian, align, sizeof(ulong));
    }
 
    /// <summary>
@@ -161,18 +156,17 @@ public static class ReadOnlySpanOfByteExtensions
    /// </summary>
    /// <param name="data">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
+   /// <param name="align">Indicates how to align partial data</param>
    /// <returns>The converted <see cref="long" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static long ToInt64(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
+   public static long ToInt64(this ReadOnlySpan<byte> data, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
    {
       if (data == null || data.Length == 0)
       {
          return 0;
       }
 
-      return endian == Endian.Little
-                ? (long) GetLittleEndianUInt64(data)
-                : (long) GetBigEndianUInt64(data, sizeof(long));
+      return (long) GetAlignedValue(data, endian, align, sizeof(long));
    }
 
    /// <summary>
@@ -182,11 +176,12 @@ public static class ReadOnlySpanOfByteExtensions
    /// <param name="endian">
    /// A setting indicating the endianness of the source data. The default is Endian.Little.
    /// </param>
+   /// <param name="align">Indicates how to align partial data</param>
    /// <returns>The converted ulong</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static double ToDouble(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
+   public static double ToDouble(this ReadOnlySpan<byte> data, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
    {
-      return data.ToUInt64(endian).BitwiseToDouble();
+      return data.ToUInt64(endian, align).BitwiseToDouble();
    }
 
    /// <summary>
@@ -196,11 +191,47 @@ public static class ReadOnlySpanOfByteExtensions
    /// <param name="endian">
    /// A setting indicating the endianness of the source data. The default is Endian.Little.
    /// </param>
+   /// <param name="align">Indicates how to align partial data</param>
    /// <returns>The converted ulong</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static float ToSingle(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
+   public static float ToSingle(this ReadOnlySpan<byte> data, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
    {
-      return data.ToUInt32(endian).BitwiseToSingle();
+      return data.ToUInt32(endian, align).BitwiseToSingle();
+   }
+
+   #region Helpers
+
+   private static ulong GetAlignedValue(ReadOnlySpan<byte> data, Endian endian, ByteAlignment align, int typeSize)
+   {
+      var size = data.Length;
+      var result = endian == Endian.Little
+                      ? GetLittleEndianUInt64(data)
+                      : GetBigEndianUInt64(data, typeSize);
+
+      if (data.Length >= typeSize)
+      {
+         return result;
+      }
+
+      if (align == ByteAlignment.InferredFromEndian)
+      {
+         align = endian == Endian.Big
+                    ? ByteAlignment.MostSignificantByte
+                    : ByteAlignment.LeastSignificantByte;
+      }
+
+      var diff = typeSize - size;
+
+      if (endian == Endian.Big && align == ByteAlignment.LeastSignificantByte)
+      {
+         result >>= (8 * diff);
+      }
+      else if (endian == Endian.Little && align == ByteAlignment.MostSignificantByte)
+      {
+         result <<= 8 * diff;
+      }
+
+      return result;
    }
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -210,45 +241,33 @@ public static class ReadOnlySpanOfByteExtensions
       ulong result = 0;
       var len = data.Length;
 
+      // byte & sbyte
       if (StoreAndShift(ref result, data, 0, 1, len, size))
       {
          return result;
       }
 
+      // short & ushort
       if (StoreAndShift(ref result, data, 1, 2, len, size))
       {
          return result;
       }
 
-      if (StoreAndShift(ref result, data, 2, 3, len, size))
-      {
-         return result;
-      }
+      // int & uint
+      StoreAndShift(ref result, data, 2, 3, len, size);
 
       if (StoreAndShift(ref result, data, 3, 4, len, size))
       {
          return result;
       }
 
-      if (StoreAndShift(ref result, data, 4, 5, len, size))
-      {
-         return result;
-      }
-
-      if (StoreAndShift(ref result, data, 5, 6, len, size))
-      {
-         return result;
-      }
-
-      if (StoreAndShift(ref result, data, 6, 7, len, size))
-      {
-         return result;
-      }
-
+      // long & ulong
+      StoreAndShift(ref result, data, 4, 5, len, size);
+      StoreAndShift(ref result, data, 5, 6, len, size);
+      StoreAndShift(ref result, data, 6, 7, len, size);
       StoreAndShift(ref result, data, 7, 8, len, size);
 
       return result;
-
       #pragma warning restore S109
    }
 
@@ -273,67 +292,64 @@ public static class ReadOnlySpanOfByteExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    internal static ulong GetLittleEndianUInt64(ReadOnlySpan<byte> data)
    {
+      #pragma warning disable S109
       ulong result = 0;
-      var i = 0;
       var len = data.Length;
-      result = result.StoreBits(data[i], i << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
-      i++;
 
-      if (i >= len)
+      result = result.StoreBits(data[0], 0, BitSizeConstants.BitsPerByte);
+
+      if (len == 1)
       {
          return result;
       }
 
-      result = result.StoreBits(data[i], i << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
-      i++;
+      result = result.StoreBits(data[1], 1 << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
 
-      if (i >= len)
+      if (len == 2)
       {
          return result;
       }
 
-      result = result.StoreBits(data[i], i << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
-      i++;
+      result = result.StoreBits(data[2], 2 << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
 
-      if (i >= len)
+      if (len == 3)
       {
          return result;
       }
 
-      result = result.StoreBits(data[i], i << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
-      i++;
+      result = result.StoreBits(data[3], 3 << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
 
-      if (i >= len)
+      if (len == 4)
       {
          return result;
       }
 
-      result = result.StoreBits(data[i], i << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
-      i++;
+      result = result.StoreBits(data[4], 4 << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
 
-      if (i >= len)
+      if (len == 5)
       {
          return result;
       }
 
-      result = result.StoreBits(data[i], i << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
-      i++;
+      result = result.StoreBits(data[5], 5 << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
 
-      if (i >= len)
+      if (len == 6)
       {
          return result;
       }
 
-      result = result.StoreBits(data[i], i << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
-      i++;
+      result = result.StoreBits(data[6], 6 << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
 
-      if (i >= len)
+      if (len == 7)
       {
          return result;
       }
 
-      result = result.StoreBits(data[i], i << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
+      result = result.StoreBits(data[7], 7 << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
 
       return result;
+      #pragma warning restore S109
    }
+
+   #endregion
 }

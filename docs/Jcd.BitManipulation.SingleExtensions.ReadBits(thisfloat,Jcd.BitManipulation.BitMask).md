@@ -7,6 +7,7 @@ Extract a subset of bits specified by a bitmask.
 ```csharp
 public static uint ReadBits(this float value, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SingleExtensions.ReadBits(thisfloat,Jcd.BitManipulation.BitMask).value'></a>
@@ -22,5 +23,6 @@ The source of the bits to read.
 The bitmask specifying which bits to read.
 
 #### Returns
+
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 The ushifted extracted bits

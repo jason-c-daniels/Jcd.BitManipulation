@@ -155,7 +155,7 @@ public static class Int64Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static long ReadBits(this long value, BitMask mask)
    {
-      return (long) ((ulong) value).ReadBits(mask);
+      return value.ReadBits(0, mask);
    }
 
    /// <summary>

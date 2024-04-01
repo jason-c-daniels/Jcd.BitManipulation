@@ -7,6 +7,7 @@ Sets all specified bits to "on" and returns the modified value.
 ```csharp
 public static ushort SetBits(this ushort value, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt16Extensions.SetBits(thisushort,Jcd.BitManipulation.BitMask).value'></a>
@@ -22,5 +23,6 @@ The value to modify.
 The bits to set.
 
 #### Returns
+
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 The modified value.

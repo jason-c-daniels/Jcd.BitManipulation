@@ -258,11 +258,7 @@ public ref struct LittleEndianByteIndexer
       return Length switch
              {
                 8 => [this[0], this[1], this[2], this[3], this[4], this[5], this[6], this[7]]
-              , 7 => [this[0], this[1], this[2], this[3], this[4], this[5], this[6]]
-              , 6 => [this[0], this[1], this[2], this[3], this[4], this[5]]
-              , 5 => [this[0], this[1], this[2], this[3], this[4]]
               , 4 => [this[0], this[1], this[2], this[3]]
-              , 3 => [this[0], this[1], this[2]]
               , 2 => [this[0], this[1]]
               , 1 => [(byte) data]
               , _ => []
@@ -408,10 +404,7 @@ public ref struct LittleEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static explicit operator byte[](LittleEndianByteIndexer indexer)
    {
-      // ReSharper disable RedundantRangeBound
-      return indexer[0..^0];
-
-      // ReSharper enable RedundantRangeBound
+      return indexer.Slice(0, indexer.Length);
    }
 
    /// <summary>
@@ -755,20 +748,6 @@ public ref struct LittleEndianByteIndexer
 
       return this;
       #pragma warning restore S109
-   }
-
-   /// <summary>
-   /// Stores a single byte to the value at the specified byte offset and returns the modified value.
-   /// </summary>
-   /// <param name="byte">The <see cref="byte" /> value to store.</param>
-   /// <param name="offset">The offset of where to store the byte.</param>
-   /// <returns>The modified value.</returns>
-   [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public LittleEndianByteIndexer StoreByte(byte @byte, int offset)
-   {
-      this[offset] = @byte;
-
-      return this;
    }
 
    /// <summary>

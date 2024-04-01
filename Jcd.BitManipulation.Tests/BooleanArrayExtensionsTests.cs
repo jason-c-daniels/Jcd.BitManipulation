@@ -12,7 +12,7 @@ public class BooleanArrayExtensionsTests
    [InlineData(0xFF)]
    [InlineData(0xF3)]
    [InlineData(0x71)]
-   public void Byte_Round_Trip_Remains_Unaltered(uint data)
+   public void ToBooleanArray_ToByte_Round_Trip_Value_Remains_Unaltered(uint data)
    {
       var expected = (byte) data;
       var actual = expected.ToBooleanArray().ToByte();
@@ -23,7 +23,7 @@ public class BooleanArrayExtensionsTests
    [InlineData(0xFF)]
    [InlineData(0xF3)]
    [InlineData(0x71)]
-   public void SByte_Round_Trip_Remains_Unaltered(uint data)
+   public void ToBooleanArray_ToSByte_Round_Trip_Value_Remains_Unaltered(uint data)
    {
       var expected = (sbyte) data;
       var actual = expected.ToBooleanArray().ToSByte();
@@ -34,7 +34,7 @@ public class BooleanArrayExtensionsTests
    [InlineData(0xFFFF)]
    [InlineData(0xF3FF)]
    [InlineData(0x71FF)]
-   public void UInt16_Round_Trip_Remains_Unaltered(uint data)
+   public void ToBooleanArray_ToUInt16_Round_Trip_Value_Remains_Unaltered(uint data)
    {
       var expected = (ushort) data;
       var actual = expected.ToBooleanArray().ToUInt16();
@@ -45,7 +45,7 @@ public class BooleanArrayExtensionsTests
    [InlineData(0xEEFF)]
    [InlineData(0xEEF3)]
    [InlineData(0xEE71)]
-   public void Int16_Round_Trip_Remains_Unaltered(uint data)
+   public void ToBooleanArray_ToInt16_Round_Trip_Value_Remains_Unaltered(uint data)
    {
       var expected = (short) data;
       var actual = expected.ToBooleanArray().ToInt16();
@@ -56,7 +56,7 @@ public class BooleanArrayExtensionsTests
    [InlineData(0xFFEEAACC)]
    [InlineData(0xF3EEAACC)]
    [InlineData(0x71EEAACC)]
-   public void UInt32_Round_Trip_Remains_Unaltered(uint expected)
+   public void ToBooleanArray_ToUInt32_Round_Trip_Value_Remains_Unaltered(uint expected)
    {
       var actual = expected.ToBooleanArray().ToUInt32();
       Assert.Equal(expected, actual);
@@ -66,7 +66,7 @@ public class BooleanArrayExtensionsTests
    [InlineData(0xEEAACCFF)]
    [InlineData(0xEEAACCF3)]
    [InlineData(0xEEAACC71)]
-   public void Int32_Round_Trip_Remains_Unaltered(uint data)
+   public void ToBooleanArray_ToInt32_Round_Trip_Value_Remains_Unaltered(uint data)
    {
       var expected = (int) data;
       var actual = expected.ToBooleanArray().ToInt32();
@@ -77,7 +77,7 @@ public class BooleanArrayExtensionsTests
    [InlineData(0xFFEEAACC11223344)]
    [InlineData(0xF3EEAACC11223344)]
    [InlineData(0x71EEAACC11223344)]
-   public void UInt64_Round_Trip_Remains_Unaltered(ulong expected)
+   public void ToBooleanArray_ToUInt64_Round_Trip_Value_Remains_Unaltered(ulong expected)
    {
       var actual = expected.ToBooleanArray().ToUInt64();
       Assert.Equal(expected, actual);
@@ -87,7 +87,7 @@ public class BooleanArrayExtensionsTests
    [InlineData(0xEEAACC11223344FF)]
    [InlineData(0xEEAACC11223344F3)]
    [InlineData(0xEEAACC1122334471)]
-   public void Int64_Round_Trip_Remains_Unaltered(ulong data)
+   public void ToBooleanArray_ToInt64_Round_Trip_Value_Remains_Unaltered(ulong data)
    {
       var expected = (long) data;
       var actual = expected.ToBooleanArray().ToInt64();
@@ -98,7 +98,7 @@ public class BooleanArrayExtensionsTests
    [InlineData(1.33f)]
    [InlineData(1.22f)]
    [InlineData(1.11f)]
-   public void Float_Round_Trip_Remains_Unaltered(float data)
+   public void ToBooleanArray_ToFloat_Round_Trip_Value_Remains_Unaltered(float data)
    {
       var actual = data.ToBooleanArray().ToSingle();
       Assert.Equal(data, actual);
@@ -108,7 +108,7 @@ public class BooleanArrayExtensionsTests
    [InlineData(1.33d)]
    [InlineData(1.22d)]
    [InlineData(1.11d)]
-   public void Double_Round_Trip_Remains_Unaltered(double data)
+   public void ToBooleanArray_ebvToDouble_Round_Trip_Value_Remains_Unaltered(double data)
    {
       var actual = data.ToBooleanArray().ToDouble();
       Assert.Equal(data, actual);

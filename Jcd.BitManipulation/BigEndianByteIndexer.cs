@@ -906,7 +906,7 @@ public ref struct BigEndianByteIndexer
             sb.Append(" ");
          }
 
-         sb.AppendFormat(this[i].ToString("X2", CultureInfo.InvariantCulture));
+         sb.Append(this[i].ToString("X2", CultureInfo.InvariantCulture));
       }
 
       return sb.ToString();

@@ -7,7 +7,6 @@ Automatically convert to [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipu
 ```csharp
 public static Jcd.BitManipulation.BitMask implicit operator BitMask(short bits);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.op_ImplicitJcd.BitManipulation.BitMask(short).bits'></a>
@@ -17,6 +16,5 @@ public static Jcd.BitManipulation.BitMask implicit operator BitMask(short bits);
 the value to convert to a BitMask
 
 #### Returns
-
 [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 The [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') constructed from the provided bits

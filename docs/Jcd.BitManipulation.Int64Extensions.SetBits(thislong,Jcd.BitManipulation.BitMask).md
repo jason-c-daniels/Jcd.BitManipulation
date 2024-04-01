@@ -7,7 +7,6 @@ Sets all specified bits to "on" and returns the modified value.
 ```csharp
 public static long SetBits(this long value, Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int64Extensions.SetBits(thislong,Jcd.BitManipulation.BitMask).value'></a>
@@ -23,6 +22,5 @@ The value to modify.
 The bits to set.
 
 #### Returns
-
 [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 The modified value.

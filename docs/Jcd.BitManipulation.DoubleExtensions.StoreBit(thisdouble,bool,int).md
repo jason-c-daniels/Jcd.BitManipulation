@@ -7,7 +7,6 @@ Store a single bit at the specified offset and returns the modified value.
 ```csharp
 public static double StoreBit(this double value, bool bit, int offset);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.StoreBit(thisdouble,bool,int).value'></a>
@@ -29,6 +28,5 @@ The value to store at the specified bit offset.
 The offset of the bit to store.
 
 #### Returns
-
 [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 The modified value.

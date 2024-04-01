@@ -98,7 +98,7 @@ public static class SByteExtensions
    /// <param name="size">The number of bits to clear.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static sbyte ClearBits(this sbyte value, int offset = 0, int size = 8)
+   public static sbyte ClearBits(this sbyte value, int offset = 0, int size = BitSizeConstants.BitsPerByte)
    {
       return value.ClearBits(BitMask.FromRange(offset, size));
    }
@@ -185,7 +185,7 @@ public static class SByteExtensions
    /// <param name="size">The number of bits to set on.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static sbyte SetBits(this sbyte value, int offset = 0, int size = 8)
+   public static sbyte SetBits(this sbyte value, int offset = 0, int size = BitSizeConstants.BitsPerByte)
    {
       return value.SetBits(BitMask.FromRange(offset, size));
    }
@@ -269,7 +269,7 @@ public static class SByteExtensions
    /// <param name="size">The number of bits to toggle.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static sbyte ToggleBits(this sbyte value, int offset = 0, int size = 8)
+   public static sbyte ToggleBits(this sbyte value, int offset = 0, int size = BitSizeConstants.BitsPerByte)
    {
       return value.ToggleBits(BitMask.FromRange(offset, size));
    }

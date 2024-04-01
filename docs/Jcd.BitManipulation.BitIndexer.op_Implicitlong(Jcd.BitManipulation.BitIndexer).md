@@ -7,7 +7,6 @@ Automatically convert from a BitIndexer to a [System.Int64](https://docs.microso
 ```csharp
 public static long implicit operator long(Jcd.BitManipulation.BitIndexer indexer);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexer.op_Implicitlong(Jcd.BitManipulation.BitIndexer).indexer'></a>
@@ -17,6 +16,5 @@ public static long implicit operator long(Jcd.BitManipulation.BitIndexer indexer
 The indexer to convert from.
 
 #### Returns
-
 [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 The bits converted to a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')

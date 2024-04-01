@@ -102,7 +102,7 @@ public static class Int16Extensions
    /// <param name="size">The number of bits to clear.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static short ClearBits(this short value, int offset = 0, int size = 16)
+   public static short ClearBits(this short value, int offset = 0, int size = sizeof(short) *BitSizeConstants.BitsPerByte)
    {
       return value.ClearBits(BitMask.FromRange(offset, size));
    }
@@ -209,12 +209,12 @@ public static class Int16Extensions
    {
       if (endian == Endian.Little)
       {
-         return (byte) value.ReadBits(offset << 3, 8);
+         return (byte) value.ReadBits(offset << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
       }
 
       var beOffset = sizeof(short) - offset - 1;
 
-      return (byte) value.ReadBits(beOffset << 3, 8);
+      return (byte) value.ReadBits(beOffset << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
    }
 
    /// <summary>
@@ -225,7 +225,7 @@ public static class Int16Extensions
    /// <param name="size">The number of bits to set on.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static short SetBits(this short value, int offset = 0, int size = 16)
+   public static short SetBits(this short value, int offset = 0, int size = sizeof(short) * BitSizeConstants.BitsPerByte)
    {
       return value.SetBits(BitMask.FromRange(offset, size));
    }
@@ -348,12 +348,12 @@ public static class Int16Extensions
    {
       if (endian == Endian.Little)
       {
-         return value.StoreBits(@byte, offset << 3, 8);
+         return value.StoreBits(@byte, offset << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
       }
 
       var beOffset = sizeof(short) - offset - 1;
 
-      return value.StoreBits(@byte, beOffset << 3, 8);
+      return value.StoreBits(@byte, beOffset << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
    }
 
    /// <summary>
@@ -364,7 +364,7 @@ public static class Int16Extensions
    /// <param name="size">The number of bits to toggle.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static short ToggleBits(this short value, int offset = 0, int size = 16)
+   public static short ToggleBits(this short value, int offset = 0, int size = sizeof(short) * BitSizeConstants.BitsPerByte)
    {
       return value.ToggleBits(BitMask.FromRange(offset, size));
    }

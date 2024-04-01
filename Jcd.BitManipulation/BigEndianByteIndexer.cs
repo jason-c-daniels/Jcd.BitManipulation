@@ -289,8 +289,11 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private readonly byte[] GetAllBytes()
    {
+      #pragma warning disable S109
+
       return Length switch
              {
+                
                 8 => [this[0], this[1], this[2], this[3], this[4], this[5], this[6], this[7]]
               , 7 => [this[0], this[1], this[2], this[3], this[4], this[5], this[6]]
               , 6 => [this[0], this[1], this[2], this[3], this[4], this[5]]
@@ -301,6 +304,8 @@ public ref struct BigEndianByteIndexer
               , 1 => [(byte) data]
               , _ => []
              };
+      #pragma warning restore S109
+
    }
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -706,6 +711,8 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public BigEndianByteIndexer StoreBytes(byte[] bytes, int offset, int size = -1)
    {
+      #pragma warning disable S109
+
       if (bytes is null)
       {
          throw new ArgumentNullException(nameof(bytes));
@@ -780,6 +787,8 @@ public ref struct BigEndianByteIndexer
       data = data.InternalLittleEndianStoreByte(bytes[7], o - 7);
 
       return this;
+      #pragma warning restore S109
+
    }
 
    /// <summary>
@@ -792,6 +801,8 @@ public ref struct BigEndianByteIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public BigEndianByteIndexer StoreBytes(ReadOnlySpan<byte> bytes, int offset, int size = -1)
    {
+      #pragma warning disable S109
+
       if (size == -1)
       {
          size = Length - offset;
@@ -861,6 +872,8 @@ public ref struct BigEndianByteIndexer
       data = data.InternalLittleEndianStoreByte(bytes[7], o - 7);
 
       return this;
+      
+      #pragma warning restore S109
    }
 
    /// <summary>
@@ -885,7 +898,8 @@ public ref struct BigEndianByteIndexer
    public readonly override string ToString()
    {
       // ReSharper disable once HeapView.ObjectAllocation.Evident
-      var sb = new StringBuilder(Length * 3);
+      const int scale=3;
+      var sb = new StringBuilder(Length * scale);
 
       for (var i = 0; i < Length; i++)
       {

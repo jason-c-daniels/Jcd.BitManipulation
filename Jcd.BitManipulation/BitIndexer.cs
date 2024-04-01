@@ -53,7 +53,7 @@ public ref struct BitIndexer
    #region Constructors
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   private BitIndexer(ulong bits, int bitSize = 64)
+   private BitIndexer(ulong bits, int bitSize = sizeof(ulong)*BitSizeConstants.BitsPerByte)
    {
       Length = bitSize;
       this.bits = bits;
@@ -67,37 +67,37 @@ public ref struct BitIndexer
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private BitIndexer(uint bits)
-      : this(bits, 32)
+      : this(bits, sizeof(uint)*BitSizeConstants.BitsPerByte)
    {
    }
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private BitIndexer(int bits)
-      : this((uint) bits, 32)
+      : this((uint) bits, sizeof(int) *BitSizeConstants.BitsPerByte)
    {
    }
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private BitIndexer(ushort bits)
-      : this(bits, 16)
+      : this(bits, sizeof(ushort) *BitSizeConstants.BitsPerByte)
    {
    }
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private BitIndexer(short bits)
-      : this((ushort) bits, 16)
+      : this((ushort) bits, sizeof(short) *BitSizeConstants.BitsPerByte)
    {
    }
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private BitIndexer(byte bits)
-      : this(bits, 8)
+      : this(bits, BitSizeConstants.BitsPerByte)
    {
    }
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private BitIndexer(sbyte bits)
-      : this((byte) bits, 8)
+      : this((byte) bits, BitSizeConstants.BitsPerByte)
    {
    }
 
@@ -109,7 +109,7 @@ public ref struct BitIndexer
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private BitIndexer(float bits)
-      : this(bits.BitwiseToUInt32(), 32)
+      : this(bits.BitwiseToUInt32(), sizeof(float)*BitSizeConstants.BitsPerByte)
    {
    }
 
@@ -131,12 +131,12 @@ public ref struct BitIndexer
 
    private static int GetIntegerBitSize(IReadOnlyCollection<bool> array)
    {
-      return (array.Count >> 3) switch
+      return (array.Count >> BitSizeConstants.ShiftOneByte ) switch
              {
-                <= sizeof(byte)   => sizeof(byte)   << 3
-              , <= sizeof(ushort) => sizeof(ushort) << 3
-              , <= sizeof(uint)   => sizeof(uint)   << 3
-              , _                 => sizeof(ulong)  << 3
+                <= sizeof(byte)   => sizeof(byte)   << BitSizeConstants.ShiftOneByte
+              , <= sizeof(ushort) => sizeof(ushort) << BitSizeConstants.ShiftOneByte
+              , <= sizeof(uint)   => sizeof(uint)   << BitSizeConstants.ShiftOneByte
+              , _                 => sizeof(ulong)  << BitSizeConstants.ShiftOneByte
              };
    }
 
@@ -145,7 +145,7 @@ public ref struct BitIndexer
    /// <summary>
    /// The number of bits indexable by this <see cref="BitIndexer" /> instance.
    /// </summary>
-   public int Length { get; } = 64;
+   public int Length { get; } = BitSizeConstants.MaxBitSize;
 
    /// <summary>
    /// The backing store

@@ -98,7 +98,7 @@ public static class ByteExtensions
    /// <param name="size">The number of bits to clear.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static byte ClearBits(this byte value, int offset = 0, int size = 8)
+   public static byte ClearBits(this byte value, int offset = 0, int size = BitSizeConstants.BitsPerByte)
    {
       return value.ClearBits(BitMask.FromRange(offset, size));
    }
@@ -185,7 +185,7 @@ public static class ByteExtensions
    /// <param name="size">The number of bits to set on.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static byte SetBits(this byte value, int offset = 0, int size = 8)
+   public static byte SetBits(this byte value, int offset = 0, int size = BitSizeConstants.BitsPerByte)
    {
       return value.SetBits(BitMask.FromRange(offset, size));
    }
@@ -272,7 +272,7 @@ public static class ByteExtensions
    /// <param name="size">The number of bits to toggle.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static byte ToggleBits(this byte value, int offset = 0, int size = 8)
+   public static byte ToggleBits(this byte value, int offset = 0, int size = BitSizeConstants.BitsPerByte)
    {
       return value.ToggleBits(BitMask.FromRange(offset, size));
    }

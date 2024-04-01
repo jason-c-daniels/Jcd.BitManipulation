@@ -7,7 +7,6 @@ Converts an array of bools into a [System.UInt64](https://docs.microsoft.com/en-
 ```csharp
 public static ulong ToUInt64(this bool[] bits);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BooleanArrayExtensions.ToUInt64(thisbool[]).bits'></a>
@@ -17,6 +16,5 @@ public static ulong ToUInt64(this bool[] bits);
 The array of [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean') values to convert. The Least Significant Bit is at index 0
 
 #### Returns
-
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 The converted [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')

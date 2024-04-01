@@ -125,7 +125,7 @@ public static class SingleExtensions
    /// <param name="size">The number of bits to clear.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static float ClearBits(this float value, int offset = 0, int size = 32)
+   public static float ClearBits(this float value, int offset = 0, int size = sizeof(float) * BitSizeConstants.BitsPerByte)
    {
       return value.ClearBits(BitMask.FromRange(offset, size));
    }
@@ -239,7 +239,7 @@ public static class SingleExtensions
    /// <param name="size">The number of bits to set on.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static float SetBits(this float value, int offset = 0, int size = 32)
+   public static float SetBits(this float value, int offset = 0, int size = sizeof(float) * BitSizeConstants.BitsPerByte)
    {
       return value.SetBits(BitMask.FromRange(offset, size));
    }
@@ -353,12 +353,12 @@ public static class SingleExtensions
    {
       if (endian == Endian.Little)
       {
-         return value.StoreBits(@byte, offset << 3, 8);
+         return value.StoreBits(@byte, offset << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
       }
 
       var beOffset = sizeof(float) - offset - 1;
 
-      return value.StoreBits(@byte, beOffset << 3, 8);
+      return value.StoreBits(@byte, beOffset << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
    }
 
    /// <summary>
@@ -369,7 +369,7 @@ public static class SingleExtensions
    /// <param name="size">The number of bits to toggle.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static float ToggleBits(this float value, int offset = 0, int size = 32)
+   public static float ToggleBits(this float value, int offset = 0, int size = sizeof(float) * BitSizeConstants.BitsPerByte)
    {
       return value.ToggleBits(BitMask.FromRange(offset, size));
    }

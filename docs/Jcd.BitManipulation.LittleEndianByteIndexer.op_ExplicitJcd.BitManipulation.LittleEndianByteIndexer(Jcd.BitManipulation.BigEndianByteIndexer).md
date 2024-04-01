@@ -7,7 +7,6 @@ Explicitly converts a [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIn
 ```csharp
 public static Jcd.BitManipulation.LittleEndianByteIndexer explicit operator LittleEndianByteIndexer(Jcd.BitManipulation.BigEndianByteIndexer indexer);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexer.op_ExplicitJcd.BitManipulation.LittleEndianByteIndexer(Jcd.BitManipulation.BigEndianByteIndexer).indexer'></a>
@@ -17,6 +16,5 @@ public static Jcd.BitManipulation.LittleEndianByteIndexer explicit operator Litt
 The [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') to copy the data from.
 
 #### Returns
-
 [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
 A new [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') instance.

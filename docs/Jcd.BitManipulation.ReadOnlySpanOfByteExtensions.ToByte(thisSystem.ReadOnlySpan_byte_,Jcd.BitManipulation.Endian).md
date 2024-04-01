@@ -7,7 +7,6 @@ Converts bytes into a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/
 ```csharp
 public static byte ToByte(this System.ReadOnlySpan<byte> data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ReadOnlySpanOfByteExtensions.ToByte(thisSystem.ReadOnlySpan_byte_,Jcd.BitManipulation.Endian).data'></a>
@@ -23,6 +22,5 @@ the bytes to convert.
 The endian for the bytes.
 
 #### Returns
-
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 The converted [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')

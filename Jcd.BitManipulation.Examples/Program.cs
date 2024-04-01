@@ -25,6 +25,7 @@ using Jcd.Units.UnitsOfMeasure.SI;
 #pragma warning disable S3254
 #pragma warning disable S4055
 #pragma warning disable S4056
+#pragma warning disable S109
 
 #endregion
 

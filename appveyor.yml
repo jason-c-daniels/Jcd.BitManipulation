@@ -57,7 +57,8 @@ test_script:
                                  /d:sonar.cs.opencover.reportsPaths=**/coverage.opencover.xml \
                                  /d:sonar.coverage.exclusions="**/**Test*.cs, **/*Example*/*, **/*Benchmark*/*" \
                                  /d:sonar.branch.name="$APPVEYOR_PULL_REQUEST_HEAD_REPO_BRANCH" \
-                                 /d:sonar.branch.target="$APPVEYOR_REPO_BRANCH" 
+                                 /d:sonar.branch.target="$APPVEYOR_REPO_BRANCH"
+     
     else
      
         dotnet sonarscanner begin /d:sonar.host.url="https://sonarcloud.io" \
@@ -70,7 +71,7 @@ test_script:
                                   /d:sonar.pullrequest.key="${APPVEYOR_PULL_REQUEST_NUMBER}"
      
     fi
-          
+    
     dotnet build --no-incremental -c Release
      
     # test

@@ -1,6 +1,7 @@
 ﻿#region
 
 using System;
+using System.Globalization;
 using System.Runtime.CompilerServices;
 using System.Text;
 
@@ -293,7 +294,6 @@ public ref struct BigEndianByteIndexer
 
       return Length switch
              {
-                
                 8 => [this[0], this[1], this[2], this[3], this[4], this[5], this[6], this[7]]
               , 7 => [this[0], this[1], this[2], this[3], this[4], this[5], this[6]]
               , 6 => [this[0], this[1], this[2], this[3], this[4], this[5]]
@@ -305,7 +305,6 @@ public ref struct BigEndianByteIndexer
               , _ => []
              };
       #pragma warning restore S109
-
    }
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -788,7 +787,6 @@ public ref struct BigEndianByteIndexer
 
       return this;
       #pragma warning restore S109
-
    }
 
    /// <summary>
@@ -872,7 +870,7 @@ public ref struct BigEndianByteIndexer
       data = data.InternalLittleEndianStoreByte(bytes[7], o - 7);
 
       return this;
-      
+
       #pragma warning restore S109
    }
 
@@ -898,7 +896,7 @@ public ref struct BigEndianByteIndexer
    public readonly override string ToString()
    {
       // ReSharper disable once HeapView.ObjectAllocation.Evident
-      const int scale=3;
+      const int scale = 3;
       var sb = new StringBuilder(Length * scale);
 
       for (var i = 0; i < Length; i++)
@@ -908,7 +906,7 @@ public ref struct BigEndianByteIndexer
             sb.Append(" ");
          }
 
-         sb.AppendFormat(this[i].ToString("X2"));
+         sb.AppendFormat(this[i].ToString("X2", CultureInfo.InvariantCulture));
       }
 
       return sb.ToString();

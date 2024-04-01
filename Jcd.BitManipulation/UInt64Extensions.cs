@@ -384,13 +384,13 @@ public static class UInt64Extensions
    {
       var beOffset = sizeof(ulong) - offset - 1;
 
-      return value.StoreBits(@byte, beOffset << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+      return value.StoreBits(@byte, beOffset << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
    }
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    internal static ulong InternalLittleEndianStoreByte(this ulong value, byte @byte, int offset)
    {
-      return value.StoreBits(@byte, offset << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+      return value.StoreBits(@byte, offset << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
    }
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -398,12 +398,12 @@ public static class UInt64Extensions
    {
       var beOffset = sizeof(ulong) - offset - 1;
 
-      return (byte) value.ReadBits(beOffset << BitSizeConstants.ShiftOneByte, BitMask.BigEndianByteMasks[offset]);
+      return (byte) value.ReadBits(beOffset << BitSizeConstants.ThreeBits, BitMask.BigEndianByteMasks[offset]);
    }
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    internal static byte InternalLittleEndianReadByte(this ulong value, int offset)
    {
-      return (byte) value.ReadBits(offset << BitSizeConstants.ShiftOneByte, BitMask.LittleEndianByteMasks[offset]);
+      return (byte) value.ReadBits(offset << BitSizeConstants.ThreeBits, BitMask.LittleEndianByteMasks[offset]);
    }
 }

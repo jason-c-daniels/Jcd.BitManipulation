@@ -353,12 +353,12 @@ public static class SingleExtensions
    {
       if (endian == Endian.Little)
       {
-         return value.StoreBits(@byte, offset << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+         return value.StoreBits(@byte, offset << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
       }
 
       var beOffset = sizeof(float) - offset - 1;
 
-      return value.StoreBits(@byte, beOffset << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+      return value.StoreBits(@byte, beOffset << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
    }
 
    /// <summary>

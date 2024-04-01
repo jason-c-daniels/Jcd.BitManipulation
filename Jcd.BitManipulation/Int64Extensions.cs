@@ -211,12 +211,12 @@ public static class Int64Extensions
    {
       if (endian == Endian.Little)
       {
-         return (byte) value.ReadBits(offset << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+         return (byte) value.ReadBits(offset << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
       }
 
       var beOffset = sizeof(long) - offset - 1;
 
-      return (byte) value.ReadBits(beOffset << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+      return (byte) value.ReadBits(beOffset << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
    }
 
    /// <summary>
@@ -350,12 +350,12 @@ public static class Int64Extensions
    {
       if (endian == Endian.Little)
       {
-         return value.StoreBits(@byte, offset << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+         return value.StoreBits(@byte, offset << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
       }
 
       var beOffset = sizeof(long) - offset - 1;
 
-      return value.StoreBits(@byte, beOffset << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+      return value.StoreBits(@byte, beOffset << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
    }
 
    /// <summary>

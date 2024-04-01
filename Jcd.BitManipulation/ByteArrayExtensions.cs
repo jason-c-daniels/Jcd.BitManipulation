@@ -292,6 +292,7 @@ public static class ByteArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private static ulong GetBigEndianUInt64(byte[] data, int size)
    {
+      #pragma warning disable S109
       ulong result = 0;
       var len = data.Length;
 
@@ -333,6 +334,7 @@ public static class ByteArrayExtensions
       StoreAndShift(ref result, data, 7, 8, len, size);
 
       return result;
+      #pragma warning restore S109
    }
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -356,6 +358,7 @@ public static class ByteArrayExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private static ulong GetLittleEndianUInt64(byte[] data)
    {
+      #pragma warning disable S109
       ulong result = 0;
       var len = data.Length;
 
@@ -371,51 +374,52 @@ public static class ByteArrayExtensions
          return result;
       }
 
-      result = result.StoreBits(data[1], 1 << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+      result = result.StoreBits(data[1], 1 << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
 
       if (len == 2)
       {
          return result;
       }
 
-      result = result.StoreBits(data[2], 2 << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+      result = result.StoreBits(data[2], 2 << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
 
       if (len == 3)
       {
          return result;
       }
 
-      result = result.StoreBits(data[3], 3 << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+      result = result.StoreBits(data[3], 3 << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
 
       if (len == 4)
       {
          return result;
       }
 
-      result = result.StoreBits(data[4], 4 << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+      result = result.StoreBits(data[4], 4 << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
 
       if (len == 5)
       {
          return result;
       }
 
-      result = result.StoreBits(data[5], 5 << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+      result = result.StoreBits(data[5], 5 << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
 
       if (len == 6)
       {
          return result;
       }
 
-      result = result.StoreBits(data[6], 6 << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+      result = result.StoreBits(data[6], 6 << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
 
       if (len == 7)
       {
          return result;
       }
 
-      result = result.StoreBits(data[7], 7 << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+      result = result.StoreBits(data[7], 7 << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
 
       return result;
+      #pragma warning restore S109
    }
 
    #endregion

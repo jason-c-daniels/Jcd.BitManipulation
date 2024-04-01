@@ -5,6 +5,7 @@ branches:
    only:
       - main
       - /release[/].*/
+
 skip_tags: true
 
 assembly_info:
@@ -23,23 +24,23 @@ dotnet_csproj:
    assembly_version: '{version}'
    file_version: '{version}'
    informational_version: '{version}-alpha'
-   
+
 environment:
    SONAR_TOKEN:
       secure: PHKmq/QK5apQjJA12j8uvP6FY9o2qAcGw7IzeyCsIdvVyamAHQos4fISdKQYOQvf
-      
+
 install:
    - sh: "#!/bin/bash        \nsudo apt-get update && sudo apt-get install -y dotnet-sdk-8.0\ndotnet tool install --global dotnet-sonarscanner"
-        
+
 build:
    publish_nuget: true
    publish_nuget_symbols: true
    use_snupkg_format: true
    verbosity: minimal
-   
+
 test_script:
-   - sh: "if [[ -z \"${APPVEYOR_PULL_REQUEST_NUMBER}\" ]]; then\n    # no PR, safe to do sonar cloud integration.\n	# sonar begin\n	dotnet build-server shutdown\n\n	dotnet sonarscanner begin /d:sonar.host.url=\"https://sonarcloud.io\" /o:\"jason-c-daniels\" /k:\"jason-c-daniels_Jcd.BitManipulation\" /d:sonar.login=\"$SONAR_TOKEN\" /d:sonar.cs.opencover.reportsPaths=**/coverage.opencover.xml /d:sonar.coverage.exclusions=\"**/**Test*.cs, **/*Example*/*, **/*Benchmark*/*\" \n\n\n	dotnet build --no-incremental -c Release\n\n	# test\n	dotnet test --collect:\"XPlat Code Coverage;Format=opencover\" --no-build  -c Release\n\n	# sonar end\n	dotnet sonarscanner end /d:sonar.token=\"$SONAR_TOKEN\"\nelse\n    # No sonar cloud integration\n	dotnet test --collect:\"XPlat Code Coverage;Format=opencover\" --no-build  -c Release\nfi"
-   
+   - sh: "# sonar begin\ndotnet build-server shutdown\n\ndotnet sonarscanner begin /d:sonar.host.url=\"https://sonarcloud.io\" /o:\"jason-c-daniels\" /k:\"jason-c-daniels_Jcd.BitManipulation\" /d:sonar.token=\"$SONAR_TOKEN\" /d:sonar.cs.opencover.reportsPaths=**/coverage.opencover.xml /d:sonar.coverage.exclusions=\"**/**Test*.cs, **/*Example*/*, **/*Benchmark*/*\" \n\n\ndotnet build --no-incremental -c Release\n\n# test\ndotnet test --collect:\"XPlat Code Coverage;Format=opencover\" --no-build  -c Release\n\n# sonar end\ndotnet sonarscanner end /d:sonar.token=\"$SONAR_TOKEN\""
+
 deploy:
    - provider: NuGet
      server: https://www.myget.org/F/jason-c-daniels/api/v2/package

@@ -350,7 +350,7 @@ public static class ByteArrayExtensions
          return true;
       }
 
-      result <<= 8;
+      result <<= BitSizeConstants.BitsPerByte;
 
       return false;
    }

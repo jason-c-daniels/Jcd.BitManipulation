@@ -92,8 +92,8 @@ public static class UInt32Extensions
    public static byte[] ToByteArray(this uint data, Endian endian = Endian.Little)
    {
       return endian == Endian.Big
-                ? ((BigEndianByteIndexer) data)[..]
-                : ((LittleEndianByteIndexer) data)[..];
+                ? ((BigEndianByteIndexer) data).Slice(0, sizeof(uint))
+                : ((LittleEndianByteIndexer) data).Slice(0, sizeof(uint));
    }
 
    /// <summary>

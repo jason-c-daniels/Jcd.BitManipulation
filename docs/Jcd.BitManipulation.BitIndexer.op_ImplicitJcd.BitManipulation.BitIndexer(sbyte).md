@@ -7,7 +7,6 @@ Automatically Convert from a [System.SByte](https://docs.microsoft.com/en-us/dot
 ```csharp
 public static Jcd.BitManipulation.BitIndexer implicit operator BitIndexer(sbyte bits);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexer.op_ImplicitJcd.BitManipulation.BitIndexer(sbyte).bits'></a>
@@ -17,6 +16,5 @@ public static Jcd.BitManipulation.BitIndexer implicit operator BitIndexer(sbyte 
 The initial value for the indexed bits.
 
 #### Returns
-
 [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')
 A new [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer').

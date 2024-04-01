@@ -7,7 +7,6 @@ Automatically convert from a BitIndexer to a [System.UInt32](https://docs.micros
 ```csharp
 public static uint implicit operator uint(Jcd.BitManipulation.BitIndexer indexer);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexer.op_Implicituint(Jcd.BitManipulation.BitIndexer).indexer'></a>
@@ -17,6 +16,5 @@ public static uint implicit operator uint(Jcd.BitManipulation.BitIndexer indexer
 The indexer to convert from.
 
 #### Returns
-
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 The lower 32 bits converted to a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32').

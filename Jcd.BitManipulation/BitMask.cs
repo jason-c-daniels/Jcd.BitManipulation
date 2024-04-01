@@ -97,9 +97,9 @@ public readonly struct BitMask
    /// <param name="size">the number of bits to set to 1</param>
    /// <returns>the shifted mask</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static BitMask FromRange(int offset = 0, int size = 64)
+   public static BitMask FromRange(int offset = 0, int size = sizeof(ulong) *BitSizeConstants.BitsPerByte)
    {
-      return size == 64
+      return size == sizeof(ulong) * BitSizeConstants.BitsPerByte
                 ? new BitMask(ulong.MaxValue            << offset)
                 : new BitMask((((ulong) 1 << size) - 1) << offset);
    }

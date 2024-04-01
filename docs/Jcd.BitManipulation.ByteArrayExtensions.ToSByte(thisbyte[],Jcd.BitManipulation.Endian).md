@@ -7,7 +7,6 @@ Converts an array of bytes into a [System.SByte](https://docs.microsoft.com/en-u
 ```csharp
 public static sbyte ToSByte(this byte[] data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteArrayExtensions.ToSByte(thisbyte[],Jcd.BitManipulation.Endian).data'></a>
@@ -23,6 +22,5 @@ the bytes to convert.
 The endian for the bytes.
 
 #### Returns
-
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 The converted sbyte

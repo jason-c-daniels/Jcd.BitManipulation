@@ -7,7 +7,6 @@ Converts an array of bools into a [System.Int64](https://docs.microsoft.com/en-u
 ```csharp
 public static long ToInt64(this bool[] bits);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BooleanArrayExtensions.ToInt64(thisbool[]).bits'></a>
@@ -17,6 +16,5 @@ public static long ToInt64(this bool[] bits);
 The array of [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean') values to convert. The Least Significant Bit is at index 0
 
 #### Returns
-
 [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 The converted [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')

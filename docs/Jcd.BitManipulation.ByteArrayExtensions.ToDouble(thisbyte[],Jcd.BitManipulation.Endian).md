@@ -7,7 +7,6 @@ Converts an array of bytes into a [System.Double](https://docs.microsoft.com/en-
 ```csharp
 public static double ToDouble(this byte[] data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteArrayExtensions.ToDouble(thisbyte[],Jcd.BitManipulation.Endian).data'></a>
@@ -23,7 +22,6 @@ the bytes to convert.
 A setting indicating the endianness of the source data. The default is Endian.Little.
 
 #### Returns
-
 [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 The converted [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 

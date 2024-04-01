@@ -7,7 +7,6 @@ Implicitly converts a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/ap
 ```csharp
 public static Jcd.BitManipulation.BigEndianByteIndexer implicit operator BigEndianByteIndexer(ulong data);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.BigEndianByteIndexer.op_ImplicitJcd.BitManipulation.BigEndianByteIndexer(ulong).data'></a>
@@ -17,7 +16,6 @@ public static Jcd.BitManipulation.BigEndianByteIndexer implicit operator BigEndi
 The initial data for the indexer.
 
 #### Returns
-
 [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer')
 The newly created [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer').
 

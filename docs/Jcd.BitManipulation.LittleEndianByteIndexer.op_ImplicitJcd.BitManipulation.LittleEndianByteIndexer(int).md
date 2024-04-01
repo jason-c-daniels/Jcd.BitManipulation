@@ -7,7 +7,6 @@ Implicitly converts a [System.Int32](https://docs.microsoft.com/en-us/dotnet/api
 ```csharp
 public static Jcd.BitManipulation.LittleEndianByteIndexer implicit operator LittleEndianByteIndexer(int data);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexer.op_ImplicitJcd.BitManipulation.LittleEndianByteIndexer(int).data'></a>
@@ -17,6 +16,5 @@ public static Jcd.BitManipulation.LittleEndianByteIndexer implicit operator Litt
 The initial value for the bytes of data.
 
 #### Returns
-
 [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
 A new [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') instance.

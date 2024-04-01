@@ -340,7 +340,7 @@ public static class ByteArrayExtensions
    {
       if (idx < len)
       {
-         result = result.StoreBits(data[idx], 0, 8);
+         result = result.StoreBits(data[idx], 0, BitSizeConstants.BitsPerByte);
       }
 
       if (size == sizeComp)
@@ -364,56 +364,56 @@ public static class ByteArrayExtensions
          return result;
       }
 
-      result = result.StoreBits(data[0], 0, 8);
+      result = result.StoreBits(data[0], 0, BitSizeConstants.BitsPerByte);
 
       if (len == 1)
       {
          return result;
       }
 
-      result = result.StoreBits(data[1], 1 << 3, 8);
+      result = result.StoreBits(data[1], 1 << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
 
       if (len == 2)
       {
          return result;
       }
 
-      result = result.StoreBits(data[2], 2 << 3, 8);
+      result = result.StoreBits(data[2], 2 << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
 
       if (len == 3)
       {
          return result;
       }
 
-      result = result.StoreBits(data[3], 3 << 3, 8);
+      result = result.StoreBits(data[3], 3 << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
 
       if (len == 4)
       {
          return result;
       }
 
-      result = result.StoreBits(data[4], 4 << 3, 8);
+      result = result.StoreBits(data[4], 4 << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
 
       if (len == 5)
       {
          return result;
       }
 
-      result = result.StoreBits(data[5], 5 << 3, 8);
+      result = result.StoreBits(data[5], 5 << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
 
       if (len == 6)
       {
          return result;
       }
 
-      result = result.StoreBits(data[6], 6 << 3, 8);
+      result = result.StoreBits(data[6], 6 << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
 
       if (len == 7)
       {
          return result;
       }
 
-      result = result.StoreBits(data[7], 7 << 3, 8);
+      result = result.StoreBits(data[7], 7 << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
 
       return result;
    }

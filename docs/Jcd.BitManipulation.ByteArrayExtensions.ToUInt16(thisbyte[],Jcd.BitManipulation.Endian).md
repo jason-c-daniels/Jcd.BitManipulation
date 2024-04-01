@@ -7,7 +7,6 @@ Converts an array of bytes into a [System.UInt16](https://docs.microsoft.com/en-
 ```csharp
 public static ushort ToUInt16(this byte[] data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteArrayExtensions.ToUInt16(thisbyte[],Jcd.BitManipulation.Endian).data'></a>
@@ -23,7 +22,6 @@ the bytes to convert.
 The endian for the bytes.
 
 #### Returns
-
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 The converted [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 

@@ -7,7 +7,6 @@ Stores a single byte to the value at the specified byte offset and returns the m
 ```csharp
 public static ulong StoreByte(this ulong value, byte @byte, int offset, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt64Extensions.StoreByte(thisulong,byte,int,Jcd.BitManipulation.Endian).value'></a>
@@ -35,6 +34,5 @@ The offset of where to store the byte.
 The endianness for indexing into the bytes.
 
 #### Returns
-
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 The modified value.

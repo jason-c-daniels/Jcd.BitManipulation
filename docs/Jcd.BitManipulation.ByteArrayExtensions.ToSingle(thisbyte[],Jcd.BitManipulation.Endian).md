@@ -7,7 +7,6 @@ Converts an array of bytes into a [System.Single](https://docs.microsoft.com/en-
 ```csharp
 public static float ToSingle(this byte[] data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteArrayExtensions.ToSingle(thisbyte[],Jcd.BitManipulation.Endian).data'></a>
@@ -23,7 +22,6 @@ the bytes to convert.
 A setting indicating the endianness of the source data. The default is Endian.Little.
 
 #### Returns
-
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 The converted ulong
 

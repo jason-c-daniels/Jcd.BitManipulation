@@ -7,7 +7,6 @@ Toggle all the bits specified in the provided bit mask and returns the modified 
 ```csharp
 public static float ToggleBits(this float value, Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.SingleExtensions.ToggleBits(thisfloat,Jcd.BitManipulation.BitMask).value'></a>
@@ -23,6 +22,5 @@ The value to modify.
 The bits to set.
 
 #### Returns
-
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 The modified value.

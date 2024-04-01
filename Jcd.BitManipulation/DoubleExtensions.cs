@@ -224,7 +224,7 @@ public static class DoubleExtensions
    /// <param name="size">The number of bits to set on.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static double SetBits(this double value, int offset = 0, int size = sizeof(double) *BitSizeConstants.BitsPerByte)
+   public static double SetBits(this double value, int offset = 0, int size = sizeof(double) * BitSizeConstants.BitsPerByte)
    {
       return value.SetBits(BitMask.FromRange(offset, size));
    }
@@ -338,12 +338,12 @@ public static class DoubleExtensions
    {
       if (endian == Endian.Little)
       {
-         return value.StoreBits(@byte, offset << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+         return value.StoreBits(@byte, offset << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
       }
 
       var beOffset = sizeof(double) - offset - 1;
 
-      return value.StoreBits(@byte, beOffset << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+      return value.StoreBits(@byte, beOffset << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
    }
 
    /// <summary>
@@ -354,7 +354,7 @@ public static class DoubleExtensions
    /// <param name="size">The number of bits to toggle.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static double ToggleBits(this double value, int offset = 0, int size = sizeof(double) *BitSizeConstants.BitsPerByte)
+   public static double ToggleBits(this double value, int offset = 0, int size = sizeof(double) * BitSizeConstants.BitsPerByte)
    {
       return value.ToggleBits(BitMask.FromRange(offset, size));
    }

@@ -97,7 +97,7 @@ public readonly struct BitMask
    /// <param name="size">the number of bits to set to 1</param>
    /// <returns>the shifted mask</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static BitMask FromRange(int offset = 0, int size = sizeof(ulong) *BitSizeConstants.BitsPerByte)
+   public static BitMask FromRange(int offset = 0, int size = sizeof(ulong) * BitSizeConstants.BitsPerByte)
    {
       return size == sizeof(ulong) * BitSizeConstants.BitsPerByte
                 ? new BitMask(ulong.MaxValue            << offset)
@@ -223,7 +223,7 @@ public readonly struct BitMask
       var tmp = bits;
       sb.Append("0b");
 
-      for (var i = 0; i < 64; i++)
+      for (var i = 0; i < sizeof(ulong) * BitSizeConstants.BitsPerByte; i++)
       {
          sb.Append((tmp & highBit) > 0
                       ? '1'

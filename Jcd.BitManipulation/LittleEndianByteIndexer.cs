@@ -1,6 +1,7 @@
 ﻿#region
 
 using System;
+using System.Globalization;
 using System.Runtime.CompilerServices;
 using System.Text;
 
@@ -671,7 +672,6 @@ public ref struct LittleEndianByteIndexer
 
       return this;
       #pragma warning restore S109
-
    }
 
    /// <summary>
@@ -755,7 +755,6 @@ public ref struct LittleEndianByteIndexer
 
       return this;
       #pragma warning restore S109
-
    }
 
    /// <summary>
@@ -790,7 +789,7 @@ public ref struct LittleEndianByteIndexer
             sb.Append(" ");
          }
 
-         sb.AppendFormat(this[i].ToString("X2"));
+         sb.AppendFormat(this[i].ToString("X2", CultureInfo.InvariantCulture));
       }
 
       return sb.ToString();

@@ -117,7 +117,7 @@ public static class Int32Extensions
    /// <param name="size">The number of bits to clear.</param>
    /// <returns>The modified value.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static int ClearBits(this int value, int offset = 0, int size = sizeof(int)*BitSizeConstants.BitsPerByte)
+   public static int ClearBits(this int value, int offset = 0, int size = sizeof(int) * BitSizeConstants.BitsPerByte)
    {
       return value.ClearBits(BitMask.FromRange(offset, size));
    }
@@ -224,12 +224,12 @@ public static class Int32Extensions
    {
       if (endian == Endian.Little)
       {
-         return (byte) value.ReadBits(offset << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+         return (byte) value.ReadBits(offset << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
       }
 
       var beOffset = sizeof(int) - offset - 1;
 
-      return (byte) value.ReadBits(beOffset << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+      return (byte) value.ReadBits(beOffset << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
    }
 
    /// <summary>
@@ -363,12 +363,12 @@ public static class Int32Extensions
    {
       if (endian == Endian.Little)
       {
-         return value.StoreBits(@byte, offset << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+         return value.StoreBits(@byte, offset << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
       }
 
       var beOffset = sizeof(int) - offset - 1;
 
-      return value.StoreBits(@byte, beOffset << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+      return value.StoreBits(@byte, beOffset << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
    }
 
    /// <summary>

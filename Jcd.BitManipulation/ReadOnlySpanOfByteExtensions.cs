@@ -206,6 +206,7 @@ public static class ReadOnlySpanOfByteExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    private static ulong GetBigEndianUInt64(ReadOnlySpan<byte> data, int size)
    {
+      #pragma warning disable S109
       ulong result = 0;
       var len = data.Length;
 
@@ -247,6 +248,8 @@ public static class ReadOnlySpanOfByteExtensions
       StoreAndShift(ref result, data, 7, 8, len, size);
 
       return result;
+
+      #pragma warning restore S109
    }
 
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -262,7 +265,7 @@ public static class ReadOnlySpanOfByteExtensions
          return true;
       }
 
-      result <<= 8;
+      result <<= BitSizeConstants.BitsPerByte;
 
       return false;
    }
@@ -273,7 +276,7 @@ public static class ReadOnlySpanOfByteExtensions
       ulong result = 0;
       var i = 0;
       var len = data.Length;
-      result = result.StoreBits(data[i], i << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+      result = result.StoreBits(data[i], i << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
       i++;
 
       if (i >= len)
@@ -281,7 +284,7 @@ public static class ReadOnlySpanOfByteExtensions
          return result;
       }
 
-      result = result.StoreBits(data[i], i << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+      result = result.StoreBits(data[i], i << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
       i++;
 
       if (i >= len)
@@ -289,7 +292,7 @@ public static class ReadOnlySpanOfByteExtensions
          return result;
       }
 
-      result = result.StoreBits(data[i], i << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+      result = result.StoreBits(data[i], i << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
       i++;
 
       if (i >= len)
@@ -297,7 +300,7 @@ public static class ReadOnlySpanOfByteExtensions
          return result;
       }
 
-      result = result.StoreBits(data[i], i << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+      result = result.StoreBits(data[i], i << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
       i++;
 
       if (i >= len)
@@ -305,7 +308,7 @@ public static class ReadOnlySpanOfByteExtensions
          return result;
       }
 
-      result = result.StoreBits(data[i], i << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+      result = result.StoreBits(data[i], i << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
       i++;
 
       if (i >= len)
@@ -313,7 +316,7 @@ public static class ReadOnlySpanOfByteExtensions
          return result;
       }
 
-      result = result.StoreBits(data[i], i << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+      result = result.StoreBits(data[i], i << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
       i++;
 
       if (i >= len)
@@ -321,7 +324,7 @@ public static class ReadOnlySpanOfByteExtensions
          return result;
       }
 
-      result = result.StoreBits(data[i], i << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+      result = result.StoreBits(data[i], i << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
       i++;
 
       if (i >= len)
@@ -329,7 +332,7 @@ public static class ReadOnlySpanOfByteExtensions
          return result;
       }
 
-      result = result.StoreBits(data[i], i << BitSizeConstants.ShiftOneByte, BitSizeConstants.BitsPerByte);
+      result = result.StoreBits(data[i], i << BitSizeConstants.ThreeBits, BitSizeConstants.BitsPerByte);
 
       return result;
    }

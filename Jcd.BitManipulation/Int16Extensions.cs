@@ -90,8 +90,8 @@ public static class Int16Extensions
    public static byte[] ToByteArray(this short data, Endian endian = Endian.Little)
    {
       return endian == Endian.Big
-                ? ((BigEndianByteIndexer) data)[..]
-                : ((LittleEndianByteIndexer) data)[..];
+                ? ((BigEndianByteIndexer) data).Slice(0, sizeof(short))
+                : ((LittleEndianByteIndexer) data).Slice(0, sizeof(short));
    }
 
    /// <summary>

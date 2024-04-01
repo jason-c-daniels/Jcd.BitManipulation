@@ -148,56 +148,56 @@ public class BigEndianReadBytes
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] BigEndianByteIndexer_Slice_Double()
    {
-      return ((BigEndianByteIndexer) Dbl)[..];
+      return ((BigEndianByteIndexer) Dbl).Slice(0, sizeof(double));
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] BigEndianByteIndexer_Slice_Float()
    {
-      return ((BigEndianByteIndexer) Flt)[..];
+      return ((BigEndianByteIndexer) Flt).Slice(0, sizeof(float));
    }
 
    [Benchmark(Baseline = true)]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] BigEndianByteIndexer_Slice_UInt64()
    {
-      return ((BigEndianByteIndexer) Ui64)[..];
+      return ((BigEndianByteIndexer) Ui64).Slice(0, sizeof(ulong));
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] BigEndianByteIndexer_Slice_Int64()
    {
-      return ((BigEndianByteIndexer) I64)[..];
+      return ((BigEndianByteIndexer) I64).Slice(0, sizeof(long));
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] BigEndianByteIndexer_Slice_UInt32()
    {
-      return ((BigEndianByteIndexer) Ui32)[..];
+      return ((BigEndianByteIndexer) Ui32).Slice(0, sizeof(uint));
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] BigEndianByteIndexer_Slice_Int32()
    {
-      return ((BigEndianByteIndexer) I32)[..];
+      return ((BigEndianByteIndexer) I32).Slice(0, sizeof(int));
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] BigEndianByteIndexer_Slice_UInt16()
    {
-      return ((BigEndianByteIndexer) Ui16)[..];
+      return ((BigEndianByteIndexer) Ui16).Slice(0, sizeof(ushort));
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public byte[] BigEndianByteIndexer_Slice_Int16()
    {
-      return ((BigEndianByteIndexer) I16)[..];
+      return ((BigEndianByteIndexer) I16).Slice(0, sizeof(short));
    }
 
    #endregion

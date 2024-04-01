@@ -91,8 +91,8 @@ public static class UInt16Extensions
    public static byte[] ToByteArray(this ushort data, Endian endian = Endian.Little)
    {
       return endian == Endian.Big
-                ? ((BigEndianByteIndexer) data)[..]
-                : ((LittleEndianByteIndexer) data)[..];
+                ? ((BigEndianByteIndexer) data).Slice(0, sizeof(ushort))
+                : ((LittleEndianByteIndexer) data).Slice(0, sizeof(ushort));
    }
 
    /// <summary>

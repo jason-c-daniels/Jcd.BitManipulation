@@ -83,8 +83,8 @@ public static class UInt64Extensions
    public static byte[] ToByteArray(this ulong data, Endian endian = Endian.Little)
    {
       return endian == Endian.Big
-                ? ((BigEndianByteIndexer) data)[..]
-                : ((LittleEndianByteIndexer) data)[..];
+                ? ((BigEndianByteIndexer) data).Slice(0, sizeof(ulong))
+                : ((LittleEndianByteIndexer) data).Slice(0, sizeof(ulong));
    }
 
    /// <summary>

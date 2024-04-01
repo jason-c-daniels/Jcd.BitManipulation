@@ -20,8 +20,8 @@ and keeping acceptable performance<sup>1</sup>.
 
 ### Breaking Changes from 2.x
 
-- I've found myself strongly disliking the proliferation of types. All of the type specific `ByteIndexer` types will be
-  replaced by `BigEndianByteIndexer` and `LittleEndianByteIndexer`.
+- All of the type specific `ByteIndexer` types will be replaced by `BigEndianByteIndexer` and `LittleEndianByteIndexer`.
+  Early previews of both have been backported to 2.4.33.
 - The same is true of the type specific `BitIndexer` types (e.g. `BitIndexerUInt64`). These will all be replaced with
   the `BitIndexer` struct.
 - The old indexer types will be deprecated in an upcoming release of 2.x, shortly before 3.0 is released. If you're
@@ -48,7 +48,7 @@ and keeping acceptable performance<sup>1</sup>.
   return a `float` with the specified bits altered)
 - **Performance improvements** via `AggressiveInlining` and targeted code changes. In many places in 1.x and 2.x,
   `AggressiveInlining` is missing. Using this consistently has halved the run time of some of the extension methods in
-  the 3.0 branch.
+  the 3.0 branch. As well, manually unrolling some loops has also provided significant performance improvements.
 - **Improved documentation**. I will improve the documentation on how to properly use the extension methods as well
   as their underlying types. One area currently lacking is on what to expect of a big endian conversion from a
   a byte array to behave when the array is smaller than the destination type. (fills from position 0)

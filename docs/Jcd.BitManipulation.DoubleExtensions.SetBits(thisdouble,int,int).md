@@ -7,6 +7,7 @@ Sets all specified bits to "on" and returns the modified value.
 ```csharp
 public static double SetBits(this double value, int offset=0, int size=64);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.SetBits(thisdouble,int,int).value'></a>
@@ -28,5 +29,6 @@ The bit location to store the value.
 The number of bits to set on.
 
 #### Returns
+
 [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 The modified value.

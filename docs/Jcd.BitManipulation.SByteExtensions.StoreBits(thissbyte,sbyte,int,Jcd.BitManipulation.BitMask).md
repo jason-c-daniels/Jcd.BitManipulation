@@ -8,6 +8,7 @@ value.
 ```csharp
 public static sbyte StoreBits(this sbyte value, sbyte source, int offset, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SByteExtensions.StoreBits(thissbyte,sbyte,int,Jcd.BitManipulation.BitMask).value'></a>
@@ -35,5 +36,6 @@ The destination offset of where to store the bits.
 The mask specifying the bits to store
 
 #### Returns
+
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 The modified value.

@@ -7,6 +7,7 @@ Constructs a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMa
 ```csharp
 public BitMask(long bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.BitMask(long).bits'></a>

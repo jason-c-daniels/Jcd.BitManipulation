@@ -7,6 +7,7 @@ Tests if any bits from the bitmask are set on a [System.Double](https://docs.mic
 ```csharp
 public static bool AreAnyBitsSet(this double data, Jcd.BitManipulation.BitMask bitmask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.AreAnyBitsSet(thisdouble,Jcd.BitManipulation.BitMask).data'></a>
@@ -22,5 +23,6 @@ The data to inspect.
 The bits to test.
 
 #### Returns
+
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 True if any of the bits from the bitmask were set.

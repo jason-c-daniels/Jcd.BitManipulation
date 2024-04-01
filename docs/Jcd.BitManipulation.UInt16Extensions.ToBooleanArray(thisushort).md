@@ -2,11 +2,12 @@
 
 ## UInt16Extensions.ToBooleanArray(this ushort) Method
 
-Converts a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16') into an array of  values with the lease significant bit at index 0.
+Converts a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16') into an array of values with the lease significant bit at index 0.
 
 ```csharp
 public static bool[] ToBooleanArray(this ushort bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt16Extensions.ToBooleanArray(thisushort).bits'></a>
@@ -16,5 +17,6 @@ public static bool[] ToBooleanArray(this ushort bits);
 the bits of the [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16') to convert.
 
 #### Returns
+
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 An array with the Least Significant Bit at index 0

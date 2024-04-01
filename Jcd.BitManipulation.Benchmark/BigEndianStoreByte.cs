@@ -92,56 +92,72 @@ public class BigEndianStoreByte
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public double ByteIndexer_From_A_Double()
    {
-      return ((BigEndianByteIndexer) Dbl).StoreByte(0xDD, 0);
+      var indexer = (BigEndianByteIndexer) Dbl;
+
+      return indexer[0] = 0xDD;
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public float ByteIndexer_From_A_Float()
    {
-      return ((BigEndianByteIndexer) Flt).StoreByte(0xDD, 0);
+      var indexer = (BigEndianByteIndexer) Flt;
+
+      return indexer[0] = 0xDD;
    }
 
    [Benchmark(Baseline = true)]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public ulong ByteIndexer_From_A_UInt64()
    {
-      return ((BigEndianByteIndexer) Ui64).StoreByte(0xDD, 0);
+      var indexer = (BigEndianByteIndexer) Ui64;
+
+      return indexer[0] = 0xDD;
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public long ByteIndexer_From_A_Int64()
    {
-      return ((BigEndianByteIndexer) I64).StoreByte(0xDD, 0);
+      var indexer = (BigEndianByteIndexer) I64;
+
+      return indexer[0] = 0xDD;
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public uint ByteIndexer_From_A_UInt32()
    {
-      return ((BigEndianByteIndexer) Ui32).StoreByte(0xDD, 0);
+      var indexer = (BigEndianByteIndexer) Ui32;
+
+      return indexer[0] = 0xDD;
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public int ByteIndexer_From_A_Int32()
    {
-      return ((BigEndianByteIndexer) I32).StoreByte(0xDD, 0);
+      var indexer = (BigEndianByteIndexer) I32;
+
+      return indexer[0] = 0xDD;
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public ushort ByteIndexer_From_A_UInt16()
    {
-      return ((BigEndianByteIndexer) Ui16).StoreByte(0xDD, 0);
+      var indexer = (BigEndianByteIndexer) Ui16;
+
+      return indexer[0] = 0xDD;
    }
 
    [Benchmark]
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public short ByteIndexer_From_A_Int16()
    {
-      return ((BigEndianByteIndexer) I16).StoreByte(0xDD, 0);
+      var indexer = (BigEndianByteIndexer) I16;
+
+      return indexer[0] = 0xDD;
    }
 
    #endregion

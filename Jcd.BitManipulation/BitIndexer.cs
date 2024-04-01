@@ -113,17 +113,17 @@ public ref struct BitIndexer
    {
    }
 
-   private BitIndexer(IReadOnlyList<bool> array)
+   private BitIndexer(bool[] array)
       : this(array, GetIntegerBitSize(array))
    {
    }
 
-   private BitIndexer(IReadOnlyList<bool> array, int bitSize)
+   private BitIndexer(bool[] array, int bitSize)
    {
       Length = bitSize;
       bits = 0;
 
-      for (var i = 0; i < array.Count && i < Length; i++)
+      for (var i = 0; i < array.Length && i < Length; i++)
       {
          this[i] = array[i];
       }
@@ -131,12 +131,12 @@ public ref struct BitIndexer
 
    private static int GetIntegerBitSize(IReadOnlyCollection<bool> array)
    {
-      return (array.Count >> BitSizeConstants.ThreeBits) switch
+      return (array.Count) switch
              {
-                <= sizeof(byte)   => sizeof(byte)   << BitSizeConstants.ThreeBits
-              , <= sizeof(ushort) => sizeof(ushort) << BitSizeConstants.ThreeBits
-              , <= sizeof(uint)   => sizeof(uint)   << BitSizeConstants.ThreeBits
-              , _                 => sizeof(ulong)  << BitSizeConstants.ThreeBits
+                <= sizeof(byte)   << BitSizeConstants.ThreeBits => sizeof(byte)   << BitSizeConstants.ThreeBits
+              , <= sizeof(ushort) << BitSizeConstants.ThreeBits => sizeof(ushort) << BitSizeConstants.ThreeBits
+              , <= sizeof(uint)   << BitSizeConstants.ThreeBits => sizeof(uint)   << BitSizeConstants.ThreeBits
+              , _                                               => sizeof(ulong)  << BitSizeConstants.ThreeBits
              };
    }
 
@@ -160,17 +160,15 @@ public ref struct BitIndexer
    public bool this[int index]
    {
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
-      readonly get => index < Length && bits.ReadBit(index);
+      readonly get => index >= 0 && index < Length && bits.ReadBit(index);
 
       [MethodImpl(MethodImplOptions.AggressiveInlining)]
       set
       {
-         if (index >= Length)
+         if (index >= 0 && index < Length)
          {
-            return;
+            bits = bits.StoreBit(value, index);
          }
-
-         bits = bits.StoreBit(value, index);
       }
    }
 
@@ -429,10 +427,7 @@ public ref struct BitIndexer
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static implicit operator bool[](BitIndexer indexer)
    {
-      // ReSharper disable RedundantRangeBound -- false positive
-      return indexer[0..^0];
-
-      // ReSharper enable RedundantRangeBound -- false positive
+      return indexer.Slice(0, indexer.Length);
    }
 
    /// <summary>

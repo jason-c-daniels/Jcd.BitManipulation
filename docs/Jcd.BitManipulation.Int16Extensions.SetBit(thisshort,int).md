@@ -7,6 +7,7 @@ Sets the bit at the specified to "on" and returns the modified value.
 ```csharp
 public static short SetBit(this short value, int offset);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int16Extensions.SetBit(thisshort,int).value'></a>
@@ -22,5 +23,6 @@ The value to modify.
 The offset of the bit to set.
 
 #### Returns
+
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 The modified value.

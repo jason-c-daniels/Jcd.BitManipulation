@@ -7,6 +7,7 @@ Implicitly converts a [System.Double](https://docs.microsoft.com/en-us/dotnet/ap
 ```csharp
 public static Jcd.BitManipulation.LittleEndianByteIndexer implicit operator LittleEndianByteIndexer(double data);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexer.op_ImplicitJcd.BitManipulation.LittleEndianByteIndexer(double).data'></a>
@@ -16,5 +17,6 @@ public static Jcd.BitManipulation.LittleEndianByteIndexer implicit operator Litt
 The initial value for the bytes of data.
 
 #### Returns
+
 [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
 A new [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') instance.

@@ -7,6 +7,7 @@ The order of the bytes in memory.
 ```csharp
 public enum Endian
 ```
+
 ### Fields
 
 <a name='Jcd.BitManipulation.Endian.Big'></a>

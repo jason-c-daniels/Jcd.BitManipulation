@@ -12,6 +12,8 @@ using Jcd.Units.UnitTypes;
 // ReSharper disable HeapView.ObjectAllocation.Evident
 // ReSharper disable HeapView.ClosureAllocation
 
+#pragma warning disable S109
+
 #endregion
 
 namespace Jcd.BitManipulation.Examples;

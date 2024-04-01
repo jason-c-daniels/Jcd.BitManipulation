@@ -308,11 +308,11 @@ public static class ByteArrayExtensions
 
       if (endian == Endian.Big && align == ByteAlignment.LeastSignificantByte)
       {
-         result >>= (8 * diff);
+         result >>= diff << BitSizeConstants.ThreeBits;
       }
       else if (endian == Endian.Little && align == ByteAlignment.MostSignificantByte)
       {
-         result <<= 8 * diff;
+         result <<= diff << BitSizeConstants.ThreeBits;
       }
 
       return result;

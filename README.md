@@ -2,6 +2,10 @@
 
 A .Net Standard 2.0 library adding syntactic sugar to your bit manipulation experience.
 
+[![GitHub](https://img.shields.io/github/license/jason-c-daniels/Jcd.BitManipulation)](https://github.com/jason-c-daniels/Jcd.BitManipulation/blob/main/LICENSE)
+[![MyGet](https://img.shields.io/myget/jason-c-daniels/v/Jcd.BitManipulation?logo=nuget)](https://www.myget.org/feed/jason-c-daniels/package/nuget/Jcd.BitManipulation)
+[![Nuget](https://img.shields.io/nuget/v/Jcd.BitManipulation?logo=nuget)](https://www.nuget.org/packages/Jcd.BitManipulation)
+
 ## Examples
 
 ```csharp
@@ -84,15 +88,28 @@ See [Release Notes](RELEASE_NOTES.md)
 2. v2.4.x development will now happen in the `release/2.4` branch.
    Only backports from main will be accepted there.
 
-## Build, Code Stats and Nuget
+## Build and Status
 
-[![GitHub](https://img.shields.io/github/license/jason-c-daniels/Jcd.BitManipulation)](https://github.com/jason-c-daniels/Jcd.BitManipulation/blob/main/LICENSE)
 [![Build status](https://ci.appveyor.com/api/projects/status/98xuytl8nl7rns7m?svg=true)](https://ci.appveyor.com/project/jason-c-daniels/jcd-bitmanipulation)
-[![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/jason-c-daniels/Jcd.BitManipulation)](https://www.codefactor.io/repository/github/jason-c-daniels/jcd.bitmanipulation)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=jason-c-daniels_Jcd.BitManipulation&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=jason-c-daniels_Jcd.BitManipulation)
 
-[![MyGet](https://img.shields.io/myget/jason-c-daniels/v/Jcd.BitManipulation?logo=nuget)](https://www.myget.org/feed/jason-c-daniels/package/nuget/Jcd.BitManipulation)
-[![Nuget](https://img.shields.io/nuget/v/Jcd.BitManipulation?logo=nuget)](https://www.nuget.org/packages/Jcd.BitManipulation)
+### Statistics
+
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=jason-c-daniels_Jcd.BitManipulation&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=jason-c-daniels_Jcd.BitManipulation)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=jason-c-daniels_Jcd.BitManipulation&metric=bugs)](https://sonarcloud.io/summary/new_code?id=jason-c-daniels_Jcd.BitManipulation)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=jason-c-daniels_Jcd.BitManipulation&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=jason-c-daniels_Jcd.BitManipulation)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=jason-c-daniels_Jcd.BitManipulation&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=jason-c-daniels_Jcd.BitManipulation)
+
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=jason-c-daniels_Jcd.BitManipulation&metric=coverage)](https://sonarcloud.io/summary/new_code?id=jason-c-daniels_Jcd.BitManipulation)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=jason-c-daniels_Jcd.BitManipulation&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=jason-c-daniels_Jcd.BitManipulation)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=jason-c-daniels_Jcd.BitManipulation&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=jason-c-daniels_Jcd.BitManipulation)
+
+### Ratings
+
+[![CodeFactor Grade](https://img.shields.io/codefactor/grade/github/jason-c-daniels/Jcd.BitManipulation)](https://www.codefactor.io/repository/github/jason-c-daniels/jcd.bitmanipulation)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=jason-c-daniels_Jcd.BitManipulation&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=jason-c-daniels_Jcd.BitManipulation)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=jason-c-daniels_Jcd.BitManipulation&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=jason-c-daniels_Jcd.BitManipulation)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=jason-c-daniels_Jcd.BitManipulation&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=jason-c-daniels_Jcd.BitManipulation)
 
 ## API Documentation
 

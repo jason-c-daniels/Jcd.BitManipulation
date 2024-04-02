@@ -46,6 +46,8 @@ test_script:
 - sh: >-
      # sonar begin
      
+     echo "The current directory is: $PWD"
+     
      dotnet build-server shutdown
      
      if [[ -z "${APPVEYOR_PULL_REQUEST_NUMBER}" ]]; then

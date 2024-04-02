@@ -31,11 +31,11 @@ environment:
 
 install:
 - sh: >-
-     #!/bin/bash
-     
-     sudo apt-get update && sudo apt-get install -y dotnet-sdk-8.0
-     
-     dotnet tool install --global dotnet-sonarscanner
+    #!/bin/bash
+    
+    sudo apt-get update && sudo apt-get install -y dotnet-sdk-8.0
+    
+    dotnet tool install --global dotnet-sonarscanner
 build:
    publish_nuget: true
    publish_nuget_symbols: true
@@ -44,43 +44,43 @@ build:
 
 test_script:
 - sh: >-
-     # sonar begin
-     
-     echo "The current directory is: $PWD"
-     
-     dotnet build-server shutdown
-     
-     if [[ -z "${APPVEYOR_PULL_REQUEST_NUMBER}" ]]; then
-     
+    # sonar begin
+    
+    echo "The current directory is: $PWD"
+    
+    dotnet build-server shutdown
+    
+    if [[ -z "${APPVEYOR_PULL_REQUEST_NUMBER}" ]]; then
+    
+       dotnet sonarscanner begin /d:sonar.host.url="https://sonarcloud.io" \
+                                 /o:"jason-c-daniels" \
+                                 /k:"jason-c-daniels_Jcd.BitManipulation" \
+                                 /d:sonar.token="$SONAR_TOKEN" \
+                                 /d:sonar.cs.opencover.reportsPaths=**/coverage.opencover.xml \
+                                 /d:sonar.coverage.exclusions="**/**Test*.cs, **/*Example*/*, **/*Benchmark*/*" \
+                                 /d:sonar.branch.name="$APPVEYOR_REPO_BRANCH"
+    
+    else
+    
         dotnet sonarscanner begin /d:sonar.host.url="https://sonarcloud.io" \
                                   /o:"jason-c-daniels" \
                                   /k:"jason-c-daniels_Jcd.BitManipulation" \
                                   /d:sonar.token="$SONAR_TOKEN" \
                                   /d:sonar.cs.opencover.reportsPaths=**/coverage.opencover.xml \
                                   /d:sonar.coverage.exclusions="**/**Test*.cs, **/*Example*/*, **/*Benchmark*/*" \
-                                  /d:sonar.branch.name="$APPVEYOR_REPO_BRANCH"
-     
-     else
-     
-         dotnet sonarscanner begin /d:sonar.host.url="https://sonarcloud.io" \
-                                   /o:"jason-c-daniels" \
-                                   /k:"jason-c-daniels_Jcd.BitManipulation" \
-                                   /d:sonar.token="$SONAR_TOKEN" \
-                                   /d:sonar.cs.opencover.reportsPaths=**/coverage.opencover.xml \
-                                   /d:sonar.coverage.exclusions="**/**Test*.cs, **/*Example*/*, **/*Benchmark*/*" \
-                                   /d:sonar.pullrequest.key="${APPVEYOR_PULL_REQUEST_NUMBER}"
-     
-     fi
-     
-     dotnet build --no-incremental -c Release
-     
-     # test
-     
-     dotnet test --collect:"XPlat Code Coverage;Format=opencover" --no-build  -c Release
-     
-     # sonar end
-     
-     dotnet sonarscanner end /d:sonar.token="$SONAR_TOKEN"
+                                  /d:sonar.pullrequest.key="${APPVEYOR_PULL_REQUEST_NUMBER}"
+    
+    fi
+    
+    dotnet build --no-incremental -c Release
+    
+    # test
+    
+    dotnet test --collect:"XPlat Code Coverage;Format=opencover" --no-build  -c Release
+    
+    # sonar end
+    
+    dotnet sonarscanner end /d:sonar.token="$SONAR_TOKEN"
 deploy:
 - provider: NuGet
   server: https://www.myget.org/F/jason-c-daniels/api/v2/package

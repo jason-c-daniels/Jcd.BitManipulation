@@ -6,3 +6,6 @@ riderModule.iml
 *.user
 *.suo
 .vs/
+
+
+.idea/.idea.Jcd.BitManipulation/.idea/sonarlint/*

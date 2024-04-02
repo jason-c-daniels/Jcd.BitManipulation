@@ -23,7 +23,7 @@
 /// Console.WriteLine($"0x{val:X08}"); // outputs: 0x0A0FEE00 
 /// 
 /// val = array.ToUInt32(Endian.Big, ByteAlignment.LeastSignificantByte);  
-/// Console.WriteLine($"0x{val:X08}"); // outputs: 0x00EE0F0A 
+/// Console.WriteLine($"0x{val:X08}"); // outputs: 0x000A0FEE 
 /// 
 /// </code>
 /// </example>

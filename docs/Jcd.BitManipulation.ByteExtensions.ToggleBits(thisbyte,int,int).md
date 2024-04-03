@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ByteExtensions](Jcd.BitManipulation.ByteExtensions.md 'Jcd.BitManipulation.ByteExtensions')
 
 ## ByteExtensions.ToggleBits(this byte, int, int) Method
@@ -7,7 +8,6 @@ Toggles the specified range of bits and returns the modified value.
 ```csharp
 public static byte ToggleBits(this byte value, int offset=0, int size=8);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteExtensions.ToggleBits(thisbyte,int,int).value'></a>
@@ -29,6 +29,5 @@ The offset of the bits to toggle.
 The number of bits to toggle.
 
 #### Returns
-
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 The modified value.

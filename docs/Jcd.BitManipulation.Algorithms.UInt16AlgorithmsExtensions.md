@@ -1,0 +1,24 @@
+#### [Jcd.BitManipulation](index.md 'index')
+### [Jcd.BitManipulation.Algorithms](Jcd.BitManipulation.Algorithms.md 'Jcd.BitManipulation.Algorithms')
+
+## UInt16AlgorithmsExtensions Class
+
+Provides bit counting and other niche bit manipulation facilities
+for [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16') instances.
+
+```csharp
+public static class UInt16AlgorithmsExtensions
+```
+
+Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; UInt16AlgorithmsExtensions
+
+| Methods | |
+| :--- | :--- |
+| [AreOnlyFirstAndLastBitsSet(this ushort)](Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.AreOnlyFirstAndLastBitsSet(thisushort).md 'Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.AreOnlyFirstAndLastBitsSet(this ushort)') | Determines if the only lowest bit and one other higher bit are set. |
+| [CountBitsSet(this ushort)](Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.CountBitsSet(thisushort).md 'Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.CountBitsSet(this ushort)') | Counts the "set" bits on the number. |
+| [CountLeadingZeros(this ushort)](Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.CountLeadingZeros(thisushort).md 'Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.CountLeadingZeros(this ushort)') | Computes the number of sequentially zeroed bits occupying the most significant bit positions. |
+| [CountTrailingZeros(this ushort)](Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.CountTrailingZeros(thisushort).md 'Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.CountTrailingZeros(this ushort)') | Computes the number of sequentially zeroed bits occupying the least significant bit positions. |
+| [GetHighestBitSet(this ushort)](Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.GetHighestBitSet(thisushort).md 'Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.GetHighestBitSet(this ushort)') | Calculate the index of the highest bit that's been set. |
+| [GetLowestBitSet(this ushort)](Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.GetLowestBitSet(thisushort).md 'Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.GetLowestBitSet(this ushort)') | Calculate the index of the lowest bit that's been set. |
+| [GetValueOrNextHigherPowerOfTwo(this ushort)](Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.GetValueOrNextHigherPowerOfTwo(thisushort).md 'Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.GetValueOrNextHigherPowerOfTwo(this ushort)') | For any given number return the number if it's a power of two, or return the next higher power of two capable of fitting in the data type. |
+| [IsPowerOfTwo(this ushort)](Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.IsPowerOfTwo(thisushort).md 'Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.IsPowerOfTwo(this ushort)') | Determines if the number is a power of two. |

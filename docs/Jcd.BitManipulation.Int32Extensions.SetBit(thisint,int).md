@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[Int32Extensions](Jcd.BitManipulation.Int32Extensions.md 'Jcd.BitManipulation.Int32Extensions')
 
 ## Int32Extensions.SetBit(this int, int) Method
@@ -7,7 +8,6 @@ Sets the bit at the specified to "on" and returns the modified value.
 ```csharp
 public static int SetBit(this int value, int offset);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int32Extensions.SetBit(thisint,int).value'></a>
@@ -23,6 +23,5 @@ The value to modify.
 The offset of the bit to set.
 
 #### Returns
-
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 The modified value.

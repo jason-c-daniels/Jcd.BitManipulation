@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ReadOnlySpanOfByteExtensions](Jcd.BitManipulation.ReadOnlySpanOfByteExtensions.md 'Jcd.BitManipulation.ReadOnlySpanOfByteExtensions')
 
 ## ReadOnlySpanOfByteExtensions.ToSByte(this ReadOnlySpan<byte>, Endian) Method
@@ -7,7 +8,6 @@ Converts bytes into a [System.SByte](https://docs.microsoft.com/en-us/dotnet/api
 ```csharp
 public static sbyte ToSByte(this System.ReadOnlySpan<byte> data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ReadOnlySpanOfByteExtensions.ToSByte(thisSystem.ReadOnlySpan_byte_,Jcd.BitManipulation.Endian).data'></a>
@@ -23,6 +23,5 @@ the bytes to convert.
 The endian for the bytes.
 
 #### Returns
-
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 The converted [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')

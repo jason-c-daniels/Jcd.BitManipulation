@@ -3,6 +3,7 @@
 using System;
 using System.Diagnostics;
 
+using Jcd.BitManipulation.Algorithms;
 using Jcd.Units;
 using Jcd.Units.UnitsOfMeasure;
 using Jcd.Units.UnitsOfMeasure.Data;
@@ -36,6 +37,53 @@ internal static class Program
 {
    public static void Main()
    {
+      var lz = ((byte) 0b11111111).CountLeadingZeros();
+      lz = ((byte) 0b01111111).CountLeadingZeros();
+      lz = ((byte) 0b00111111).CountLeadingZeros();
+      lz = ((byte) 0b00011111).CountLeadingZeros();
+      lz = ((byte) 0b00001111).CountLeadingZeros();
+      lz = ((byte) 0b00000111).CountLeadingZeros();
+      lz = ((byte) 0b00000011).CountLeadingZeros();
+      lz = ((byte) 0b00000001).CountLeadingZeros();
+      lz = ((byte) 0b00000000).CountLeadingZeros();
+      lz = ((ushort) (1 << 15)).CountLeadingZeros();
+      lz = ((uint) 1 << 31).CountLeadingZeros();
+      lz = ((uint) 1 << 16).CountLeadingZeros();
+      lz = ((uint) 1 << 15).CountLeadingZeros();
+      lz = ((uint) 1 << 8).CountLeadingZeros();
+      lz = ((uint) 1 << 7).CountLeadingZeros();
+      lz = ((uint) 1 << 4).CountLeadingZeros();
+      lz = ((uint) 1 << 3).CountLeadingZeros();
+      lz = ((uint) 1 << 2).CountLeadingZeros();
+      lz = ((uint) 1 << 1).CountLeadingZeros();
+      lz = ((uint) 1).CountLeadingZeros();
+
+      lz = ((ulong) 1 << 63).CountLeadingZeros();
+      lz = ((ushort) 1).CountLeadingZeros();
+      lz = ((ulong) 1).CountLeadingZeros();
+
+      var tz = ((byte) 0b11111111).CountTrailingZeros();
+      tz = ((byte) 0b11111110).CountTrailingZeros();
+      tz = ((byte) 0b11111100).CountTrailingZeros();
+      tz = ((byte) 0b11111000).CountTrailingZeros();
+      tz = ((byte) 0b11110000).CountTrailingZeros();
+      tz = ((byte) 0b11100000).CountTrailingZeros();
+      tz = ((byte) 0b11000000).CountTrailingZeros();
+      tz = ((byte) 0b10000000).CountTrailingZeros();
+      tz = ((byte) 0b00000000).CountTrailingZeros();
+      tz = ((ushort) (1 << 15)).CountTrailingZeros();
+      tz = ((uint) 1  << 31).CountTrailingZeros();
+      tz = ((ulong) 1 << 63).CountTrailingZeros();
+      tz = ((ushort) 1).CountTrailingZeros();
+      tz = ((uint) 1).CountTrailingZeros();
+      tz = ((ulong) 1).CountTrailingZeros();
+
+      var cbs = ((byte) 0b01010101).CountBitsSet();
+      var mbs = ((byte) 0b00000001).GetLowestBitSet();
+      mbs = ((byte) 0b10000000).GetLowestBitSet();
+      var hbs = ((byte) 0b00000001).GetHighestBitSet();
+      hbs = ((byte) 0b10000000).GetHighestBitSet();
+
       BitIndexer_Example();
       ByteIndexer_Example();
       ReadMe_BitManipulation_Byte_Example();

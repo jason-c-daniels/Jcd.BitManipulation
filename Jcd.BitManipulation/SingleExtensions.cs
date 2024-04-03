@@ -35,7 +35,7 @@ public static class SingleExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool AreAllBitsSet(this float data, BitMask bitmask)
    {
-      return data.ReadBits(0, bitmask) == bitmask;
+      return (data.BitwiseToUInt32() & bitmask) == bitmask;
    }
 
    /// <summary>
@@ -50,7 +50,7 @@ public static class SingleExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool AreAnyBitsSet(this float data, BitMask bitmask)
    {
-      return data.ReadBits(0, bitmask) != 0;
+      return (data.BitwiseToUInt32() & bitmask) != 0;
    }
 
    /// <summary>
@@ -65,7 +65,7 @@ public static class SingleExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool AreNoBitsSet(this float data, BitMask bitmask)
    {
-      return data.ReadBits(0, bitmask) == 0;
+      return (data.BitwiseToUInt32() & bitmask) == 0;
    }
 
    /// <summary>

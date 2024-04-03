@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[UInt16Extensions](Jcd.BitManipulation.UInt16Extensions.md 'Jcd.BitManipulation.UInt16Extensions')
 
 ## UInt16Extensions.StoreBits(this ushort, ushort, int, BitMask) Method
@@ -8,7 +9,6 @@ value.
 ```csharp
 public static ushort StoreBits(this ushort value, ushort source, int offset, Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt16Extensions.StoreBits(thisushort,ushort,int,Jcd.BitManipulation.BitMask).value'></a>
@@ -36,6 +36,5 @@ The destination offset of where to store the bits.
 The mask specifying the bits to store
 
 #### Returns
-
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 The modified value.

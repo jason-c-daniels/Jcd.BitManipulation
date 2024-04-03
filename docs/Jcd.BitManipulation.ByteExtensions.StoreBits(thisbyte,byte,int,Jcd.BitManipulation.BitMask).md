@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ByteExtensions](Jcd.BitManipulation.ByteExtensions.md 'Jcd.BitManipulation.ByteExtensions')
 
 ## ByteExtensions.StoreBits(this byte, byte, int, BitMask) Method
@@ -8,7 +9,6 @@ value.
 ```csharp
 public static byte StoreBits(this byte value, byte source, int offset, Jcd.BitManipulation.BitMask mask);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteExtensions.StoreBits(thisbyte,byte,int,Jcd.BitManipulation.BitMask).value'></a>
@@ -36,6 +36,5 @@ The destination offset of where to store the bits.
 The mask specifying the bits to store
 
 #### Returns
-
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 The modified value.

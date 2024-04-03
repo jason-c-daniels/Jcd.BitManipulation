@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[Int32Extensions](Jcd.BitManipulation.Int32Extensions.md 'Jcd.BitManipulation.Int32Extensions')
 
 ## Int32Extensions.StoreBit(this int, bool, int) Method
@@ -7,7 +8,6 @@ Store a single bit at the specified offset and returns the modified value.
 ```csharp
 public static int StoreBit(this int value, bool bit, int offset);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int32Extensions.StoreBit(thisint,bool,int).value'></a>
@@ -29,6 +29,5 @@ The value to store at the specified bit offset.
 The offset of the bit to store.
 
 #### Returns
-
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 The modified value.

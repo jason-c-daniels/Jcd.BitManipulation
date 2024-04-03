@@ -35,7 +35,7 @@ public static class ByteExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool AreAllBitsSet(this byte data, BitMask bitmask)
    {
-      return data.ReadBits(0, bitmask) == bitmask;
+      return (data & bitmask) == bitmask;
    }
 
    /// <summary>
@@ -50,7 +50,7 @@ public static class ByteExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool AreAnyBitsSet(this byte data, BitMask bitmask)
    {
-      return data.ReadBits(0, bitmask) != 0;
+      return (data & bitmask) != 0;
    }
 
    /// <summary>

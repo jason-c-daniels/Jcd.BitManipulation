@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
 
 ## LittleEndianByteIndexer.StoreBytes(byte[], int, int) Method
@@ -7,7 +8,6 @@ Stores a set of bytes starting at the specified byte location within the indexer
 ```csharp
 public Jcd.BitManipulation.LittleEndianByteIndexer StoreBytes(byte[] bytes, int offset, int size=-1);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexer.StoreBytes(byte[],int,int).bytes'></a>
@@ -29,6 +29,5 @@ The byte location to store the value.
 The number of bytes from the source to store. -1 means all bytes.
 
 #### Returns
-
 [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
 The modified value.

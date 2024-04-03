@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[Int16Extensions](Jcd.BitManipulation.Int16Extensions.md 'Jcd.BitManipulation.Int16Extensions')
 
 ## Int16Extensions.ReadBytes(this short, int, int, Endian) Method
@@ -7,7 +8,6 @@ Reads a set of bytes starting at the specified offset within the value.
 ```csharp
 public static byte[] ReadBytes(this short value, int offset, int size, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int16Extensions.ReadBytes(thisshort,int,int,Jcd.BitManipulation.Endian).value'></a>
@@ -35,6 +35,5 @@ The requested number of bytes to read.
 The endianness of the indexing for the byte read.
 
 #### Returns
-
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 A byte array of the value in the specified endian.

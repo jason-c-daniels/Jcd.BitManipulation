@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[SByteExtensions](Jcd.BitManipulation.SByteExtensions.md 'Jcd.BitManipulation.SByteExtensions')
 
 ## SByteExtensions.ReadBits(this sbyte, int, int) Method
@@ -7,7 +8,6 @@ Reads the bits specified and returns the result shifted to the right by the offs
 ```csharp
 public static sbyte ReadBits(this sbyte value, int offset, int size);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.SByteExtensions.ReadBits(thissbyte,int,int).value'></a>
@@ -29,6 +29,5 @@ The bit offset to start reading from.
 The total number of bits to extract.
 
 #### Returns
-
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 The value stored in the range of bits specified, right shifted by the offset..

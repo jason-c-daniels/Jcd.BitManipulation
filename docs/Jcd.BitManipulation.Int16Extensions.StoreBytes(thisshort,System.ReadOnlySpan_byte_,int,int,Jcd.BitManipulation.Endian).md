@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[Int16Extensions](Jcd.BitManipulation.Int16Extensions.md 'Jcd.BitManipulation.Int16Extensions')
 
 ## Int16Extensions.StoreBytes(this short, ReadOnlySpan<byte>, int, int, Endian) Method
@@ -7,7 +8,6 @@ Stores a set of bytes starting at the specified byte offset and returns the modi
 ```csharp
 public static short StoreBytes(this short value, System.ReadOnlySpan<byte> bytes, int offset, int size=-1, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int16Extensions.StoreBytes(thisshort,System.ReadOnlySpan_byte_,int,int,Jcd.BitManipulation.Endian).value'></a>
@@ -41,6 +41,5 @@ The number of bytes from the source, to store. -1 means all bytes.
 The endianness of the byte indexing within the value.
 
 #### Returns
-
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 The modified value.

@@ -1,0 +1,262 @@
+﻿#region
+
+using System.Collections.Generic;
+
+using Jcd.BitManipulation.Algorithms;
+
+using Xunit;
+
+#endregion
+
+namespace Jcd.BitManipulation.Tests.Algorithms;
+
+public class UInt32AlgorithmsExtensionsTests
+{
+   private const int BitSize = 32;
+
+   [Theory]
+   [MemberData(nameof(IsPowerOfTwoData))]
+   public void IsPowerOfTwo_Returns_Expected_Value(uint number, bool expected)
+   {
+      Assert.Equal(expected, number.IsPowerOfTwo());
+   }
+
+   [Theory]
+   [MemberData(nameof(CountSetBitsData))]
+   public void CountBitsSet_Returns_Expected_Value(uint number, int expected)
+   {
+      Assert.Equal(expected, number.CountBitsSet());
+   }
+
+   [Theory]
+   [MemberData(nameof(AreOnlyFirstAndLastBitsSetData))]
+   public void AreOnlyFirstAndLastBitsSet_Returns_Expected_Value(uint number, bool expected)
+   {
+      Assert.Equal(expected, number.AreOnlyFirstAndLastBitsSet());
+   }
+
+   [Theory]
+   [MemberData(nameof(GetValueOrNextHigherPowerOfTwoData))]
+   public void GetValueOrNextHigherPowerOfTwo_Returns_Expected_Value(uint number, uint expected)
+   {
+      Assert.Equal(expected, number.GetValueOrNextHigherPowerOfTwo());
+   }
+
+   [Theory]
+   [MemberData(nameof(GetHighestBitSetData))]
+   public void GetHighestBitSet_Returns_Expected_Value(uint number, int expected)
+   {
+      Assert.Equal(expected, number.GetHighestBitSet());
+   }
+
+   [Theory]
+   [MemberData(nameof(GetLowestBitSetData))]
+   public void GetLowestBitSet_Returns_Expected_Value(uint number, int expected)
+   {
+      Assert.Equal(expected, number.GetLowestBitSet());
+   }
+
+   [Theory]
+   [MemberData(nameof(CountLeadingZerosData))]
+   public void CountLeadingZeros_Returns_Expected_Value(uint number, int expected)
+   {
+      Assert.Equal(expected, number.CountLeadingZeros());
+   }
+
+   [Theory]
+   [MemberData(nameof(CountTrailingZerosData))]
+   public void CountTrailingZeros_Returns_Expected_Value(uint number, int expected)
+   {
+      Assert.Equal(expected, number.CountTrailingZeros());
+   }
+
+   #region DataMember Data
+
+   public static TheoryData<uint, bool> IsPowerOfTwoData
+   {
+      get
+      {
+         var result = new TheoryData<uint, bool>();
+
+         for (var i = 0; i < BitSize; i++)
+         {
+            result.Add(1u << i, true);
+
+            if (i > 0)
+            {
+               result.Add((1u << i) | 1, false);
+            }
+         }
+
+         return result;
+      }
+   }
+
+   public static TheoryData<uint, bool> AreOnlyFirstAndLastBitsSetData
+   {
+      get
+      {
+         var result = new TheoryData<uint, bool>();
+         HashSet<KeyValuePair<uint, bool>> hs = [];
+         ulong j = 0;
+
+         for (var i = uint.MinValue
+              ; j <= uint.MaxValue
+              ; i = i > 33
+                       ? (uint) ((i * 13.733333) + 1)
+                       : i + 1, j = j > 33
+                                       ? (ulong) ((j * 13.733333) + 1)
+                                       : j + 1)
+         {
+            var v = i.GetValueOrNextHigherPowerOfTwo() | 1;
+            var k = v                                  | 2;
+            Add(i, result);
+            Add(v, result);
+            Add(k, result);
+
+            void Add(uint x, TheoryData<uint, bool> r)
+            {
+               var kvp = new KeyValuePair<uint, bool>(x, (x.CountBitsSet() == 2 && ((x & 1) == 1)) || x == 1);
+
+               if (!hs.Contains(kvp))
+               {
+                  hs.Add(kvp);
+                  r.Add(kvp.Key, kvp.Value);
+               }
+            }
+         }
+
+         return result;
+      }
+   }
+
+   public static TheoryData<uint, int> CountSetBitsData
+   {
+      get
+      {
+         var result = new TheoryData<uint, int>();
+
+         result.Add(0b01000100010101, 5);
+
+         for (var i = 0; i < BitSize + 1; i++)
+         {
+            result.Add(BitMask.FromRange(0,           i), i);
+            result.Add(BitMask.FromRange(BitSize - i, i), i);
+         }
+
+         result.Add(0b1010100010000010, 5);
+
+         return result;
+      }
+   }
+
+   public static TheoryData<uint, uint> GetValueOrNextHigherPowerOfTwoData
+   {
+      get
+      {
+         var result = new TheoryData<uint, uint>();
+
+         const uint bit = 1;
+
+         for (var i = 0; i < BitSize - 1; i++)
+         {
+            var v = bit  << i;
+            var v1 = bit << (i + 1);
+            result.Add(v,     v);
+            result.Add(v + 1, v1);
+         }
+
+         return result;
+      }
+   }
+
+   public static TheoryData<uint, int> GetHighestBitSetData
+   {
+      get
+      {
+         var result = new TheoryData<uint, int>();
+
+         for (var i = 0; i < BitSize + 1; i++)
+         {
+            result.Add(BitMask.FromRange(0, i), i - 1);
+            result.Add(BitMask.FromRange(BitSize - i, i)
+                     , i == 0
+                          ? -1
+                          : BitSize - 1
+                      );
+         }
+
+         return result;
+      }
+   }
+
+   public static TheoryData<uint, int> GetLowestBitSetData
+   {
+      get
+      {
+         var result = new TheoryData<uint, int>();
+
+         for (var i = 0; i < BitSize + 1; i++)
+         {
+            result.Add(BitMask.FromRange(0, i)
+                     , i == 0
+                          ? -1
+                          : 0
+                      );
+            result.Add(BitMask.FromRange(BitSize - i, i)
+                     , i == 0
+                          ? -1
+                          : BitSize - i
+                      );
+         }
+
+         return result;
+      }
+   }
+
+   public static TheoryData<uint, int> CountLeadingZerosData
+   {
+      get
+      {
+         var result = new TheoryData<uint, int>();
+
+         for (var i = 0; i < BitSize + 1; i++)
+         {
+            result.Add(BitMask.FromRange(0, i), BitSize - i);
+            result.Add(BitMask.FromRange(BitSize - i, i)
+                     , i == 0
+                          ? BitSize
+                          : 0
+                      );
+         }
+
+         return result;
+      }
+   }
+
+   public static TheoryData<uint, int> CountTrailingZerosData
+   {
+      get
+      {
+         var result = new TheoryData<uint, int>();
+
+         for (var i = 0; i < BitSize + 1; i++)
+         {
+            result.Add(BitMask.FromRange(0, i)
+                     , i == 0
+                          ? BitSize
+                          : 0
+                      );
+            result.Add(BitMask.FromRange(BitSize - i, i)
+                     , i == 0
+                          ? BitSize
+                          : BitSize - i
+                      );
+         }
+
+         return result;
+      }
+   }
+
+   #endregion
+}

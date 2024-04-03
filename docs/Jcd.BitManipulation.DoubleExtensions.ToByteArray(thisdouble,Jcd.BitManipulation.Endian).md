@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[DoubleExtensions](Jcd.BitManipulation.DoubleExtensions.md 'Jcd.BitManipulation.DoubleExtensions')
 
 ## DoubleExtensions.ToByteArray(this double, Endian) Method
@@ -7,7 +8,6 @@ Converts a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Do
 ```csharp
 public static byte[] ToByteArray(this double data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.ToByteArray(thisdouble,Jcd.BitManipulation.Endian).data'></a>
@@ -23,6 +23,5 @@ The value to convert to a [System.Byte](https://docs.microsoft.com/en-us/dotnet/
 The order in which to store the bytes
 
 #### Returns
-
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 The value as an array in the requested byte order

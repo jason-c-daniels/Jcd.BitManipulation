@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[UInt32Extensions](Jcd.BitManipulation.UInt32Extensions.md 'Jcd.BitManipulation.UInt32Extensions')
 
 ## UInt32Extensions.StoreBits(this uint, uint, int, int) Method
@@ -7,7 +8,6 @@ Stores a range of bits to the value, from a source value, and returns the modifi
 ```csharp
 public static uint StoreBits(this uint value, uint source, int offset, int size);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt32Extensions.StoreBits(thisuint,uint,int,int).value'></a>
@@ -35,6 +35,5 @@ The bit location to store the value.
 The bit size of the value.
 
 #### Returns
-
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 The modified value.

@@ -1,0 +1,10 @@
+#### [Jcd.BitManipulation](index.md 'index')
+
+## Jcd.BitManipulation.Algorithms Namespace
+
+| Classes | |
+| :--- | :--- |
+| [ByteAlgorithmsExtensions](Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.md 'Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions') | Provides bit counting and other niche bit manipulation facilities for [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') instances. |
+| [UInt16AlgorithmsExtensions](Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.md 'Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions') | Provides bit counting and other niche bit manipulation facilities for [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16') instances. |
+| [UInt32AlgorithmsExtensions](Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.md 'Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions') | Provides bit counting and other niche bit manipulation facilities for [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32') instances. |
+| [UInt64AlgorithmsExtensions](Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.md 'Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions') | Provides bit counting and other niche bit manipulation facilities for [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') instances. |

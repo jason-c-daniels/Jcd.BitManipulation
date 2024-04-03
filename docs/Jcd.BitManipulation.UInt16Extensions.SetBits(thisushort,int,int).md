@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[UInt16Extensions](Jcd.BitManipulation.UInt16Extensions.md 'Jcd.BitManipulation.UInt16Extensions')
 
 ## UInt16Extensions.SetBits(this ushort, int, int) Method
@@ -7,7 +8,6 @@ Sets all specified bits to "on" and returns the modified value.
 ```csharp
 public static ushort SetBits(this ushort value, int offset=0, int size=16);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt16Extensions.SetBits(thisushort,int,int).value'></a>
@@ -29,6 +29,5 @@ The bit location to store the value.
 The number of bits to set on.
 
 #### Returns
-
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 The modified value.

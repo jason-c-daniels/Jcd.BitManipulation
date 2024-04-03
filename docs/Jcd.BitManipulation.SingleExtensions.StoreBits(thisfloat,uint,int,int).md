@@ -1,3 +1,4 @@
+#### [Jcd.BitManipulation](index.md 'index')
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[SingleExtensions](Jcd.BitManipulation.SingleExtensions.md 'Jcd.BitManipulation.SingleExtensions')
 
 ## SingleExtensions.StoreBits(this float, uint, int, int) Method
@@ -7,7 +8,6 @@ Stores a range of bits to the value, from a source value, and returns the modifi
 ```csharp
 public static float StoreBits(this float value, uint source, int offset, int size);
 ```
-
 #### Parameters
 
 <a name='Jcd.BitManipulation.SingleExtensions.StoreBits(thisfloat,uint,int,int).value'></a>
@@ -35,6 +35,5 @@ The bit location to store the value.
 The bit size of the value.
 
 #### Returns
-
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 The modified value.

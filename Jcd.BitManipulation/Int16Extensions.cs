@@ -178,7 +178,7 @@ public static class Int16Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool ReadBit(this short value, int offset)
    {
-      return value.ReadBits(offset, 1) > 0;
+      return ((ushort) value).ReadBit(offset);
    }
 
    /// <summary>

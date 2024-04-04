@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index.md 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[SingleExtensions](Jcd.BitManipulation.SingleExtensions.md 'Jcd.BitManipulation.SingleExtensions')
 
 ## SingleExtensions.SetBits(this float, int, int) Method
@@ -8,6 +9,7 @@ Sets all specified bits to "on" and returns the modified value.
 ```csharp
 public static float SetBits(this float value, int offset=0, int size=32);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SingleExtensions.SetBits(thisfloat,int,int).value'></a>
@@ -29,5 +31,6 @@ The bit location to store the value.
 The number of bits to set on.
 
 #### Returns
+
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 The modified value.

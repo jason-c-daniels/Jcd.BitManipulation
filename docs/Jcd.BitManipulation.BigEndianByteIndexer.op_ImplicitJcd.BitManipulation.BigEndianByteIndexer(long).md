@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index.md 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer')
 
 ## BigEndianByteIndexer.implicit operator BigEndianByteIndexer(long) Operator
@@ -8,6 +9,7 @@ Implicitly converts a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api
 ```csharp
 public static Jcd.BitManipulation.BigEndianByteIndexer implicit operator BigEndianByteIndexer(long data);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BigEndianByteIndexer.op_ImplicitJcd.BitManipulation.BigEndianByteIndexer(long).data'></a>
@@ -17,6 +19,7 @@ public static Jcd.BitManipulation.BigEndianByteIndexer implicit operator BigEndi
 The initial value for the bytes of data.
 
 #### Returns
+
 [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer')
 The newly created [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer').
 

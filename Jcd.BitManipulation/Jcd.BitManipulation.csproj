@@ -51,6 +51,10 @@
       <DocumentationFile>..\docs\Jcd.BitManipulation.xml</DocumentationFile>
    </PropertyGroup>
 
+   <PropertyGroup Condition=" '$(Configuration)' == 'Release - Net462' ">
+      <Optimize>true</Optimize>
+   </PropertyGroup>
+
    <ItemGroup>
       <None Remove="icon\Jason.C.Daniels.jpg"/>
       <Content Include="icon\Jason.C.Daniels.jpg" Pack="true" PackagePath="\">

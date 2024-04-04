@@ -193,7 +193,7 @@ public static class Int32Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool ReadBit(this int value, int offset)
    {
-      return value.ReadBits(offset, 1) != 0;
+      return ((uint) value).ReadBit(offset);
    }
 
    /// <summary>

@@ -174,7 +174,7 @@ public static class SByteExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool ReadBit(this sbyte value, int offset)
    {
-      return value.ReadBits(offset, 1) > 0;
+      return ((byte) value).ReadBit(offset);
    }
 
    /// <summary>

@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index.md 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[UInt32Extensions](Jcd.BitManipulation.UInt32Extensions.md 'Jcd.BitManipulation.UInt32Extensions')
 
 ## UInt32Extensions.StoreBytes(this uint, byte[], int, int, Endian) Method
@@ -8,6 +9,7 @@ Stores a set of bytes starting at the specified byte offset and returns the modi
 ```csharp
 public static uint StoreBytes(this uint value, byte[] bytes, int offset, int size=-1, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt32Extensions.StoreBytes(thisuint,byte[],int,int,Jcd.BitManipulation.Endian).value'></a>
@@ -41,5 +43,6 @@ The number of bytes from the source, to store. -1 means all bytes.
 The endianness of the byte indexing within the value.
 
 #### Returns
+
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 The modified value.

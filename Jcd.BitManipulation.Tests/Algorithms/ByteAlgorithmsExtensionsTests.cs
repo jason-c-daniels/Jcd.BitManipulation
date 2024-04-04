@@ -12,6 +12,8 @@ public class ByteAlgorithmsExtensionsTests
 {
    private const int BitSize = 8;
 
+   private const int RotationBase = BitSize - 5;
+
    [Theory]
    [MemberData(nameof(IsPowerOfTwoData))]
    public void IsPowerOfTwo_Returns_Expected_Value(byte number, bool expected)
@@ -66,6 +68,32 @@ public class ByteAlgorithmsExtensionsTests
    public void CountTrailingZeros_Returns_Expected_Value(byte number, int expected)
    {
       Assert.Equal(expected, number.CountTrailingZeros());
+   }
+
+   [Theory]
+   [InlineData(0b00001111, RotationBase + 0, 0b01111000)]
+   [InlineData(0b00001111, RotationBase + 1, 0b11110000)]
+   [InlineData(0b00001111, RotationBase + 2, 0b11100001)]
+   [InlineData(0b00001111, RotationBase + 3, 0b11000011)]
+   [InlineData(0b00001111, RotationBase + 4, 0b10000111)]
+   [InlineData(0b00001111, RotationBase + 5, 0b00001111)]
+   [InlineData(0b00001111, RotationBase + 6, 0b00011110)]
+   public void RotateLeft_Returns_Expected_Value(byte value, int rot, byte expected)
+   {
+      Assert.Equal(expected, value.RotateLeft(rot));
+   }
+
+   [Theory]
+   [InlineData(0b11110000, RotationBase + 0, 0b00011110)]
+   [InlineData(0b11110000, RotationBase + 1, 0b00001111)]
+   [InlineData(0b11110000, RotationBase + 2, 0b10000111)]
+   [InlineData(0b11110000, RotationBase + 3, 0b11000011)]
+   [InlineData(0b11110000, RotationBase + 4, 0b11100001)]
+   [InlineData(0b11110000, RotationBase + 5, 0b11110000)]
+   [InlineData(0b11110000, RotationBase + 6, 0b01111000)]
+   public void RotateRight_Returns_Expected_Value(byte value, int rot, byte expected)
+   {
+      Assert.Equal(expected, value.RotateRight(rot));
    }
 
    #region DataMember Data

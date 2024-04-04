@@ -180,7 +180,7 @@ public static class Int64Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool ReadBit(this long value, int offset)
    {
-      return value.ReadBits(offset, 1) > 0;
+      return ((ulong) value).ReadBit(offset);
    }
 
    /// <summary>

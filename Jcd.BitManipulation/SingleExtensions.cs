@@ -201,7 +201,7 @@ public static class SingleExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool ReadBit(this float value, int offset)
    {
-      return value.ReadBits(offset, 1) > 0;
+      return value.BitwiseToUInt32().ReadBit(offset);
    }
 
    /// <summary>

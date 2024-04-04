@@ -13,6 +13,7 @@ namespace Jcd.BitManipulation.Algorithms;
 public static class UInt64AlgorithmsExtensions
 {
    private const int BitSize = BitSizeConstants.BitsPerUInt64;
+   private const int BitSizeMinusOne = BitSize - 1;
 
    private static readonly BitMask LowestBit = 0b00000000_00000000_00000000_00000000_00000000_00000000_00000000_00000001;
    private static readonly BitMask Lower2Bits = 0b00000000_00000000_00000000_00000000_00000000_00000000_00000000_00000011;
@@ -38,34 +39,22 @@ public static class UInt64AlgorithmsExtensions
    /// </summary>
    /// <param name="number">the number to evaluate</param>
    /// <returns>true if number == 2^n; where n is an integer.</returns>
-   /// [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool IsPowerOfTwo(this ulong number)
    {
       return number != 0 && number.BitwiseAndWithSelfMinusOne() == 0;
    }
 
    /// <summary>
-   /// Counts the "set" bits on the number.
+   /// Counts the bits that are set to 1 in a number.
    /// </summary>
-   /// <param name="number">The number to evaluate.</param>
-   /// <returns>The count of the "set" bits.</returns>
+   /// <param name="number">The number</param>
+   /// <returns>The count of the bits set to 1</returns>
+   /// <remarks>This is a reader-friendly alias for <see cref="PopCount" /></remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int CountBitsSet(this ulong number)
    {
-      if (number == 0)
-      {
-         return 0;
-      }
-
-      var count = 0;
-
-      while (number != 0)
-      {
-         number = number.BitwiseAndWithSelfMinusOne();
-         count++;
-      }
-
-      return count;
+      return number.PopCount();
    }
 
    /// <summary>
@@ -103,16 +92,14 @@ public static class UInt64AlgorithmsExtensions
          return number;
       }
 
-      var highestBitSet = number.GetHighestBitSet();
-
-      return (1ul << (highestBitSet + 1));
+      return 1ul << (number.GetHighestBitSet() + 1);
    }
 
    /// <summary>
    /// Calculate the index of the highest bit that's been set.
    /// </summary>
    /// <param name="number">the number to evaluate</param>
-   /// <returns>The index of the highest bit that's been set.</returns>
+   /// <returns>The index of the highest bit that's been set; or -1 if none were set.</returns>
    /// [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int GetHighestBitSet(this ulong number)
    {
@@ -128,8 +115,8 @@ public static class UInt64AlgorithmsExtensions
    /// Calculate the index of the lowest bit that's been set.
    /// </summary>
    /// <param name="number">the number to evaluate</param>
-   /// <returns>The index of the lowest bit that's been set.</returns>
-   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   /// <returns>The index of the lowest bit that's been set; or -1 if none were set.</returns>
+   /// [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int GetLowestBitSet(this ulong number)
    {
       if (number == 0)
@@ -246,5 +233,75 @@ public static class UInt64AlgorithmsExtensions
       }
 
       return count;
+   }
+
+   /// <summary>
+   /// Performs a bitwise left rotation on a number.
+   /// </summary>
+   /// <param name="number">The number to rotate</param>
+   /// <param name="count">the number of bits to rotate</param>
+   /// <returns>The rotated value.</returns>
+   /// <example>
+   /// Examples
+   /// <code>
+   /// ulong b = 0b00001111;
+   /// var b2 = b.RotateLeft(3); // b2 = 0b01111000
+   /// var b3 = b.RotateLeft(4); // b3 = 0b11110000
+   /// var b4 = b.RotateLeft(5); // b4 = 0b11100001
+   /// var b5 = b.RotateLeft(6); // b5 = 0b11000011
+   /// var b6 = b.RotateLeft(7); // b6 = 0b10000111
+   /// var b7 = b.RotateLeft(8); // b7 = 0b00001111
+   /// </code>
+   /// </example>
+   public static ulong RotateLeft(this ulong number, int count)
+   {
+      return (number << (count & BitSizeMinusOne)) | (number >> (BitSize - (count & BitSizeMinusOne)));
+   }
+
+   /// <summary>
+   /// Performs a bitwise right rotation on a number.
+   /// </summary>
+   /// <param name="number">The number to rotate</param>
+   /// <param name="count">the number of bits to rotate</param>
+   /// <returns>The rotated value.</returns>
+   /// <example>
+   /// Examples
+   /// <code>
+   /// ulong b = 0b11110000;
+   /// var b2 = b.RotateRight(3); // b2 = 0b00011110
+   /// var b3 = b.RotateRight(4); // b3 = 0b00001111
+   /// var b4 = b.RotateRight(5); // b4 = 0b10000111
+   /// var b5 = b.RotateRight(6); // b5 = 0b11000011
+   /// var b6 = b.RotateRight(7); // b6 = 0b11100001
+   /// var b7 = b.RotateRight(8); // b7 = 0b11110000
+   /// </code>
+   /// </example>
+   public static ulong RotateRight(this ulong number, int count)
+   {
+      return (number >> (count & BitSizeMinusOne)) | (number << (BitSize - (count & BitSizeMinusOne)));
+   }
+
+   /// <summary>
+   /// Counts the bits that are set to 1 in a number
+   /// </summary>
+   /// <param name="number">The number</param>
+   /// <returns>The count of the bits set to 1</returns>
+   public static int PopCount(this ulong number)
+   {
+      // algorithm adapted from: https://graphics.stanford.edu/%7Eseander/bithacks.html#CountBitsSetParallel
+      // constants renamed based on descriptions provided in: https://stackoverflow.com/questions/109023/count-the-number-of-set-bits-in-a-32-bit-integer
+      const int bitsPerByte = BitSizeConstants.BitsPerByte;
+      const ulong maxValue = ulong.MaxValue;
+      const ulong pairs = maxValue                 / 3;
+      const ulong quads = maxValue  / 15           * 3;
+      const ulong eights = maxValue / 255          * 15;
+      const ulong horizontalSum = maxValue         / 255;
+      const int topByteShift = (sizeof(ulong) - 1) * bitsPerByte;
+
+      number -= (number >> 1) & pairs;
+      number = (number & quads) + ((number >> 2) & quads);
+      number = (number + (number           >> 4)) & eights;
+
+      return (int) ((number * horizontalSum) >> topByteShift);
    }
 }

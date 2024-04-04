@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index.md 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[UInt64Extensions](Jcd.BitManipulation.UInt64Extensions.md 'Jcd.BitManipulation.UInt64Extensions')
 
 ## UInt64Extensions.SetBits(this ulong, int, int) Method
@@ -8,6 +9,7 @@ Sets all specified bits to "on" and returns the modified value.
 ```csharp
 public static ulong SetBits(this ulong value, int offset=0, int size=64);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt64Extensions.SetBits(thisulong,int,int).value'></a>
@@ -29,5 +31,6 @@ The bit location to store the value.
 The number of bits to set on.
 
 #### Returns
+
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 The modified value.

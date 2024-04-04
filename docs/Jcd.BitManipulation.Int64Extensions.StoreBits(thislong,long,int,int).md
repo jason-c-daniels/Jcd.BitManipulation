@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index.md 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[Int64Extensions](Jcd.BitManipulation.Int64Extensions.md 'Jcd.BitManipulation.Int64Extensions')
 
 ## Int64Extensions.StoreBits(this long, long, int, int) Method
@@ -8,6 +9,7 @@ Stores a range of bits to the value, from a source value, and returns the modifi
 ```csharp
 public static long StoreBits(this long value, long source, int offset, int size);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int64Extensions.StoreBits(thislong,long,int,int).value'></a>
@@ -35,5 +37,6 @@ The bit location to store the value.
 The bit size of the value.
 
 #### Returns
+
 [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 The modified value.

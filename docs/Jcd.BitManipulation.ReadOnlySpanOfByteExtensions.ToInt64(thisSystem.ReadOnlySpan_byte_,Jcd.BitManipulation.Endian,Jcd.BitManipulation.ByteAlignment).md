@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index.md 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ReadOnlySpanOfByteExtensions](Jcd.BitManipulation.ReadOnlySpanOfByteExtensions.md 'Jcd.BitManipulation.ReadOnlySpanOfByteExtensions')
 
 ## ReadOnlySpanOfByteExtensions.ToInt64(this ReadOnlySpan<byte>, Endian, ByteAlignment) Method
@@ -8,6 +9,7 @@ Converts bytes into a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api
 ```csharp
 public static long ToInt64(this System.ReadOnlySpan<byte> data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little, Jcd.BitManipulation.ByteAlignment align=Jcd.BitManipulation.ByteAlignment.InferredFromEndian);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.ReadOnlySpanOfByteExtensions.ToInt64(thisSystem.ReadOnlySpan_byte_,Jcd.BitManipulation.Endian,Jcd.BitManipulation.ByteAlignment).data'></a>
@@ -29,5 +31,6 @@ The endian for the bytes.
 Indicates how to align partial data
 
 #### Returns
+
 [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 The converted [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')

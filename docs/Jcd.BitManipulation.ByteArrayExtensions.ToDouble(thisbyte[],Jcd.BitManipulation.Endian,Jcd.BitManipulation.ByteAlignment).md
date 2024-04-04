@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index.md 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ByteArrayExtensions](Jcd.BitManipulation.ByteArrayExtensions.md 'Jcd.BitManipulation.ByteArrayExtensions')
 
 ## ByteArrayExtensions.ToDouble(this byte[], Endian, ByteAlignment) Method
@@ -8,6 +9,7 @@ Converts an array of bytes into a [System.Double](https://docs.microsoft.com/en-
 ```csharp
 public static double ToDouble(this byte[] data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little, Jcd.BitManipulation.ByteAlignment align=Jcd.BitManipulation.ByteAlignment.InferredFromEndian);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteArrayExtensions.ToDouble(thisbyte[],Jcd.BitManipulation.Endian,Jcd.BitManipulation.ByteAlignment).data'></a>
@@ -29,6 +31,7 @@ A setting indicating the endianness of the source data. The default is Endian.Li
 Indicates how to align partial data
 
 #### Returns
+
 [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 The converted [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 

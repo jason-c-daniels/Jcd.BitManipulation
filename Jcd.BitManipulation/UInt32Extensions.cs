@@ -180,7 +180,7 @@ public static class UInt32Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool ReadBit(this uint value, int offset)
    {
-      return value.ReadBits(offset, 1) > 0;
+      return (value & (1 << offset)) != 0;
    }
 
    /// <summary>

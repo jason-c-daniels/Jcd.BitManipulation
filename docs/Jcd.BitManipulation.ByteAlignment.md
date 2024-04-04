@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index.md 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation')
 
 ## ByteAlignment Enum
@@ -8,6 +9,7 @@ Indicates how to align partially filled data when converting from collections of
 ```csharp
 public enum ByteAlignment
 ```
+
 ### Fields
 
 <a name='Jcd.BitManipulation.ByteAlignment.InferredFromEndian'></a>
@@ -29,9 +31,12 @@ Align the decoded value to the least significant byte
 Align the decoded value to the most significant byte
 
 ### Example
+
 Convert a 3 byte array to a UInt32
 
 ```csharp
+using Jcd.BitManipulation;
+
 byte[] array = [0x0A, 0x0F, 0xEE];
 
 var val = array.ToUInt32(); // this is the same as: var ui1 = array.ToUInt32(Endian.Little, ByteAlignment.InferredFromEndian);
@@ -48,6 +53,7 @@ Console.WriteLine($"0x{val:X08}"); // outputs: 0x000A0FEE
 ```
 
 ### Remarks
+
 This only applies when trying to convert a collection of bytes to a numeric type that's
 larger in bytes than the length of the collection. If the source collection is larger,
 the excess bytes are discarded.

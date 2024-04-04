@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index.md 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[SByteExtensions](Jcd.BitManipulation.SByteExtensions.md 'Jcd.BitManipulation.SByteExtensions')
 
 ## SByteExtensions.ReadBit(this sbyte, int) Method
@@ -8,6 +9,7 @@ Reads a single bit from the specified position.
 ```csharp
 public static bool ReadBit(this sbyte value, int offset);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SByteExtensions.ReadBit(thissbyte,int).value'></a>
@@ -23,5 +25,6 @@ The source of the bits to read.
 The offset of the bit to read.
 
 #### Returns
+
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 The bit at the specified position returned as a [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean').

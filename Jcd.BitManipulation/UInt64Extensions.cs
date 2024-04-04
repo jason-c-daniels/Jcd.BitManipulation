@@ -171,7 +171,7 @@ public static class UInt64Extensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool ReadBit(this ulong value, int offset)
    {
-      return value.ReadBits(offset, 1) > 0;
+      return (value & (1ul << offset)) != 0;
    }
 
    /// <summary>

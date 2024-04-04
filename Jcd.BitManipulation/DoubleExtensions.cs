@@ -186,7 +186,7 @@ public static class DoubleExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool ReadBit(this double value, int offset)
    {
-      return value.ReadBits(offset, 1) > 0;
+      return value.BitwiseToUInt64().ReadBit(offset);
    }
 
    /// <summary>

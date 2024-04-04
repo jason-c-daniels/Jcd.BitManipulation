@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index.md 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[DoubleExtensions](Jcd.BitManipulation.DoubleExtensions.md 'Jcd.BitManipulation.DoubleExtensions')
 
 ## DoubleExtensions.ToggleBits(this double, int, int) Method
@@ -8,6 +9,7 @@ Toggles the specified range of bits and returns the modified value.
 ```csharp
 public static double ToggleBits(this double value, int offset=0, int size=64);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.ToggleBits(thisdouble,int,int).value'></a>
@@ -29,5 +31,6 @@ The offset of the bits to toggle.
 The number of bits to toggle.
 
 #### Returns
+
 [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 The modified value.

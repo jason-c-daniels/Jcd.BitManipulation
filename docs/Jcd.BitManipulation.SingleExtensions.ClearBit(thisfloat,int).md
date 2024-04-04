@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index.md 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[SingleExtensions](Jcd.BitManipulation.SingleExtensions.md 'Jcd.BitManipulation.SingleExtensions')
 
 ## SingleExtensions.ClearBit(this float, int) Method
@@ -8,6 +9,7 @@ Sets the specified bit to "off" and returns the modified value.
 ```csharp
 public static float ClearBit(this float value, int offset);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.SingleExtensions.ClearBit(thisfloat,int).value'></a>
@@ -23,5 +25,6 @@ The value to modify.
 The bit position to set to false/0.
 
 #### Returns
+
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 The modified value.

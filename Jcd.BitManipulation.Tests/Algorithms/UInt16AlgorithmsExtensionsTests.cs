@@ -1,5 +1,7 @@
 ﻿#region
 
+using System.Collections.Generic;
+
 using Jcd.BitManipulation.Algorithms;
 
 using Xunit;
@@ -12,6 +14,8 @@ public class UInt16AlgorithmsExtensionsTests
 {
    private const int BitSize = 16;
 
+   private const int RotationBase = BitSize - 5;
+
    [Theory]
    [MemberData(nameof(IsPowerOfTwoData))]
    public void IsPowerOfTwo_Returns_Expected_Value(ushort number, bool expected)
@@ -23,8 +27,7 @@ public class UInt16AlgorithmsExtensionsTests
    [MemberData(nameof(CountSetBitsData))]
    public void CountBitsSet_Returns_Expected_Value(ushort number, int expected)
    {
-      var x = number.CountBitsSet();
-      Assert.Equal(expected, x);
+      Assert.Equal(expected, number.CountBitsSet());
    }
 
    [Theory]
@@ -56,6 +59,48 @@ public class UInt16AlgorithmsExtensionsTests
    }
 
    [Theory]
+   [InlineData(0,               true)]
+   [InlineData(1,               false)]
+   [InlineData(2,               true)]
+   [InlineData(3,               false)]
+   [InlineData(4,               true)]
+   [InlineData(ushort.MaxValue, false)]
+   public void IsEven_Returns_Expected_Value(ushort value, bool expected)
+   {
+      Assert.Equal(expected, value.IsEven());
+   }
+
+   [Theory]
+   [InlineData(0,               false)]
+   [InlineData(1,               true)]
+   [InlineData(2,               false)]
+   [InlineData(3,               true)]
+   [InlineData(4,               false)]
+   [InlineData(ushort.MaxValue, true)]
+   public void IsOdd_Returns_Expected_Value(ushort value, bool expected)
+   {
+      Assert.Equal(expected, value.IsOdd());
+   }
+
+   [Theory]
+   [InlineData(0x00, true)]
+   [InlineData(0x01, true)]
+   [InlineData(0xFF, true)]
+   public void IsPositive_Returns_Expected_Value(ushort value, bool expected)
+   {
+      Assert.Equal(expected, value.IsPositive());
+   }
+
+   [Theory]
+   [InlineData(0,               false)]
+   [InlineData(1,               false)]
+   [InlineData(ushort.MaxValue, false)]
+   public void IsNegative_Returns_Expected_Value(ushort value, bool expected)
+   {
+      Assert.Equal(expected, value.IsNegative());
+   }
+
+   [Theory]
    [MemberData(nameof(CountLeadingZerosData))]
    public void CountLeadingZeros_Returns_Expected_Value(ushort number, int expected)
    {
@@ -67,6 +112,32 @@ public class UInt16AlgorithmsExtensionsTests
    public void CountTrailingZeros_Returns_Expected_Value(ushort number, int expected)
    {
       Assert.Equal(expected, number.CountTrailingZeros());
+   }
+
+   [Theory]
+   [InlineData(0b00000000_00001111, RotationBase + 0, 0b01111000_00000000)]
+   [InlineData(0b00000000_00001111, RotationBase + 1, 0b11110000_00000000)]
+   [InlineData(0b00000000_00001111, RotationBase + 2, 0b11100000_00000001)]
+   [InlineData(0b00000000_00001111, RotationBase + 3, 0b11000000_00000011)]
+   [InlineData(0b00000000_00001111, RotationBase + 4, 0b10000000_00000111)]
+   [InlineData(0b00000000_00001111, RotationBase + 5, 0b00000000_00001111)]
+   [InlineData(0b00000000_00001111, RotationBase + 6, 0b00000000_00011110)]
+   public void RotateLeft_Returns_Expected_Value(ushort value, int rot, ushort expected)
+   {
+      Assert.Equal(expected, value.RotateLeft(rot));
+   }
+
+   [Theory]
+   [InlineData(0b11110000_00000000, RotationBase + 0, 0b00000000_00011110)]
+   [InlineData(0b11110000_00000000, RotationBase + 1, 0b00000000_00001111)]
+   [InlineData(0b11110000_00000000, RotationBase + 2, 0b10000000_00000111)]
+   [InlineData(0b11110000_00000000, RotationBase + 3, 0b11000000_00000011)]
+   [InlineData(0b11110000_00000000, RotationBase + 4, 0b11100000_00000001)]
+   [InlineData(0b11110000_00000000, RotationBase + 5, 0b11110000_00000000)]
+   [InlineData(0b11110000_00000000, RotationBase + 6, 0b01111000_00000000)]
+   public void RotateRight_Returns_Expected_Value(ushort value, int rot, ushort expected)
+   {
+      Assert.Equal(expected, value.RotateRight(rot));
    }
 
    #region DataMember Data
@@ -98,16 +169,33 @@ public class UInt16AlgorithmsExtensionsTests
       get
       {
          var result = new TheoryData<ushort, bool>();
+         HashSet<KeyValuePair<ushort, bool>> hs = [];
+         uint j = 0;
 
-         ulong j = 0;
-
-         for (var i = ushort.MinValue; j <= ushort.MaxValue; i = (ushort) ((i * 1.05) + 1), j = (ulong) ((j * 1.05) + 1))
+         for (var i = ushort.MinValue
+              ; j <= ushort.MaxValue
+              ; i = (ushort) (i > 33
+                                 ? (ushort) ((i * 1.01733333) + 1)
+                                 : i + 1), j = j > 33
+                                                  ? (uint) ((j * 1.01733333) + 1)
+                                                  : j + 1)
          {
             var v = (ushort) (i.GetValueOrNextHigherPowerOfTwo() | 1);
             var k = (ushort) (v                                  | 2);
-            result.Add(i, (i.CountBitsSet() == 2 && ((i & 1) == 1)) || i == 1);
-            result.Add(v, (v.CountBitsSet() == 2 && ((v & 1) == 1)) || v == 1);
-            result.Add(k, (k.CountBitsSet() == 2 && ((k & 1) == 1)) || k == 1);
+            Add(i, result);
+            Add(v, result);
+            Add(k, result);
+
+            void Add(ushort x, TheoryData<ushort, bool> r)
+            {
+               var kvp = new KeyValuePair<ushort, bool>(x, (x.CountBitsSet() == 2 && ((x & 1) == 1)) || x == 1);
+
+               if (!hs.Contains(kvp))
+               {
+                  hs.Add(kvp);
+                  r.Add(kvp.Key, kvp.Value);
+               }
+            }
          }
 
          return result;
@@ -120,7 +208,7 @@ public class UInt16AlgorithmsExtensionsTests
       {
          var result = new TheoryData<ushort, int>();
 
-         result.Add(0b01000100010101, 5);
+         result.Add(0b01010101, 4);
 
          for (ushort i = 0; i < BitSize + 1; i++)
          {
@@ -128,7 +216,7 @@ public class UInt16AlgorithmsExtensionsTests
             result.Add(BitMask.FromRange(BitSize - i, i), i);
          }
 
-         result.Add(0b1010100010000010, 5);
+         result.Add(0b10101010, 4);
 
          return result;
       }
@@ -240,34 +328,6 @@ public class UInt16AlgorithmsExtensionsTests
 
          return result;
       }
-   }
-
-   private const int RotationBase = BitSize - 5;
-
-   [Theory]
-   [InlineData(0b00000000_00001111, RotationBase + 6, 0b0000000000011110)]
-   [InlineData(0b00000000_00001111, RotationBase + 5, 0b0000000000001111)]
-   [InlineData(0b00000000_00001111, RotationBase + 4, 0b1000000000000111)]
-   [InlineData(0b00000000_00001111, RotationBase + 3, 0b1100000000000011)]
-   [InlineData(0b00000000_00001111, RotationBase + 2, 0b1110000000000001)]
-   [InlineData(0b00000000_00001111, RotationBase + 1, 0b1111000000000000)]
-   [InlineData(0b00000000_00001111, RotationBase + 0, 0b0111100000000000)]
-   public void RotateLeft_Returns_Expected_Value(ushort value, int rot, ushort expected)
-   {
-      Assert.Equal(expected, value.RotateLeft(rot));
-   }
-
-   [Theory]
-   [InlineData(0b1111000000000000, RotationBase + 0, 0b0000000000011110)]
-   [InlineData(0b1111000000000000, RotationBase + 1, 0b0000000000001111)]
-   [InlineData(0b1111000000000000, RotationBase + 2, 0b1000000000000111)]
-   [InlineData(0b1111000000000000, RotationBase + 3, 0b1100000000000011)]
-   [InlineData(0b1111000000000000, RotationBase + 4, 0b1110000000000001)]
-   [InlineData(0b1111000000000000, RotationBase + 5, 0b1111000000000000)]
-   [InlineData(0b1111000000000000, RotationBase + 6, 0b0111100000000000)]
-   public void RotateRight_Returns_Expected_Value(ushort value, int rot, ushort expected)
-   {
-      Assert.Equal(expected, value.RotateRight(rot));
    }
 
    #endregion

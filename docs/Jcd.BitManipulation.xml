@@ -125,6 +125,668 @@
          <param name="number">The number</param>
          <returns>The count of the bits set to 1</returns>
       </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.IsOdd(System.Byte)">
+         <summary>
+            Determines if the number is odd.
+         </summary>
+         <param name="number"></param>
+         <returns>
+            <c>true</c>
+            if the number is odd (e.g. 1,3...etc.)
+         </returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.IsEven(System.Byte)">
+         <summary>
+            Determines if the number is odd.
+         </summary>
+         <param name="number"></param>
+         <returns>
+            <c>true</c>
+            if the number is even (e.g. 2,4...etc.)
+         </returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.IsNegative(System.Byte)">
+         <summary>
+            Indicates if the number is negative. (Always false for unsigned numbers)
+         </summary>
+         <param name="number">The number to evaluate.</param>
+         <returns>true if &lt; 0.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.IsPositive(System.Byte)">
+         <summary>
+            Indicates if the number is zero or positive. (Always true for unsigned numbers)
+         </summary>
+         <param name="number">The number to evaluate.</param>
+         <returns>true if &gt;= 0.</returns>
+      </member>
+      <member name="T:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions">
+         <summary>
+            Provides bit counting and other niche bit manipulation facilities
+            for
+            <see cref="T:System.Int16"/>
+            instances.
+         </summary>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.IsPowerOfTwo(System.Int16)">
+         <summary>
+            Determines if the number is a power of two.
+         </summary>
+         <param name="number">the number to evaluate</param>
+         <returns>true if number == 2^n; where n is an integer.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.CountBitsSet(System.Int16)">
+         <summary>
+            Counts the bits that are set to 1 in a number.
+         </summary>
+         <param name="number">The number</param>
+         <returns>The count of the bits set to 1</returns>
+         <remarks>This is a reader-friendly alias for
+            <see cref="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.PopCount(System.Int16)"/>
+         </remarks>
+      </member>
+      <member
+         name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.AreOnlyFirstAndLastBitsSet(System.Int16)">
+         <summary>
+            Determines if the only lowest bit and one other higher bit are set.
+         </summary>
+         <param name="number">the number to evaluate</param>
+         <returns>true if the bitwise representation follows this pattern: 0b10..01. with any number of intervening
+            zeros.
+         </returns>
+      </member>
+      <member
+         name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.GetValueOrNextHigherPowerOfTwo(System.Int16)">
+         <summary>
+            For any given number return the number if it's a power of two,
+            or return the next higher power of two capable of fitting in the
+            data type.
+         </summary>
+         <param name="number">the number to evaluate</param>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.GetHighestBitSet(System.Int16)">
+         <summary>
+            Calculate the index of the highest bit that's been set.
+         </summary>
+         <param name="number">the number to evaluate</param>
+         <returns>The index of the highest bit that's been set; or -1 if none were set.</returns>
+         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.GetLowestBitSet(System.Int16)">
+         <summary>
+            Calculate the index of the lowest bit that's been set.
+         </summary>
+         <param name="number">the number to evaluate</param>
+         <returns>The index of the lowest bit that's been set; or -1 if none were set.</returns>
+         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.CountLeadingZeros(System.Int16)">
+         <summary>
+            Computes the number of sequentially zeroed bits occupying the
+            most significant bit positions.
+         </summary>
+         <param name="number">the number to evaluate</param>
+         <returns>The count of sequentially zeroed bits occupying the most significant bit positions.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.CountTrailingZeros(System.Int16)">
+         <summary>
+            Computes the number of sequentially zeroed bits occupying the
+            least significant bit positions.
+         </summary>
+         <param name="number">the number to evaluate</param>
+         <returns>The count of sequentially zeroed bits occupying the least significant bit positions.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.RotateLeft(System.Int16,System.Int32)">
+         <summary>
+            Performs a bitwise left rotation on a number.
+         </summary>
+         <param name="number">The number to rotate</param>
+         <param name="count">the number of bits to rotate</param>
+         <returns>The rotated value.</returns>
+         <example>
+            Examples
+            <code>
+               short b = 0b00001111;
+               var b2 = b.RotateLeft(3); // b2 = 0b01111000
+               var b3 = b.RotateLeft(4); // b3 = 0b11110000
+               var b4 = b.RotateLeft(5); // b4 = 0b11100001
+               var b5 = b.RotateLeft(6); // b5 = 0b11000011
+               var b6 = b.RotateLeft(7); // b6 = 0b10000111
+               var b7 = b.RotateLeft(8); // b7 = 0b00001111
+            </code>
+         </example>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.RotateRight(System.Int16,System.Int32)">
+         <summary>
+            Performs a bitwise right rotation on a number.
+         </summary>
+         <param name="number">The number to rotate</param>
+         <param name="count">the number of bits to rotate</param>
+         <returns>The rotated value.</returns>
+         <example>
+            Examples
+            <code>
+               short b = 0b11110000;
+               var b2 = b.RotateRight(3); // b2 = 0b00011110
+               var b3 = b.RotateRight(4); // b3 = 0b00001111
+               var b4 = b.RotateRight(5); // b4 = 0b10000111
+               var b5 = b.RotateRight(6); // b5 = 0b11000011
+               var b6 = b.RotateRight(7); // b6 = 0b11100001
+               var b7 = b.RotateRight(8); // b7 = 0b11110000
+            </code>
+         </example>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.PopCount(System.Int16)">
+         <summary>
+            Counts the bits that are set to 1 in a number
+         </summary>
+         <param name="number">The number</param>
+         <returns>The count of the bits set to 1</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.IsOdd(System.Int16)">
+         <summary>
+            Determines if the number is odd.
+         </summary>
+         <param name="number"></param>
+         <returns>
+            <c>true</c>
+            if the number is odd (e.g. 1,3...etc.)
+         </returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.IsEven(System.Int16)">
+         <summary>
+            Determines if the number is odd.
+         </summary>
+         <param name="number"></param>
+         <returns>
+            <c>true</c>
+            if the number is even (e.g. 2,4...etc.)
+         </returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.IsNegative(System.Int16)">
+         <summary>
+            Indicates if the number is negative. (Always false for unsigned numbers)
+         </summary>
+         <param name="number">The number to evaluate.</param>
+         <returns>true if &lt; 0.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.IsPositive(System.Int16)">
+         <summary>
+            Indicates if the number is zero or positive. (Always true for unsigned numbers)
+         </summary>
+         <param name="number">The number to evaluate.</param>
+         <returns>true if &gt;= 0.</returns>
+      </member>
+      <member name="T:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions">
+         <summary>
+            Provides bit counting and other niche bit manipulation facilities
+            for
+            <see cref="T:System.Int32"/>
+            instances.
+         </summary>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.IsPowerOfTwo(System.Int32)">
+         <summary>
+            Determines if the number is a power of two.
+         </summary>
+         <param name="number">the number to evaluate</param>
+         <returns>true if number == 2^n; where n is an integer.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.CountBitsSet(System.Int32)">
+         <summary>
+            Counts the bits that are set to 1 in a number.
+         </summary>
+         <param name="number">The number</param>
+         <returns>The count of the bits set to 1</returns>
+         <remarks>This is a reader-friendly alias for
+            <see cref="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.PopCount(System.Int32)"/>
+         </remarks>
+      </member>
+      <member
+         name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.AreOnlyFirstAndLastBitsSet(System.Int32)">
+         <summary>
+            Determines if the only lowest bit and one other higher bit are set.
+         </summary>
+         <param name="number">the number to evaluate</param>
+         <returns>true if the bitwise representation follows this pattern: 0b10..01. with any number of intervening
+            zeros.
+         </returns>
+      </member>
+      <member
+         name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.GetValueOrNextHigherPowerOfTwo(System.Int32)">
+         <summary>
+            For any given number return the number if it's a power of two,
+            or return the next higher power of two capable of fitting in the
+            data type.
+         </summary>
+         <param name="number">the number to evaluate</param>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.GetHighestBitSet(System.Int32)">
+         <summary>
+            Calculate the index of the highest bit that's been set.
+         </summary>
+         <param name="number">the number to evaluate</param>
+         <returns>The index of the highest bit that's been set; or -1 if none were set.</returns>
+         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.GetLowestBitSet(System.Int32)">
+         <summary>
+            Calculate the index of the lowest bit that's been set.
+         </summary>
+         <param name="number">the number to evaluate</param>
+         <returns>The index of the lowest bit that's been set; or -1 if none were set.</returns>
+         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.CountLeadingZeros(System.Int32)">
+         <summary>
+            Computes the number of sequentially zeroed bits occupying the
+            most significant bit positions.
+         </summary>
+         <param name="number">the number to evaluate</param>
+         <returns>The count of sequentially zeroed bits occupying the most significant bit positions.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.CountTrailingZeros(System.Int32)">
+         <summary>
+            Computes the number of sequentially zeroed bits occupying the
+            least significant bit positions.
+         </summary>
+         <param name="number">the number to evaluate</param>
+         <returns>The count of sequentially zeroed bits occupying the least significant bit positions.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.RotateLeft(System.Int32,System.Int32)">
+         <summary>
+            Performs a bitwise left rotation on a number.
+         </summary>
+         <param name="number">The number to rotate</param>
+         <param name="count">the number of bits to rotate</param>
+         <returns>The rotated value.</returns>
+         <example>
+            Examples
+            <code>
+               int b = 0b00001111;
+               var b2 = b.RotateLeft(3); // b2 = 0b01111000
+               var b3 = b.RotateLeft(4); // b3 = 0b11110000
+               var b4 = b.RotateLeft(5); // b4 = 0b11100001
+               var b5 = b.RotateLeft(6); // b5 = 0b11000011
+               var b6 = b.RotateLeft(7); // b6 = 0b10000111
+               var b7 = b.RotateLeft(8); // b7 = 0b00001111
+            </code>
+         </example>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.RotateRight(System.Int32,System.Int32)">
+         <summary>
+            Performs a bitwise right rotation on a number.
+         </summary>
+         <param name="number">The number to rotate</param>
+         <param name="count">the number of bits to rotate</param>
+         <returns>The rotated value.</returns>
+         <example>
+            Examples
+            <code>
+               int b = 0b11110000;
+               var b2 = b.RotateRight(3); // b2 = 0b00011110
+               var b3 = b.RotateRight(4); // b3 = 0b00001111
+               var b4 = b.RotateRight(5); // b4 = 0b10000111
+               var b5 = b.RotateRight(6); // b5 = 0b11000011
+               var b6 = b.RotateRight(7); // b6 = 0b11100001
+               var b7 = b.RotateRight(8); // b7 = 0b11110000
+            </code>
+         </example>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.PopCount(System.Int32)">
+         <summary>
+            Counts the bits that are set to 1 in a number
+         </summary>
+         <param name="number">The number</param>
+         <returns>The count of the bits set to 1</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.IsOdd(System.Int32)">
+         <summary>
+            Determines if the number is odd.
+         </summary>
+         <param name="number"></param>
+         <returns>
+            <c>true</c>
+            if the number is odd (e.g. 1,3...etc.)
+         </returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.IsEven(System.Int32)">
+         <summary>
+            Determines if the number is odd.
+         </summary>
+         <param name="number"></param>
+         <returns>
+            <c>true</c>
+            if the number is even (e.g. 2,4...etc.)
+         </returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.IsNegative(System.Int32)">
+         <summary>
+            Indicates if the number is negative. (Always false for unsigned numbers)
+         </summary>
+         <param name="number">The number to evaluate.</param>
+         <returns>true if &lt; 0.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.IsPositive(System.Int32)">
+         <summary>
+            Indicates if the number is zero or positive. (Always true for unsigned numbers)
+         </summary>
+         <param name="number">The number to evaluate.</param>
+         <returns>true if &gt;= 0.</returns>
+      </member>
+      <member name="T:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions">
+         <summary>
+            Provides bit counting and other niche bit manipulation facilities
+            for
+            <see cref="T:System.Int64"/>
+            instances.
+         </summary>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.IsPowerOfTwo(System.Int64)">
+         <summary>
+            Determines if the number is a power of two.
+         </summary>
+         <param name="number">the number to evaluate</param>
+         <returns>true if number == 2^n; where n is an integer.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.CountBitsSet(System.Int64)">
+         <summary>
+            Counts the bits that are set to 1 in a number.
+         </summary>
+         <param name="number">The number</param>
+         <returns>The count of the bits set to 1</returns>
+         <remarks>This is a reader-friendly alias for
+            <see cref="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.PopCount(System.Int64)"/>
+         </remarks>
+      </member>
+      <member
+         name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.AreOnlyFirstAndLastBitsSet(System.Int64)">
+         <summary>
+            Determines if the only lowest bit and one other higher bit are set.
+         </summary>
+         <param name="number">the number to evaluate</param>
+         <returns>true if the bitwise representation follows this pattern: 0b10..01. with any number of intervening
+            zeros.
+         </returns>
+      </member>
+      <member
+         name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.GetValueOrNextHigherPowerOfTwo(System.Int64)">
+         <summary>
+            For any given number return the number if it's a power of two,
+            or return the next higher power of two capable of fitting in the
+            data type.
+         </summary>
+         <param name="number">the number to evaluate</param>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.GetHighestBitSet(System.Int64)">
+         <summary>
+            Calculate the index of the highest bit that's been set.
+         </summary>
+         <param name="number">the number to evaluate</param>
+         <returns>The index of the highest bit that's been set; or -1 if none were set.</returns>
+         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.GetLowestBitSet(System.Int64)">
+         <summary>
+            Calculate the index of the lowest bit that's been set.
+         </summary>
+         <param name="number">the number to evaluate</param>
+         <returns>The index of the lowest bit that's been set; or -1 if none were set.</returns>
+         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.CountLeadingZeros(System.Int64)">
+         <summary>
+            Computes the number of sequentially zeroed bits occupying the
+            most significant bit positions.
+         </summary>
+         <param name="number">the number to evaluate</param>
+         <returns>The count of sequentially zeroed bits occupying the most significant bit positions.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.CountTrailingZeros(System.Int64)">
+         <summary>
+            Computes the number of sequentially zeroed bits occupying the
+            least significant bit positions.
+         </summary>
+         <param name="number">the number to evaluate</param>
+         <returns>The count of sequentially zeroed bits occupying the least significant bit positions.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.RotateLeft(System.Int64,System.Int32)">
+         <summary>
+            Performs a bitwise left rotation on a number.
+         </summary>
+         <param name="number">The number to rotate</param>
+         <param name="count">the number of bits to rotate</param>
+         <returns>The rotated value.</returns>
+         <example>
+            Examples
+            <code>
+               long b = 0b00001111;
+               var b2 = b.RotateLeft(3); // b2 = 0b01111000
+               var b3 = b.RotateLeft(4); // b3 = 0b11110000
+               var b4 = b.RotateLeft(5); // b4 = 0b11100001
+               var b5 = b.RotateLeft(6); // b5 = 0b11000011
+               var b6 = b.RotateLeft(7); // b6 = 0b10000111
+               var b7 = b.RotateLeft(8); // b7 = 0b00001111
+            </code>
+         </example>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.RotateRight(System.Int64,System.Int32)">
+         <summary>
+            Performs a bitwise right rotation on a number.
+         </summary>
+         <param name="number">The number to rotate</param>
+         <param name="count">the number of bits to rotate</param>
+         <returns>The rotated value.</returns>
+         <example>
+            Examples
+            <code>
+               long b = 0b11110000;
+               var b2 = b.RotateRight(3); // b2 = 0b00011110
+               var b3 = b.RotateRight(4); // b3 = 0b00001111
+               var b4 = b.RotateRight(5); // b4 = 0b10000111
+               var b5 = b.RotateRight(6); // b5 = 0b11000011
+               var b6 = b.RotateRight(7); // b6 = 0b11100001
+               var b7 = b.RotateRight(8); // b7 = 0b11110000
+            </code>
+         </example>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.PopCount(System.Int64)">
+         <summary>
+            Counts the bits that are set to 1 in a number
+         </summary>
+         <param name="number">The number</param>
+         <returns>The count of the bits set to 1</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.IsOdd(System.Int64)">
+         <summary>
+            Determines if the number is odd.
+         </summary>
+         <param name="number"></param>
+         <returns>
+            <c>true</c>
+            if the number is odd (e.g. 1,3...etc.)
+         </returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.IsEven(System.Int64)">
+         <summary>
+            Determines if the number is odd.
+         </summary>
+         <param name="number"></param>
+         <returns>
+            <c>true</c>
+            if the number is even (e.g. 2,4...etc.)
+         </returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.IsNegative(System.Int64)">
+         <summary>
+            Indicates if the number is negative. (Always false for unsigned numbers)
+         </summary>
+         <param name="number">The number to evaluate.</param>
+         <returns>true if &lt; 0.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.IsPositive(System.Int64)">
+         <summary>
+            Indicates if the number is zero or positive. (Always true for unsigned numbers)
+         </summary>
+         <param name="number">The number to evaluate.</param>
+         <returns>true if &gt;= 0.</returns>
+      </member>
+      <member name="T:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions">
+         <summary>
+            Provides bit counting and other niche bit manipulation facilities
+            for
+            <see cref="T:System.SByte"/>
+            instances.
+         </summary>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.IsPowerOfTwo(System.SByte)">
+         <summary>
+            Determines if the number is a power of two.
+         </summary>
+         <param name="number">the number to evaluate</param>
+         <returns>true if number == 2^n; where n is an integer.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.CountBitsSet(System.SByte)">
+         <summary>
+            Counts the bits that are set to 1 in a number.
+         </summary>
+         <param name="number">The number</param>
+         <returns>The count of the bits set to 1</returns>
+         <remarks>This is a reader-friendly alias for
+            <see cref="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.PopCount(System.SByte)"/>
+         </remarks>
+      </member>
+      <member
+         name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.AreOnlyFirstAndLastBitsSet(System.SByte)">
+         <summary>
+            Determines if the only lowest bit and one other higher bit are set.
+         </summary>
+         <param name="number">the number to evaluate</param>
+         <returns>true if the bitwise representation follows this pattern: 0b10..01. with any number of intervening
+            zeros.
+         </returns>
+      </member>
+      <member
+         name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.GetValueOrNextHigherPowerOfTwo(System.SByte)">
+         <summary>
+            For any given number return the number if it's a power of two,
+            or return the next higher power of two capable of fitting in the
+            data type.
+         </summary>
+         <param name="number">the number to evaluate</param>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.GetHighestBitSet(System.SByte)">
+         <summary>
+            Calculate the index of the highest bit that's been set.
+         </summary>
+         <param name="number">the number to evaluate</param>
+         <returns>The index of the highest bit that's been set; or -1 if none were set.</returns>
+         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.GetLowestBitSet(System.SByte)">
+         <summary>
+            Calculate the index of the lowest bit that's been set.
+         </summary>
+         <param name="number">the number to evaluate</param>
+         <returns>The index of the lowest bit that's been set; or -1 if none were set.</returns>
+         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.CountLeadingZeros(System.SByte)">
+         <summary>
+            Computes the number of sequentially zeroed bits occupying the
+            most significant bit positions.
+         </summary>
+         <param name="number">the number to evaluate</param>
+         <returns>The count of sequentially zeroed bits occupying the most significant bit positions.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.CountTrailingZeros(System.SByte)">
+         <summary>
+            Computes the number of sequentially zeroed bits occupying the
+            least significant bit positions.
+         </summary>
+         <param name="number">the number to evaluate</param>
+         <returns>The count of sequentially zeroed bits occupying the least significant bit positions.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.RotateLeft(System.SByte,System.Int32)">
+         <summary>
+            Performs a bitwise left rotation on a number.
+         </summary>
+         <param name="number">The number to rotate</param>
+         <param name="count">the number of bits to rotate</param>
+         <returns>The rotated value.</returns>
+         <example>
+            Examples
+            <code>
+               sbyte b = 0b00001111;
+               var b2 = b.RotateLeft(3); // b2 = 0b01111000
+               var b3 = b.RotateLeft(4); // b3 = 0b11110000
+               var b4 = b.RotateLeft(5); // b4 = 0b11100001
+               var b5 = b.RotateLeft(6); // b5 = 0b11000011
+               var b6 = b.RotateLeft(7); // b6 = 0b10000111
+               var b7 = b.RotateLeft(8); // b7 = 0b00001111
+            </code>
+         </example>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.RotateRight(System.SByte,System.Int32)">
+         <summary>
+            Performs a bitwise right rotation on a number.
+         </summary>
+         <param name="number">The number to rotate</param>
+         <param name="count">the number of bits to rotate</param>
+         <returns>The rotated value.</returns>
+         <example>
+            Examples
+            <code>
+               sbyte b = 0b11110000;
+               var b2 = b.RotateRight(3); // b2 = 0b00011110
+               var b3 = b.RotateRight(4); // b3 = 0b00001111
+               var b4 = b.RotateRight(5); // b4 = 0b10000111
+               var b5 = b.RotateRight(6); // b5 = 0b11000011
+               var b6 = b.RotateRight(7); // b6 = 0b11100001
+               var b7 = b.RotateRight(8); // b7 = 0b11110000
+            </code>
+         </example>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.PopCount(System.SByte)">
+         <summary>
+            Counts the bits that are set to 1 in a number
+         </summary>
+         <param name="number">The number</param>
+         <returns>The count of the bits set to 1</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.IsOdd(System.SByte)">
+         <summary>
+            Determines if the number is odd.
+         </summary>
+         <param name="number"></param>
+         <returns>
+            <c>true</c>
+            if the number is odd (e.g. 1,3...etc.)
+         </returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.IsEven(System.SByte)">
+         <summary>
+            Determines if the number is odd.
+         </summary>
+         <param name="number"></param>
+         <returns>
+            <c>true</c>
+            if the number is even (e.g. 2,4...etc.)
+         </returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.IsNegative(System.SByte)">
+         <summary>
+            Indicates if the number is negative. (Always false for unsigned numbers)
+         </summary>
+         <param name="number">The number to evaluate.</param>
+         <returns>true if &lt; 0.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.IsPositive(System.SByte)">
+         <summary>
+            Indicates if the number is zero or positive. (Always true for unsigned numbers)
+         </summary>
+         <param name="number">The number to evaluate.</param>
+         <returns>true if &gt;= 0.</returns>
+      </member>
       <member name="T:Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions">
          <summary>
             Provides bit counting and other niche bit manipulation facilities
@@ -247,6 +909,40 @@
          </summary>
          <param name="number">The number</param>
          <returns>The count of the bits set to 1</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.IsOdd(System.UInt16)">
+         <summary>
+            Determines if the number is odd.
+         </summary>
+         <param name="number"></param>
+         <returns>
+            <c>true</c>
+            if the number is odd (e.g. 1,3...etc.)
+         </returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.IsEven(System.UInt16)">
+         <summary>
+            Determines if the number is odd.
+         </summary>
+         <param name="number"></param>
+         <returns>
+            <c>true</c>
+            if the number is even (e.g. 2,4...etc.)
+         </returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.IsNegative(System.UInt16)">
+         <summary>
+            Indicates if the number is negative. (Always false for unsigned numbers)
+         </summary>
+         <param name="number">The number to evaluate.</param>
+         <returns>true if &lt; 0.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.IsPositive(System.UInt16)">
+         <summary>
+            Indicates if the number is zero or positive. (Always true for unsigned numbers)
+         </summary>
+         <param name="number">The number to evaluate.</param>
+         <returns>true if &gt;= 0.</returns>
       </member>
       <member name="T:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions">
          <summary>
@@ -371,6 +1067,40 @@
          <param name="number">The number</param>
          <returns>The count of the bits set to 1</returns>
       </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.IsOdd(System.UInt32)">
+         <summary>
+            Determines if the number is odd.
+         </summary>
+         <param name="number"></param>
+         <returns>
+            <c>true</c>
+            if the number is odd (e.g. 1,3...etc.)
+         </returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.IsEven(System.UInt32)">
+         <summary>
+            Determines if the number is odd.
+         </summary>
+         <param name="number"></param>
+         <returns>
+            <c>true</c>
+            if the number is even (e.g. 2,4...etc.)
+         </returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.IsNegative(System.UInt32)">
+         <summary>
+            Indicates if the number is negative. (Always false for unsigned numbers)
+         </summary>
+         <param name="number">The number to evaluate.</param>
+         <returns>true if &lt; 0.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.IsPositive(System.UInt32)">
+         <summary>
+            Indicates if the number is zero or positive. (Always true for unsigned numbers)
+         </summary>
+         <param name="number">The number to evaluate.</param>
+         <returns>true if &gt;= 0.</returns>
+      </member>
       <member name="T:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions">
          <summary>
             Provides bit counting and other niche bit manipulation facilities
@@ -494,6 +1224,40 @@
          </summary>
          <param name="number">The number</param>
          <returns>The count of the bits set to 1</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.IsOdd(System.UInt64)">
+         <summary>
+            Determines if the number is odd.
+         </summary>
+         <param name="number"></param>
+         <returns>
+            <c>true</c>
+            if the number is odd (e.g. 1,3...etc.)
+         </returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.IsEven(System.UInt64)">
+         <summary>
+            Determines if the number is odd.
+         </summary>
+         <param name="number"></param>
+         <returns>
+            <c>true</c>
+            if the number is even (e.g. 2,4...etc.)
+         </returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.IsNegative(System.UInt64)">
+         <summary>
+            Indicates if the number is negative. (Always false for unsigned numbers)
+         </summary>
+         <param name="number">The number to evaluate.</param>
+         <returns>true if &lt; 0.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.IsPositive(System.UInt64)">
+         <summary>
+            Indicates if the number is zero or positive. (Always true for unsigned numbers)
+         </summary>
+         <param name="number">The number to evaluate.</param>
+         <returns>true if &gt;= 0.</returns>
       </member>
       <member name="T:Jcd.BitManipulation.BigEndianByteIndexer">
          <summary>

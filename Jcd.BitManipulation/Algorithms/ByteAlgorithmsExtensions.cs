@@ -106,6 +106,7 @@ public static class ByteAlgorithmsExtensions
    /// <param name="number">the number to evaluate</param>
    /// <returns>The index of the lowest bit that's been set; or -1 if none were set.</returns>
    /// [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int GetLowestBitSet(this byte number)
    {
       if (number == 0)
@@ -206,6 +207,7 @@ public static class ByteAlgorithmsExtensions
    /// var b7 = b.RotateLeft(8); // b7 = 0b00001111
    /// </code>
    /// </example>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte RotateLeft(this byte number, int count)
    {
       return (byte) ((byte) (number << (count & BitSizeMinusOne)) | (byte) (number >> (BitSize - (count & BitSizeMinusOne))));
@@ -229,6 +231,7 @@ public static class ByteAlgorithmsExtensions
    /// var b7 = b.RotateRight(8); // b7 = 0b11110000
    /// </code>
    /// </example>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte RotateRight(this byte number, int count)
    {
       return (byte) ((byte) (number >> (count & BitSizeMinusOne)) | (byte) (number << (BitSize - (count & BitSizeMinusOne))));
@@ -239,6 +242,7 @@ public static class ByteAlgorithmsExtensions
    /// </summary>
    /// <param name="number">The number</param>
    /// <returns>The count of the bits set to 1</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int PopCount(this byte number)
    {
       // algorithm adapted from: https://graphics.stanford.edu/%7Eseander/bithacks.html#CountBitsSetParallel
@@ -256,5 +260,49 @@ public static class ByteAlgorithmsExtensions
       number = (byte) ((number + (number           >> 4)) & eights);
 
       return (number * horizontalSum) >> topByteShift;
+   }
+
+   /// <summary>
+   /// Determines if the number is odd.
+   /// </summary>
+   /// <param name="number"></param>
+   /// <returns><c>true</c> if the number is odd (e.g. 1,3...etc.)</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static bool IsOdd(this byte number)
+   {
+      return (number & 1) == 1;
+   }
+
+   /// <summary>
+   /// Determines if the number is odd.
+   /// </summary>
+   /// <param name="number"></param>
+   /// <returns><c>true</c> if the number is even (e.g. 2,4...etc.)</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static bool IsEven(this byte number)
+   {
+      return (number & 1) == 0;
+   }
+
+   /// <summary>
+   /// Indicates if the number is negative. (Always false for unsigned numbers)
+   /// </summary>
+   /// <param name="number">The number to evaluate.</param>
+   /// <returns>true if &lt; 0.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static bool IsNegative(this byte number)
+   {
+      return false;
+   }
+
+   /// <summary>
+   /// Indicates if the number is zero or positive. (Always true for unsigned numbers)
+   /// </summary>
+   /// <param name="number">The number to evaluate.</param>
+   /// <returns>true if &gt;= 0.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static bool IsPositive(this byte number)
+   {
+      return true;
    }
 }

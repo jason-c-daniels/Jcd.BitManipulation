@@ -66,7 +66,7 @@ public static class UInt16AlgorithmsExtensions
          return true;
       }
 
-      return (number & 1) == 1 && ((ushort) (number - 1)).IsPowerOfTwo();
+      return (number & 1) == 1 && (number - 1).IsPowerOfTwo();
    }
 
    /// <summary>
@@ -78,6 +78,11 @@ public static class UInt16AlgorithmsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ushort GetValueOrNextHigherPowerOfTwo(this ushort number)
    {
+      if (number == 0)
+      {
+         return 1;
+      }
+
       if (number.IsPowerOfTwo())
       {
          return number;
@@ -108,6 +113,7 @@ public static class UInt16AlgorithmsExtensions
    /// <param name="number">the number to evaluate</param>
    /// <returns>The index of the lowest bit that's been set; or -1 if none were set.</returns>
    /// [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int GetLowestBitSet(this ushort number)
    {
       if (number == 0)
@@ -150,12 +156,6 @@ public static class UInt16AlgorithmsExtensions
       {
          count += 2;
          number <<= 2;
-      }
-
-      if (number.AreNoBitsSet(HighestBit))
-      {
-         count += 1;
-         number <<= 1;
       }
 
       if (number.AreNoBitsSet(HighestBit))
@@ -226,6 +226,7 @@ public static class UInt16AlgorithmsExtensions
    /// var b7 = b.RotateLeft(8); // b7 = 0b00001111
    /// </code>
    /// </example>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ushort RotateLeft(this ushort number, int count)
    {
       return (ushort) ((ushort) (number << (count & BitSizeMinusOne)) | (ushort) (number >> (BitSize - (count & BitSizeMinusOne))));
@@ -249,6 +250,7 @@ public static class UInt16AlgorithmsExtensions
    /// var b7 = b.RotateRight(8); // b7 = 0b11110000
    /// </code>
    /// </example>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ushort RotateRight(this ushort number, int count)
    {
       return (ushort) ((ushort) (number >> (count & BitSizeMinusOne)) | (ushort) (number << (BitSize - (count & BitSizeMinusOne))));
@@ -259,6 +261,7 @@ public static class UInt16AlgorithmsExtensions
    /// </summary>
    /// <param name="number">The number</param>
    /// <returns>The count of the bits set to 1</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int PopCount(this ushort number)
    {
       // algorithm adapted from: https://graphics.stanford.edu/%7Eseander/bithacks.html#CountBitsSetParallel
@@ -270,10 +273,55 @@ public static class UInt16AlgorithmsExtensions
       const ushort eights = maxValue / 255          * 15;
       const ushort horizontalSum = maxValue         / 255;
       const int topByteShift = (sizeof(ushort) - 1) * bitsPerByte;
+
       number -= (ushort) ((ushort) (number >> 1) & pairs);
       number = (ushort) ((ushort) (number & quads) + (ushort) ((ushort) (number >> 2) & quads));
       number = (ushort) ((ushort) (number + (ushort) (number                    >> 4)) & eights);
 
       return (ushort) (number * horizontalSum) >> topByteShift;
+   }
+
+   /// <summary>
+   /// Determines if the number is odd.
+   /// </summary>
+   /// <param name="number"></param>
+   /// <returns><c>true</c> if the number is odd (e.g. 1,3...etc.)</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static bool IsOdd(this ushort number)
+   {
+      return (number & 1) == 1;
+   }
+
+   /// <summary>
+   /// Determines if the number is odd.
+   /// </summary>
+   /// <param name="number"></param>
+   /// <returns><c>true</c> if the number is even (e.g. 2,4...etc.)</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static bool IsEven(this ushort number)
+   {
+      return (number & 1) == 0;
+   }
+
+   /// <summary>
+   /// Indicates if the number is negative. (Always false for unsigned numbers)
+   /// </summary>
+   /// <param name="number">The number to evaluate.</param>
+   /// <returns>true if &lt; 0.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static bool IsNegative(this ushort number)
+   {
+      return false;
+   }
+
+   /// <summary>
+   /// Indicates if the number is zero or positive. (Always true for unsigned numbers)
+   /// </summary>
+   /// <param name="number">The number to evaluate.</param>
+   /// <returns>true if &gt;= 0.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static bool IsPositive(this ushort number)
+   {
+      return true;
    }
 }

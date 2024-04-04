@@ -11,8 +11,9 @@ IterationTime=120.0000 ms  MaxIterationCount=15  MinIterationCount=10
 WarmupCount=10
 
 ```
-| Method                                    | Runtime              | Mean      | Error     | StdDev    | Median    | Ratio | RatioSD |
-|------------------------------------------ |--------------------- |----------:|----------:|----------:|----------:|------:|--------:|
+
+| Method                                    | Runtime              |      Mean |     Error |    StdDev |    Median | Ratio | RatioSD |
+|-------------------------------------------|----------------------|----------:|----------:|----------:|----------:|------:|--------:|
 | Unchecked_Increment_Subtract_From_Results | .NET 8.0             | 0.0268 ns | 0.0297 ns | 0.0278 ns | 0.0242 ns |     ? |       ? |
 | Unchecked_Increment_Subtract_From_Results | .NET Framework 4.6.2 | 0.0410 ns | 0.0220 ns | 0.0171 ns | 0.0419 ns |     ? |       ? |
 |                                           |                      |           |           |           |           |       |         |

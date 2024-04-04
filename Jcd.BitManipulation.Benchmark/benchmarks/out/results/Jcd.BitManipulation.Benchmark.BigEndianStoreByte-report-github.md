@@ -11,8 +11,9 @@ IterationTime=120.0000 ms  MaxIterationCount=15  MinIterationCount=10
 WarmupCount=10
 
 ```
-| Method                      | Runtime              | Mean      | Error     | StdDev    | Median    | Ratio   | RatioSD |
-|---------------------------- |--------------------- |----------:|----------:|----------:|----------:|--------:|--------:|
+
+| Method                      | Runtime              |      Mean |     Error |    StdDev |    Median |   Ratio | RatioSD |
+|-----------------------------|----------------------|----------:|----------:|----------:|----------:|--------:|--------:|
 | ExtensionMethod_On_A_Double | .NET 8.0             | 0.0073 ns | 0.0154 ns | 0.0102 ns | 0.0031 ns |   1.015 |    2.13 |
 | ExtensionMethod_On_A_Float  | .NET 8.0             | 0.0097 ns | 0.0126 ns | 0.0075 ns | 0.0089 ns |   0.856 |    0.61 |
 | ExtensionMethod_On_A_UInt64 | .NET 8.0             | 0.0013 ns | 0.0050 ns | 0.0026 ns | 0.0000 ns |   0.192 |    0.36 |

@@ -11,8 +11,9 @@ IterationTime=120.0000 ms  MaxIterationCount=15  MinIterationCount=10
 WarmupCount=10
 
 ```
-| Method                                   | Runtime              | Mean       | Error     | StdDev    | Ratio  | RatioSD |
-|----------------------------------------- |--------------------- |-----------:|----------:|----------:|-------:|--------:|
+
+| Method                                   | Runtime              |       Mean |     Error |    StdDev |  Ratio | RatioSD |
+|------------------------------------------|----------------------|-----------:|----------:|----------:|-------:|--------:|
 | BitConverter_ToDouble                    | .NET 8.0             |  1.4419 ns | 0.0471 ns | 0.0281 ns |  1.178 |    0.03 |
 | BitConverter_ToFloat                     | .NET 8.0             |  1.4416 ns | 0.0288 ns | 0.0151 ns |  1.177 |    0.03 |
 | BitConverter_ToUInt64                    | .NET 8.0             |  1.2288 ns | 0.0197 ns | 0.0117 ns |  1.004 |    0.02 |

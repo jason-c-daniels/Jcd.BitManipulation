@@ -12,8 +12,8 @@ WarmupCount=10
 
 ```
 
-| Method                      | Runtime              | Mean      | Error     | StdDev    | Median    | Ratio | RatioSD |
-|---------------------------- |--------------------- |----------:|----------:|----------:|----------:|------:|--------:|
+| Method                      | Runtime              |      Mean |     Error |    StdDev |    Median | Ratio | RatioSD |
+|-----------------------------|----------------------|----------:|----------:|----------:|----------:|------:|--------:|
 | ByteIndexer_From_A_Double   | .NET 8.0             | 0.0011 ns | 0.0035 ns | 0.0023 ns | 0.0000 ns |     ? |       ? |
 | ByteIndexer_From_A_Float    | .NET 8.0             | 0.0108 ns | 0.0210 ns | 0.0125 ns | 0.0078 ns |     ? |       ? |
 | ByteIndexer_From_A_UInt64   | .NET 8.0             | 0.0015 ns | 0.0046 ns | 0.0027 ns | 0.0000 ns |     ? |       ? |

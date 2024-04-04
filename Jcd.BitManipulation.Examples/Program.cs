@@ -1,7 +1,5 @@
 #region
 
-using Jcd.BitManipulation.Algorithms;
-
 // ReSharper disable NotAccessedVariable
 // ReSharper disable IdentifierTypo
 // ReSharper disable CommentTypo
@@ -30,9 +28,6 @@ internal static class Program
 {
    public static void Main()
    {
-      var b = byte.MaxValue;
-      var c = b.PopCount();
-
       ReadMeExamples.Rotate_Examples();
       ReadMeExamples.BitIndexer_Example();
       ReadMeExamples.ByteIndexer_Example();

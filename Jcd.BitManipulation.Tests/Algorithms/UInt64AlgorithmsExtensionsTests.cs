@@ -60,6 +60,48 @@ public class UInt64AlgorithmsExtensionsTests
    }
 
    [Theory]
+   [InlineData(0,              true)]
+   [InlineData(1,              false)]
+   [InlineData(2,              true)]
+   [InlineData(3,              false)]
+   [InlineData(4,              true)]
+   [InlineData(ulong.MaxValue, false)]
+   public void IsEven_Returns_Expected_Value(ulong value, bool expected)
+   {
+      Assert.Equal(expected, value.IsEven());
+   }
+
+   [Theory]
+   [InlineData(0,              false)]
+   [InlineData(1,              true)]
+   [InlineData(2,              false)]
+   [InlineData(3,              true)]
+   [InlineData(4,              false)]
+   [InlineData(ulong.MaxValue, true)]
+   public void IsOdd_Returns_Expected_Value(ulong value, bool expected)
+   {
+      Assert.Equal(expected, value.IsOdd());
+   }
+
+   [Theory]
+   [InlineData(0x00, true)]
+   [InlineData(0x01, true)]
+   [InlineData(0xFF, true)]
+   public void IsPositive_Returns_Expected_Value(ulong value, bool expected)
+   {
+      Assert.Equal(expected, value.IsPositive());
+   }
+
+   [Theory]
+   [InlineData(0,               false)]
+   [InlineData(1,               false)]
+   [InlineData(ushort.MaxValue, false)]
+   public void IsNegative_Returns_Expected_Value(ulong value, bool expected)
+   {
+      Assert.Equal(expected, value.IsNegative());
+   }
+
+   [Theory]
    [MemberData(nameof(CountLeadingZerosData))]
    public void CountLeadingZeros_Returns_Expected_Value(ulong number, int expected)
    {

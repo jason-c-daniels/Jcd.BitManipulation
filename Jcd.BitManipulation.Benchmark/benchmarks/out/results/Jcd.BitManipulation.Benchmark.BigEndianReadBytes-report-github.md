@@ -11,8 +11,9 @@ IterationTime=120.0000 ms  MaxIterationCount=15  MinIterationCount=10
 WarmupCount=10
 
 ```
-| Method                                | Runtime              | Mean      | Error     | StdDev    | Ratio | RatioSD |
-|-------------------------------------- |--------------------- |----------:|----------:|----------:|------:|--------:|
+
+| Method                                | Runtime              |      Mean |     Error |    StdDev | Ratio | RatioSD |
+|---------------------------------------|----------------------|----------:|----------:|----------:|------:|--------:|
 | BitConverter_GetBytes_Double          | .NET 8.0             |  4.558 ns | 0.2966 ns | 0.2629 ns |  1.16 |    0.07 |
 | BitConverter_GetBytes_Float           | .NET 8.0             |  4.339 ns | 0.1260 ns | 0.0911 ns |  1.12 |    0.04 |
 | BitConverter_GetBytes_UInt64          | .NET 8.0             |  4.519 ns | 0.1657 ns | 0.1550 ns |  1.18 |    0.05 |

@@ -132,15 +132,17 @@ public static class Int16AlgorithmsExtensions
    /// <param name="count">the number of bits to rotate</param>
    /// <returns>The rotated value.</returns>
    /// <example>
-   /// Examples
    /// <code>
-   /// short b = 0b00001111;
-   /// var b2 = b.RotateLeft(3); // b2 = 0b01111000
-   /// var b3 = b.RotateLeft(4); // b3 = 0b11110000
-   /// var b4 = b.RotateLeft(5); // b4 = 0b11100001
-   /// var b5 = b.RotateLeft(6); // b5 = 0b11000011
-   /// var b6 = b.RotateLeft(7); // b6 = 0b10000111
-   /// var b7 = b.RotateLeft(8); // b7 = 0b00001111
+   /// var rotationBase = sizeof(short)-5;
+   /// 
+   /// short b = 0b00000000_00001111;
+   /// 
+   /// var b2 = b.RotateLeft(rotationBase+0); // b2 = 0b01111000_00000000
+   /// var b3 = b.RotateLeft(rotationBase+1); // b3 = 0b11110000_00000000
+   /// var b4 = b.RotateLeft(rotationBase+2); // b4 = 0b11100000_00000001
+   /// var b5 = b.RotateLeft(rotationBase+3); // b5 = 0b11000000_00000011
+   /// var b6 = b.RotateLeft(rotationBase+4); // b6 = 0b10000000_00000111
+   /// var b7 = b.RotateLeft(rotationBase+5); // b7 = 0b00000000_00001111
    /// </code>
    /// </example>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -156,15 +158,19 @@ public static class Int16AlgorithmsExtensions
    /// <param name="count">the number of bits to rotate</param>
    /// <returns>The rotated value.</returns>
    /// <example>
-   /// Examples
    /// <code>
-   /// short b = 0b11110000;
-   /// var b2 = b.RotateRight(3); // b2 = 0b00011110
-   /// var b3 = b.RotateRight(4); // b3 = 0b00001111
-   /// var b4 = b.RotateRight(5); // b4 = 0b10000111
-   /// var b5 = b.RotateRight(6); // b5 = 0b11000011
-   /// var b6 = b.RotateRight(7); // b6 = 0b11100001
-   /// var b7 = b.RotateRight(8); // b7 = 0b11110000
+   /// var rotationBase = sizeof(short)-5;
+   /// 
+   /// ushort ub = 0b11110000_00000000;
+   /// 
+   /// short b = (short)ub;
+   /// 
+   /// var b2 = b.RotateRight(rotationBase+0); // b2 = 0b00000000_00011110
+   /// var b3 = b.RotateRight(rotationBase+1); // b3 = 0b00000000_00001111
+   /// var b4 = b.RotateRight(rotationBase+2); // b4 = 0b10000000_00000111
+   /// var b5 = b.RotateRight(rotationBase+3); // b5 = 0b11000000_00000011
+   /// var b6 = b.RotateRight(rotationBase+4); // b6 = 0b11100000_00000001
+   /// var b7 = b.RotateRight(rotationBase+5); // b7 = 0b11110000_00000000
    /// </code>
    /// </example>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]

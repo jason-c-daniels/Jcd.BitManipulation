@@ -34,7 +34,10 @@ The rotated value.
 Examples
 
 ```csharp
-sbyte b = 0b11110000;
+byte ub = 0b11110000;
+
+sbyte b = (sbyte)b;
+
 var b2 = b.RotateRight(3); // b2 = 0b00011110
 var b3 = b.RotateRight(4); // b3 = 0b00001111
 var b4 = b.RotateRight(5); // b4 = 0b10000111

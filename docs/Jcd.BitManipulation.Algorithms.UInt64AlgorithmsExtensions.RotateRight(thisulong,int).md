@@ -31,14 +31,15 @@ The rotated value.
 
 ### Example
 
-Examples
-
 ```csharp
-ulong b = 0b11110000;
-var b2 = b.RotateRight(3); // b2 = 0b00011110
-var b3 = b.RotateRight(4); // b3 = 0b00001111
-var b4 = b.RotateRight(5); // b4 = 0b10000111
-var b5 = b.RotateRight(6); // b5 = 0b11000011
-var b6 = b.RotateRight(7); // b6 = 0b11100001
-var b7 = b.RotateRight(8); // b7 = 0b11110000
+var rotationBase = sizeof(int)-5;
+
+ulong b = 0b11110000_00000000_00000000_00000000_00000000_00000000_00000000_00000000;
+
+var b2 = b.RotateRight(rotationBase+0); // b2 = 0b00000000_00000000_00000000_00000000_00000000_00000000_00000000_00011110
+var b3 = b.RotateRight(rotationBase+1); // b3 = 0b00000000_00000000_00000000_00000000_00000000_00000000_00000000_00001111
+var b4 = b.RotateRight(rotationBase+2); // b4 = 0b10000000_00000000_00000000_00000000_00000000_00000000_00000000_00000111
+var b5 = b.RotateRight(rotationBase+3); // b5 = 0b11000000_00000000_00000000_00000000_00000000_00000000_00000000_00000011
+var b6 = b.RotateRight(rotationBase+4); // b6 = 0b11100000_00000000_00000000_00000000_00000000_00000000_00000000_00000001
+var b7 = b.RotateRight(rotationBase+5); // b7 = 0b11110000_00000000_00000000_00000000_00000000_00000000_00000000_00000000
 ```

@@ -36,10 +36,10 @@ public class SByteAlgorithmsExtensionsTests
    }
 
    [Theory]
-   [MemberData(nameof(GetValueOrNextHigherPowerOfTwoData))]
-   public void GetValueOrNextHigherPowerOfTwo_Returns_Expected_Value(sbyte number, sbyte expected)
+   [MemberData(nameof(RoundUpToPowerOfTwoData))]
+   public void RoundUpToPowerOfTwo_Returns_Expected_Value(sbyte number, sbyte expected)
    {
-      Assert.Equal(expected, number.GetValueOrNextHigherPowerOfTwo());
+      Assert.Equal(expected, number.RoundUpToPowerOfTwo());
    }
 
    [Theory]
@@ -219,20 +219,25 @@ public class SByteAlgorithmsExtensionsTests
       }
    }
 
-   public static TheoryData<sbyte, sbyte> GetValueOrNextHigherPowerOfTwoData
+   public static TheoryData<sbyte, sbyte> RoundUpToPowerOfTwoData
    {
       get
       {
          var result = new TheoryData<sbyte, sbyte>();
 
-         const sbyte bit = 0;
+         const sbyte bit = 1;
 
-         for (var i = 0; i < BitSize - 1; i++)
+         for (sbyte i = 0; i < BitSize - 1; i++)
          {
-            var v = bit.SetBit(i);
-            var v1 = bit.SetBit(i + 1);
-            result.Add(v,               v);
-            result.Add((sbyte) (v + 1), v1);
+            var v = (sbyte) (bit  << i);
+            var v1 = (sbyte) (bit << (i + 1));
+            var vp1 = (sbyte) (v + 1);
+            result.Add(v, v);
+            result.Add(vp1
+                     , i + 1 < BitSize - 1
+                          ? v1
+                          : (sbyte) 0
+                      );
          }
 
          return result;

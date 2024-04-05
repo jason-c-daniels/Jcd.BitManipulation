@@ -8,7 +8,7 @@ using Jcd.BitManipulation.Algorithms;
 
 namespace Jcd.BitManipulation.Benchmark.Algorithms;
 
-public class GetValueOrNextHigherPowerOfTwo
+public class RoundUpToPowerOfTwo
 {
    private static readonly Random Rnd = new();
    private byte bv = (byte) (Rnd.Next()                                % byte.MaxValue);
@@ -33,7 +33,7 @@ public class GetValueOrNextHigherPowerOfTwo
          bv++;
       }
 
-      return bv.GetValueOrNextHigherPowerOfTwo();
+      return bv.RoundUpToPowerOfTwo();
    }
 
    [Benchmark]
@@ -44,7 +44,7 @@ public class GetValueOrNextHigherPowerOfTwo
          us++;
       }
 
-      return us.GetValueOrNextHigherPowerOfTwo();
+      return us.RoundUpToPowerOfTwo();
    }
 
    [Benchmark]
@@ -55,7 +55,7 @@ public class GetValueOrNextHigherPowerOfTwo
          ui++;
       }
 
-      return ui.GetValueOrNextHigherPowerOfTwo();
+      return ui.RoundUpToPowerOfTwo();
    }
 
    [Benchmark]
@@ -66,6 +66,6 @@ public class GetValueOrNextHigherPowerOfTwo
          ul++;
       }
 
-      return ul.GetValueOrNextHigherPowerOfTwo();
+      return ul.RoundUpToPowerOfTwo();
    }
 }

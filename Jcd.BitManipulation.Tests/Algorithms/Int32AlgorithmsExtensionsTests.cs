@@ -38,10 +38,10 @@ public class Int32AlgorithmsExtensionsTests
    }
 
    [Theory]
-   [MemberData(nameof(GetValueOrNextHigherPowerOfTwoData))]
-   public void GetValueOrNextHigherPowerOfTwo_Returns_Expected_Value(int number, int expected)
+   [MemberData(nameof(RoundUpToPowerOfTwoData))]
+   public void RoundUpToPowerOfTwo_Returns_Expected_Value(int number, int expected)
    {
-      Assert.Equal(expected, number.GetValueOrNextHigherPowerOfTwo());
+      Assert.Equal(expected, number.RoundUpToPowerOfTwo());
    }
 
    [Theory]
@@ -199,7 +199,7 @@ public class Int32AlgorithmsExtensionsTests
                                        ? (ulong) ((j * 13.733333) + 1)
                                        : j + 1)
          {
-            var v = i.GetValueOrNextHigherPowerOfTwo() | 1;
+            var v = i.RoundUpToPowerOfTwo() | 1;
             var k = v                                  | 2;
             Add(i, result);
             Add(v, result);
@@ -241,7 +241,7 @@ public class Int32AlgorithmsExtensionsTests
       }
    }
 
-   public static TheoryData<int, int> GetValueOrNextHigherPowerOfTwoData
+   public static TheoryData<int, int> RoundUpToPowerOfTwoData
    {
       get
       {
@@ -251,10 +251,15 @@ public class Int32AlgorithmsExtensionsTests
 
          for (var i = 0; i < BitSize - 1; i++)
          {
-            var v = bit  << i;
-            var v1 = bit << (i + 1);
-            result.Add(v,     v);
-            result.Add(v + 1, v1);
+            var v = (bit  << i);
+            var v1 = (bit << (i + 1));
+            var vp1 = (v + 1);
+            result.Add(v, v);
+            result.Add(vp1
+                     , i + 1 < BitSize - 1
+                          ? v1
+                          : 0
+                      );
          }
 
          return result;

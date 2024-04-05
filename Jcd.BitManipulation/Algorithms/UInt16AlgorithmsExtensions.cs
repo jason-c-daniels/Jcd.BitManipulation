@@ -76,19 +76,20 @@ public static class UInt16AlgorithmsExtensions
    /// </summary>
    /// <param name="number">the number to evaluate</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ushort GetValueOrNextHigherPowerOfTwo(this ushort number)
+   public static ushort RoundUpToPowerOfTwo(this ushort number)
    {
-      if (number == 0)
-      {
-         return 1;
-      }
+      number--;
+      number |= (ushort)(number >> 1);
+      number |= (ushort)(number >> 2);
+      number |= (ushort)(number >> 4);
+      number |= (ushort)(number >> 8);
+      number |= (ushort)(number >> 16);
+      number++;
+      number += (ushort)(number == 0
+                            ? 1
+                            : 0);
 
-      if (number.IsPowerOfTwo())
-      {
-         return number;
-      }
-
-      return (ushort) (1 << (number.GetHighestBitSet() + 1));
+      return number;
    }
 
    /// <summary>

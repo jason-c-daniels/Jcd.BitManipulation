@@ -38,10 +38,10 @@ public class UInt16AlgorithmsExtensionsTests
    }
 
    [Theory]
-   [MemberData(nameof(GetValueOrNextHigherPowerOfTwoData))]
-   public void GetValueOrNextHigherPowerOfTwo_Returns_Expected_Value(ushort number, ushort expected)
+   [MemberData(nameof(RoundUpToPowerOfTwoData))]
+   public void RoundUpToPowerOfTwo_Returns_Expected_Value(ushort number, ushort expected)
    {
-      Assert.Equal(expected, number.GetValueOrNextHigherPowerOfTwo());
+      Assert.Equal(expected, number.RoundUpToPowerOfTwo());
    }
 
    [Theory]
@@ -180,7 +180,7 @@ public class UInt16AlgorithmsExtensionsTests
                                                   ? (uint) ((j * 1.01733333) + 1)
                                                   : j + 1)
          {
-            var v = (ushort) (i.GetValueOrNextHigherPowerOfTwo() | 1);
+            var v = (ushort) (i.RoundUpToPowerOfTwo() | 1);
             var k = (ushort) (v                                  | 2);
             Add(i, result);
             Add(v, result);
@@ -222,7 +222,7 @@ public class UInt16AlgorithmsExtensionsTests
       }
    }
 
-   public static TheoryData<ushort, ushort> GetValueOrNextHigherPowerOfTwoData
+   public static TheoryData<ushort, ushort> RoundUpToPowerOfTwoData
    {
       get
       {

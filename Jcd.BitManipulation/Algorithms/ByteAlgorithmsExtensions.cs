@@ -74,14 +74,18 @@ public static class ByteAlgorithmsExtensions
    /// </summary>
    /// <param name="number">the number to evaluate</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static byte GetValueOrNextHigherPowerOfTwo(this byte number)
+   public static byte RoundUpToPowerOfTwo(this byte number)
    {
-      if (number.IsPowerOfTwo())
-      {
-         return number;
-      }
+      number--;
+      number |= (byte)(number >> 1);
+      number |= (byte)(number >> 2);
+      number |= (byte)(number >> 4);
+      number++;
+      number += (byte)(number == 0
+                   ? 1
+                   : 0);
 
-      return (byte) (1 << (number.GetHighestBitSet() + 1));
+      return number;
    }
 
    /// <summary>

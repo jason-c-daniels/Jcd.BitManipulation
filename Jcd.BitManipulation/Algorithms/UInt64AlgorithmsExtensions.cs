@@ -80,19 +80,22 @@ public static class UInt64AlgorithmsExtensions
    /// </summary>
    /// <param name="number">the number to evaluate</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ulong GetValueOrNextHigherPowerOfTwo(this ulong number)
+   public static ulong RoundUpToPowerOfTwo(this ulong number)
    {
-      if (number == 0)
-      {
-         return 1;
-      }
+      //adapted from https: //graphics.stanford.edu/~seander/bithacks.html#RoundUpPowerOf2
+      number--;
+      number |= number >> 1;
+      number |= number >> 2;
+      number |= number >> 4;
+      number |= number >> 8;
+      number |= number >> 16;
+      number |= number >> 32;
+      number++;
+      number += number == 0
+                   ? 1ul
+                   : 0;
 
-      if (number.IsPowerOfTwo())
-      {
-         return number;
-      }
-
-      return 1ul << (number.GetHighestBitSet() + 1);
+      return number;
    }
 
    /// <summary>

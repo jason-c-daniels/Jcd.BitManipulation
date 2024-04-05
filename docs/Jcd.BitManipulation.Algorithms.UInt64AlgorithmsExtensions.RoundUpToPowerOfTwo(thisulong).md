@@ -2,19 +2,19 @@
 
 ### [Jcd.BitManipulation.Algorithms](Jcd.BitManipulation.Algorithms.md 'Jcd.BitManipulation.Algorithms').[UInt64AlgorithmsExtensions](Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.md 'Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions')
 
-## UInt64AlgorithmsExtensions.GetValueOrNextHigherPowerOfTwo(this ulong) Method
+## UInt64AlgorithmsExtensions.RoundUpToPowerOfTwo(this ulong) Method
 
 For any given number return the number if it's a power of two,
 or return the next higher power of two capable of fitting in the
 data type.
 
 ```csharp
-public static ulong GetValueOrNextHigherPowerOfTwo(this ulong number);
+public static ulong RoundUpToPowerOfTwo(this ulong number);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.GetValueOrNextHigherPowerOfTwo(thisulong).number'></a>
+<a name='Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.RoundUpToPowerOfTwo(thisulong).number'></a>
 
 `number` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 

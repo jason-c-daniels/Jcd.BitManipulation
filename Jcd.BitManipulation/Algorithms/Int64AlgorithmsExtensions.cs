@@ -54,18 +54,24 @@ public static class Int64AlgorithmsExtensions
    /// <summary>
    /// For any given number return the number if it's a power of two,
    /// or return the next higher power of two capable of fitting in the
-   /// data type.
+   /// data type. For negative values or values that would result in a
+   /// negative next higher power of two, zero is returned. (e.g. number > 2^(k-2)
+   /// where k is the bit size.)
    /// </summary>
    /// <param name="number">the number to evaluate</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static long GetValueOrNextHigherPowerOfTwo(this long number)
+   public static long RoundUpToPowerOfTwo(this long number)
    {
       if (number < 0)
       {
          return 0;
       }
 
-      return (long) ((ulong) number).GetValueOrNextHigherPowerOfTwo();
+      var r = (long) ((ulong) number).RoundUpToPowerOfTwo();
+
+      return r < 0
+                ? 0
+                : r;
    }
 
    /// <summary>

@@ -36,10 +36,10 @@ public class ByteAlgorithmsExtensionsTests
    }
 
    [Theory]
-   [MemberData(nameof(GetValueOrNextHigherPowerOfTwoData))]
-   public void GetValueOrNextHigherPowerOfTwo_Returns_Expected_Value(byte number, byte expected)
+   [MemberData(nameof(RoundUpToPowerOfTwoData))]
+   public void RoundUpToPowerOfTwo_Returns_Expected_Value(byte number, byte expected)
    {
-      Assert.Equal(expected, number.GetValueOrNextHigherPowerOfTwo());
+      Assert.Equal(expected, number.RoundUpToPowerOfTwo());
    }
 
    [Theory]
@@ -198,7 +198,7 @@ public class ByteAlgorithmsExtensionsTests
       }
    }
 
-   public static TheoryData<byte, byte> GetValueOrNextHigherPowerOfTwoData
+   public static TheoryData<byte, byte> RoundUpToPowerOfTwoData
    {
       get
       {

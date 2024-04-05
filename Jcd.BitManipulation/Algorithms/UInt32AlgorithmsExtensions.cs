@@ -78,19 +78,20 @@ public static class UInt32AlgorithmsExtensions
    /// </summary>
    /// <param name="number">the number to evaluate</param>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static uint GetValueOrNextHigherPowerOfTwo(this uint number)
+   public static uint RoundUpToPowerOfTwo(this uint number)
    {
-      if (number == 0)
-      {
-         return 1;
-      }
+      number--;
+      number |= (ushort)(number >> 1);
+      number |= (ushort)(number >> 2);
+      number |= (ushort)(number >> 4);
+      number |= (ushort)(number >> 8);
+      number |= (ushort)(number >> 16);
+      number++;
+      number += number == 0
+                   ? (ushort)1
+                   : (ushort)0;
 
-      if (number.IsPowerOfTwo())
-      {
-         return number;
-      }
-
-      return (uint) (1 << (number.GetHighestBitSet() + 1));
+      return number;
    }
 
    /// <summary>

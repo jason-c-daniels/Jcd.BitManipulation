@@ -38,10 +38,10 @@ public class UInt32AlgorithmsExtensionsTests
    }
 
    [Theory]
-   [MemberData(nameof(GetValueOrNextHigherPowerOfTwoData))]
-   public void GetValueOrNextHigherPowerOfTwo_Returns_Expected_Value(uint number, uint expected)
+   [MemberData(nameof(RoundUpToPowerOfTwoData))]
+   public void RoundUpToPowerOfTwo_Returns_Expected_Value(uint number, uint expected)
    {
-      Assert.Equal(expected, number.GetValueOrNextHigherPowerOfTwo());
+      Assert.Equal(expected, number.RoundUpToPowerOfTwo());
    }
 
    [Theory]
@@ -178,7 +178,7 @@ public class UInt32AlgorithmsExtensionsTests
                                        ? (ulong) ((j * 13.733333) + 1)
                                        : j + 1)
          {
-            var v = i.GetValueOrNextHigherPowerOfTwo() | 1;
+            var v = i.RoundUpToPowerOfTwo() | 1;
             var k = v                                  | 2;
             Add(i, result);
             Add(v, result);
@@ -220,7 +220,7 @@ public class UInt32AlgorithmsExtensionsTests
       }
    }
 
-   public static TheoryData<uint, uint> GetValueOrNextHigherPowerOfTwoData
+   public static TheoryData<uint, uint> RoundUpToPowerOfTwoData
    {
       get
       {

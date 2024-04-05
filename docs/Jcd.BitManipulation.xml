@@ -38,8 +38,7 @@
             zeros.
          </returns>
       </member>
-      <member
-         name="M:Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.GetValueOrNextHigherPowerOfTwo(System.Byte)">
+      <member name="M:Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.RoundUpToPowerOfTwo(System.Byte)">
          <summary>
             For any given number return the number if it's a power of two,
             or return the next higher power of two capable of fitting in the
@@ -194,12 +193,13 @@
             zeros.
          </returns>
       </member>
-      <member
-         name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.GetValueOrNextHigherPowerOfTwo(System.Int16)">
+      <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.RoundUpToPowerOfTwo(System.Int16)">
          <summary>
             For any given number return the number if it's a power of two,
             or return the next higher power of two capable of fitting in the
-            data type.
+            data type. For negative values or values that would result in a
+            negative next higher power of two, zero is returned. (e.g. number > 2^(k-2)
+            where k is the bit size.)
          </summary>
          <param name="number">the number to evaluate</param>
       </member>
@@ -357,12 +357,13 @@
             zeros.
          </returns>
       </member>
-      <member
-         name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.GetValueOrNextHigherPowerOfTwo(System.Int32)">
+      <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.RoundUpToPowerOfTwo(System.Int32)">
          <summary>
             For any given number return the number if it's a power of two,
             or return the next higher power of two capable of fitting in the
-            data type.
+            data type. For negative values or values that would result in a
+            negative next higher power of two, zero is returned. (e.g. number > 2^(k-2)
+            where k is the bit size.)
          </summary>
          <param name="number">the number to evaluate</param>
       </member>
@@ -520,12 +521,13 @@
             zeros.
          </returns>
       </member>
-      <member
-         name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.GetValueOrNextHigherPowerOfTwo(System.Int64)">
+      <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.RoundUpToPowerOfTwo(System.Int64)">
          <summary>
             For any given number return the number if it's a power of two,
             or return the next higher power of two capable of fitting in the
-            data type.
+            data type. For negative values or values that would result in a
+            negative next higher power of two, zero is returned. (e.g. number > 2^(k-2)
+            where k is the bit size.)
          </summary>
          <param name="number">the number to evaluate</param>
       </member>
@@ -695,12 +697,13 @@
             zeros.
          </returns>
       </member>
-      <member
-         name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.GetValueOrNextHigherPowerOfTwo(System.SByte)">
+      <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.RoundUpToPowerOfTwo(System.SByte)">
          <summary>
             For any given number return the number if it's a power of two,
             or return the next higher power of two capable of fitting in the
-            data type.
+            data type. For negative values or values that would result in a
+            negative next higher power of two, zero is returned. (e.g. number > 2^(k-2))
+            where k is the bit size.)
          </summary>
          <param name="number">the number to evaluate</param>
       </member>
@@ -855,8 +858,7 @@
             zeros.
          </returns>
       </member>
-      <member
-         name="M:Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.GetValueOrNextHigherPowerOfTwo(System.UInt16)">
+      <member name="M:Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.RoundUpToPowerOfTwo(System.UInt16)">
          <summary>
             For any given number return the number if it's a power of two,
             or return the next higher power of two capable of fitting in the
@@ -1016,8 +1018,7 @@
             zeros.
          </returns>
       </member>
-      <member
-         name="M:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.GetValueOrNextHigherPowerOfTwo(System.UInt32)">
+      <member name="M:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.RoundUpToPowerOfTwo(System.UInt32)">
          <summary>
             For any given number return the number if it's a power of two,
             or return the next higher power of two capable of fitting in the
@@ -1177,8 +1178,7 @@
             zeros.
          </returns>
       </member>
-      <member
-         name="M:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.GetValueOrNextHigherPowerOfTwo(System.UInt64)">
+      <member name="M:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.RoundUpToPowerOfTwo(System.UInt64)">
          <summary>
             For any given number return the number if it's a power of two,
             or return the next higher power of two capable of fitting in the

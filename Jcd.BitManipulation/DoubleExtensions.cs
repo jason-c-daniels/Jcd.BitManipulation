@@ -30,7 +30,7 @@ public static class DoubleExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool AreAllBitsSet(this double data, BitMask bitmask)
    {
-      return data.ReadBits(0, bitmask) == bitmask;
+      return (data.BitwiseToUInt64() & bitmask) == bitmask;
    }
 
    /// <summary>
@@ -42,7 +42,7 @@ public static class DoubleExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool AreAnyBitsSet(this double data, BitMask bitmask)
    {
-      return data.ReadBits(0, bitmask) != 0;
+      return (data.BitwiseToUInt64() & bitmask) != 0;
    }
 
    /// <summary>
@@ -54,7 +54,7 @@ public static class DoubleExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool AreNoBitsSet(this double data, BitMask bitmask)
    {
-      return data.ReadBits(0, bitmask) == 0;
+      return (data.BitwiseToUInt64() & bitmask) == 0;
    }
 
    /// <summary>
@@ -186,7 +186,7 @@ public static class DoubleExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool ReadBit(this double value, int offset)
    {
-      return value.ReadBits(offset, 1) > 0;
+      return value.BitwiseToUInt64().ReadBit(offset);
    }
 
    /// <summary>

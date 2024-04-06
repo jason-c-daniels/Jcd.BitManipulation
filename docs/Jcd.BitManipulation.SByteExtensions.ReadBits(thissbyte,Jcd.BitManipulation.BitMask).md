@@ -1,3 +1,5 @@
+#### [Jcd.BitManipulation](index.md 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[SByteExtensions](Jcd.BitManipulation.SByteExtensions.md 'Jcd.BitManipulation.SByteExtensions')
 
 ## SByteExtensions.ReadBits(this sbyte, BitMask) Method

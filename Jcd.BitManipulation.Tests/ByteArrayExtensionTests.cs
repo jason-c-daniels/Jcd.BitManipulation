@@ -8,6 +8,7 @@ using Xunit;
 // ReSharper disable RedundantExplicitArrayCreation
 // ReSharper disable HeapView.ObjectAllocation.Evident
 // ReSharper disable HeapView.ObjectAllocation
+#pragma warning disable S107
 
 #endregion
 

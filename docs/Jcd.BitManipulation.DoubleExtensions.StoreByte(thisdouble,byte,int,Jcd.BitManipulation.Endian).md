@@ -1,3 +1,5 @@
+#### [Jcd.BitManipulation](index.md 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[DoubleExtensions](Jcd.BitManipulation.DoubleExtensions.md 'Jcd.BitManipulation.DoubleExtensions')
 
 ## DoubleExtensions.StoreByte(this double, byte, int, Endian) Method

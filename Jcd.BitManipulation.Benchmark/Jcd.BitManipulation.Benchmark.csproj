@@ -6,7 +6,10 @@
       <ImplicitUsings>enable</ImplicitUsings>
       <Nullable>enable</Nullable>
       <LangVersion>latest</LangVersion>
-      <Configurations>Debug;Release;Release - Net462;Debug - Net462</Configurations>
+      <Configurations>Debug;Release</Configurations>
+      <DefineConstants Condition="'$(TargetFramework)' == 'net8.0'">$(DefineConstants);BITOPERATIONS;BUILTIN_BITMANIPULATION</DefineConstants>
+      <DefineConstants Condition="'$(TargetFramework)' == 'net7.0'">$(DefineConstants);BITOPERATIONS;BUILTIN_BITMANIPULATION</DefineConstants>
+      <DefineConstants Condition="'$(TargetFramework)' == 'net6.0'">$(DefineConstants);BITOPERATIONS</DefineConstants>
       <Platforms>AnyCPU</Platforms>
    </PropertyGroup>
 

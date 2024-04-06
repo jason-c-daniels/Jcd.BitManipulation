@@ -35,7 +35,7 @@ public static class SByteExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool AreAllBitsSet(this sbyte data, BitMask bitmask)
    {
-      return data.ReadBits(0, bitmask) == bitmask;
+      return (data & bitmask) == bitmask;
    }
 
    /// <summary>
@@ -50,7 +50,7 @@ public static class SByteExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool AreAnyBitsSet(this sbyte data, BitMask bitmask)
    {
-      return data.ReadBits(0, bitmask) != 0;
+      return (data & bitmask) != 0;
    }
 
    /// <summary>
@@ -65,7 +65,7 @@ public static class SByteExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool AreNoBitsSet(this sbyte data, BitMask bitmask)
    {
-      return data.ReadBits(0, bitmask) == 0;
+      return (data & bitmask) == 0;
    }
 
    /// <summary>
@@ -174,7 +174,7 @@ public static class SByteExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool ReadBit(this sbyte value, int offset)
    {
-      return value.ReadBits(offset, 1) > 0;
+      return ((byte) value).ReadBit(offset);
    }
 
    /// <summary>

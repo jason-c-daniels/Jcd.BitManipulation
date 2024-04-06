@@ -5,6 +5,8 @@ using System.Linq;
 
 using Xunit;
 
+#pragma warning disable S107
+
 #endregion
 
 namespace Jcd.BitManipulation.Tests;

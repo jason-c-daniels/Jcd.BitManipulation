@@ -4,7 +4,7 @@
 
 ## DoubleExtensions.SetBits(this double, int, int) Method
 
-Sets all specified bits to "on" and returns the modified value.
+Sets all specified bits to 1 and returns the modified value.
 
 ```csharp
 public static double SetBits(this double value, int offset=0, int size=64);

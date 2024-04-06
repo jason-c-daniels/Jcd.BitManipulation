@@ -4,7 +4,7 @@
 
 ## UInt64Extensions.SetBits(this ulong, BitMask) Method
 
-Sets all specified bits to "on" and returns the modified value.
+Sets all specified bits to 1 and returns the modified value.
 
 ```csharp
 public static ulong SetBits(this ulong number, Jcd.BitManipulation.BitMask mask);

@@ -4,7 +4,7 @@
 
 ## SingleExtensions.SetBits(this float, int, int) Method
 
-Sets all specified bits to "on" and returns the modified value.
+Sets all specified bits to 1 and returns the modified value.
 
 ```csharp
 public static float SetBits(this float number, int offset=0, int size=32);

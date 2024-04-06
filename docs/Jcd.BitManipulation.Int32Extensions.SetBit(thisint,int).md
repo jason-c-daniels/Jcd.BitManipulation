@@ -4,7 +4,7 @@
 
 ## Int32Extensions.SetBit(this int, int) Method
 
-Sets the bit at the specified to "on" and returns the modified value.
+Sets the bit at the specified to 1 and returns the modified value.
 
 ```csharp
 public static int SetBit(this int number, int offset);

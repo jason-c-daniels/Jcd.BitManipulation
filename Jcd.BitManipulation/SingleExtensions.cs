@@ -232,7 +232,7 @@ public static class SingleExtensions
    }
 
    /// <summary>
-   /// Sets all specified bits to "on" and returns the modified value.
+   /// Sets all specified bits to 1 and returns the modified value.
    /// </summary>
    /// <param name="number">The value to modify.</param>
    /// <param name="offset">The bit location to store the value.</param>
@@ -245,7 +245,7 @@ public static class SingleExtensions
    }
 
    /// <summary>
-   /// Sets the bit at the specified to "on" and returns the modified value.
+   /// Sets the bit at the specified to 1 and returns the modified value.
    /// </summary>
    /// <param name="number">The value to modify.</param>
    /// <param name="offset">The offset of the bit to set.</param>
@@ -257,7 +257,7 @@ public static class SingleExtensions
    }
 
    /// <summary>
-   /// Sets all specified bits to "on" and returns the modified value.
+   /// Sets all specified bits to 1 and returns the modified value.
    /// </summary>
    /// <param name="number">The value to modify.</param>
    /// <param name="mask">The bits to set.</param>

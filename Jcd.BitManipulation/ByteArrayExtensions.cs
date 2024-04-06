@@ -72,12 +72,8 @@ public static class ByteArrayExtensions
    /// <returns>The converted <see cref="ushort" /></returns>
    /// <remarks>
    /// <para>
-   /// <b>WARNING:</b>
-   /// </para>
-   /// <para>
    /// Index 0 in the array is index 0 in the destination value. For Big Endian this is the
-   /// most significant byte. If you're passing in a smaller array and need the result
-   /// right shifted, you'll need to shift it after calling this.
+   /// most significant byte.
    /// </para>
    /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -100,12 +96,8 @@ public static class ByteArrayExtensions
    /// <returns>The converted <see cref="short" /></returns>
    /// <remarks>
    /// <para>
-   /// <b>WARNING:</b>
-   /// </para>
-   /// <para>
    /// Index 0 in the array is index 0 in the destination value. For Big Endian this is the
-   /// most significant byte. If you're passing in a smaller array and need the result
-   /// right shifted, you'll need to shift it after calling this.
+   /// most significant byte.
    /// </para>
    /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -128,12 +120,8 @@ public static class ByteArrayExtensions
    /// <returns>The converted <see cref="uint" /></returns>
    /// <remarks>
    /// <para>
-   /// <b>WARNING:</b>
-   /// </para>
-   /// <para>
    /// Index 0 in the array is index 0 in the destination value. For Big Endian this is the
-   /// most significant byte. If you're passing in a smaller array and need the result
-   /// right shifted, you'll need to shift it after calling this.
+   /// most significant byte.
    /// </para>
    /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -156,12 +144,8 @@ public static class ByteArrayExtensions
    /// <returns>The converted <see cref="uint" /></returns>
    /// <remarks>
    /// <para>
-   /// <b>WARNING:</b>
-   /// </para>
-   /// <para>
    /// Index 0 in the array is index 0 in the destination value. For Big Endian this is the
-   /// most significant byte. If you're passing in a smaller array and need the result
-   /// right shifted, you'll need to shift it after calling this.
+   /// most significant byte.
    /// </para>
    /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -184,12 +168,8 @@ public static class ByteArrayExtensions
    /// <returns>The converted <see cref="ulong" /></returns>
    /// <remarks>
    /// <para>
-   /// <b>WARNING:</b>
-   /// </para>
-   /// <para>
    /// Index 0 in the array is index 0 in the destination value. For Big Endian this is the
-   /// most significant byte. If you're passing in a smaller array and need the result
-   /// right shifted, you'll need to shift it after calling this.
+   /// most significant byte.
    /// </para>
    /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -212,12 +192,8 @@ public static class ByteArrayExtensions
    /// <returns>The converted <see cref="long" /></returns>
    /// <remarks>
    /// <para>
-   /// <b>WARNING:</b>
-   /// </para>
-   /// <para>
    /// Index 0 in the array is index 0 in the destination value. For Big Endian this is the
-   /// most significant byte. If you're passing in a smaller array and need the result
-   /// right shifted, you'll need to shift it after calling this.
+   /// most significant byte.
    /// </para>
    /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -242,13 +218,8 @@ public static class ByteArrayExtensions
    /// <returns>The converted <see cref="double" /></returns>
    /// <remarks>
    /// <para>
-   /// <b>WARNING:</b>
-   /// </para>
-   /// <para>
    /// Index 0 in the array is index 0 in the destination value. For Big Endian this is the
-   /// most significant byte. If you're passing in a smaller array and need the result
-   /// right shifted, after calling this, you'll need to convert to a <see cref="ulong" />
-   /// shift it, then convert back to a <see cref="double" />.
+   /// most significant byte.
    /// </para>
    /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -268,13 +239,8 @@ public static class ByteArrayExtensions
    /// <returns>The converted ulong</returns>
    /// <remarks>
    /// <para>
-   /// <b>WARNING:</b>
-   /// </para>
-   /// <para>
    /// Index 0 in the array is index 0 in the destination value. For Big Endian this is the
-   /// most significant byte. If you're passing in a smaller array and need the result
-   /// right shifted, after calling this, you'll need to convert to a <see cref="uint" />
-   /// shift it, then convert back to a <see cref="float" />.
+   /// most significant byte.
    /// </para>
    /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]

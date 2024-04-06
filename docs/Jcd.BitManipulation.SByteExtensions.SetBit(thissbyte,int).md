@@ -4,7 +4,7 @@
 
 ## SByteExtensions.SetBit(this sbyte, int) Method
 
-Sets the bit at the specified to "on" and returns the modified value.
+Sets the bit at the specified to 1 and returns the modified value.
 
 ```csharp
 public static sbyte SetBit(this sbyte number, int offset);

@@ -4,7 +4,7 @@
 
 ## ByteExtensions.SetBit(this byte, int) Method
 
-Sets the bit at the specified to "on" and returns the modified value.
+Sets the bit at the specified to 1 and returns the modified value.
 
 ```csharp
 public static byte SetBit(this byte number, int offset);

@@ -3780,12 +3780,8 @@
          </returns>
          <remarks>
             <para>
-               <b>WARNING:</b>
-            </para>
-            <para>
                Index 0 in the array is index 0 in the destination value. For Big Endian this is the
-               most significant byte. If you're passing in a smaller array and need the result
-               right shifted, you'll need to shift it after calling this.
+               most significant byte.
             </para>
          </remarks>
       </member>
@@ -3802,12 +3798,8 @@
          </returns>
          <remarks>
             <para>
-               <b>WARNING:</b>
-            </para>
-            <para>
                Index 0 in the array is index 0 in the destination value. For Big Endian this is the
-               most significant byte. If you're passing in a smaller array and need the result
-               right shifted, you'll need to shift it after calling this.
+               most significant byte.
             </para>
          </remarks>
       </member>
@@ -3824,12 +3816,8 @@
          </returns>
          <remarks>
             <para>
-               <b>WARNING:</b>
-            </para>
-            <para>
                Index 0 in the array is index 0 in the destination value. For Big Endian this is the
-               most significant byte. If you're passing in a smaller array and need the result
-               right shifted, you'll need to shift it after calling this.
+               most significant byte.
             </para>
          </remarks>
       </member>
@@ -3846,12 +3834,8 @@
          </returns>
          <remarks>
             <para>
-               <b>WARNING:</b>
-            </para>
-            <para>
                Index 0 in the array is index 0 in the destination value. For Big Endian this is the
-               most significant byte. If you're passing in a smaller array and need the result
-               right shifted, you'll need to shift it after calling this.
+               most significant byte.
             </para>
          </remarks>
       </member>
@@ -3868,12 +3852,8 @@
          </returns>
          <remarks>
             <para>
-               <b>WARNING:</b>
-            </para>
-            <para>
                Index 0 in the array is index 0 in the destination value. For Big Endian this is the
-               most significant byte. If you're passing in a smaller array and need the result
-               right shifted, you'll need to shift it after calling this.
+               most significant byte.
             </para>
          </remarks>
       </member>
@@ -3890,12 +3870,8 @@
          </returns>
          <remarks>
             <para>
-               <b>WARNING:</b>
-            </para>
-            <para>
                Index 0 in the array is index 0 in the destination value. For Big Endian this is the
-               most significant byte. If you're passing in a smaller array and need the result
-               right shifted, you'll need to shift it after calling this.
+               most significant byte.
             </para>
          </remarks>
       </member>
@@ -3914,14 +3890,8 @@
          </returns>
          <remarks>
             <para>
-               <b>WARNING:</b>
-            </para>
-            <para>
                Index 0 in the array is index 0 in the destination value. For Big Endian this is the
-               most significant byte. If you're passing in a smaller array and need the result
-               right shifted, after calling this, you'll need to convert to a
-               <see cref="T:System.UInt64"/>
-               shift it, then convert back to a<see cref="T:System.Double"/>.
+               most significant byte.
             </para>
          </remarks>
       </member>
@@ -3938,14 +3908,8 @@
          <returns>The converted ulong</returns>
          <remarks>
             <para>
-               <b>WARNING:</b>
-            </para>
-            <para>
                Index 0 in the array is index 0 in the destination value. For Big Endian this is the
-               most significant byte. If you're passing in a smaller array and need the result
-               right shifted, after calling this, you'll need to convert to a
-               <see cref="T:System.UInt32"/>
-               shift it, then convert back to a<see cref="T:System.Single"/>.
+               most significant byte.
             </para>
          </remarks>
       </member>
@@ -4113,7 +4077,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.ByteExtensions.SetBits(System.Byte,System.Int32,System.Int32)">
          <summary>
-            Sets all specified bits to "on" and returns the modified value.
+            Sets all specified bits to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="offset">The bit location to store the value.</param>
@@ -4122,7 +4086,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.ByteExtensions.SetBit(System.Byte,System.Int32)">
          <summary>
-            Sets the bit at the specified to "on" and returns the modified value.
+            Sets the bit at the specified to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bit to set.</param>
@@ -4130,7 +4094,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.ByteExtensions.SetBits(System.Byte,Jcd.BitManipulation.BitMask)">
          <summary>
-            Sets all specified bits to "on" and returns the modified value.
+            Sets all specified bits to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
@@ -4363,7 +4327,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.DoubleExtensions.SetBits(System.Double,System.Int32,System.Int32)">
          <summary>
-            Sets all specified bits to "on" and returns the modified value.
+            Sets all specified bits to 1 and returns the modified value.
          </summary>
          <param name="value">The value to modify.</param>
          <param name="offset">The bit location to store the value.</param>
@@ -4372,7 +4336,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.DoubleExtensions.SetBit(System.Double,System.Int32)">
          <summary>
-            Sets the bit at the specified to "on" and returns the modified value.
+            Sets the bit at the specified to 1 and returns the modified value.
          </summary>
          <param name="value">The value to modify.</param>
          <param name="offset">The offset of the bit to set.</param>
@@ -4380,7 +4344,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.DoubleExtensions.SetBits(System.Double,Jcd.BitManipulation.BitMask)">
          <summary>
-            Sets all specified bits to "on" and returns the modified value.
+            Sets all specified bits to 1 and returns the modified value.
          </summary>
          <param name="value">The value to modify.</param>
          <param name="mask">The bits to set.</param>
@@ -4703,7 +4667,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.Int16Extensions.SetBits(System.Int16,System.Int32,System.Int32)">
          <summary>
-            Sets all specified bits to "on" and returns the modified value.
+            Sets all specified bits to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="offset">The bit location to store the value.</param>
@@ -4712,7 +4676,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.Int16Extensions.SetBit(System.Int16,System.Int32)">
          <summary>
-            Sets the bit at the specified to "on" and returns the modified value.
+            Sets the bit at the specified to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bit to set.</param>
@@ -4720,7 +4684,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.Int16Extensions.SetBits(System.Int16,Jcd.BitManipulation.BitMask)">
          <summary>
-            Sets all specified bits to "on" and returns the modified value.
+            Sets all specified bits to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
@@ -5043,7 +5007,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.Int32Extensions.SetBits(System.Int32,System.Int32,System.Int32)">
          <summary>
-            Sets all specified bits to "on" and returns the modified value.
+            Sets all specified bits to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="offset">The bit location to store the value.</param>
@@ -5052,7 +5016,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.Int32Extensions.SetBit(System.Int32,System.Int32)">
          <summary>
-            Sets the bit at the specified to "on" and returns the modified value.
+            Sets the bit at the specified to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bit to set.</param>
@@ -5060,7 +5024,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.Int32Extensions.SetBits(System.Int32,Jcd.BitManipulation.BitMask)">
          <summary>
-            Sets all specified bits to "on" and returns the modified value.
+            Sets all specified bits to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
@@ -5377,7 +5341,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.Int64Extensions.SetBits(System.Int64,System.Int32,System.Int32)">
          <summary>
-            Sets all specified bits to "on" and returns the modified value.
+            Sets all specified bits to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="offset">The bit location to store the value.</param>
@@ -5386,7 +5350,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.Int64Extensions.SetBit(System.Int64,System.Int32)">
          <summary>
-            Sets the bit at the specified to "on" and returns the modified value.
+            Sets the bit at the specified to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bit to set.</param>
@@ -5394,7 +5358,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.Int64Extensions.SetBits(System.Int64,Jcd.BitManipulation.BitMask)">
          <summary>
-            Sets all specified bits to "on" and returns the modified value.
+            Sets all specified bits to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
@@ -6287,7 +6251,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.SByteExtensions.SetBits(System.SByte,System.Int32,System.Int32)">
          <summary>
-            Sets all specified bits to "on" and returns the modified value.
+            Sets all specified bits to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="offset">The bit location to store the value.</param>
@@ -6296,7 +6260,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.SByteExtensions.SetBit(System.SByte,System.Int32)">
          <summary>
-            Sets the bit at the specified to "on" and returns the modified value.
+            Sets the bit at the specified to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bit to set.</param>
@@ -6304,7 +6268,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.SByteExtensions.SetBits(System.SByte,Jcd.BitManipulation.BitMask)">
          <summary>
-            Sets all specified bits to "on" and returns the modified value.
+            Sets all specified bits to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
@@ -6545,7 +6509,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.SingleExtensions.SetBits(System.Single,System.Int32,System.Int32)">
          <summary>
-            Sets all specified bits to "on" and returns the modified value.
+            Sets all specified bits to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="offset">The bit location to store the value.</param>
@@ -6554,7 +6518,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.SingleExtensions.SetBit(System.Single,System.Int32)">
          <summary>
-            Sets the bit at the specified to "on" and returns the modified value.
+            Sets the bit at the specified to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bit to set.</param>
@@ -6562,7 +6526,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.SingleExtensions.SetBits(System.Single,Jcd.BitManipulation.BitMask)">
          <summary>
-            Sets all specified bits to "on" and returns the modified value.
+            Sets all specified bits to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
@@ -6858,7 +6822,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.UInt16Extensions.SetBits(System.UInt16,System.Int32,System.Int32)">
          <summary>
-            Sets all specified bits to "on" and returns the modified value.
+            Sets all specified bits to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="offset">The bit location to store the value.</param>
@@ -6867,7 +6831,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.UInt16Extensions.SetBit(System.UInt16,System.Int32)">
          <summary>
-            Sets the bit at the specified to "on" and returns the modified value.
+            Sets the bit at the specified to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bit to set.</param>
@@ -6913,7 +6877,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.UInt16Extensions.SetBits(System.UInt16,Jcd.BitManipulation.BitMask)">
          <summary>
-            Sets all specified bits to "on" and returns the modified value.
+            Sets all specified bits to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
@@ -7205,7 +7169,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.UInt32Extensions.SetBits(System.UInt32,System.Int32,System.Int32)">
          <summary>
-            Sets all specified bits to "on" and returns the modified value.
+            Sets all specified bits to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="offset">The bit location to store the value.</param>
@@ -7214,7 +7178,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.UInt32Extensions.SetBit(System.UInt32,System.Int32)">
          <summary>
-            Sets the bit at the specified to "on" and returns the modified value.
+            Sets the bit at the specified to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bit to set.</param>
@@ -7222,7 +7186,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.UInt32Extensions.SetBits(System.UInt32,Jcd.BitManipulation.BitMask)">
          <summary>
-            Sets all specified bits to "on" and returns the modified value.
+            Sets all specified bits to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
@@ -7541,7 +7505,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.UInt64Extensions.SetBits(System.UInt64,System.Int32,System.Int32)">
          <summary>
-            Sets all specified bits to "on" and returns the modified value.
+            Sets all specified bits to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="offset">The bit location to store the value.</param>
@@ -7550,7 +7514,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.UInt64Extensions.SetBit(System.UInt64,System.Int32)">
          <summary>
-            Sets the bit at the specified to "on" and returns the modified value.
+            Sets the bit at the specified to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bit to set.</param>
@@ -7558,7 +7522,7 @@
       </member>
       <member name="M:Jcd.BitManipulation.UInt64Extensions.SetBits(System.UInt64,Jcd.BitManipulation.BitMask)">
          <summary>
-            Sets all specified bits to "on" and returns the modified value.
+            Sets all specified bits to 1 and returns the modified value.
          </summary>
          <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>

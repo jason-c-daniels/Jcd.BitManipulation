@@ -4,7 +4,7 @@
 
 ## UInt64Extensions.SetBits(this ulong, int, int) Method
 
-Sets all specified bits to "on" and returns the modified value.
+Sets all specified bits to 1 and returns the modified value.
 
 ```csharp
 public static ulong SetBits(this ulong number, int offset=0, int size=64);

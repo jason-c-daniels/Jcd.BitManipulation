@@ -7,14 +7,14 @@
 Tests if none of the bits from the bitmask are set on a [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16').
 
 ```csharp
-public static bool AreNoBitsSet(this short data, Jcd.BitManipulation.BitMask bitmask);
+public static bool AreNoBitsSet(this short number, Jcd.BitManipulation.BitMask bitmask);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.Int16Extensions.AreNoBitsSet(thisshort,Jcd.BitManipulation.BitMask).data'></a>
+<a name='Jcd.BitManipulation.Int16Extensions.AreNoBitsSet(thisshort,Jcd.BitManipulation.BitMask).number'></a>
 
-`data` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
+`number` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 
 The data to inspect.
 

@@ -21,4 +21,4 @@ The number to evaluate
 #### Returns
 
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
--1 if < 0; 1 if > 0; 0 otherwise.
+1 if > 0; 0 otherwise.

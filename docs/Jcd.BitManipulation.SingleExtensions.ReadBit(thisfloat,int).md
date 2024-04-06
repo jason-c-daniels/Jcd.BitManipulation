@@ -7,14 +7,14 @@
 Reads a single bit from the specified position.
 
 ```csharp
-public static bool ReadBit(this float value, int offset);
+public static bool ReadBit(this float number, int offset);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.SingleExtensions.ReadBit(thisfloat,int).value'></a>
+<a name='Jcd.BitManipulation.SingleExtensions.ReadBit(thisfloat,int).number'></a>
 
-`value` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
+`number` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
 The source of the bits to read.
 

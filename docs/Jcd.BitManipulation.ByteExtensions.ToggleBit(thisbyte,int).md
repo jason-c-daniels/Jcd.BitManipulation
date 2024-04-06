@@ -7,14 +7,14 @@
 Toggles a bit at the specified offset and returns the modified value.
 
 ```csharp
-public static byte ToggleBit(this byte value, int offset);
+public static byte ToggleBit(this byte number, int offset);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.ByteExtensions.ToggleBit(thisbyte,int).value'></a>
+<a name='Jcd.BitManipulation.ByteExtensions.ToggleBit(thisbyte,int).number'></a>
 
-`value` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
+`number` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
 The value to modify.
 

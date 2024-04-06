@@ -7,14 +7,14 @@
 Store a single bit at the specified offset and returns the modified value.
 
 ```csharp
-public static float StoreBit(this float value, bool bit, int offset);
+public static float StoreBit(this float number, bool bit, int offset);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.SingleExtensions.StoreBit(thisfloat,bool,int).value'></a>
+<a name='Jcd.BitManipulation.SingleExtensions.StoreBit(thisfloat,bool,int).number'></a>
 
-`value` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
+`number` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
 The value to modify.
 

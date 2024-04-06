@@ -7,14 +7,14 @@
 Reads a set of bytes starting at the specified offset within the value.
 
 ```csharp
-public static byte[] ReadBytes(this short value, int offset, int size, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
+public static byte[] ReadBytes(this short number, int offset, int size, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.Int16Extensions.ReadBytes(thisshort,int,int,Jcd.BitManipulation.Endian).value'></a>
+<a name='Jcd.BitManipulation.Int16Extensions.ReadBytes(thisshort,int,int,Jcd.BitManipulation.Endian).number'></a>
 
-`value` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
+`number` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 
 The value to read the bytes from.
 

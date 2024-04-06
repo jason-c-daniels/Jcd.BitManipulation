@@ -7,14 +7,14 @@
 Store a single bit at the specified offset and returns the modified value.
 
 ```csharp
-public static long StoreBit(this long value, bool bit, int offset);
+public static long StoreBit(this long number, bool bit, int offset);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.Int64Extensions.StoreBit(thislong,bool,int).value'></a>
+<a name='Jcd.BitManipulation.Int64Extensions.StoreBit(thislong,bool,int).number'></a>
 
-`value` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
+`number` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 
 The value to modify.
 

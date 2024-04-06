@@ -7,14 +7,14 @@
 Extract a subset of bits specified by a bitmask.
 
 ```csharp
-public static ushort ReadBits(this ushort value, Jcd.BitManipulation.BitMask mask);
+public static ushort ReadBits(this ushort number, Jcd.BitManipulation.BitMask mask);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt16Extensions.ReadBits(thisushort,Jcd.BitManipulation.BitMask).value'></a>
+<a name='Jcd.BitManipulation.UInt16Extensions.ReadBits(thisushort,Jcd.BitManipulation.BitMask).number'></a>
 
-`value` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
+`number` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 
 The source of the bits to read.
 

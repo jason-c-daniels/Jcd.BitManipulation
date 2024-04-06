@@ -7,14 +7,14 @@
 Sets all specified bits to "on" and returns the modified value.
 
 ```csharp
-public static ushort SetBits(this ushort value, int offset=0, int size=16);
+public static ushort SetBits(this ushort number, int offset=0, int size=16);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt16Extensions.SetBits(thisushort,int,int).value'></a>
+<a name='Jcd.BitManipulation.UInt16Extensions.SetBits(thisushort,int,int).number'></a>
 
-`value` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
+`number` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 
 The value to modify.
 

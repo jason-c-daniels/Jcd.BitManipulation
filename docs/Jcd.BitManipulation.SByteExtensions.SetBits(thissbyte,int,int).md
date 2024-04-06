@@ -7,14 +7,14 @@
 Sets all specified bits to "on" and returns the modified value.
 
 ```csharp
-public static sbyte SetBits(this sbyte value, int offset=0, int size=8);
+public static sbyte SetBits(this sbyte number, int offset=0, int size=8);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.SByteExtensions.SetBits(thissbyte,int,int).value'></a>
+<a name='Jcd.BitManipulation.SByteExtensions.SetBits(thissbyte,int,int).number'></a>
 
-`value` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
+`number` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 
 The value to modify.
 

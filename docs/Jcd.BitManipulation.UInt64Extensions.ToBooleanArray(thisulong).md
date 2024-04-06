@@ -7,14 +7,14 @@
 Converts a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') into an array of values with the lease significant bit at index 0.
 
 ```csharp
-public static bool[] ToBooleanArray(this ulong bits);
+public static bool[] ToBooleanArray(this ulong number);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt64Extensions.ToBooleanArray(thisulong).bits'></a>
+<a name='Jcd.BitManipulation.UInt64Extensions.ToBooleanArray(thisulong).number'></a>
 
-`bits` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
+`number` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
 The value to convert to an array of [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean') values.
 

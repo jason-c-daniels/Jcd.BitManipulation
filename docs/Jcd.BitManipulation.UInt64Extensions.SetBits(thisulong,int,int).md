@@ -7,14 +7,14 @@
 Sets all specified bits to "on" and returns the modified value.
 
 ```csharp
-public static ulong SetBits(this ulong value, int offset=0, int size=64);
+public static ulong SetBits(this ulong number, int offset=0, int size=64);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt64Extensions.SetBits(thisulong,int,int).value'></a>
+<a name='Jcd.BitManipulation.UInt64Extensions.SetBits(thisulong,int,int).number'></a>
 
-`value` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
+`number` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
 The value to modify.
 

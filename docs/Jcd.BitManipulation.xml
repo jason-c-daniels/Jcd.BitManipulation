@@ -265,7 +265,7 @@
             Returns a value indicating the sign of the number.
          </summary>
          <param name="number">The number to evaluate</param>
-         <returns>-1 if &lt; 0; 1 if &gt; 0; 0 otherwise.</returns>
+         <returns>1 if &gt; 0; 0 otherwise.</returns>
       </member>
       <member name="T:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions">
          <summary>
@@ -1672,7 +1672,7 @@
             Returns a value indicating the sign of the number.
          </summary>
          <param name="number">The number to evaluate</param>
-         <returns>-1 if &lt; 0; 1 if &gt; 0; 0 otherwise.</returns>
+         <returns>1 if &gt; 0; 0 otherwise.</returns>
       </member>
       <member name="T:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions">
          <summary>
@@ -1930,7 +1930,7 @@
             Returns a value indicating the sign of the number.
          </summary>
          <param name="number">The number to evaluate</param>
-         <returns>-1 if &lt; 0; 1 if &gt; 0; 0 otherwise.</returns>
+         <returns>1 if &gt; 0; 0 otherwise.</returns>
       </member>
       <member name="T:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions">
          <summary>
@@ -2212,7 +2212,7 @@
             Returns a value indicating the sign of the number.
          </summary>
          <param name="number">The number to evaluate</param>
-         <returns>-1 if &lt; 0; 1 if &gt; 0; 0 otherwise.</returns>
+         <returns>1 if &gt; 0; 0 otherwise.</returns>
       </member>
       <member name="T:Jcd.BitManipulation.BigEndianByteIndexer">
          <summary>
@@ -3753,7 +3753,7 @@
          <summary>
             Converts an array of bytes into a<see cref="T:System.Byte"/>, discarding any excess data.
          </summary>
-         <param name="data">the bytes to convert.</param>
+         <param name="array">the bytes to convert.</param>
          <param name="endian">The endian for the bytes.</param>
          <returns>The converted
             <see cref="T:System.Byte"/>
@@ -3763,7 +3763,7 @@
          <summary>
             Converts an array of bytes into a<see cref="T:System.SByte"/>, discarding any excess data.
          </summary>
-         <param name="data">the bytes to convert.</param>
+         <param name="array">the bytes to convert.</param>
          <param name="endian">The endian for the bytes.</param>
          <returns>The converted sbyte</returns>
       </member>
@@ -3772,7 +3772,7 @@
          <summary>
             Converts an array of bytes into a<see cref="T:System.UInt16"/>, discarding any excess data.
          </summary>
-         <param name="data">the bytes to convert.</param>
+         <param name="array">the bytes to convert.</param>
          <param name="endian">The endian for the bytes.</param>
          <param name="align">Indicates how to align partial data</param>
          <returns>The converted
@@ -3794,7 +3794,7 @@
          <summary>
             Converts an array of bytes into a<see cref="T:System.Int16"/>, discarding any excess data.
          </summary>
-         <param name="data">the bytes to convert.</param>
+         <param name="array">the bytes to convert.</param>
          <param name="endian">The endian for the bytes.</param>
          <param name="align">Indicates how to align partial data</param>
          <returns>The converted
@@ -3816,7 +3816,7 @@
          <summary>
             Converts an array of bytes into a<see cref="T:System.UInt32"/>, discarding any excess data.
          </summary>
-         <param name="data">the bytes to convert.</param>
+         <param name="array">the bytes to convert.</param>
          <param name="endian">The endian for the bytes.</param>
          <param name="align">Indicates how to align partial data</param>
          <returns>The converted
@@ -3838,7 +3838,7 @@
          <summary>
             Converts an array of bytes into a<see cref="T:System.UInt32"/>, discarding any excess data.
          </summary>
-         <param name="data">the bytes to convert.</param>
+         <param name="array">the bytes to convert.</param>
          <param name="endian">The endian for the bytes.</param>
          <param name="align">Indicates how to align partial data</param>
          <returns>The converted
@@ -3860,7 +3860,7 @@
          <summary>
             Converts an array of bytes into a<see cref="T:System.UInt64"/>, discarding any excess data.
          </summary>
-         <param name="data">the bytes to convert.</param>
+         <param name="array">the bytes to convert.</param>
          <param name="endian">The endian for the bytes.</param>
          <param name="align">Indicates how to align partial data</param>
          <returns>The converted
@@ -3882,7 +3882,7 @@
          <summary>
             Converts an array of bytes into a<see cref="T:System.Int64"/>, discarding any excess data.
          </summary>
-         <param name="data">the bytes to convert.</param>
+         <param name="array">the bytes to convert.</param>
          <param name="endian">The endian for the bytes.</param>
          <param name="align">Indicates how to align partial data</param>
          <returns>The converted
@@ -3904,7 +3904,7 @@
          <summary>
             Converts an array of bytes into a<see cref="T:System.Double"/>, discarding any excess data.
          </summary>
-         <param name="data">the bytes to convert.</param>
+         <param name="array">the bytes to convert.</param>
          <param name="endian">
             A setting indicating the endianness of the source data. The default is Endian.Little.
          </param>
@@ -3930,7 +3930,7 @@
          <summary>
             Converts an array of bytes into a<see cref="T:System.Single"/>, discarding any excess data.
          </summary>
-         <param name="data">the bytes to convert.</param>
+         <param name="array">the bytes to convert.</param>
          <param name="endian">
             A setting indicating the endianness of the source data. The default is Endian.Little.
          </param>
@@ -3992,7 +3992,7 @@
          <summary>
             Tests if all of the bits from the bitmask are set on a<see cref="T:System.Byte"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if all of the bits from the bitmask were set.</returns>
          <remarks>
@@ -4003,7 +4003,7 @@
          <summary>
             Tests if any bits from the bitmask are set on a<see cref="T:System.Byte"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if any of the bits from the bitmask were set.</returns>
          <remarks>
@@ -4014,7 +4014,7 @@
          <summary>
             Tests if none of the bits from the bitmask are set on a<see cref="T:System.Byte"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if all of the bits from the bitmask were set.</returns>
          <remarks>
@@ -4029,7 +4029,7 @@
             <see cre="bool"/>
             values with the lease significant bit at index 0.
          </summary>
-         <param name="bits">The value to convert to an array of
+         <param name="number">The value to convert to an array of
             <see cref="T:System.Boolean"/>
             values.
          </param>
@@ -4041,7 +4041,7 @@
             <see cref="T:System.Byte"/>
             into an array of bytes in the specified<see cref="T:Jcd.BitManipulation.Endian"/>.
          </summary>
-         <param name="data">the
+         <param name="number">the
             <see cref="T:System.Byte"/>
             to convert.
          </param>
@@ -4052,7 +4052,7 @@
          <summary>
             Sets all specified bits to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of where to begin clearing bits.</param>
          <param name="size">The number of bits to clear.</param>
          <returns>The modified value.</returns>
@@ -4061,7 +4061,7 @@
          <summary>
             Sets the specified bit to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit position to set to false/zero.</param>
          <returns>The modified value.</returns>
       </member>
@@ -4069,7 +4069,7 @@
          <summary>
             Sets all bits from the provided mask to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bit mask of the bits to clear.</param>
          <returns>The modified value.</returns>
       </member>
@@ -4077,7 +4077,7 @@
          <summary>
             Reads the bits specified and returns the result shifted to the right by the offset.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="offset">The bit offset to start reading from.</param>
          <param name="size">The total number of bits to extract.</param>
          <returns>The value stored in the range of bits specified, right shifted by the offset..</returns>
@@ -4086,7 +4086,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The unshifted extracted bits</returns>
       </member>
@@ -4095,7 +4095,7 @@
          <summary>
             Reads the bits specified by a mask and right shifts it .
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="shift">The number of bits to right shift the result of applying the<see
             cref="T:Jcd.BitManipulation.BitMask"/>.
          </param>
@@ -4106,7 +4106,7 @@
          <summary>
             Reads a single bit from the specified position.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="offset">The offset of the bit to read.</param>
          <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
          </returns>
@@ -4115,7 +4115,7 @@
          <summary>
             Sets all specified bits to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit location to store the value.</param>
          <param name="size">The number of bits to set on.</param>
          <returns>The modified value.</returns>
@@ -4124,7 +4124,7 @@
          <summary>
             Sets the bit at the specified to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bit to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -4132,7 +4132,7 @@
          <summary>
             Sets all specified bits to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -4140,7 +4140,7 @@
          <summary>
             Stores a range of bits to the value, from a source value, and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="source">The value to be stored at the bit location.</param>
          <param name="offset">The bit location to store the value.</param>
          <param name="size">The bit size of the value.</param>
@@ -4154,7 +4154,7 @@
             from a source value to a bit offset and returns the modified
             value.
          </summary>
-         <param name="value">the destination for the stored bits</param>
+         <param name="number">the destination for the stored bits</param>
          <param name="source">The source of the bits to store.</param>
          <param name="offset">The destination offset of where to store the bits.</param>
          <param name="mask">The mask specifying the bits to store</param>
@@ -4164,7 +4164,7 @@
          <summary>
             Store a single bit at the specified offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="bit">The value to store at the specified bit offset.</param>
          <param name="offset">The offset of the bit to store.</param>
          <returns>The modified value.</returns>
@@ -4173,7 +4173,7 @@
          <summary>
             Toggles the specified range of bits and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bits to toggle.</param>
          <param name="size">The number of bits to toggle.</param>
          <returns>The modified value.</returns>
@@ -4182,7 +4182,7 @@
          <summary>
             Toggles a bit at the specified offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit location to toggle.</param>
          <returns>The modified value.</returns>
       </member>
@@ -4190,7 +4190,7 @@
          <summary>
             Toggle all the bits specified in the provided bit mask and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -4561,7 +4561,7 @@
          <summary>
             Tests if all of the bits from the bitmask are set on a<see cref="T:System.Int16"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if all of the bits from the bitmask were set.</returns>
          <remarks>
@@ -4572,7 +4572,7 @@
          <summary>
             Tests if any bits from the bitmask are set on a<see cref="T:System.Int16"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if any of the bits from the bitmask were set.</returns>
          <remarks>
@@ -4583,7 +4583,7 @@
          <summary>
             Tests if none of the bits from the bitmask are set on a<see cref="T:System.Int16"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if all of the bits from the bitmask were set.</returns>
          <remarks>
@@ -4598,7 +4598,7 @@
             <see cre="bool"/>
             values with the lease significant bit at index 0.
          </summary>
-         <param name="bits">The
+         <param name="number">The
             <see cref="T:System.Int16"/>
             to convert.
          </param>
@@ -4610,7 +4610,7 @@
             <see cref="T:System.Int16"/>
             into an array of bytes in the specified<see cref="T:Jcd.BitManipulation.Endian"/>.
          </summary>
-         <param name="data">The value to convert to a
+         <param name="number">The value to convert to a
             <see cref="T:System.Byte"/>
             array.
          </param>
@@ -4621,7 +4621,7 @@
          <summary>
             Sets all specified bits to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of where to begin clearing bits.</param>
          <param name="size">The number of bits to clear.</param>
          <returns>The modified value.</returns>
@@ -4630,7 +4630,7 @@
          <summary>
             Sets the specified bit to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit position to set to false/0.</param>
          <returns>The modified value.</returns>
       </member>
@@ -4638,7 +4638,7 @@
          <summary>
             Sets all bits from the provided mask to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bit mask of the bits to clear.</param>
          <returns>The modified value.</returns>
       </member>
@@ -4646,7 +4646,7 @@
          <summary>
             Reads the bits specified and returns the result shifted to the right by the offset.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="offset">The bit offset to start reading from.</param>
          <param name="size">The total number of bits to extract.</param>
          <returns>The value stored in the range of bits specified, right shifted by the offset..</returns>
@@ -4655,7 +4655,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The unshifted extracted bits</returns>
       </member>
@@ -4664,7 +4664,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="shift">The number of bits to right shift the result of applying the<see
             cref="T:Jcd.BitManipulation.BitMask"/>.
          </param>
@@ -4675,7 +4675,7 @@
          <summary>
             Reads a single bit from the specified position.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="offset">The offset of the bit to read.</param>
          <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
          </returns>
@@ -4685,7 +4685,7 @@
          <summary>
             Reads a set of bytes starting at the specified offset within the value.
          </summary>
-         <param name="value">The value to read the bytes from.</param>
+         <param name="number">The value to read the bytes from.</param>
          <param name="offset">The byte offset to starting reading from.</param>
          <param name="size">The requested number of bytes to read.</param>
          <param name="endian">The endianness of the indexing for the byte read.</param>
@@ -4696,7 +4696,7 @@
          <summary>
             Reads a single byte from the value at the specified byte offset.
          </summary>
-         <param name="value">The value to read the byte from.</param>
+         <param name="number">The value to read the byte from.</param>
          <param name="offset">The offset of where to store the byte.</param>
          <param name="endian">The endianness of the byte indexing within the value.</param>
          <returns>The specified byte.</returns>
@@ -4705,7 +4705,7 @@
          <summary>
             Sets all specified bits to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit location to store the value.</param>
          <param name="size">The number of bits to set on.</param>
          <returns>The modified value.</returns>
@@ -4714,7 +4714,7 @@
          <summary>
             Sets the bit at the specified to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bit to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -4722,7 +4722,7 @@
          <summary>
             Sets all specified bits to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -4731,7 +4731,7 @@
          <summary>
             Stores a range of bits to the value, from a source value, and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="source">The value to be stored at the bit location.</param>
          <param name="offset">The bit location to store the value.</param>
          <param name="size">The bit size of the value.</param>
@@ -4745,7 +4745,7 @@
             from a source value to a bit offset and returns the modified
             value.
          </summary>
-         <param name="value">the destination for the stored bits</param>
+         <param name="number">the destination for the stored bits</param>
          <param name="source">The source of the bits to store.</param>
          <param name="offset">The destination offset of where to store the bits.</param>
          <param name="mask">The mask specifying the bits to store</param>
@@ -4755,7 +4755,7 @@
          <summary>
             Store a single bit at the specified offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="bit">The value to store at the specified bit offset.</param>
          <param name="offset">The offset of the bit to store.</param>
          <returns>The modified value.</returns>
@@ -4765,7 +4765,7 @@
          <summary>
             Stores a set of bytes starting at the specified byte offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="bytes">The value to be stored at the byte location.</param>
          <param name="offset">The byte location to store the value.</param>
          <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
@@ -4777,7 +4777,7 @@
          <summary>
             Stores a set of bytes starting at the specified byte offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="bytes">The value to be stored at the byte location.</param>
          <param name="offset">The byte location to store the value.</param>
          <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
@@ -4789,7 +4789,7 @@
          <summary>
             Stores a single byte to the value at the specified byte offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="byte">The
             <see cref="T:System.Byte"/>
             value to store.
@@ -4802,7 +4802,7 @@
          <summary>
             Toggles the specified range of bits and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bits to toggle.</param>
          <param name="size">The number of bits to toggle.</param>
          <returns>The modified value.</returns>
@@ -4811,7 +4811,7 @@
          <summary>
             Toggles a bit at the specified offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit location to toggle.</param>
          <returns>The modified value.</returns>
       </member>
@@ -4819,7 +4819,7 @@
          <summary>
             Toggle all the bits specified in the provided bit mask and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -4888,7 +4888,7 @@
          <summary>
             Tests if all of the bits from the bitmask are set on a<see cref="T:System.Int32"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if all of the bits from the bitmask were set.</returns>
          <remarks>
@@ -4899,7 +4899,7 @@
          <summary>
             Tests if any bits from the bitmask are set on a<see cref="T:System.Int32"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if any of the bits from the bitmask were set.</returns>
          <remarks>
@@ -4910,7 +4910,7 @@
          <summary>
             Tests if none of the bits from the bitmask are set on a<see cref="T:System.Int32"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if all of the bits from the bitmask were set.</returns>
          <remarks>
@@ -4924,7 +4924,7 @@
             to the bit-wise identical
             <see cref="T:System.Single"/>
          </summary>
-         <param name="value">The value to convert.</param>
+         <param name="number">The value to convert.</param>
          <returns>the
             <see cref="T:System.Single"/>
             representation of the bits
@@ -4938,7 +4938,7 @@
             <see cre="bool"/>
             values with the lease significant bit at index 0.
          </summary>
-         <param name="bits">The
+         <param name="number">The
             <see cref="T:System.UInt32"/>
             to convert.
          </param>
@@ -4950,7 +4950,7 @@
             <see cref="T:System.Int32"/>
             into an array of bytes in the specified<see cref="T:Jcd.BitManipulation.Endian"/>.
          </summary>
-         <param name="data">The value to convert to a
+         <param name="number">The value to convert to a
             <see cref="T:System.Byte"/>
             array.
          </param>
@@ -4961,7 +4961,7 @@
          <summary>
             Sets all specified bits to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of where to begin clearing bits.</param>
          <param name="size">The number of bits to clear.</param>
          <returns>The modified value.</returns>
@@ -4970,7 +4970,7 @@
          <summary>
             Sets the specified bit to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit position to set to false/0.</param>
          <returns>The modified value.</returns>
       </member>
@@ -4978,7 +4978,7 @@
          <summary>
             Sets all bits from the provided mask to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bit mask of the bits to clear.</param>
          <returns>The modified value.</returns>
       </member>
@@ -4986,7 +4986,7 @@
          <summary>
             Reads the bits specified and returns the result shifted to the right by the offset.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="offset">The bit offset to start reading from.</param>
          <param name="size">The total number of bits to extract.</param>
          <returns>The value stored in the range of bits specified, right shifted by the offset..</returns>
@@ -4995,7 +4995,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The unshifted extracted bits</returns>
       </member>
@@ -5004,7 +5004,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="shift">The number of bits to right shift the result of applying the<see
             cref="T:Jcd.BitManipulation.BitMask"/>.
          </param>
@@ -5015,7 +5015,7 @@
          <summary>
             Reads a single bit from the specified position.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="offset">The offset of the bit to read.</param>
          <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
          </returns>
@@ -5025,7 +5025,7 @@
          <summary>
             Reads a set of bytes starting at the specified byte location within the value.
          </summary>
-         <param name="value">The value to read the bytes from.</param>
+         <param name="number">The value to read the bytes from.</param>
          <param name="offset">The byte offset to starting reading from.</param>
          <param name="size">The requested number of bytes to read.</param>
          <param name="endian">The endianness of the indexing for the byte read.</param>
@@ -5036,7 +5036,7 @@
          <summary>
             Reads a single byte from the value at the specified byte offset.
          </summary>
-         <param name="value">The value to read the byte from.</param>
+         <param name="number">The value to read the byte from.</param>
          <param name="offset">The offset of where to store the byte.</param>
          <param name="endian">The endianness of the byte indexing within the value.</param>
          <returns>The specified byte.</returns>
@@ -5045,7 +5045,7 @@
          <summary>
             Sets all specified bits to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit location to store the value.</param>
          <param name="size">The number of bits to set on.</param>
          <returns>The modified value.</returns>
@@ -5054,7 +5054,7 @@
          <summary>
             Sets the bit at the specified to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bit to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -5062,7 +5062,7 @@
          <summary>
             Sets all specified bits to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -5071,7 +5071,7 @@
          <summary>
             Stores a range of bits to the value, from a source value, and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="source">The value to be stored at the bit location.</param>
          <param name="offset">The bit location to store the value.</param>
          <param name="size">The bit size of the value.</param>
@@ -5085,7 +5085,7 @@
             from a source value to a bit offset and returns the modified
             value.
          </summary>
-         <param name="value">the destination for the stored bits</param>
+         <param name="number">the destination for the stored bits</param>
          <param name="source">The source of the bits to store.</param>
          <param name="offset">The destination offset of where to store the bits.</param>
          <param name="mask">The mask specifying the bits to store</param>
@@ -5095,7 +5095,7 @@
          <summary>
             Store a single bit at the specified offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="bit">The value to store at the specified bit offset.</param>
          <param name="offset">The offset of the bit to store.</param>
          <returns>The modified value.</returns>
@@ -5105,7 +5105,7 @@
          <summary>
             Stores a set of bytes starting at the specified byte offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="bytes">The value to be stored at the byte location.</param>
          <param name="offset">The byte location to store the value.</param>
          <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
@@ -5117,7 +5117,7 @@
          <summary>
             Stores a set of bytes starting at the specified byte offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="bytes">The value to be stored at the byte location.</param>
          <param name="offset">The byte location to store the value.</param>
          <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
@@ -5129,7 +5129,7 @@
          <summary>
             Stores a single byte to the value at the specified byte offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="byte">The
             <see cref="T:System.Byte"/>
             value to store.
@@ -5142,7 +5142,7 @@
          <summary>
             Toggles the specified range of bits and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bits to toggle.</param>
          <param name="size">The number of bits to toggle.</param>
          <returns>The modified value.</returns>
@@ -5151,7 +5151,7 @@
          <summary>
             Toggles a bit at the specified offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit location to toggle.</param>
          <returns>The modified value.</returns>
       </member>
@@ -5159,7 +5159,7 @@
          <summary>
             Toggle all the bits specified in the provided bit mask and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -5233,7 +5233,7 @@
          <summary>
             Tests if all of the bits from the bitmask are set on a<see cref="T:System.Int64"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if all of the bits from the bitmask were set.</returns>
       </member>
@@ -5241,7 +5241,7 @@
          <summary>
             Tests if any bits from the bitmask are set on a<see cref="T:System.Int64"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if any of the bits from the bitmask were set.</returns>
       </member>
@@ -5249,7 +5249,7 @@
          <summary>
             Tests if none of the bits from the bitmask are set on a<see cref="T:System.Int64"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if all of the bits from the bitmask were set.</returns>
       </member>
@@ -5260,7 +5260,7 @@
             to the bit-wise identical
             <see cref="T:System.Double"/>
          </summary>
-         <param name="value">The value to convert.</param>
+         <param name="number">The value to convert.</param>
          <returns>the
             <see cref="T:System.Double"/>
             representation of the bits
@@ -5274,7 +5274,7 @@
             <see cre="bool"/>
             values with the lease significant bit at index 0.
          </summary>
-         <param name="bits">The
+         <param name="number">The
             <see cref="T:System.Int64"/>
             to convert.
          </param>
@@ -5286,7 +5286,7 @@
             <see cref="T:System.Int64"/>
             into an array of bytes in the specified<see cref="T:Jcd.BitManipulation.Endian"/>.
          </summary>
-         <param name="data">The value to convert to a
+         <param name="number">The value to convert to a
             <see cref="T:System.Byte"/>
             array.
          </param>
@@ -5297,7 +5297,7 @@
          <summary>
             Sets all specified bits to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of where to begin clearing bits.</param>
          <param name="size">The number of bits to clear.</param>
          <returns>The modified value.</returns>
@@ -5306,7 +5306,7 @@
          <summary>
             Sets the specified bit to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit position to set to false/0.</param>
          <returns>The modified value.</returns>
       </member>
@@ -5314,7 +5314,7 @@
          <summary>
             Sets all bits from the provided mask to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bit mask of the bits to clear.</param>
          <returns>The modified value.</returns>
       </member>
@@ -5322,7 +5322,7 @@
          <summary>
             Reads the bits specified and returns the result shifted to the right by the offset.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="offset">The bit offset to start reading from.</param>
          <param name="size">The total number of bits to extract.</param>
          <returns>The value stored in the range of bits specified, right shifted by the offset..</returns>
@@ -5331,7 +5331,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The unshifted extracted bits</returns>
       </member>
@@ -5340,7 +5340,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="shift">The bit offset to start reading from.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The extracted bits right shifted by the specified amount.</returns>
@@ -5349,7 +5349,7 @@
          <summary>
             Reads a single bit from the specified position.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="offset">The offset of the bit to read.</param>
          <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
          </returns>
@@ -5359,7 +5359,7 @@
          <summary>
             Reads a set of bytes starting at the specified byte location within the value.
          </summary>
-         <param name="value">The value to read the bytes from.</param>
+         <param name="number">The value to read the bytes from.</param>
          <param name="offset">The byte offset to starting reading from.</param>
          <param name="size">The requested number of bytes to read.</param>
          <param name="endian">The endianness of the indexing for the byte read.</param>
@@ -5370,7 +5370,7 @@
          <summary>
             Reads a single byte from the value at the specified byte offset.
          </summary>
-         <param name="value">The value to read the byte from.</param>
+         <param name="number">The value to read the byte from.</param>
          <param name="offset">The offset of where to store the byte.</param>
          <param name="endian">The endianness of the byte indexing within the value.</param>
          <returns>The specified byte.</returns>
@@ -5379,7 +5379,7 @@
          <summary>
             Sets all specified bits to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit location to store the value.</param>
          <param name="size">The number of bits to set on.</param>
          <returns>The modified value.</returns>
@@ -5388,7 +5388,7 @@
          <summary>
             Sets the bit at the specified to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bit to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -5396,7 +5396,7 @@
          <summary>
             Sets all specified bits to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -5405,7 +5405,7 @@
          <summary>
             Stores a range of bits to the value, from a source value, and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="source">The value to be stored at the bit location.</param>
          <param name="offset">The bit location to store the value.</param>
          <param name="size">The bit size of the value.</param>
@@ -5419,7 +5419,7 @@
             from a source value to a bit offset and returns the modified
             value.
          </summary>
-         <param name="value">the destination for the stored bits</param>
+         <param name="number">the destination for the stored bits</param>
          <param name="source">The source of the bits to store.</param>
          <param name="offset">The destination offset of where to store the bits.</param>
          <param name="mask">The mask specifying the bits to store</param>
@@ -5429,7 +5429,7 @@
          <summary>
             Store a single bit at the specified offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="bit">The value to store at the specified bit offset.</param>
          <param name="offset">The offset of the bit to store.</param>
          <returns>The modified value.</returns>
@@ -5439,7 +5439,7 @@
          <summary>
             Stores a set of bytes starting at the specified byte offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="bytes">The value to be stored at the byte location.</param>
          <param name="offset">The byte location to store the value.</param>
          <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
@@ -5451,7 +5451,7 @@
          <summary>
             Stores a set of bytes starting at the specified byte offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="bytes">The value to be stored at the byte location.</param>
          <param name="offset">The byte location to store the value.</param>
          <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
@@ -5463,7 +5463,7 @@
          <summary>
             Stores a single byte to the value at the specified byte offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="byte">The
             <see cref="T:System.Byte"/>
             value to store.
@@ -5476,7 +5476,7 @@
          <summary>
             Toggles the specified range of bits and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bits to toggle.</param>
          <param name="size">The number of bits to toggle.</param>
          <returns>The modified value.</returns>
@@ -5485,7 +5485,7 @@
          <summary>
             Toggles a bit at the specified offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit location to toggle.</param>
          <returns>The modified value.</returns>
       </member>
@@ -5493,7 +5493,7 @@
          <summary>
             Toggle all the bits specified in the provided bit mask and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -6011,7 +6011,7 @@
          <summary>
             Converts bytes into a<see cref="T:System.Byte"/>, discarding any excess data.
          </summary>
-         <param name="data">the bytes to convert.</param>
+         <param name="span">the bytes to convert.</param>
          <param name="endian">The endian for the bytes.</param>
          <returns>The converted
             <see cref="T:System.Byte"/>
@@ -6022,7 +6022,7 @@
          <summary>
             Converts bytes into a<see cref="T:System.SByte"/>, discarding any excess data.
          </summary>
-         <param name="data">the bytes to convert.</param>
+         <param name="span">the bytes to convert.</param>
          <param name="endian">The endian for the bytes.</param>
          <returns>The converted
             <see cref="T:System.SByte"/>
@@ -6033,7 +6033,7 @@
          <summary>
             Converts bytes into a<see cref="T:System.UInt16"/>, discarding any excess data.
          </summary>
-         <param name="data">the bytes to convert.</param>
+         <param name="span">the bytes to convert.</param>
          <param name="endian">The endian for the bytes.</param>
          <param name="align">Indicates how to align partial data</param>
          <returns>The converted
@@ -6045,7 +6045,7 @@
          <summary>
             Converts bytes into a<see cref="T:System.Int16"/>, discarding any excess data.
          </summary>
-         <param name="data">the bytes to convert.</param>
+         <param name="span">the bytes to convert.</param>
          <param name="endian">The endian for the bytes.</param>
          <param name="align">Indicates how to align partial data</param>
          <returns>The converted
@@ -6057,7 +6057,7 @@
          <summary>
             Converts bytes into a<see cref="T:System.UInt32"/>, discarding any excess data.
          </summary>
-         <param name="data">the bytes to convert.</param>
+         <param name="span">the bytes to convert.</param>
          <param name="endian">The endian for the bytes.</param>
          <param name="align">Indicates how to align partial data</param>
          <returns>The converted
@@ -6069,7 +6069,7 @@
          <summary>
             Converts bytes into a<see cref="T:System.Int32"/>, discarding any excess data.
          </summary>
-         <param name="data">the bytes to convert.</param>
+         <param name="span">the bytes to convert.</param>
          <param name="endian">The endian for the bytes.</param>
          <param name="align">Indicates how to align partial data</param>
          <returns>The converted
@@ -6081,7 +6081,7 @@
          <summary>
             Converts bytes into a<see cref="T:System.UInt64"/>, discarding any excess data.
          </summary>
-         <param name="data">the bytes to convert.</param>
+         <param name="span">the bytes to convert.</param>
          <param name="endian">The endian for the bytes.</param>
          <param name="align">Indicates how to align partial data</param>
          <returns>The converted
@@ -6093,7 +6093,7 @@
          <summary>
             Converts bytes into a<see cref="T:System.Int64"/>, discarding any excess data.
          </summary>
-         <param name="data">the bytes to convert.</param>
+         <param name="span">the bytes to convert.</param>
          <param name="endian">The endian for the bytes.</param>
          <param name="align">Indicates how to align partial data</param>
          <returns>The converted
@@ -6105,7 +6105,7 @@
          <summary>
             Converts bytes into a double, discarding any excess data.
          </summary>
-         <param name="data">the bytes to convert.</param>
+         <param name="span">the bytes to convert.</param>
          <param name="endian">
             A setting indicating the endianness of the source data. The default is Endian.Little.
          </param>
@@ -6117,7 +6117,7 @@
          <summary>
             Converts bytes into a double, discarding any excess data.
          </summary>
-         <param name="data">the bytes to convert.</param>
+         <param name="span">the bytes to convert.</param>
          <param name="endian">
             A setting indicating the endianness of the source data. The default is Endian.Little.
          </param>
@@ -6167,7 +6167,7 @@
          <summary>
             Tests if all of the bits from the bitmask are set on a<see cref="T:System.SByte"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if all of the bits from the bitmask were set.</returns>
          <remarks>
@@ -6178,7 +6178,7 @@
          <summary>
             Tests if any bits from the bitmask are set on a<see cref="T:System.SByte"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if any of the bits from the bitmask were set.</returns>
          <remarks>
@@ -6189,7 +6189,7 @@
          <summary>
             Tests if none of the bits from the bitmask are set on a<see cref="T:System.SByte"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if all of the bits from the bitmask were set.</returns>
          <remarks>
@@ -6204,7 +6204,7 @@
             <see cre="bool"/>
             values with the lease significant bit at index 0.
          </summary>
-         <param name="bits">The
+         <param name="number">The
             <see cref="T:System.SByte"/>
             to convert.
          </param>
@@ -6216,7 +6216,7 @@
             <see cref="T:System.SByte"/>
             into an array of bytes in the specified<see cref="T:Jcd.BitManipulation.Endian"/>.
          </summary>
-         <param name="data">The value to convert to a
+         <param name="number">The value to convert to a
             <see cref="T:System.Byte"/>
             array.
          </param>
@@ -6226,7 +6226,7 @@
          <summary>
             Sets all specified bits to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of where to begin clearing bits.</param>
          <param name="size">The number of bits to clear.</param>
          <returns>The modified value.</returns>
@@ -6235,7 +6235,7 @@
          <summary>
             Sets the specified bit to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit position to set to false/0.</param>
          <returns>The modified value.</returns>
       </member>
@@ -6243,7 +6243,7 @@
          <summary>
             Sets all bits from the provided mask to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bit mask of the bits to clear.</param>
          <returns>The modified value.</returns>
       </member>
@@ -6251,7 +6251,7 @@
          <summary>
             Reads the bits specified and returns the result shifted to the right by the offset.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="offset">The bit offset to start reading from.</param>
          <param name="size">The total number of bits to extract.</param>
          <returns>The value stored in the range of bits specified, right shifted by the offset..</returns>
@@ -6260,7 +6260,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The unshifted extracted bits</returns>
       </member>
@@ -6269,7 +6269,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="shift">The number of bits to right shift the result of applying the<see
             cref="T:Jcd.BitManipulation.BitMask"/>.
          </param>
@@ -6280,7 +6280,7 @@
          <summary>
             Reads a single bit from the specified position.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="offset">The offset of the bit to read.</param>
          <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
          </returns>
@@ -6289,7 +6289,7 @@
          <summary>
             Sets all specified bits to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit location to store the value.</param>
          <param name="size">The number of bits to set on.</param>
          <returns>The modified value.</returns>
@@ -6298,7 +6298,7 @@
          <summary>
             Sets the bit at the specified to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bit to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -6306,7 +6306,7 @@
          <summary>
             Sets all specified bits to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -6315,7 +6315,7 @@
          <summary>
             Stores a range of bits to the value, from a source value, and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="source">The value to be stored at the bit location.</param>
          <param name="offset">The bit location to store the value.</param>
          <param name="size">The bit size of the value.</param>
@@ -6329,7 +6329,7 @@
             from a source value to a bit offset and returns the modified
             value.
          </summary>
-         <param name="value">the destination for the stored bits</param>
+         <param name="number">the destination for the stored bits</param>
          <param name="source">The source of the bits to store.</param>
          <param name="offset">The destination offset of where to store the bits.</param>
          <param name="mask">The mask specifying the bits to store</param>
@@ -6339,7 +6339,7 @@
          <summary>
             Store a single bit at the specified offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="bit">The value to store at the specified bit offset.</param>
          <param name="offset">The offset of the bit to store.</param>
          <returns>The modified value.</returns>
@@ -6348,7 +6348,7 @@
          <summary>
             Toggles the specified range of bits and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bits to toggle.</param>
          <param name="size">The number of bits to toggle.</param>
          <returns>The modified value.</returns>
@@ -6357,7 +6357,7 @@
          <summary>
             Toggles a bit at the specified offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit location to toggle.</param>
          <returns>The modified value.</returns>
       </member>
@@ -6365,7 +6365,7 @@
          <summary>
             Toggle all the bits specified in the provided bit mask and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -6379,7 +6379,7 @@
          <summary>
             Tests if all of the bits from the bitmask are set on a<see cref="T:System.Single"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if all of the bits from the bitmask were set.</returns>
          <remarks>
@@ -6390,7 +6390,7 @@
          <summary>
             Tests if any bits from the bitmask are set on a<see cref="T:System.Single"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if any of the bits from the bitmask were set.</returns>
          <remarks>
@@ -6401,7 +6401,7 @@
          <summary>
             Tests if none of the bits from the bitmask are set on a<see cref="T:System.Single"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if all of the bits from the bitmask were set.</returns>
          <remarks>
@@ -6415,7 +6415,7 @@
             to the bit-wise identical
             <see cref="T:System.UInt32"/>
          </summary>
-         <param name="value">The value to convert.</param>
+         <param name="number">The value to convert.</param>
          <returns>the
             <see cref="T:System.UInt32"/>
             representation of the underlying bits
@@ -6428,7 +6428,7 @@
             to the bit-wise identical
             <see cref="T:System.Int32"/>
          </summary>
-         <param name="value">The value to convert.</param>
+         <param name="number">The value to convert.</param>
          <returns>the
             <see cref="T:System.Int32"/>
             representation of the underlying bits
@@ -6442,7 +6442,7 @@
             <see cre="bool"/>
             values with the lease significant bit at index 0.
          </summary>
-         <param name="bits">The value to convert to an array of
+         <param name="number">The value to convert to an array of
             <see cref="T:System.Boolean"/>
             values.
          </param>
@@ -6454,7 +6454,7 @@
             <see cref="T:System.Single"/>
             into an array of bytes in the specified<see cref="T:Jcd.BitManipulation.Endian"/>.
          </summary>
-         <param name="data">The value to convert to a
+         <param name="number">The value to convert to a
             <see cref="T:System.Byte"/>
             array.
          </param>
@@ -6465,7 +6465,7 @@
          <summary>
             Sets all specified bits to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of where to begin clearing bits.</param>
          <param name="size">The number of bits to clear.</param>
          <returns>The modified value.</returns>
@@ -6474,7 +6474,7 @@
          <summary>
             Sets the specified bit to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit position to set to false/0.</param>
          <returns>The modified value.</returns>
       </member>
@@ -6482,7 +6482,7 @@
          <summary>
             Sets all bits from the provided mask to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bit mask of the bits to clear.</param>
          <returns>The modified value.</returns>
       </member>
@@ -6490,7 +6490,7 @@
          <summary>
             Reads the bits specified and returns the result shifted to the right by the offset.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="offset">The bit offset to start reading from.</param>
          <param name="size">The total number of bits to extract.</param>
          <returns>The value stored in the range of bits specified, right shifted by the offset..</returns>
@@ -6499,7 +6499,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The ushifted extracted bits</returns>
       </member>
@@ -6508,7 +6508,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="shift">The bit offset to start reading from.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The extracted bits right shifted by the specified amount.</returns>
@@ -6517,7 +6517,7 @@
          <summary>
             Reads a single bit from the specified position.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="offset">The offset of the bit to read.</param>
          <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
          </returns>
@@ -6527,7 +6527,7 @@
          <summary>
             Reads a set of bytes starting at the specified byte location within the value.
          </summary>
-         <param name="value">The value to read the bytes from.</param>
+         <param name="number">The value to read the bytes from.</param>
          <param name="offset">The byte offset to starting reading from.</param>
          <param name="size">The requested number of bytes to read.</param>
          <param name="endian">The endianness of the indexing for the byte read.</param>
@@ -6538,7 +6538,7 @@
          <summary>
             Reads a single byte from the value at the specified byte offset.
          </summary>
-         <param name="value">The value to read the byte from.</param>
+         <param name="number">The value to read the byte from.</param>
          <param name="offset">The offset of where to store the byte.</param>
          <param name="endian">The endianness of the byte indexing within the value.</param>
          <returns>The specified byte.</returns>
@@ -6547,7 +6547,7 @@
          <summary>
             Sets all specified bits to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit location to store the value.</param>
          <param name="size">The number of bits to set on.</param>
          <returns>The modified value.</returns>
@@ -6556,7 +6556,7 @@
          <summary>
             Sets the bit at the specified to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bit to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -6564,7 +6564,7 @@
          <summary>
             Sets all specified bits to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -6573,7 +6573,7 @@
          <summary>
             Stores a range of bits to the value, from a source value, and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="source">The value to be stored at the bit location.</param>
          <param name="offset">The bit location to store the value.</param>
          <param name="size">The bit size of the value.</param>
@@ -6587,7 +6587,7 @@
             from a source value to a bit offset and returns the modified
             value.
          </summary>
-         <param name="value">the destination for the stored bits</param>
+         <param name="number">the destination for the stored bits</param>
          <param name="source">The source of the bits to store.</param>
          <param name="offset">The destination offset of where to store the bits.</param>
          <param name="mask">The mask specifying the bits to store</param>
@@ -6597,7 +6597,7 @@
          <summary>
             Store a single bit at the specified offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="bit">The value to store at the specified bit offset.</param>
          <param name="offset">The offset of the bit to store.</param>
          <returns>The modified value.</returns>
@@ -6607,7 +6607,7 @@
          <summary>
             Stores a set of bytes starting at the specified byte offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="bytes">The value to be stored at the byte location.</param>
          <param name="offset">The byte location to store the value.</param>
          <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
@@ -6619,7 +6619,7 @@
          <summary>
             Stores a set of bytes starting at the specified byte offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="bytes">The value to be stored at the byte location.</param>
          <param name="offset">The byte location to store the value.</param>
          <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
@@ -6631,7 +6631,7 @@
          <summary>
             Stores a single byte to the value at the specified byte offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="byte">The
             <see cref="T:System.Byte"/>
             value to store.
@@ -6644,7 +6644,7 @@
          <summary>
             Toggles the specified range of bits and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bits to toggle.</param>
          <param name="size">The number of bits to toggle.</param>
          <returns>The modified value.</returns>
@@ -6653,7 +6653,7 @@
          <summary>
             Toggles a bit at the specified offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit location to toggle.</param>
          <returns>The modified value.</returns>
       </member>
@@ -6661,7 +6661,7 @@
          <summary>
             Toggle all the bits specified in the provided bit mask and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -6727,7 +6727,7 @@
          <summary>
             Tests if all of the bits from the bitmask are set on a<see cref="T:System.UInt16"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if all of the bits from the bitmask were set.</returns>
          <remarks>
@@ -6738,7 +6738,7 @@
          <summary>
             Tests if any bits from the bitmask are set on a<see cref="T:System.UInt16"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if any of the bits from the bitmask were set.</returns>
          <remarks>
@@ -6749,7 +6749,7 @@
          <summary>
             Tests if none of the bits from the bitmask are set on a<see cref="T:System.UInt16"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if all of the bits from the bitmask were set.</returns>
          <remarks>
@@ -6764,7 +6764,7 @@
             <see cre="bool"/>
             values with the lease significant bit at index 0.
          </summary>
-         <param name="bits">the bits of the
+         <param name="number">the bits of the
             <see cref="T:System.UInt16"/>
             to convert.
          </param>
@@ -6776,7 +6776,7 @@
             <see cref="T:System.UInt16"/>
             into an array of bytes in the specified<see cref="T:Jcd.BitManipulation.Endian"/>.
          </summary>
-         <param name="data">The value to convert to a
+         <param name="number">The value to convert to a
             <see cref="T:System.Byte"/>
             array.
          </param>
@@ -6787,7 +6787,7 @@
          <summary>
             Sets the specified bit to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit position to set to false/0.</param>
          <returns>The modified value.</returns>
       </member>
@@ -6795,7 +6795,7 @@
          <summary>
             Sets all bits from the provided mask to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bit mask of the bits to clear.</param>
          <returns>The modified value.</returns>
       </member>
@@ -6803,7 +6803,7 @@
          <summary>
             Reads the bits specified and returns the result shifted to the right by the offset.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="offset">The bit offset to start reading from.</param>
          <param name="size">The total number of bits to extract.</param>
          <returns>The value stored in the range of bits specified, right shifted by the offset..</returns>
@@ -6812,7 +6812,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The unshifted extracted bits</returns>
       </member>
@@ -6821,7 +6821,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="shift">The bit offset to start reading from.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The extracted bits right shifted by the specified amount.</returns>
@@ -6830,7 +6830,7 @@
          <summary>
             Reads a single bit from the specified position.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="offset">The offset of the bit to read.</param>
          <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
          </returns>
@@ -6840,7 +6840,7 @@
          <summary>
             Reads a set of bytes starting at the specified byte location within the value.
          </summary>
-         <param name="value">The value to read the bytes from.</param>
+         <param name="number">The value to read the bytes from.</param>
          <param name="offset">The byte offset to starting reading from.</param>
          <param name="size">The requested number of bytes to read.</param>
          <param name="endian">The endianness of the indexing for the byte read.</param>
@@ -6851,7 +6851,7 @@
          <summary>
             Reads a single byte from the value at the specified byte offset.
          </summary>
-         <param name="value">The value to read the byte from.</param>
+         <param name="number">The value to read the byte from.</param>
          <param name="offset">The offset of where to store the byte.</param>
          <param name="endian">The endianness of the byte indexing within the value.</param>
          <returns>The specified byte.</returns>
@@ -6860,7 +6860,7 @@
          <summary>
             Sets all specified bits to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit location to store the value.</param>
          <param name="size">The number of bits to set on.</param>
          <returns>The modified value.</returns>
@@ -6869,7 +6869,7 @@
          <summary>
             Sets the bit at the specified to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bit to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -6878,7 +6878,7 @@
          <summary>
             Stores a single byte to the value at the specified byte offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="byte">The
             <see cref="T:System.Byte"/>
             value to store.
@@ -6892,7 +6892,7 @@
          <summary>
             Stores a set of bytes starting at the specified byte offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="bytes">The value to be stored at the byte location.</param>
          <param name="offset">The byte location to store the value.</param>
          <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
@@ -6904,7 +6904,7 @@
          <summary>
             Stores a set of bytes starting at the specified byte offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="bytes">The value to be stored at the byte location.</param>
          <param name="offset">The byte location to store the value.</param>
          <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
@@ -6915,7 +6915,7 @@
          <summary>
             Sets all specified bits to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -6924,7 +6924,7 @@
          <summary>
             Stores a range of bits to the value, from a source value, and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="source">The value to be stored at the bit location.</param>
          <param name="offset">The bit location to store the value.</param>
          <param name="size">The bit size of the value.</param>
@@ -6938,7 +6938,7 @@
             from a source value to a bit offset and returns the modified
             value.
          </summary>
-         <param name="value">the destination for the stored bits</param>
+         <param name="number">the destination for the stored bits</param>
          <param name="source">The source of the bits to store.</param>
          <param name="offset">The destination offset of where to store the bits.</param>
          <param name="mask">The mask specifying the bits to store</param>
@@ -6948,7 +6948,7 @@
          <summary>
             Store a single bit at the specified offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="bit">The value to store at the specified bit offset.</param>
          <param name="offset">The offset of the bit to store.</param>
          <returns>The modified value.</returns>
@@ -6957,7 +6957,7 @@
          <summary>
             Toggles the specified range of bits and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bits to toggle.</param>
          <param name="size">The number of bits to toggle.</param>
          <returns>The modified value.</returns>
@@ -6966,7 +6966,7 @@
          <summary>
             Toggles a bit at the specified offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit location to toggle.</param>
          <returns>The modified value.</returns>
       </member>
@@ -6974,7 +6974,7 @@
          <summary>
             Toggle all the bits specified in the provided bit mask and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -6982,7 +6982,7 @@
          <summary>
             Sets all specified bits to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of where to begin clearing bits.</param>
          <param name="size">The number of bits to clear.</param>
          <returns>The modified value.</returns>
@@ -7052,7 +7052,7 @@
          <summary>
             Tests if all of the bits from the bitmask are set on a<see cref="T:System.UInt32"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if all of the bits from the bitmask were set.</returns>
          <remarks>
@@ -7063,7 +7063,7 @@
          <summary>
             Tests if any bits from the bitmask are set on a<see cref="T:System.UInt32"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if any of the bits from the bitmask were set.</returns>
          <remarks>
@@ -7074,7 +7074,7 @@
          <summary>
             Tests if none of the bits from the bitmask are set on a<see cref="T:System.UInt32"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if all of the bits from the bitmask were set.</returns>
          <remarks>
@@ -7088,7 +7088,7 @@
             to the bit-wise identical
             <see cref="T:System.Single"/>
          </summary>
-         <param name="value">The value to convert.</param>
+         <param name="number">The value to convert.</param>
          <returns>the
             <see cref="T:System.Single"/>
             representation of the bits
@@ -7102,7 +7102,7 @@
             <see cre="bool"/>
             values with the lease significant bit at index 0.
          </summary>
-         <param name="bits">The
+         <param name="number">The
             <see cref="T:System.UInt32"/>
             to convert.
          </param>
@@ -7114,7 +7114,7 @@
             <see cref="T:System.UInt32"/>
             into an array of bytes in the specified<see cref="T:Jcd.BitManipulation.Endian"/>.
          </summary>
-         <param name="data">The value to convert to a
+         <param name="number">The value to convert to a
             <see cref="T:System.Byte"/>
             array.
          </param>
@@ -7125,7 +7125,7 @@
          <summary>
             Sets all specified bits to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of where to begin clearing bits.</param>
          <param name="size">The number of bits to clear.</param>
          <returns>The modified value.</returns>
@@ -7134,7 +7134,7 @@
          <summary>
             Sets the specified bit to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit position to set to false/0.</param>
          <returns>The modified value.</returns>
       </member>
@@ -7142,7 +7142,7 @@
          <summary>
             Sets all bits from the provided mask to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bit mask of the bits to clear.</param>
          <returns>The modified value.</returns>
       </member>
@@ -7150,7 +7150,7 @@
          <summary>
             Reads the bits specified and returns the result shifted to the right by the offset.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="offset">The bit offset to start reading from.</param>
          <param name="size">The total number of bits to extract.</param>
          <returns>The value stored in the range of bits specified, right shifted by the offset..</returns>
@@ -7159,7 +7159,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The unshifted extracted bits</returns>
       </member>
@@ -7168,7 +7168,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="shift">The bit offset to start reading from.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The extracted bits right shifted by the specified amount.</returns>
@@ -7177,7 +7177,7 @@
          <summary>
             Reads a single bit from the specified position.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="offset">The offset of the bit to read.</param>
          <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
          </returns>
@@ -7187,7 +7187,7 @@
          <summary>
             Reads a set of bytes starting at the specified byte location within the value.
          </summary>
-         <param name="value">The value to read the bytes from.</param>
+         <param name="number">The value to read the bytes from.</param>
          <param name="offset">The byte offset to starting reading from.</param>
          <param name="size">The requested number of bytes to read.</param>
          <param name="endian">The endianness of the indexing for the byte read.</param>
@@ -7198,7 +7198,7 @@
          <summary>
             Reads a single byte from the value at the specified byte offset.
          </summary>
-         <param name="value">The value to read the byte from.</param>
+         <param name="number">The value to read the byte from.</param>
          <param name="offset">The offset of where to store the byte.</param>
          <param name="endian">The endianness of the byte indexing within the value.</param>
          <returns>The specified byte.</returns>
@@ -7207,7 +7207,7 @@
          <summary>
             Sets all specified bits to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit location to store the value.</param>
          <param name="size">The number of bits to set on.</param>
          <returns>The modified value.</returns>
@@ -7216,7 +7216,7 @@
          <summary>
             Sets the bit at the specified to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bit to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -7224,7 +7224,7 @@
          <summary>
             Sets all specified bits to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -7233,7 +7233,7 @@
          <summary>
             Stores a range of bits to the value, from a source value, and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="source">The value to be stored at the bit location.</param>
          <param name="offset">The bit location to store the value.</param>
          <param name="size">The bit size of the value.</param>
@@ -7247,7 +7247,7 @@
             from a source value to a bit offset and returns the modified
             value.
          </summary>
-         <param name="value">the destination for the stored bits</param>
+         <param name="number">the destination for the stored bits</param>
          <param name="source">The source of the bits to store.</param>
          <param name="offset">The destination offset of where to store the bits.</param>
          <param name="mask">The mask specifying the bits to store</param>
@@ -7257,7 +7257,7 @@
          <summary>
             Store a single bit at the specified offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="bit">The value to store at the specified bit offset.</param>
          <param name="offset">The offset of the bit to store.</param>
          <returns>The modified value.</returns>
@@ -7267,7 +7267,7 @@
          <summary>
             Stores a set of bytes starting at the specified byte offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="bytes">The value to be stored at the byte location.</param>
          <param name="offset">The byte location to store the value.</param>
          <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
@@ -7279,7 +7279,7 @@
          <summary>
             Stores a set of bytes starting at the specified byte offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="bytes">The value to be stored at the byte location.</param>
          <param name="offset">The byte location to store the value.</param>
          <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
@@ -7291,7 +7291,7 @@
          <summary>
             Stores a single byte to the value at the specified byte offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="byte">The
             <see cref="T:System.Byte"/>
             value to store.
@@ -7304,7 +7304,7 @@
          <summary>
             Toggles the specified range of bits and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bits to toggle.</param>
          <param name="size">The number of bits to toggle.</param>
          <returns>The modified value.</returns>
@@ -7313,7 +7313,7 @@
          <summary>
             Toggles a bit at the specified offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit location to toggle.</param>
          <returns>The modified value.</returns>
       </member>
@@ -7321,7 +7321,7 @@
          <summary>
             Toggle all the bits specified in the provided bit mask and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -7397,7 +7397,7 @@
          <summary>
             Tests if all of the bits from the bitmask are set on a<see cref="T:System.UInt64"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if all of the bits from the bitmask were set.</returns>
       </member>
@@ -7405,7 +7405,7 @@
          <summary>
             Tests if any bits from the bitmask are set on a<see cref="T:System.UInt64"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if any of the bits from the bitmask were set.</returns>
       </member>
@@ -7413,7 +7413,7 @@
          <summary>
             Tests if none of the bits from the bitmask are set on a<see cref="T:System.UInt64"/>.
          </summary>
-         <param name="data">The data to inspect.</param>
+         <param name="number">The data to inspect.</param>
          <param name="bitmask">The bits to test.</param>
          <returns>True if all of the bits from the bitmask were set.</returns>
       </member>
@@ -7424,7 +7424,7 @@
             to the bit-wise identical
             <see cref="T:System.Double"/>
          </summary>
-         <param name="value">The value to convert.</param>
+         <param name="number">The value to convert.</param>
          <returns>the
             <see cref="T:System.Double"/>
             representation of the bits
@@ -7438,7 +7438,7 @@
             <see cre="bool"/>
             values with the lease significant bit at index 0.
          </summary>
-         <param name="bits">The value to convert to an array of
+         <param name="number">The value to convert to an array of
             <see cref="T:System.Boolean"/>
             values.
          </param>
@@ -7450,7 +7450,7 @@
             <see cref="T:System.UInt64"/>
             into an array of bytes in the specified<see cref="T:Jcd.BitManipulation.Endian"/>.
          </summary>
-         <param name="data">The value to convert to a
+         <param name="number">The value to convert to a
             <see cref="T:System.Byte"/>
             array.
          </param>
@@ -7461,7 +7461,7 @@
          <summary>
             Sets all specified bits to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of where to begin clearing bits.</param>
          <param name="size">The number of bits to clear.</param>
          <returns>The modified value.</returns>
@@ -7470,7 +7470,7 @@
          <summary>
             Sets the specified bit to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit position to set to false/0.</param>
          <returns>The modified value.</returns>
       </member>
@@ -7478,7 +7478,7 @@
          <summary>
             Sets all bits from the provided mask to "off" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bit mask of the bits to clear.</param>
          <returns>The modified value.</returns>
       </member>
@@ -7486,7 +7486,7 @@
          <summary>
             Reads the bits specified and returns the result shifted to the right by the offset.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="offset">The bit offset to start reading from.</param>
          <param name="size">The total number of bits to extract.</param>
          <returns>The value stored in the range of bits specified, right shifted by the offset..</returns>
@@ -7495,7 +7495,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The unshifted extracted bits</returns>
       </member>
@@ -7504,7 +7504,7 @@
          <summary>
             Extract a subset of bits specified by a bitmask and right align the bits by the offset.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="shift">The bit offset to start reading from.</param>
          <param name="mask">The bitmask specifying which bits to read.</param>
          <returns>The extracted bits right shifted by the specified amount.</returns>
@@ -7513,7 +7513,7 @@
          <summary>
             Reads a single bit from the specified position.
          </summary>
-         <param name="value">The source of the bits to read.</param>
+         <param name="number">The source of the bits to read.</param>
          <param name="offset">The offset of the bit to read.</param>
          <returns>The bit at the specified position returned as a<see cref="T:System.Boolean"/>.
          </returns>
@@ -7523,7 +7523,7 @@
          <summary>
             Reads a set of bytes starting at the specified byte location within the value.
          </summary>
-         <param name="value">The value to read the bytes from.</param>
+         <param name="number">The value to read the bytes from.</param>
          <param name="offset">The byte offset to starting reading from.</param>
          <param name="size">The requested number of bytes to read.</param>
          <param name="endian">The endianness of the indexing for the byte read.</param>
@@ -7534,7 +7534,7 @@
          <summary>
             Reads a single byte from the value at the specified byte offset.
          </summary>
-         <param name="value">The value to read the byte from.</param>
+         <param name="number">The value to read the byte from.</param>
          <param name="offset">The offset of where to store the byte.</param>
          <param name="endian">The endianness of the byte indexing within the value.</param>
          <returns>The specified byte.</returns>
@@ -7543,7 +7543,7 @@
          <summary>
             Sets all specified bits to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit location to store the value.</param>
          <param name="size">The number of bits to set on.</param>
          <returns>The modified value.</returns>
@@ -7552,7 +7552,7 @@
          <summary>
             Sets the bit at the specified to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bit to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -7560,7 +7560,7 @@
          <summary>
             Sets all specified bits to "on" and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
          <returns>The modified value.</returns>
       </member>
@@ -7569,7 +7569,7 @@
          <summary>
             Stores a range of bits to the value, from a source value, and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="source">The value to be stored at the bit location.</param>
          <param name="offset">The bit location to store the value.</param>
          <param name="size">The bit size of the value.</param>
@@ -7583,7 +7583,7 @@
             from a source value to a bit offset and returns the modified
             value.
          </summary>
-         <param name="value">the destination for the stored bits</param>
+         <param name="number">the destination for the stored bits</param>
          <param name="source">The source of the bits to store.</param>
          <param name="offset">The destination offset of where to store the bits.</param>
          <param name="mask">The mask specifying the bits to store</param>
@@ -7593,7 +7593,7 @@
          <summary>
             Store a single bit at the specified offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="bit">The value to store at the specified bit offset.</param>
          <param name="offset">The offset of the bit to store.</param>
          <returns>The modified value.</returns>
@@ -7603,7 +7603,7 @@
          <summary>
             Stores a set of bytes starting at the specified byte offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="bytes">The value to be stored at the byte location.</param>
          <param name="offset">The byte location to store the value.</param>
          <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
@@ -7615,7 +7615,7 @@
          <summary>
             Stores a set of bytes starting at the specified byte offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="bytes">The value to be stored at the byte location.</param>
          <param name="offset">The byte location to store the value.</param>
          <param name="size">The number of bytes from the source, to store. -1 means all bytes.</param>
@@ -7627,7 +7627,7 @@
          <summary>
             Stores a single byte to the value at the specified byte offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="byte">The
             <see cref="T:System.Byte"/>
             value to store.
@@ -7640,7 +7640,7 @@
          <summary>
             Toggles the specified range of bits and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The offset of the bits to toggle.</param>
          <param name="size">The number of bits to toggle.</param>
          <returns>The modified value.</returns>
@@ -7649,7 +7649,7 @@
          <summary>
             Toggles a bit at the specified offset and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="offset">The bit location to toggle.</param>
          <returns>The modified value.</returns>
       </member>
@@ -7657,7 +7657,7 @@
          <summary>
             Toggle all the bits specified in the provided bit mask and returns the modified value.
          </summary>
-         <param name="value">The value to modify.</param>
+         <param name="number">The value to modify.</param>
          <param name="mask">The bits to set.</param>
          <returns>The modified value.</returns>
       </member>

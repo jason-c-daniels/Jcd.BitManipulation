@@ -7,14 +7,14 @@
 Converts bytes into a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte'), discarding any excess data.
 
 ```csharp
-public static byte ToByte(this System.ReadOnlySpan<byte> data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
+public static byte ToByte(this System.ReadOnlySpan<byte> span, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.ReadOnlySpanOfByteExtensions.ToByte(thisSystem.ReadOnlySpan_byte_,Jcd.BitManipulation.Endian).data'></a>
+<a name='Jcd.BitManipulation.ReadOnlySpanOfByteExtensions.ToByte(thisSystem.ReadOnlySpan_byte_,Jcd.BitManipulation.Endian).span'></a>
 
-`data` [System.ReadOnlySpan&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.ReadOnlySpan-1 'System.ReadOnlySpan`1')[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.ReadOnlySpan-1 'System.ReadOnlySpan`1')
+`span` [System.ReadOnlySpan&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.ReadOnlySpan-1 'System.ReadOnlySpan`1')[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.ReadOnlySpan-1 'System.ReadOnlySpan`1')
 
 the bytes to convert.
 

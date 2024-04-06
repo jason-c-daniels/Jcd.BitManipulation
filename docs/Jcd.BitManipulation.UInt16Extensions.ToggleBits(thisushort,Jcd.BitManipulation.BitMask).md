@@ -7,14 +7,14 @@
 Toggle all the bits specified in the provided bit mask and returns the modified value.
 
 ```csharp
-public static ushort ToggleBits(this ushort value, Jcd.BitManipulation.BitMask mask);
+public static ushort ToggleBits(this ushort number, Jcd.BitManipulation.BitMask mask);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt16Extensions.ToggleBits(thisushort,Jcd.BitManipulation.BitMask).value'></a>
+<a name='Jcd.BitManipulation.UInt16Extensions.ToggleBits(thisushort,Jcd.BitManipulation.BitMask).number'></a>
 
-`value` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
+`number` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 
 The value to modify.
 

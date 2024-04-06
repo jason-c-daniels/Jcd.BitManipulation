@@ -7,14 +7,14 @@
 Reads the bits specified and returns the result shifted to the right by the offset.
 
 ```csharp
-public static byte ReadBits(this byte value, int offset, int size);
+public static byte ReadBits(this byte number, int offset, int size);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.ByteExtensions.ReadBits(thisbyte,int,int).value'></a>
+<a name='Jcd.BitManipulation.ByteExtensions.ReadBits(thisbyte,int,int).number'></a>
 
-`value` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
+`number` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
 The source of the bits to read.
 

@@ -7,14 +7,14 @@
 Converts a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') into an array of values with the lease significant bit at index 0.
 
 ```csharp
-public static bool[] ToBooleanArray(this byte bits);
+public static bool[] ToBooleanArray(this byte number);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.ByteExtensions.ToBooleanArray(thisbyte).bits'></a>
+<a name='Jcd.BitManipulation.ByteExtensions.ToBooleanArray(thisbyte).number'></a>
 
-`bits` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
+`number` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
 The value to convert to an array of [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean') values.
 

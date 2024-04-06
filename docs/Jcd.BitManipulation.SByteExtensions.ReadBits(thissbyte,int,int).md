@@ -7,14 +7,14 @@
 Reads the bits specified and returns the result shifted to the right by the offset.
 
 ```csharp
-public static sbyte ReadBits(this sbyte value, int offset, int size);
+public static sbyte ReadBits(this sbyte number, int offset, int size);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.SByteExtensions.ReadBits(thissbyte,int,int).value'></a>
+<a name='Jcd.BitManipulation.SByteExtensions.ReadBits(thissbyte,int,int).number'></a>
 
-`value` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
+`number` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 
 The source of the bits to read.
 

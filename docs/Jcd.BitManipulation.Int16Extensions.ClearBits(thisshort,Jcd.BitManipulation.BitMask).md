@@ -7,14 +7,14 @@
 Sets all bits from the provided mask to "off" and returns the modified value.
 
 ```csharp
-public static short ClearBits(this short value, Jcd.BitManipulation.BitMask mask);
+public static short ClearBits(this short number, Jcd.BitManipulation.BitMask mask);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.Int16Extensions.ClearBits(thisshort,Jcd.BitManipulation.BitMask).value'></a>
+<a name='Jcd.BitManipulation.Int16Extensions.ClearBits(thisshort,Jcd.BitManipulation.BitMask).number'></a>
 
-`value` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
+`number` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 
 The value to modify.
 

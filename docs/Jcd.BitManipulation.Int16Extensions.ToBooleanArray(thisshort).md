@@ -7,14 +7,14 @@
 Converts a [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16') into an array of values with the lease significant bit at index 0.
 
 ```csharp
-public static bool[] ToBooleanArray(this short bits);
+public static bool[] ToBooleanArray(this short number);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.Int16Extensions.ToBooleanArray(thisshort).bits'></a>
+<a name='Jcd.BitManipulation.Int16Extensions.ToBooleanArray(thisshort).number'></a>
 
-`bits` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
+`number` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 
 The [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16') to convert.
 

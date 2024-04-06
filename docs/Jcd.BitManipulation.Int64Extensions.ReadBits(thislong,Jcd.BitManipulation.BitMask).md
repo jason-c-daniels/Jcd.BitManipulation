@@ -7,14 +7,14 @@
 Extract a subset of bits specified by a bitmask.
 
 ```csharp
-public static long ReadBits(this long value, Jcd.BitManipulation.BitMask mask);
+public static long ReadBits(this long number, Jcd.BitManipulation.BitMask mask);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.Int64Extensions.ReadBits(thislong,Jcd.BitManipulation.BitMask).value'></a>
+<a name='Jcd.BitManipulation.Int64Extensions.ReadBits(thislong,Jcd.BitManipulation.BitMask).number'></a>
 
-`value` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
+`number` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 
 The source of the bits to read.
 

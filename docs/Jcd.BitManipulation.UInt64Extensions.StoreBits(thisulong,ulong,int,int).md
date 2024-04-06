@@ -7,14 +7,14 @@
 Stores a range of bits to the value, from a source value, and returns the modified value.
 
 ```csharp
-public static ulong StoreBits(this ulong value, ulong source, int offset, int size);
+public static ulong StoreBits(this ulong number, ulong source, int offset, int size);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt64Extensions.StoreBits(thisulong,ulong,int,int).value'></a>
+<a name='Jcd.BitManipulation.UInt64Extensions.StoreBits(thisulong,ulong,int,int).number'></a>
 
-`value` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
+`number` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
 The value to modify.
 

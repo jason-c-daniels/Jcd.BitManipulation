@@ -7,14 +7,14 @@
 Extract a subset of bits specified by a bitmask.
 
 ```csharp
-public static ulong ReadBits(this ulong value, Jcd.BitManipulation.BitMask mask);
+public static ulong ReadBits(this ulong number, Jcd.BitManipulation.BitMask mask);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt64Extensions.ReadBits(thisulong,Jcd.BitManipulation.BitMask).value'></a>
+<a name='Jcd.BitManipulation.UInt64Extensions.ReadBits(thisulong,Jcd.BitManipulation.BitMask).number'></a>
 
-`value` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
+`number` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
 The source of the bits to read.
 

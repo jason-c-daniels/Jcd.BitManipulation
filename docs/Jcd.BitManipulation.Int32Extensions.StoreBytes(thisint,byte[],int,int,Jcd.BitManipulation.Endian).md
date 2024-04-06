@@ -7,14 +7,14 @@
 Stores a set of bytes starting at the specified byte offset and returns the modified value.
 
 ```csharp
-public static int StoreBytes(this int value, byte[] bytes, int offset, int size=-1, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
+public static int StoreBytes(this int number, byte[] bytes, int offset, int size=-1, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.Int32Extensions.StoreBytes(thisint,byte[],int,int,Jcd.BitManipulation.Endian).value'></a>
+<a name='Jcd.BitManipulation.Int32Extensions.StoreBytes(thisint,byte[],int,int,Jcd.BitManipulation.Endian).number'></a>
 
-`value` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+`number` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
 The value to modify.
 

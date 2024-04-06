@@ -7,14 +7,14 @@
 Reads a set of bytes starting at the specified byte location within the value.
 
 ```csharp
-public static byte[] ReadBytes(this uint value, int offset, int size, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
+public static byte[] ReadBytes(this uint number, int offset, int size, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt32Extensions.ReadBytes(thisuint,int,int,Jcd.BitManipulation.Endian).value'></a>
+<a name='Jcd.BitManipulation.UInt32Extensions.ReadBytes(thisuint,int,int,Jcd.BitManipulation.Endian).number'></a>
 
-`value` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
+`number` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
 The value to read the bytes from.
 

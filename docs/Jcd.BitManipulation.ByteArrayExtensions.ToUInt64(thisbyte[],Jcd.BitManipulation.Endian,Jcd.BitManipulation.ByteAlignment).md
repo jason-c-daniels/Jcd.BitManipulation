@@ -7,14 +7,14 @@
 Converts an array of bytes into a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64'), discarding any excess data.
 
 ```csharp
-public static ulong ToUInt64(this byte[] data, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little, Jcd.BitManipulation.ByteAlignment align=Jcd.BitManipulation.ByteAlignment.InferredFromEndian);
+public static ulong ToUInt64(this byte[] array, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little, Jcd.BitManipulation.ByteAlignment align=Jcd.BitManipulation.ByteAlignment.InferredFromEndian);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.ByteArrayExtensions.ToUInt64(thisbyte[],Jcd.BitManipulation.Endian,Jcd.BitManipulation.ByteAlignment).data'></a>
+<a name='Jcd.BitManipulation.ByteArrayExtensions.ToUInt64(thisbyte[],Jcd.BitManipulation.Endian,Jcd.BitManipulation.ByteAlignment).array'></a>
 
-`data` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
+`array` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 
 the bytes to convert.
 

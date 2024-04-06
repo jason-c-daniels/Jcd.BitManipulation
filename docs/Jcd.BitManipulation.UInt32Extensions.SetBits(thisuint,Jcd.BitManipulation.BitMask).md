@@ -7,14 +7,14 @@
 Sets all specified bits to "on" and returns the modified value.
 
 ```csharp
-public static uint SetBits(this uint value, Jcd.BitManipulation.BitMask mask);
+public static uint SetBits(this uint number, Jcd.BitManipulation.BitMask mask);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt32Extensions.SetBits(thisuint,Jcd.BitManipulation.BitMask).value'></a>
+<a name='Jcd.BitManipulation.UInt32Extensions.SetBits(thisuint,Jcd.BitManipulation.BitMask).number'></a>
 
-`value` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
+`number` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
 The value to modify.
 

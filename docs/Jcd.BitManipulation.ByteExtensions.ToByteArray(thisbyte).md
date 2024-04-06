@@ -7,14 +7,14 @@
 Converts a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') into an array of bytes in the specified [Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian').
 
 ```csharp
-public static byte[] ToByteArray(this byte data);
+public static byte[] ToByteArray(this byte number);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.ByteExtensions.ToByteArray(thisbyte).data'></a>
+<a name='Jcd.BitManipulation.ByteExtensions.ToByteArray(thisbyte).number'></a>
 
-`data` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
+`number` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
 the [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') to convert.
 

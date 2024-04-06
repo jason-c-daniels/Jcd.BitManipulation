@@ -7,14 +7,14 @@
 Reads a single byte from the value at the specified byte offset.
 
 ```csharp
-public static byte ReadByte(this uint value, int offset, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
+public static byte ReadByte(this uint number, int offset, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt32Extensions.ReadByte(thisuint,int,Jcd.BitManipulation.Endian).value'></a>
+<a name='Jcd.BitManipulation.UInt32Extensions.ReadByte(thisuint,int,Jcd.BitManipulation.Endian).number'></a>
 
-`value` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
+`number` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
 The value to read the byte from.
 

@@ -7,14 +7,14 @@
 Stores a single byte to the value at the specified byte offset and returns the modified value.
 
 ```csharp
-public static float StoreByte(this float value, byte @byte, int offset, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
+public static float StoreByte(this float number, byte @byte, int offset, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.SingleExtensions.StoreByte(thisfloat,byte,int,Jcd.BitManipulation.Endian).value'></a>
+<a name='Jcd.BitManipulation.SingleExtensions.StoreByte(thisfloat,byte,int,Jcd.BitManipulation.Endian).number'></a>
 
-`value` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
+`number` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
 The value to modify.
 

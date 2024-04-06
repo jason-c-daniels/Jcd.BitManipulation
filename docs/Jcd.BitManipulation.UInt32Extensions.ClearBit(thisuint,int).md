@@ -7,14 +7,14 @@
 Sets the specified bit to "off" and returns the modified value.
 
 ```csharp
-public static uint ClearBit(this uint value, int offset);
+public static uint ClearBit(this uint number, int offset);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt32Extensions.ClearBit(thisuint,int).value'></a>
+<a name='Jcd.BitManipulation.UInt32Extensions.ClearBit(thisuint,int).number'></a>
 
-`value` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
+`number` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
 The value to modify.
 

@@ -7,14 +7,14 @@
 Converts a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32') to the bit-wise identical [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
 ```csharp
-public static float BitwiseToSingle(this uint value);
+public static float BitwiseToSingle(this uint number);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt32Extensions.BitwiseToSingle(thisuint).value'></a>
+<a name='Jcd.BitManipulation.UInt32Extensions.BitwiseToSingle(thisuint).number'></a>
 
-`value` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
+`number` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
 The value to convert.
 

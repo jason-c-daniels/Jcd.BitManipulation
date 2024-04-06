@@ -7,14 +7,14 @@
 Stores a single byte to the value at the specified byte offset and returns the modified value.
 
 ```csharp
-public static ulong StoreByte(this ulong value, byte @byte, int offset, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
+public static ulong StoreByte(this ulong number, byte @byte, int offset, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt64Extensions.StoreByte(thisulong,byte,int,Jcd.BitManipulation.Endian).value'></a>
+<a name='Jcd.BitManipulation.UInt64Extensions.StoreByte(thisulong,byte,int,Jcd.BitManipulation.Endian).number'></a>
 
-`value` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
+`number` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
 The value to modify.
 

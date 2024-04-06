@@ -28,45 +28,45 @@ public static class ByteArrayExtensions
    /// <summary>
    /// Converts an array of bytes into a <see cref="byte" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert.</param>
+   /// <param name="array">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="byte" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static byte ToByte(this byte[] data, Endian endian = Endian.Little)
+   public static byte ToByte(this byte[] array, Endian endian = Endian.Little)
    {
-      if (data == null || data.Length == 0)
+      if (array == null || array.Length == 0)
       {
          return 0;
       }
 
       return endian == Endian.Little
-                ? (byte) GetLittleEndianUInt64(data)
-                : (byte) GetBigEndianUInt64(data, sizeof(byte));
+                ? (byte) GetLittleEndianUInt64(array)
+                : (byte) GetBigEndianUInt64(array, sizeof(byte));
    }
 
    /// <summary>
    /// Converts an array of bytes into a <see cref="sbyte" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert.</param>
+   /// <param name="array">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted sbyte</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static sbyte ToSByte(this byte[] data, Endian endian = Endian.Little)
+   public static sbyte ToSByte(this byte[] array, Endian endian = Endian.Little)
    {
-      if (data == null || data.Length == 0)
+      if (array == null || array.Length == 0)
       {
          return 0;
       }
 
       return endian == Endian.Little
-                ? (sbyte) GetLittleEndianUInt64(data)
-                : (sbyte) GetBigEndianUInt64(data, sizeof(sbyte));
+                ? (sbyte) GetLittleEndianUInt64(array)
+                : (sbyte) GetBigEndianUInt64(array, sizeof(sbyte));
    }
 
    /// <summary>
    /// Converts an array of bytes into a <see cref="ushort" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert.</param>
+   /// <param name="array">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <param name="align">Indicates how to align partial data</param>
    /// <returns>The converted <see cref="ushort" /></returns>
@@ -81,20 +81,20 @@ public static class ByteArrayExtensions
    /// </para>
    /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ushort ToUInt16(this byte[] data, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
+   public static ushort ToUInt16(this byte[] array, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
    {
-      if (data == null || data.Length == 0)
+      if (array == null || array.Length == 0)
       {
          return 0;
       }
 
-      return (ushort) GetAlignedValue(data, endian, align, sizeof(ushort));
+      return (ushort) GetAlignedValue(array, endian, align, sizeof(ushort));
    }
 
    /// <summary>
    /// Converts an array of bytes into a <see cref="short" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert.</param>
+   /// <param name="array">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <param name="align">Indicates how to align partial data</param>
    /// <returns>The converted <see cref="short" /></returns>
@@ -109,20 +109,20 @@ public static class ByteArrayExtensions
    /// </para>
    /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static short ToInt16(this byte[] data, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
+   public static short ToInt16(this byte[] array, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
    {
-      if (data == null || data.Length == 0)
+      if (array == null || array.Length == 0)
       {
          return 0;
       }
 
-      return (short) GetAlignedValue(data, endian, align, sizeof(short));
+      return (short) GetAlignedValue(array, endian, align, sizeof(short));
    }
 
    /// <summary>
    /// Converts an array of bytes into a <see cref="uint" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert.</param>
+   /// <param name="array">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <param name="align">Indicates how to align partial data</param>
    /// <returns>The converted <see cref="uint" /></returns>
@@ -137,20 +137,20 @@ public static class ByteArrayExtensions
    /// </para>
    /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static uint ToUInt32(this byte[] data, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
+   public static uint ToUInt32(this byte[] array, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
    {
-      if (data == null || data.Length == 0)
+      if (array == null || array.Length == 0)
       {
          return 0;
       }
 
-      return (uint) GetAlignedValue(data, endian, align, sizeof(uint));
+      return (uint) GetAlignedValue(array, endian, align, sizeof(uint));
    }
 
    /// <summary>
    /// Converts an array of bytes into a <see cref="uint" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert.</param>
+   /// <param name="array">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <param name="align">Indicates how to align partial data</param>
    /// <returns>The converted <see cref="uint" /></returns>
@@ -165,20 +165,20 @@ public static class ByteArrayExtensions
    /// </para>
    /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static int ToInt32(this byte[] data, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
+   public static int ToInt32(this byte[] array, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
    {
-      if (data == null || data.Length == 0)
+      if (array == null || array.Length == 0)
       {
          return 0;
       }
 
-      return (int) GetAlignedValue(data, endian, align, sizeof(int));
+      return (int) GetAlignedValue(array, endian, align, sizeof(int));
    }
 
    /// <summary>
    /// Converts an array of bytes into a <see cref="ulong" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert.</param>
+   /// <param name="array">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <param name="align">Indicates how to align partial data</param>
    /// <returns>The converted <see cref="ulong" /></returns>
@@ -193,20 +193,20 @@ public static class ByteArrayExtensions
    /// </para>
    /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ulong ToUInt64(this byte[] data, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
+   public static ulong ToUInt64(this byte[] array, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
    {
-      if (data == null || data.Length == 0)
+      if (array == null || array.Length == 0)
       {
          return 0;
       }
 
-      return GetAlignedValue(data, endian, align, sizeof(ulong));
+      return GetAlignedValue(array, endian, align, sizeof(ulong));
    }
 
    /// <summary>
    /// Converts an array of bytes into a <see cref="long" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert.</param>
+   /// <param name="array">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <param name="align">Indicates how to align partial data</param>
    /// <returns>The converted <see cref="long" /></returns>
@@ -221,20 +221,20 @@ public static class ByteArrayExtensions
    /// </para>
    /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static long ToInt64(this byte[] data, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
+   public static long ToInt64(this byte[] array, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
    {
-      if (data == null || data.Length == 0)
+      if (array == null || array.Length == 0)
       {
          return 0;
       }
 
-      return (long) GetAlignedValue(data, endian, align, sizeof(long));
+      return (long) GetAlignedValue(array, endian, align, sizeof(long));
    }
 
    /// <summary>
    /// Converts an array of bytes into a <see cref="double" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert.</param>
+   /// <param name="array">the bytes to convert.</param>
    /// <param name="endian">
    /// A setting indicating the endianness of the source data. The default is Endian.Little.
    /// </param>
@@ -252,15 +252,15 @@ public static class ByteArrayExtensions
    /// </para>
    /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static double ToDouble(this byte[] data, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
+   public static double ToDouble(this byte[] array, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
    {
-      return data.ToUInt64(endian).BitwiseToDouble();
+      return array.ToUInt64(endian).BitwiseToDouble();
    }
 
    /// <summary>
    /// Converts an array of bytes into a <see cref="float" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert.</param>
+   /// <param name="array">the bytes to convert.</param>
    /// <param name="endian">
    /// A setting indicating the endianness of the source data. The default is Endian.Little.
    /// </param>
@@ -278,9 +278,9 @@ public static class ByteArrayExtensions
    /// </para>
    /// </remarks>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static float ToSingle(this byte[] data, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
+   public static float ToSingle(this byte[] array, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
    {
-      return data.ToUInt32(endian).BitwiseToSingle();
+      return array.ToUInt32(endian).BitwiseToSingle();
    }
 
    #region internal helpers

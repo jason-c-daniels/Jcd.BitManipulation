@@ -4,7 +4,7 @@
 
 ## UInt16AlgorithmsExtensions.PopCount(this ushort) Method
 
-Counts the bits that are set to 1 in a number
+Counts the bits that are set to 1 in a number.
 
 ```csharp
 public static int PopCount(this ushort number);
@@ -16,9 +16,9 @@ public static int PopCount(this ushort number);
 
 `number` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 
-The number
+The number to evaluate.
 
 #### Returns
 
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
-The count of the bits set to 1
+The count of the bits set to 1.

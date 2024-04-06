@@ -4,7 +4,7 @@
 
 ## Int32AlgorithmsExtensions.IsPositive(this int) Method
 
-Indicates if the number is zero or positive. (Always true for unsigned numbers)
+Indicates if the number is zero or positive.
 
 ```csharp
 public static bool IsPositive(this int number);

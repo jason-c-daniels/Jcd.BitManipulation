@@ -18,8 +18,18 @@ public static ulong RoundUpToPowerOfTwo(this ulong number);
 
 `number` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
-the number to evaluate
+The number to evaluate.
 
 #### Returns
 
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
+
+### Example
+
+```csharp
+ulong v = 2;
+Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 2
+
+v = 3;
+Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 4
+```

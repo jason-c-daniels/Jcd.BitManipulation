@@ -341,10 +341,13 @@
 
 </s:String>
 	<s:Boolean x:Key="/Default/Environment/Filtering/ExcludeCoverageFilters/=Jcd_002EBitManipulation_002EBenchmark_003B_002A_003B_002A_003B_002A/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=bithacks/@EntryIndexedValue">True</s:Boolean>
    <s:Boolean x:Key="/Default/UserDictionary/Words/=bools/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=fdata/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=FFFFFFFF/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=indexable/@EntryIndexedValue">True</s:Boolean>
    <s:Boolean x:Key="/Default/UserDictionary/Words/=ldata/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=seander/@EntryIndexedValue">True</s:Boolean>
    <s:Boolean x:Key="/Default/UserDictionary/Words/=uexpected/@EntryIndexedValue">True</s:Boolean>
    <s:Boolean x:Key="/Default/UserDictionary/Words/=ulbi/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/UserDictionary/Words/=unshifted/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>

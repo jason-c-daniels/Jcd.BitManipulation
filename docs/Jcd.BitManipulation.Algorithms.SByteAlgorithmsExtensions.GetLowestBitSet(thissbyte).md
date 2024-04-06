@@ -16,9 +16,25 @@ public static sbyte GetLowestBitSet(this sbyte number);
 
 `number` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 
-the number to evaluate
+The number to evaluate.
 
 #### Returns
 
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 The index of the lowest bit that's been set; or -1 if none were set.
+
+### Example
+
+```csharp
+sbyte v = 1;
+Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 0
+
+v = 2;
+Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+v = 3;
+Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+v = 4;
+Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 2
+```

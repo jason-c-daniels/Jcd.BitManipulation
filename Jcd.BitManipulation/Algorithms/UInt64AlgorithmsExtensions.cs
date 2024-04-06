@@ -8,7 +8,7 @@ namespace Jcd.BitManipulation.Algorithms;
 
 /// <summary>
 /// Provides bit counting and other niche bit manipulation facilities
-/// for <see cref="ulong" /> instances.
+/// for <see cref="ulong" /> values.
 /// </summary>
 public static class UInt64AlgorithmsExtensions
 {
@@ -37,9 +37,25 @@ public static class UInt64AlgorithmsExtensions
    /// <summary>
    /// Determines if the number is a power of two.
    /// </summary>
-   /// <param name="number">the number to evaluate</param>
+   /// <param name="number">The number to evaluate.</param>
    /// <returns>true if number == 2^n; where n is an integer.</returns>
-   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   /// <example>
+   /// <code>
+   /// ulong v = 1;
+   /// if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 1 is a power of two!
+   /// 
+   /// v = 2;
+   /// if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 2 is a power of two!
+   /// 
+   /// v = 3;
+   /// if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // does not output anything.
+   /// 
+   /// v = 4;
+   /// if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 4 is a power of two!
+   /// 
+   /// </code>
+   /// </example>
+   /// [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool IsPowerOfTwo(this ulong number)
    {
       return number != 0 && number.BitwiseAndWithSelfMinusOne() == 0;
@@ -48,9 +64,15 @@ public static class UInt64AlgorithmsExtensions
    /// <summary>
    /// Counts the bits that are set to 1 in a number.
    /// </summary>
-   /// <param name="number">The number</param>
-   /// <returns>The count of the bits set to 1</returns>
-   /// <remarks>This is a reader-friendly alias for <see cref="PopCount" /></remarks>
+   /// <param name="number">The number to evaluate.</param>
+   /// <returns>The count of the bits set to 1.</returns>
+   /// <remarks>This is a reader-friendly alias for <see cref="PopCount" />.</remarks>
+   /// <example>
+   /// <code>
+   /// var v = ulong.MaxValue;
+   /// Console.WriteLine($"{v.CountBitsSet()} bits are set."); // outputs: 64 bits are set.
+   /// </code>
+   /// </example>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int CountBitsSet(this ulong number)
    {
@@ -60,8 +82,23 @@ public static class UInt64AlgorithmsExtensions
    /// <summary>
    /// Determines if the only lowest bit and one other higher bit are set.
    /// </summary>
-   /// <param name="number">the number to evaluate</param>
+   /// <param name="number">The number to evaluate.</param>
    /// <returns>true if the bitwise representation follows this pattern: 0b10..01. with any number of intervening zeros.</returns>
+   /// <example>
+   /// <code>
+   /// ulong v = 0b0001;
+   /// Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+   /// 
+   /// v = 0b0011;
+   /// Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+   /// 
+   /// v = 0b0101;
+   /// Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+   /// 
+   /// v = 0b0111;
+   /// Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: False
+   /// </code>
+   /// </example>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool AreOnlyFirstAndLastBitsSet(this ulong number)
    {
@@ -78,7 +115,16 @@ public static class UInt64AlgorithmsExtensions
    /// or return the next higher power of two capable of fitting in the
    /// data type.
    /// </summary>
-   /// <param name="number">the number to evaluate</param>
+   /// <param name="number">The number to evaluate.</param>
+   /// <example>
+   /// <code>
+   /// ulong v = 2;
+   /// Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 2
+   /// 
+   /// v = 3;
+   /// Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 4
+   /// </code>
+   /// </example>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ulong RoundUpToPowerOfTwo(this ulong number)
    {
@@ -101,9 +147,23 @@ public static class UInt64AlgorithmsExtensions
    /// <summary>
    /// Calculate the index of the highest bit that's been set.
    /// </summary>
-   /// <param name="number">the number to evaluate</param>
+   /// <param name="number">The number to evaluate.</param>
    /// <returns>The index of the highest bit that's been set; or -1 if none were set.</returns>
-   /// [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   /// <example>
+   /// <code>
+   /// ulong v = 1;
+   /// Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 0
+   ///       
+   /// v = 2;
+   /// Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+   /// 
+   /// v = 3;
+   /// Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+   ///       
+   /// v = 4;
+   /// Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 2
+   /// </code>
+   /// </example>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int GetHighestBitSet(this ulong number)
    {
@@ -118,9 +178,23 @@ public static class UInt64AlgorithmsExtensions
    /// <summary>
    /// Calculate the index of the lowest bit that's been set.
    /// </summary>
-   /// <param name="number">the number to evaluate</param>
+   /// <param name="number">The number to evaluate.</param>
    /// <returns>The index of the lowest bit that's been set; or -1 if none were set.</returns>
-   /// [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   /// <example>
+   /// <code>
+   /// ulong v = 1;
+   /// Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 0
+   ///       
+   /// v = 2;
+   /// Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+   /// 
+   /// v = 3;
+   /// Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+   ///       
+   /// v = 4;
+   /// Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 2
+   /// </code>
+   /// </example>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int GetLowestBitSet(this ulong number)
    {
@@ -136,8 +210,20 @@ public static class UInt64AlgorithmsExtensions
    /// Computes the number of sequentially zeroed bits occupying the
    /// most significant bit positions.
    /// </summary>
-   /// <param name="number">the number to evaluate</param>
+   /// <param name="number">The number to evaluate.</param>
    /// <returns>The count of sequentially zeroed bits occupying the most significant bit positions.</returns>
+   /// <example>
+   /// <code>
+   /// ulong v = 0x7FFFFFFF_FFFFFFFF;
+   /// Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 1
+   ///       
+   /// v = 0x3FFFFFFF_FFFFFFFF;
+   /// Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 2
+   /// 
+   /// v = 1;
+   /// Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 63
+   /// </code>
+   /// </example>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int CountLeadingZeros(this ulong number)
    {
@@ -190,8 +276,23 @@ public static class UInt64AlgorithmsExtensions
    /// Computes the number of sequentially zeroed bits occupying the
    /// least significant bit positions.
    /// </summary>
-   /// <param name="number">the number to evaluate</param>
+   /// <param name="number">The number to evaluate.</param>
    /// <returns>The count of sequentially zeroed bits occupying the least significant bit positions.</returns>
+   /// <example>
+   /// <code>
+   /// ulong v = 1;
+   /// Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 0
+   ///       
+   /// v = 2;
+   /// Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 1
+   /// 
+   /// v = 3;
+   /// Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 1
+   ///       
+   /// v = 4;
+   /// Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 2
+   /// </code>
+   /// </example>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int CountTrailingZeros(this ulong number)
    {
@@ -293,10 +394,10 @@ public static class UInt64AlgorithmsExtensions
    }
 
    /// <summary>
-   /// Counts the bits that are set to 1 in a number
+   /// Counts the bits that are set to 1 in a number.
    /// </summary>
-   /// <param name="number">The number</param>
-   /// <returns>The count of the bits set to 1</returns>
+   /// <param name="number">The number to evaluate.</param>
+   /// <returns>The count of the bits set to 1.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int PopCount(this ulong number)
    {
@@ -320,7 +421,7 @@ public static class UInt64AlgorithmsExtensions
    /// <summary>
    /// Determines if the number is odd.
    /// </summary>
-   /// <param name="number"></param>
+   /// <param name="number">The number to evaluate.</param>
    /// <returns><c>true</c> if the number is odd (e.g. 1,3...etc.)</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool IsOdd(this ulong number)
@@ -331,7 +432,7 @@ public static class UInt64AlgorithmsExtensions
    /// <summary>
    /// Determines if the number is odd.
    /// </summary>
-   /// <param name="number"></param>
+   /// <param name="number">The number to evaluate.</param>
    /// <returns><c>true</c> if the number is even (e.g. 2,4...etc.)</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static bool IsEven(this ulong number)

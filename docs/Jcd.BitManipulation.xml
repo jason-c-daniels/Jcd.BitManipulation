@@ -9,34 +9,71 @@
             Provides bit counting and other niche bit manipulation facilities
             for
             <see cref="T:System.Byte"/>
-            instances.
+            values.
          </summary>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.IsPowerOfTwo(System.Byte)">
          <summary>
             Determines if the number is a power of two.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>true if number == 2^n; where n is an integer.</returns>
+         <example>
+            <code>
+               byte v = 1;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 1 is a power of two!
+
+               v = 2;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 2 is a power of two!
+
+               v = 3;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // does not output anything.
+
+               v = 4;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 4 is a power of two!
+
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.CountBitsSet(System.Byte)">
          <summary>
             Counts the bits that are set to 1 in a number.
          </summary>
-         <param name="number">The number</param>
-         <returns>The count of the bits set to 1</returns>
-         <remarks>This is a reader-friendly alias for
-            <see cref="M:Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.PopCount(System.Byte)"/>
+         <param name="number">The number to evaluate.</param>
+         <returns>The count of the bits set to 1.</returns>
+         <remarks>This is a reader-friendly alias for<see
+            cref="M:Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.PopCount(System.Byte)"/>.
          </remarks>
+         <example>
+            <code>
+               var v = byte.MaxValue;
+               Console.WriteLine($"{v.CountBitsSet()} bits are set."); // outputs: 8 bits are set.
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.AreOnlyFirstAndLastBitsSet(System.Byte)">
          <summary>
             Determines if the only lowest bit and one other higher bit are set.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>true if the bitwise representation follows this pattern: 0b10..01. with any number of intervening
             zeros.
          </returns>
+         <example>
+            <code>
+               byte v = 0b0001;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+
+               v = 0b0011;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+
+               v = 0b0101;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+
+               v = 0b0111;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: False
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.RoundUpToPowerOfTwo(System.Byte)">
          <summary>
@@ -44,38 +81,103 @@
             or return the next higher power of two capable of fitting in the
             data type.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
+         <example>
+            <code>
+               byte v = 2;
+               Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 2
+
+               v = 3;
+               Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 4
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.GetHighestBitSet(System.Byte)">
          <summary>
             Calculate the index of the highest bit that's been set.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The index of the highest bit that's been set; or -1 if none were set.</returns>
+         <example>
+            <code>
+               byte v = 1;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 0
+
+               v = 2;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 3;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 4;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 2
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.GetLowestBitSet(System.Byte)">
          <summary>
             Calculate the index of the lowest bit that's been set.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The index of the lowest bit that's been set; or -1 if none were set.</returns>
-         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+         <example>
+            <code>
+               byte v = 1;
+               Console.WriteLine($"{v.GetLowestBitSet()}"); // outputs: 0
+
+               v = 2;
+               Console.WriteLine($"{v.GetLowestBitSet()}"); // outputs: 1
+
+               v = 3;
+               Console.WriteLine($"{v.GetLowestBitSet()}"); // outputs: 0
+
+               v = 4;
+               Console.WriteLine($"{v.GetLowestBitSet()}"); // outputs: 2
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.CountLeadingZeros(System.Byte)">
          <summary>
             Computes the number of sequentially zeroed bits occupying the
             most significant bit positions.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The count of sequentially zeroed bits occupying the most significant bit positions.</returns>
+         <example>
+            <code>
+               byte v = 0x7F;
+               Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 1
+
+               v = 0x3F;
+               Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 2
+
+               v = 1;
+               Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 7
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.CountTrailingZeros(System.Byte)">
          <summary>
             Computes the number of sequentially zeroed bits occupying the
             least significant bit positions.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The count of sequentially zeroed bits occupying the least significant bit positions.</returns>
+         <example>
+            <code>
+               byte v = 1;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 0
+
+               v = 2;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 1
+
+               v = 3;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 0
+
+               v = 4;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 2
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.RotateLeft(System.Byte,System.Int32)">
          <summary>
@@ -119,16 +221,16 @@
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.PopCount(System.Byte)">
          <summary>
-            Counts the bits that are set to 1 in a number
+            Counts the bits that are set to 1 in a number.
          </summary>
-         <param name="number">The number</param>
-         <returns>The count of the bits set to 1</returns>
+         <param name="number">The number to evaluate.</param>
+         <returns>The count of the bits set to 1.</returns>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.IsOdd(System.Byte)">
          <summary>
             Determines if the number is odd.
          </summary>
-         <param name="number"></param>
+         <param name="number">The number to evaluate.</param>
          <returns>
             <c>true</c>
             if the number is odd (e.g. 1,3...etc.)
@@ -138,7 +240,7 @@
          <summary>
             Determines if the number is odd.
          </summary>
-         <param name="number"></param>
+         <param name="number">The number to evaluate.</param>
          <returns>
             <c>true</c>
             if the number is even (e.g. 2,4...etc.)
@@ -170,35 +272,73 @@
             Provides bit counting and other niche bit manipulation facilities
             for
             <see cref="T:System.Int16"/>
-            instances.
+            values.
          </summary>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.IsPowerOfTwo(System.Int16)">
          <summary>
             Determines if the number is a power of two.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>true if number == 2^n; where n is an integer.</returns>
+         <example>
+            <code>
+               short v = 1;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 1 is a power of two!
+
+               v = 2;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 2 is a power of two!
+
+               v = 3;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // does not output anything.
+
+               v = 4;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 4 is a power of two!
+
+            </code>
+         </example>
+         [MethodImpl(MethodImplOptions.AggressiveInlining)]
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.CountBitsSet(System.Int16)">
          <summary>
             Counts the bits that are set to 1 in a number.
          </summary>
-         <param name="number">The number</param>
-         <returns>The count of the bits set to 1</returns>
-         <remarks>This is a reader-friendly alias for
-            <see cref="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.PopCount(System.Int16)"/>
+         <param name="number">The number to evaluate.</param>
+         <returns>The count of the bits set to 1.</returns>
+         <remarks>This is a reader-friendly alias for<see
+            cref="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.PopCount(System.Int16)"/>.
          </remarks>
+         <example>
+            <code>
+               var v = short.MaxValue;
+               Console.WriteLine($"{v.CountBitsSet()} bits are set."); // outputs: 15 bits are set.
+            </code>
+         </example>
       </member>
       <member
          name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.AreOnlyFirstAndLastBitsSet(System.Int16)">
          <summary>
             Determines if the only lowest bit and one other higher bit are set.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>true if the bitwise representation follows this pattern: 0b10..01. with any number of intervening
             zeros.
          </returns>
+         <example>
+            <code>
+               short v = 0b0001;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+
+               v = 0b0011;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+
+               v = 0b0101;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+
+               v = 0b0111;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: False
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.RoundUpToPowerOfTwo(System.Int16)">
          <summary>
@@ -208,39 +348,103 @@
             negative next higher power of two, zero is returned. (e.g. number > 2^(k-2)
             where k is the bit size.)
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
+         <example>
+            <code>
+               short v = 2;
+               Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 2
+
+               v = 3;
+               Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 4
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.GetHighestBitSet(System.Int16)">
          <summary>
             Calculate the index of the highest bit that's been set.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The index of the highest bit that's been set; or -1 if none were set.</returns>
-         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+         <example>
+            <code>
+               short v = 1;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 0
+
+               v = 2;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 3;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 4;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 2
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.GetLowestBitSet(System.Int16)">
          <summary>
             Calculate the index of the lowest bit that's been set.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The index of the lowest bit that's been set; or -1 if none were set.</returns>
-         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+         <example>
+            <code>
+               short v = 1;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 0
+
+               v = 2;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 3;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 4;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 2
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.CountLeadingZeros(System.Int16)">
          <summary>
             Computes the number of sequentially zeroed bits occupying the
             most significant bit positions.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The count of sequentially zeroed bits occupying the most significant bit positions.</returns>
+         <example>
+            <code>
+               short v = 0x7FFF;
+               Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 1
+
+               v = 0x3FFF;
+               Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 2
+
+               v = 1;
+               Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 15
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.CountTrailingZeros(System.Int16)">
          <summary>
             Computes the number of sequentially zeroed bits occupying the
             least significant bit positions.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The count of sequentially zeroed bits occupying the least significant bit positions.</returns>
+         <example>
+            <code>
+               short v = 1;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 0
+
+               v = 2;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 1
+
+               v = 3;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 1
+
+               v = 4;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 2
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.RotateLeft(System.Int16,System.Int32)">
          <summary>
@@ -290,16 +494,19 @@
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.PopCount(System.Int16)">
          <summary>
-            Counts the bits that are set to 1 in a number
+            Counts the bits that are set to 1 in a number.
          </summary>
-         <param name="number">The number</param>
-         <returns>The count of the bits set to 1</returns>
+         <param name="number">The number to evaluate.</param>
+         <returns>The count of the bits set to 1.</returns>
+         <remarks>This is an alias for<see
+            cref="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.CountBitsSet(System.Int16)"/>.
+         </remarks>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.IsOdd(System.Int16)">
          <summary>
             Determines if the number is odd.
          </summary>
-         <param name="number"></param>
+         <param name="number">The number to evaluate.</param>
          <returns>
             <c>true</c>
             if the number is odd (e.g. 1,3...etc.)
@@ -309,7 +516,7 @@
          <summary>
             Determines if the number is odd.
          </summary>
-         <param name="number"></param>
+         <param name="number">The number to evaluate.</param>
          <returns>
             <c>true</c>
             if the number is even (e.g. 2,4...etc.)
@@ -317,14 +524,14 @@
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.IsNegative(System.Int16)">
          <summary>
-            Indicates if the number is negative. (Always false for unsigned numbers)
+            Indicates if the number is negative.
          </summary>
          <param name="number">The number to evaluate.</param>
          <returns>true if &lt; 0.</returns>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.IsPositive(System.Int16)">
          <summary>
-            Indicates if the number is zero or positive. (Always true for unsigned numbers)
+            Indicates if the number is zero or positive.
          </summary>
          <param name="number">The number to evaluate.</param>
          <returns>true if &gt;= 0.</returns>
@@ -341,35 +548,73 @@
             Provides bit counting and other niche bit manipulation facilities
             for
             <see cref="T:System.Int32"/>
-            instances.
+            values.
          </summary>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.IsPowerOfTwo(System.Int32)">
          <summary>
             Determines if the number is a power of two.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>true if number == 2^n; where n is an integer.</returns>
+         <example>
+            <code>
+               int v = 1;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 1 is a power of two!
+
+               v = 2;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 2 is a power of two!
+
+               v = 3;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // does not output anything.
+
+               v = 4;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 4 is a power of two!
+
+            </code>
+         </example>
+         [MethodImpl(MethodImplOptions.AggressiveInlining)]
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.CountBitsSet(System.Int32)">
          <summary>
             Counts the bits that are set to 1 in a number.
          </summary>
-         <param name="number">The number</param>
-         <returns>The count of the bits set to 1</returns>
-         <remarks>This is a reader-friendly alias for
-            <see cref="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.PopCount(System.Int32)"/>
+         <param name="number">The number to evaluate.</param>
+         <returns>The count of the bits set to 1.</returns>
+         <remarks>This is a reader-friendly alias for<see
+            cref="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.PopCount(System.Int32)"/>.
          </remarks>
+         <example>
+            <code>
+               var v = int.MaxValue;
+               Console.WriteLine($"{v.CountBitsSet()} bits are set."); // outputs: 31 bits are set.
+            </code>
+         </example>
       </member>
       <member
          name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.AreOnlyFirstAndLastBitsSet(System.Int32)">
          <summary>
             Determines if the only lowest bit and one other higher bit are set.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>true if the bitwise representation follows this pattern: 0b10..01. with any number of intervening
             zeros.
          </returns>
+         <example>
+            <code>
+               int v = 0b0001;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+
+               v = 0b0011;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+
+               v = 0b0101;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+
+               v = 0b0111;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: False
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.RoundUpToPowerOfTwo(System.Int32)">
          <summary>
@@ -379,39 +624,103 @@
             negative next higher power of two, zero is returned. (e.g. number > 2^(k-2)
             where k is the bit size.)
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
+         <example>
+            <code>
+               int v = 2;
+               Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 2
+
+               v = 3;
+               Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 4
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.GetHighestBitSet(System.Int32)">
          <summary>
             Calculate the index of the highest bit that's been set.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The index of the highest bit that's been set; or -1 if none were set.</returns>
-         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+         <example>
+            <code>
+               int v = 1;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 0
+
+               v = 2;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 3;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 4;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 2
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.GetLowestBitSet(System.Int32)">
          <summary>
             Calculate the index of the lowest bit that's been set.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The index of the lowest bit that's been set; or -1 if none were set.</returns>
-         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+         <example>
+            <code>
+               int v = 1;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 0
+
+               v = 2;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 3;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 4;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 2
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.CountLeadingZeros(System.Int32)">
          <summary>
             Computes the number of sequentially zeroed bits occupying the
             most significant bit positions.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The count of sequentially zeroed bits occupying the most significant bit positions.</returns>
+         <example>
+            <code>
+               int v = 0x7FFFFFFF;
+               Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 1
+
+               v = 0x3FFFFFFF;
+               Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 2
+
+               v = 1;
+               Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 31
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.CountTrailingZeros(System.Int32)">
          <summary>
             Computes the number of sequentially zeroed bits occupying the
             least significant bit positions.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The count of sequentially zeroed bits occupying the least significant bit positions.</returns>
+         <example>
+            <code>
+               int v = 1;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 0
+
+               v = 2;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 1
+
+               v = 3;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 1
+
+               v = 4;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 2
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.RotateLeft(System.Int32,System.Int32)">
          <summary>
@@ -461,16 +770,16 @@
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.PopCount(System.Int32)">
          <summary>
-            Counts the bits that are set to 1 in a number
+            Counts the bits that are set to 1 in a number.
          </summary>
-         <param name="number">The number</param>
-         <returns>The count of the bits set to 1</returns>
+         <param name="number">The number to evaluate.</param>
+         <returns>The count of the bits set to 1.</returns>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.IsOdd(System.Int32)">
          <summary>
             Determines if the number is odd.
          </summary>
-         <param name="number"></param>
+         <param name="number">The number to evaluate.</param>
          <returns>
             <c>true</c>
             if the number is odd (e.g. 1,3...etc.)
@@ -480,7 +789,7 @@
          <summary>
             Determines if the number is odd.
          </summary>
-         <param name="number"></param>
+         <param name="number">The number to evaluate.</param>
          <returns>
             <c>true</c>
             if the number is even (e.g. 2,4...etc.)
@@ -488,14 +797,14 @@
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.IsNegative(System.Int32)">
          <summary>
-            Indicates if the number is negative. (Always false for unsigned numbers)
+            Indicates if the number is negative.
          </summary>
          <param name="number">The number to evaluate.</param>
          <returns>true if &lt; 0.</returns>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.IsPositive(System.Int32)">
          <summary>
-            Indicates if the number is zero or positive. (Always true for unsigned numbers)
+            Indicates if the number is zero or positive.
          </summary>
          <param name="number">The number to evaluate.</param>
          <returns>true if &gt;= 0.</returns>
@@ -512,35 +821,73 @@
             Provides bit counting and other niche bit manipulation facilities
             for
             <see cref="T:System.Int64"/>
-            instances.
+            values.
          </summary>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.IsPowerOfTwo(System.Int64)">
          <summary>
             Determines if the number is a power of two.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>true if number == 2^n; where n is an integer.</returns>
+         <example>
+            <code>
+               long v = 1;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 1 is a power of two!
+
+               v = 2;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 2 is a power of two!
+
+               v = 3;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // does not output anything.
+
+               v = 4;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 4 is a power of two!
+
+            </code>
+         </example>
+         [MethodImpl(MethodImplOptions.AggressiveInlining)]
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.CountBitsSet(System.Int64)">
          <summary>
             Counts the bits that are set to 1 in a number.
          </summary>
-         <param name="number">The number</param>
-         <returns>The count of the bits set to 1</returns>
-         <remarks>This is a reader-friendly alias for
-            <see cref="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.PopCount(System.Int64)"/>
+         <param name="number">The number to evaluate.</param>
+         <returns>The count of the bits set to 1.</returns>
+         <remarks>This is a reader-friendly alias for<see
+            cref="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.PopCount(System.Int64)"/>.
          </remarks>
+         <example>
+            <code>
+               var v = long.MaxValue;
+               Console.WriteLine($"{v.CountBitsSet()} bits are set."); // outputs: 63 bits are set.
+            </code>
+         </example>
       </member>
       <member
          name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.AreOnlyFirstAndLastBitsSet(System.Int64)">
          <summary>
             Determines if the only lowest bit and one other higher bit are set.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>true if the bitwise representation follows this pattern: 0b10..01. with any number of intervening
             zeros.
          </returns>
+         <example>
+            <code>
+               long v = 0b0001;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+
+               v = 0b0011;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+
+               v = 0b0101;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+
+               v = 0b0111;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: False
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.RoundUpToPowerOfTwo(System.Int64)">
          <summary>
@@ -550,39 +897,103 @@
             negative next higher power of two, zero is returned. (e.g. number > 2^(k-2)
             where k is the bit size.)
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
+         <example>
+            <code>
+               long v = 2;
+               Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 2
+
+               v = 3;
+               Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 4
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.GetHighestBitSet(System.Int64)">
          <summary>
             Calculate the index of the highest bit that's been set.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The index of the highest bit that's been set; or -1 if none were set.</returns>
-         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+         <example>
+            <code>
+               long v = 1;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 0
+
+               v = 2;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 3;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 4;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 2
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.GetLowestBitSet(System.Int64)">
          <summary>
             Calculate the index of the lowest bit that's been set.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The index of the lowest bit that's been set; or -1 if none were set.</returns>
-         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+         <example>
+            <code>
+               long v = 1;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 0
+
+               v = 2;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 3;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 4;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 2
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.CountLeadingZeros(System.Int64)">
          <summary>
             Computes the number of sequentially zeroed bits occupying the
             most significant bit positions.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The count of sequentially zeroed bits occupying the most significant bit positions.</returns>
+         <example>
+            <code>
+               long v = 0x7FFFFFFF_FFFFFFFF;
+               Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 1
+
+               v = 0x3FFFFFFF_FFFFFFFF;
+               Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 2
+
+               v = 1;
+               Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 63
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.CountTrailingZeros(System.Int64)">
          <summary>
             Computes the number of sequentially zeroed bits occupying the
             least significant bit positions.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The count of sequentially zeroed bits occupying the least significant bit positions.</returns>
+         <example>
+            <code>
+               long v = 1;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 0
+
+               v = 2;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 1
+
+               v = 3;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 1
+
+               v = 4;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 2
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.RotateLeft(System.Int64,System.Int32)">
          <summary>
@@ -644,16 +1055,16 @@
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.PopCount(System.Int64)">
          <summary>
-            Counts the bits that are set to 1 in a number
+            Counts the bits that are set to 1 in a number.
          </summary>
-         <param name="number">The number</param>
-         <returns>The count of the bits set to 1</returns>
+         <param name="number">The number to evaluate.</param>
+         <returns>The count of the bits set to 1.</returns>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.IsOdd(System.Int64)">
          <summary>
             Determines if the number is odd.
          </summary>
-         <param name="number"></param>
+         <param name="number">The number to evaluate.</param>
          <returns>
             <c>true</c>
             if the number is odd (e.g. 1,3...etc.)
@@ -663,7 +1074,7 @@
          <summary>
             Determines if the number is odd.
          </summary>
-         <param name="number"></param>
+         <param name="number">The number to evaluate.</param>
          <returns>
             <c>true</c>
             if the number is even (e.g. 2,4...etc.)
@@ -671,14 +1082,14 @@
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.IsNegative(System.Int64)">
          <summary>
-            Indicates if the number is negative. (Always false for unsigned numbers)
+            Indicates if the number is negative.
          </summary>
          <param name="number">The number to evaluate.</param>
          <returns>true if &lt; 0.</returns>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.IsPositive(System.Int64)">
          <summary>
-            Indicates if the number is zero or positive. (Always true for unsigned numbers)
+            Indicates if the number is zero or positive.
          </summary>
          <param name="number">The number to evaluate.</param>
          <returns>true if &gt;= 0.</returns>
@@ -690,40 +1101,111 @@
          <param name="number">The number to evaluate</param>
          <returns>-1 if &lt; 0; 1 if &gt; 0; 0 otherwise.</returns>
       </member>
+      <member name="T:Jcd.BitManipulation.Algorithms.NamespaceDoc">
+         <summary>
+            Provides various software implementations of common bit manipulation
+            algorithms, for C# supported types.
+         </summary>
+         <example>
+            <code>
+               var ul = ulong.MaxValue;
+
+               var bitCount = ul.CountBitsSet(); // bitCount = 64;
+               bitCount = ul.PopCount(); // also 64; this alias is provided for those who like the assembly language
+               term.
+
+               var hbs = (ul &gt;&gt; 1).GetHighestBitSet(); // 63
+
+               var lbs = (ul &lt;&lt; 1).GetLowestBitSet(); // 1
+
+               var np2 = 63.RoundUpToPowerOfTwo(); // 64
+               np2 = 64.RoundUpToPowerOfTwo(); // also 64.
+
+               var ip2 = 63.IsPowerOfTwo(); // false
+               ip2 = 64.IsPowerOfTwo(); // true
+               ip2 = (-64).IsPowerOfTwo(); // false
+
+               var ip = 63.IsPositive(); // true
+               ip = (-1).IsPositive(); // false
+
+               var ie = 63.IsEven(); // false
+               ie = 64.IsEven(); // true
+
+            </code>
+         </example>
+      </member>
       <member name="T:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions">
          <summary>
             Provides bit counting and other niche bit manipulation facilities
             for
             <see cref="T:System.SByte"/>
-            instances.
+            values.
          </summary>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.IsPowerOfTwo(System.SByte)">
          <summary>
             Determines if the number is a power of two.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>true if number == 2^n; where n is an integer.</returns>
+         <example>
+            <code>
+               sbyte v = 1;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 1 is a power of two!
+
+               v = 2;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 2 is a power of two!
+
+               v = 3;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // does not output anything.
+
+               v = 4;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 4 is a power of two!
+
+            </code>
+         </example>
+         [MethodImpl(MethodImplOptions.AggressiveInlining)]
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.CountBitsSet(System.SByte)">
          <summary>
             Counts the bits that are set to 1 in a number.
          </summary>
-         <param name="number">The number</param>
-         <returns>The count of the bits set to 1</returns>
-         <remarks>This is a reader-friendly alias for
-            <see cref="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.PopCount(System.SByte)"/>
+         <param name="number">The number to evaluate.</param>
+         <returns>The count of the bits set to 1.</returns>
+         <remarks>This is a reader-friendly alias for<see
+            cref="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.PopCount(System.SByte)"/>.
          </remarks>
+         <example>
+            <code>
+               var v = sbyte.MaxValue;
+               Console.WriteLine($"{v.CountBitsSet()} bits are set."); // outputs: 7 bits are set.
+            </code>
+         </example>
       </member>
       <member
          name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.AreOnlyFirstAndLastBitsSet(System.SByte)">
          <summary>
             Determines if the only lowest bit and one other higher bit are set.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>true if the bitwise representation follows this pattern: 0b10..01. with any number of intervening
             zeros.
          </returns>
+         <example>
+            <code>
+               sbyte v = 0b0001;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+
+               v = 0b0011;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+
+               v = 0b0101;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+
+               v = 0b0111;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: False
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.RoundUpToPowerOfTwo(System.SByte)">
          <summary>
@@ -733,39 +1215,103 @@
             negative next higher power of two, zero is returned. (e.g. number > 2^(k-2))
             where k is the bit size.)
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
+         <example>
+            <code>
+               sbyte v = 2;
+               Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 2
+
+               v = 3;
+               Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 4
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.GetHighestBitSet(System.SByte)">
          <summary>
             Calculate the index of the highest bit that's been set.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The index of the highest bit that's been set; or -1 if none were set.</returns>
-         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+         <example>
+            <code>
+               sbyte v = 1;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 0
+
+               v = 2;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 3;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 4;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 2
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.GetLowestBitSet(System.SByte)">
          <summary>
             Calculate the index of the lowest bit that's been set.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The index of the lowest bit that's been set; or -1 if none were set.</returns>
-         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+         <example>
+            <code>
+               sbyte v = 1;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 0
+
+               v = 2;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 3;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 4;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 2
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.CountLeadingZeros(System.SByte)">
          <summary>
             Computes the number of sequentially zeroed bits occupying the
             most significant bit positions.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The count of sequentially zeroed bits occupying the most significant bit positions.</returns>
+         <example>
+            <code>
+               sbyte v = 0x7F;
+               Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 1
+
+               v = 0x3F;
+               Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 2
+
+               v = 1;
+               Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 7
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.CountTrailingZeros(System.SByte)">
          <summary>
             Computes the number of sequentially zeroed bits occupying the
             least significant bit positions.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The count of sequentially zeroed bits occupying the least significant bit positions.</returns>
+         <example>
+            <code>
+               sbyte v = 1;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 0
+
+               v = 2;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 1
+
+               v = 3;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 1
+
+               v = 4;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 2
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.RotateLeft(System.SByte,System.Int32)">
          <summary>
@@ -812,16 +1358,16 @@
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.PopCount(System.SByte)">
          <summary>
-            Counts the bits that are set to 1 in a number
+            Counts the bits that are set to 1 in a number.
          </summary>
-         <param name="number">The number</param>
-         <returns>The count of the bits set to 1</returns>
+         <param name="number">The number to evaluate.</param>
+         <returns>The count of the bits set to 1.</returns>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.IsOdd(System.SByte)">
          <summary>
             Determines if the number is odd.
          </summary>
-         <param name="number"></param>
+         <param name="number">The number to evaluate.</param>
          <returns>
             <c>true</c>
             if the number is odd (e.g. 1,3...etc.)
@@ -831,7 +1377,7 @@
          <summary>
             Determines if the number is odd.
          </summary>
-         <param name="number"></param>
+         <param name="number">The number to evaluate.</param>
          <returns>
             <c>true</c>
             if the number is even (e.g. 2,4...etc.)
@@ -839,14 +1385,14 @@
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.IsNegative(System.SByte)">
          <summary>
-            Indicates if the number is negative. (Always false for unsigned numbers)
+            Indicates if the number is negative.
          </summary>
          <param name="number">The number to evaluate.</param>
          <returns>true if &lt; 0.</returns>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.IsPositive(System.SByte)">
          <summary>
-            Indicates if the number is zero or positive. (Always true for unsigned numbers)
+            Indicates if the number is zero or positive.
          </summary>
          <param name="number">The number to evaluate.</param>
          <returns>true if &gt;= 0.</returns>
@@ -863,35 +1409,73 @@
             Provides bit counting and other niche bit manipulation facilities
             for
             <see cref="T:System.UInt16"/>
-            instances.
+            values.
          </summary>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.IsPowerOfTwo(System.UInt16)">
          <summary>
             Determines if the number is a power of two.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>true if number == 2^n; where n is an integer.</returns>
+         <example>
+            <code>
+               ushort v = 1;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 1 is a power of two!
+
+               v = 2;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 2 is a power of two!
+
+               v = 3;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // does not output anything.
+
+               v = 4;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 4 is a power of two!
+
+            </code>
+         </example>
+         [MethodImpl(MethodImplOptions.AggressiveInlining)]
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.CountBitsSet(System.UInt16)">
          <summary>
             Counts the bits that are set to 1 in a number.
          </summary>
-         <param name="number">The number</param>
-         <returns>The count of the bits set to 1</returns>
-         <remarks>This is a reader-friendly alias for
-            <see cref="M:Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.PopCount(System.UInt16)"/>
+         <param name="number">The number to evaluate.</param>
+         <returns>The count of the bits set to 1.</returns>
+         <remarks>This is a reader-friendly alias for<see
+            cref="M:Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.PopCount(System.UInt16)"/>.
          </remarks>
+         <example>
+            <code>
+               var v = ushort.MaxValue;
+               Console.WriteLine($"{v.CountBitsSet()} bits are set."); // outputs: 16 bits are set.
+            </code>
+         </example>
       </member>
       <member
          name="M:Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.AreOnlyFirstAndLastBitsSet(System.UInt16)">
          <summary>
             Determines if the only lowest bit and one other higher bit are set.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>true if the bitwise representation follows this pattern: 0b10..01. with any number of intervening
             zeros.
          </returns>
+         <example>
+            <code>
+               ushort v = 0b0001;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+
+               v = 0b0011;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+
+               v = 0b0101;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+
+               v = 0b0111;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: False
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.RoundUpToPowerOfTwo(System.UInt16)">
          <summary>
@@ -899,38 +1483,103 @@
             or return the next higher power of two capable of fitting in the
             data type.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
+         <example>
+            <code>
+               ushort v = 2;
+               Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 2
+
+               v = 3;
+               Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 4
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.GetHighestBitSet(System.UInt16)">
          <summary>
             Calculate the index of the highest bit that's been set.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The index of the highest bit that's been set; or -1 if none were set.</returns>
+         <example>
+            <code>
+               ushort v = 1;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 0
+
+               v = 2;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 3;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 4;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 2
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.GetLowestBitSet(System.UInt16)">
          <summary>
             Calculate the index of the lowest bit that's been set.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The index of the lowest bit that's been set; or -1 if none were set.</returns>
-         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+         <example>
+            <code>
+               ushort v = 1;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 0
+
+               v = 2;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 3;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 4;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 2
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.CountLeadingZeros(System.UInt16)">
          <summary>
             Computes the number of sequentially zeroed bits occupying the
             most significant bit positions.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The count of sequentially zeroed bits occupying the most significant bit positions.</returns>
+         <example>
+            <code>
+               ushort v = 0x7FFF;
+               Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 1
+
+               v = 0x3FFF;
+               Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 2
+
+               v = 1;
+               Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 15
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.CountTrailingZeros(System.UInt16)">
          <summary>
             Computes the number of sequentially zeroed bits occupying the
             least significant bit positions.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The count of sequentially zeroed bits occupying the least significant bit positions.</returns>
+         <example>
+            <code>
+               ushort v = 1;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 0
+
+               v = 2;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 1
+
+               v = 3;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 1
+
+               v = 4;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 2
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.RotateLeft(System.UInt16,System.Int32)">
          <summary>
@@ -979,16 +1628,16 @@
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.PopCount(System.UInt16)">
          <summary>
-            Counts the bits that are set to 1 in a number
+            Counts the bits that are set to 1 in a number.
          </summary>
-         <param name="number">The number</param>
-         <returns>The count of the bits set to 1</returns>
+         <param name="number">The number to evaluate.</param>
+         <returns>The count of the bits set to 1.</returns>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.IsOdd(System.UInt16)">
          <summary>
             Determines if the number is odd.
          </summary>
-         <param name="number"></param>
+         <param name="number">The number to evaluate.</param>
          <returns>
             <c>true</c>
             if the number is odd (e.g. 1,3...etc.)
@@ -998,7 +1647,7 @@
          <summary>
             Determines if the number is odd.
          </summary>
-         <param name="number"></param>
+         <param name="number">The number to evaluate.</param>
          <returns>
             <c>true</c>
             if the number is even (e.g. 2,4...etc.)
@@ -1030,35 +1679,73 @@
             Provides bit counting and other niche bit manipulation facilities
             for
             <see cref="T:System.UInt32"/>
-            instances.
+            values.
          </summary>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.IsPowerOfTwo(System.UInt32)">
          <summary>
             Determines if the number is a power of two.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>true if number == 2^n; where n is an integer.</returns>
+         <example>
+            <code>
+               uint v = 1;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 1 is a power of two!
+
+               v = 2;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 2 is a power of two!
+
+               v = 3;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // does not output anything.
+
+               v = 4;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 4 is a power of two!
+
+            </code>
+         </example>
+         [MethodImpl(MethodImplOptions.AggressiveInlining)]
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.CountBitsSet(System.UInt32)">
          <summary>
             Counts the bits that are set to 1 in a number.
          </summary>
-         <param name="number">The number</param>
-         <returns>The count of the bits set to 1</returns>
-         <remarks>This is a reader-friendly alias for
-            <see cref="M:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.PopCount(System.UInt32)"/>
+         <param name="number">The number to evaluate.</param>
+         <returns>The count of the bits set to 1.</returns>
+         <remarks>This is a reader-friendly alias for<see
+            cref="M:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.PopCount(System.UInt32)"/>.
          </remarks>
+         <example>
+            <code>
+               var v = uint.MaxValue;
+               Console.WriteLine($"{v.CountBitsSet()} bits are set."); // outputs: 32 bits are set.
+            </code>
+         </example>
       </member>
       <member
          name="M:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.AreOnlyFirstAndLastBitsSet(System.UInt32)">
          <summary>
             Determines if the only lowest bit and one other higher bit are set.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>true if the bitwise representation follows this pattern: 0b10..01. with any number of intervening
             zeros.
          </returns>
+         <example>
+            <code>
+               uint v = 0b0001;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+
+               v = 0b0011;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+
+               v = 0b0101;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+
+               v = 0b0111;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: False
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.RoundUpToPowerOfTwo(System.UInt32)">
          <summary>
@@ -1066,29 +1753,67 @@
             or return the next higher power of two capable of fitting in the
             data type.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
+         <example>
+            <code>
+               uint v = 2;
+               Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 2
+
+               v = 3;
+               Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 4
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.GetHighestBitSet(System.UInt32)">
          <summary>
             Calculate the index of the highest bit that's been set.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The index of the highest bit that's been set; or -1 if none were set.</returns>
+         <example>
+            <code>
+               uint v = 1;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 0
+
+               v = 2;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 3;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 4;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 2
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.GetLowestBitSet(System.UInt32)">
          <summary>
             Calculate the index of the lowest bit that's been set.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The index of the lowest bit that's been set; or -1 if none were set.</returns>
-         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+         <example>
+            <code>
+               uint v = 1;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 0
+
+               v = 2;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 3;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 4;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 2
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.CountLeadingZeros(System.UInt32)">
          <summary>
             Computes the number of sequentially zeroed bits occupying the
             most significant bit positions.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The count of sequentially zeroed bits occupying the most significant bit positions.</returns>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.CountTrailingZeros(System.UInt32)">
@@ -1096,8 +1821,23 @@
             Computes the number of sequentially zeroed bits occupying the
             least significant bit positions.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The count of sequentially zeroed bits occupying the least significant bit positions.</returns>
+         <example>
+            <code>
+               uint v = 1;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 0
+
+               v = 2;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 1
+
+               v = 3;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 1
+
+               v = 4;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 2
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.RotateLeft(System.UInt32,System.Int32)">
          <summary>
@@ -1146,16 +1886,16 @@
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.PopCount(System.UInt32)">
          <summary>
-            Counts the bits that are set to 1 in a number
+            Counts the bits that are set to 1 in a number.
          </summary>
-         <param name="number">The number</param>
-         <returns>The count of the bits set to 1</returns>
+         <param name="number">The number to evaluate.</param>
+         <returns>The count of the bits set to 1.</returns>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.IsOdd(System.UInt32)">
          <summary>
             Determines if the number is odd.
          </summary>
-         <param name="number"></param>
+         <param name="number">The number to evaluate.</param>
          <returns>
             <c>true</c>
             if the number is odd (e.g. 1,3...etc.)
@@ -1165,7 +1905,7 @@
          <summary>
             Determines if the number is odd.
          </summary>
-         <param name="number"></param>
+         <param name="number">The number to evaluate.</param>
          <returns>
             <c>true</c>
             if the number is even (e.g. 2,4...etc.)
@@ -1197,35 +1937,73 @@
             Provides bit counting and other niche bit manipulation facilities
             for
             <see cref="T:System.UInt64"/>
-            instances.
+            values.
          </summary>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.IsPowerOfTwo(System.UInt64)">
          <summary>
             Determines if the number is a power of two.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>true if number == 2^n; where n is an integer.</returns>
+         <example>
+            <code>
+               ulong v = 1;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 1 is a power of two!
+
+               v = 2;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 2 is a power of two!
+
+               v = 3;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // does not output anything.
+
+               v = 4;
+               if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 4 is a power of two!
+
+            </code>
+         </example>
+         [MethodImpl(MethodImplOptions.AggressiveInlining)]
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.CountBitsSet(System.UInt64)">
          <summary>
             Counts the bits that are set to 1 in a number.
          </summary>
-         <param name="number">The number</param>
-         <returns>The count of the bits set to 1</returns>
-         <remarks>This is a reader-friendly alias for
-            <see cref="M:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.PopCount(System.UInt64)"/>
+         <param name="number">The number to evaluate.</param>
+         <returns>The count of the bits set to 1.</returns>
+         <remarks>This is a reader-friendly alias for<see
+            cref="M:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.PopCount(System.UInt64)"/>.
          </remarks>
+         <example>
+            <code>
+               var v = ulong.MaxValue;
+               Console.WriteLine($"{v.CountBitsSet()} bits are set."); // outputs: 64 bits are set.
+            </code>
+         </example>
       </member>
       <member
          name="M:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.AreOnlyFirstAndLastBitsSet(System.UInt64)">
          <summary>
             Determines if the only lowest bit and one other higher bit are set.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>true if the bitwise representation follows this pattern: 0b10..01. with any number of intervening
             zeros.
          </returns>
+         <example>
+            <code>
+               ulong v = 0b0001;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+
+               v = 0b0011;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+
+               v = 0b0101;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
+
+               v = 0b0111;
+               Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: False
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.RoundUpToPowerOfTwo(System.UInt64)">
          <summary>
@@ -1233,39 +2011,103 @@
             or return the next higher power of two capable of fitting in the
             data type.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
+         <example>
+            <code>
+               ulong v = 2;
+               Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 2
+
+               v = 3;
+               Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 4
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.GetHighestBitSet(System.UInt64)">
          <summary>
             Calculate the index of the highest bit that's been set.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The index of the highest bit that's been set; or -1 if none were set.</returns>
-         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+         <example>
+            <code>
+               ulong v = 1;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 0
+
+               v = 2;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 3;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 4;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 2
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.GetLowestBitSet(System.UInt64)">
          <summary>
             Calculate the index of the lowest bit that's been set.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The index of the lowest bit that's been set; or -1 if none were set.</returns>
-         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+         <example>
+            <code>
+               ulong v = 1;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 0
+
+               v = 2;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 3;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
+
+               v = 4;
+               Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 2
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.CountLeadingZeros(System.UInt64)">
          <summary>
             Computes the number of sequentially zeroed bits occupying the
             most significant bit positions.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The count of sequentially zeroed bits occupying the most significant bit positions.</returns>
+         <example>
+            <code>
+               ulong v = 0x7FFFFFFF_FFFFFFFF;
+               Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 1
+
+               v = 0x3FFFFFFF_FFFFFFFF;
+               Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 2
+
+               v = 1;
+               Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 63
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.CountTrailingZeros(System.UInt64)">
          <summary>
             Computes the number of sequentially zeroed bits occupying the
             least significant bit positions.
          </summary>
-         <param name="number">the number to evaluate</param>
+         <param name="number">The number to evaluate.</param>
          <returns>The count of sequentially zeroed bits occupying the least significant bit positions.</returns>
+         <example>
+            <code>
+               ulong v = 1;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 0
+
+               v = 2;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 1
+
+               v = 3;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 1
+
+               v = 4;
+               Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 2
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.RotateLeft(System.UInt64,System.Int32)">
          <summary>
@@ -1326,16 +2168,16 @@
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.PopCount(System.UInt64)">
          <summary>
-            Counts the bits that are set to 1 in a number
+            Counts the bits that are set to 1 in a number.
          </summary>
-         <param name="number">The number</param>
-         <returns>The count of the bits set to 1</returns>
+         <param name="number">The number to evaluate.</param>
+         <returns>The count of the bits set to 1.</returns>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.IsOdd(System.UInt64)">
          <summary>
             Determines if the number is odd.
          </summary>
-         <param name="number"></param>
+         <param name="number">The number to evaluate.</param>
          <returns>
             <c>true</c>
             if the number is odd (e.g. 1,3...etc.)
@@ -1345,7 +2187,7 @@
          <summary>
             Determines if the number is odd.
          </summary>
-         <param name="number"></param>
+         <param name="number">The number to evaluate.</param>
          <returns>
             <c>true</c>
             if the number is even (e.g. 2,4...etc.)
@@ -5153,7 +5995,8 @@
       <member name="T:Jcd.BitManipulation.NamespaceDoc">
          <summary>
             Provides extension methods and types that makes code for bit and byte manipulation
-            on intrinsic data types easier to read vs the standard operators: `&amp;, |, ^, and ~`.
+            on intrinsic data types easier to read vs the standard operators: `&amp;, \|, ^, and ~`.
+            These are provided for C# supported types.
          </summary>
       </member>
       <member name="T:Jcd.BitManipulation.ReadOnlySpanOfByteExtensions">

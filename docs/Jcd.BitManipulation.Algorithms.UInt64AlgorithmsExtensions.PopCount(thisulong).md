@@ -4,7 +4,7 @@
 
 ## UInt64AlgorithmsExtensions.PopCount(this ulong) Method
 
-Counts the bits that are set to 1 in a number
+Counts the bits that are set to 1 in a number.
 
 ```csharp
 public static int PopCount(this ulong number);
@@ -16,9 +16,9 @@ public static int PopCount(this ulong number);
 
 `number` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
-The number
+The number to evaluate.
 
 #### Returns
 
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
-The count of the bits set to 1
+The count of the bits set to 1.

@@ -20,8 +20,18 @@ public static short RoundUpToPowerOfTwo(this short number);
 
 `number` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 
-the number to evaluate
+The number to evaluate.
 
 #### Returns
 
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
+
+### Example
+
+```csharp
+short v = 2;
+Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 2
+
+v = 3;
+Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 4
+```

@@ -4,7 +4,7 @@
 
 ## Int32AlgorithmsExtensions.IsNegative(this int) Method
 
-Indicates if the number is negative. (Always false for unsigned numbers)
+Indicates if the number is negative.
 
 ```csharp
 public static bool IsNegative(this int number);

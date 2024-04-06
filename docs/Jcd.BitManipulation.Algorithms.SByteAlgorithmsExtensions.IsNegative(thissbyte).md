@@ -4,7 +4,7 @@
 
 ## SByteAlgorithmsExtensions.IsNegative(this sbyte) Method
 
-Indicates if the number is negative. (Always false for unsigned numbers)
+Indicates if the number is negative.
 
 ```csharp
 public static bool IsNegative(this sbyte number);

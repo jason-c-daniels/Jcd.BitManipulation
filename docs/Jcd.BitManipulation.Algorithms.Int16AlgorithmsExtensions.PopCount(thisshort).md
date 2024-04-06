@@ -4,7 +4,7 @@
 
 ## Int16AlgorithmsExtensions.PopCount(this short) Method
 
-Counts the bits that are set to 1 in a number
+Counts the bits that are set to 1 in a number.
 
 ```csharp
 public static short PopCount(this short number);
@@ -16,9 +16,13 @@ public static short PopCount(this short number);
 
 `number` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 
-The number
+The number to evaluate.
 
 #### Returns
 
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
-The count of the bits set to 1
+The count of the bits set to 1.
+
+### Remarks
+
+This is an alias for [CountBitsSet(this short)](Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.CountBitsSet(thisshort).md 'Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.CountBitsSet(this short)').

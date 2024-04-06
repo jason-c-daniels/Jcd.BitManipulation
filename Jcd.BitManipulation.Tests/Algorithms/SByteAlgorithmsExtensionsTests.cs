@@ -156,6 +156,17 @@ public class SByteAlgorithmsExtensionsTests
       Assert.Equal((sbyte) expected, ((sbyte) value).RotateRight(rot));
    }
 
+   [Theory]
+   [InlineData(sbyte.MaxValue, 1)]
+   [InlineData(1,              1)]
+   [InlineData(0,              0)]
+   [InlineData(-1,             -1)]
+   [InlineData(sbyte.MinValue, -1)]
+   public void GetSign_Returns_Expected_Result(sbyte value, int expected)
+   {
+      Assert.Equal(expected, value.GetSign());
+   }
+
    #region DataMember Data
 
    public static TheoryData<sbyte, bool> IsPowerOfTwoData

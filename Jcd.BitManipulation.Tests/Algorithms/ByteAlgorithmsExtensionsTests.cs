@@ -137,6 +137,15 @@ public class ByteAlgorithmsExtensionsTests
       Assert.Equal(expected, value.RotateRight(rot));
    }
 
+   [Theory]
+   [InlineData(byte.MaxValue, 1)]
+   [InlineData(1,             1)]
+   [InlineData(0,             0)]
+   public void GetSign_Returns_Expected_Result(byte value, int expected)
+   {
+      Assert.Equal(expected, value.GetSign());
+   }
+
    #region DataMember Data
 
    public static TheoryData<byte, bool> IsPowerOfTwoData

@@ -29,7 +29,6 @@ internal static class Program
 {
    public static void Main()
    {
-
       ReadMeExamples.Rotate_Examples();
       ReadMeExamples.BitIndexer_Example();
       ReadMeExamples.ByteIndexer_Example();

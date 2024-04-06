@@ -140,6 +140,15 @@ public class UInt16AlgorithmsExtensionsTests
       Assert.Equal(expected, value.RotateRight(rot));
    }
 
+   [Theory]
+   [InlineData(ushort.MaxValue, 1)]
+   [InlineData(1,               1)]
+   [InlineData(0,               0)]
+   public void GetSign_Returns_Expected_Result(ushort value, int expected)
+   {
+      Assert.Equal(expected, value.GetSign());
+   }
+
    #region DataMember Data
 
    public static TheoryData<ushort, bool> IsPowerOfTwoData
@@ -181,7 +190,7 @@ public class UInt16AlgorithmsExtensionsTests
                                                   : j + 1)
          {
             var v = (ushort) (i.RoundUpToPowerOfTwo() | 1);
-            var k = (ushort) (v                                  | 2);
+            var k = (ushort) (v                       | 2);
             Add(i, result);
             Add(v, result);
             Add(k, result);

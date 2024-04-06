@@ -2,6 +2,8 @@
 
 using System.Runtime.CompilerServices;
 
+#pragma warning disable S3358
+
 #endregion
 
 namespace Jcd.BitManipulation.Algorithms;
@@ -233,5 +235,20 @@ public static class SByteAlgorithmsExtensions
    public static bool IsPositive(this sbyte number)
    {
       return (number & HighestBit) == 0;
+   }
+
+   /// <summary>
+   /// Returns a value indicating the sign of the number.
+   /// </summary>
+   /// <param name="number">The number to evaluate</param>
+   /// <returns>-1 if &lt; 0; 1 if &gt; 0; 0 otherwise.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static int GetSign(this sbyte number)
+   {
+      return number == 0
+                ? 0
+                : number > 0
+                   ? 1
+                   : -1;
    }
 }

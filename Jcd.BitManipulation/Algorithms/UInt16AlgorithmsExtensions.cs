@@ -79,15 +79,14 @@ public static class UInt16AlgorithmsExtensions
    public static ushort RoundUpToPowerOfTwo(this ushort number)
    {
       number--;
-      number |= (ushort)(number >> 1);
-      number |= (ushort)(number >> 2);
-      number |= (ushort)(number >> 4);
-      number |= (ushort)(number >> 8);
-      number |= (ushort)(number >> 16);
+      number |= (ushort) (number >> 1);
+      number |= (ushort) (number >> 2);
+      number |= (ushort) (number >> 4);
+      number |= (ushort) (number >> 8);
       number++;
-      number += (ushort)(number == 0
-                            ? 1
-                            : 0);
+      number += (ushort) (number == 0
+                             ? 1
+                             : 0);
 
       return number;
    }
@@ -328,5 +327,18 @@ public static class UInt16AlgorithmsExtensions
    public static bool IsPositive(this ushort number)
    {
       return true;
+   }
+
+   /// <summary>
+   /// Returns a value indicating the sign of the number.
+   /// </summary>
+   /// <param name="number">The number to evaluate</param>
+   /// <returns>-1 if &lt; 0; 1 if &gt; 0; 0 otherwise.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static int GetSign(this ushort number)
+   {
+      return number == 0
+                ? 0
+                : 1;
    }
 }

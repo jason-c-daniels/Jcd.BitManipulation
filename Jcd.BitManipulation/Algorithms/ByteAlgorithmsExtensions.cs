@@ -77,13 +77,13 @@ public static class ByteAlgorithmsExtensions
    public static byte RoundUpToPowerOfTwo(this byte number)
    {
       number--;
-      number |= (byte)(number >> 1);
-      number |= (byte)(number >> 2);
-      number |= (byte)(number >> 4);
+      number |= (byte) (number >> 1);
+      number |= (byte) (number >> 2);
+      number |= (byte) (number >> 4);
       number++;
-      number += (byte)(number == 0
-                   ? 1
-                   : 0);
+      number += (byte) (number == 0
+                           ? 1
+                           : 0);
 
       return number;
    }
@@ -308,5 +308,18 @@ public static class ByteAlgorithmsExtensions
    public static bool IsPositive(this byte number)
    {
       return true;
+   }
+
+   /// <summary>
+   /// Returns a value indicating the sign of the number.
+   /// </summary>
+   /// <param name="number">The number to evaluate</param>
+   /// <returns>-1 if &lt; 0; 1 if &gt; 0; 0 otherwise.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static int GetSign(this byte number)
+   {
+      return number == 0
+                ? 0
+                : 1;
    }
 }

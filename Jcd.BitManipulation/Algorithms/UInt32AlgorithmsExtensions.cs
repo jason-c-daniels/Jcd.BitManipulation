@@ -81,15 +81,15 @@ public static class UInt32AlgorithmsExtensions
    public static uint RoundUpToPowerOfTwo(this uint number)
    {
       number--;
-      number |= (ushort)(number >> 1);
-      number |= (ushort)(number >> 2);
-      number |= (ushort)(number >> 4);
-      number |= (ushort)(number >> 8);
-      number |= (ushort)(number >> 16);
+      number |= (number >> 1);
+      number |= (number >> 2);
+      number |= (number >> 4);
+      number |= (number >> 8);
+      number |= (number >> 16);
       number++;
-      number += number == 0
-                   ? (ushort)1
-                   : (ushort)0;
+      number += (uint) (number == 0
+                           ? 1
+                           : 0);
 
       return number;
    }
@@ -342,5 +342,18 @@ public static class UInt32AlgorithmsExtensions
    public static bool IsPositive(this uint number)
    {
       return true;
+   }
+
+   /// <summary>
+   /// Returns a value indicating the sign of the number.
+   /// </summary>
+   /// <param name="number">The number to evaluate</param>
+   /// <returns>-1 if &lt; 0; 1 if &gt; 0; 0 otherwise.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static int GetSign(this uint number)
+   {
+      return number == 0
+                ? 0
+                : 1;
    }
 }

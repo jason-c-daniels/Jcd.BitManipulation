@@ -31,19 +31,22 @@ public class ReadOnlySpanExtensionsTests
    [InlineData(0x01, 0x01)]
    [InlineData(0x02, 0x02)]
    [InlineData(0x03, 0x03)]
-   public void ToByte_On_ReadOnlySpan(byte d0, byte expected)
+   public void ToByte_Returns_Expected_Value(byte d0, byte expected)
    {
       Assert.Equal(expected, new ReadOnlySpan<byte>([d0]).ToByte());
       Assert.Equal(expected, new ReadOnlySpan<byte>([d0]).ToByte(Endian.Big));
    }
 
    [Theory]
-   [InlineData(0x01, 0x01)]
-   [InlineData(0x02, 0x02)]
-   [InlineData(0x03, 0x03)]
-   public void ToSByte_On_ReadOnlySpan(byte d0, sbyte expected)
+   [InlineData(0x01, 0x01, Endian.Little)]
+   [InlineData(0x02, 0x02, Endian.Little)]
+   [InlineData(0x03, 0x03, Endian.Little)]
+   [InlineData(0x01, 0x01, Endian.Big)]
+   [InlineData(0x02, 0x02, Endian.Big)]
+   [InlineData(0x03, 0x03, Endian.Big)]
+   public void ToSByte_Returns_Expected_Value(byte d0, sbyte expected, Endian endian)
    {
-      Assert.Equal(expected, new ReadOnlySpan<byte>([d0]).ToSByte());
+      Assert.Equal(expected, new ReadOnlySpan<byte>([d0]).ToSByte(endian));
    }
 
    [Theory]
@@ -51,7 +54,7 @@ public class ReadOnlySpanExtensionsTests
    [InlineData(0x02, 0x01, 2, Endian.Big,    0x0201)]
    [InlineData(0x01, 0x02, 1, Endian.Little, 0x01)]
    [InlineData(0x02, 0x01, 1, Endian.Big,    0x0200)]
-   public void ToUInt16_On_ReadOnlySpan(byte d0, byte d1, int size, Endian endian, ushort expected)
+   public void ToUInt16_Returns_Expected_Value(byte d0, byte d1, int size, Endian endian, ushort expected)
    {
       Assert.Equal(expected, new ReadOnlySpan<byte>(new[] { d0, d1 }.Take(size).ToArray()).ToUInt16(endian));
    }
@@ -61,7 +64,7 @@ public class ReadOnlySpanExtensionsTests
    [InlineData(0x02, 0x01, 2, Endian.Big,    0x0201)]
    [InlineData(0x01, 0x02, 1, Endian.Little, 0x01)]
    [InlineData(0x02, 0x01, 1, Endian.Big,    0x0200)]
-   public void ToInt16_On_ReadOnlySpan(byte d0, byte d1, int size, Endian endian, short expected)
+   public void ToInt16_Returns_Expected_Value(byte d0, byte d1, int size, Endian endian, short expected)
    {
       Assert.Equal(expected, new ReadOnlySpan<byte>(new[] { d0, d1 }.Take(size).ToArray()).ToInt16(endian));
    }
@@ -83,7 +86,7 @@ public class ReadOnlySpanExtensionsTests
    [InlineData(0x04, 0x03, 0x02, 0x01, 2, Endian.Big,    ByteAlignment.LeastSignificantByte, 0x00000403)]
    [InlineData(0x01, 0x02, 0x03, 0x04, 1, Endian.Little, ByteAlignment.MostSignificantByte,  0x01000000)]
    [InlineData(0x04, 0x03, 0x02, 0x01, 1, Endian.Big,    ByteAlignment.LeastSignificantByte, 0x00000004)]
-   public void ToUInt32_On_ReadOnlySpan(byte d0, byte d1, byte d2, byte d3, int size, Endian endian, ByteAlignment align, uint expected)
+   public void ToUInt32_Returns_Expected_Value(byte d0, byte d1, byte d2, byte d3, int size, Endian endian, ByteAlignment align, uint expected)
    {
       Assert.Equal(expected, new ReadOnlySpan<byte>(new[] { d0, d1, d2, d3 }.Take(size).ToArray()).ToUInt32(endian, align));
    }
@@ -97,7 +100,7 @@ public class ReadOnlySpanExtensionsTests
    [InlineData(0x04, 0x03, 0x02, 0x01, 2, Endian.Big,    0x04030000)]
    [InlineData(0x01, 0x02, 0x03, 0x04, 1, Endian.Little, 0x01)]
    [InlineData(0x04, 0x03, 0x02, 0x01, 1, Endian.Big,    0x04000000)]
-   public void ToInt32_On_ReadOnlySpan(byte d0, byte d1, byte d2, byte d3, int size, Endian endian, int expected)
+   public void ToInt32_Returns_Expected_Value(byte d0, byte d1, byte d2, byte d3, int size, Endian endian, int expected)
    {
       Assert.Equal(expected, new ReadOnlySpan<byte>(new[] { d0, d1, d2, d3 }.Take(size).ToArray()).ToInt32(endian));
    }
@@ -119,7 +122,7 @@ public class ReadOnlySpanExtensionsTests
    [InlineData(0x08, 0x07, 0x06, 0x05, 0x04, 0x03, 0x02, 0x01, 2, Endian.Big,    0x0807000000000000)]
    [InlineData(0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 1, Endian.Little, 0x01)]
    [InlineData(0x08, 0x07, 0x06, 0x05, 0x04, 0x03, 0x02, 0x01, 1, Endian.Big,    0x0800000000000000)]
-   public void ToUInt64_On_ReadOnlySpan(byte d0, byte d1, byte d2, byte d3, byte d4, byte d5, byte d6, byte d7, int size, Endian endian, ulong expected)
+   public void ToUInt64_Returns_Expected_Value(byte d0, byte d1, byte d2, byte d3, byte d4, byte d5, byte d6, byte d7, int size, Endian endian, ulong expected)
    {
       Assert.Equal(expected, new ReadOnlySpan<byte>(new[] { d0, d1, d2, d3, d4, d5, d6, d7 }.Take(size).ToArray()).ToUInt64(endian));
    }
@@ -141,7 +144,7 @@ public class ReadOnlySpanExtensionsTests
    [InlineData(0x08, 0x07, 0x06, 0x05, 0x04, 0x03, 0x02, 0x01, 2, Endian.Big,    0x0807000000000000)]
    [InlineData(0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 1, Endian.Little, 0x01)]
    [InlineData(0x08, 0x07, 0x06, 0x05, 0x04, 0x03, 0x02, 0x01, 1, Endian.Big,    0x0800000000000000)]
-   public void ToInt64_On_ReadOnlySpan(byte d0, byte d1, byte d2, byte d3, byte d4, byte d5, byte d6, byte d7, int size, Endian endian, long expected)
+   public void ToInt64_Returns_Expected_Value(byte d0, byte d1, byte d2, byte d3, byte d4, byte d5, byte d6, byte d7, int size, Endian endian, long expected)
    {
       Assert.Equal(expected, new ReadOnlySpan<byte>(new[] { d0, d1, d2, d3, d4, d5, d6, d7 }.Take(size).ToArray()).ToInt64(endian));
    }
@@ -155,7 +158,7 @@ public class ReadOnlySpanExtensionsTests
    [InlineData(0x04, 0x03, 0x02, 0x01, 2, Endian.Big,    0x04030000)]
    [InlineData(0x01, 0x02, 0x03, 0x04, 1, Endian.Little, 0x01)]
    [InlineData(0x04, 0x03, 0x02, 0x01, 1, Endian.Big,    0x04000000)]
-   public void Single_On_ReadOnlySpan(byte d0, byte d1, byte d2, byte d3, int size, Endian endian, int expected)
+   public void Single_Returns_Expected_Value(byte d0, byte d1, byte d2, byte d3, int size, Endian endian, int expected)
    {
       Assert.Equal(expected.BitwiseToSingle(), new ReadOnlySpan<byte>(new[] { d0, d1, d2, d3 }.Take(size).ToArray()).ToSingle(endian));
    }
@@ -179,7 +182,7 @@ public class ReadOnlySpanExtensionsTests
    [InlineData(0x08, 0x07, 0x06, 0x05, 0x04, 0x03, 0x02, 0x01, 1, Endian.Big,    0x0800000000000000)]
    [InlineData(0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0, Endian.Little, 0x00)]
    [InlineData(0x08, 0x07, 0x06, 0x05, 0x04, 0x03, 0x02, 0x01, 0, Endian.Big,    0x00)]
-   public void ToDouble_On_ReadOnlySpan(byte d0, byte d1, byte d2, byte d3, byte d4, byte d5, byte d6, byte d7, int size, Endian endian, ulong expected)
+   public void ToDouble_Returns_Expected_Value(byte d0, byte d1, byte d2, byte d3, byte d4, byte d5, byte d6, byte d7, int size, Endian endian, ulong expected)
    {
       Assert.Equal(expected.BitwiseToDouble(), new ReadOnlySpan<byte>(new[] { d0, d1, d2, d3, d4, d5, d6, d7 }.Take(size).ToArray()).ToDouble(endian));
    }

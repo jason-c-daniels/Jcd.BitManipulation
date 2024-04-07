@@ -4,7 +4,8 @@
 
 ## UInt64Extensions Class
 
-Provides easy to read methods for bit manipulation operations on a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
+Provides easy to read methods for bit manipulation operations on a
+[System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
 ```csharp
 public static class UInt64Extensions
@@ -41,13 +42,14 @@ secondByte = secondByte.StoreBits(0b1011, 4, 4); // secondByte is now 0b10111111
 
 // chaining operations, the same steps and end results
 data.ClearBits();
-data = data.SetBits(0, 64) // value is now 0b1111111111111111111111111111111111111111111111111111111111111111
-           .SetBits() // this is the equivalent as above
-           .ClearBits(4, 8) // value is now 0b1111111111111111111111111111111111111111111111111111000000001111
-           .ToggleBits(); // value is now 0b0000000000000000000000000000000000000000000000000000111111110000
+data = data.SetBits(0, 64) // value is now
+0b1111111111111111111111111111111111111111111111111111111111111111
+.SetBits() // this is the equivalent as above
+.ClearBits(4, 8) // value is now 0b1111111111111111111111111111111111111111111111111111000000001111
+.ToggleBits(); // value is now 0b0000000000000000000000000000000000000000000000000000111111110000
 
 secondByte = ((byte) data.ReadBits(8, 8)) // extract the upper byte (0b00001111)
-                         .StoreBits(0b1011, 4, 4); // store the value in the upper 4 bits, now
+.StoreBits(0b1011, 4, 4); // store the value in the upper 4 bits, now
 // secondByte is now 0b10111111
 
 // finalData is 0b0000000000000000000000000000000000000000000000000000111111110000
@@ -55,26 +57,29 @@ var beByte0 = finalData.ReadByte(0, Endian.Big); // 00001111
 var leByte0 = finalData.ReadByte(0, Endian.Little); // 11110000
 
 var mutatedData = finalData.StoreByte(0b10111111, 0, Endian.Big)
-                           .StoreByte(0b01010101, 0, Endian.Little)
+.StoreByte(0b01010101, 0, Endian.Little)
 ;
 // mutatedData is now 0b1011111100000000000000000000000000000000000000000000111101010101
 
 var beBa = mutatedData.ToByteArray(Endian.Big); // beBa=[0b10111111, 0b00000000, 0b00000000, 0b00000000,
-                                                //       0b00000000, 0b00000000, 0b00001111, 0b01010101]
+// 0b00000000, 0b00000000, 0b00001111, 0b01010101]
 
-var leBa = mutatedData.ToByteArray(Endian.Little); // leBa=[0b01010101, 0b00001111, 0b00000000, 0b00000000,
-                                                   //       0b00000000, 0b00000000, 0b00000000, 0b10111111]
+var leBa = mutatedData.ToByteArray(Endian.Little); // leBa=[0b01010101, 0b00001111, 0b00000000,
+0b00000000,
+// 0b00000000, 0b00000000, 0b00000000, 0b10111111]
 
-var leBaToUInt64Le = leBa.ToUInt64(Endian.Little); // leBaToUInt64Le = 0b1011111100000000000000000000000000000000000000000000111101010101
+var leBaToUInt64Le = leBa.ToUInt64(Endian.Little); // leBaToUInt64Le =
+0b1011111100000000000000000000000000000000000000000000111101010101
 
-var leBaToUInt64Be = leBa.ToUInt64(Endian.Big); // leBaToUInt64Be = 0b0101010100001111000000000000000000000000000000000000000010111111
+var leBaToUInt64Be = leBa.ToUInt64(Endian.Big); // leBaToUInt64Be =
+0b0101010100001111000000000000000000000000000000000000000010111111
 ```
 
 | Methods                                                                                                                                                                                                                                                                                                                         |                                                                                                                                                                                                                            |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [AreAllBitsSet(this ulong, BitMask)](Jcd.BitManipulation.UInt64Extensions.AreAllBitsSet(thisulong,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.UInt64Extensions.AreAllBitsSet(this ulong, Jcd.BitManipulation.BitMask)')                                                                                                | Tests if all of the bits from the bitmask are set on a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64').                                                                         |
-| [AreAnyBitsSet(this ulong, BitMask)](Jcd.BitManipulation.UInt64Extensions.AreAnyBitsSet(thisulong,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.UInt64Extensions.AreAnyBitsSet(this ulong, Jcd.BitManipulation.BitMask)')                                                                                                | Tests if any bits from the bitmask are set on a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64').                                                                                |
-| [AreNoBitsSet(this ulong, BitMask)](Jcd.BitManipulation.UInt64Extensions.AreNoBitsSet(thisulong,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.UInt64Extensions.AreNoBitsSet(this ulong, Jcd.BitManipulation.BitMask)')                                                                                                   | Tests if none of the bits from the bitmask are set on a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64').                                                                        |
+| [AreAllBitsSet(this ulong, BitMask)](Jcd.BitManipulation.UInt64Extensions.AreAllBitsSet(thisulong,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.UInt64Extensions.AreAllBitsSet(this ulong, Jcd.BitManipulation.BitMask)')                                                                                                | Tests if all of the bits from the bitmask are set on a[System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64').                                                                          |
+| [AreAnyBitsSet(this ulong, BitMask)](Jcd.BitManipulation.UInt64Extensions.AreAnyBitsSet(thisulong,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.UInt64Extensions.AreAnyBitsSet(this ulong, Jcd.BitManipulation.BitMask)')                                                                                                | Tests if any bits from the bitmask are set on a[System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64').                                                                                 |
+| [AreNoBitsSet(this ulong, BitMask)](Jcd.BitManipulation.UInt64Extensions.AreNoBitsSet(thisulong,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.UInt64Extensions.AreNoBitsSet(this ulong, Jcd.BitManipulation.BitMask)')                                                                                                   | Tests if none of the bits from the bitmask are set on a[System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64').                                                                         |
 | [BitwiseToDouble(this ulong)](Jcd.BitManipulation.UInt64Extensions.BitwiseToDouble(thisulong).md 'Jcd.BitManipulation.UInt64Extensions.BitwiseToDouble(this ulong)')                                                                                                                                                            | Converts a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') to the bit-wise identical [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double') |
 | [ClearBit(this ulong, int)](Jcd.BitManipulation.UInt64Extensions.ClearBit(thisulong,int).md 'Jcd.BitManipulation.UInt64Extensions.ClearBit(this ulong, int)')                                                                                                                                                                   | Sets the specified bit to "off" and returns the modified value.                                                                                                                                                            |
 | [ClearBits(this ulong, int, int)](Jcd.BitManipulation.UInt64Extensions.ClearBits(thisulong,int,int).md 'Jcd.BitManipulation.UInt64Extensions.ClearBits(this ulong, int, int)')                                                                                                                                                  | Sets all specified bits to "off" and returns the modified value.                                                                                                                                                           |
@@ -95,7 +100,7 @@ var leBaToUInt64Be = leBa.ToUInt64(Endian.Big); // leBaToUInt64Be = 0b0101010100
 | [StoreBytes(this ulong, byte[], int, int, Endian)](Jcd.BitManipulation.UInt64Extensions.StoreBytes(thisulong,byte[],int,int,Jcd.BitManipulation.Endian).md 'Jcd.BitManipulation.UInt64Extensions.StoreBytes(this ulong, byte[], int, int, Jcd.BitManipulation.Endian)')                                                         | Stores a set of bytes starting at the specified byte offset and returns the modified value.                                                                                                                                |
 | [StoreBytes(this ulong, ReadOnlySpan&lt;byte&gt;, int, int, Endian)](Jcd.BitManipulation.UInt64Extensions.StoreBytes(thisulong,System.ReadOnlySpan_byte_,int,int,Jcd.BitManipulation.Endian).md 'Jcd.BitManipulation.UInt64Extensions.StoreBytes(this ulong, System.ReadOnlySpan<byte>, int, int, Jcd.BitManipulation.Endian)') | Stores a set of bytes starting at the specified byte offset and returns the modified value.                                                                                                                                |
 | [ToBooleanArray(this ulong)](Jcd.BitManipulation.UInt64Extensions.ToBooleanArray(thisulong).md 'Jcd.BitManipulation.UInt64Extensions.ToBooleanArray(this ulong)')                                                                                                                                                               | Converts a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') into an array of  values with the lease significant bit at index 0.                                                  |
-| [ToByteArray(this ulong, Endian)](Jcd.BitManipulation.UInt64Extensions.ToByteArray(thisulong,Jcd.BitManipulation.Endian).md 'Jcd.BitManipulation.UInt64Extensions.ToByteArray(this ulong, Jcd.BitManipulation.Endian)')                                                                                                         | Converts a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') into an array of bytes in the specified [Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian').        |
+| [ToByteArray(this ulong, Endian)](Jcd.BitManipulation.UInt64Extensions.ToByteArray(thisulong,Jcd.BitManipulation.Endian).md 'Jcd.BitManipulation.UInt64Extensions.ToByteArray(this ulong, Jcd.BitManipulation.Endian)')                                                                                                         | Converts a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') into an array of bytes in the specified[Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian').         |
 | [ToggleBit(this ulong, int)](Jcd.BitManipulation.UInt64Extensions.ToggleBit(thisulong,int).md 'Jcd.BitManipulation.UInt64Extensions.ToggleBit(this ulong, int)')                                                                                                                                                                | Toggles a bit at the specified offset and returns the modified value.                                                                                                                                                      |
 | [ToggleBits(this ulong, int, int)](Jcd.BitManipulation.UInt64Extensions.ToggleBits(thisulong,int,int).md 'Jcd.BitManipulation.UInt64Extensions.ToggleBits(this ulong, int, int)')                                                                                                                                               | Toggles the specified range of bits and returns the modified value.                                                                                                                                                        |
 | [ToggleBits(this ulong, BitMask)](Jcd.BitManipulation.UInt64Extensions.ToggleBits(thisulong,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.UInt64Extensions.ToggleBits(this ulong, Jcd.BitManipulation.BitMask)')                                                                                                         | Toggle all the bits specified in the provided bit mask and returns the modified value.                                                                                                                                     |

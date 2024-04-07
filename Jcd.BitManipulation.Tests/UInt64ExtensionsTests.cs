@@ -50,7 +50,7 @@ public class UInt64ExtensionsTests
    [InlineData(0b111111111111,                         8,  2, 0b110011111111)]
    [InlineData(0b00111111111111111111111111111111,     26, 2, 0b00110011111111111111111111111111)]
    [InlineData(0b111111111111111111111111111111111111, 32, 2, 0b110011111111111111111111111111111111)]
-   public void ClearBits_On_UInt64_Clears_The_Correct_Bits(ulong value, int offset, int size, ulong expected)
+   public void ClearBits_Clears_The_Correct_Bits(ulong value, int offset, int size, ulong expected)
    {
       var result = value.ClearBits((byte) offset, (byte) size);
       Assert.Equal(expected, result);
@@ -62,7 +62,7 @@ public class UInt64ExtensionsTests
    [InlineData(0xFFFFFFFFFFFFFFFF, 15, 0xFFFFFFFFFFFF7FFF)]
    [InlineData(0xFFFFFFFFFFFFFFFF, 31, 0xFFFFFFFF7FFFFFFF)]
    [InlineData(0xFFFFFFFFFFFFFFFF, 63, 0x7FFFFFFFFFFFFFFF)]
-   public void ClearBit_On_UInt64_Clears_Correct_Bit(ulong value, int bitToClear, ulong expected)
+   public void ClearBit_Clears_Correct_Bit(ulong value, int bitToClear, ulong expected)
    {
       var result = value.ClearBit((byte) bitToClear);
       Assert.Equal(expected, result);
@@ -78,7 +78,7 @@ public class UInt64ExtensionsTests
              , 0b0000010000000000000000000000000000100001000000000100000000000110
              , 0b1111101111111111111111111111111111011110111111111011111111111001
               )]
-   public void ClearBits_For_UInt64_When_Given_A_Mask_Directly_Clears_Only_The_Specified_Bits(ulong initialValue, ulong maskValue, ulong expected)
+   public void ClearBits_When_Given_A_Mask_Directly_Clears_Only_The_Specified_Bits(ulong initialValue, ulong maskValue, ulong expected)
    {
       // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
       var mask = new BitMask(maskValue);
@@ -96,7 +96,7 @@ public class UInt64ExtensionsTests
    [InlineData(0x00, 0,  32, 0xFFFFFFFF)]
    [InlineData(0x00, 60, 2,  0b0011000000000000000000000000000000000000000000000000000000000000)]
    [InlineData(0x00, 0,  64, 0xFFFFFFFFFFFFFFFF)]
-   public void SetBits_On_UInt64_Sets_The_Correct_Bits(ulong value, int offset, int size, ulong expected)
+   public void SetBits_Sets_The_Correct_Bits(ulong value, int offset, int size, ulong expected)
    {
       var result = value.SetBits((byte) offset, (byte) size);
       Assert.Equal(expected, result);
@@ -113,7 +113,7 @@ public class UInt64ExtensionsTests
    [InlineData(0x00, 31, 0x80000000)]
    [InlineData(0x80, 32, 0x0000000100000080)]
    [InlineData(0x00, 63, 0x8000000000000000)]
-   public void SetBit_On_UInt64_Sets_Correct_Bit(ulong value, int bitToSet, ulong expected)
+   public void SetBit_Sets_Correct_Bit(ulong value, int bitToSet, ulong expected)
    {
       var result = value.SetBit((byte) bitToSet);
       Assert.Equal(expected, result);
@@ -128,7 +128,7 @@ public class UInt64ExtensionsTests
    [InlineData(0x80000000,         0x03000000,         0x83000000)]
    [InlineData(0x0000000000000000, 0x0300000000000000, 0x0300000000000000)]
    [InlineData(0x8000000000000000, 0x0300000000000000, 0x8300000000000000)]
-   public void SetBits_For_UInt64_When_Given_A_Mask_Directly_Sets_Only_The_Specified_Bits(ulong initialValue, ulong maskValue, ulong expected)
+   public void SetBits_When_Given_A_Mask_Directly_Sets_Only_The_Specified_Bits(ulong initialValue, ulong maskValue, ulong expected)
    {
       // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
       var mask = new BitMask(maskValue);
@@ -148,7 +148,7 @@ public class UInt64ExtensionsTests
    [InlineData(0xF000000F,         30, 2, 0x03)]
    [InlineData(0x300000000000000F, 60, 4, 0x03)]
    [InlineData(0xF00000000000000F, 62, 2, 0x03)]
-   public void ReadBits_On_UInt64_Reads_The_Correct_Bits(ulong bits, int offset, int size, ulong expected)
+   public void ReadBits_Reads_The_Correct_Bits(ulong bits, int offset, int size, ulong expected)
    {
       var value = bits.ReadBits(offset, size);
       Assert.Equal(expected, value);
@@ -166,7 +166,7 @@ public class UInt64ExtensionsTests
    [InlineData((uint) 0b11100111  << 24, 31, true)]
    [InlineData((ulong) 0b11100111 << 56, 59, false)]
    [InlineData((ulong) 0b11100111 << 56, 63, true)]
-   public void ReadBit_For_UInt64_Reads_The_Correct_Value(ulong bits, int offset, bool expected)
+   public void ReadBit_Reads_The_Correct_Value(ulong bits, int offset, bool expected)
    {
       Assert.Equal(expected, bits.ReadBit((byte) offset));
    }
@@ -188,29 +188,36 @@ public class UInt64ExtensionsTests
    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 2, 0xFD, Endian.Big)]
    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 1, 0xFE, Endian.Big)]
    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 0, 0xFF, Endian.Big)]
-   public void ReadByte_On_UInt64_Returns_Expected_Value(ulong data, int offset, byte expected, Endian endian)
+   public void ReadByte_Returns_Expected_Value(ulong data, int offset, byte expected, Endian endian)
    {
       Assert.Equal(expected, data.ReadByte(offset, endian));
    }
 
    [Theory]
-   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 0, 2)]
-   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 0, 3)]
-   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 0, 4)]
-   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 3, 4)]
-   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 4, 3)]
-   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 5, 2)]
-   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 6, 2)]
-   public void ReadBytes_On_UInt64_Returns_Expected_Array(ulong data, int offset, int size)
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 0, 2, Endian.Little)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 0, 3, Endian.Little)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 0, 4, Endian.Little)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 3, 4, Endian.Little)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 4, 3, Endian.Little)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 5, 2, Endian.Little)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 6, 2, Endian.Little)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 0, 2, Endian.Big)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 0, 3, Endian.Big)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 0, 4, Endian.Big)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 3, 4, Endian.Big)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 4, 3, Endian.Big)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 5, 2, Endian.Big)]
+   [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 6, 2, Endian.Big)]
+   public void ReadBytes_Returns_Expected_Array(ulong data, int offset, int size, Endian endian)
    {
       var expected = new List<byte>();
 
       for (var i = 0; i < size; i++)
       {
-         expected.Add(data.ReadByte(i + offset));
+         expected.Add(data.ReadByte(i + offset, endian));
       }
 
-      Assert.Equal(expected.ToArray(), data.ReadBytes(offset, size));
+      Assert.Equal(expected.ToArray(), data.ReadBytes(offset, size, endian));
    }
 
    [Theory]
@@ -220,7 +227,7 @@ public class UInt64ExtensionsTests
    [InlineData(0xF0,   0x03,   0, 4,  0xF3)]
    [InlineData(0x0000, 0xFFFF, 0, 16, 0xFFFF)]
    [InlineData(0xF000, 0x03,   0, 8,  0xF003)]
-   public void StoreBits_On_UInt64_Stores_The_Correct_Bits(ulong initial, ulong val, int offset, int size, ulong expected)
+   public void StoreBits_Stores_The_Correct_Bits(ulong initial, ulong val, int offset, int size, ulong expected)
    {
       var result = initial.StoreBits(val, offset, size);
       Assert.Equal(expected, result);
@@ -237,7 +244,7 @@ public class UInt64ExtensionsTests
    [InlineData(0xFFFFFFFF,         31, false, 0x7FFFFFFF)]
    [InlineData(0x0000000000000000, 63, true,  0x8000000000000000)]
    [InlineData(0xFFFFFFFFFFFFFFFF, 63, false, 0x7FFFFFFFFFFFFFFF)]
-   public void StoreBit_For_UInt64_Sets_The_Specified_Bit_To_The_Target_Value(ulong value, int offset, bool bit, ulong expected)
+   public void StoreBit_Sets_The_Specified_Bit_To_The_Target_Value(ulong value, int offset, bool bit, ulong expected)
    {
       var result = value.StoreBit(bit, offset);
       Assert.Equal(expected, result);
@@ -260,14 +267,14 @@ public class UInt64ExtensionsTests
    [InlineData(0, (byte) 0xFC, 2, 0x00_00_FC_00_00_00_00_00, Endian.Big)]
    [InlineData(0, (byte) 0xFB, 1, 0x00_FB_00_00_00_00_00_00, Endian.Big)]
    [InlineData(0, (byte) 0xFA, 0, 0xFA_00_00_00_00_00_00_00, Endian.Big)]
-   public void StoreByte_On_UInt64_Returns_Expected_Value(ulong value, byte data, int offset, ulong expected, Endian endian)
+   public void StoreByte_Returns_Expected_Value(ulong value, byte data, int offset, ulong expected, Endian endian)
    {
       Assert.Equal(expected, value.StoreByte(data, offset, endian));
    }
 
    [Theory]
    [MemberData(nameof(UInt64StoreBytesWithEndian))]
-   public void StoreBytes_From_Byte_Array_On_UInt64_Returns_Expected_Value(ulong data, int offset, int size, byte[] bytes, Endian endian)
+   public void StoreBytes_From_Byte_Array_Returns_Expected_Value(ulong data, int offset, int size, byte[] bytes, Endian endian)
    {
       var expected = data;
 
@@ -282,7 +289,7 @@ public class UInt64ExtensionsTests
 
    [Theory]
    [MemberData(nameof(UInt64StoreBytesWithEndian))]
-   public void StoreBytes_From_ReadOnlySpan_On_UInt64_Returns_Expected_Value(ulong data, int offset, int size, byte[] bytes, Endian endian)
+   public void StoreBytes_From_ReadOnlySpan_Returns_Expected_Value(ulong data, int offset, int size, byte[] bytes, Endian endian)
    {
       var expected = data;
 
@@ -302,7 +309,7 @@ public class UInt64ExtensionsTests
    [InlineData(0b111111111111,                         8,  2, 0b110011111111)]
    [InlineData(0b00111111111111111111111111111111,     26, 2, 0b00110011111111111111111111111111)]
    [InlineData(0b111111111111111111111111111111111111, 32, 2, 0b110011111111111111111111111111111111)]
-   public void ToggleBits_On_UInt64_Toggles_The_Correct_Bits(ulong value, int offset, int size, ulong expected)
+   public void ToggleBits_Toggles_The_Correct_Bits(ulong value, int offset, int size, ulong expected)
    {
       var result = value.ToggleBits((byte) offset, (byte) size);
       Assert.Equal(expected, result);
@@ -314,7 +321,7 @@ public class UInt64ExtensionsTests
    [InlineData(0xFFFFFFFFFFFFFFFF, 15, 0xFFFFFFFFFFFF7FFF)]
    [InlineData(0xFFFFFFFFFFFFFFFF, 31, 0xFFFFFFFF7FFFFFFF)]
    [InlineData(0xFFFFFFFFFFFFFFFF, 63, 0x7FFFFFFFFFFFFFFF)]
-   public void ToggleBit_On_UInt64_Toggles_Correct_Bit(ulong value, int bitToToggle, ulong expected)
+   public void ToggleBit_Toggles_Correct_Bit(ulong value, int bitToToggle, ulong expected)
    {
       var result = value.ToggleBit((byte) bitToToggle);
       Assert.Equal(expected, result);
@@ -330,7 +337,7 @@ public class UInt64ExtensionsTests
              , 0b0000010000000000000000000000000000100001000000000100000000000110
              , 0b1111101111111111111111111111111111011110111111111011111111111001
               )]
-   public void ToggleBits_For_UInt64_When_Given_A_Mask_Directly_Toggles_Only_The_Specified_Bits(ulong initialValue, ulong maskValue, ulong expected)
+   public void ToggleBits_When_Given_A_Mask_Directly_Toggles_Only_The_Specified_Bits(ulong initialValue, ulong maskValue, ulong expected)
    {
       // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
       var mask = new BitMask(maskValue);
@@ -341,7 +348,7 @@ public class UInt64ExtensionsTests
    [Theory]
    [InlineData(0x0807060504030201, Endian.Little, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08)]
    [InlineData(0x0807060504030201, Endian.Big,    0x08, 0x07, 0x06, 0x05, 0x04, 0x03, 0x02, 0x01)]
-   public void ToByteArray_On_UInt64_Returns_Expected_Value(ulong data, Endian endian, byte e0, byte e1, byte e2, byte e3, byte e4, byte e5, byte e6, byte e7)
+   public void ToByteArray_Returns_Expected_Value(ulong data, Endian endian, byte e0, byte e1, byte e2, byte e3, byte e4, byte e5, byte e6, byte e7)
    {
       var expected = new[] { e0, e1, e2, e3, e4, e5, e6, e7 };
       Assert.Equal(expected, data.ToByteArray(endian));

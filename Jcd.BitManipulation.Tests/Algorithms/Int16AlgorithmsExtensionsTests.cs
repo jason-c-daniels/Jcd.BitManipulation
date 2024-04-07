@@ -1,6 +1,7 @@
 ﻿#region
 
 #pragma warning disable CA1868
+
 using System.Collections.Generic;
 
 using Jcd.BitManipulation.Algorithms;
@@ -260,6 +261,8 @@ public class Int16AlgorithmsExtensionsTests
          var result = new TheoryData<short, short>();
 
          const short bit = 1;
+         result.Add(short.MinValue, 0);
+         result.Add(-1,             0);
 
          for (short i = 0; i < BitSize - 1; i++)
          {

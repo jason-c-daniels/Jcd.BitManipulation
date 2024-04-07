@@ -16,7 +16,7 @@ public class UInt16ExtensionsTests
    [InlineData(0b11,  ushort.MaxValue, true)]
    [InlineData(0b100, 0b10,            false)]
    [InlineData(0b011, 0b10,            true)]
-   public void AreAnyBitsSet_On_A_UInt16_Returns_The_Expected_Result(ushort data, ushort mask, bool expected)
+   public void AreAnyBitsSet_Returns_The_Expected_Result(ushort data, ushort mask, bool expected)
    {
       Assert.Equal(expected, data.AreAnyBitsSet(mask));
    }
@@ -26,7 +26,7 @@ public class UInt16ExtensionsTests
    [InlineData(0b11, ushort.MaxValue, false)]
    [InlineData(0b10, 0b10,            true)]
    [InlineData(0b11, 0b10,            true)]
-   public void AreAllBits_On_A_UInt16_Returns_The_Expected_Result(ushort data, ushort mask, bool expected)
+   public void AreAllBits_Returns_The_Expected_Result(ushort data, ushort mask, bool expected)
    {
       Assert.Equal(expected, data.AreAllBitsSet(mask));
    }
@@ -36,7 +36,7 @@ public class UInt16ExtensionsTests
    [InlineData(0b11, ushort.MaxValue, false)]
    [InlineData(0b10, 0b10,            false)]
    [InlineData(0b11, 0b10,            false)]
-   public void AreNoBitsSet_On_A_UInt16_Returns_The_Expected_Result(ushort data, ushort mask, bool expected)
+   public void AreNoBitsSet_Returns_The_Expected_Result(ushort data, ushort mask, bool expected)
    {
       Assert.Equal(expected, data.AreNoBitsSet(mask));
    }
@@ -46,7 +46,7 @@ public class UInt16ExtensionsTests
    [InlineData(0b11111111,     4, 2, 0b11001111)] // clear middle 2 bits of lower byte
    [InlineData(0b11111111,     6, 2, 0b00111111)] // clear upper 2 bits of lower byte
    [InlineData(0b111111111111, 8, 2, 0b110011111111)]
-   public void ClearBits_On_UInt16_Clears_The_Correct_Bits(ushort initial, int offset, int size, ushort expected)
+   public void ClearBits_Clears_The_Correct_Bits(ushort initial, int offset, int size, ushort expected)
    {
       var value = initial; // coerce to proper type, test data binder fails to do this correctly.
       var result = value.ClearBits((byte) offset, (byte) size);
@@ -57,7 +57,7 @@ public class UInt16ExtensionsTests
    [InlineData(0xFFFF, 0,  0xFFFE)]
    [InlineData(0xFFFF, 4,  0xFFEF)]
    [InlineData(0xFFFF, 15, 0x7FFF)]
-   public void ClearBit_On_UInt16_Clears_Correct_Bit(ushort initial, int bitToClear, ushort expected)
+   public void ClearBit_Clears_Correct_Bit(ushort initial, int bitToClear, ushort expected)
    {
       var value = initial;
       var result = value.ClearBit((byte) bitToClear);
@@ -69,7 +69,7 @@ public class UInt16ExtensionsTests
    [InlineData(0b10111111,         0b0000100,          0b10111011)]
    [InlineData(0b1111111111111111, 0b0100000000000110, 0b1011111111111001)]
    [InlineData(0b1111111110111111, 0b0100000000000100, 0b1011111110111011)]
-   public void ClearBits_For_UInt16_When_Given_A_Mask_Directly_Clears_Only_The_Specified_Bits(ushort initialValue, ushort maskValue, ushort expected)
+   public void ClearBits_When_Given_A_Mask_Directly_Clears_Only_The_Specified_Bits(ushort initialValue, ushort maskValue, ushort expected)
    {
       // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
       var value = initialValue;
@@ -84,7 +84,7 @@ public class UInt16ExtensionsTests
    [InlineData(0x00, 0,  8,  0xFF)]
    [InlineData(0x00, 12, 2,  0b0011000000000000)]
    [InlineData(0x00, 0,  16, 0xFFFF)]
-   public void SetBits_On_UInt16_Sets_The_Correct_Bits(ushort initial, int offset, int size, ushort expected)
+   public void SetBits_Sets_The_Correct_Bits(ushort initial, int offset, int size, ushort expected)
    {
       var value = initial; // coerce to proper type, test data binder fails to do this correctly.
       var result = value.SetBits(offset, size);
@@ -98,7 +98,7 @@ public class UInt16ExtensionsTests
    [InlineData(0x00, 8,  0x0100)]
    [InlineData(0x80, 8,  0x0180)]
    [InlineData(0x00, 15, 0x8000)]
-   public void SetBit_On_UInt16_Sets_Correct_Bit(ushort initial, int bitToSet, ushort expected)
+   public void SetBit_Sets_Correct_Bit(ushort initial, int bitToSet, ushort expected)
    {
       var value = initial;
       var result = value.SetBit((byte) bitToSet);
@@ -110,7 +110,7 @@ public class UInt16ExtensionsTests
    [InlineData(0x80,   0x03,   0x83)]
    [InlineData(0x0000, 0x0300, 0x0300)]
    [InlineData(0x8000, 0x0300, 0x8300)]
-   public void SetBits_For_UInt16_When_Given_A_Mask_Directly_Sets_Only_The_Specified_Bits(ushort initialValue, ushort maskValue, ushort expected)
+   public void SetBits_When_Given_A_Mask_Directly_Sets_Only_The_Specified_Bits(ushort initialValue, ushort maskValue, ushort expected)
    {
       // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
       var value = initialValue;
@@ -127,7 +127,7 @@ public class UInt16ExtensionsTests
    [InlineData(0x3F,       4,  4, 0x03)]
    [InlineData(0x300F,     12, 4, 0x03)]
    [InlineData(0xF00F,     14, 2, 0x03)]
-   public void ReadBits_On_UInt16_Reads_The_Correct_Bits(ushort initial, int offset, int size, ushort expected)
+   public void ReadBits_Reads_The_Correct_Bits(ushort initial, int offset, int size, ushort expected)
    {
       var bits = initial; // coerce to proper type
       var value = bits.ReadBits(offset, size);
@@ -142,7 +142,7 @@ public class UInt16ExtensionsTests
    [InlineData(0b11100111,         7,  true)]
    [InlineData(0b1110011100000000, 11, false)]
    [InlineData(0b1110011100000000, 15, true)]
-   public void ReadBit_For_UInt16_Reads_The_Correct_Value(ushort bits, int offset, bool expected)
+   public void ReadBit_Reads_The_Correct_Value(ushort bits, int offset, bool expected)
    {
       Assert.Equal(expected, bits.ReadBit((byte) offset));
    }
@@ -152,24 +152,26 @@ public class UInt16ExtensionsTests
    [InlineData(0xF9_F8, 1, 0xF9, Endian.Little)]
    [InlineData(0xF9_F8, 1, 0xF8, Endian.Big)]
    [InlineData(0xF9_F8, 0, 0xF9, Endian.Big)]
-   public void ReadByte_On_UInt16_Returns_Expected_Value(ushort data, int offset, byte expected, Endian endian)
+   public void ReadByte_Returns_Expected_Value(ushort data, int offset, byte expected, Endian endian)
    {
       Assert.Equal(expected, data.ReadByte(offset, endian));
    }
 
    [Theory]
-   [InlineData(0xF9_F8, 0, 2)]
-   [InlineData(0xFB_FA, 1, 1)]
-   public void ReadBytes_On_UInt16_Returns_Expected_Array(ushort data, int offset, int size)
+   [InlineData(0xF9_F8, 0, 2, Endian.Little)]
+   [InlineData(0xFB_FA, 1, 1, Endian.Little)]
+   [InlineData(0xF9_F8, 0, 2, Endian.Big)]
+   [InlineData(0xFB_FA, 1, 1, Endian.Big)]
+   public void ReadBytes_Returns_Expected_Array(ushort data, int offset, int size, Endian endian)
    {
       var expected = new List<byte>();
 
       for (var i = 0; i < size; i++)
       {
-         expected.Add(data.ReadByte(i + offset));
+         expected.Add(data.ReadByte(i + offset, endian));
       }
 
-      Assert.Equal(expected.ToArray(), data.ReadBytes(offset, size));
+      Assert.Equal(expected.ToArray(), data.ReadBytes(offset, size, endian));
    }
 
    [Theory]
@@ -179,7 +181,7 @@ public class UInt16ExtensionsTests
    [InlineData(0xF0,   0x03,   0, 4,  0xF3)]
    [InlineData(0x0000, 0xFFFF, 0, 16, 0xFFFF)]
    [InlineData(0xF000, 0x03,   0, 8,  0xF003)]
-   public void StoreBits_On_UInt16_Stores_The_Correct_Bits(ushort initial, ushort val, int offset, int size, ushort expected)
+   public void StoreBits_Stores_The_Correct_Bits(ushort initial, ushort val, int offset, int size, ushort expected)
    {
       var destination = initial; // coerce to proper type
       var value = val;
@@ -194,7 +196,7 @@ public class UInt16ExtensionsTests
    [InlineData(0xFF,   7,  false, 0x7F)]
    [InlineData(0x0000, 15, true,  0x8000)]
    [InlineData(0xFFFF, 15, false, 0x7FFF)]
-   public void StoreBit_For_UInt16_Sets_The_Specified_Bit_To_The_Target_Value(ushort destination, int offset, bool bit, ushort expected)
+   public void StoreBit_Sets_The_Specified_Bit_To_The_Target_Value(ushort destination, int offset, bool bit, ushort expected)
    {
       var value = destination;
       var result = value.StoreBit(bit, offset);
@@ -206,14 +208,14 @@ public class UInt16ExtensionsTests
    [InlineData(0, (byte) 0x02, 1, 0x02_00, Endian.Little)]
    [InlineData(0, (byte) 0x01, 0, 0x01_00, Endian.Big)]
    [InlineData(0, (byte) 0x02, 1, 0x00_02, Endian.Big)]
-   public void StoreByte_On_UInt16_Returns_Expected_Value(ushort value, byte data, int offset, ushort expected, Endian endian)
+   public void StoreByte_Returns_Expected_Value(ushort value, byte data, int offset, ushort expected, Endian endian)
    {
       Assert.Equal(expected, value.StoreByte(data, offset, endian));
    }
 
    [Theory]
    [MemberData(nameof(UInt16StoreBytesWithEndian))]
-   public void StoreBytes_From_Byte_Array_On_UInt16_Returns_Expected_Value(ushort data, int offset, int size, byte[] bytes, Endian endian)
+   public void StoreBytes_From_Byte_Array_Returns_Expected_Value(ushort data, int offset, int size, byte[] bytes, Endian endian)
    {
       var expected = data;
 
@@ -228,7 +230,7 @@ public class UInt16ExtensionsTests
 
    [Theory]
    [MemberData(nameof(UInt16StoreBytesWithEndian))]
-   public void StoreBytes_From_ReadOnlySpan_On_UInt16_Returns_Expected_Value(ushort data, int offset, int size, byte[] bytes, Endian endian)
+   public void StoreBytes_From_ReadOnlySpan_Returns_Expected_Value(ushort data, int offset, int size, byte[] bytes, Endian endian)
    {
       var expected = data;
 
@@ -246,7 +248,7 @@ public class UInt16ExtensionsTests
    [InlineData(0b11111111,     4, 2, 0b11001111)] // toggle middle 2 bits of lower byte
    [InlineData(0b11111111,     6, 2, 0b00111111)] // toggle upper 2 bits of lower byte
    [InlineData(0b111111111111, 8, 2, 0b110011111111)]
-   public void ToggleBits_On_UInt16_Toggles_The_Correct_Bits(ushort initial, int offset, int size, ushort expected)
+   public void ToggleBits_Toggles_The_Correct_Bits(ushort initial, int offset, int size, ushort expected)
    {
       var value = initial; // coerce to proper type, test data binder fails to do this correctly.
       var result = value.ToggleBits((byte) offset, (byte) size);
@@ -257,7 +259,7 @@ public class UInt16ExtensionsTests
    [InlineData(0xFFFF, 0,  0xFFFE)]
    [InlineData(0xFFFF, 4,  0xFFEF)]
    [InlineData(0xFFFF, 15, 0x7FFF)]
-   public void ToggleBit_On_UInt16_Toggles_Correct_Bit(ushort initial, int bitToToggle, ushort expected)
+   public void ToggleBit_Toggles_Correct_Bit(ushort initial, int bitToToggle, ushort expected)
    {
       var value = initial;
       var result = value.ToggleBit((byte) bitToToggle);
@@ -269,7 +271,7 @@ public class UInt16ExtensionsTests
    [InlineData(0b10111111,         0b0000100,          0b10111011)]
    [InlineData(0b1111111111111111, 0b0100000000000110, 0b1011111111111001)]
    [InlineData(0b1111111110111111, 0b0100000000000100, 0b1011111110111011)]
-   public void ToggleBits_For_UInt16_When_Given_A_Mask_Directly_Toggles_Only_The_Specified_Bits(ushort initialValue, ushort maskValue, ushort expected)
+   public void ToggleBits_When_Given_A_Mask_Directly_Toggles_Only_The_Specified_Bits(ushort initialValue, ushort maskValue, ushort expected)
    {
       // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
       var value = initialValue;
@@ -281,7 +283,7 @@ public class UInt16ExtensionsTests
    [Theory]
    [InlineData(0x0201, Endian.Little, 0x01, 0x02)]
    [InlineData(0x0201, Endian.Big,    0x02, 0x01)]
-   public void ToByteArray_On_UInt16_Returns_Expected_Value(ushort data, Endian endian, byte e0, byte e1)
+   public void ToByteArray_Returns_Expected_Value(ushort data, Endian endian, byte e0, byte e1)
    {
       var expected = new[] { e0, e1 };
       Assert.Equal(expected, data.ToByteArray(endian));

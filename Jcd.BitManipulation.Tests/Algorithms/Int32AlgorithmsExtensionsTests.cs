@@ -261,6 +261,8 @@ public class Int32AlgorithmsExtensionsTests
          var result = new TheoryData<int, int>();
 
          const int bit = 1;
+         result.Add(int.MinValue, 0);
+         result.Add(-1,           0);
 
          for (var i = 0; i < BitSize - 1; i++)
          {

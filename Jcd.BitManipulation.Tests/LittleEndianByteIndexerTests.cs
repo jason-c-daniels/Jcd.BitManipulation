@@ -308,7 +308,7 @@ public class LittleEndianByteIndexerTests
    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 4, 3)]
    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 5, 2)]
    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 6, 2)]
-   public void ReadBytes_On_UInt64_Returns_Expected_Array(ulong baseData, int offset, int size)
+   public void Slice_On_UInt64_Returns_Expected_Array(ulong baseData, int offset, int size)
    {
       LittleEndianByteIndexer data = baseData;
       var expected = new List<byte>();
@@ -329,7 +329,7 @@ public class LittleEndianByteIndexerTests
    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 4, 3)]
    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 5, 2)]
    [InlineData(0xFF_FE_FD_FC_FB_FA_F9_F8, 6, 2)]
-   public void ReadBytes_On_Int64_Returns_Expected_Array(ulong baseData, int offset, int size)
+   public void Slice_On_Int64_Returns_Expected_Array(ulong baseData, int offset, int size)
    {
       LittleEndianByteIndexer data = (long) baseData;
       var expected = new List<byte>();
@@ -347,7 +347,7 @@ public class LittleEndianByteIndexerTests
    [InlineData(0xFB_FA_F9_F8, 1, 3)]
    [InlineData(0xFB_FA_F9_F8, 2, 2)]
    [InlineData(0xFB_FA_F9_F8, 0, 3)]
-   public void ReadBytes_On_UInt32_Returns_Expected_Array(uint baseData, int offset, int size)
+   public void Slice_On_UInt32_Returns_Expected_Array(uint baseData, int offset, int size)
    {
       LittleEndianByteIndexer data = baseData;
       var expected = new List<byte>();
@@ -365,7 +365,7 @@ public class LittleEndianByteIndexerTests
    [InlineData(0xFB_FA_F9_F8, 1, 3)]
    [InlineData(0xFB_FA_F9_F8, 2, 2)]
    [InlineData(0xFB_FA_F9_F8, 0, 3)]
-   public void ReadBytes_On_Int32_Returns_Expected_Array(uint baseData, int offset, int size)
+   public void Slice_On_Int32_Returns_Expected_Array(uint baseData, int offset, int size)
    {
       LittleEndianByteIndexer data = (int) baseData;
       var expected = new List<byte>();
@@ -381,7 +381,7 @@ public class LittleEndianByteIndexerTests
    [Theory]
    [InlineData(0xF9_F8, 0, 2)]
    [InlineData(0xFB_FA, 1, 1)]
-   public void ReadBytes_On_UInt16_Returns_Expected_Array(ushort baseData, int offset, int size)
+   public void Slice_On_UInt16_Returns_Expected_Array(ushort baseData, int offset, int size)
    {
       LittleEndianByteIndexer data = baseData;
       var expected = new List<byte>();
@@ -397,7 +397,7 @@ public class LittleEndianByteIndexerTests
    [Theory]
    [InlineData(0xF9_F8, 0, 2)]
    [InlineData(0xFB_FA, 1, 1)]
-   public void ReadBytes_On_Int16_Returns_Expected_Array(ushort baseData, int offset, int size)
+   public void Slice_On_Int16_Returns_Expected_Array(ushort baseData, int offset, int size)
    {
       LittleEndianByteIndexer data = (short) baseData;
       var expected = new List<byte>();

@@ -108,7 +108,7 @@ public class BooleanArrayExtensionsTests
    [InlineData(1.33d)]
    [InlineData(1.22d)]
    [InlineData(1.11d)]
-   public void ToBooleanArray_ebvToDouble_Round_Trip_Value_Remains_Unaltered(double data)
+   public void ToBooleanArray_ToDouble_Round_Trip_Value_Remains_Unaltered(double data)
    {
       var actual = data.ToBooleanArray().ToDouble();
       Assert.Equal(data, actual);

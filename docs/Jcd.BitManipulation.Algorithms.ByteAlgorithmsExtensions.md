@@ -5,7 +5,9 @@
 ## ByteAlgorithmsExtensions Class
 
 Provides bit counting and other niche bit manipulation facilities
-for [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') values.
+for
+[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
+values.
 
 ```csharp
 public static class ByteAlgorithmsExtensions

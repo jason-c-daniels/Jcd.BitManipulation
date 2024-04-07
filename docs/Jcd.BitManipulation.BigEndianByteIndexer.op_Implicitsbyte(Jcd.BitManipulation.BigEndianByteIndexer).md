@@ -4,7 +4,9 @@
 
 ## BigEndianByteIndexer.implicit operator sbyte(BigEndianByteIndexer) Operator
 
-Implicitly converts the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') to a [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte').
+Implicitly converts the
+[BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer')
+to a[System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte').
 
 ```csharp
 public static sbyte implicit operator sbyte(Jcd.BitManipulation.BigEndianByteIndexer indexer);

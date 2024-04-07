@@ -291,6 +291,13 @@ public static class Int32AlgorithmsExtensions
    /// </summary>
    /// <param name="number">The number to evaluate.</param>
    /// <returns>The count of the bits set to 1.</returns>
+   /// <remarks>This is an alias for <see cref="CountBitsSet" />.</remarks>
+   /// <example>
+   /// <code>
+   /// var v = int.MaxValue;
+   /// Console.WriteLine($"{v.PopCount()} bits are set."); // outputs: 31 bits are set.
+   /// </code>
+   /// </example>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int PopCount(this int number)
    {

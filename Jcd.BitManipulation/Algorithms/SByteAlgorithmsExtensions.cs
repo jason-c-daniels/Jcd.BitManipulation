@@ -59,7 +59,7 @@ public static class SByteAlgorithmsExtensions
    /// </code>
    /// </example>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static sbyte CountBitsSet(this sbyte number)
+   public static int CountBitsSet(this sbyte number)
    {
       return number.PopCount();
    }
@@ -143,7 +143,7 @@ public static class SByteAlgorithmsExtensions
    /// </code>
    /// </example>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static sbyte GetHighestBitSet(this sbyte number)
+   public static int GetHighestBitSet(this sbyte number)
    {
       if (number < 0)
       {
@@ -174,7 +174,7 @@ public static class SByteAlgorithmsExtensions
    /// </code>
    /// </example>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static sbyte GetLowestBitSet(this sbyte number)
+   public static int GetLowestBitSet(this sbyte number)
    {
       return (sbyte) ((byte) number).GetLowestBitSet();
    }
@@ -227,7 +227,7 @@ public static class SByteAlgorithmsExtensions
    /// </code>
    /// </example>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static sbyte CountTrailingZeros(this sbyte number)
+   public static int CountTrailingZeros(this sbyte number)
    {
       return (sbyte) ((byte) number).CountTrailingZeros();
    }
@@ -289,9 +289,9 @@ public static class SByteAlgorithmsExtensions
    /// <param name="number">The number to evaluate.</param>
    /// <returns>The count of the bits set to 1.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static sbyte PopCount(this sbyte number)
+   public static int PopCount(this sbyte number)
    {
-      return (sbyte) ((byte) number).PopCount();
+      return ((byte) number).PopCount();
    }
 
    /// <summary>

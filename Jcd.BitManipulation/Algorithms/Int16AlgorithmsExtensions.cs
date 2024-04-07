@@ -59,7 +59,7 @@ public static class Int16AlgorithmsExtensions
    /// </code>
    /// </example>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static short CountBitsSet(this short number)
+   public static int CountBitsSet(this short number)
    {
       return number.PopCount();
    }
@@ -150,7 +150,7 @@ public static class Int16AlgorithmsExtensions
          return BitSize - 1;
       }
 
-      return (short) ((ushort) number).GetHighestBitSet();
+      return ((ushort) number).GetHighestBitSet();
    }
 
    /// <summary>
@@ -176,7 +176,7 @@ public static class Int16AlgorithmsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int GetLowestBitSet(this short number)
    {
-      return (short) ((ushort) number).GetLowestBitSet();
+      return ((ushort) number).GetLowestBitSet();
    }
 
    /// <summary>
@@ -294,10 +294,16 @@ public static class Int16AlgorithmsExtensions
    /// <param name="number">The number to evaluate.</param>
    /// <returns>The count of the bits set to 1.</returns>
    /// <remarks>This is an alias for <see cref="CountBitsSet" />.</remarks>
+   /// <example>
+   /// <code>
+   /// var v = short.MaxValue;
+   /// Console.WriteLine($"{v.PopCount()} bits are set."); // outputs: 15 bits are set.
+   /// </code>
+   /// </example>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static short PopCount(this short number)
+   public static int PopCount(this short number)
    {
-      return (short) ((ushort) number).PopCount();
+      return ((ushort) number).PopCount();
    }
 
    /// <summary>

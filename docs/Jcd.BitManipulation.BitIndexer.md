@@ -20,22 +20,21 @@ BitIndexer bi = ui16;
 Console.WriteLine(bi.ToString()); // outputs: 0b1011110001010101
 
 if (bi[0])
-Console.WriteLine("Index 0 is set/true!"); // this will write to the output.
+   Console.WriteLine("Index 0 is set/true!"); // this will write to the output.
 
 if (bi[1])
-Console.WriteLine("Index 1 is set/true!"); // this will not write to the output.
+   Console.WriteLine("Index 1 is set/true!"); // this will not write to the output.
 
 if (bi[10])
-Console.WriteLine("Index 10 is set/true!");
+   Console.WriteLine("Index 10 is set/true!");
 
 bi[1] = true; // bi is now 0b1011110001010111
 if (bi[1])
-Console.WriteLine("Index 1 is set/true!"); // this will write to the output.
+   Console.WriteLine("Index 1 is set/true!"); // this will write to the output.
 
 Console.WriteLine(bi.ToString()); // outputs: 0b1011110001010111
 
-var flags = bi[0..^0]; // flags = [true, true, true, false, true, false, true, false, false, false,
-true, true, true, true, false, true];
+var flags = bi[0..^0]; // flags = [true, true, true, false, true, false, true, false, false, false, true, true, true, true, false, true];
 Array.Reverse(flags);
 var ui16Reversed=flags.ToUInt16(); // ui16Reversed = 0b1110101000111101;
 BitIndexer biReversed = ui16Reversed;

@@ -5,9 +5,7 @@
 ## UInt16AlgorithmsExtensions Class
 
 Provides bit counting and other niche bit manipulation facilities
-for
-[System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
-values.
+for [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16') values.
 
 ```csharp
 public static class UInt16AlgorithmsExtensions

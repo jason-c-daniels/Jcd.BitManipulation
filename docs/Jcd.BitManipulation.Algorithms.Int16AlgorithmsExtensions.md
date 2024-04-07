@@ -5,9 +5,7 @@
 ## Int16AlgorithmsExtensions Class
 
 Provides bit counting and other niche bit manipulation facilities
-for
-[System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
-values.
+for [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16') values.
 
 ```csharp
 public static class Int16AlgorithmsExtensions

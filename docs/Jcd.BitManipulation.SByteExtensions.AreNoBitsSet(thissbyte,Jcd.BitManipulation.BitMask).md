@@ -4,7 +4,7 @@
 
 ## SByteExtensions.AreNoBitsSet(this sbyte, BitMask) Method
 
-Tests if none of the bits from the bitmask are set on a[System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte').
+Tests if none of the bits from the bitmask are set on a [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte').
 
 ```csharp
 public static bool AreNoBitsSet(this sbyte number, Jcd.BitManipulation.BitMask bitmask);

@@ -268,6 +268,11 @@ public static class ByteAlgorithmsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int CountTrailingZeros(this byte number)
    {
+      if (number.IsOdd())
+      {
+         return 0;
+      }
+
       if (number == 0)
       {
          return BitSize;
@@ -348,6 +353,13 @@ public static class ByteAlgorithmsExtensions
    /// </summary>
    /// <param name="number">The number to evaluate.</param>
    /// <returns>The count of the bits set to 1.</returns>
+   /// <remarks>This is an alias for <see cref="CountBitsSet" />.</remarks>
+   /// <example>
+   /// <code>
+   /// var v = byte.MaxValue;
+   /// Console.WriteLine($"{v.PopCount()} bits are set."); // outputs: 8 bits are set.
+   /// </code>
+   /// </example>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int PopCount(this byte number)
    {

@@ -225,6 +225,15 @@
          </summary>
          <param name="number">The number to evaluate.</param>
          <returns>The count of the bits set to 1.</returns>
+         <remarks>This is an alias for<see
+            cref="M:Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.CountBitsSet(System.Byte)"/>.
+         </remarks>
+         <example>
+            <code>
+               var v = byte.MaxValue;
+               Console.WriteLine($"{v.PopCount()} bits are set."); // outputs: 8 bits are set.
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.IsOdd(System.Byte)">
          <summary>
@@ -501,6 +510,12 @@
          <remarks>This is an alias for<see
             cref="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.CountBitsSet(System.Int16)"/>.
          </remarks>
+         <example>
+            <code>
+               var v = short.MaxValue;
+               Console.WriteLine($"{v.PopCount()} bits are set."); // outputs: 15 bits are set.
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.IsOdd(System.Int16)">
          <summary>
@@ -774,6 +789,15 @@
          </summary>
          <param name="number">The number to evaluate.</param>
          <returns>The count of the bits set to 1.</returns>
+         <remarks>This is an alias for<see
+            cref="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.CountBitsSet(System.Int32)"/>.
+         </remarks>
+         <example>
+            <code>
+               var v = int.MaxValue;
+               Console.WriteLine($"{v.PopCount()} bits are set."); // outputs: 31 bits are set.
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.IsOdd(System.Int32)">
          <summary>
@@ -1059,6 +1083,15 @@
          </summary>
          <param name="number">The number to evaluate.</param>
          <returns>The count of the bits set to 1.</returns>
+         <remarks>This is an alias for<see
+            cref="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.CountBitsSet(System.Int64)"/>.
+         </remarks>
+         <example>
+            <code>
+               var v = long.MaxValue;
+               Console.WriteLine($"{v.PopCount()} bits are set."); // outputs: 63 bits are set.
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.IsOdd(System.Int64)">
          <summary>
@@ -1632,6 +1665,15 @@
          </summary>
          <param name="number">The number to evaluate.</param>
          <returns>The count of the bits set to 1.</returns>
+         <remarks>This is an alias for<see
+            cref="M:Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.CountBitsSet(System.UInt16)"/>.
+         </remarks>
+         <example>
+            <code>
+               var v = ushort.MaxValue;
+               Console.WriteLine($"{v.PopCount()} bits are set."); // outputs: 16 bits are set.
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.IsOdd(System.UInt16)">
          <summary>
@@ -1890,6 +1932,15 @@
          </summary>
          <param name="number">The number to evaluate.</param>
          <returns>The count of the bits set to 1.</returns>
+         <remarks>This is an alias for<see
+            cref="M:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.CountBitsSet(System.UInt32)"/>.
+         </remarks>
+         <example>
+            <code>
+               var v = uint.MaxValue;
+               Console.WriteLine($"{v.PopCount()} bits are set."); // outputs: 32 bits are set.
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.IsOdd(System.UInt32)">
          <summary>
@@ -2172,6 +2223,15 @@
          </summary>
          <param name="number">The number to evaluate.</param>
          <returns>The count of the bits set to 1.</returns>
+         <remarks>This is an alias for<see
+            cref="M:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.CountBitsSet(System.UInt64)"/>.
+         </remarks>
+         <example>
+            <code>
+               var v = ulong.MaxValue;
+               Console.WriteLine($"{v.PopCount()} bits are set."); // outputs: 64 bits are set.
+            </code>
+         </example>
       </member>
       <member name="M:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.IsOdd(System.UInt64)">
          <summary>

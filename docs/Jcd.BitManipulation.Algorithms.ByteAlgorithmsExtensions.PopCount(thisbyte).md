@@ -22,3 +22,14 @@ The number to evaluate.
 
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 The count of the bits set to 1.
+
+### Example
+
+```csharp
+var v = byte.MaxValue;
+Console.WriteLine($"{v.PopCount()} bits are set."); // outputs: 8 bits are set.
+```
+
+### Remarks
+
+This is an alias for [CountBitsSet(this byte)](Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.CountBitsSet(thisbyte).md 'Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.CountBitsSet(this byte)').

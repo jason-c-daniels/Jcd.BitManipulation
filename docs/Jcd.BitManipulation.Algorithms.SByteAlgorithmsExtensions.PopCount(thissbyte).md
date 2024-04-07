@@ -7,7 +7,7 @@
 Counts the bits that are set to 1 in a number.
 
 ```csharp
-public static sbyte PopCount(this sbyte number);
+public static int PopCount(this sbyte number);
 ```
 
 #### Parameters
@@ -20,5 +20,5 @@ The number to evaluate.
 
 #### Returns
 
-[System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
+[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 The count of the bits set to 1.

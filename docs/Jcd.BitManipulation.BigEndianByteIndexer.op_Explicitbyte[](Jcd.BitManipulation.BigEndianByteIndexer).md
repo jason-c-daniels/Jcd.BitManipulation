@@ -4,9 +4,7 @@
 
 ## BigEndianByteIndexer.explicit operator byte[](BigEndianByteIndexer) Operator
 
-Explicitly converts the
-[BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer')
-to a array of bytes.
+Explicitly converts the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') to a array of bytes.
 
 ```csharp
 public static byte[] explicit operator byte[](Jcd.BitManipulation.BigEndianByteIndexer indexer);

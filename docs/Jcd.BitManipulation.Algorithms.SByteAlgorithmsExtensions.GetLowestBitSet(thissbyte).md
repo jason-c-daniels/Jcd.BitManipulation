@@ -7,7 +7,7 @@
 Calculate the index of the lowest bit that's been set.
 
 ```csharp
-public static sbyte GetLowestBitSet(this sbyte number);
+public static int GetLowestBitSet(this sbyte number);
 ```
 
 #### Parameters
@@ -20,7 +20,7 @@ The number to evaluate.
 
 #### Returns
 
-[System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
+[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 The index of the lowest bit that's been set; or -1 if none were set.
 
 ### Example

@@ -7,14 +7,14 @@
 Reads a single byte from the value at the specified byte offset.
 
 ```csharp
-public static byte ReadByte(this float value, int offset, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
+public static byte ReadByte(this float number, int offset, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.SingleExtensions.ReadByte(thisfloat,int,Jcd.BitManipulation.Endian).value'></a>
+<a name='Jcd.BitManipulation.SingleExtensions.ReadByte(thisfloat,int,Jcd.BitManipulation.Endian).number'></a>
 
-`value` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
+`number` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
 The value to read the byte from.
 

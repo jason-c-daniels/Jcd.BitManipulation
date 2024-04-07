@@ -16,13 +16,20 @@ public static short CountBitsSet(this short number);
 
 `number` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 
-The number
+The number to evaluate.
 
 #### Returns
 
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
-The count of the bits set to 1
+The count of the bits set to 1.
+
+### Example
+
+```csharp
+var v = short.MaxValue;
+Console.WriteLine($"{v.CountBitsSet()} bits are set."); // outputs: 15 bits are set.
+```
 
 ### Remarks
 
-This is a reader-friendly alias for [PopCount(this short)](Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.PopCount(thisshort).md 'Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.PopCount(this short)')
+This is a reader-friendly alias for [PopCount(this short)](Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.PopCount(thisshort).md 'Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.PopCount(this short)').

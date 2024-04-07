@@ -7,14 +7,14 @@
 Tests if any bits from the bitmask are set on a [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte').
 
 ```csharp
-public static bool AreAnyBitsSet(this sbyte data, Jcd.BitManipulation.BitMask bitmask);
+public static bool AreAnyBitsSet(this sbyte number, Jcd.BitManipulation.BitMask bitmask);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.SByteExtensions.AreAnyBitsSet(thissbyte,Jcd.BitManipulation.BitMask).data'></a>
+<a name='Jcd.BitManipulation.SByteExtensions.AreAnyBitsSet(thissbyte,Jcd.BitManipulation.BitMask).number'></a>
 
-`data` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
+`number` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 
 The data to inspect.
 

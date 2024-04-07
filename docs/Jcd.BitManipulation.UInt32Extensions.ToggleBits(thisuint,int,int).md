@@ -7,14 +7,14 @@
 Toggles the specified range of bits and returns the modified value.
 
 ```csharp
-public static uint ToggleBits(this uint value, int offset=0, int size=32);
+public static uint ToggleBits(this uint number, int offset=0, int size=32);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt32Extensions.ToggleBits(thisuint,int,int).value'></a>
+<a name='Jcd.BitManipulation.UInt32Extensions.ToggleBits(thisuint,int,int).number'></a>
 
-`value` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
+`number` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
 The value to modify.
 

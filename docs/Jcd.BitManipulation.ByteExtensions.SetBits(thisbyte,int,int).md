@@ -4,17 +4,17 @@
 
 ## ByteExtensions.SetBits(this byte, int, int) Method
 
-Sets all specified bits to "on" and returns the modified value.
+Sets all specified bits to 1 and returns the modified value.
 
 ```csharp
-public static byte SetBits(this byte value, int offset=0, int size=8);
+public static byte SetBits(this byte number, int offset=0, int size=8);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.ByteExtensions.SetBits(thisbyte,int,int).value'></a>
+<a name='Jcd.BitManipulation.ByteExtensions.SetBits(thisbyte,int,int).number'></a>
 
-`value` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
+`number` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
 The value to modify.
 

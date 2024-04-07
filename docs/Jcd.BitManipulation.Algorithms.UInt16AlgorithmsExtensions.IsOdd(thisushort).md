@@ -16,6 +16,8 @@ public static bool IsOdd(this ushort number);
 
 `number` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 
+The number to evaluate.
+
 #### Returns
 
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')

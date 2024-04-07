@@ -7,14 +7,14 @@
 Store a single bit at the specified offset and returns the modified value.
 
 ```csharp
-public static ulong StoreBit(this ulong value, bool bit, int offset);
+public static ulong StoreBit(this ulong number, bool bit, int offset);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt64Extensions.StoreBit(thisulong,bool,int).value'></a>
+<a name='Jcd.BitManipulation.UInt64Extensions.StoreBit(thisulong,bool,int).number'></a>
 
-`value` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
+`number` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
 The value to modify.
 

@@ -4,17 +4,17 @@
 
 ## Int64Extensions.SetBit(this long, int) Method
 
-Sets the bit at the specified to "on" and returns the modified value.
+Sets the bit at the specified to 1 and returns the modified value.
 
 ```csharp
-public static long SetBit(this long value, int offset);
+public static long SetBit(this long number, int offset);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.Int64Extensions.SetBit(thislong,int).value'></a>
+<a name='Jcd.BitManipulation.Int64Extensions.SetBit(thislong,int).number'></a>
 
-`value` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
+`number` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 
 The value to modify.
 

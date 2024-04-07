@@ -7,14 +7,14 @@
 Sets the specified bit to "off" and returns the modified value.
 
 ```csharp
-public static long ClearBit(this long value, int offset);
+public static long ClearBit(this long number, int offset);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.Int64Extensions.ClearBit(thislong,int).value'></a>
+<a name='Jcd.BitManipulation.Int64Extensions.ClearBit(thislong,int).number'></a>
 
-`value` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
+`number` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 
 The value to modify.
 

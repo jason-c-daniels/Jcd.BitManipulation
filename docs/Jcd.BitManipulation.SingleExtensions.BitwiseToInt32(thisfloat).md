@@ -7,14 +7,14 @@
 Converts a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single') to the bit-wise identical [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
 ```csharp
-public static int BitwiseToInt32(this float value);
+public static int BitwiseToInt32(this float number);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.SingleExtensions.BitwiseToInt32(thisfloat).value'></a>
+<a name='Jcd.BitManipulation.SingleExtensions.BitwiseToInt32(thisfloat).number'></a>
 
-`value` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
+`number` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
 The value to convert.
 

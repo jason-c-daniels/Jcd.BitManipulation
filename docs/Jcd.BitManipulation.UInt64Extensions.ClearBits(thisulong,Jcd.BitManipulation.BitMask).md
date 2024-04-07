@@ -7,14 +7,14 @@
 Sets all bits from the provided mask to "off" and returns the modified value.
 
 ```csharp
-public static ulong ClearBits(this ulong value, Jcd.BitManipulation.BitMask mask);
+public static ulong ClearBits(this ulong number, Jcd.BitManipulation.BitMask mask);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt64Extensions.ClearBits(thisulong,Jcd.BitManipulation.BitMask).value'></a>
+<a name='Jcd.BitManipulation.UInt64Extensions.ClearBits(thisulong,Jcd.BitManipulation.BitMask).number'></a>
 
-`value` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
+`number` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
 The value to modify.
 

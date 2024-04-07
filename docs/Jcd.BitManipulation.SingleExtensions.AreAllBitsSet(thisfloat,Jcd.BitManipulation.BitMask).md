@@ -7,14 +7,14 @@
 Tests if all of the bits from the bitmask are set on a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single').
 
 ```csharp
-public static bool AreAllBitsSet(this float data, Jcd.BitManipulation.BitMask bitmask);
+public static bool AreAllBitsSet(this float number, Jcd.BitManipulation.BitMask bitmask);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.SingleExtensions.AreAllBitsSet(thisfloat,Jcd.BitManipulation.BitMask).data'></a>
+<a name='Jcd.BitManipulation.SingleExtensions.AreAllBitsSet(thisfloat,Jcd.BitManipulation.BitMask).number'></a>
 
-`data` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
+`number` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
 The data to inspect.
 

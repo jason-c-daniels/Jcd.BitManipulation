@@ -16,13 +16,20 @@ public static int CountBitsSet(this byte number);
 
 `number` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
-The number
+The number to evaluate.
 
 #### Returns
 
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
-The count of the bits set to 1
+The count of the bits set to 1.
+
+### Example
+
+```csharp
+var v = byte.MaxValue;
+Console.WriteLine($"{v.CountBitsSet()} bits are set."); // outputs: 8 bits are set.
+```
 
 ### Remarks
 
-This is a reader-friendly alias for [PopCount(this byte)](Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.PopCount(thisbyte).md 'Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.PopCount(this byte)')
+This is a reader-friendly alias for [PopCount(this byte)](Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.PopCount(thisbyte).md 'Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.PopCount(this byte)').

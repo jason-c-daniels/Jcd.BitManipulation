@@ -7,14 +7,14 @@
 Toggles a bit at the specified offset and returns the modified value.
 
 ```csharp
-public static short ToggleBit(this short value, int offset);
+public static short ToggleBit(this short number, int offset);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.Int16Extensions.ToggleBit(thisshort,int).value'></a>
+<a name='Jcd.BitManipulation.Int16Extensions.ToggleBit(thisshort,int).number'></a>
 
-`value` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
+`number` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 
 The value to modify.
 

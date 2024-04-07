@@ -7,14 +7,14 @@
 Reads the bits specified by a mask and right shifts it .
 
 ```csharp
-public static byte ReadBits(this byte value, int shift, Jcd.BitManipulation.BitMask mask);
+public static byte ReadBits(this byte number, int shift, Jcd.BitManipulation.BitMask mask);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.ByteExtensions.ReadBits(thisbyte,int,Jcd.BitManipulation.BitMask).value'></a>
+<a name='Jcd.BitManipulation.ByteExtensions.ReadBits(thisbyte,int,Jcd.BitManipulation.BitMask).number'></a>
 
-`value` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
+`number` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
 The source of the bits to read.
 

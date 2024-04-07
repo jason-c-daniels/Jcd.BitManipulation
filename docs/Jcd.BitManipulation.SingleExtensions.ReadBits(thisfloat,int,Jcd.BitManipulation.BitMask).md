@@ -7,14 +7,14 @@
 Extract a subset of bits specified by a bitmask and right align the bits by the offset.
 
 ```csharp
-public static uint ReadBits(this float value, int shift, Jcd.BitManipulation.BitMask mask);
+public static uint ReadBits(this float number, int shift, Jcd.BitManipulation.BitMask mask);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.SingleExtensions.ReadBits(thisfloat,int,Jcd.BitManipulation.BitMask).value'></a>
+<a name='Jcd.BitManipulation.SingleExtensions.ReadBits(thisfloat,int,Jcd.BitManipulation.BitMask).number'></a>
 
-`value` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
+`number` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
 The source of the bits to read.
 

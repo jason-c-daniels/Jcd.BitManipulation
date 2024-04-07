@@ -18,8 +18,18 @@ public static byte RoundUpToPowerOfTwo(this byte number);
 
 `number` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
-the number to evaluate
+The number to evaluate.
 
 #### Returns
 
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
+
+### Example
+
+```csharp
+byte v = 2;
+Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 2
+
+v = 3;
+Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 4
+```

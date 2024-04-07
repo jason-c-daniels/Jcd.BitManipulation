@@ -20,8 +20,18 @@ public static int RoundUpToPowerOfTwo(this int number);
 
 `number` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-the number to evaluate
+The number to evaluate.
 
 #### Returns
 
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+
+### Example
+
+```csharp
+int v = 2;
+Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 2
+
+v = 3;
+Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 4
+```

@@ -7,14 +7,14 @@
 Sets the specified bit to "off" and returns the modified value.
 
 ```csharp
-public static ushort ClearBit(this ushort value, int offset);
+public static ushort ClearBit(this ushort number, int offset);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt16Extensions.ClearBit(thisushort,int).value'></a>
+<a name='Jcd.BitManipulation.UInt16Extensions.ClearBit(thisushort,int).number'></a>
 
-`value` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
+`number` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 
 The value to modify.
 

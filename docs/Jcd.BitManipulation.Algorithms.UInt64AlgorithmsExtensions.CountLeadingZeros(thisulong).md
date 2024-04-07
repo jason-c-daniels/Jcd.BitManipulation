@@ -17,9 +17,22 @@ public static int CountLeadingZeros(this ulong number);
 
 `number` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
-the number to evaluate
+The number to evaluate.
 
 #### Returns
 
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 The count of sequentially zeroed bits occupying the most significant bit positions.
+
+### Example
+
+```csharp
+ulong v = 0x7FFFFFFF_FFFFFFFF;
+Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 1
+
+v = 0x3FFFFFFF_FFFFFFFF;
+Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 2
+
+v = 1;
+Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 63
+```

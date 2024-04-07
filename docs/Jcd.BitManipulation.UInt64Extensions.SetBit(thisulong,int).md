@@ -4,17 +4,17 @@
 
 ## UInt64Extensions.SetBit(this ulong, int) Method
 
-Sets the bit at the specified to "on" and returns the modified value.
+Sets the bit at the specified to 1 and returns the modified value.
 
 ```csharp
-public static ulong SetBit(this ulong value, int offset);
+public static ulong SetBit(this ulong number, int offset);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt64Extensions.SetBit(thisulong,int).value'></a>
+<a name='Jcd.BitManipulation.UInt64Extensions.SetBit(thisulong,int).number'></a>
 
-`value` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
+`number` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
 The value to modify.
 

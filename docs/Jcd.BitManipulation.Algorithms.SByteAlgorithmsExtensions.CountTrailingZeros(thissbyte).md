@@ -17,9 +17,25 @@ public static sbyte CountTrailingZeros(this sbyte number);
 
 `number` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 
-the number to evaluate
+The number to evaluate.
 
 #### Returns
 
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 The count of sequentially zeroed bits occupying the least significant bit positions.
+
+### Example
+
+```csharp
+sbyte v = 1;
+Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 0
+
+v = 2;
+Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 1
+
+v = 3;
+Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 1
+
+v = 4;
+Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 2
+```

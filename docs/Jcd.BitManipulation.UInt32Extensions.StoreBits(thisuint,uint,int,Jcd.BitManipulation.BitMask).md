@@ -8,14 +8,14 @@ Stores a set of bits specified by a [BitMask](Jcd.BitManipulation.BitMask.md 'Jc
 value.
 
 ```csharp
-public static uint StoreBits(this uint value, uint source, int offset, Jcd.BitManipulation.BitMask mask);
+public static uint StoreBits(this uint number, uint source, int offset, Jcd.BitManipulation.BitMask mask);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt32Extensions.StoreBits(thisuint,uint,int,Jcd.BitManipulation.BitMask).value'></a>
+<a name='Jcd.BitManipulation.UInt32Extensions.StoreBits(thisuint,uint,int,Jcd.BitManipulation.BitMask).number'></a>
 
-`value` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
+`number` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
 the destination for the stored bits
 

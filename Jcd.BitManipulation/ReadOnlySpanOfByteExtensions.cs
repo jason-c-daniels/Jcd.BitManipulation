@@ -26,177 +26,177 @@ public static class ReadOnlySpanOfByteExtensions
    /// <summary>
    /// Converts bytes into a <see cref="byte" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert.</param>
+   /// <param name="span">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="byte" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static byte ToByte(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
+   public static byte ToByte(this ReadOnlySpan<byte> span, Endian endian = Endian.Little)
    {
-      if (data == null || data.Length == 0)
+      if (span == null || span.Length == 0)
       {
          return 0;
       }
 
       return endian == Endian.Little
-                ? (byte) GetLittleEndianUInt64(data)
-                : (byte) GetBigEndianUInt64(data, sizeof(byte));
+                ? (byte) GetLittleEndianUInt64(span)
+                : (byte) GetBigEndianUInt64(span, sizeof(byte));
    }
 
    /// <summary>
    /// Converts bytes into a <see cref="sbyte" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert.</param>
+   /// <param name="span">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <returns>The converted <see cref="sbyte" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static sbyte ToSByte(this ReadOnlySpan<byte> data, Endian endian = Endian.Little)
+   public static sbyte ToSByte(this ReadOnlySpan<byte> span, Endian endian = Endian.Little)
    {
-      if (data == null || data.Length == 0)
+      if (span == null || span.Length == 0)
       {
          return 0;
       }
 
       return endian == Endian.Little
-                ? (sbyte) GetLittleEndianUInt64(data)
-                : (sbyte) GetBigEndianUInt64(data, sizeof(sbyte));
+                ? (sbyte) GetLittleEndianUInt64(span)
+                : (sbyte) GetBigEndianUInt64(span, sizeof(sbyte));
    }
 
    /// <summary>
    /// Converts bytes into a <see cref="ushort" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert.</param>
+   /// <param name="span">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <param name="align">Indicates how to align partial data</param>
    /// <returns>The converted <see cref="ushort" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ushort ToUInt16(this ReadOnlySpan<byte> data, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
+   public static ushort ToUInt16(this ReadOnlySpan<byte> span, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
    {
-      if (data == null || data.Length == 0)
+      if (span == null || span.Length == 0)
       {
          return 0;
       }
 
-      return (ushort) GetAlignedValue(data, endian, align, sizeof(ushort));
+      return (ushort) GetAlignedValue(span, endian, align, sizeof(ushort));
    }
 
    /// <summary>
    /// Converts bytes into a <see cref="short" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert.</param>
+   /// <param name="span">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <param name="align">Indicates how to align partial data</param>
    /// <returns>The converted <see cref="short" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static short ToInt16(this ReadOnlySpan<byte> data, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
+   public static short ToInt16(this ReadOnlySpan<byte> span, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
    {
-      if (data == null || data.Length == 0)
+      if (span == null || span.Length == 0)
       {
          return 0;
       }
 
-      return (short) GetAlignedValue(data, endian, align, sizeof(short));
+      return (short) GetAlignedValue(span, endian, align, sizeof(short));
    }
 
    /// <summary>
    /// Converts bytes into a <see cref="uint" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert.</param>
+   /// <param name="span">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <param name="align">Indicates how to align partial data</param>
    /// <returns>The converted <see cref="uint" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static uint ToUInt32(this ReadOnlySpan<byte> data, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
+   public static uint ToUInt32(this ReadOnlySpan<byte> span, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
    {
-      if (data == null || data.Length == 0)
+      if (span == null || span.Length == 0)
       {
          return 0;
       }
 
-      return (uint) GetAlignedValue(data, endian, align, sizeof(uint));
+      return (uint) GetAlignedValue(span, endian, align, sizeof(uint));
    }
 
    /// <summary>
    /// Converts bytes into a <see cref="int" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert.</param>
+   /// <param name="span">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <param name="align">Indicates how to align partial data</param>
    /// <returns>The converted <see cref="int" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static int ToInt32(this ReadOnlySpan<byte> data, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
+   public static int ToInt32(this ReadOnlySpan<byte> span, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
    {
-      if (data == null || data.Length == 0)
+      if (span == null || span.Length == 0)
       {
          return 0;
       }
 
-      return (int) GetAlignedValue(data, endian, align, sizeof(int));
+      return (int) GetAlignedValue(span, endian, align, sizeof(int));
    }
 
    /// <summary>
    /// Converts bytes into a <see cref="ulong" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert.</param>
+   /// <param name="span">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <param name="align">Indicates how to align partial data</param>
    /// <returns>The converted <see cref="ulong" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static ulong ToUInt64(this ReadOnlySpan<byte> data, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
+   public static ulong ToUInt64(this ReadOnlySpan<byte> span, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
    {
-      if (data == null || data.Length == 0)
+      if (span == null || span.Length == 0)
       {
          return 0;
       }
 
-      return GetAlignedValue(data, endian, align, sizeof(ulong));
+      return GetAlignedValue(span, endian, align, sizeof(ulong));
    }
 
    /// <summary>
    /// Converts bytes into a <see cref="long" />, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert.</param>
+   /// <param name="span">the bytes to convert.</param>
    /// <param name="endian">The endian for the bytes.</param>
    /// <param name="align">Indicates how to align partial data</param>
    /// <returns>The converted <see cref="long" /></returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static long ToInt64(this ReadOnlySpan<byte> data, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
+   public static long ToInt64(this ReadOnlySpan<byte> span, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
    {
-      if (data == null || data.Length == 0)
+      if (span == null || span.Length == 0)
       {
          return 0;
       }
 
-      return (long) GetAlignedValue(data, endian, align, sizeof(long));
+      return (long) GetAlignedValue(span, endian, align, sizeof(long));
    }
 
    /// <summary>
    /// Converts bytes into a double, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert.</param>
+   /// <param name="span">the bytes to convert.</param>
    /// <param name="endian">
    /// A setting indicating the endianness of the source data. The default is Endian.Little.
    /// </param>
    /// <param name="align">Indicates how to align partial data</param>
    /// <returns>The converted ulong</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static double ToDouble(this ReadOnlySpan<byte> data, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
+   public static double ToDouble(this ReadOnlySpan<byte> span, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
    {
-      return data.ToUInt64(endian, align).BitwiseToDouble();
+      return span.ToUInt64(endian, align).BitwiseToDouble();
    }
 
    /// <summary>
    /// Converts bytes into a double, discarding any excess data.
    /// </summary>
-   /// <param name="data">the bytes to convert.</param>
+   /// <param name="span">the bytes to convert.</param>
    /// <param name="endian">
    /// A setting indicating the endianness of the source data. The default is Endian.Little.
    /// </param>
    /// <param name="align">Indicates how to align partial data</param>
    /// <returns>The converted ulong</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
-   public static float ToSingle(this ReadOnlySpan<byte> data, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
+   public static float ToSingle(this ReadOnlySpan<byte> span, Endian endian = Endian.Little, ByteAlignment align = ByteAlignment.InferredFromEndian)
    {
-      return data.ToUInt32(endian, align).BitwiseToSingle();
+      return span.ToUInt32(endian, align).BitwiseToSingle();
    }
 
    #region Helpers

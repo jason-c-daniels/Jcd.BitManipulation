@@ -4,7 +4,7 @@
 
 ## SByteAlgorithmsExtensions.PopCount(this sbyte) Method
 
-Counts the bits that are set to 1 in a number
+Counts the bits that are set to 1 in a number.
 
 ```csharp
 public static sbyte PopCount(this sbyte number);
@@ -16,9 +16,9 @@ public static sbyte PopCount(this sbyte number);
 
 `number` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 
-The number
+The number to evaluate.
 
 #### Returns
 
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
-The count of the bits set to 1
+The count of the bits set to 1.

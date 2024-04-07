@@ -7,14 +7,14 @@
 Converts a [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64') to the bit-wise identical [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 
 ```csharp
-public static double BitwiseToDouble(this ulong value);
+public static double BitwiseToDouble(this ulong number);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt64Extensions.BitwiseToDouble(thisulong).value'></a>
+<a name='Jcd.BitManipulation.UInt64Extensions.BitwiseToDouble(thisulong).number'></a>
 
-`value` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
+`number` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
 The value to convert.
 

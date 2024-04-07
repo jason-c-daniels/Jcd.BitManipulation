@@ -8,14 +8,14 @@ Stores a set of bits specified by a [BitMask](Jcd.BitManipulation.BitMask.md 'Jc
 value.
 
 ```csharp
-public static ulong StoreBits(this ulong value, ulong source, int offset, Jcd.BitManipulation.BitMask mask);
+public static ulong StoreBits(this ulong number, ulong source, int offset, Jcd.BitManipulation.BitMask mask);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt64Extensions.StoreBits(thisulong,ulong,int,Jcd.BitManipulation.BitMask).value'></a>
+<a name='Jcd.BitManipulation.UInt64Extensions.StoreBits(thisulong,ulong,int,Jcd.BitManipulation.BitMask).number'></a>
 
-`value` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
+`number` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
 the destination for the stored bits
 

@@ -16,6 +16,8 @@ public static bool IsOdd(this long number);
 
 `number` [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
 
+The number to evaluate.
+
 #### Returns
 
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')

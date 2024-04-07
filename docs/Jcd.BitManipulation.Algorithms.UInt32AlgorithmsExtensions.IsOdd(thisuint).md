@@ -16,6 +16,8 @@ public static bool IsOdd(this uint number);
 
 `number` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
+The number to evaluate.
+
 #### Returns
 
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')

@@ -7,6 +7,8 @@ using Jcd.BitManipulation.Algorithms;
 
 using Xunit;
 
+#pragma warning disable CA1868
+
 #endregion
 
 namespace Jcd.BitManipulation.Tests.Algorithms;

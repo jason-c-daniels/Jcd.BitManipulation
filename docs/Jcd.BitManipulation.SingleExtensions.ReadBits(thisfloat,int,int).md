@@ -7,14 +7,14 @@
 Reads the bits specified and returns the result shifted to the right by the offset.
 
 ```csharp
-public static uint ReadBits(this float value, int offset, int size);
+public static uint ReadBits(this float number, int offset, int size);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.SingleExtensions.ReadBits(thisfloat,int,int).value'></a>
+<a name='Jcd.BitManipulation.SingleExtensions.ReadBits(thisfloat,int,int).number'></a>
 
-`value` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
+`number` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
 The source of the bits to read.
 

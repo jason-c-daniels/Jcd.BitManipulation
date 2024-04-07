@@ -17,7 +17,7 @@ public static int CountLeadingZeros(this uint number);
 
 `number` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
-the number to evaluate
+The number to evaluate.
 
 #### Returns
 

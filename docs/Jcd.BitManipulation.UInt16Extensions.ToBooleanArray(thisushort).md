@@ -7,14 +7,14 @@
 Converts a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16') into an array of values with the lease significant bit at index 0.
 
 ```csharp
-public static bool[] ToBooleanArray(this ushort bits);
+public static bool[] ToBooleanArray(this ushort number);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt16Extensions.ToBooleanArray(thisushort).bits'></a>
+<a name='Jcd.BitManipulation.UInt16Extensions.ToBooleanArray(thisushort).number'></a>
 
-`bits` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
+`number` [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 
 the bits of the [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16') to convert.
 

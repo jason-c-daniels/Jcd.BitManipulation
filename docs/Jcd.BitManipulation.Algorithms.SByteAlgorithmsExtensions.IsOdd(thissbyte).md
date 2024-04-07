@@ -16,6 +16,8 @@ public static bool IsOdd(this sbyte number);
 
 `number` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 
+The number to evaluate.
+
 #### Returns
 
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')

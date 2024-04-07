@@ -7,14 +7,14 @@
 Tests if all of the bits from the bitmask are set on a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32').
 
 ```csharp
-public static bool AreAllBitsSet(this uint data, Jcd.BitManipulation.BitMask bitmask);
+public static bool AreAllBitsSet(this uint number, Jcd.BitManipulation.BitMask bitmask);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt32Extensions.AreAllBitsSet(thisuint,Jcd.BitManipulation.BitMask).data'></a>
+<a name='Jcd.BitManipulation.UInt32Extensions.AreAllBitsSet(thisuint,Jcd.BitManipulation.BitMask).number'></a>
 
-`data` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
+`number` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
 The data to inspect.
 

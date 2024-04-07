@@ -4,17 +4,17 @@
 
 ## SingleExtensions.SetBits(this float, BitMask) Method
 
-Sets all specified bits to "on" and returns the modified value.
+Sets all specified bits to 1 and returns the modified value.
 
 ```csharp
-public static float SetBits(this float value, Jcd.BitManipulation.BitMask mask);
+public static float SetBits(this float number, Jcd.BitManipulation.BitMask mask);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.SingleExtensions.SetBits(thisfloat,Jcd.BitManipulation.BitMask).value'></a>
+<a name='Jcd.BitManipulation.SingleExtensions.SetBits(thisfloat,Jcd.BitManipulation.BitMask).number'></a>
 
-`value` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
+`number` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
 The value to modify.
 

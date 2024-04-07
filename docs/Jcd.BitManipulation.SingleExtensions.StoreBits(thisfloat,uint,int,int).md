@@ -7,14 +7,14 @@
 Stores a range of bits to the value, from a source value, and returns the modified value.
 
 ```csharp
-public static float StoreBits(this float value, uint source, int offset, int size);
+public static float StoreBits(this float number, uint source, int offset, int size);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.SingleExtensions.StoreBits(thisfloat,uint,int,int).value'></a>
+<a name='Jcd.BitManipulation.SingleExtensions.StoreBits(thisfloat,uint,int,int).number'></a>
 
-`value` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
+`number` [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 
 The value to modify.
 

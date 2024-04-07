@@ -7,14 +7,14 @@
 Stores a range of bits to the value, from a source value, and returns the modified value.
 
 ```csharp
-public static sbyte StoreBits(this sbyte value, sbyte source, int offset, int size);
+public static sbyte StoreBits(this sbyte number, sbyte source, int offset, int size);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.SByteExtensions.StoreBits(thissbyte,sbyte,int,int).value'></a>
+<a name='Jcd.BitManipulation.SByteExtensions.StoreBits(thissbyte,sbyte,int,int).number'></a>
 
-`value` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
+`number` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 
 The value to modify.
 

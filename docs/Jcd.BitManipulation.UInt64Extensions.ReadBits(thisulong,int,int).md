@@ -7,14 +7,14 @@
 Reads the bits specified and returns the result shifted to the right by the offset.
 
 ```csharp
-public static ulong ReadBits(this ulong value, int offset, int size);
+public static ulong ReadBits(this ulong number, int offset, int size);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.UInt64Extensions.ReadBits(thisulong,int,int).value'></a>
+<a name='Jcd.BitManipulation.UInt64Extensions.ReadBits(thisulong,int,int).number'></a>
 
-`value` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
+`number` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
 The source of the bits to read.
 

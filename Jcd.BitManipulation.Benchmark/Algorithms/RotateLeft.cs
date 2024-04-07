@@ -7,10 +7,14 @@ using Jcd.BitManipulation.Algorithms;
 #region
 
 // ReSharper disable once RedundantUsingDirective
+#pragma warning disable S1128
 using System.Numerics;
 
 #endregion
 
+#pragma warning disable S2325
+#pragma warning disable CA1822
+#pragma warning disable S109
 #pragma warning disable S3400
 
 #endregion

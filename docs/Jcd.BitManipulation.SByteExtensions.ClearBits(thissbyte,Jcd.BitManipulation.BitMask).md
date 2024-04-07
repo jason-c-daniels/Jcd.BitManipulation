@@ -7,14 +7,14 @@
 Sets all bits from the provided mask to "off" and returns the modified value.
 
 ```csharp
-public static sbyte ClearBits(this sbyte value, Jcd.BitManipulation.BitMask mask);
+public static sbyte ClearBits(this sbyte number, Jcd.BitManipulation.BitMask mask);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.SByteExtensions.ClearBits(thissbyte,Jcd.BitManipulation.BitMask).value'></a>
+<a name='Jcd.BitManipulation.SByteExtensions.ClearBits(thissbyte,Jcd.BitManipulation.BitMask).number'></a>
 
-`value` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
+`number` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 
 The value to modify.
 

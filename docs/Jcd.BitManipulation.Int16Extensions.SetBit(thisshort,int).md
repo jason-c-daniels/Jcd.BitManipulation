@@ -4,17 +4,17 @@
 
 ## Int16Extensions.SetBit(this short, int) Method
 
-Sets the bit at the specified to "on" and returns the modified value.
+Sets the bit at the specified to 1 and returns the modified value.
 
 ```csharp
-public static short SetBit(this short value, int offset);
+public static short SetBit(this short number, int offset);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.Int16Extensions.SetBit(thisshort,int).value'></a>
+<a name='Jcd.BitManipulation.Int16Extensions.SetBit(thisshort,int).number'></a>
 
-`value` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
+`number` [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 
 The value to modify.
 

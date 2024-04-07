@@ -16,13 +16,20 @@ public static int CountBitsSet(this ulong number);
 
 `number` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
-The number
+The number to evaluate.
 
 #### Returns
 
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
-The count of the bits set to 1
+The count of the bits set to 1.
+
+### Example
+
+```csharp
+var v = ulong.MaxValue;
+Console.WriteLine($"{v.CountBitsSet()} bits are set."); // outputs: 64 bits are set.
+```
 
 ### Remarks
 
-This is a reader-friendly alias for [PopCount(this ulong)](Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.PopCount(thisulong).md 'Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.PopCount(this ulong)')
+This is a reader-friendly alias for [PopCount(this ulong)](Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.PopCount(thisulong).md 'Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.PopCount(this ulong)').

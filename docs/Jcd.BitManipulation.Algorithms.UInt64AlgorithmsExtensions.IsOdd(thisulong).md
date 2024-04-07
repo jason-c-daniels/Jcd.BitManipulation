@@ -16,6 +16,8 @@ public static bool IsOdd(this ulong number);
 
 `number` [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
+The number to evaluate.
+
 #### Returns
 
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')

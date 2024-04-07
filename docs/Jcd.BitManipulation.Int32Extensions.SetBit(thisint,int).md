@@ -4,17 +4,17 @@
 
 ## Int32Extensions.SetBit(this int, int) Method
 
-Sets the bit at the specified to "on" and returns the modified value.
+Sets the bit at the specified to 1 and returns the modified value.
 
 ```csharp
-public static int SetBit(this int value, int offset);
+public static int SetBit(this int number, int offset);
 ```
 
 #### Parameters
 
-<a name='Jcd.BitManipulation.Int32Extensions.SetBit(thisint,int).value'></a>
+<a name='Jcd.BitManipulation.Int32Extensions.SetBit(thisint,int).number'></a>
 
-`value` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+`number` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
 The value to modify.
 

@@ -58,7 +58,7 @@ test_script:
                                  /k:"jason-c-daniels_Jcd.BitManipulation" \
                                  /d:sonar.token="$SONAR_TOKEN" \
                                  /d:sonar.cs.opencover.reportsPaths=**/coverage.opencover.xml \
-                                 /d:sonar.coverage.exclusions="**/**Test*.cs, **/*Example*/*, **/*Benchmark*/*" \
+                                 /d:sonar.coverage.exclusions="**/**Test*.cs, **/*Example*/*, **/*Benchmark*/**.cs" \
                                  /d:sonar.branch.name="$APPVEYOR_REPO_BRANCH"
     
     else
@@ -68,7 +68,7 @@ test_script:
                                   /k:"jason-c-daniels_Jcd.BitManipulation" \
                                   /d:sonar.token="$SONAR_TOKEN" \
                                   /d:sonar.cs.opencover.reportsPaths=**/coverage.opencover.xml \
-                                  /d:sonar.coverage.exclusions="**/**Test*.cs, **/*Example*/*, **/*Benchmark*/*" \
+                                  /d:sonar.coverage.exclusions="**/**Test*.cs, **/*Example*/*, **/*Benchmark*/**.cs" \
                                   /d:sonar.pullrequest.key="${APPVEYOR_PULL_REQUEST_NUMBER}"
     
     fi

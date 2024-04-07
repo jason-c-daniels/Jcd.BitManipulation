@@ -16,13 +16,20 @@ public static sbyte CountBitsSet(this sbyte number);
 
 `number` [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 
-The number
+The number to evaluate.
 
 #### Returns
 
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
-The count of the bits set to 1
+The count of the bits set to 1.
+
+### Example
+
+```csharp
+var v = sbyte.MaxValue;
+Console.WriteLine($"{v.CountBitsSet()} bits are set."); // outputs: 7 bits are set.
+```
 
 ### Remarks
 
-This is a reader-friendly alias for [PopCount(this sbyte)](Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.PopCount(thissbyte).md 'Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.PopCount(this sbyte)')
+This is a reader-friendly alias for [PopCount(this sbyte)](Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.PopCount(thissbyte).md 'Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.PopCount(this sbyte)').

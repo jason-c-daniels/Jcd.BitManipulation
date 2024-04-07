@@ -4,7 +4,9 @@
 
 ## BitMask.ToString() Method
 
-Formats the [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') as a "0b" prefixed string of zeroes and ones.
+Formats the
+[BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+as a "0b" prefixed string of zeroes and ones.
 
 ```csharp
 public override string ToString();

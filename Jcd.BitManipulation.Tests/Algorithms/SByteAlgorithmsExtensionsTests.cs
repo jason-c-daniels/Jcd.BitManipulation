@@ -238,6 +238,9 @@ public class SByteAlgorithmsExtensionsTests
 
          const sbyte bit = 1;
 
+         result.Add(sbyte.MinValue, 0);
+         result.Add(-1,             0);
+
          for (sbyte i = 0; i < BitSize - 1; i++)
          {
             var v = (sbyte) (bit  << i);

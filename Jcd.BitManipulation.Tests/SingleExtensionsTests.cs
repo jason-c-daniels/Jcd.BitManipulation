@@ -16,7 +16,7 @@ public class SingleExtensionsTests
    [InlineData(0b11,  ulong.MaxValue, true)]
    [InlineData(0b100, 0b10,           false)]
    [InlineData(0b011, 0b10,           true)]
-   public void AreAnyBitsSet_On_A_Float_Returns_The_Expected_Result(uint data, ulong mask, bool expected)
+   public void AreAnyBitsSet_Returns_The_Expected_Result(uint data, ulong mask, bool expected)
    {
       Assert.Equal(expected, data.BitwiseToSingle().AreAnyBitsSet(mask));
    }
@@ -26,7 +26,7 @@ public class SingleExtensionsTests
    [InlineData(0b11, ulong.MaxValue, false)]
    [InlineData(0b10, 0b10,           true)]
    [InlineData(0b11, 0b10,           true)]
-   public void AreAllBits_On_A_Float_Returns_The_Expected_Result(uint data, ulong mask, bool expected)
+   public void AreAllBits_Returns_The_Expected_Result(uint data, ulong mask, bool expected)
    {
       Assert.Equal(expected, data.BitwiseToSingle().AreAllBitsSet(mask));
    }
@@ -36,7 +36,7 @@ public class SingleExtensionsTests
    [InlineData(0b11, ulong.MaxValue, false)]
    [InlineData(0b10, 0b10,           false)]
    [InlineData(0b11, 0b10,           false)]
-   public void AreNoBitsSet_On_A_Float_Returns_The_Expected_Result(uint data, ulong mask, bool expected)
+   public void AreNoBitsSet_Returns_The_Expected_Result(uint data, ulong mask, bool expected)
    {
       Assert.Equal(expected, data.BitwiseToSingle().AreNoBitsSet(mask));
    }
@@ -47,7 +47,7 @@ public class SingleExtensionsTests
    [InlineData(0b11111111,                         6,  2, 0b00111111)] // clear upper 2 bits of lower byte
    [InlineData(0b111111111111,                     8,  2, 0b110011111111)]
    [InlineData(0b11111111111111111111111111111111, 26, 2, 0b11110011111111111111111111111111)]
-   public void ClearBits_On_Single_Clears_The_Correct_Bits(uint value, int offset, int size, uint expected)
+   public void ClearBits_Clears_The_Correct_Bits(uint value, int offset, int size, uint expected)
    {
       var result = value.BitwiseToSingle().ClearBits((byte) offset, (byte) size);
       Assert.Equal(expected.BitwiseToSingle(), result);
@@ -58,7 +58,7 @@ public class SingleExtensionsTests
    [InlineData(0xFFFFFFFF, 4,  0xFFFFFFEF)]
    [InlineData(0xFFFFFFFF, 15, 0xFFFF7FFF)]
    [InlineData(0xFFFFFFFF, 31, 0x7FFFFFFF)]
-   public void ClearBit_On_Single_Clears_Correct_Bit(uint value, int bitToClear, uint expected)
+   public void ClearBit_Clears_Correct_Bit(uint value, int bitToClear, uint expected)
    {
       var result = value.BitwiseToSingle().ClearBit((byte) bitToClear);
       Assert.Equal(expected.BitwiseToSingle(), result);
@@ -70,7 +70,7 @@ public class SingleExtensionsTests
    [InlineData(0b1111111111111111,                 0b0100000000000110,                 0b1011111111111001)]
    [InlineData(0b1111111110111111,                 0b0100000000000100,                 0b1011111110111011)]
    [InlineData(0b11111111111111111111111111111111, 0b00100001000000000100000000000110, 0b11011110111111111011111111111001)]
-   public void ClearBits_For_Single_When_Given_A_Mask_Directly_Clears_Only_The_Specified_Bits(uint initialValue, uint maskValue, uint expected)
+   public void ClearBits_When_Given_A_Mask_Directly_Clears_Only_The_Specified_Bits(uint initialValue, uint maskValue, uint expected)
    {
       // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
       var mask = (BitMask) maskValue;
@@ -86,7 +86,7 @@ public class SingleExtensionsTests
    [InlineData(0x00, 0,  16, 0xFFFF)]
    [InlineData(0x00, 28, 2,  0b00110000000000000000000000000000)]
    [InlineData(0x00, 0,  32, 0xFFFFFFFF)]
-   public void SetBits_On_Single_Sets_The_Correct_Bits(uint value, int offset, int size, uint expected)
+   public void SetBits_Sets_The_Correct_Bits(uint value, int offset, int size, uint expected)
    {
       var result = value.BitwiseToSingle().SetBits((byte) offset, (byte) size);
       Assert.Equal(expected.BitwiseToSingle(), result);
@@ -101,7 +101,7 @@ public class SingleExtensionsTests
    [InlineData(0x00, 15, 0x8000)]
    [InlineData(0x80, 16, 0x00010080)]
    [InlineData(0x00, 31, 0x80000000)]
-   public void SetBit_On_Single_Sets_Correct_Bit(ulong initial, int bitToSet, uint expected)
+   public void SetBit_Sets_Correct_Bit(ulong initial, int bitToSet, uint expected)
    {
       var value = (uint) initial;
       var result = value.BitwiseToSingle().SetBit((byte) bitToSet);
@@ -115,7 +115,7 @@ public class SingleExtensionsTests
    [InlineData(0x8000,     0x0300,     0x8300)]
    [InlineData(0x00000000, 0x03000000, 0x03000000)]
    [InlineData(0x80000000, 0x03000000, 0x83000000)]
-   public void SetBits_For_Single_When_Given_A_Mask_Directly_Sets_Only_The_Specified_Bits(uint uiInitialValue, uint maskValue, uint uiExpected)
+   public void SetBits_When_Given_A_Mask_Directly_Sets_Only_The_Specified_Bits(uint uiInitialValue, uint maskValue, uint uiExpected)
    {
       var initialValue = uiInitialValue.BitwiseToSingle();
       var expected = uiExpected.BitwiseToSingle();
@@ -134,7 +134,7 @@ public class SingleExtensionsTests
    [InlineData(0xF00F,     14, 2, 0x03)]
    [InlineData(0x3000000F, 28, 4, 0x03)]
    [InlineData(0xF000000F, 30, 2, 0x03)]
-   public void ReadBits_On_Single_Reads_The_Correct_Bits(uint initial, int offset, int size, uint expected)
+   public void ReadBits_Reads_The_Correct_Bits(uint initial, int offset, int size, uint expected)
    {
       var bits = initial.BitwiseToSingle();
       var value = bits.ReadBits(offset, size);
@@ -151,7 +151,7 @@ public class SingleExtensionsTests
    [InlineData(0b11100111        << 8,  15, true)]
    [InlineData((uint) 0b11100111 << 24, 27, false)]
    [InlineData((uint) 0b11100111 << 24, 31, true)]
-   public void ReadBit_For_Single_Reads_The_Correct_Value(uint bits, int offset, bool expected)
+   public void ReadBit_Reads_The_Correct_Value(uint bits, int offset, bool expected)
    {
       Assert.Equal(expected, bits.BitwiseToSingle().ReadBit((byte) offset));
    }
@@ -165,26 +165,30 @@ public class SingleExtensionsTests
    [InlineData(0xFB_FA_F9_F8, 2, 0xF9, Endian.Big)]
    [InlineData(0xFB_FA_F9_F8, 1, 0xFA, Endian.Big)]
    [InlineData(0xFB_FA_F9_F8, 0, 0xFB, Endian.Big)]
-   public void ReadByte_On_Single_Returns_Expected_Value(uint data, int offset, byte expected, Endian endian)
+   public void ReadByte_Returns_Expected_Value(uint data, int offset, byte expected, Endian endian)
    {
       Assert.Equal(expected, data.BitwiseToSingle().ReadByte(offset, endian));
    }
 
    [Theory]
-   [InlineData(0xFB_FA_F9_F8, 0, 4)]
-   [InlineData(0xFB_FA_F9_F8, 1, 3)]
-   [InlineData(0xFB_FA_F9_F8, 2, 2)]
-   [InlineData(0xFB_FA_F9_F8, 0, 3)]
-   public void ReadBytes_On_Single_Returns_Expected_Array(uint data, int offset, int size)
+   [InlineData(0xFB_FA_F9_F8, 0, 4, Endian.Little)]
+   [InlineData(0xFB_FA_F9_F8, 1, 3, Endian.Little)]
+   [InlineData(0xFB_FA_F9_F8, 2, 2, Endian.Little)]
+   [InlineData(0xFB_FA_F9_F8, 0, 3, Endian.Little)]
+   [InlineData(0xFB_FA_F9_F8, 0, 4, Endian.Big)]
+   [InlineData(0xFB_FA_F9_F8, 1, 3, Endian.Big)]
+   [InlineData(0xFB_FA_F9_F8, 2, 2, Endian.Big)]
+   [InlineData(0xFB_FA_F9_F8, 0, 3, Endian.Big)]
+   public void ReadBytes_Returns_Expected_Array(uint data, int offset, int size, Endian endian)
    {
       var expected = new List<byte>();
 
       for (var i = 0; i < size; i++)
       {
-         expected.Add(data.ReadByte(i + offset));
+         expected.Add(data.ReadByte(i + offset, endian));
       }
 
-      Assert.Equal(expected.ToArray(), data.BitwiseToSingle().ReadBytes(offset, size));
+      Assert.Equal(expected.ToArray(), data.BitwiseToSingle().ReadBytes(offset, size, endian));
    }
 
    [Theory]
@@ -194,7 +198,7 @@ public class SingleExtensionsTests
    [InlineData(0xF0,   0x03,   0, 4,  0xF3)]
    [InlineData(0x0000, 0xFFFF, 0, 16, 0xFFFF)]
    [InlineData(0xF000, 0x03,   0, 8,  0xF003)]
-   public void StoreBits_On_Single_Stores_The_Correct_Bits(uint initial, uint val, int offset, int size, uint expected)
+   public void StoreBits_Stores_The_Correct_Bits(uint initial, uint val, int offset, int size, uint expected)
    {
       var result = initial.BitwiseToSingle().StoreBits(val, offset, size);
       Assert.Equal(expected.BitwiseToSingle(), result);
@@ -209,7 +213,7 @@ public class SingleExtensionsTests
    [InlineData(0xFFFF,     15, false, 0x7FFF)]
    [InlineData(0x00000000, 31, true,  0x80000000)]
    [InlineData(0xFFFFFFFF, 31, false, 0x7FFFFFFF)]
-   public void StoreBit_For_Single_Sets_The_Specified_Bit_To_The_Target_Value(uint value, int offset, bool bit, uint expected)
+   public void StoreBit_Sets_The_Specified_Bit_To_The_Target_Value(uint value, int offset, bool bit, uint expected)
    {
       var result = value.BitwiseToSingle().StoreBit(bit, offset);
       Assert.Equal(expected.BitwiseToSingle(), result);
@@ -224,14 +228,14 @@ public class SingleExtensionsTests
    [InlineData(0, (byte) 0x02, 1, 0x00_02_00_00, Endian.Big)]
    [InlineData(0, (byte) 0xFF, 2, 0x00_00_FF_00, Endian.Big)]
    [InlineData(0, (byte) 0xFE, 3, 0x00_00_00_FE, Endian.Big)]
-   public void StoreByte_On_Single_Returns_Expected_Value(uint value, byte data, int offset, uint expected, Endian endian)
+   public void StoreByte_Returns_Expected_Value(uint value, byte data, int offset, uint expected, Endian endian)
    {
       Assert.Equal(expected.BitwiseToSingle(), value.BitwiseToSingle().StoreByte(data, offset, endian));
    }
 
    [Theory]
    [MemberData(nameof(UInt32StoreBytesWithEndian))]
-   public void StoreBytes_From_Byte_Array_On_Single_Returns_Expected_Value(uint data, int offset, int size, byte[] bytes, Endian endian)
+   public void StoreBytes_From_Byte_Array_Returns_Expected_Value(uint data, int offset, int size, byte[] bytes, Endian endian)
    {
       var expected = data.BitwiseToSingle();
 
@@ -246,7 +250,7 @@ public class SingleExtensionsTests
 
    [Theory]
    [MemberData(nameof(UInt32StoreBytesWithEndian))]
-   public void StoreBytes_From_ReadOnlySpan_On_Single_Returns_Expected_Value(uint data, int offset, int size, byte[] bytes, Endian endian)
+   public void StoreBytes_From_ReadOnlySpan_Returns_Expected_Value(uint data, int offset, int size, byte[] bytes, Endian endian)
    {
       var expected = data.BitwiseToSingle();
 
@@ -265,7 +269,7 @@ public class SingleExtensionsTests
    [InlineData(0b11111111,                         6,  2, 0b00111111)] // toggle upper 2 bits of lower byte
    [InlineData(0b111111111111,                     8,  2, 0b110011111111)]
    [InlineData(0b11111111111111111111111111111111, 26, 2, 0b11110011111111111111111111111111)]
-   public void ToggleBits_On_Single_Toggles_The_Correct_Bits(uint value, int offset, int size, uint expected)
+   public void ToggleBits_Toggles_The_Correct_Bits(uint value, int offset, int size, uint expected)
    {
       var result = value.BitwiseToSingle().ToggleBits((byte) offset, (byte) size);
       Assert.Equal(expected.BitwiseToSingle(), result);
@@ -276,7 +280,7 @@ public class SingleExtensionsTests
    [InlineData(0xFFFFFFFF, 4,  0xFFFFFFEF)]
    [InlineData(0xFFFFFFFF, 15, 0xFFFF7FFF)]
    [InlineData(0xFFFFFFFF, 31, 0x7FFFFFFF)]
-   public void ToggleBit_On_Single_Toggles_Correct_Bit(uint value, int bitToToggle, uint expected)
+   public void ToggleBit_Toggles_Correct_Bit(uint value, int bitToToggle, uint expected)
    {
       var result = value.BitwiseToSingle().ToggleBit((byte) bitToToggle);
       Assert.Equal(expected.BitwiseToSingle(), result);
@@ -288,7 +292,7 @@ public class SingleExtensionsTests
    [InlineData(0b1111111111111111,                 0b0100000000000110,                 0b1011111111111001)]
    [InlineData(0b1111111110111111,                 0b0100000000000100,                 0b1011111110111011)]
    [InlineData(0b11111111111111111111111111111111, 0b00100001000000000100000000000110, 0b11011110111111111011111111111001)]
-   public void ToggleBits_For_Single_When_Given_A_Mask_Directly_Toggles_Only_The_Specified_Bits(uint initialValue, uint maskValue, uint expected)
+   public void ToggleBits_When_Given_A_Mask_Directly_Toggles_Only_The_Specified_Bits(uint initialValue, uint maskValue, uint expected)
    {
       // forcibly cast so that guarantee the proper data size, and so that the xUnit data binder can bind the values to the params.
       var mask = new BitMask(maskValue);
@@ -299,7 +303,7 @@ public class SingleExtensionsTests
    [Theory]
    [InlineData(0x04030201, Endian.Little, 0x01, 0x02, 0x03, 0x04)]
    [InlineData(0x04030201, Endian.Big,    0x04, 0x03, 0x02, 0x01)]
-   public void ToByteArray_On_Single_Returns_Expected_Value(uint data, Endian endian, byte e0, byte e1, byte e2, byte e3)
+   public void ToByteArray_Returns_Expected_Value(uint data, Endian endian, byte e0, byte e1, byte e2, byte e3)
    {
       var expected = new[] { e0, e1, e2, e3 };
       Assert.Equal(expected, data.BitwiseToSingle().ToByteArray(endian));

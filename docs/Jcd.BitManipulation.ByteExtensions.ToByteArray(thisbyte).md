@@ -4,7 +4,9 @@
 
 ## ByteExtensions.ToByteArray(this byte) Method
 
-Converts a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') into an array of bytes in the specified [Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian').
+Converts a
+[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
+into an array of bytes in the specified[Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian').
 
 ```csharp
 public static byte[] ToByteArray(this byte number);
@@ -16,9 +18,11 @@ public static byte[] ToByteArray(this byte number);
 
 `number` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
-the [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') to convert.
+the
+[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
+to convert.
 
 #### Returns
 
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
-an array containing the [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte').
+an array containing the[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte').

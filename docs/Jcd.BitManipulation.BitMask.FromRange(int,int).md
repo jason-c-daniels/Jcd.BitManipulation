@@ -4,7 +4,9 @@
 
 ## BitMask.FromRange(int, int) Method
 
-Create a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') with a range of bits set.
+Create a
+[BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+with a range of bits set.
 
 ```csharp
 public static Jcd.BitManipulation.BitMask FromRange(int offset=0, int size=64);

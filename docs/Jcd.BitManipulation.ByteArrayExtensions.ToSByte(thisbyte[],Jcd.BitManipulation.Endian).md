@@ -4,7 +4,7 @@
 
 ## ByteArrayExtensions.ToSByte(this byte[], Endian) Method
 
-Converts an array of bytes into a [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte'), discarding any excess data.
+Converts an array of bytes into a[System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte'), discarding any excess data.
 
 ```csharp
 public static sbyte ToSByte(this byte[] array, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);

@@ -25,4 +25,4 @@ The count of the bits set to 1.
 
 ### Remarks
 
-This is an alias for [CountBitsSet(this short)](Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.CountBitsSet(thisshort).md 'Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.CountBitsSet(this short)').
+This is an alias for[CountBitsSet(this short)](Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.CountBitsSet(thisshort).md 'Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.CountBitsSet(this short)').

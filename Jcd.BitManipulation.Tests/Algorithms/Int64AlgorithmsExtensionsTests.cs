@@ -305,6 +305,9 @@ public class Int64AlgorithmsExtensionsTests
 
          const long bit = 1;
 
+         result.Add(long.MinValue, 0);
+         result.Add(-1,            0);
+
          for (var i = 0; i < BitSize - 1; i++)
          {
             var v = (bit  << i);

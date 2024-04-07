@@ -32,4 +32,4 @@ Console.WriteLine($"{v.CountBitsSet()} bits are set."); // outputs: 8 bits are s
 
 ### Remarks
 
-This is a reader-friendly alias for[PopCount(this byte)](Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.PopCount(thisbyte).md 'Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.PopCount(this byte)').
+This is a reader-friendly alias for [PopCount(this byte)](Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.PopCount(thisbyte).md 'Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.PopCount(this byte)').

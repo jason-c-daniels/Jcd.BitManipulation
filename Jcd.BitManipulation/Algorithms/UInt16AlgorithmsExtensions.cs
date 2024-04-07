@@ -124,6 +124,7 @@ public static class UInt16AlgorithmsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ushort RoundUpToPowerOfTwo(this ushort number)
    {
+      // adapted from: https://graphics.stanford.edu/~seander/bithacks.html#RoundUpPowerOf2
       number--;
       number |= (ushort) (number >> 1);
       number |= (ushort) (number >> 2);
@@ -277,6 +278,11 @@ public static class UInt16AlgorithmsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int CountTrailingZeros(this ushort number)
    {
+      if (number.IsOdd())
+      {
+         return 0;
+      }
+
       if (number == 0)
       {
          return BitSize;
@@ -367,6 +373,13 @@ public static class UInt16AlgorithmsExtensions
    /// </summary>
    /// <param name="number">The number to evaluate.</param>
    /// <returns>The count of the bits set to 1.</returns>
+   /// <remarks>This is an alias for <see cref="CountBitsSet" />.</remarks>
+   /// <example>
+   /// <code>
+   /// var v = ushort.MaxValue;
+   /// Console.WriteLine($"{v.PopCount()} bits are set."); // outputs: 16 bits are set.
+   /// </code>
+   /// </example>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int PopCount(this ushort number)
    {

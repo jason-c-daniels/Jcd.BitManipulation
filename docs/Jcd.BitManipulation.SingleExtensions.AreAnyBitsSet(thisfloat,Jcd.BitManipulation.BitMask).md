@@ -4,7 +4,7 @@
 
 ## SingleExtensions.AreAnyBitsSet(this float, BitMask) Method
 
-Tests if any bits from the bitmask are set on a[System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single').
+Tests if any bits from the bitmask are set on a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single').
 
 ```csharp
 public static bool AreAnyBitsSet(this float number, Jcd.BitManipulation.BitMask bitmask);

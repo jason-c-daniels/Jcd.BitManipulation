@@ -4,10 +4,7 @@
 
 ## BitIndexer.implicit operator bool[](BitIndexer) Operator
 
-Automatically convert from a
-[BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')
-to a array of
-[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
+Automatically convert from a [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer') to a array of [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 
 ```csharp
 public static bool[] implicit operator bool[](Jcd.BitManipulation.BitIndexer indexer);

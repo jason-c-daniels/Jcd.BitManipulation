@@ -126,6 +126,7 @@ public static class UInt32AlgorithmsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static uint RoundUpToPowerOfTwo(this uint number)
    {
+      // adapted from: https://graphics.stanford.edu/~seander/bithacks.html#RoundUpPowerOf2
       number--;
       number |= (number >> 1);
       number |= (number >> 2);
@@ -274,6 +275,11 @@ public static class UInt32AlgorithmsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int CountTrailingZeros(this uint number)
    {
+      if (number.IsOdd())
+      {
+         return 0;
+      }
+
       if (number == 0)
       {
          return BitSize;
@@ -370,6 +376,13 @@ public static class UInt32AlgorithmsExtensions
    /// </summary>
    /// <param name="number">The number to evaluate.</param>
    /// <returns>The count of the bits set to 1.</returns>
+   /// <remarks>This is an alias for <see cref="CountBitsSet" />.</remarks>
+   /// <example>
+   /// <code>
+   /// var v = uint.MaxValue;
+   /// Console.WriteLine($"{v.PopCount()} bits are set."); // outputs: 32 bits are set.
+   /// </code>
+   /// </example>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int PopCount(this uint number)
    {

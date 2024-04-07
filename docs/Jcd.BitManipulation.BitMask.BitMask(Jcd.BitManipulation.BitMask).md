@@ -4,8 +4,7 @@
 
 ## BitMask(BitMask) Constructor
 
-Copies a existing
-[BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+Copies a existing [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
 ```csharp
 public BitMask(Jcd.BitManipulation.BitMask mask);
@@ -17,6 +16,4 @@ public BitMask(Jcd.BitManipulation.BitMask mask);
 
 `mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
 
-The
-[BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
-to copy
+The [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') to copy

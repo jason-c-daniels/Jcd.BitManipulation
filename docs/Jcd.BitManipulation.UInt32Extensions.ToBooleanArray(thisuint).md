@@ -4,11 +4,7 @@
 
 ## UInt32Extensions.ToBooleanArray(this uint) Method
 
-Converts a
-[System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
-into an array of
-
-values with the lease significant bit at index 0.
+Converts a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32') into an array of values with the lease significant bit at index 0.
 
 ```csharp
 public static bool[] ToBooleanArray(this uint number);
@@ -20,9 +16,7 @@ public static bool[] ToBooleanArray(this uint number);
 
 `number` [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 
-The
-[System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
-to convert.
+The [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32') to convert.
 
 #### Returns
 

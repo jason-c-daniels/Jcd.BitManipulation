@@ -7,7 +7,7 @@
 Counts the bits that are set to 1 in a number.
 
 ```csharp
-public static short CountBitsSet(this short number);
+public static int CountBitsSet(this short number);
 ```
 
 #### Parameters
@@ -20,7 +20,7 @@ The number to evaluate.
 
 #### Returns
 
-[System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
+[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 The count of the bits set to 1.
 
 ### Example
@@ -32,4 +32,4 @@ Console.WriteLine($"{v.CountBitsSet()} bits are set."); // outputs: 15 bits are 
 
 ### Remarks
 
-This is a reader-friendly alias for[PopCount(this short)](Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.PopCount(thisshort).md 'Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.PopCount(this short)').
+This is a reader-friendly alias for [PopCount(this short)](Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.PopCount(thisshort).md 'Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.PopCount(this short)').

@@ -5,9 +5,7 @@
 ## UInt32AlgorithmsExtensions Class
 
 Provides bit counting and other niche bit manipulation facilities
-for
-[System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
-values.
+for [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32') values.
 
 ```csharp
 public static class UInt32AlgorithmsExtensions

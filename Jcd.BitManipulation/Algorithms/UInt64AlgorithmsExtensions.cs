@@ -128,7 +128,7 @@ public static class UInt64AlgorithmsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static ulong RoundUpToPowerOfTwo(this ulong number)
    {
-      //adapted from https: //graphics.stanford.edu/~seander/bithacks.html#RoundUpPowerOf2
+      // adapted from https://graphics.stanford.edu/~seander/bithacks.html#RoundUpPowerOf2
       number--;
       number |= number >> 1;
       number |= number >> 2;
@@ -296,6 +296,11 @@ public static class UInt64AlgorithmsExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int CountTrailingZeros(this ulong number)
    {
+      if (number.IsOdd())
+      {
+         return 0;
+      }
+
       if (number == 0)
       {
          return BitSize;
@@ -398,6 +403,13 @@ public static class UInt64AlgorithmsExtensions
    /// </summary>
    /// <param name="number">The number to evaluate.</param>
    /// <returns>The count of the bits set to 1.</returns>
+   /// <remarks>This is an alias for <see cref="CountBitsSet" />.</remarks>
+   /// <example>
+   /// <code>
+   /// var v = ulong.MaxValue;
+   /// Console.WriteLine($"{v.PopCount()} bits are set."); // outputs: 64 bits are set.
+   /// </code>
+   /// </example>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static int PopCount(this ulong number)
    {

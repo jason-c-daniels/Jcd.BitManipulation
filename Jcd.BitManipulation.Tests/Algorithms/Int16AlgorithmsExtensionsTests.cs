@@ -1,5 +1,6 @@
 ﻿#region
 
+#pragma warning disable CA1868
 using System.Collections.Generic;
 
 using Jcd.BitManipulation.Algorithms;

@@ -299,11 +299,11 @@ public static class UInt32Extensions
    public static uint StoreBit(this uint number, bool bit, int offset)
    {
       return number.StoreBits((uint) (bit
-                                        ? 1
-                                        : 0)
-                           , offset
-                           , 1
-                            );
+                                         ? 1
+                                         : 0)
+                            , offset
+                            , 1
+                             );
    }
 
    /// <summary>

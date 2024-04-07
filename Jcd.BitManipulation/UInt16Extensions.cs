@@ -340,11 +340,11 @@ public static class UInt16Extensions
    public static ushort StoreBit(this ushort number, bool bit, int offset)
    {
       return number.StoreBits((ushort) (bit
-                                          ? 1
-                                          : 0)
-                           , offset
-                           , 1
-                            );
+                                           ? 1
+                                           : 0)
+                            , offset
+                            , 1
+                             );
    }
 
    /// <summary>

@@ -294,11 +294,11 @@ public static class Int16Extensions
    public static short StoreBit(this short number, bool bit, int offset)
    {
       return number.StoreBits((short) (bit
-                                         ? 1
-                                         : 0)
-                           , offset
-                           , 1
-                            );
+                                          ? 1
+                                          : 0)
+                            , offset
+                            , 1
+                             );
    }
 
    /// <summary>

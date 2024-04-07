@@ -254,11 +254,11 @@ public static class SByteExtensions
    public static sbyte StoreBit(this sbyte number, bool bit, int offset)
    {
       return number.StoreBits((sbyte) (bit
-                                         ? 1
-                                         : 0)
-                           , offset
-                           , 1
-                            );
+                                          ? 1
+                                          : 0)
+                            , offset
+                            , 1
+                             );
    }
 
    /// <summary>

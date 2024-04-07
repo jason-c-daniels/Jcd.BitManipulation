@@ -7,10 +7,16 @@ using Jcd.BitManipulation.Algorithms;
 #region
 
 // ReSharper disable once RedundantUsingDirective
+#pragma warning disable S1128
+/* S2325 only impacts .net framework. This is to work around a BenchmarkDotNet limitation. */
+#pragma warning disable S2325
 using System.Numerics;
 
 #endregion
 
+#pragma warning disable CA1822
+#pragma warning disable CA1868
+#pragma warning disable S109
 #pragma warning disable S3400
 
 #endregion

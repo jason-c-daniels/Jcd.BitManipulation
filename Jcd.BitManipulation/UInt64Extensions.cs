@@ -285,11 +285,11 @@ public static class UInt64Extensions
    public static ulong StoreBit(this ulong number, bool bit, int offset)
    {
       return number.StoreBits((ulong) (bit
-                                         ? 1
-                                         : 0)
-                           , offset
-                           , 1
-                            );
+                                          ? 1
+                                          : 0)
+                            , offset
+                            , 1
+                             );
    }
 
    /// <summary>

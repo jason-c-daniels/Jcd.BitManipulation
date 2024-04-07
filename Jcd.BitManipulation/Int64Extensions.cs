@@ -296,11 +296,11 @@ public static class Int64Extensions
    public static long StoreBit(this long number, bool bit, int offset)
    {
       return number.StoreBits(bit
-                                ? 1
-                                : 0
-                           , offset
-                           , 1
-                            );
+                                 ? 1
+                                 : 0
+                            , offset
+                            , 1
+                             );
    }
 
    /// <summary>

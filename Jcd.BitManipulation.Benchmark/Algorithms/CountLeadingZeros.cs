@@ -5,6 +5,8 @@ using BenchmarkDotNet.Attributes;
 using Jcd.BitManipulation.Algorithms;
 
 #pragma warning disable S3400
+#pragma warning disable CA1822
+#pragma warning disable S109
 
 #endregion
 

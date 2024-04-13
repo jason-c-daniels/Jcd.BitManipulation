@@ -3215,6 +3215,47 @@
             and helper methods to simplify creating bit masks.
          </summary>
       </member>
+      <member name="M:Jcd.BitManipulation.BitMask.Equals(Jcd.BitManipulation.BitMask)">
+         <summary>
+            Compares this instance to another for equality.
+         </summary>
+         <param name="other"></param>
+         <returns>true if equivalent.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.BitMask.Equals(System.Object)">
+         <summary>
+            compares this instance agains an object for equality.
+         </summary>
+         <param name="obj">The target of the comparison.</param>
+         <returns>true if equivalent</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.BitMask.GetHashCode">
+         <summary>
+            Gets the hashcode for this instance.
+         </summary>
+         <returns></returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.BitMask.op_Equality(Jcd.BitManipulation.BitMask,Jcd.BitManipulation.BitMask)">
+         <summary>
+            Compares two
+            <see cref="T:Jcd.BitManipulation.BitMask"/>
+            instances for equality.
+         </summary>
+         <param name="left">The left side of the comparison.</param>
+         <param name="right">The right side of the comparison.</param>
+         <returns>True if equivalent.</returns>
+      </member>
+      <member
+         name="M:Jcd.BitManipulation.BitMask.op_Inequality(Jcd.BitManipulation.BitMask,Jcd.BitManipulation.BitMask)">
+         <summary>
+            Compares two
+            <see cref="T:Jcd.BitManipulation.BitMask"/>
+            instances for inequality.
+         </summary>
+         <param name="left">The left side of the comparison.</param>
+         <param name="right">The right side of the comparison.</param>
+         <returns>True if not equivalent.</returns>
+      </member>
       <member name="F:Jcd.BitManipulation.BitMask.AllBits">
          <summary>
             A bitmask with all bits set in the mask.

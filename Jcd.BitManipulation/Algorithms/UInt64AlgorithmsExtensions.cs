@@ -43,16 +43,16 @@ public static class UInt64AlgorithmsExtensions
    /// <code>
    /// ulong v = 1;
    /// if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 1 is a power of two!
-   /// 
+   ///
    /// v = 2;
    /// if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 2 is a power of two!
-   /// 
+   ///
    /// v = 3;
    /// if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // does not output anything.
-   /// 
+   ///
    /// v = 4;
    /// if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 4 is a power of two!
-   /// 
+   ///
    /// </code>
    /// </example>
    /// [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -88,13 +88,13 @@ public static class UInt64AlgorithmsExtensions
    /// <code>
    /// ulong v = 0b0001;
    /// Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
-   /// 
+   ///
    /// v = 0b0011;
    /// Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
-   /// 
+   ///
    /// v = 0b0101;
    /// Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
-   /// 
+   ///
    /// v = 0b0111;
    /// Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: False
    /// </code>
@@ -120,7 +120,7 @@ public static class UInt64AlgorithmsExtensions
    /// <code>
    /// ulong v = 2;
    /// Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 2
-   /// 
+   ///
    /// v = 3;
    /// Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 4
    /// </code>
@@ -153,13 +153,13 @@ public static class UInt64AlgorithmsExtensions
    /// <code>
    /// ulong v = 1;
    /// Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 0
-   ///       
+   ///
    /// v = 2;
    /// Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
-   /// 
+   ///
    /// v = 3;
    /// Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
-   ///       
+   ///
    /// v = 4;
    /// Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 2
    /// </code>
@@ -184,13 +184,13 @@ public static class UInt64AlgorithmsExtensions
    /// <code>
    /// ulong v = 1;
    /// Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 0
-   ///       
+   ///
    /// v = 2;
    /// Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
-   /// 
+   ///
    /// v = 3;
    /// Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
-   ///       
+   ///
    /// v = 4;
    /// Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 2
    /// </code>
@@ -216,10 +216,10 @@ public static class UInt64AlgorithmsExtensions
    /// <code>
    /// ulong v = 0x7FFFFFFF_FFFFFFFF;
    /// Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 1
-   ///       
+   ///
    /// v = 0x3FFFFFFF_FFFFFFFF;
    /// Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 2
-   /// 
+   ///
    /// v = 1;
    /// Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 63
    /// </code>
@@ -282,13 +282,13 @@ public static class UInt64AlgorithmsExtensions
    /// <code>
    /// ulong v = 1;
    /// Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 0
-   ///       
+   ///
    /// v = 2;
    /// Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 1
-   /// 
+   ///
    /// v = 3;
    /// Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 1
-   ///       
+   ///
    /// v = 4;
    /// Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 2
    /// </code>
@@ -355,9 +355,9 @@ public static class UInt64AlgorithmsExtensions
    /// <example>
    /// <code>
    /// var rotationBase = sizeof(int)-5;
-   /// 
+   ///
    /// ulong b = 0b00000000_00000000_00000000_00000000_00000000_00000000_00000000_00001111;
-   /// 
+   ///
    /// var b2 = b.RotateLeft(rotationBase+0); // b2 = 0b01111000_00000000_00000000_00000000_00000000_00000000_00000000_00000000
    /// var b3 = b.RotateLeft(rotationBase+1); // b3 = 0b11110000_00000000_00000000_00000000_00000000_00000000_00000000_00000000
    /// var b4 = b.RotateLeft(rotationBase+2); // b4 = 0b11100000_00000000_00000000_00000000_00000000_00000000_00000000_00000001
@@ -381,9 +381,9 @@ public static class UInt64AlgorithmsExtensions
    /// <example>
    /// <code>
    /// var rotationBase = sizeof(int)-5;
-   /// 
+   ///
    /// ulong b = 0b11110000_00000000_00000000_00000000_00000000_00000000_00000000_00000000;
-   /// 
+   ///
    /// var b2 = b.RotateRight(rotationBase+0); // b2 = 0b00000000_00000000_00000000_00000000_00000000_00000000_00000000_00011110
    /// var b3 = b.RotateRight(rotationBase+1); // b3 = 0b00000000_00000000_00000000_00000000_00000000_00000000_00000000_00001111
    /// var b4 = b.RotateRight(rotationBase+2); // b4 = 0b10000000_00000000_00000000_00000000_00000000_00000000_00000000_00000111

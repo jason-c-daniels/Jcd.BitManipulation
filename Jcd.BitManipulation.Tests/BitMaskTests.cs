@@ -239,4 +239,63 @@ public class BitMaskTests
    }
 
    #endregion
+
+   #region Equality and HashCode Tests
+
+   [Theory]
+   [InlineData(0b0001, 0b0001, true)]
+   [InlineData(0b0011, 0b0011, true)]
+   [InlineData(0b0010, 0b0011, false)]
+   [InlineData(0b0110, 0b0011, false)]
+   public void op_Equals_Returns_Expected_Value(uint v1, uint v2, bool expected)
+   {
+      BitMask b1 = v1;
+      BitMask b2 = v2;
+      Assert.Equal(expected, b1 == b2);
+   }
+
+   [Theory]
+   [InlineData(0b0001, 0b0001, false)]
+   [InlineData(0b0011, 0b0011, false)]
+   [InlineData(0b0010, 0b0011, true)]
+   [InlineData(0b0110, 0b0011, true)]
+   public void op_NotEquals_Returns_Expected_Value(uint v1, uint v2, bool expected)
+   {
+      BitMask b1 = v1;
+      BitMask b2 = v2;
+      Assert.Equal(expected, b1 != b2);
+   }
+
+   [Theory]
+   [InlineData(0b0001, 0b0001, true)]
+   [InlineData(0b0011, 0b0011, true)]
+   [InlineData(0b0010, 0b0011, false)]
+   [InlineData(0b0110, 0b0011, false)]
+   public void Equals_On_Object_Returns_Expected_Value(uint v1, uint v2, bool expected)
+   {
+      BitMask b1 = v1;
+      BitMask b2 = v2;
+      Assert.Equal(expected, b1.Equals((object)b2));
+   }
+
+   [Fact]
+   public void Equals_On_Object_Of_Wrong_Type_Returns_False()
+   {
+      BitMask b1 = 1;
+      Assert.False(b1.Equals(new object()));
+   }
+
+   [Theory]
+   [InlineData(0b0001)]
+   [InlineData(0b0011)]
+   [InlineData(0b0010)]
+   [InlineData(0b0110)]
+   public void GetHashCode_Returns_Expected_Value(ulong v1)
+   {
+      var expected = v1.GetHashCode();
+      BitMask b1 = v1;
+      Assert.Equal(expected, b1.GetHashCode());
+   }
+
+   #endregion
 }

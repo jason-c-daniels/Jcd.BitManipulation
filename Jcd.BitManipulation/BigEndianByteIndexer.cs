@@ -468,7 +468,7 @@ public ref struct BigEndianByteIndexer
    /// <code>
    /// ulong number = 0xDEADBEEFFA17C0DE;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
-   /// 
+   ///
    /// var b0 = indexer[0]; // b0 is 0xDE
    /// indexer[1] = 0xFF;
    /// var result = indexer.ToString(); // result is "DE FF BE EF FA 17 C0 DE"
@@ -489,7 +489,7 @@ public ref struct BigEndianByteIndexer
    /// <code>
    /// long number = 0x7EADBEEFFA17C0DE;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
-   /// 
+   ///
    /// var b0 = indexer[0]; // b0 is 0x7E
    /// indexer[1] = 0xFF;
    /// var result = indexer.ToString(); // result is "7E FF BE EF FA 17 C0 DE"
@@ -510,7 +510,7 @@ public ref struct BigEndianByteIndexer
    /// <code>
    /// uint number = 0xDEADBEEF;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
-   /// 
+   ///
    /// var b0 = indexer[0]; // b0 is 0xDE
    /// indexer[1] = 0xFF;
    /// var result = indexer.ToString(); // result is "DE FF BE EF"
@@ -531,7 +531,7 @@ public ref struct BigEndianByteIndexer
    /// <code>
    /// int number = 0x7EADBEEF;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
-   /// 
+   ///
    /// var b0 = indexer[0]; // b0 is 0xDE
    /// indexer[1] = 0xFF;
    /// var result = indexer.ToString(); // result is "7E FF BE EF"
@@ -552,7 +552,7 @@ public ref struct BigEndianByteIndexer
    /// <code>
    /// ushort number = 0xDEAD;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
-   /// 
+   ///
    /// var b0 = indexer[0]; // b0 is 0xDE
    /// indexer[1] = 0xFF;
    /// var result = indexer.ToString(); // result is "DE FF"
@@ -573,7 +573,7 @@ public ref struct BigEndianByteIndexer
    /// <code>
    /// short number = 0x7EAD;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
-   /// 
+   ///
    /// var b0 = indexer[0]; // b0 is 0xDE
    /// indexer[1] = 0xFF;
    /// var result = indexer.ToString(); // result is "7E FF"
@@ -594,7 +594,7 @@ public ref struct BigEndianByteIndexer
    /// <code>
    /// byte number = 0xDE;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
-   /// 
+   ///
    /// var b0 = indexer[0]; // b0 is 0xDE
    /// indexer[0] = 0xFF;
    /// var result = indexer.ToString(); // result is "FF"
@@ -615,7 +615,7 @@ public ref struct BigEndianByteIndexer
    /// <code>
    /// sbyte number = 0xDE;
    /// BigEndianByteIndexer indexer = number; // implicit cast.
-   /// 
+   ///
    /// var b0 = indexer[0]; // b0 is 0xDE
    /// indexer[0] = 0xFF;
    /// var result = indexer.ToString(); // result is "FF"
@@ -636,7 +636,7 @@ public ref struct BigEndianByteIndexer
    /// <code>
    /// float number = -6.259853398707798016E18f; // 0xDEADBEEF
    /// BigEndianByteIndexer indexer = number; // implicit cast.
-   /// 
+   ///
    /// var b0 = indexer[0]; // b0 is 0xDE
    /// indexer[1] = 0xFF;
    /// var result = indexer.ToString(); // result is "DE FF BE EF"
@@ -657,7 +657,7 @@ public ref struct BigEndianByteIndexer
    /// <code>
    /// var number = -1.1885959909993540014504278736E148; // 0xDEADBEEFFA17C0DE
    /// BigEndianByteIndexer indexer = number;    // implicit cast.
-   /// 
+   ///
    /// var b0_1 = indexer[0]; // b0 is 0xDE
    /// indexer[1] = 0xFF;
    /// var result = indexer.ToString(); // result is "DE FF BE EF FA 17 C0 DE"

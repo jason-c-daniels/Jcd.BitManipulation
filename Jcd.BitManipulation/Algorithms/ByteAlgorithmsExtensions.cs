@@ -37,16 +37,16 @@ public static class ByteAlgorithmsExtensions
    /// <code>
    /// byte v = 1;
    /// if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 1 is a power of two!
-   /// 
+   ///
    /// v = 2;
    /// if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 2 is a power of two!
-   /// 
+   ///
    /// v = 3;
    /// if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // does not output anything.
-   /// 
+   ///
    /// v = 4;
    /// if (v.IsPowerOfTwo()) Console.WriteLine($"{v} is a power of two!"); // outputs: 4 is a power of two!
-   /// 
+   ///
    /// </code>
    /// </example>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -82,13 +82,13 @@ public static class ByteAlgorithmsExtensions
    /// <code>
    /// byte v = 0b0001;
    /// Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
-   /// 
+   ///
    /// v = 0b0011;
    /// Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
-   /// 
+   ///
    /// v = 0b0101;
    /// Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: True
-   /// 
+   ///
    /// v = 0b0111;
    /// Console.WriteLine($"{v.AreOnlyFirstAndLastBitsSet()}"); // outputs: False
    /// </code>
@@ -114,7 +114,7 @@ public static class ByteAlgorithmsExtensions
    /// <code>
    /// byte v = 2;
    /// Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 2
-   /// 
+   ///
    /// v = 3;
    /// Console.WriteLine($"{v.RoundUpToPowerOfTwo()}"); // outputs: 4
    /// </code>
@@ -143,13 +143,13 @@ public static class ByteAlgorithmsExtensions
    /// <code>
    /// byte v = 1;
    /// Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 0
-   ///       
+   ///
    /// v = 2;
    /// Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
-   /// 
+   ///
    /// v = 3;
    /// Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 1
-   ///       
+   ///
    /// v = 4;
    /// Console.WriteLine($"{v.GetHighestBitSet()}"); // outputs: 2
    /// </code>
@@ -174,13 +174,13 @@ public static class ByteAlgorithmsExtensions
    /// <code>
    /// byte v = 1;
    /// Console.WriteLine($"{v.GetLowestBitSet()}"); // outputs: 0
-   ///       
+   ///
    /// v = 2;
    /// Console.WriteLine($"{v.GetLowestBitSet()}"); // outputs: 1
-   /// 
+   ///
    /// v = 3;
    /// Console.WriteLine($"{v.GetLowestBitSet()}"); // outputs: 0
-   ///       
+   ///
    /// v = 4;
    /// Console.WriteLine($"{v.GetLowestBitSet()}"); // outputs: 2
    /// </code>
@@ -206,10 +206,10 @@ public static class ByteAlgorithmsExtensions
    /// <code>
    /// byte v = 0x7F;
    /// Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 1
-   ///       
+   ///
    /// v = 0x3F;
    /// Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 2
-   /// 
+   ///
    /// v = 1;
    /// Console.WriteLine($"{v.CountLeadingZeros()}"); // outputs: 7
    /// </code>
@@ -254,13 +254,13 @@ public static class ByteAlgorithmsExtensions
    /// <code>
    /// byte v = 1;
    /// Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 0
-   ///       
+   ///
    /// v = 2;
    /// Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 1
-   /// 
+   ///
    /// v = 3;
    /// Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 0
-   ///       
+   ///
    /// v = 4;
    /// Console.WriteLine($"{v.CountTrailingZeros()}"); // outputs: 2
    /// </code>

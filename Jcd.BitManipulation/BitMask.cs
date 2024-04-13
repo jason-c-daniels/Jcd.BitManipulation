@@ -1,5 +1,6 @@
 #region
 
+using System;
 using System.Runtime.CompilerServices;
 using System.Text;
 
@@ -23,8 +24,67 @@ namespace Jcd.BitManipulation;
 /// Provides an integer size independent representation of a bit mask
 /// and helper methods to simplify creating bit masks.
 /// </summary>
-public readonly struct BitMask
+public readonly struct BitMask : IEquatable<BitMask>
 {
+   #region Equality and HashCode
+   /// <summary>
+   /// Compares this instance to another for equality.
+   /// </summary>
+   /// <param name="other"></param>
+   /// <returns>true if equivalent.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public bool Equals(BitMask other)
+   {
+      return bits == other.bits;
+   }
+
+   /// <summary>
+   /// compares this instance agains an object for equality.
+   /// </summary>
+   /// <param name="obj">The target of the comparison.</param>
+   /// <returns>true if equivalent</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public override bool Equals(object obj)
+   {
+      return obj is BitMask other && Equals(other);
+   }
+
+   /// <summary>
+   /// Gets the hashcode for this instance.
+   /// </summary>
+   /// <returns></returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public override int GetHashCode()
+   {
+      return bits.GetHashCode();
+   }
+
+   /// <summary>
+   /// Compares two <see cref="BitMask"/> instances for equality.
+   /// </summary>
+   /// <param name="left">The left side of the comparison.</param>
+   /// <param name="right">The right side of the comparison.</param>
+   /// <returns>True if equivalent.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static bool operator ==(BitMask left, BitMask right)
+   {
+      return left.Equals(right);
+   }
+
+   /// <summary>
+   /// Compares two <see cref="BitMask"/> instances for inequality.
+   /// </summary>
+   /// <param name="left">The left side of the comparison.</param>
+   /// <param name="right">The right side of the comparison.</param>
+   /// <returns>True if not equivalent.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static bool operator !=(BitMask left, BitMask right)
+   {
+      return !left.Equals(right);
+   }
+
+   #endregion
+
    /// <summary>
    /// A bitmask with all bits set in the mask.
    /// </summary>

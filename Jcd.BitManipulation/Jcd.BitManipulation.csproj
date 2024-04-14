@@ -29,7 +29,7 @@
       <Authors>Jason C. Daniels</Authors>
       <Description>A .Net Standard 2.0 library adding syntactic sugar to your bit and byte manipulation experience.</Description>
       <Copyright>2024</Copyright>
-      <PackageProjectUrl>https://github.com/jason-c-daniels/Jcd.BitManipulation</PackageProjectUrl>
+      <PackageProjectUrl>https://jason-c-daniels.github.io/Jcd.BitManipulation/</PackageProjectUrl>
       <PackageLicenseExpression>MIT</PackageLicenseExpression>
       <RepositoryUrl>https://github.com/jason-c-daniels/Jcd.BitManipulation</RepositoryUrl>
       <RepositoryType>GitHub</RepositoryType>
@@ -48,7 +48,7 @@
    </ItemGroup>
 
    <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
-      <DocumentationFile>..\docs\Jcd.BitManipulation.xml</DocumentationFile>
+      <DocumentationFile>..\docs\api\Jcd.BitManipulation.xml</DocumentationFile>
    </PropertyGroup>
 
    <PropertyGroup Condition=" '$(Configuration)' == 'Release - Net462' ">

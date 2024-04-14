@@ -83,10 +83,12 @@ See [Release Notes](https://github.com/jason-c-daniels/Jcd.BitManipulation/tree/
 
 ## Dev Notes
 
-1. v3.0.x-alpha development is now happening in the `main` branch.
+1. v3.1.x-alpha development is now happening in the `main` branch.
    A release branch will be created once its ready to be released.
-2. v2.4.x development will now happen in the `release/2.4` branch.
-   Only backports from main will be accepted there.
+
+2. v3.0.x release bug fixes are now happening in the `release/3.0` branch.
+
+3. v2.4.x development has ceased and the branch will be protected.
 
 ## Build and Status
 

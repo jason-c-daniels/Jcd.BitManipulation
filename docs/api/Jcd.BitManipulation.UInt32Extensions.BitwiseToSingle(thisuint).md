@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[UInt32Extensions](Jcd.BitManipulation.UInt32Extensions 'Jcd.BitManipulation.UInt32Extensions')
 
 ## UInt32Extensions.BitwiseToSingle(this uint) Method
@@ -8,6 +9,7 @@ Converts a [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UI
 ```csharp
 public static float BitwiseToSingle(this uint number);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt32Extensions.BitwiseToSingle(thisuint).number'></a>
@@ -17,5 +19,6 @@ public static float BitwiseToSingle(this uint number);
 The value to convert.
 
 #### Returns
+
 [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')
 the [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single') representation of the bits

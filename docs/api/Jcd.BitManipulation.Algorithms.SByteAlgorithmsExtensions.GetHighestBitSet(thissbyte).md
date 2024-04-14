@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation.Algorithms](Jcd.BitManipulation.Algorithms 'Jcd.BitManipulation.Algorithms').[SByteAlgorithmsExtensions](Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions 'Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions')
 
 ## SByteAlgorithmsExtensions.GetHighestBitSet(this sbyte) Method
@@ -8,6 +9,7 @@ Calculate the index of the highest bit that's been set.
 ```csharp
 public static int GetHighestBitSet(this sbyte number);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.GetHighestBitSet(thissbyte).number'></a>
@@ -17,6 +19,7 @@ public static int GetHighestBitSet(this sbyte number);
 The number to evaluate.
 
 #### Returns
+
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 The index of the highest bit that's been set; or -1 if none were set.
 

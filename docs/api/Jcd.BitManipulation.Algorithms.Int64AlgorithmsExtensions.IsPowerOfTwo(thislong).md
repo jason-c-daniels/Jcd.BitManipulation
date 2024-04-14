@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation.Algorithms](Jcd.BitManipulation.Algorithms 'Jcd.BitManipulation.Algorithms').[Int64AlgorithmsExtensions](Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions 'Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions')
 
 ## Int64AlgorithmsExtensions.IsPowerOfTwo(this long) Method
@@ -8,6 +9,7 @@ Determines if the number is a power of two.
 ```csharp
 public static bool IsPowerOfTwo(this long number);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.IsPowerOfTwo(thislong).number'></a>
@@ -17,6 +19,7 @@ public static bool IsPowerOfTwo(this long number);
 The number to evaluate.
 
 #### Returns
+
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 true if number == 2^n; where n is an integer.
 

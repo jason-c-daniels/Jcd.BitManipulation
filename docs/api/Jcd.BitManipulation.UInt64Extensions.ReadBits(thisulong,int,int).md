@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[UInt64Extensions](Jcd.BitManipulation.UInt64Extensions 'Jcd.BitManipulation.UInt64Extensions')
 
 ## UInt64Extensions.ReadBits(this ulong, int, int) Method
@@ -8,6 +9,7 @@ Reads the bits specified and returns the result shifted to the right by the offs
 ```csharp
 public static ulong ReadBits(this ulong number, int offset, int size);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ReadBits(thisulong,int,int).number'></a>
@@ -29,5 +31,6 @@ The bit offset to start reading from.
 The total number of bits to extract.
 
 #### Returns
+
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
-The value stored in the range of bits specified, right shifted by the offset..
+The value stored in the range of bits specified, right shifted by the offset.

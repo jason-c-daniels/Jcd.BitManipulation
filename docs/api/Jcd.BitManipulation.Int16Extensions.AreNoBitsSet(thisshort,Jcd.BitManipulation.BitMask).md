@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[Int16Extensions](Jcd.BitManipulation.Int16Extensions 'Jcd.BitManipulation.Int16Extensions')
 
 ## Int16Extensions.AreNoBitsSet(this short, BitMask) Method
@@ -8,6 +9,7 @@ Tests if none of the bits from the bitmask are set on a [System.Int16](https://d
 ```csharp
 public static bool AreNoBitsSet(this short number, Jcd.BitManipulation.BitMask bitmask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int16Extensions.AreNoBitsSet(thisshort,Jcd.BitManipulation.BitMask).number'></a>
@@ -23,8 +25,10 @@ The data to inspect.
 The bits to test.
 
 #### Returns
+
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 True if all of the bits from the bitmask were set.
 
 ### Remarks
+
 NB: Only the lowest 16 bits of the bitmask will be used.

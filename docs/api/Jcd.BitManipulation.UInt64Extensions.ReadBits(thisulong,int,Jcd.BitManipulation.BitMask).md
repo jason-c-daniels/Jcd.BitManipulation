@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[UInt64Extensions](Jcd.BitManipulation.UInt64Extensions 'Jcd.BitManipulation.UInt64Extensions')
 
 ## UInt64Extensions.ReadBits(this ulong, int, BitMask) Method
@@ -8,6 +9,7 @@ Extract a subset of bits specified by a bitmask and right align the bits by the 
 ```csharp
 public static ulong ReadBits(this ulong number, int shift, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ReadBits(thisulong,int,Jcd.BitManipulation.BitMask).number'></a>
@@ -29,5 +31,6 @@ The bit offset to start reading from.
 The bitmask specifying which bits to read.
 
 #### Returns
+
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 The extracted bits right shifted by the specified amount.

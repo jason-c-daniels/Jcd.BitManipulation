@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[ByteExtensions](Jcd.BitManipulation.ByteExtensions 'Jcd.BitManipulation.ByteExtensions')
 
 ## ByteExtensions.ReadBits(this byte, int, BitMask) Method
@@ -8,6 +9,7 @@ Reads the bits specified by a mask and right shifts it .
 ```csharp
 public static byte ReadBits(this byte number, int shift, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteExtensions.ReadBits(thisbyte,int,Jcd.BitManipulation.BitMask).number'></a>
@@ -29,5 +31,6 @@ The number of bits to right shift the result of applying the [BitMask](Jcd.BitMa
 The bitmask specifying which bits to read.
 
 #### Returns
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 The extracted bits right shifted by the specified amount.

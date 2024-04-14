@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation.Algorithms](Jcd.BitManipulation.Algorithms 'Jcd.BitManipulation.Algorithms').[SByteAlgorithmsExtensions](Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions 'Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions')
 
 ## SByteAlgorithmsExtensions.RotateRight(this sbyte, int) Method
@@ -8,6 +9,7 @@ Performs a bitwise right rotation on a number.
 ```csharp
 public static sbyte RotateRight(this sbyte number, int count);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.RotateRight(thissbyte,int).number'></a>
@@ -23,10 +25,12 @@ The number to rotate
 the number of bits to rotate
 
 #### Returns
+
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 The rotated value.
 
 ### Example
+
 Examples
 
 ```csharp

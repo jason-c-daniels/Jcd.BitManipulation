@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[Int16Extensions](Jcd.BitManipulation.Int16Extensions 'Jcd.BitManipulation.Int16Extensions')
 
 ## Int16Extensions.ReadBits(this short, int, BitMask) Method
@@ -8,6 +9,7 @@ Extract a subset of bits specified by a bitmask and right align the bits by the 
 ```csharp
 public static short ReadBits(this short number, int shift, Jcd.BitManipulation.BitMask mask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int16Extensions.ReadBits(thisshort,int,Jcd.BitManipulation.BitMask).number'></a>
@@ -29,5 +31,6 @@ The number of bits to right shift the result of applying the [BitMask](Jcd.BitMa
 The bitmask specifying which bits to read.
 
 #### Returns
+
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 The extracted bits right shifted by the specified amount.

@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation.Algorithms](Jcd.BitManipulation.Algorithms 'Jcd.BitManipulation.Algorithms').[Int32AlgorithmsExtensions](Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions 'Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions')
 
 ## Int32AlgorithmsExtensions.IsOdd(this int) Method
@@ -8,6 +9,7 @@ Determines if the number is odd.
 ```csharp
 public static bool IsOdd(this int number);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.IsOdd(thisint).number'></a>
@@ -17,5 +19,6 @@ public static bool IsOdd(this int number);
 The number to evaluate.
 
 #### Returns
+
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 `true` if the number is odd (e.g. 1,3...etc.)

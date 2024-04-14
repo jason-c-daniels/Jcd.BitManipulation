@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[ByteArrayExtensions](Jcd.BitManipulation.ByteArrayExtensions 'Jcd.BitManipulation.ByteArrayExtensions')
 
 ## ByteArrayExtensions.ToSByte(this byte[], Endian) Method
@@ -8,6 +9,7 @@ Converts an array of bytes into a [System.SByte](https://docs.microsoft.com/en-u
 ```csharp
 public static sbyte ToSByte(this byte[] array, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteArrayExtensions.ToSByte(thisbyte[],Jcd.BitManipulation.Endian).array'></a>
@@ -23,5 +25,6 @@ the bytes to convert.
 The endian for the bytes.
 
 #### Returns
+
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 The converted sbyte

@@ -27,6 +27,7 @@ namespace Jcd.BitManipulation;
 public readonly struct BitMask : IEquatable<BitMask>
 {
    #region Equality and HashCode
+
    /// <summary>
    /// Compares this instance to another for equality.
    /// </summary>
@@ -60,7 +61,7 @@ public readonly struct BitMask : IEquatable<BitMask>
    }
 
    /// <summary>
-   /// Compares two <see cref="BitMask"/> instances for equality.
+   /// Compares two <see cref="BitMask" /> instances for equality.
    /// </summary>
    /// <param name="left">The left side of the comparison.</param>
    /// <param name="right">The right side of the comparison.</param>
@@ -72,7 +73,7 @@ public readonly struct BitMask : IEquatable<BitMask>
    }
 
    /// <summary>
-   /// Compares two <see cref="BitMask"/> instances for inequality.
+   /// Compares two <see cref="BitMask" /> instances for inequality.
    /// </summary>
    /// <param name="left">The left side of the comparison.</param>
    /// <param name="right">The right side of the comparison.</param>
@@ -81,6 +82,81 @@ public readonly struct BitMask : IEquatable<BitMask>
    public static bool operator !=(BitMask left, BitMask right)
    {
       return !left.Equals(right);
+   }
+
+   #endregion
+
+   #region Bit Manipulation Operations
+
+   /// <summary>
+   /// Bitwise or
+   /// </summary>
+   /// <param name="left">left side</param>
+   /// <param name="right">right side</param>
+   /// <returns>A bitmask representing the bitwise or result.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static BitMask operator |(BitMask left, BitMask right)
+   {
+      return left.bits | right.bits;
+   }
+
+   /// <summary>
+   /// Bitwise AND
+   /// </summary>
+   /// <param name="left">Left side</param>
+   /// <param name="right">Right side</param>
+   /// <returns>A bitmask representing the bitwise or result.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static BitMask operator &(BitMask left, BitMask right)
+   {
+      return left.bits & right.bits;
+   }
+
+   /// <summary>
+   /// Bitwise XOR
+   /// </summary>
+   /// <param name="left">Left side</param>
+   /// <param name="right">Right side</param>
+   /// <returns>A bitmask representing the bitwise or result.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static BitMask operator ^(BitMask left, BitMask right)
+   {
+      return left.bits ^ right.bits;
+   }
+
+   /// <summary>
+   /// Bitwise left shift
+   /// </summary>
+   /// <param name="value">Left side</param>
+   /// <param name="shift">Right side</param>
+   /// <returns>A bitmask representing the bitwise or result.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static BitMask operator <<(BitMask value, int shift)
+   {
+      return value.bits << shift;
+   }
+
+   /// <summary>
+   /// Bitwise right shift
+   /// </summary>
+   /// <param name="value">Left side</param>
+   /// <param name="shift">Right side</param>
+   /// <returns>A bitmask representing the bitwise or result.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static BitMask operator >> (BitMask value, int shift)
+   {
+      return value.bits >> shift;
+   }
+
+   /// <summary>
+   /// Bitwise complement
+   /// </summary>
+   /// <param name="value">Left side</param>
+   /// <returns>A bitmask representing the bitwise or result.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static BitMask operator ~(BitMask value)
+   {
+      return ~value.bits;
    }
 
    #endregion

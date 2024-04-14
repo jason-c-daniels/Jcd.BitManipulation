@@ -4,7 +4,7 @@
 
 ## ByteArrayExtensions.ToSingle(this byte[], Endian, ByteAlignment) Method
 
-Converts an array of bytes into a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single'), discarding any excess data.
+Converts an array of bytes into a[System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single'), discarding any excess data.
 
 ```csharp
 public static float ToSingle(this byte[] array, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little, Jcd.BitManipulation.ByteAlignment align=Jcd.BitManipulation.ByteAlignment.InferredFromEndian);

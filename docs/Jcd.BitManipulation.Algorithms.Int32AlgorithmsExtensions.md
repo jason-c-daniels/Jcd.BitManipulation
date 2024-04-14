@@ -5,7 +5,9 @@
 ## Int32AlgorithmsExtensions Class
 
 Provides bit counting and other niche bit manipulation facilities
-for [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32') values.
+for
+[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+values.
 
 ```csharp
 public static class Int32AlgorithmsExtensions

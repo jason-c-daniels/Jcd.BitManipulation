@@ -4,7 +4,9 @@
 
 ## BigEndianByteIndexer.implicit operator BigEndianByteIndexer(sbyte) Operator
 
-Implicitly converts a [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte') to a [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer').
+Implicitly converts a
+[System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
+to a[BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer').
 
 ```csharp
 public static Jcd.BitManipulation.BigEndianByteIndexer implicit operator BigEndianByteIndexer(sbyte data);
@@ -21,7 +23,9 @@ The initial value for the bytes of data.
 #### Returns
 
 [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer')
-The [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') instance.
+The
+[BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer')
+instance.
 
 ### Example
 

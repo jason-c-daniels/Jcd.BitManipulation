@@ -149,7 +149,7 @@ public static class ByteExtensions
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static byte ReadBits(this byte number, BitMask mask)
    {
-      return (byte) (number & mask);
+      return number & mask;
    }
 
    /// <summary>

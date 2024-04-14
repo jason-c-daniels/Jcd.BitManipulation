@@ -4,7 +4,11 @@
 
 ## Int32Extensions.ToBooleanArray(this int) Method
 
-Converts a [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32') into an array of values with the lease significant bit at index 0.
+Converts a
+[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+into an array of
+
+values with the lease significant bit at index 0.
 
 ```csharp
 public static bool[] ToBooleanArray(this int number);
@@ -16,7 +20,9 @@ public static bool[] ToBooleanArray(this int number);
 
 `number` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32') to convert.
+The
+[System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
+to convert.
 
 #### Returns
 

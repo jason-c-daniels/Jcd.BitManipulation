@@ -4,7 +4,7 @@
 
 ## LittleEndianByteIndexer.explicit operator LittleEndianByteIndexer(ReadOnlySpan<byte>) Operator
 
-Explicitly converts an array of bytes to a [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer').
+Explicitly converts an array of bytes to a[LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer').
 
 ```csharp
 public static Jcd.BitManipulation.LittleEndianByteIndexer explicit operator LittleEndianByteIndexer(System.ReadOnlySpan<byte> data);
@@ -21,4 +21,6 @@ The initial value for the bytes of data.
 #### Returns
 
 [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
-A new [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') instance.
+A new
+[LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
+instance.

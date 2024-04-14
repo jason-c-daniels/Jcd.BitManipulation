@@ -4,7 +4,9 @@
 
 ## BitMask.FromSingleBit(int) Method
 
-Create a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') with a single bit set.
+Create a
+[BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+with a single bit set.
 
 ```csharp
 public static Jcd.BitManipulation.BitMask FromSingleBit(int offset);
@@ -21,4 +23,6 @@ the bit to set
 #### Returns
 
 [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
-a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') with the specified bit set.
+a
+[BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+with the specified bit set.

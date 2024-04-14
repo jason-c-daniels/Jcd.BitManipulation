@@ -1,10 +1,10 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
+### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer 'Jcd.BitManipulation.LittleEndianByteIndexer')
 
 ## LittleEndianByteIndexer.explicit operator LittleEndianByteIndexer(byte[]) Operator
 
-Explicitly converts an array of bytes to a [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer').
+Explicitly converts an array of bytes to a [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer 'Jcd.BitManipulation.LittleEndianByteIndexer').
 
 ```csharp
 public static Jcd.BitManipulation.LittleEndianByteIndexer explicit operator LittleEndianByteIndexer(byte[] data);
@@ -20,5 +20,5 @@ The initial value for the bytes of data.
 
 #### Returns
 
-[LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
-A new [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') instance.
+[LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer 'Jcd.BitManipulation.LittleEndianByteIndexer')
+A new [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer 'Jcd.BitManipulation.LittleEndianByteIndexer') instance.

@@ -1,6 +1,6 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask')
 
 ## BitMask.operator >>(BitMask, int) Operator
 
@@ -14,7 +14,7 @@ public static Jcd.BitManipulation.BitMask operator >>(Jcd.BitManipulation.BitMas
 
 <a name='Jcd.BitManipulation.BitMask.op_RightShift(Jcd.BitManipulation.BitMask,int).value'></a>
 
-`value` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+`value` [BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask')
 
 Left side
 
@@ -26,5 +26,5 @@ Right side
 
 #### Returns
 
-[BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+[BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask')
 A bitmask representing the bitwise or result.

@@ -1,6 +1,6 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ByteExtensions](Jcd.BitManipulation.ByteExtensions.md 'Jcd.BitManipulation.ByteExtensions')
+### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[ByteExtensions](Jcd.BitManipulation.ByteExtensions 'Jcd.BitManipulation.ByteExtensions')
 
 ## ByteExtensions.ReadBits(this byte, BitMask) Method
 
@@ -20,7 +20,7 @@ The source of the bits to read.
 
 <a name='Jcd.BitManipulation.ByteExtensions.ReadBits(thisbyte,Jcd.BitManipulation.BitMask).mask'></a>
 
-`mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+`mask` [BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask')
 
 The bitmask specifying which bits to read.
 

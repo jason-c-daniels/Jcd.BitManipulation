@@ -1,10 +1,10 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask')
 
 ## BitMask.ToString() Method
 
-Formats the [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') as a "0b" prefixed string of zeroes and ones.
+Formats the [BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask') as a "0b" prefixed string of zeroes and ones.
 
 ```csharp
 public override string ToString();

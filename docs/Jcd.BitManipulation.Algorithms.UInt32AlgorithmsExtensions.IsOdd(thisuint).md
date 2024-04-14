@@ -1,6 +1,6 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation.Algorithms](Jcd.BitManipulation.Algorithms.md 'Jcd.BitManipulation.Algorithms').[UInt32AlgorithmsExtensions](Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.md 'Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions')
+### [Jcd.BitManipulation.Algorithms](Jcd.BitManipulation.Algorithms 'Jcd.BitManipulation.Algorithms').[UInt32AlgorithmsExtensions](Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions 'Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions')
 
 ## UInt32AlgorithmsExtensions.IsOdd(this uint) Method
 

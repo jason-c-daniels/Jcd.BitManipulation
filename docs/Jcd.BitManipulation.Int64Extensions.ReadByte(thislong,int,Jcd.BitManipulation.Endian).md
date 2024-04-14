@@ -1,6 +1,6 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[Int64Extensions](Jcd.BitManipulation.Int64Extensions.md 'Jcd.BitManipulation.Int64Extensions')
+### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[Int64Extensions](Jcd.BitManipulation.Int64Extensions 'Jcd.BitManipulation.Int64Extensions')
 
 ## Int64Extensions.ReadByte(this long, int, Endian) Method
 
@@ -26,7 +26,7 @@ The offset of where to store the byte.
 
 <a name='Jcd.BitManipulation.Int64Extensions.ReadByte(thislong,int,Jcd.BitManipulation.Endian).endian'></a>
 
-`endian` [Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian')
+`endian` [Endian](Jcd.BitManipulation.Endian 'Jcd.BitManipulation.Endian')
 
 The endianness of the byte indexing within the value.
 

@@ -1,6 +1,6 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ByteExtensions](Jcd.BitManipulation.ByteExtensions.md 'Jcd.BitManipulation.ByteExtensions')
+### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[ByteExtensions](Jcd.BitManipulation.ByteExtensions 'Jcd.BitManipulation.ByteExtensions')
 
 ## ByteExtensions.AreNoBitsSet(this byte, BitMask) Method
 
@@ -20,7 +20,7 @@ The data to inspect.
 
 <a name='Jcd.BitManipulation.ByteExtensions.AreNoBitsSet(thisbyte,Jcd.BitManipulation.BitMask).bitmask'></a>
 
-`bitmask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+`bitmask` [BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask')
 
 The bits to test.
 

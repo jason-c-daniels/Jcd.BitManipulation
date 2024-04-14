@@ -1,6 +1,6 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[Int64Extensions](Jcd.BitManipulation.Int64Extensions.md 'Jcd.BitManipulation.Int64Extensions')
+### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[Int64Extensions](Jcd.BitManipulation.Int64Extensions 'Jcd.BitManipulation.Int64Extensions')
 
 ## Int64Extensions.ReadBits(this long, int, BitMask) Method
 
@@ -26,7 +26,7 @@ The bit offset to start reading from.
 
 <a name='Jcd.BitManipulation.Int64Extensions.ReadBits(thislong,int,Jcd.BitManipulation.BitMask).mask'></a>
 
-`mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+`mask` [BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask')
 
 The bitmask specifying which bits to read.
 

@@ -1,6 +1,6 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[UInt64Extensions](Jcd.BitManipulation.UInt64Extensions.md 'Jcd.BitManipulation.UInt64Extensions')
+### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[UInt64Extensions](Jcd.BitManipulation.UInt64Extensions 'Jcd.BitManipulation.UInt64Extensions')
 
 ## UInt64Extensions.ReadBits(this ulong, BitMask) Method
 
@@ -20,7 +20,7 @@ The source of the bits to read.
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ReadBits(thisulong,Jcd.BitManipulation.BitMask).mask'></a>
 
-`mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+`mask` [BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask')
 
 The bitmask specifying which bits to read.
 

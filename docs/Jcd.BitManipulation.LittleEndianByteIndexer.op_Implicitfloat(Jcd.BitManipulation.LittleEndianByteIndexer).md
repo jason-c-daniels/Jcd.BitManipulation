@@ -1,10 +1,10 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
+### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer 'Jcd.BitManipulation.LittleEndianByteIndexer')
 
 ## LittleEndianByteIndexer.implicit operator float(LittleEndianByteIndexer) Operator
 
-Implicitly converts the [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') to a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single').
+Implicitly converts the [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer 'Jcd.BitManipulation.LittleEndianByteIndexer') to a [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single').
 
 ```csharp
 public static float implicit operator float(Jcd.BitManipulation.LittleEndianByteIndexer indexer);
@@ -14,7 +14,7 @@ public static float implicit operator float(Jcd.BitManipulation.LittleEndianByte
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexer.op_Implicitfloat(Jcd.BitManipulation.LittleEndianByteIndexer).indexer'></a>
 
-`indexer` [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
+`indexer` [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer 'Jcd.BitManipulation.LittleEndianByteIndexer')
 
 The indexer to convert.
 

@@ -1,10 +1,10 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask')
 
 ## BitMask.implicit operator BitMask(byte) Operator
 
-Automatically convert to [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') from a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
+Automatically convert to [BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask') from a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
 ```csharp
 public static Jcd.BitManipulation.BitMask implicit operator BitMask(byte bits);
@@ -16,9 +16,9 @@ public static Jcd.BitManipulation.BitMask implicit operator BitMask(byte bits);
 
 `bits` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
-The value to convert to a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask').
+The value to convert to a [BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask').
 
 #### Returns
 
-[BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
-The [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') constructed from the provided bits
+[BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask')
+The [BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask') constructed from the provided bits

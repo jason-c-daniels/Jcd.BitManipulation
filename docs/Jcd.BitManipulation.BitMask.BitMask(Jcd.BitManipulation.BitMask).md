@@ -1,10 +1,10 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask')
 
 ## BitMask(BitMask) Constructor
 
-Copies a existing [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+Copies a existing [BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask')
 
 ```csharp
 public BitMask(Jcd.BitManipulation.BitMask mask);
@@ -14,6 +14,6 @@ public BitMask(Jcd.BitManipulation.BitMask mask);
 
 <a name='Jcd.BitManipulation.BitMask.BitMask(Jcd.BitManipulation.BitMask).mask'></a>
 
-`mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+`mask` [BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask')
 
-The [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') to copy
+The [BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask') to copy

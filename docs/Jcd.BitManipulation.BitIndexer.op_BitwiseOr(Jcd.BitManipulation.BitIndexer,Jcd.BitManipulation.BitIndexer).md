@@ -1,6 +1,6 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')
+### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[BitIndexer](Jcd.BitManipulation.BitIndexer 'Jcd.BitManipulation.BitIndexer')
 
 ## BitIndexer.operator |(BitIndexer, BitIndexer) Operator
 
@@ -14,17 +14,17 @@ public static Jcd.BitManipulation.BitIndexer operator |(Jcd.BitManipulation.BitI
 
 <a name='Jcd.BitManipulation.BitIndexer.op_BitwiseOr(Jcd.BitManipulation.BitIndexer,Jcd.BitManipulation.BitIndexer).left'></a>
 
-`left` [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')
+`left` [BitIndexer](Jcd.BitManipulation.BitIndexer 'Jcd.BitManipulation.BitIndexer')
 
 left side
 
 <a name='Jcd.BitManipulation.BitIndexer.op_BitwiseOr(Jcd.BitManipulation.BitIndexer,Jcd.BitManipulation.BitIndexer).right'></a>
 
-`right` [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')
+`right` [BitIndexer](Jcd.BitManipulation.BitIndexer 'Jcd.BitManipulation.BitIndexer')
 
 right side
 
 #### Returns
 
-[BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')
+[BitIndexer](Jcd.BitManipulation.BitIndexer 'Jcd.BitManipulation.BitIndexer')
 A bitmask representing the bitwise or result.

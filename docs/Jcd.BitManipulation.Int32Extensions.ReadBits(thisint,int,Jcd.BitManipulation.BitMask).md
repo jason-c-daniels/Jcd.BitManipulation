@@ -1,6 +1,6 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[Int32Extensions](Jcd.BitManipulation.Int32Extensions.md 'Jcd.BitManipulation.Int32Extensions')
+### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[Int32Extensions](Jcd.BitManipulation.Int32Extensions 'Jcd.BitManipulation.Int32Extensions')
 
 ## Int32Extensions.ReadBits(this int, int, BitMask) Method
 
@@ -22,11 +22,11 @@ The source of the bits to read.
 
 `shift` [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
-The number of bits to right shift the result of applying the [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask').
+The number of bits to right shift the result of applying the [BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask').
 
 <a name='Jcd.BitManipulation.Int32Extensions.ReadBits(thisint,int,Jcd.BitManipulation.BitMask).mask'></a>
 
-`mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+`mask` [BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask')
 
 The bitmask specifying which bits to read.
 

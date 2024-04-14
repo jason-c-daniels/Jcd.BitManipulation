@@ -1,10 +1,10 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer')
+### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer 'Jcd.BitManipulation.BigEndianByteIndexer')
 
 ## BigEndianByteIndexer.implicit operator long(BigEndianByteIndexer) Operator
 
-Implicitly converts the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') to a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64').
+Implicitly converts the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer 'Jcd.BitManipulation.BigEndianByteIndexer') to a [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64').
 
 ```csharp
 public static long implicit operator long(Jcd.BitManipulation.BigEndianByteIndexer indexer);
@@ -14,7 +14,7 @@ public static long implicit operator long(Jcd.BitManipulation.BigEndianByteIndex
 
 <a name='Jcd.BitManipulation.BigEndianByteIndexer.op_Implicitlong(Jcd.BitManipulation.BigEndianByteIndexer).indexer'></a>
 
-`indexer` [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer')
+`indexer` [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer 'Jcd.BitManipulation.BigEndianByteIndexer')
 
 The indexer to convert.
 

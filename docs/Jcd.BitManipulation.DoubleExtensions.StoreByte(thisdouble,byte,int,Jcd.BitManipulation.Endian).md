@@ -1,6 +1,6 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[DoubleExtensions](Jcd.BitManipulation.DoubleExtensions.md 'Jcd.BitManipulation.DoubleExtensions')
+### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[DoubleExtensions](Jcd.BitManipulation.DoubleExtensions 'Jcd.BitManipulation.DoubleExtensions')
 
 ## DoubleExtensions.StoreByte(this double, byte, int, Endian) Method
 
@@ -32,7 +32,7 @@ The offset of where to store the byte.
 
 <a name='Jcd.BitManipulation.DoubleExtensions.StoreByte(thisdouble,byte,int,Jcd.BitManipulation.Endian).endian'></a>
 
-`endian` [Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian')
+`endian` [Endian](Jcd.BitManipulation.Endian 'Jcd.BitManipulation.Endian')
 
 The endianness of the indexing within the value.
 

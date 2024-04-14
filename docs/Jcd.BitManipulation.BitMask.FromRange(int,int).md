@@ -1,10 +1,10 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask')
 
 ## BitMask.FromRange(int, int) Method
 
-Create a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') with a range of bits set.
+Create a [BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask') with a range of bits set.
 
 ```csharp
 public static Jcd.BitManipulation.BitMask FromRange(int offset=0, int size=64);
@@ -26,5 +26,5 @@ the number of bits to set to 1
 
 #### Returns
 
-[BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+[BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask')
 the shifted mask

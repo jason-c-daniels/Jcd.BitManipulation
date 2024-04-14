@@ -1,6 +1,6 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ReadOnlySpanOfByteExtensions](Jcd.BitManipulation.ReadOnlySpanOfByteExtensions.md 'Jcd.BitManipulation.ReadOnlySpanOfByteExtensions')
+### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[ReadOnlySpanOfByteExtensions](Jcd.BitManipulation.ReadOnlySpanOfByteExtensions 'Jcd.BitManipulation.ReadOnlySpanOfByteExtensions')
 
 ## ReadOnlySpanOfByteExtensions.ToByte(this ReadOnlySpan<byte>, Endian) Method
 
@@ -20,7 +20,7 @@ the bytes to convert.
 
 <a name='Jcd.BitManipulation.ReadOnlySpanOfByteExtensions.ToByte(thisSystem.ReadOnlySpan_byte_,Jcd.BitManipulation.Endian).endian'></a>
 
-`endian` [Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian')
+`endian` [Endian](Jcd.BitManipulation.Endian 'Jcd.BitManipulation.Endian')
 
 The endian for the bytes.
 

@@ -1,6 +1,6 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[ByteArrayExtensions](Jcd.BitManipulation.ByteArrayExtensions.md 'Jcd.BitManipulation.ByteArrayExtensions')
+### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[ByteArrayExtensions](Jcd.BitManipulation.ByteArrayExtensions 'Jcd.BitManipulation.ByteArrayExtensions')
 
 ## ByteArrayExtensions.ToSByte(this byte[], Endian) Method
 
@@ -20,7 +20,7 @@ the bytes to convert.
 
 <a name='Jcd.BitManipulation.ByteArrayExtensions.ToSByte(thisbyte[],Jcd.BitManipulation.Endian).endian'></a>
 
-`endian` [Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian')
+`endian` [Endian](Jcd.BitManipulation.Endian 'Jcd.BitManipulation.Endian')
 
 The endian for the bytes.
 

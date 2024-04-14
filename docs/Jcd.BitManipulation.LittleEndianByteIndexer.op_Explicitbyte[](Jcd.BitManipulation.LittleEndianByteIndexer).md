@@ -1,10 +1,10 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
+### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer 'Jcd.BitManipulation.LittleEndianByteIndexer')
 
 ## LittleEndianByteIndexer.explicit operator byte[](LittleEndianByteIndexer) Operator
 
-Explicitly converts the [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer') to an array of bytes.
+Explicitly converts the [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer 'Jcd.BitManipulation.LittleEndianByteIndexer') to an array of bytes.
 
 ```csharp
 public static byte[] explicit operator byte[](Jcd.BitManipulation.LittleEndianByteIndexer indexer);
@@ -14,7 +14,7 @@ public static byte[] explicit operator byte[](Jcd.BitManipulation.LittleEndianBy
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexer.op_Explicitbyte[](Jcd.BitManipulation.LittleEndianByteIndexer).indexer'></a>
 
-`indexer` [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer.md 'Jcd.BitManipulation.LittleEndianByteIndexer')
+`indexer` [LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer 'Jcd.BitManipulation.LittleEndianByteIndexer')
 
 The indexer to convert.
 

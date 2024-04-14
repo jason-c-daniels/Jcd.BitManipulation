@@ -1,10 +1,10 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer')
+### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer 'Jcd.BitManipulation.BigEndianByteIndexer')
 
 ## BigEndianByteIndexer.implicit operator ushort(BigEndianByteIndexer) Operator
 
-Implicitly converts the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') to a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16').
+Implicitly converts the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer 'Jcd.BitManipulation.BigEndianByteIndexer') to a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16').
 
 ```csharp
 public static ushort implicit operator ushort(Jcd.BitManipulation.BigEndianByteIndexer indexer);
@@ -14,7 +14,7 @@ public static ushort implicit operator ushort(Jcd.BitManipulation.BigEndianByteI
 
 <a name='Jcd.BitManipulation.BigEndianByteIndexer.op_Implicitushort(Jcd.BitManipulation.BigEndianByteIndexer).indexer'></a>
 
-`indexer` [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer')
+`indexer` [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer 'Jcd.BitManipulation.BigEndianByteIndexer')
 
 The indexer to convert.
 

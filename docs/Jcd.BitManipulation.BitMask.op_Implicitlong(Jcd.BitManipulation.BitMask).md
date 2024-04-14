@@ -1,10 +1,10 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask')
 
 ## BitMask.implicit operator long(BitMask) Operator
 
-Automatically convert to [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64') from a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+Automatically convert to [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64') from a [BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask')
 
 ```csharp
 public static long implicit operator long(Jcd.BitManipulation.BitMask mask);
@@ -14,9 +14,9 @@ public static long implicit operator long(Jcd.BitManipulation.BitMask mask);
 
 <a name='Jcd.BitManipulation.BitMask.op_Implicitlong(Jcd.BitManipulation.BitMask).mask'></a>
 
-`mask` [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+`mask` [BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask')
 
-the [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') to convert from.
+the [BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask') to convert from.
 
 #### Returns
 

@@ -5,9 +5,7 @@
 ## SByteAlgorithmsExtensions Class
 
 Provides bit counting and other niche bit manipulation facilities
-for
-[System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
-values.
+for [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte') values.
 
 ```csharp
 public static class SByteAlgorithmsExtensions

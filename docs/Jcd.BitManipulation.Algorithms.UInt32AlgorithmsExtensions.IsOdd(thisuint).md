@@ -21,5 +21,4 @@ The number to evaluate.
 #### Returns
 
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
-`true`
-if the number is odd (e.g. 1,3...etc.)
+`true` if the number is odd (e.g. 1,3...etc.)

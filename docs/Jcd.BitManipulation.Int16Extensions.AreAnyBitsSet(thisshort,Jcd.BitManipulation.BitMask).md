@@ -4,7 +4,7 @@
 
 ## Int16Extensions.AreAnyBitsSet(this short, BitMask) Method
 
-Tests if any bits from the bitmask are set on a[System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16').
+Tests if any bits from the bitmask are set on a [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16').
 
 ```csharp
 public static bool AreAnyBitsSet(this short number, Jcd.BitManipulation.BitMask bitmask);

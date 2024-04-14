@@ -4,11 +4,7 @@
 
 ## BigEndianByteIndexer.explicit operator ReadOnlySpan<byte>(BigEndianByteIndexer) Operator
 
-Explicitly converts the
-[BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer')
-to a
-[System.ReadOnlySpan&lt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.ReadOnlySpan-1 'System.ReadOnlySpan`1')
-of bytes.
+Explicitly converts the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') to a [System.ReadOnlySpan&lt;&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.ReadOnlySpan-1 'System.ReadOnlySpan`1') of bytes.
 
 ```csharp
 public static System.ReadOnlySpan<byte> explicit operator ReadOnlySpan<byte>(Jcd.BitManipulation.BigEndianByteIndexer indexer);

@@ -5,9 +5,7 @@
 ## Int64AlgorithmsExtensions Class
 
 Provides bit counting and other niche bit manipulation facilities
-for
-[System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64')
-values.
+for [System.Int64](https://docs.microsoft.com/en-us/dotnet/api/System.Int64 'System.Int64') values.
 
 ```csharp
 public static class Int64AlgorithmsExtensions

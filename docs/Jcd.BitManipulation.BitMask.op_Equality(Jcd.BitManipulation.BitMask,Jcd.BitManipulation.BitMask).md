@@ -4,9 +4,7 @@
 
 ## BitMask.operator ==(BitMask, BitMask) Operator
 
-Compares two
-[BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
-instances for equality.
+Compares two [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') instances for equality.
 
 ```csharp
 public static bool operator ==(Jcd.BitManipulation.BitMask left, Jcd.BitManipulation.BitMask right);

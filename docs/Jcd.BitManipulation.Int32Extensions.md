@@ -4,8 +4,7 @@
 
 ## Int32Extensions Class
 
-Provides easy to read methods for bit manipulation operations on a
-[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
+Provides easy to read methods for bit manipulation operations on a [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
 ```csharp
 public static class Int32Extensions
@@ -41,12 +40,12 @@ secondByte = secondByte.StoreBits(0b1011, 4, 4); // secondByte is now 0b10111111
 // chaining operations, the same steps and end results
 data.ClearBits();
 data = data.SetBits(0, 32) // value is now 0b11111111111111111111111111111111
-.SetBits() // this is the equivalent as above
-.ClearBits(4, 8) // value is now 01111111111111111b1111000000001111
-.ToggleBits(); // value is now 0b00000000000000000000111111110000
+           .SetBits() // this is the equivalent as above
+           .ClearBits(4, 8) // value is now 01111111111111111b1111000000001111
+           .ToggleBits(); // value is now 0b00000000000000000000111111110000
 
 secondByte = ((byte) data.ReadBits(8, 8)) // extract the upper byte (0b00001111)
-.StoreBits(0b1011, 4, 4); // store the value in the upper 4 bits, now upperByte is now 0b10111111
+                         .StoreBits(0b1011, 4, 4); // store the value in the upper 4 bits, now upperByte is now 0b10111111
 
 // finalData is 0b00000000000000000000111111110000
 
@@ -54,14 +53,14 @@ var beByte0 = finalData.ReadByte(0, Endian.Big); // 00001111
 var leByte0 = finalData.ReadByte(0, Endian.Little); // 11110000
 
 var mutatedData = finalData.StoreByte(0b10111111, 0, Endian.Big)
-.StoreByte(0b01010101, 0, Endian.Little) // lower byte is now 0b01010101
+                           .StoreByte(0b01010101, 0, Endian.Little) // lower byte is now 0b01010101
 ;
 // mutatedData is now 0b10111111000000000000111101010101
 
 var beBa = mutatedData.ToByteArray(Endian.Big); // beBa=[0b10111111, 0b00000000, 0b00001111, 0b01010101]
 
 var leBa = mutatedData.ToByteArray(Endian.Little); // leBa=[0b01010101, 0b00001111,
-// 0b00000000, 0b10111111]
+                                                   //       0b00000000, 0b10111111]
 
 var leBaToInt32Le = leBa.ToInt32(Endian.Little); // leBaToInt32Le = 0b10111111000000000000111101010101
 
@@ -70,9 +69,9 @@ var leBaToInt32Be = leBa.ToInt32(Endian.Big); // leBaToInt32Be = 0b0101010100001
 
 | Methods                                                                                                                                                                                                                                                                                                                 |                                                                                                                                                                                                                         |
 |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [AreAllBitsSet(this int, BitMask)](Jcd.BitManipulation.Int32Extensions.AreAllBitsSet(thisint,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.Int32Extensions.AreAllBitsSet(this int, Jcd.BitManipulation.BitMask)')                                                                                                | Tests if all of the bits from the bitmask are set on a[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32').                                                                          |
-| [AreAnyBitsSet(this int, BitMask)](Jcd.BitManipulation.Int32Extensions.AreAnyBitsSet(thisint,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.Int32Extensions.AreAnyBitsSet(this int, Jcd.BitManipulation.BitMask)')                                                                                                | Tests if any bits from the bitmask are set on a[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32').                                                                                 |
-| [AreNoBitsSet(this int, BitMask)](Jcd.BitManipulation.Int32Extensions.AreNoBitsSet(thisint,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.Int32Extensions.AreNoBitsSet(this int, Jcd.BitManipulation.BitMask)')                                                                                                   | Tests if none of the bits from the bitmask are set on a[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32').                                                                         |
+| [AreAllBitsSet(this int, BitMask)](Jcd.BitManipulation.Int32Extensions.AreAllBitsSet(thisint,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.Int32Extensions.AreAllBitsSet(this int, Jcd.BitManipulation.BitMask)')                                                                                                | Tests if all of the bits from the bitmask are set on a [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32').                                                                         |
+| [AreAnyBitsSet(this int, BitMask)](Jcd.BitManipulation.Int32Extensions.AreAnyBitsSet(thisint,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.Int32Extensions.AreAnyBitsSet(this int, Jcd.BitManipulation.BitMask)')                                                                                                | Tests if any bits from the bitmask are set on a [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32').                                                                                |
+| [AreNoBitsSet(this int, BitMask)](Jcd.BitManipulation.Int32Extensions.AreNoBitsSet(thisint,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.Int32Extensions.AreNoBitsSet(this int, Jcd.BitManipulation.BitMask)')                                                                                                   | Tests if none of the bits from the bitmask are set on a [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32').                                                                        |
 | [BitwiseToSingle(this int)](Jcd.BitManipulation.Int32Extensions.BitwiseToSingle(thisint).md 'Jcd.BitManipulation.Int32Extensions.BitwiseToSingle(this int)')                                                                                                                                                            | Converts a [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32') to the bit-wise identical [System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single') |
 | [ClearBit(this int, int)](Jcd.BitManipulation.Int32Extensions.ClearBit(thisint,int).md 'Jcd.BitManipulation.Int32Extensions.ClearBit(this int, int)')                                                                                                                                                                   | Sets the specified bit to "off" and returns the modified value.                                                                                                                                                         |
 | [ClearBits(this int, int, int)](Jcd.BitManipulation.Int32Extensions.ClearBits(thisint,int,int).md 'Jcd.BitManipulation.Int32Extensions.ClearBits(this int, int, int)')                                                                                                                                                  | Sets all specified bits to "off" and returns the modified value.                                                                                                                                                        |
@@ -93,7 +92,7 @@ var leBaToInt32Be = leBa.ToInt32(Endian.Big); // leBaToInt32Be = 0b0101010100001
 | [StoreBytes(this int, byte[], int, int, Endian)](Jcd.BitManipulation.Int32Extensions.StoreBytes(thisint,byte[],int,int,Jcd.BitManipulation.Endian).md 'Jcd.BitManipulation.Int32Extensions.StoreBytes(this int, byte[], int, int, Jcd.BitManipulation.Endian)')                                                         | Stores a set of bytes starting at the specified byte offset and returns the modified value.                                                                                                                             |
 | [StoreBytes(this int, ReadOnlySpan&lt;byte&gt;, int, int, Endian)](Jcd.BitManipulation.Int32Extensions.StoreBytes(thisint,System.ReadOnlySpan_byte_,int,int,Jcd.BitManipulation.Endian).md 'Jcd.BitManipulation.Int32Extensions.StoreBytes(this int, System.ReadOnlySpan<byte>, int, int, Jcd.BitManipulation.Endian)') | Stores a set of bytes starting at the specified byte offset and returns the modified value.                                                                                                                             |
 | [ToBooleanArray(this int)](Jcd.BitManipulation.Int32Extensions.ToBooleanArray(thisint).md 'Jcd.BitManipulation.Int32Extensions.ToBooleanArray(this int)')                                                                                                                                                               | Converts a [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32') into an array of  values with the lease significant bit at index 0.                                                  |
-| [ToByteArray(this int, Endian)](Jcd.BitManipulation.Int32Extensions.ToByteArray(thisint,Jcd.BitManipulation.Endian).md 'Jcd.BitManipulation.Int32Extensions.ToByteArray(this int, Jcd.BitManipulation.Endian)')                                                                                                         | Converts a [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32') into an array of bytes in the specified[Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian').         |
+| [ToByteArray(this int, Endian)](Jcd.BitManipulation.Int32Extensions.ToByteArray(thisint,Jcd.BitManipulation.Endian).md 'Jcd.BitManipulation.Int32Extensions.ToByteArray(this int, Jcd.BitManipulation.Endian)')                                                                                                         | Converts a [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32') into an array of bytes in the specified [Endian](Jcd.BitManipulation.Endian.md 'Jcd.BitManipulation.Endian').        |
 | [ToggleBit(this int, int)](Jcd.BitManipulation.Int32Extensions.ToggleBit(thisint,int).md 'Jcd.BitManipulation.Int32Extensions.ToggleBit(this int, int)')                                                                                                                                                                | Toggles a bit at the specified offset and returns the modified value.                                                                                                                                                   |
 | [ToggleBits(this int, int, int)](Jcd.BitManipulation.Int32Extensions.ToggleBits(thisint,int,int).md 'Jcd.BitManipulation.Int32Extensions.ToggleBits(this int, int, int)')                                                                                                                                               | Toggles the specified range of bits and returns the modified value.                                                                                                                                                     |
 | [ToggleBits(this int, BitMask)](Jcd.BitManipulation.Int32Extensions.ToggleBits(thisint,Jcd.BitManipulation.BitMask).md 'Jcd.BitManipulation.Int32Extensions.ToggleBits(this int, Jcd.BitManipulation.BitMask)')                                                                                                         | Toggle all the bits specified in the provided bit mask and returns the modified value.                                                                                                                                  |

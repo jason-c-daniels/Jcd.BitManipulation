@@ -86,7 +86,7 @@ public readonly struct BitMask : IEquatable<BitMask>
 
    #endregion
 
-   #region Bit Manipulation Operations
+   #region Bit Manipulation Operators
 
    /// <summary>
    /// Bitwise or

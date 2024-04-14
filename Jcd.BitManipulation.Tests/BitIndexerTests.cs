@@ -270,6 +270,91 @@ public class BitIndexerTests
       Assert.Equal(expected, actual);
    }
 
+   #region Bit Manipulation Operators Tests
+
+   [Theory]
+   [InlineData(1ul,    1, 1ul    << 1)]
+   [InlineData(1ul,    2, 1ul    << 2)]
+   [InlineData(1ul,    3, 1ul    << 3)]
+   [InlineData(1ul,    4, 1ul    << 4)]
+   [InlineData(0b11ul, 4, 0b11ul << 4)]
+   public void op_LeftShift_Returns_Expected_Result(ulong value, int shift, ulong result)
+   {
+      BitIndexer bv = value;
+      BitIndexer expected = result;
+      Assert.Equal((ulong) expected, (ulong) (bv << shift));
+   }
+
+   [Theory]
+   [InlineData(0b100000000ul, 1, 0b100000000ul >> 1)]
+   [InlineData(0b100000000ul, 2, 0b100000000ul >> 2)]
+   [InlineData(0b100000000ul, 3, 0b100000000ul >> 3)]
+   [InlineData(0b100000000ul, 4, 0b100000000ul >> 4)]
+   [InlineData(0b110000000ul, 4, 0b110000000ul >> 4)]
+   public void op_RightShift_Returns_Expected_Result(ulong value, int shift, ulong result)
+   {
+      BitIndexer bv = value;
+      BitIndexer expected = result;
+      Assert.Equal((ulong) expected, (ulong) (bv >> shift));
+   }
+
+   [Theory]
+   [InlineData(0b100000000ul, 0b100001000ul, 0b100000000ul | 0b100001000ul)]
+   [InlineData(0b100000000ul, 0b100000001ul, 0b100000000ul | 0b100000001ul)]
+   [InlineData(0b100000000ul, 0b100100000ul, 0b100000000ul | 0b100100000ul)]
+   [InlineData(0b100000000ul, 0b100110000ul, 0b100000000ul | 0b100110000ul)]
+   [InlineData(0b110000000ul, 0b100000111ul, 0b110000000ul | 0b100000111ul)]
+   public void op_BitwiseOr_Returns_Expected_Result(ulong v1, ulong v2, ulong result)
+   {
+      BitIndexer bv1 = v1;
+      BitIndexer bv2 = v2;
+      BitIndexer expected = result;
+      Assert.Equal((ulong) expected, (ulong) (bv1 | bv2));
+   }
+
+   [Theory]
+   [InlineData(0b111111100ul, 0b100001000ul, 0b111111100ul & 0b100001000ul)]
+   [InlineData(0b111111100ul, 0b100000001ul, 0b111111100ul & 0b100000001ul)]
+   [InlineData(0b111111100ul, 0b100100000ul, 0b111111100ul & 0b100100000ul)]
+   [InlineData(0b111111100ul, 0b100110000ul, 0b111111100ul & 0b100110000ul)]
+   [InlineData(0b111111101ul, 0b100000111ul, 0b111111101ul & 0b100000111ul)]
+   public void op_BitwiseAnd_Returns_Expected_Result(ulong v1, ulong v2, ulong result)
+   {
+      BitIndexer bv1 = v1;
+      BitIndexer bv2 = v2;
+      BitIndexer expected = result;
+      Assert.Equal((ulong) expected, (ulong) (bv1 & bv2));
+   }
+
+   [Theory]
+   [InlineData(0b111111100ul, 0b100001000ul, 0b111111100ul ^ 0b100001000ul)]
+   [InlineData(0b111111100ul, 0b100000001ul, 0b111111100ul ^ 0b100000001ul)]
+   [InlineData(0b111111100ul, 0b100100000ul, 0b111111100ul ^ 0b100100000ul)]
+   [InlineData(0b111111100ul, 0b100110000ul, 0b111111100ul ^ 0b100110000ul)]
+   [InlineData(0b111111101ul, 0b100000111ul, 0b111111101ul ^ 0b100000111ul)]
+   public void op_BitwiseXor_Returns_Expected_Result(ulong v1, ulong v2, ulong result)
+   {
+      BitIndexer bv1 = v1;
+      BitIndexer bv2 = v2;
+      BitIndexer expected = result;
+      Assert.Equal((ulong) expected, (ulong) (bv1 ^ bv2));
+   }
+
+   [Theory]
+   [InlineData(0b100000000ul, ~0b100000000ul)]
+   [InlineData(0b100001000ul, ~0b100001000ul)]
+   [InlineData(0b100010000ul, ~0b100010000ul)]
+   [InlineData(0b100000010ul, ~0b100000010ul)]
+   [InlineData(0b110000000ul, ~0b110000000ul)]
+   public void op_BitWiseComplement_Returns_Expected_Result(ulong value, ulong result)
+   {
+      BitIndexer bv = value;
+      BitIndexer expected = result;
+      Assert.Equal((ulong) expected, (ulong) (~bv));
+   }
+
+   #endregion
+
    #region Helpers
 
    private static ulong ToUInt64(object o)

@@ -1,6 +1,6 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation')
+### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation')
 
 ## Endian Enum
 

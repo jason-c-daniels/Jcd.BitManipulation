@@ -1,6 +1,6 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation.Algorithms](Jcd.BitManipulation.Algorithms.md 'Jcd.BitManipulation.Algorithms').[Int32AlgorithmsExtensions](Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.md 'Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions')
+### [Jcd.BitManipulation.Algorithms](Jcd.BitManipulation.Algorithms 'Jcd.BitManipulation.Algorithms').[Int32AlgorithmsExtensions](Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions 'Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions')
 
 ## Int32AlgorithmsExtensions.CountBitsSet(this int) Method
 
@@ -32,4 +32,4 @@ Console.WriteLine($"{v.CountBitsSet()} bits are set."); // outputs: 31 bits are 
 
 ### Remarks
 
-This is a reader-friendly alias for [PopCount(this int)](Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.PopCount(thisint).md 'Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.PopCount(this int)').
+This is a reader-friendly alias for [PopCount(this int)](Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.PopCount(thisint) 'Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.PopCount(this int)').

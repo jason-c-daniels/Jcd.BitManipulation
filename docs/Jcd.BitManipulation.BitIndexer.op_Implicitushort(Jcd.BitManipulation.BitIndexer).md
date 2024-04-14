@@ -1,6 +1,6 @@
 #### [Jcd.BitManipulation](index.md 'index')
 
-### [Jcd.BitManipulation](Jcd.BitManipulation.md 'Jcd.BitManipulation').[BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')
+### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[BitIndexer](Jcd.BitManipulation.BitIndexer 'Jcd.BitManipulation.BitIndexer')
 
 ## BitIndexer.implicit operator ushort(BitIndexer) Operator
 
@@ -14,7 +14,7 @@ public static ushort implicit operator ushort(Jcd.BitManipulation.BitIndexer ind
 
 <a name='Jcd.BitManipulation.BitIndexer.op_Implicitushort(Jcd.BitManipulation.BitIndexer).indexer'></a>
 
-`indexer` [BitIndexer](Jcd.BitManipulation.BitIndexer.md 'Jcd.BitManipulation.BitIndexer')
+`indexer` [BitIndexer](Jcd.BitManipulation.BitIndexer 'Jcd.BitManipulation.BitIndexer')
 
 The indexer to convert from.
 

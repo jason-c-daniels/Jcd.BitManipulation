@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[UInt64Extensions](Jcd.BitManipulation.UInt64Extensions 'Jcd.BitManipulation.UInt64Extensions')
 
 ## UInt64Extensions.ReadByte(this ulong, int, Endian) Method
@@ -8,6 +9,7 @@ Reads a single byte from the value at the specified byte offset.
 ```csharp
 public static byte ReadByte(this ulong number, int offset, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt64Extensions.ReadByte(thisulong,int,Jcd.BitManipulation.Endian).number'></a>
@@ -29,5 +31,6 @@ The offset of where to store the byte.
 The endianness of the byte indexing within the value.
 
 #### Returns
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 The specified byte.

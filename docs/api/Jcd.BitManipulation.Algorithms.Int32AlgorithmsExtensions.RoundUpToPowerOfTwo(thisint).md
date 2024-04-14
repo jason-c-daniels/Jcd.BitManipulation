@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation.Algorithms](Jcd.BitManipulation.Algorithms 'Jcd.BitManipulation.Algorithms').[Int32AlgorithmsExtensions](Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions 'Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions')
 
 ## Int32AlgorithmsExtensions.RoundUpToPowerOfTwo(this int) Method
@@ -12,6 +13,7 @@ where k is the bit size.)
 ```csharp
 public static int RoundUpToPowerOfTwo(this int number);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.RoundUpToPowerOfTwo(thisint).number'></a>
@@ -21,6 +23,7 @@ public static int RoundUpToPowerOfTwo(this int number);
 The number to evaluate.
 
 #### Returns
+
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 
 ### Example

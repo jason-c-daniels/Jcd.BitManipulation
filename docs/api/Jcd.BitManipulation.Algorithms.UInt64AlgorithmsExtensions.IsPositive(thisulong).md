@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation.Algorithms](Jcd.BitManipulation.Algorithms 'Jcd.BitManipulation.Algorithms').[UInt64AlgorithmsExtensions](Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions 'Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions')
 
 ## UInt64AlgorithmsExtensions.IsPositive(this ulong) Method
@@ -8,6 +9,7 @@ Indicates if the number is zero or positive. (Always true for unsigned numbers)
 ```csharp
 public static bool IsPositive(this ulong number);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.IsPositive(thisulong).number'></a>
@@ -17,5 +19,6 @@ public static bool IsPositive(this ulong number);
 The number to evaluate.
 
 #### Returns
+
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 true if >= 0.

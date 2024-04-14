@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask')
 
 ## BitMask(ushort) Constructor
@@ -8,6 +9,7 @@ Constructs a [BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask'
 ```csharp
 public BitMask(ushort bits);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.BitMask(ushort).bits'></a>

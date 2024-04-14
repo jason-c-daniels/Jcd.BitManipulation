@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation.Algorithms](Jcd.BitManipulation.Algorithms 'Jcd.BitManipulation.Algorithms').[UInt32AlgorithmsExtensions](Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions 'Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions')
 
 ## UInt32AlgorithmsExtensions.RotateLeft(this uint, int) Method
@@ -8,6 +9,7 @@ Performs a bitwise left rotation on a number.
 ```csharp
 public static uint RotateLeft(this uint number, int count);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.RotateLeft(thisuint,int).number'></a>
@@ -23,6 +25,7 @@ The number to rotate
 the number of bits to rotate
 
 #### Returns
+
 [System.UInt32](https://docs.microsoft.com/en-us/dotnet/api/System.UInt32 'System.UInt32')
 The rotated value.
 

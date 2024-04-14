@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[BitIndexer](Jcd.BitManipulation.BitIndexer 'Jcd.BitManipulation.BitIndexer')
 
 ## BitIndexer.operator ^(BitIndexer, BitIndexer) Operator
@@ -8,6 +9,7 @@ Bitwise XOR operator.
 ```csharp
 public static Jcd.BitManipulation.BitIndexer operator ^(Jcd.BitManipulation.BitIndexer left, Jcd.BitManipulation.BitIndexer right);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexer.op_ExclusiveOr(Jcd.BitManipulation.BitIndexer,Jcd.BitManipulation.BitIndexer).left'></a>
@@ -23,5 +25,6 @@ Left side
 Right side
 
 #### Returns
+
 [BitIndexer](Jcd.BitManipulation.BitIndexer 'Jcd.BitManipulation.BitIndexer')
 A bitmask representing the bitwise or result.

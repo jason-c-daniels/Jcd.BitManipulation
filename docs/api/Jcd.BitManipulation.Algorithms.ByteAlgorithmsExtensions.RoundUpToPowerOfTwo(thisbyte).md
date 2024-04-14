@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation.Algorithms](Jcd.BitManipulation.Algorithms 'Jcd.BitManipulation.Algorithms').[ByteAlgorithmsExtensions](Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions 'Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions')
 
 ## ByteAlgorithmsExtensions.RoundUpToPowerOfTwo(this byte) Method
@@ -10,6 +11,7 @@ data type.
 ```csharp
 public static byte RoundUpToPowerOfTwo(this byte number);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.RoundUpToPowerOfTwo(thisbyte).number'></a>
@@ -19,6 +21,7 @@ public static byte RoundUpToPowerOfTwo(this byte number);
 The number to evaluate.
 
 #### Returns
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
 ### Example

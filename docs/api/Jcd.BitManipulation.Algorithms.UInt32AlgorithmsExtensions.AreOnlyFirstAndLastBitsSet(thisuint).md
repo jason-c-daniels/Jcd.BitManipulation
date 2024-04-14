@@ -1,13 +1,15 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation.Algorithms](Jcd.BitManipulation.Algorithms 'Jcd.BitManipulation.Algorithms').[UInt32AlgorithmsExtensions](Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions 'Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions')
 
 ## UInt32AlgorithmsExtensions.AreOnlyFirstAndLastBitsSet(this uint) Method
 
-Determines if the only lowest bit and one other higher bit are set.
+Determines if only the lowest bit and one other higher bit are set.
 
 ```csharp
 public static bool AreOnlyFirstAndLastBitsSet(this uint number);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.AreOnlyFirstAndLastBitsSet(thisuint).number'></a>
@@ -17,6 +19,7 @@ public static bool AreOnlyFirstAndLastBitsSet(this uint number);
 The number to evaluate.
 
 #### Returns
+
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 true if the bitwise representation follows this pattern: 0b10..01. with any number of intervening zeros.
 

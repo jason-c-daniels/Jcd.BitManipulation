@@ -1,13 +1,15 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[DoubleExtensions](Jcd.BitManipulation.DoubleExtensions 'Jcd.BitManipulation.DoubleExtensions')
 
 ## DoubleExtensions.StoreBits(this double, ulong, int, int) Method
 
-Stores a range of bits to the value, from a source value, and returns the modified value.
+Stores a range of bits to the value, from a source value, and returns the modified value. The source value is left shifted by the offset before storing.
 
 ```csharp
 public static double StoreBits(this double value, ulong source, int offset, int size);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.DoubleExtensions.StoreBits(thisdouble,ulong,int,int).value'></a>
@@ -35,5 +37,6 @@ The bit location to store the value.
 The bit size of the value.
 
 #### Returns
+
 [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 The modified value.

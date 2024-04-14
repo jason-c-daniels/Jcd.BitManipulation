@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[UInt32Extensions](Jcd.BitManipulation.UInt32Extensions 'Jcd.BitManipulation.UInt32Extensions')
 
 ## UInt32Extensions.AreAllBitsSet(this uint, BitMask) Method
@@ -8,6 +9,7 @@ Tests if all of the bits from the bitmask are set on a [System.UInt32](https://d
 ```csharp
 public static bool AreAllBitsSet(this uint number, Jcd.BitManipulation.BitMask bitmask);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt32Extensions.AreAllBitsSet(thisuint,Jcd.BitManipulation.BitMask).number'></a>
@@ -23,8 +25,10 @@ The data to inspect.
 The bits to test.
 
 #### Returns
+
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 True if all of the bits from the bitmask were set.
 
 ### Remarks
+
 NB: Only the lowest 32 bits of the bitmask will be used.

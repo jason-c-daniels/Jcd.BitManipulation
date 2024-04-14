@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation.Algorithms](Jcd.BitManipulation.Algorithms 'Jcd.BitManipulation.Algorithms').[SByteAlgorithmsExtensions](Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions 'Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions')
 
 ## SByteAlgorithmsExtensions.CountTrailingZeros(this sbyte) Method
@@ -9,6 +10,7 @@ least significant bit positions.
 ```csharp
 public static int CountTrailingZeros(this sbyte number);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.CountTrailingZeros(thissbyte).number'></a>
@@ -18,6 +20,7 @@ public static int CountTrailingZeros(this sbyte number);
 The number to evaluate.
 
 #### Returns
+
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 The count of sequentially zeroed bits occupying the least significant bit positions.
 

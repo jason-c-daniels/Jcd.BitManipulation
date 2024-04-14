@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask')
 
 ## BitMask.operator !=(BitMask, BitMask) Operator
@@ -8,6 +9,7 @@ Compares two [BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask'
 ```csharp
 public static bool operator !=(Jcd.BitManipulation.BitMask left, Jcd.BitManipulation.BitMask right);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.op_Inequality(Jcd.BitManipulation.BitMask,Jcd.BitManipulation.BitMask).left'></a>
@@ -23,5 +25,6 @@ The left side of the comparison.
 The right side of the comparison.
 
 #### Returns
+
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 True if not equivalent.

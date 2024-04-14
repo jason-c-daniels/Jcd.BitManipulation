@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[LittleEndianByteIndexer](Jcd.BitManipulation.LittleEndianByteIndexer 'Jcd.BitManipulation.LittleEndianByteIndexer')
 
 ## LittleEndianByteIndexer.ToString() Method
@@ -11,5 +12,6 @@ public override readonly string ToString();
 ```
 
 #### Returns
+
 [System.String](https://docs.microsoft.com/en-us/dotnet/api/System.String 'System.String')
 a string of the data formatted as hex bytes

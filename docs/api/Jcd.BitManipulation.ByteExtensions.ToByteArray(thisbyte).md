@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[ByteExtensions](Jcd.BitManipulation.ByteExtensions 'Jcd.BitManipulation.ByteExtensions')
 
 ## ByteExtensions.ToByteArray(this byte) Method
@@ -8,6 +9,7 @@ Converts a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte
 ```csharp
 public static byte[] ToByteArray(this byte number);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteExtensions.ToByteArray(thisbyte).number'></a>
@@ -17,5 +19,6 @@ public static byte[] ToByteArray(this byte number);
 the [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte') to convert.
 
 #### Returns
+
 [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
 an array containing the [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte').

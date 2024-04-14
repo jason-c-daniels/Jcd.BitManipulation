@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation.Algorithms](Jcd.BitManipulation.Algorithms 'Jcd.BitManipulation.Algorithms').[SByteAlgorithmsExtensions](Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions 'Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions')
 
 ## SByteAlgorithmsExtensions.RoundUpToPowerOfTwo(this sbyte) Method
@@ -12,6 +13,7 @@ where k is the bit size.)
 ```csharp
 public static sbyte RoundUpToPowerOfTwo(this sbyte number);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.RoundUpToPowerOfTwo(thissbyte).number'></a>
@@ -21,6 +23,7 @@ public static sbyte RoundUpToPowerOfTwo(this sbyte number);
 The number to evaluate.
 
 #### Returns
+
 [System.SByte](https://docs.microsoft.com/en-us/dotnet/api/System.SByte 'System.SByte')
 
 ### Example

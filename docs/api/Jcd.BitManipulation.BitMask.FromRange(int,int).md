@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask')
 
 ## BitMask.FromRange(int, int) Method
@@ -8,6 +9,7 @@ Create a [BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask') wi
 ```csharp
 public static Jcd.BitManipulation.BitMask FromRange(int offset=0, int size=64);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitMask.FromRange(int,int).offset'></a>
@@ -23,5 +25,6 @@ the lowest bit to start turning on
 the number of bits to set to 1
 
 #### Returns
+
 [BitMask](Jcd.BitManipulation.BitMask 'Jcd.BitManipulation.BitMask')
 the shifted mask

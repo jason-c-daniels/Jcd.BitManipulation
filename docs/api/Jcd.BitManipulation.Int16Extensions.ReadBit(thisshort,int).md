@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[Int16Extensions](Jcd.BitManipulation.Int16Extensions 'Jcd.BitManipulation.Int16Extensions')
 
 ## Int16Extensions.ReadBit(this short, int) Method
@@ -8,6 +9,7 @@ Reads a single bit from the specified position.
 ```csharp
 public static bool ReadBit(this short number, int offset);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int16Extensions.ReadBit(thisshort,int).number'></a>
@@ -23,5 +25,6 @@ The source of the bits to read.
 The offset of the bit to read.
 
 #### Returns
+
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
 The bit at the specified position returned as a [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean').

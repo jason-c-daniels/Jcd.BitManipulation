@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[ByteArrayExtensions](Jcd.BitManipulation.ByteArrayExtensions 'Jcd.BitManipulation.ByteArrayExtensions')
 
 ## ByteArrayExtensions.ToInt16(this byte[], Endian, ByteAlignment) Method
@@ -8,6 +9,7 @@ Converts an array of bytes into a [System.Int16](https://docs.microsoft.com/en-u
 ```csharp
 public static short ToInt16(this byte[] array, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little, Jcd.BitManipulation.ByteAlignment align=Jcd.BitManipulation.ByteAlignment.InferredFromEndian);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.ByteArrayExtensions.ToInt16(thisbyte[],Jcd.BitManipulation.Endian,Jcd.BitManipulation.ByteAlignment).array'></a>
@@ -29,6 +31,7 @@ The endian for the bytes.
 Indicates how to align partial data
 
 #### Returns
+
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 The converted [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 

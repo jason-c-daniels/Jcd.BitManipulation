@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[BitIndexer](Jcd.BitManipulation.BitIndexer 'Jcd.BitManipulation.BitIndexer')
 
 ## BitIndexer.operator <<(BitIndexer, int) Operator
@@ -8,6 +9,7 @@ Bitwise left shift operator
 ```csharp
 public static Jcd.BitManipulation.BitIndexer operator <<(Jcd.BitManipulation.BitIndexer value, int shift);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.BitIndexer.op_LeftShift(Jcd.BitManipulation.BitIndexer,int).value'></a>
@@ -23,5 +25,6 @@ Left side
 Right side
 
 #### Returns
+
 [BitIndexer](Jcd.BitManipulation.BitIndexer 'Jcd.BitManipulation.BitIndexer')
 A bitmask representing the bitwise or result.

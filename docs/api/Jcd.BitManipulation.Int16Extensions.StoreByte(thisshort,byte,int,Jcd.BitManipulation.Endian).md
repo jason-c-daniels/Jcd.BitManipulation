@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[Int16Extensions](Jcd.BitManipulation.Int16Extensions 'Jcd.BitManipulation.Int16Extensions')
 
 ## Int16Extensions.StoreByte(this short, byte, int, Endian) Method
@@ -8,6 +9,7 @@ Stores a single byte to the value at the specified byte offset and returns the m
 ```csharp
 public static short StoreByte(this short number, byte @byte, int offset, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int16Extensions.StoreByte(thisshort,byte,int,Jcd.BitManipulation.Endian).number'></a>
@@ -35,5 +37,6 @@ The offset of where to store the byte.
 The endianness for indexing into the bytes.
 
 #### Returns
+
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 The modified value.

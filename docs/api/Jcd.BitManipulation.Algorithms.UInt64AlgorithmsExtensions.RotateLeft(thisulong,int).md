@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation.Algorithms](Jcd.BitManipulation.Algorithms 'Jcd.BitManipulation.Algorithms').[UInt64AlgorithmsExtensions](Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions 'Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions')
 
 ## UInt64AlgorithmsExtensions.RotateLeft(this ulong, int) Method
@@ -8,6 +9,7 @@ Performs a bitwise left rotation on a number.
 ```csharp
 public static ulong RotateLeft(this ulong number, int count);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.RotateLeft(thisulong,int).number'></a>
@@ -23,6 +25,7 @@ The number to rotate
 the number of bits to rotate
 
 #### Returns
+
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 The rotated value.
 

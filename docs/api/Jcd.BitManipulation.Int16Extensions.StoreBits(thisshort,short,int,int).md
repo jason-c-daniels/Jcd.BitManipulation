@@ -1,13 +1,15 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[Int16Extensions](Jcd.BitManipulation.Int16Extensions 'Jcd.BitManipulation.Int16Extensions')
 
 ## Int16Extensions.StoreBits(this short, short, int, int) Method
 
-Stores a range of bits to the value, from a source value, and returns the modified value.
+Stores a range of bits to the value, from a source value, and returns the modified value. The source value is left shifted by the offset before storing.
 
 ```csharp
 public static short StoreBits(this short number, short source, int offset, int size);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Int16Extensions.StoreBits(thisshort,short,int,int).number'></a>
@@ -35,5 +37,6 @@ The bit location to store the value.
 The bit size of the value.
 
 #### Returns
+
 [System.Int16](https://docs.microsoft.com/en-us/dotnet/api/System.Int16 'System.Int16')
 The modified value.

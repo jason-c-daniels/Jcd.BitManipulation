@@ -78,7 +78,7 @@ public static class UInt32AlgorithmsExtensions
    }
 
    /// <summary>
-   /// Determines if the only lowest bit and one other higher bit are set.
+   /// Determines if only the lowest bit and one other higher bit are set.
    /// </summary>
    /// <param name="number">The number to evaluate.</param>
    /// <returns>true if the bitwise representation follows this pattern: 0b10..01. with any number of intervening zeros.</returns>

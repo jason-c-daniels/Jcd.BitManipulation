@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation.Algorithms](Jcd.BitManipulation.Algorithms 'Jcd.BitManipulation.Algorithms').[UInt16AlgorithmsExtensions](Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions 'Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions')
 
 ## UInt16AlgorithmsExtensions.GetLowestBitSet(this ushort) Method
@@ -8,6 +9,7 @@ Calculate the index of the lowest bit that's been set.
 ```csharp
 public static int GetLowestBitSet(this ushort number);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.GetLowestBitSet(thisushort).number'></a>
@@ -17,6 +19,7 @@ public static int GetLowestBitSet(this ushort number);
 The number to evaluate.
 
 #### Returns
+
 [System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')
 The index of the lowest bit that's been set; or -1 if none were set.
 

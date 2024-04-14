@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation.Algorithms](Jcd.BitManipulation.Algorithms 'Jcd.BitManipulation.Algorithms').[UInt64AlgorithmsExtensions](Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions 'Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions')
 
 ## UInt64AlgorithmsExtensions.RoundUpToPowerOfTwo(this ulong) Method
@@ -10,6 +11,7 @@ data type.
 ```csharp
 public static ulong RoundUpToPowerOfTwo(this ulong number);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.RoundUpToPowerOfTwo(thisulong).number'></a>
@@ -19,6 +21,7 @@ public static ulong RoundUpToPowerOfTwo(this ulong number);
 The number to evaluate.
 
 #### Returns
+
 [System.UInt64](https://docs.microsoft.com/en-us/dotnet/api/System.UInt64 'System.UInt64')
 
 ### Example

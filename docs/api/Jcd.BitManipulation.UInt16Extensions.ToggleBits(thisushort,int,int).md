@@ -1,4 +1,5 @@
 #### [Jcd.BitManipulation](index 'index')
+
 ### [Jcd.BitManipulation](Jcd.BitManipulation 'Jcd.BitManipulation').[UInt16Extensions](Jcd.BitManipulation.UInt16Extensions 'Jcd.BitManipulation.UInt16Extensions')
 
 ## UInt16Extensions.ToggleBits(this ushort, int, int) Method
@@ -8,6 +9,7 @@ Toggles the specified range of bits and returns the modified value.
 ```csharp
 public static ushort ToggleBits(this ushort number, int offset=0, int size=16);
 ```
+
 #### Parameters
 
 <a name='Jcd.BitManipulation.UInt16Extensions.ToggleBits(thisushort,int,int).number'></a>
@@ -29,5 +31,6 @@ The offset of the bits to toggle.
 The number of bits to toggle.
 
 #### Returns
+
 [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16')
 The modified value.

@@ -160,7 +160,7 @@ public static class SingleExtensions
    /// <param name="number">The source of the bits to read.</param>
    /// <param name="offset">The bit offset to start reading from.</param>
    /// <param name="size">The total number of bits to extract.</param>
-   /// <returns>The value stored in the range of bits specified, right shifted by the offset..</returns>
+   /// <returns>The value stored in the range of bits specified, right shifted by the offset.</returns>
    [MethodImpl(MethodImplOptions.AggressiveInlining)]
    public static uint ReadBits(this float number, int offset, int size)
    {
@@ -269,7 +269,7 @@ public static class SingleExtensions
    }
 
    /// <summary>
-   /// Stores a range of bits to the value, from a source value, and returns the modified value.
+   /// Stores a range of bits to the value, from a source value, and returns the modified value. The source value is left shifted by the offset before storing.
    /// </summary>
    /// <param name="number">The value to modify.</param>
    /// <param name="source">The value to be stored at the bit location.</param>

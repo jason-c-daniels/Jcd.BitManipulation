@@ -4,9 +4,7 @@
 
 ## BigEndianByteIndexer.implicit operator double(BigEndianByteIndexer) Operator
 
-Implicitly converts the
-[BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer')
-to a[System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double').
+Implicitly converts the [BigEndianByteIndexer](Jcd.BitManipulation.BigEndianByteIndexer.md 'Jcd.BitManipulation.BigEndianByteIndexer') to a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double').
 
 ```csharp
 public static double implicit operator double(Jcd.BitManipulation.BigEndianByteIndexer indexer);

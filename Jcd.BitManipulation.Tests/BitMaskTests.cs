@@ -299,7 +299,7 @@ public class BitMaskTests
 
    #endregion
 
-   #region Bit Manipulation Tests
+   #region Bit Manipulation Operators Tests
 
    [Theory]
    [InlineData(1ul,    1, 1ul    << 1)]

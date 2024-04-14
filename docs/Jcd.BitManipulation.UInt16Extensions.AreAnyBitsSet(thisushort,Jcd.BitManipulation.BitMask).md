@@ -4,7 +4,7 @@
 
 ## UInt16Extensions.AreAnyBitsSet(this ushort, BitMask) Method
 
-Tests if any bits from the bitmask are set on a[System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16').
+Tests if any bits from the bitmask are set on a [System.UInt16](https://docs.microsoft.com/en-us/dotnet/api/System.UInt16 'System.UInt16').
 
 ```csharp
 public static bool AreAnyBitsSet(this ushort number, Jcd.BitManipulation.BitMask bitmask);

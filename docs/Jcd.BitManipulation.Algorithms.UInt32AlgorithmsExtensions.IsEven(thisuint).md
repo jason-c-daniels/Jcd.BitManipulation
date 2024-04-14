@@ -21,5 +21,4 @@ The number to evaluate.
 #### Returns
 
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
-`true`
-if the number is even (e.g. 2,4...etc.)
+`true` if the number is even (e.g. 2,4...etc.)

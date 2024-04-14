@@ -460,4 +460,79 @@ public ref struct BitIndexer
 
       return sb.ToString();
    }
+
+   #region Bit Manipulation Operators
+
+   /// <summary>
+   /// Bitwise OR operator
+   /// </summary>
+   /// <param name="left">left side</param>
+   /// <param name="right">right side</param>
+   /// <returns>A bitmask representing the bitwise or result.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static BitIndexer operator |(BitIndexer left, BitIndexer right)
+   {
+      return left.bits | right.bits;
+   }
+
+   /// <summary>
+   /// Bitwise AND operator
+   /// </summary>
+   /// <param name="left">Left side</param>
+   /// <param name="right">Right side</param>
+   /// <returns>A bitmask representing the bitwise or result.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static BitIndexer operator &(BitIndexer left, BitIndexer right)
+   {
+      return left.bits & right.bits;
+   }
+
+   /// <summary>
+   /// Bitwise XOR operator.
+   /// </summary>
+   /// <param name="left">Left side</param>
+   /// <param name="right">Right side</param>
+   /// <returns>A bitmask representing the bitwise or result.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static BitIndexer operator ^(BitIndexer left, BitIndexer right)
+   {
+      return left.bits ^ right.bits;
+   }
+
+   /// <summary>
+   /// Bitwise left shift operator
+   /// </summary>
+   /// <param name="value">Left side</param>
+   /// <param name="shift">Right side</param>
+   /// <returns>A bitmask representing the bitwise or result.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static BitIndexer operator <<(BitIndexer value, int shift)
+   {
+      return value.bits << shift;
+   }
+
+   /// <summary>
+   /// Bitwise right shift operator
+   /// </summary>
+   /// <param name="value">Left side</param>
+   /// <param name="shift">Right side</param>
+   /// <returns>A bitmask representing the bitwise or result.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static BitIndexer operator >> (BitIndexer value, int shift)
+   {
+      return value.bits >> shift;
+   }
+
+   /// <summary>
+   /// Bitwise complement
+   /// </summary>
+   /// <param name="value">Left side</param>
+   /// <returns>A bitmask representing the bitwise or result.</returns>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static BitIndexer operator ~(BitIndexer value)
+   {
+      return ~value.bits;
+   }
+
+   #endregion
 }

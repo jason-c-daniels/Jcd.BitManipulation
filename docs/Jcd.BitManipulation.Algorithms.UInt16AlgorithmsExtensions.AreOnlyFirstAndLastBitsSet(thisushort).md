@@ -21,8 +21,7 @@ The number to evaluate.
 #### Returns
 
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
-true if the bitwise representation follows this pattern: 0b10..01. with any number of intervening
-zeros.
+true if the bitwise representation follows this pattern: 0b10..01. with any number of intervening zeros.
 
 ### Example
 

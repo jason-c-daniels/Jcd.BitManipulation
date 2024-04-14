@@ -4,6 +4,7 @@
 @import 'jekyll-theme-leap-day';
 
 header {
+   background: unset;
    background: black;
    h1 {
       color: white;
@@ -11,5 +12,6 @@ header {
 }
 
 #banner {
+   background: unset;
    background: cornflowerblue;
 }

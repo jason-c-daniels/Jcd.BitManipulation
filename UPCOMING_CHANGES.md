@@ -1,85 +1,18 @@
 ﻿# Upcoming Changes
 
-## 2.x Summary
-- Strategic backports from 3.0.
-
-- In the rush to get 2.x out the door I missed including Endianness with some of the extension methods
-  and related unit tests. I've found a number of these in my work on 3.0. Many of these fixes and improvements
-  have already been back ported to 2.x from 3.0. Others will follow as I find them and will be released in
-  2.x well ahead of the 3.0 release.
-
-  _You have my sincerest apologies for these oversights._
+## 3.1 Summary
+- I pushed the investigation of generic math implementations into 3.1. There were too many features
+  and fixes already in 3.0. If this approach proves performant enough, I'll create a
+  .net 7.0 version of this library with that support built in. The .Net Standard 2.0 compatible indexers will
+  still be provided.
+- 3.1 changes will be mostly driven by what users report as wants and needs. I don't expecte there to be
+  a large number of changes once its finally released.
 
 ## 3.0 Summary
 
-As you've guessed, I'm actively working on v3.0. Some big changes will hit with that release. If you have
-any wants from this library please add an issue with your request.
+- The `main` branch is now v3.1. 3.0 will receive bug fixes as necessary. 
+- New features will be added to the main branch and will be available in the 3.1 alpha builds. 
 
-The biggest changes are focused on completeness, simplifying the API surface/reducing volume of code, and
-and keeping acceptable performance<sup>1</sup>.
-
-### Breaking Changes from 2.x
-
-- All of the type specific `ByteIndexer` types will be replaced by `BigEndianByteIndexer` and `LittleEndianByteIndexer`.
-  Early previews of both have been backported to 2.4.33.
-- The same is true of the type specific `BitIndexer` types (e.g. `BitIndexerUInt64`). These will all be replaced with
-  the `BitIndexer` struct.
-- The old indexer types will be deprecated in an upcoming release of 2.x, shortly before 3.0 is released. If you're
-  using them keep in mind that you will need to change over. Consider scoping out the changes in the prerelease versions
-  currently available on NuGet.
-- The `IByteIndexer` and `IBitIndexer` interfaces will go away. I'm not using them internally and using them causes
-  boxing allocations. Frequent boxing allocations can consume a lot of heap memory. The intended use case for the
-  indexers was at the point where bit/byte level access is **required** (i.e. stack allocated).
-- For the same reasons as above none of the indexer types will derive from IEnumerable. Instead explicit
-  conversion operators will be provided to and from `Span`s and `Array`s.
-- To the end of enforcing the indexers stack allocated and used in place, the bit and byte indexer types will become
-  `ref structs`. This carries some implications such as making them non-viable as fields and async return types.
-  That's in keeping with the original intent and a desirable change, from my view. There is no plan to revert back to a
-  heap allocatable type at this time. If you need them to remain heap allocatable, add an issue or open a dialog some
-  other way about your specific needs.
-- All extension methods will be moved into type-specific extesion classes (e.g. `UInt64Extensions`). This will
-  only break direct calls such as `ReadBytesExtensions.ReadBytes(myInt,offset,length,Endian.Big)`.
-
-### New Features / Improvements
-
-- **BitManipulations of floating point types**. Byte and bit level indexing `Double` and `float` will be directly
-  provided in 3.0. This is currently possible if one first uses BitConverter to convert to the same sized integer type.
-  The support for these types will be much more comprehensive than that in 2.0. (e.g. `.SetBits(this float,...)` will
-  return a `float` with the specified bits altered)
-- **Performance improvements** via `AggressiveInlining` and targeted code changes. In many places in 1.x and 2.x,
-  `AggressiveInlining` is missing. Using this consistently has halved the run time of some of the extension methods in
-  the 3.0 branch. As well, manually unrolling some loops has also provided significant performance improvements.
-- **Improved documentation**. I will improve the documentation on how to properly use the extension methods as well
-  as their underlying types. One area currently lacking is on what to expect of a big endian conversion from a
-  a byte array to behave when the array is smaller than the destination type. (fills from position 0)
-- **ReSharper auto-formatting updates**. Some of the code just looks silly with the settings used in 2.x (main) branch. I
-  will update these settings to remove that odd formatting. (This mostly impacts data driven unit tests making it harder
-  than necessary to comprehend what's happening)
-- **Performance benchmarks!** I will include both the most recent performance benchmark runs as well as the benchmark
-  application in 3.0. In running this I confirmed that the slight performance boost I got going with the
-  type specific byte indexers, was not worth the hassle of the volume of code it requires for a .Net standard 2.0
-  library. To illustrate (in the 3.0 branch, using my machine):
-   - Using `BitConverter` to create an array from any int of any size and reverse the array (big endian on Intel
-     processors) is 4ns on .Net 8.0 and 25ns in .Net Framework 4.8.1.
-   - The replacement indexers need more logic as they are handling multiple bit sizes. `BigEndianByteIndexer` runs at
-     roughly 4ns per conversion of a `UInt64` to an array of bytes. This is on par with `BitConverter`.
-   - Converting a `UInt16` to an array of bytes takes around 3.2ns now, when previously it took around 2-3ns, usually
-     around 2.5ns.
-   - This very minor loss of performance to accomodate easier to maintain code is acceptable for two reasons:
-      - In the worst case there's 0.5ns  **improvement** over `BitConverter`, and 2ns performance decrease from the
-        baseline implementation. A 2ns delay (8 CPU Cycles at 4GHz) per operation is still sufficiently fast for most
-        purposes.
-      - The target audience for this library are people who want more readable code. This sometimes comes at a slight
-        performance hit. I believe a loss of performance of 2ns per integer conversion to a big endian array on an
-      - 4.2GHz Intel processor is performant enough for the target audience.
-      - If a consumer really needs as fast of performance as possible in converting integer to and from arrays,
-        they may need to roll their own C++ solution tailored to the hardware they're running on. `BitConverter` is
-        often less performant than hand-rolled C# solutions for 16 bit integers on my machine. C++ will usually run
-        faster.
-
-### Tentative Feature/Addition
-
-- I will investigate .Net 7.0 generic math as a possible way of providing a truly generic implementation.
-  (i.e. BigEndianByteIndexer&lt;int&gt; for example.) If this approach proves performant enough, I'll create a
-  .net 7.0 version of this library with that support built in. The .Net Standard 2.0 compatible indexers will
-  still be provided.
+## 2.x `Will be archived. No more updates`
+- With the first release of 3.0, 2.x is being archived. The branch will be protected and no
+  further updates will be made to its code base.

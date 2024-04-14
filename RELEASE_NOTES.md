@@ -1,5 +1,33 @@
 ﻿# Change Log
 
+## Version 3.0.120 Released
+
+The biggest changes for 3.0 were focused on completeness, simplifying the API surface/reducing volume of code, and
+and improving performance. This has introduced a number of breaking changes from 2.x.
+
+### Breaking Changes
+
+- All of the type specific `ByteIndexer` types will were replaced by `BigEndianByteIndexer` and `LittleEndianByteIndexer`.
+  Early previews of both have been backported to 2.4.33 and you should perform your migration to these using that version.
+- The same is true of the type specific `BitIndexer` types (e.g. `BitIndexerUInt64`). These were all replaced with
+  the `BitIndexer` struct.
+- The `IByteIndexer` and `IBitIndexer` interfaces were eliminated.
+- `BigEndianByteIndexer`, `LittleEndianByteIndexer`, and `BitIndexer` are `ref structs`.
+- All extension methods were moved into type-specific extesion classes (e.g. `UInt64Extensions`). This breaks
+  direct calls such as `ReadBytesExtensions.ReadBytes(myInt,offset,length,Endian.Big)`.
+- Various parameters were renamed for consistency sake. This breaks named parameters.
+
+### New Features / Improvements
+
+- `new` **BitManipulations of floating point types**. Byte and bit level indexing `Double` and `float` are directly
+  provided in 3.0.
+- `new` **Performance benchmarks!**. The `Jcd.BitManipulation.Benchmark` project has the most recent benchmark runs.
+- `new` **Various common bit manipulation algorithms** These live in the `Jcd.BitManipulation.Algorithms` namespace.
+- **Performance improvements** via `AggressiveInlining` and targeted code changes. 
+- **Improved documentation**. See the github pages site: https://jason-c-daniels.github.io/Jcd.BitManipulation 
+- **ReSharper auto-formatting updates**. These give more consistency to code formatting. This only impacts those who 
+    read the code.
+
 ## Version 2.4.33 Released
 
 1. Backported `BitIndexer`,`BigEndianByteIdexer` and `LittleEndianByteIndexer`

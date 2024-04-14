@@ -1,6 +1,6 @@
 title: Jcd.BitManipulation
 logo: assets/img/logo.jpg
 description: A .Net Standard 2.0 library adding syntactic sugar to your bit manipulation experience. 
-show_downloads: true
+show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal

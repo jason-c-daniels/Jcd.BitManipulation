@@ -1,6 +1,6 @@
 ﻿# Change Log
 
-## Version 3.0.120 Released
+## Version 3.0.121 Released
 
 The biggest changes for 3.0 were focused on completeness, simplifying the API surface/reducing volume of code, and
 and improving performance. This has introduced a number of breaking changes from 2.x.

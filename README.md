@@ -1,6 +1,6 @@
 # Jcd.BitManipulation
 
-A .Net Standard 2.0 library adding syntactic sugar to your bit manipulation experience.
+A bit manipulation readability enhancement library.
 
 [![GitHub](https://img.shields.io/github/license/jason-c-daniels/Jcd.BitManipulation)](https://github.com/jason-c-daniels/Jcd.BitManipulation/blob/main/LICENSE)
 [![MyGet](https://img.shields.io/myget/jason-c-daniels/v/Jcd.BitManipulation?logo=nuget)](https://www.myget.org/feed/jason-c-daniels/package/nuget/Jcd.BitManipulation)

@@ -113,4 +113,4 @@ See [Release Notes](RELEASE_NOTES.md)
 
 ## API Documentation
 
-[![API Docs](https://img.shields.io/badge/Read-The%20API%20Documentation-blue?style=for-the-badge)](https://jason-c-daniels.github.io/)
+[![API Docs](https://img.shields.io/badge/Read-The%20API%20Documentation-blue?style=for-the-badge)](https://jason-c-daniels.github.io/Jcd.BitManipulation)

@@ -4,7 +4,7 @@
 
 ## ByteExtensions.AreAnyBitsSet(this byte, BitMask) Method
 
-Tests if any bits from the bitmask are set on a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte').
+Tests if any bits from the bitmask are set on a[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte').
 
 ```csharp
 public static bool AreAnyBitsSet(this byte number, Jcd.BitManipulation.BitMask bitmask);

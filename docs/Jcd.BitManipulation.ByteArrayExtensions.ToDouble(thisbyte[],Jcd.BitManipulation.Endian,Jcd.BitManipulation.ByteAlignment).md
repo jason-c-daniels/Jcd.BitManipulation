@@ -4,7 +4,7 @@
 
 ## ByteArrayExtensions.ToDouble(this byte[], Endian, ByteAlignment) Method
 
-Converts an array of bytes into a [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double'), discarding any excess data.
+Converts an array of bytes into a[System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double'), discarding any excess data.
 
 ```csharp
 public static double ToDouble(this byte[] array, Jcd.BitManipulation.Endian endian=Jcd.BitManipulation.Endian.Little, Jcd.BitManipulation.ByteAlignment align=Jcd.BitManipulation.ByteAlignment.InferredFromEndian);
@@ -33,7 +33,8 @@ Indicates how to align partial data
 #### Returns
 
 [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
-The converted [System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
+The converted
+[System.Double](https://docs.microsoft.com/en-us/dotnet/api/System.Double 'System.Double')
 
 ### Remarks
 

@@ -11,7 +11,8 @@ algorithms, for C# supported types.
 var ul = ulong.MaxValue;
 
 var bitCount = ul.CountBitsSet(); // bitCount = 64;
-bitCount = ul.PopCount(); // also 64; this alias is provided for those who like the assembly language term.
+bitCount = ul.PopCount(); // also 64; this alias is provided for those who like the assembly language
+term.
 
 var hbs = (ul >> 1).GetHighestBitSet(); // 63
 

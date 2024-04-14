@@ -4,7 +4,10 @@
 
 ## BitMask(byte) Constructor
 
-Constructs a [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') from a [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
+Constructs a
+[BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+from a
+[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
 ```csharp
 public BitMask(byte bits);
@@ -16,4 +19,5 @@ public BitMask(byte bits);
 
 `bits` [System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')
 
-The bits to use for the [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+The bits to use for the
+[BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')

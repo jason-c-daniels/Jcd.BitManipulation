@@ -27,4 +27,4 @@ The offset of the bit to read.
 #### Returns
 
 [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')
-The bit at the specified position returned as a [System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean').
+The bit at the specified position returned as a[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean').

@@ -4,7 +4,9 @@
 
 ## BitMask.operator !=(BitMask, BitMask) Operator
 
-Compares two [BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask') instances for inequality.
+Compares two
+[BitMask](Jcd.BitManipulation.BitMask.md 'Jcd.BitManipulation.BitMask')
+instances for inequality.
 
 ```csharp
 public static bool operator !=(Jcd.BitManipulation.BitMask left, Jcd.BitManipulation.BitMask right);

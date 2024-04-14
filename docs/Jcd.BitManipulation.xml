@@ -3256,6 +3256,56 @@
          <param name="right">The right side of the comparison.</param>
          <returns>True if not equivalent.</returns>
       </member>
+      <member
+         name="M:Jcd.BitManipulation.BitMask.op_BitwiseOr(Jcd.BitManipulation.BitMask,Jcd.BitManipulation.BitMask)">
+         <summary>
+            Bitwise or
+         </summary>
+         <param name="left">left side</param>
+         <param name="right">right side</param>
+         <returns>A bitmask representing the bitwise or result.</returns>
+      </member>
+      <member
+         name="M:Jcd.BitManipulation.BitMask.op_BitwiseAnd(Jcd.BitManipulation.BitMask,Jcd.BitManipulation.BitMask)">
+         <summary>
+            Bitwise AND
+         </summary>
+         <param name="left">Left side</param>
+         <param name="right">Right side</param>
+         <returns>A bitmask representing the bitwise or result.</returns>
+      </member>
+      <member
+         name="M:Jcd.BitManipulation.BitMask.op_ExclusiveOr(Jcd.BitManipulation.BitMask,Jcd.BitManipulation.BitMask)">
+         <summary>
+            Bitwise XOR
+         </summary>
+         <param name="left">Left side</param>
+         <param name="right">Right side</param>
+         <returns>A bitmask representing the bitwise or result.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.BitMask.op_LeftShift(Jcd.BitManipulation.BitMask,System.Int32)">
+         <summary>
+            Bitwise left shift
+         </summary>
+         <param name="value">Left side</param>
+         <param name="shift">Right side</param>
+         <returns>A bitmask representing the bitwise or result.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.BitMask.op_RightShift(Jcd.BitManipulation.BitMask,System.Int32)">
+         <summary>
+            Bitwise right shift
+         </summary>
+         <param name="value">Left side</param>
+         <param name="shift">Right side</param>
+         <returns>A bitmask representing the bitwise or result.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.BitMask.op_OnesComplement(Jcd.BitManipulation.BitMask)">
+         <summary>
+            Bitwise complement
+         </summary>
+         <param name="value">Left side</param>
+         <returns>A bitmask representing the bitwise or result.</returns>
+      </member>
       <member name="F:Jcd.BitManipulation.BitMask.AllBits">
          <summary>
             A bitmask with all bits set in the mask.

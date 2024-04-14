@@ -1,12 +1,15 @@
 ﻿---
 ---
 
-@import "{{ site.theme }}";
+@import 'jekyll-theme-leap-day';
 
-div#banner {
-   background: cornflowerblue;
-   height: 75pt;
-}
 header {
    background: black;
+   h1 {
+      color: white;
+   }
+}
+
+#banner {
+   background: cornflowerblue;
 }

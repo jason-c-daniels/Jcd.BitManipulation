@@ -70,16 +70,16 @@ if your system doesn't have it installed.
 
 The latest performance benchmarks from my machine are available at the links below:
 
-* [BigEndianReadBytes](./Jcd.BitManipulation.Benchmark/benchmarks/out/results/Jcd.BitManipulation.Benchmark.BigEndianReadBytes-report-github) -- Extracts bytes from various integer and floating point types as a big endian array.
-* [LittleEndianReadBytes](./Jcd.BitManipulation.Benchmark/benchmarks/out/results/Jcd.BitManipulation.Benchmark.LittleEndianReadBytes-report-github) -- Extracts bytes from various integer and floating point types as a little endian array.
-* [BigEndianStoreByte](./Jcd.BitManipulation.Benchmark/benchmarks/out/results/Jcd.BitManipulation.Benchmark.BigEndianStoreByte-report-github) -- Stores a single byte in various numeric types at an index using big endian indexing.
-* [LittleEndianStoreByte](./Jcd.BitManipulation.Benchmark/benchmarks/out/results/Jcd.BitManipulation.Benchmark.LittleEndianStoreByte-report-github) -- Stores a single byte in various numeric type at an index using little endian indexing.
-* [BigEndianStoreBytes](./Jcd.BitManipulation.Benchmark/benchmarks/out/results/Jcd.BitManipulation.Benchmark.BigEndianStoreBytes-report-github) -- Stores a collection of bytes in various numeric types, indexing into the numeric type's location as if the memory layout were big endian. (i.e. index 0 in the collection is the most significant byte)
-* [LittleEndianStoreBytes](./Jcd.BitManipulation.Benchmark/benchmarks/out/results/Jcd.BitManipulation.Benchmark.LittleEndianStoreBytes-report-github) -- Stores a collection of bytes in various numeric types, indexing into the numeric type's location as if the memory layout were little endian. (i.e. index 0 in the collection is the least significant byte)
+* [BigEndianReadBytes](https://github.com/jason-c-daniels/Jcd.BitManipulation/tree/main/Jcd.BitManipulation.Benchmark/benchmarks/out/results/Jcd.BitManipulation.Benchmark.BigEndianReadBytes-report-github.md) -- Extracts bytes from various integer and floating point types as a big endian array.
+* [LittleEndianReadBytes](https://github.com/jason-c-daniels/Jcd.BitManipulation/tree/main/Jcd.BitManipulation.Benchmark/benchmarks/out/results/Jcd.BitManipulation.Benchmark.LittleEndianReadBytes-report-github.md) -- Extracts bytes from various integer and floating point types as a little endian array.
+* [BigEndianStoreByte](https://github.com/jason-c-daniels/Jcd.BitManipulation/tree/main/Jcd.BitManipulation.Benchmark/benchmarks/out/results/Jcd.BitManipulation.Benchmark.BigEndianStoreByte-report-github.md) -- Stores a single byte in various numeric types at an index using big endian indexing.
+* [LittleEndianStoreByte](https://github.com/jason-c-daniels/Jcd.BitManipulation/tree/main/Jcd.BitManipulation.Benchmark/benchmarks/out/results/Jcd.BitManipulation.Benchmark.LittleEndianStoreByte-report-github.md) -- Stores a single byte in various numeric type at an index using little endian indexing.
+* [BigEndianStoreBytes](https://github.com/jason-c-daniels/Jcd.BitManipulation/tree/main/Jcd.BitManipulation.Benchmark/benchmarks/out/results/Jcd.BitManipulation.Benchmark.BigEndianStoreBytes-report-github.md) -- Stores a collection of bytes in various numeric types, indexing into the numeric type's location as if the memory layout were big endian. (i.e. index 0 in the collection is the most significant byte)
+* [LittleEndianStoreBytes](https://github.com/jason-c-daniels/Jcd.BitManipulation/tree/main/Jcd.BitManipulation.Benchmark/benchmarks/out/results/Jcd.BitManipulation.Benchmark.LittleEndianStoreBytes-report-github.md) -- Stores a collection of bytes in various numeric types, indexing into the numeric type's location as if the memory layout were little endian. (i.e. index 0 in the collection is the least significant byte)
 
 ## Version History
 
-See [Release Notes](RELEASE_NOTES)
+See [Release Notes](https://github.com/jason-c-daniels/Jcd.BitManipulation/tree/main/RELEASE_NOTES.md)
 
 ## Dev Notes
 

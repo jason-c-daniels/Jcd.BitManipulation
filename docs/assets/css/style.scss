@@ -1,17 +1,17 @@
 ﻿---
 ---
 
-@import 'jekyll-theme-leap-day';
-
 header {
    background: unset;
-   background: black;
+   background: black!important;
    h1 {
-      color: white;
+      color: white!important;
    }
 }
 
 #banner {
    background: unset;
-   background: cornflowerblue;
+   background: cornflowerblue!important;
 }
+
+@import "{{ site.theme }}";

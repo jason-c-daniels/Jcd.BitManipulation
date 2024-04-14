@@ -6,9 +6,9 @@ find . -type f -name '*.md'
 echo editing files
 find . -type f -name '*.md' -exec sed -i -E 's/[ ]+$//g' {} \;
 find . -type f -name '*.md' -exec sed -i -E 's:[\<]br[/][\>]: :g' {} \;
-cd ./docs || exit
+cd ./docs/api || exit
 find . -type f -name '*.md' -exec sed -i -Ee "s/[.]md//g" {} \;
-cd .. || exit
+cd ../.. || exit
 find . -type f -name '*.md' -print0 | xargs -0 unix2dos
 cp README.md ./docs/index.md
 cd "$returnd" || exit

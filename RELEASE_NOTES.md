@@ -23,9 +23,9 @@ and improving performance. This has introduced a number of breaking changes from
   provided in 3.0.
 - `new` **Performance benchmarks!**. The `Jcd.BitManipulation.Benchmark` project has the most recent benchmark runs.
 - `new` **Various common bit manipulation algorithms** These live in the `Jcd.BitManipulation.Algorithms` namespace.
-- **Performance improvements** via `AggressiveInlining` and targeted code changes. 
-- **Improved documentation**. See the github pages site: https://jason-c-daniels.github.io/Jcd.BitManipulation 
-- **ReSharper auto-formatting updates**. These give more consistency to code formatting. This only impacts those who 
+- **Performance improvements** via `AggressiveInlining` and targeted code changes.
+- **Improved documentation**. See the github pages site: https://jason-c-daniels.github.io/Jcd.BitManipulation
+- **ReSharper auto-formatting updates**. These give more consistency to code formatting. This only impacts those who
     read the code.
 
 ## Version 2.4.33 Released

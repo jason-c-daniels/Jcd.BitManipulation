@@ -436,4 +436,19 @@ public static class ByteAlgorithmsExtensions
                 ? 0
                 : 1;
    }
+
+   /// <summary>
+   /// Returns a value where the bits of the output are in the reverse order from their inputs.
+   /// For example: 10101111 becomes 11110101
+   /// </summary>
+   /// <param name="number">The number to evaluate</param>
+   /// <returns>The bits in reverse order.</returns>
+   /// <remarks>
+   /// Algorithm taken from: https://graphics.stanford.edu/~seander/bithacks.html#ReverseByteWith64Bits
+   /// </remarks>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static byte ReverseBits(this byte number)
+   {
+      return (byte)((((number * 0x80200802UL) & 0x0884422110UL) * 0x0101010101UL >> 32) & 0xFF);
+   }
 }

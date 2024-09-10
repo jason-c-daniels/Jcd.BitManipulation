@@ -10,8 +10,8 @@
 
 ## 3.0 Summary
 
-- The `main` branch is now v3.1. 3.0 will receive bug fixes as necessary. 
-- New features will be added to the main branch and will be available in the 3.1 alpha builds. 
+- The `main` branch is now v3.1. 3.0 will receive bug fixes as necessary.
+- New features will be added to the main branch and will be available in the 3.1 alpha builds.
 
 ## 2.x `Will be archived. No more updates`
 - With the first release of 3.0, 2.x is being archived. The branch will be protected and no

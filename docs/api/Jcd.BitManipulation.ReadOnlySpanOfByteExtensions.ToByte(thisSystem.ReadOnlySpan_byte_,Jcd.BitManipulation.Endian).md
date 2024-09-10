@@ -14,7 +14,8 @@ public static byte ToByte(this System.ReadOnlySpan<byte> span, Jcd.BitManipulati
 
 <a name='Jcd.BitManipulation.ReadOnlySpanOfByteExtensions.ToByte(thisSystem.ReadOnlySpan_byte_,Jcd.BitManipulation.Endian).span'></a>
 
-`span` [System.ReadOnlySpan&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.ReadOnlySpan-1 'System.ReadOnlySpan`1')[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.ReadOnlySpan-1 'System.ReadOnlySpan`1')
+`span` [System.ReadOnlySpan&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.ReadOnlySpan-1 'System.ReadOnlySpan
+`1')[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.ReadOnlySpan-1 'System.ReadOnlySpan`1')
 
 the bytes to convert.
 

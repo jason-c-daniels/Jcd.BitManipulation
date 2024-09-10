@@ -486,4 +486,27 @@ public static class UInt64AlgorithmsExtensions
                 ? 0
                 : 1;
    }
+
+   /// <summary>
+   /// Returns a value where the bits of the output are in the reverse order from their inputs.
+   /// For example: 1010000010101111 becomes 1111010100000101
+   /// </summary>
+   /// <param name="number">The number to evaluate</param>
+   /// <returns>The bits in reverse order.</returns>
+   /// <remarks>
+   /// Algorithm taken from: https://graphics.stanford.edu/~seander/bithacks.html#ReverseParallel
+   /// </remarks>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static ulong ReverseBits(this ulong number)
+   {
+      return
+         ((ulong) ((byte) (number & 0xFF)).ReverseBits()) << 56
+       | ((ulong) ((byte) ((number >> 8)  & 0xFF)).ReverseBits()) << 48
+       | ((ulong) ((byte) ((number >> 16) & 0xFF)).ReverseBits()) << 40
+       | ((ulong) ((byte) ((number >> 24) & 0xFF)).ReverseBits()) << 32
+       | ((ulong) ((byte) ((number >> 32) & 0xFF)).ReverseBits()) << 24
+       | ((ulong) ((byte) ((number >> 40) & 0xFF)).ReverseBits()) << 16
+       | ((ulong) ((byte) ((number >> 48) & 0xFF)).ReverseBits()) << 8
+       | ((ulong) ((byte) ((number >> 56) & 0xFF)).ReverseBits());
+   }
 }

@@ -151,6 +151,15 @@ public class UInt16AlgorithmsExtensionsTests
       Assert.Equal(expected, value.GetSign());
    }
 
+   [Theory]
+   [InlineData(0b01000000_00000010, 0b01000000_00000010)]
+   [InlineData(0b01000010_00000100, 0b00100000_01000010)]
+   [InlineData(0b01100010_00001000, 0b00010000_01000110)]
+   public void ReverseBits_Returns_Expected_Result(ushort source, ushort expected)
+   {
+      Assert.Equal(expected, source.ReverseBits());
+   }
+
    #region DataMember Data
 
    public static TheoryData<ushort, bool> IsPowerOfTwoData

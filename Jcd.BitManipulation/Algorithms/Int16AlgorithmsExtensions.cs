@@ -364,4 +364,19 @@ public static class Int16AlgorithmsExtensions
                    ? 1
                    : -1;
    }
+
+   /// <summary>
+   /// Returns a value where the bits of the output are in the reverse order from their inputs.
+   /// For example: 10101111 becomes 11110101
+   /// </summary>
+   /// <param name="number">The number to evaluate</param>
+   /// <returns>The bits in reverse order.</returns>
+   /// <remarks>
+   /// Algorithm taken from: https://graphics.stanford.edu/~seander/bithacks.html#ReverseByteWith64Bits
+   /// </remarks>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static short ReverseBits(this short number)
+   {
+      return (short)((ushort) number).ReverseBits();
+   }
 }

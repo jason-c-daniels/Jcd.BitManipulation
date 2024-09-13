@@ -276,6 +276,17 @@
          <param name="number">The number to evaluate</param>
          <returns>1 if &gt; 0; 0 otherwise.</returns>
       </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.ByteAlgorithmsExtensions.ReverseBits(System.Byte)">
+         <summary>
+            Returns a value where the bits of the output are in the reverse order from their inputs.
+            For example: 10101111 becomes 11110101
+         </summary>
+         <param name="number">The number to evaluate</param>
+         <returns>The bits in reverse order.</returns>
+         <remarks>
+            Algorithm taken from: https://graphics.stanford.edu/~seander/bithacks.html#ReverseByteWith64Bits
+         </remarks>
+      </member>
       <member name="T:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions">
          <summary>
             Provides bit counting and other niche bit manipulation facilities
@@ -558,6 +569,17 @@
          <param name="number">The number to evaluate</param>
          <returns>-1 if &lt; 0; 1 if &gt; 0; 0 otherwise.</returns>
       </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int16AlgorithmsExtensions.ReverseBits(System.Int16)">
+         <summary>
+            Returns a value where the bits of the output are in the reverse order from their inputs.
+            For example: 10101111 becomes 11110101
+         </summary>
+         <param name="number">The number to evaluate</param>
+         <returns>The bits in reverse order.</returns>
+         <remarks>
+            Algorithm taken from: https://graphics.stanford.edu/~seander/bithacks.html#ReverseByteWith64Bits
+         </remarks>
+      </member>
       <member name="T:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions">
          <summary>
             Provides bit counting and other niche bit manipulation facilities
@@ -839,6 +861,17 @@
          </summary>
          <param name="number">The number to evaluate</param>
          <returns>-1 if &lt; 0; 1 if &gt; 0; 0 otherwise.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int32AlgorithmsExtensions.ReverseBits(System.Int32)">
+         <summary>
+            Returns a value where the bits of the output are in the reverse order from their inputs.
+            For example: 10101111 becomes 11110101
+         </summary>
+         <param name="number">The number to evaluate</param>
+         <returns>The bits in reverse order.</returns>
+         <remarks>
+            Algorithm taken from: https://graphics.stanford.edu/~seander/bithacks.html#ReverseByteWith64Bits
+         </remarks>
       </member>
       <member name="T:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions">
          <summary>
@@ -1133,6 +1166,17 @@
          </summary>
          <param name="number">The number to evaluate</param>
          <returns>-1 if &lt; 0; 1 if &gt; 0; 0 otherwise.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.Int64AlgorithmsExtensions.ReverseBits(System.Int64)">
+         <summary>
+            Returns a value where the bits of the output are in the reverse order from their inputs.
+            For example: 10101111 becomes 11110101
+         </summary>
+         <param name="number">The number to evaluate</param>
+         <returns>The bits in reverse order.</returns>
+         <remarks>
+            Algorithm taken from: https://graphics.stanford.edu/~seander/bithacks.html#ReverseByteWith64Bits
+         </remarks>
       </member>
       <member name="T:Jcd.BitManipulation.Algorithms.NamespaceDoc">
          <summary>
@@ -1437,6 +1481,17 @@
          <param name="number">The number to evaluate</param>
          <returns>-1 if &lt; 0; 1 if &gt; 0; 0 otherwise.</returns>
       </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.SByteAlgorithmsExtensions.ReverseBits(System.SByte)">
+         <summary>
+            Returns a value where the bits of the output are in the reverse order from their inputs.
+            For example: 10101111 becomes 11110101
+         </summary>
+         <param name="number">The number to evaluate</param>
+         <returns>The bits in reverse order.</returns>
+         <remarks>
+            Algorithm taken from: https://graphics.stanford.edu/~seander/bithacks.html#ReverseByteWith64Bits
+         </remarks>
+      </member>
       <member name="T:Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions">
          <summary>
             Provides bit counting and other niche bit manipulation facilities
@@ -1716,6 +1771,17 @@
          <param name="number">The number to evaluate</param>
          <returns>1 if &gt; 0; 0 otherwise.</returns>
       </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.UInt16AlgorithmsExtensions.ReverseBits(System.UInt16)">
+         <summary>
+            Returns a value where the bits of the output are in the reverse order from their inputs.
+            For example: 1010000010101111 becomes 1111010100000101
+         </summary>
+         <param name="number">The number to evaluate</param>
+         <returns>The bits in reverse order.</returns>
+         <remarks>
+            Algorithm taken from: https://graphics.stanford.edu/~seander/bithacks.html#ReverseParallel
+         </remarks>
+      </member>
       <member name="T:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions">
          <summary>
             Provides bit counting and other niche bit manipulation facilities
@@ -1982,6 +2048,17 @@
          </summary>
          <param name="number">The number to evaluate</param>
          <returns>1 if &gt; 0; 0 otherwise.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.UInt32AlgorithmsExtensions.ReverseBits(System.UInt32)">
+         <summary>
+            Returns a value where the bits of the output are in the reverse order from their inputs.
+            For example: 1010000010101111 becomes 1111010100000101
+         </summary>
+         <param name="number">The number to evaluate</param>
+         <returns>The bits in reverse order.</returns>
+         <remarks>
+            Algorithm taken from: https://graphics.stanford.edu/~seander/bithacks.html#ReverseParallel
+         </remarks>
       </member>
       <member name="T:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions">
          <summary>
@@ -2273,6 +2350,17 @@
          </summary>
          <param name="number">The number to evaluate</param>
          <returns>1 if &gt; 0; 0 otherwise.</returns>
+      </member>
+      <member name="M:Jcd.BitManipulation.Algorithms.UInt64AlgorithmsExtensions.ReverseBits(System.UInt64)">
+         <summary>
+            Returns a value where the bits of the output are in the reverse order from their inputs.
+            For example: 1010000010101111 becomes 1111010100000101
+         </summary>
+         <param name="number">The number to evaluate</param>
+         <returns>The bits in reverse order.</returns>
+         <remarks>
+            Algorithm taken from: https://graphics.stanford.edu/~seander/bithacks.html#ReverseParallel
+         </remarks>
       </member>
       <member name="T:Jcd.BitManipulation.BigEndianByteIndexer">
          <summary>

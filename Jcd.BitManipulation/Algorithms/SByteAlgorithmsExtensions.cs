@@ -352,4 +352,19 @@ public static class SByteAlgorithmsExtensions
                    ? 1
                    : -1;
    }
+
+   /// <summary>
+   /// Returns a value where the bits of the output are in the reverse order from their inputs.
+   /// For example: 10101111 becomes 11110101
+   /// </summary>
+   /// <param name="number">The number to evaluate</param>
+   /// <returns>The bits in reverse order.</returns>
+   /// <remarks>
+   /// Algorithm taken from: https://graphics.stanford.edu/~seander/bithacks.html#ReverseByteWith64Bits
+   /// </remarks>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static sbyte ReverseBits(this sbyte number)
+   {
+      return (sbyte) ((byte) number).ReverseBits();
+   }
 }

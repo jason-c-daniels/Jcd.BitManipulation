@@ -146,6 +146,16 @@ public class ByteAlgorithmsExtensionsTests
       Assert.Equal(expected, value.GetSign());
    }
 
+   [Theory]
+   [InlineData(0b0,        0b0)]
+   [InlineData(0b10000000, 0b00000001)]
+   [InlineData(0b10000010, 0b01000001)]
+   [InlineData(0b10100010, 0b01000101)]
+   public void ReverseBits_Returns_Expected_Result(byte source, byte expected)
+   {
+      Assert.Equal(expected, source.ReverseBits());
+   }
+
    #region DataMember Data
 
    public static TheoryData<byte, bool> IsPowerOfTwoData

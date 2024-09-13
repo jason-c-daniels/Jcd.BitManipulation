@@ -459,4 +459,23 @@ public static class UInt32AlgorithmsExtensions
                 ? 0
                 : 1;
    }
+
+   /// <summary>
+   /// Returns a value where the bits of the output are in the reverse order from their inputs.
+   /// For example: 1010000010101111 becomes 1111010100000101
+   /// </summary>
+   /// <param name="number">The number to evaluate</param>
+   /// <returns>The bits in reverse order.</returns>
+   /// <remarks>
+   /// Algorithm taken from: https://graphics.stanford.edu/~seander/bithacks.html#ReverseParallel
+   /// </remarks>
+   [MethodImpl(MethodImplOptions.AggressiveInlining)]
+   public static uint ReverseBits(this uint number)
+   {
+      return
+         ((uint) ((byte) (number  & 0xFF)).ReverseBits()) << 24
+       | ((uint) ((byte) ((number >> 8) & 0xFF)).ReverseBits()) << 16
+       | ((uint) ((byte) ((number >> 16) & 0xFF)).ReverseBits()) << 8
+       | ((uint) ((byte) ((number >> 24) & 0xFF)).ReverseBits());
+   }
 }

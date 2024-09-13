@@ -2,8 +2,9 @@
 
 ## 3.1 Summary
 - I pushed the investigation of generic math implementations into 3.1. There were too many features
-  and fixes already in 3.0. If this approach proves performant enough, I'll create a .net 7.0 version of this library 
-  with that support built in. The .Net Standard 2.0 compatible indexers will still be provided.
+  and fixes already in 3.0. If this approach proves performant enough, I'll create a
+  .net 7.0 version of this library with that support built in. The .Net Standard 2.0 compatible indexers will
+  still be provided.
 - 3.1 changes will be mostly driven by what users report as wants and needs. I don't expecte there to be
   a large number of changes once its finally released.
 

@@ -151,6 +151,15 @@ public class UInt32AlgorithmsExtensionsTests
       Assert.Equal(expected, value.GetSign());
    }
 
+   [Theory]
+   [InlineData(0b01000000_00000010_00000000_00000010, 0b01000000_00000000_01000000_00000010)]
+   [InlineData(0b01000010_00000100_00000000_00000100, 0b00100000_00000000_00100000_01000010)]
+   [InlineData(0b01100010_00001000_00000000_00001000, 0b00010000_00000000_00010000_01000110)]
+   public void ReverseBits_Returns_Expected_Result(uint source, uint expected)
+   {
+      Assert.Equal(expected, source.ReverseBits());
+   }
+
    #region DataMember Data
 
    public static TheoryData<uint, bool> IsPowerOfTwoData

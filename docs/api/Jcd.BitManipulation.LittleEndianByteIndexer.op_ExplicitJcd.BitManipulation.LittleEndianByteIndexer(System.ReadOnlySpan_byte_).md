@@ -14,7 +14,8 @@ public static Jcd.BitManipulation.LittleEndianByteIndexer explicit operator Litt
 
 <a name='Jcd.BitManipulation.LittleEndianByteIndexer.op_ExplicitJcd.BitManipulation.LittleEndianByteIndexer(System.ReadOnlySpan_byte_).data'></a>
 
-`data` [System.ReadOnlySpan&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.ReadOnlySpan-1 'System.ReadOnlySpan`1')[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.ReadOnlySpan-1 'System.ReadOnlySpan`1')
+`data` [System.ReadOnlySpan&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.ReadOnlySpan-1 'System.ReadOnlySpan
+`1')[System.Byte](https://docs.microsoft.com/en-us/dotnet/api/System.Byte 'System.Byte')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.ReadOnlySpan-1 'System.ReadOnlySpan`1')
 
 The initial value for the bytes of data.
 

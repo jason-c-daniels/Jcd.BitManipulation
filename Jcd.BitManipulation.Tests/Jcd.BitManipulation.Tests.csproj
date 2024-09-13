@@ -6,6 +6,7 @@
       <Nullable>enable</Nullable>
       <Configurations>Debug;Release;Release - Net462;Debug - Net462</Configurations>
       <Platforms>AnyCPU</Platforms>
+      <TargetFrameworks>net8.0;net462</TargetFrameworks>
    </PropertyGroup>
 
    <PropertyGroup Condition="'$(Configuration)'=='Release - Net462'">
@@ -14,10 +15,6 @@
 
    <PropertyGroup Condition="'$(Configuration)'=='Debug - Net462'">
       <TargetFrameworks>net8.0;net462</TargetFrameworks>
-   </PropertyGroup>
-
-   <PropertyGroup Condition="'$(Configuration)'=='Release'">
-      <TargetFramework>net8.0</TargetFramework>
    </PropertyGroup>
 
    <PropertyGroup Condition="'$(Configuration)'=='Debug'">
